@@ -1,0 +1,36 @@
+{
+    "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+	"version": 2,
+    "settings": {
+        "color": {
+            "background": true,
+            "text": true,
+            "link": false,
+            "custom": true,
+            "defaultPalette": true,
+            "palette": [
+                {
+                    "slug": "x29-black",
+                    "color": "#151515",
+                    "name": "black"
+                }
+			],
+            "customGradient": true,
+            "defaultGradients": true,
+            "gradients": [
+                {
+                    "slug": "blue-red",
+                    "gradient": "linear-gradient(135deg, #0000ff 0%, #ff0000 100%)",
+                    "name": "Blue Red"
+                },
+                {
+                    "slug": "blue-yellow-red",
+                    "gradient": "linear-gradient(to right, rgb(0,0,255) 1%, rgb(255,255,0) 50%, rgb(255,0,0) 100%)",
+                    "name": "Blue Yellow Red"
+                }
+			],
+            "duotone": [],
+            "customDuotone": true
+        }
+    }
+}
