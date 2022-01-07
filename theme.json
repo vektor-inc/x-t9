@@ -65,7 +65,7 @@
         },
         "custom": {
 			"content-size":{
-				"normal": "min( 800px, 80% )"
+				"normal": "min( 1200px, 80% )"
 			},
             "spacing": {
                 "small": "max(1.25rem, 5vw)",

@@ -7,6 +7,7 @@ if ( ! function_exists( 'x29_support' ) ) :
 		add_theme_support( 'wp-block-styles' );
 
 		// Enqueue editor styles.
+		add_editor_style( 'assets/css/style.css' );
 		add_editor_style( 'assets/css/editor-style.css' );
 	}
 	add_action( 'after_setup_theme', 'x29_support' );
