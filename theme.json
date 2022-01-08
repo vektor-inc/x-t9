@@ -13,7 +13,18 @@
             "link": false,
             "custom": true,
             "defaultPalette": true,
-            "palette": [],
+            "palette": [
+				{
+					"slug": "border-light",
+					"color": "#e5e5e5",
+					"name": "Border Light"
+				},
+				{
+					"slug": "normal-text",
+					"color": "#333",
+					"name": "Normal Text"
+				}
+			],
             "customGradient": true,
             "defaultGradients": true,
             "gradients": [],
@@ -37,28 +48,38 @@
                 {
                     "slug": "system-font",
                     "name": "System Font",
-                    "fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell, \"Helvetica Neue\",sans-serif"
-                },
-                {
-                    "slug": "helvetica-arial",
-                    "name": "Helvetica or Arial",
-                    "fontFamily": "Helvetica Neue, Helvetica, Arial, sans-serif"
+                    "fontFamily": "\"ヒラギノ角ゴ ProN\", \"Hiragino Kaku Gothic ProN\", \"メイリオ\", Meiryo, \"ＭＳ Ｐゴシック\", \"MS PGothic\", sans-serif"
                 }
 			],
             "fontSizes": [
 				{
-                    "name": "小",
-                    "slug": "small",
+                    "name": "Tiny",
+                    "slug": "tiny",
                     "size": "10px"
                 },
-                {
-                    "name": "中",
-                    "slug": "medium",
-                    "size": "14px"
+				{
+                    "name": "Small",
+                    "slug": "small",
+                    "size": "12px"
                 },
                 {
-                    "name": "大",
+                    "name": "Normal",
+                    "slug": "normal",
+                    "size": "1rem"
+                },
+                {
+                    "name": "Large",
                     "slug": "large",
+                    "size": "1.25rem"
+                },
+                {
+                    "name": "X Large",
+                    "slug": "x-large",
+                    "size": "1.5rem"
+                },
+                {
+                    "name": "Huge",
+                    "slug": "huge",
                     "size": "2vw"
                 }
 			]
@@ -66,31 +87,25 @@
         "custom": {
 			"content-size":{
 				"normal": "min( 1200px, 80% )"
-			},
-            "spacing": {
-                "small": "max(1.25rem, 5vw)",
-                "medium": "clamp(2rem, 8vw, calc(4 * var(--wp--style--block-gap)))",
-                "large": "clamp(4rem, 10vw, 8rem)"
-            },
-            "typography": {
-                "font-size": {
-                    "gigantic": "clamp(3rem, 6vw, 4rem)",
-                    "colossal": "clamp(4rem, 8vw, 6.25rem)"
-                },
-                "line-height": {
-                    "tiny": 1.15,
-                    "small": 1.2,
-                    "medium": 1.4,
-                    "normal": 1.6
-                }
-            }
+			}
         }
     },
     "styles": {
         "spacing": {
             "blockGap": "1.5rem"
         },
+        "typography": {
+            "fontFamily": "var(--wp--preset--font-family--system-font)"
+        },
+		"color": {
+			"text": "var(--wp--preset--color--normal-text)"
+		},
 		"blocks": {
+            "core/navigation": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--normal)"
+				}
+            }
 		}
     }
 }

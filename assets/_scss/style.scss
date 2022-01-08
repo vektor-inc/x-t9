@@ -2,3 +2,13 @@
 
 @import "variables";
 @import "common";
+
+html[lang="ja"] {
+	font-size:14px;
+}
+
+.wp-block-navigation {
+	& &__submenu-icon {
+		margin-left:0.5em;
+	}
+}
