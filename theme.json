@@ -20,9 +20,14 @@
 					"name": "Border Light"
 				},
 				{
-					"slug": "normal-text",
+					"slug": "text-normal",
 					"color": "#333",
 					"name": "Normal Text"
+				},
+				{
+					"slug": "bg-light-gray",
+					"color": "#f5f5f5",
+					"name": "BG Light Gray"
 				}
 			],
             "customGradient": true,
@@ -98,7 +103,7 @@
             "fontFamily": "var(--wp--preset--font-family--system-font)"
         },
 		"color": {
-			"text": "var(--wp--preset--color--normal-text)"
+			"text": "var(--wp--preset--color--text-normal)"
 		},
 		"blocks": {
             "core/navigation": {
