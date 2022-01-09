@@ -1,0 +1,11 @@
+.wp-block-navigation {
+	& &__submenu-icon {
+		margin-left:0.5em;
+	}
+}
+
+.wp-block-post {
+	.wp-block-post-title{
+		font-size:var(--wp--preset--font-size--large);
+	}
+}

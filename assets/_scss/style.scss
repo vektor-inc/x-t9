@@ -2,16 +2,7 @@
 
 @import "variables";
 @import "common";
-
-html[lang="ja"] {
-	font-size:14px;
-}
-
-.wp-block-navigation {
-	& &__submenu-icon {
-		margin-left:0.5em;
-	}
-}
+@import "block";
 
 /*************************************
 ulitilies
@@ -19,4 +10,10 @@ ulitilies
 
 .mt-0 {
 	margin-top:0 !important;
+}
+
+footer {
+	.wp-block-navigation {
+		font-size:var(--wp--preset--font-size--small);
+	}
 }
