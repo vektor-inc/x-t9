@@ -103,6 +103,10 @@
         "custom": {
 			"content-size":{
 				"normal": "min( 1110px, 80% )"
+			},
+			"spacing":{
+				"tiny": "3px",
+                "small": "0.5rem"
 			}
         }
     },

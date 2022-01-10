@@ -22,3 +22,5 @@ function x29_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'x29_scripts' );
+
+include( dirname( __FILE__ ) . '/inc/patterns-data/class-register-patterns-from-json.php' );

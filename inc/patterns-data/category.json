@@ -1,0 +1,41 @@
+[
+    {
+        "term_id": 27,
+        "name": "Footer",
+        "slug": "footer",
+        "term_group": 0,
+        "term_taxonomy_id": 27,
+        "taxonomy": "vk-managing-patterns-category",
+        "description": "",
+        "parent": 0,
+        "count": 0,
+        "filter": "raw",
+        "term_order": "0"
+    },
+    {
+        "term_id": 28,
+        "name": "Header",
+        "slug": "header",
+        "term_group": 0,
+        "term_taxonomy_id": 28,
+        "taxonomy": "vk-managing-patterns-category",
+        "description": "",
+        "parent": 0,
+        "count": 1,
+        "filter": "raw",
+        "term_order": "0"
+    },
+    {
+        "term_id": 29,
+        "name": "Query",
+        "slug": "query",
+        "term_group": 0,
+        "term_taxonomy_id": 29,
+        "taxonomy": "vk-managing-patterns-category",
+        "description": "",
+        "parent": 0,
+        "count": 2,
+        "filter": "raw",
+        "term_order": "0"
+    }
+]
