@@ -96,7 +96,12 @@
                 {
                     "name": "Huge",
                     "slug": "huge",
-                    "size": "clamp(2.2rem, 5vw, 2.4rem)"
+                    "size": "clamp(2rem, 4vw, 2.2rem)"
+                },
+				{
+                    "name": "Page Title",
+                    "slug": "page-title",
+                    "size": "calc(var(--wp--preset--font-size--medium) * 2 )"
                 }
 			]
         },
@@ -105,14 +110,17 @@
 				"normal": "min( 1110px, 80% )"
 			},
 			"spacing":{
-				"tiny": "3px",
-                "small": "0.5rem"
+				"tiny": "calc(var(--wp--custom--spacing--medium) / 4)",
+				"small": "calc(var(--wp--custom--spacing--medium) / 2)",
+				"medium": "2rem",
+				"large": "calc(var(--wp--custom--spacing--medium) * 1.5)",
+				"huge":  "calc(var(--wp--custom--spacing--medium) * 2)"
 			}
         }
     },
     "styles": {
         "spacing": {
-            "blockGap": "1.5rem"
+            "blockGap": "var(--wp--custom--spacing--medium)"
         },
         "typography": {
             "fontFamily": "var(--wp--preset--font-family--system-font)"

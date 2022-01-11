@@ -24,3 +24,51 @@ function x29_scripts() {
 add_action( 'wp_enqueue_scripts', 'x29_scripts' );
 
 include( dirname( __FILE__ ) . '/inc/patterns-data/class-register-patterns-from-json.php' );
+
+
+
+
+
+/**
+ * Archive title
+ *
+ * @return string archive title
+ */
+function lightning_get_the_archive_title() {
+	$title = '';
+	if ( is_category() ) {
+		$title = single_cat_title( '', false );
+	} elseif ( is_tag() ) {
+		$title = single_tag_title( '', false );
+	} elseif ( is_author() ) {
+		$title = get_the_author();
+	} elseif ( is_year() ) {
+		$title = get_the_date( _x( 'Y', 'yearly archives date format', 'lightning' ) );
+	} elseif ( is_month() ) {
+		$title = get_the_date( _x( 'F Y', 'monthly archives date format', 'lightning' ) );
+	} elseif ( is_day() ) {
+		$title = get_the_date( _x( 'F j, Y', 'daily archives date format', 'lightning' ) );
+	} elseif ( is_post_type_archive() ) {
+		$title = post_type_archive_title( '', false );
+	} elseif ( is_tax() ) {
+		$title = single_term_title( '', false );
+	} elseif ( is_home() && ! is_front_page() ) {
+		// Get post top page by setting display page.
+		$post_top_id = get_option( 'page_for_posts' );
+		$title = 'aaaaaaa';
+		// if ( $post_top_id ) {
+		// 	$title = get_the_title( $post_top_id );
+		// }
+	} else {
+		global $wp_query;
+		// get post type.
+		$post_type = $wp_query->query_vars['post_type'];
+		if ( $post_type ) {
+			$title = get_post_type_object( $post_type )->labels->name;
+		} else {
+			$title = __( 'Archives', 'lightning' );
+		}
+	}
+	return apply_filters( 'lightning_get_the_archive_title', $title );
+}
+add_filter( 'get_the_archive_title', 'lightning_get_the_archive_title' );
