@@ -54,7 +54,7 @@
                 {
                     "slug": "system-font",
                     "name": "System Font",
-                    "fontFamily": "\"ヒラギノ角ゴ ProN\", \"Hiragino Kaku Gothic ProN\", \"メイリオ\", Meiryo, \"ＭＳ Ｐゴシック\", \"MS PGothic\", sans-serif"
+                    "fontFamily": "\"ヒラギノ角ゴ ProN\", \"Hiragino Kaku Gothic ProN\", \"メイリオ\", Meiryo, sans-serif"
                 }
 			],
             "fontSizes": [
@@ -66,7 +66,7 @@
 				{
                     "name": "Small",
                     "slug": "small",
-                    "size": "14px"
+                    "size": "0.875em"
                 },
                 {
                     "name": "Medium",
@@ -112,9 +112,9 @@
 			"spacing":{
 				"tiny": "calc(var(--wp--custom--spacing--medium) / 4)",
 				"small": "calc(var(--wp--custom--spacing--medium) / 2)",
-				"medium": "2rem",
-				"large": "calc(var(--wp--custom--spacing--medium) * 1.5)",
-				"huge":  "calc(var(--wp--custom--spacing--medium) * 2)"
+				"medium": "1em",
+				"large": "calc(var(--wp--custom--spacing--medium) * 1.25)",
+				"huge":  "calc(var(--wp--custom--spacing--medium) * 1.5)"
 			}
         }
     },
@@ -167,9 +167,8 @@
 			}
 		},
 		"blocks": {
-            "core/navigation": {
-
-            }
+			"core/group": {
+			}
 		}
     },
 	"customTemplates": [

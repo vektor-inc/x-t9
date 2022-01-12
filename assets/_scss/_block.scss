@@ -4,6 +4,17 @@
 	}
 }
 
+.wp-block-query-title{
+	.wp-block-group > & {
+		padding-top:var(--wp--custom--spacing--page-title);
+		padding-bottom:var(--wp--custom--spacing--page-title);
+	}
+}
+.wp-block-term-description{
+	p {
+		margin:0;
+	}
+}
 .wp-block-query {
 	.wp-block-post-template{
 		& > .wp-block-post > .wp-block-columns > .wp-block-column {
@@ -11,8 +22,8 @@
 		}
 	}
 	.wp-block-post > .wp-block-columns {
-		margin-top:var(--wp--custom--spacing--large);
-		margin-bottom:var(--wp--custom--spacing--large);
+		margin-top:var(--wp--custom--spacing--huge);
+		margin-bottom:var(--wp--custom--spacing--huge);
 	}
 	.wp-block-post-featured-image {
 		a {
