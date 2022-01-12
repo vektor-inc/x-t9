@@ -37,7 +37,7 @@
             "customDuotone": true
         },
 		"spacing": {
-			"blockGap": true,
+			"blockGap": false,
 			"margin": true,
             "padding": true,
 			"units": [ "px", "em", "rem", "vh", "vw", "%" ]
@@ -96,12 +96,12 @@
                 {
                     "name": "Huge",
                     "slug": "huge",
-                    "size": "clamp(2rem, 4vw, 2.2rem)"
+                    "size": "2.25rem"
                 },
 				{
                     "name": "Page Title",
                     "slug": "page-title",
-                    "size": "calc(var(--wp--preset--font-size--medium) * 2 )"
+                    "size": "2rem"
                 }
 			]
         },
@@ -112,16 +112,19 @@
 			"spacing":{
 				"tiny": "calc(var(--wp--custom--spacing--medium) / 4)",
 				"small": "calc(var(--wp--custom--spacing--medium) / 2)",
-				"medium": "1em",
+				"medium": "1.75rem",
 				"large": "calc(var(--wp--custom--spacing--medium) * 1.25)",
 				"huge":  "calc(var(--wp--custom--spacing--medium) * 1.5)"
-			}
+			},
+            "typography": {
+                "line-height": {
+                    "normal": "1.75em",
+                    "heading": "1.5em"
+                }
+            }
         }
     },
     "styles": {
-        "spacing": {
-            "blockGap": "var(--wp--custom--spacing--medium)"
-        },
         "typography": {
             "fontFamily": "var(--wp--preset--font-family--system-font)"
         },

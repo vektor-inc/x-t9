@@ -6,8 +6,8 @@
 
 .wp-block-query-title{
 	.wp-block-group > & {
-		padding-top:var(--wp--custom--spacing--page-title);
-		padding-bottom:var(--wp--custom--spacing--page-title);
+		padding-top:var(--wp--custom--spacing--medium);
+		padding-bottom:var(--wp--custom--spacing--medium);
 	}
 }
 .wp-block-term-description{
@@ -22,8 +22,8 @@
 		}
 	}
 	.wp-block-post > .wp-block-columns {
-		margin-top:var(--wp--custom--spacing--huge);
-		margin-bottom:var(--wp--custom--spacing--huge);
+		margin-top:var(--wp--custom--spacing--medium);
+		margin-bottom:var(--wp--custom--spacing--medium);
 	}
 	.wp-block-post-featured-image {
 		a {

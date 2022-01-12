@@ -1,17 +1,4 @@
-html{
-	font-weight: 500;
-	font-size:calc( ( 100vw - 360px ) * ( 2 / ( 1200 - 360 ) ) + 16px );
-	line-height: 1.75;
-}
-html[lang="ja"] {
-	font-size:calc( ( 100vw - 360px ) * ( 2 / ( 1200 - 360 ) ) + 14px );
-}
-
 a {
 	text-decoration-thickness: 1px;
 	text-underline-offset: 0.25em;
-}
-
-time {
-	font-size:var(--wp--preset--font-size--small);
 }
