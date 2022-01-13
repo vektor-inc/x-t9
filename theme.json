@@ -16,7 +16,7 @@
             "palette": [
 				{
 					"slug": "border-light",
-					"color": "#e5e5e5",
+					"color": "#e3e3e3",
 					"name": "Border Light"
 				},
 				{
@@ -112,9 +112,9 @@
 			"spacing":{
 				"tiny": "calc(var(--wp--custom--spacing--medium) / 4)",
 				"small": "calc(var(--wp--custom--spacing--medium) / 2)",
-				"medium": "1.75rem",
-				"large": "calc(var(--wp--custom--spacing--medium) * 1.25)",
-				"huge":  "calc(var(--wp--custom--spacing--medium) * 1.5)"
+				"medium": "1.5rem",
+				"large": "calc(var(--wp--custom--spacing--medium) * 1.5)",
+				"huge":  "calc(var(--wp--custom--spacing--medium) * 3)"
 			},
             "typography": {
                 "line-height": {

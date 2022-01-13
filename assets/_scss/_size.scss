@@ -5,7 +5,7 @@
 html{
 
 	// 360px : 14px -> 1200px : 16px
-	font-size:calc( ( 100vw - 360px ) * ( 2 / ( 1200 - 360 ) ) + 14px );
+	font-size:clamp( 14px, calc( ( 100vw - 360px ) * ( 2 / ( 1200 - 360 ) ) + 14px ), 16px );
 
 }
 html:where(:not([lang="ja"])) {
@@ -32,8 +32,4 @@ h1,h2,h3,h4,h5,h6 {
 p {
 	// margin = Ideal margin - half-leading（ (line-height - 1em ) /2 ）
 	--wp--style--block-gap: calc( 1.5em - ( ( var(--wp--custom--typography--line-height--normal) - 1em ) / 2 ) );
-}
-
-time {
-	font-size:var(--wp--preset--font-size--small);
 }
