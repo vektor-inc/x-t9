@@ -2,7 +2,6 @@
     "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
 	"version": 2,
     "settings": {
-		"appearanceTools": true,
         "layout": {
             "contentSize": "var(--wp--custom--content-size--normal)",
             "wideSize": "calc( var(--wp--custom--content-size--normal) + ( 100vw - var(--wp--custom--content-size--normal) ) / 2 )"
@@ -16,8 +15,13 @@
             "palette": [
 				{
 					"slug": "border-light",
-					"color": "#e3e3e3",
+					"color": "rgba( 0,0,0,0.1 )",
 					"name": "Border Light"
+				},
+				{
+					"slug": "border-normal",
+					"color": "rgba( 0,0,0,0.2 )",
+					"name": "Border Normal"
 				},
 				{
 					"slug": "text-normal",
@@ -25,9 +29,24 @@
 					"name": "Normal Text"
 				},
 				{
+					"slug": "text-dark-bg",
+					"color": "rgba( 255,255,255,0.6 )",
+					"name": "Dark Bg Text"
+				},
+				{
 					"slug": "bg-light-gray",
 					"color": "#f5f5f5",
 					"name": "BG Light Gray"
+				},
+				{
+					"slug": "bg-dark-gray",
+					"color": "#262626",
+					"name": "BG Dark Gray"
+				},
+				{
+					"slug": "bg-black",
+					"color": "#222222",
+					"name": "BG Black"
 				}
 			],
             "customGradient": true,
@@ -37,7 +56,7 @@
             "customDuotone": true
         },
 		"spacing": {
-			"blockGap": false,
+			"blockGap": null,
 			"margin": true,
             "padding": true,
 			"units": [ "px", "em", "rem", "vh", "vw", "%" ]
@@ -64,9 +83,14 @@
                     "size": "10px"
                 },
 				{
+                    "name": "X small",
+                    "slug": "x-small",
+                    "size": "12px"
+                },
+				{
                     "name": "Small",
                     "slug": "small",
-                    "size": "0.875em"
+                    "size": "0.875rem"
                 },
                 {
                     "name": "Medium",
@@ -110,11 +134,11 @@
 				"normal": "min( 1110px, 80% )"
 			},
 			"spacing":{
-				"tiny": "calc(var(--wp--custom--spacing--medium) / 4)",
+				"x-small": "calc(var(--wp--custom--spacing--medium) / 4)",
 				"small": "calc(var(--wp--custom--spacing--medium) / 2)",
 				"medium": "1.5rem",
 				"large": "calc(var(--wp--custom--spacing--medium) * 1.5)",
-				"huge":  "calc(var(--wp--custom--spacing--medium) * 3)"
+				"x-large":  "calc(var(--wp--custom--spacing--medium) * 3)"
 			},
             "typography": {
                 "line-height": {

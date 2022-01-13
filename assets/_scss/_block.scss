@@ -1,3 +1,10 @@
+.wp-block-site-logo{
+	margin-top: var(--wp--custom--spacing--small);
+	margin-bottom: var(--wp--custom--spacing--small);
+	img {
+		display: block;
+	}
+}
 .wp-block-navigation {
 	& &__submenu-icon {
 		margin-left:0.5em;
@@ -5,6 +12,7 @@
 }
 
 .wp-block-query-title{
+	margin-top:0;
 	.wp-block-group > & {
 		padding-top:var(--wp--custom--spacing--medium);
 		padding-bottom:var(--wp--custom--spacing--medium);
@@ -58,4 +66,13 @@
 			}
 		}
 	}
+}
+
+.wp-block-navigation__container {
+	> li > a {
+		white-space: nowrap;
+	}
+}
+.wp-block-navigation__responsive-container {
+
 }
