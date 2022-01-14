@@ -101,27 +101,32 @@
                 {
                     "name": "Large",
                     "slug": "large",
-                    "size": "1.125rem"
+                    "size": "1.25rem"
                 },
                 {
                     "name": "X Large",
                     "slug": "x-large",
-                    "size": "1.25rem"
+                    "size": "1.5rem"
                 },
                 {
                     "name": "XX Large",
                     "slug": "xx-large",
-                    "size": "1.5rem"
+                    "size": "1.75rem"
                 },
                 {
                     "name": "XXX Large",
                     "slug": "xxx-large",
-                    "size": "1.75rem"
+                    "size": "2rem"
                 },
                 {
                     "name": "Huge",
                     "slug": "huge",
-                    "size": "2.2rem"
+                    "size": "2.25rem"
+                },
+				{
+                    "name": "Page Title",
+                    "slug": "page-title",
+                    "size": "2rem"
                 }
 			]
         },
@@ -154,13 +159,12 @@
 		"elements": {
 			"h1": {
 				"typography": {
-					"fontWeight": "700",
-					"fontSize": "var(--wp--preset--font-size--huge)"
+					"fontSize": "var(--wp--preset--font-size--xxx-large)"
 				},
 				"spacing": {
-					"margin": {
-						"top": "0",
-						"bottom": "0"
+					"padding": {
+						"top": "ブロックエディタ側で指定できないのでここでも指定しない / line-height を使うのみ手",
+						"bottom": "ブロックエディタ側で指定できないのでここでも指定しない / line-height を使うのみ手"
 					}
 				}
 			},
