@@ -226,6 +226,14 @@
 			"postTypes": [
 				"page"
 			]
+		},
+		{
+			"name": "blank",
+			"title": "Blank",
+			"postTypes": [
+				"page",
+				"post"
+			]
 		}
 	],
 	"templateParts": [
