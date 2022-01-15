@@ -14,6 +14,16 @@
             "defaultPalette": true,
             "palette": [
 				{
+					"slug": "text-normal",
+					"color": "#333",
+					"name": "Text Normal "
+				},
+				{
+					"slug": "text-normal-darkm",
+					"color": "rgba( 255,255,255,0.6 )",
+					"name": "Text Normal (Dark Mode)"
+				},
+				{
 					"slug": "border-light",
 					"color": "rgba( 0,0,0,0.1 )",
 					"name": "Border Light"
@@ -24,14 +34,9 @@
 					"name": "Border Normal"
 				},
 				{
-					"slug": "text-normal",
-					"color": "#333",
-					"name": "Normal Text"
-				},
-				{
-					"slug": "text-dark-bg",
-					"color": "rgba( 255,255,255,0.6 )",
-					"name": "Dark Bg Text"
+					"slug": "border-normal-darkm",
+					"color": "rgba( 255,255,255,0.1 )",
+					"name": "Border Normal (Dark Mode)"
 				},
 				{
 					"slug": "bg-light-gray",
@@ -243,8 +248,18 @@
 			"area": "header"
 		},
 		{
+			"name": "header-nav-button-float",
+			"title": "Header Nav Button Float",
+			"area": "header"
+		},
+		{
 			"name": "footer",
 			"title": "Footer",
+			"area": "footer"
+		},
+		{
+			"name": "footer-dark",
+			"title": "Footer Dark",
 			"area": "footer"
 		}
 	]
