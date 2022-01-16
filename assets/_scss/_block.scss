@@ -7,13 +7,6 @@
 	--wp--style--block-gap: var(--wp--custom--spacing--medium);
 }
 
-.wp-block-query-title{
-	.wp-block-group > & {
-		// padding-top:var(--wp--custom--spacing--medium);
-		// padding-bottom:var(--wp--custom--spacing--medium);
-	}
-}
-
 .wp-block-query {
 	.wp-block-post-template{
 		& > .wp-block-post > .wp-block-columns > .wp-block-column {

@@ -221,7 +221,7 @@
 						"bottom":"var(--wp--custom--spacing--medium)"
 					 }
 				}
-			}			
+			}				
 		}
     },
 	"customTemplates": [
@@ -248,18 +248,8 @@
 			"area": "header"
 		},
 		{
-			"name": "header-nav-button-float",
-			"title": "Header Nav Button Float",
-			"area": "header"
-		},
-		{
 			"name": "footer",
 			"title": "Footer",
-			"area": "footer"
-		},
-		{
-			"name": "footer-dark",
-			"title": "Footer Dark",
 			"area": "footer"
 		}
 	]
