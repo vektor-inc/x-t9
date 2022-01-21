@@ -1,10 +1,12 @@
 .alignfull,
 .alignwide {
-	div[class*="__inner-container"]{
-		max-width: var(--wp--custom--content-size--normal);
-		margin-left:auto;
-		margin-right:auto;
-	}
+	// Don't spacific bellow.
+	// In case of bellow, you sould use group block and specific to container size
+	// div[class*="__inner-container"]{
+	// 	max-width: var(--wp--custom--content-size--normal);
+	// 	margin-left:auto;
+	// 	margin-right:auto;
+	// }
 }
 .alignfull {
 	width:auto; /* Don't use 100vw!! cope with windows */

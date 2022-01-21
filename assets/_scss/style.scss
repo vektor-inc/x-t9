@@ -28,3 +28,25 @@ ulitilies
 // .mt-xl {
 // 	margin-top: var(--wp--custom--spacing--medium);
 // }
+
+/*************************************
+本当はプラグイン側に持たせるが暫定
+*/
+// header{
+// 	position: relative;
+// 	border:1px solid #ff0000;
+// }
+// .header {
+// 	&__container{
+// 		width:var(--wp--custom--content-size--normal);
+// 		margin-left:auto;
+// 		margin-right:auto;
+// 	}
+// 	&-trans {
+// 		// margin-top: var(--wp-admin--admin-bar--height);
+// 		position: absolute;
+// 		z-index: 9999;
+// 		background-color: transparent;
+// 	}
+// }
+

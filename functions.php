@@ -8,7 +8,7 @@ if ( ! function_exists( 'x29_support' ) ) :
 
 		// Enqueue editor styles.
 		add_editor_style( 'assets/css/style.css' );
-		add_editor_style( 'assets/css/editor-style.css' );
+		add_editor_style( 'assets/css/editor.css' );
 	}
 	add_action( 'after_setup_theme', 'x29_support' );
 endif;
@@ -49,10 +49,9 @@ function x29_get_the_archive_title() {
 	} elseif ( is_home() && ! is_front_page() ) {
 		// Get post top page by setting display page.
 		$post_top_id = get_option( 'page_for_posts' );
-		$title = 'aaaaaaa';
-		// if ( $post_top_id ) {
-		// 	$title = get_the_title( $post_top_id );
-		// }
+		if ( $post_top_id ) {
+		$title = get_the_title( $post_top_id );
+		}
 	} else {
 		global $wp_query;
 		// get post type.
