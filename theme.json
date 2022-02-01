@@ -154,7 +154,8 @@
 				"small": "calc(var(--wp--custom--spacing--medium) / 2)",
 				"medium": "1.5rem",
 				"large": "calc(var(--wp--custom--spacing--medium) * 1.5)",
-				"x-large":  "calc(var(--wp--custom--spacing--medium) * 3)"
+				"x-large":  "calc(var(--wp--custom--spacing--medium) * 3)",
+				"button-sm":  "0.3em 1em"
 			},
             "typography": {
                 "line-height": {
