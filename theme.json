@@ -19,6 +19,11 @@
 					"name": "Primary"
 				},
 				{
+					"slug": "primary-hover",
+					"color": "#0a868f",
+					"name": "Primary Hover"
+				},
+				{
 					"slug": "text-normal",
 					"color": "#333",
 					"name": "Text Normal "
@@ -101,7 +106,7 @@
 				{
                     "name": "X small",
                     "slug": "x-small",
-                    "size": "12px"
+                    "size": "0.75rem"
                 },
 				{
                     "name": "Small",

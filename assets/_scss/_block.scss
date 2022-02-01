@@ -1,19 +1,4 @@
 /* 
- * Navigation Styles
- */
-.wp-block-navigation {
-	& &__submenu-icon {
-		margin-left:0.5em;
-	}
-}
-.wp-block-navigation__container {
-	--wp--style--block-gap: var(--wp--custom--spacing--medium);
-	> li > a {
-		white-space: nowrap;
-	}
-}
-
-/* 
  * Query Styles
  */
 .wp-block-query {
