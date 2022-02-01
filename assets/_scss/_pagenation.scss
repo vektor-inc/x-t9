@@ -1,17 +1,7 @@
-.wp-block-query .wp-block-query-pagination{
-	gap:0;
-}
 .wp-block-query-pagination{
-	&-numbers .page-numbers,
-	&-prev,
-	&-next{
-		padding:5px;
+	.wp-block-query &{
+		gap:0;
 	}
-}
-/*
-color
-*/
-.wp-block-query-pagination{
 	&-numbers .page-numbers,
 	&-previous,
 	&-next{
