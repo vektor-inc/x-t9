@@ -8,3 +8,25 @@
 		padding:5px;
 	}
 }
+/*
+color
+*/
+.wp-block-query-pagination{
+	&-numbers .page-numbers,
+	&-previous,
+	&-next{
+		line-height: 1;
+		padding:10px 1em;
+		color:var(--wp--preset--color--text-normal-darkbg);
+		background-color: var(--wp--preset--color--primary);
+		text-decoration: none;
+		&:hover{
+			background-color: var(--wp--preset--color--primary-hover);
+		}
+	}
+	.page-numbers.current{
+		color:var(--wp--preset--color--primary);
+		background-color: var(--wp--preset--color--bg-light-gray);
+	}
+}
+
