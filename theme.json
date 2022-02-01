@@ -14,14 +14,14 @@
             "defaultPalette": true,
             "palette": [
 				{
+					"slug": "primary",
+					"color": "#1a4548",
+					"name": "Primary"
+				},
+				{
 					"slug": "text-normal",
 					"color": "#333",
 					"name": "Text Normal "
-				},
-				{
-					"slug": "text-normal-darkm",
-					"color": "rgba( 255,255,255,0.6 )",
-					"name": "Text Normal (Dark Mode)"
 				},
 				{
 					"slug": "border-light",
@@ -32,11 +32,6 @@
 					"slug": "border-normal",
 					"color": "rgba( 0,0,0,0.2 )",
 					"name": "Border Normal"
-				},
-				{
-					"slug": "border-normal-darkm",
-					"color": "rgba( 255,255,255,0.1 )",
-					"name": "Border Normal (Dark Mode)"
 				},
 				{
 					"slug": "bg-light-gray",
@@ -52,6 +47,21 @@
 					"slug": "bg-black",
 					"color": "#222222",
 					"name": "BG Black"
+				},
+				{
+					"slug": "text-normal-darkbg",
+					"color": "rgba( 255,255,255,0.9 )",
+					"name": "Text Normal (Dark BG)"
+				},
+				{
+					"slug": "text-dark-darkbg",
+					"color": "rgba( 255,255,255,0.6 )",
+					"name": "Text Dark (Dark BG)"
+				},
+				{
+					"slug": "border-normal-darkbg",
+					"color": "rgba( 255,255,255,0.1 )",
+					"name": "Border Normal (Dark BG)"
 				}
 			],
             "customGradient": true,
