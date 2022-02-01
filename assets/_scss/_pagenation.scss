@@ -1,0 +1,10 @@
+.wp-block-query .wp-block-query-pagination{
+	gap:0;
+}
+.wp-block-query-pagination{
+	&-numbers .page-numbers,
+	&-prev,
+	&-next{
+		padding:5px;
+	}
+}

@@ -1,3 +1,6 @@
+/* 
+ * Navigation Styles
+ */
 .wp-block-navigation {
 	& &__submenu-icon {
 		margin-left:0.5em;
@@ -5,8 +8,14 @@
 }
 .wp-block-navigation__container {
 	--wp--style--block-gap: var(--wp--custom--spacing--medium);
+	> li > a {
+		white-space: nowrap;
+	}
 }
 
+/* 
+ * Query Styles
+ */
 .wp-block-query {
 	.wp-block-post-template{
 		& > .wp-block-post > .wp-block-columns > .wp-block-column {
@@ -44,15 +53,6 @@
 	}
 }
 
-.wp-block-navigation__container {
-	> li > a {
-		white-space: nowrap;
-	}
-}
-.wp-block-navigation__responsive-container {
-
-}
-
 .wp-block-post-author {
 	align-items: center;
 	&__avatar{
@@ -62,6 +62,13 @@
 		}
 	}
 }
+
+/*
+ * Search Form
+ */
+ .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper{
+	padding:3px;
+ }
 
 /*
 固定ページではWordPressから自動的に吐き出されるが、
