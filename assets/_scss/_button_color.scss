@@ -5,6 +5,7 @@
 	background-color: var(--wp--preset--color--primary);
 	color:var(--wp--preset--color--text-normal-darkbg);
 	text-decoration: none;
+	border-radius: 0;
 	&:hover{
 		--wp--preset--color--primary: var(--wp--preset--color--primary-hover);
 	}
