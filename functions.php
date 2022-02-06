@@ -70,3 +70,6 @@ function x29_get_the_archive_title() {
 	return apply_filters( 'x29_get_the_archive_title', $title );
 }
 add_filter( 'get_the_archive_title', 'x29_get_the_archive_title' );
+
+// Add block patterns.
+require get_template_directory() . '/inc/block-patterns.php';
