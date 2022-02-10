@@ -12,3 +12,21 @@
 .block-editor-block-list__layout.is-root-container > *.wp-block{
 	max-width:100%;
  }
+ .is-root-container > div[data-align=full] {
+	width:auto; /* Don't use 100vw!! cope with windows */
+	margin-left: calc(50% - 50vw) !important;
+	margin-right: calc(50% - 50vw) !important;
+	border:1px solid #ff0000;
+	&.wp-block-image {
+		// Default block style overwrite
+		max-width: 100vw;
+	}
+}
+.is-root-container > div[data-align=wide]  {
+	width: calc( 100% + ( 100vw - 100% ) / 2 );
+	margin-left: calc( ( 100% - 100vw ) / 4 ) !important;
+	margin-right: calc( ( 100% - 100vw ) / 4 ) !important;
+	&.wp-block-image {
+		max-width: 100vw;
+	}
+}
