@@ -1,30 +1,30 @@
 <?php
 /**
- * X29: Block Patterns
+ * X-T9: Block Patterns
  *
- * @since X29 1.0
+ * @since X-T9 1.0
  */
 
 /**
  * Registers block patterns and categories.
  *
- * @since X29 1.0
+ * @since X-T9 1.0
  *
  * @return void
  */
 function x29_register_block_patterns() {
 	$block_pattern_categories = array(
-		'featured' => array( 'label' => __( 'Featured', 'x29' ) ),
-		'footer'   => array( 'label' => __( 'Footers', 'x29' ) ),
-		'header'   => array( 'label' => __( 'Headers', 'x29' ) ),
-		'query'    => array( 'label' => __( 'Query', 'x29' ) ),
-		'pages'    => array( 'label' => __( 'Pages', 'x29' ) ),
+		'featured' => array( 'label' => __( 'Featured', 'X-T9' ) ),
+		'footer'   => array( 'label' => __( 'Footers', 'X-T9' ) ),
+		'header'   => array( 'label' => __( 'Headers', 'X-T9' ) ),
+		'query'    => array( 'label' => __( 'Query', 'X-T9' ) ),
+		'pages'    => array( 'label' => __( 'Pages', 'X-T9' ) ),
 	);
 
 	/**
 	 * Filters the theme block pattern categories.
 	 *
-	 * @since X29 1.0
+	 * @since X-T9 1.0
 	 *
 	 * @param array[] $block_pattern_categories {
 	 *     An associative array of block pattern categories, keyed by category name.
@@ -51,7 +51,7 @@ function x29_register_block_patterns() {
 	/**
 	 * Filters the theme block patterns.
 	 *
-	 * @since X29 1.0
+	 * @since X-T9 1.0
 	 *
 	 * @param array $block_patterns List of block patterns by name.
 	 */
@@ -61,7 +61,7 @@ function x29_register_block_patterns() {
 		$pattern_file = get_theme_file_path( '/inc/patterns/' . $block_pattern . '.php' );
 
 		register_block_pattern(
-			'x29/' . $block_pattern,
+			'x-t9/' . $block_pattern,
 			require $pattern_file
 		);
 	}

@@ -1,5 +1,5 @@
 {
-  "name": "x29",
+  "name": "x-t9",
   "version": "0.1.0",
   "main": "Gruntfile.js",
   "author": "YOUR NAME HERE",
@@ -11,14 +11,14 @@
     "rimraf:css": "npx rimraf assets/_scss/*.css",
     "build:css": "run-s sass postcss:all rimraf:css",
     "watch": "nodemon -e scss --watch assets/_scss -x \"npm run build:css\"",
-    "copy": "cpx './**/*' ./dist/x29 --include-empty-dirs && cpx './.wp-env.json' ./dist/x29",
-    "clean": "rimraf ./dist/x29/dist && rimraf ./dist/x29/node_modules",
+    "copy": "cpx './**/*' ./dist/x-t9 --include-empty-dirs && cpx './.wp-env.json' ./dist/x-t9",
+    "clean": "rimraf ./dist/x-t9/dist && rimraf ./dist/x-t9/node_modules",
     "dist": "run-s copy clean",
     "composer:install:win": "wp-env run composer \"composer install\"",
     "composer:install:mac": "wp-env run composer 'composer install'",
-    "phpunit:win": "wp-env run phpunit \"phpunit -c /var/www/html/wp-content/plugins/x29/phpunit.xml.dist --verbose\"",
-    "phpunit:mac": "wp-env run phpunit 'phpunit -c /var/www/html/wp-content/plugins/x29/phpunit.xml.dist --verbose'",
-    "phpunit": "wp-env run phpunit \"phpunit -c /var/www/html/wp-content/plugins/x29/phpunit.xml.dist --verbose\""
+    "phpunit:win": "wp-env run phpunit \"phpunit -c /var/www/html/wp-content/plugins/x-t9/phpunit.xml.dist --verbose\"",
+    "phpunit:mac": "wp-env run phpunit 'phpunit -c /var/www/html/wp-content/plugins/x-t9/phpunit.xml.dist --verbose'",
+    "phpunit": "wp-env run phpunit \"phpunit -c /var/www/html/wp-content/plugins/x-t9/phpunit.xml.dist --verbose\""
   },
   "devDependencies": {
     "autoprefixer": "^10.3.4",
