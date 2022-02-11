@@ -29,6 +29,11 @@
 					"name": "Text Normal "
 				},
 				{
+					"slug": "text-bright",
+					"color": "rgba(0,0,0,0.5)",
+					"name": "Text Bright"
+				},
+				{
 					"slug": "border-light",
 					"color": "rgba( 0,0,0,0.1 )",
 					"name": "Border Light"
