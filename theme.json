@@ -15,12 +15,12 @@
             "palette": [
 				{
 					"slug": "primary",
-					"color": "#1a4548",
+					"color": "#233A73",
 					"name": "Primary"
 				},
 				{
 					"slug": "primary-hover",
-					"color": "#0a868f",
+					"color": "#1c45ab",
 					"name": "Primary Hover"
 				},
 				{
