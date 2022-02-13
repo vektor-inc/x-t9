@@ -17,11 +17,15 @@ return array(
 	<!-- /wp:column -->
 	
 	<!-- wp:column {"verticalAlignment":"top","width":"66.66%"} -->
-	<div class="wp-block-column is-vertically-aligned-top" style="flex-basis:66.66%"><!-- wp:group {"layout":{"type":"flex","allowOrientation":false}} -->
-	<div class="wp-block-group"><!-- wp:post-date /--></div>
+	<div class="wp-block-column is-vertically-aligned-top" style="flex-basis:66.66%"><!-- wp:post-title {"isLink":true,"style":{"spacing":{"margin":{"bottom":"0rem"}}}} /-->
+
+	<!-- wp:group {"textColor":"text-bright","layout":{"type":"flex","allowOrientation":false}} -->
+	<div class="wp-block-group has-text-bright-color has-text-color"><!-- wp:post-date /--></div>
 	<!-- /wp:group -->
 	
-	<!-- wp:post-title {"isLink":true} /-->
+	<!-- wp:spacer {"height":15} -->
+	<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+	<!-- /wp:spacer -->
 	
 	<!-- wp:post-excerpt {"moreText":"' . esc_html__( 'Read more', 'X-T9' ) . '"} /--></div>
 	<!-- /wp:column --></div>

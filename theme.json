@@ -228,14 +228,6 @@
 					"lineHeight": "1.5"
 				}
 			},
-			"core/query": {
-				"spacing": {
-					"margin": { 
-						"top":"var(--wp--custom--spacing--large)",
-						"bottom":"var(--wp--custom--spacing--large)"
-					 }
-				}
-			},
 			"core/query-pagination": {
 				"spacing": {
 					"margin": { 
