@@ -8,8 +8,8 @@
 return array(
 	'title'      => __( 'Featured Media and text', 'x-t9' ),
 	'categories' => array( 'featured', 'columns' ),
-	'content'    => '<!-- wp:cover {"url":"' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/t-29-featured-sky.jpg","id":8570,"dimRatio":20,"overlayColor":"black","minHeight":0,"isDark":false,"align":"full","style":{"spacing":{"padding":{"top":"2rem","bottom":"1.5rem"}}}} -->
-	<div class="wp-block-cover alignfull is-light" style="padding-top:2rem;padding-bottom:1.5rem"><span aria-hidden="true" class="has-black-background-color has-background-dim-20 wp-block-cover__gradient-background has-background-dim"></span><img class="wp-block-cover__image-background wp-image-8570" alt="" src="' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/t-29-featured-sky.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"inherit":true}} -->
+	'content'    => '<!-- wp:cover {"url":"' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/t-29-featured-sky.jpg","id":8570,"dimRatio":20,"overlayColor":"black","minHeight":0,"isDark":false,"align":"full","style":{"spacing":{"padding":{"top":"1.5rem","bottom":"1.5rem"}}}} -->
+	<div class="wp-block-cover alignfull is-light" style="padding-top:1.5rem;padding-bottom:1.5rem"><span aria-hidden="true" class="has-black-background-color has-background-dim-20 wp-block-cover__gradient-background has-background-dim"></span><img class="wp-block-cover__image-background wp-image-8570" alt="" src="' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/t-29-featured-sky.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"inherit":true}} -->
 	<div class="wp-block-group"><!-- wp:columns {"className":"mb-0"} -->
 	<div class="wp-block-columns mb-0"><!-- wp:column {"verticalAlignment":"center"} -->
 	<div class="wp-block-column is-vertically-aligned-center"><!-- wp:heading {"textColor":"white","className":"is-style-vk-heading-plain"} -->
