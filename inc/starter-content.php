@@ -20,7 +20,7 @@ function xt9_add_starter_content() {
 					'',
 					array(
 						'<!-- wp:pattern {"slug":"x-t9/general-featured-media-and-text"} /-->	
-						<!-- wp:spacer -->
+						<!-- wp:spacer {"height":60} -->
 						<div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
 						<!-- /wp:spacer -->
 						<!-- wp:pattern {"slug":"x-t9/general-columns-menu"} /-->

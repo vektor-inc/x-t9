@@ -45,6 +45,7 @@ function x29_register_block_patterns() {
 	}
 
 	$block_patterns = array(
+		'footer-bg-dark',
 		'header-nav-float-inline-contact',
 		'header-nav-float-top-contact',
 		'hidden-404',
