@@ -47,6 +47,7 @@ function x29_register_block_patterns() {
 	$block_patterns = array(
 		'header-nav-float-inline-contact',
 		'header-nav-float-top-contact',
+		'hidden-404',
 		'query-media',
 		'general-columns-menu',
 		'general-featured-media-and-text',
