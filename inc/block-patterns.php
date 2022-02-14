@@ -48,9 +48,11 @@ function x29_register_block_patterns() {
 		'header-nav-float-inline-contact',
 		'header-nav-float-top-contact',
 		'hidden-404',
-		'query-media',
+		'query-image-left',
+		'post-template-image-left',
 		'general-columns-menu',
 		'general-featured-media-and-text',
+		'general-featured-post-list',
 	);
 
 	/**

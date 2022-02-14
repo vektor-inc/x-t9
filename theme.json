@@ -241,7 +241,7 @@
 	"customTemplates": [
 		{
 			"name": "page-lp",
-			"title": "Page for LP",
+			"title": "Page LP",
 			"postTypes": [
 				"page"
 			]
