@@ -1,6 +1,6 @@
 <?php
 /**
- * Undocumented function
+ * X-T9 functions
  *
  * @package vektor-inc/x-t9
  */
@@ -70,8 +70,6 @@ function xt9_get_the_archive_title() {
 	return apply_filters( 'xt9_get_the_archive_title', $title );
 }
 add_filter( 'get_the_archive_title', 'xt9_get_the_archive_title' );
-
-update_option( 'fresh_site', 1 );
 
 // Add block patterns.
 require get_template_directory() . '/inc/block-patterns.php';

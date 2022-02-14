@@ -11,22 +11,6 @@ The X-T9 is designed on the premise of full site editing function, and the user 
 
 GitHub : https://github.com/vektor-inc/x-t9
 
-=== Features ===
-Bootstrap based,Supports customizer, Responsive Layout, Page Navigation, Breadcrumb Navigation, and more!
-
-== License ==
-Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License version 2, see file license.txt.
-The exceptions to this license are as follows:
-The script html5.js and css3-mediaqueries.js are licensed under MIT
-Header Images are photo by theme author and are released under GPL license.
-
-
-== Author ==
-The theme built by Hidekazu Ishikawa (kurudrive) at Vektor,Inc.
-You can contact me at inquiry form.
-https://www.vektor-inc.co.jp/inquiry/
-
-
 == Changelog ==
 
 0.0.1
