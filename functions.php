@@ -76,13 +76,3 @@ update_option( 'fresh_site', 1 );
 // Add block patterns.
 require get_template_directory() . '/inc/block-patterns.php';
 require get_template_directory() . '/inc/starter-content.php';
-
-add_action(
-	'wp_footer',
-	function() {
-		$a = get_post_meta( get_the_ID() );
-		print '<pre style="text-align:left">';
-		print_r( $a );
-		print '</pre>';
-	}
-);
