@@ -32,7 +32,7 @@ return array(
 	<!-- /wp:separator -->
 	
 	<!-- wp:group {"style":{"spacing":{"padding":{"top":"1rem"}}},"layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between"}} -->
-	<div class="wp-block-group" style="padding-top:1rem"><!-- wp:navigation {"ref":3081,"textColor":"text-dark-darkbg","overlayMenu":"never","layout":{"type":"flex","justifyContent":"center"},"fontSize":"small"} /-->
+	<div class="wp-block-group" style="padding-top:1rem"><!-- wp:navigation {"textColor":"text-dark-darkbg","overlayMenu":"never","layout":{"type":"flex","justifyContent":"center"},"fontSize":"small"} /-->
 	
 	<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase"}},"textColor":"text-dark-darkbg","fontSize":"small"} -->
 	<p class="has-text-align-center has-text-dark-darkbg-color has-text-color has-small-font-size" style="text-transform:uppercase">Copyright (C) X-T9 All Rights Reserved.</p>

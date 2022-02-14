@@ -34,7 +34,7 @@ return array(
 	<!-- /wp:group -->
 	
 	<!-- wp:group {"layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between"}} -->
-	<div class="wp-block-group"><!-- wp:navigation {"ref":42,"className":"nav\u002d\u002dopen\u002d\u002dlg-up","layout":{"type":"flex","justifyContent":"left","orientation":"horizontal","flexWrap":"nowrap"},"fontSize":"small"} /-->
+	<div class="wp-block-group"><!-- wp:navigation {"className":"nav\u002d\u002dopen\u002d\u002dlg-up","layout":{"type":"flex","justifyContent":"left","orientation":"horizontal","flexWrap":"nowrap"},"fontSize":"small"} /-->
 	
 	<!-- wp:group {"style":{"spacing":{"padding":{"left":"1em"}}}} -->
 	<div class="wp-block-group" style="padding-left:1em"><!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->
