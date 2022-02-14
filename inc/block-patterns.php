@@ -14,11 +14,11 @@
  */
 function x29_register_block_patterns() {
 	$block_pattern_categories = array(
-		'featured' => array( 'label' => __( 'Featured', 'X-T9' ) ),
-		'footer'   => array( 'label' => __( 'Footers', 'X-T9' ) ),
-		'header'   => array( 'label' => __( 'Headers', 'X-T9' ) ),
-		'query'    => array( 'label' => __( 'Query', 'X-T9' ) ),
-		'pages'    => array( 'label' => __( 'Pages', 'X-T9' ) ),
+		'featured' => array( 'label' => __( 'Featured', 'x-t9' ) ),
+		'footer'   => array( 'label' => __( 'Footers', 'x-t9' ) ),
+		'header'   => array( 'label' => __( 'Headers', 'x-t9' ) ),
+		'query'    => array( 'label' => __( 'Query', 'x-t9' ) ),
+		'pages'    => array( 'label' => __( 'Pages', 'x-t9' ) ),
 	);
 
 	/**
@@ -48,6 +48,8 @@ function x29_register_block_patterns() {
 		'header-nav-float-inline-contact',
 		'header-nav-float-top-contact',
 		'query-media',
+		'general-columns-menu',
+		'general-featured-media-and-text',
 	);
 
 	/**

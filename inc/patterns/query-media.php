@@ -6,7 +6,7 @@
  */
 
 return array(
-	'title'      => __( 'Posts Media', 'X-T9' ),
+	'title'      => __( 'Posts Media', 'x-t9' ),
 	'categories' => array( 'query' ),
 	'blockTypes' => array( 'core/query' ),
 	'content'    => '<!-- wp:query {"query":{"perPage":"10","pages":"0","offset":0,"postType":"post","categoryIds":[],"tagIds":[],"order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"displayLayout":{"type":"list","columns":3},"layout":{"inherit":true}} -->
@@ -27,7 +27,7 @@ return array(
 	<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
 	<!-- /wp:spacer -->
 	
-	<!-- wp:post-excerpt {"moreText":"' . esc_html__( 'Read more', 'X-T9' ) . '"} /--></div>
+	<!-- wp:post-excerpt {"moreText":"' . esc_html__( 'Read more', 'x-t9' ) . '"} /--></div>
 	<!-- /wp:column --></div>
 	<!-- /wp:columns -->
 	
@@ -37,11 +37,11 @@ return array(
 	<!-- /wp:post-template -->
 	
 	<!-- wp:query-pagination {"paginationArrow":"chevron","layout":{"type":"flex","justifyContent":"center","orientation":"horizontal","flexWrap":"wrap"}} -->
-	<!-- wp:query-pagination-previous {"label":"' . esc_html__( 'Prev', 'X-T9' ) . '"} /-->
+	<!-- wp:query-pagination-previous {"label":"' . esc_html__( 'Prev', 'x-t9' ) . '"} /-->
 	
 	<!-- wp:query-pagination-numbers /-->
 	
-	<!-- wp:query-pagination-next {"label":"' . esc_html__( 'Next', 'X-T9' ) . '"} /-->
+	<!-- wp:query-pagination-next {"label":"' . esc_html__( 'Next', 'x-t9' ) . '"} /-->
 	<!-- /wp:query-pagination --></div>
 	<!-- /wp:query -->',
 );

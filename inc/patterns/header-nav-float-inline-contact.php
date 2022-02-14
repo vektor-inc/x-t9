@@ -6,7 +6,7 @@
  */
 
 return array(
-	'title'      => __( 'Nav Float with inline contact', 'X-T9' ),
+	'title'      => __( 'Nav Float with inline contact', 'x-t9' ),
 	'categories' => array( 'header' ),
 	'blockTypes' => array( 'core/template-part/header' ),
 	'content'    => '<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"0.25rem","right":"1.5rem","bottom":"0.25rem","left":"1.5rem"}}},"backgroundColor":"bg-light-gray","className":"is-style-default"} -->

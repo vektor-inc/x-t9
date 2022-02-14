@@ -5,8 +5,8 @@
  * @package vektor-inc/x-t9
  */
 
-if ( ! function_exists( 'x29_support' ) ) :
-	function x29_support() {
+if ( ! function_exists( 'xt9_support' ) ) :
+	function xt9_support() {
 
 		// Adding support for core block visual styles.
 		add_theme_support( 'wp-block-styles' );
@@ -15,25 +15,25 @@ if ( ! function_exists( 'x29_support' ) ) :
 		add_editor_style( 'assets/css/style.css' );
 		add_editor_style( 'assets/css/editor.css' );
 	}
-	add_action( 'after_setup_theme', 'x29_support' );
+	add_action( 'after_setup_theme', 'xt9_support' );
 endif;
 
 /**
  * Enqueue scripts and styles.
  */
-function x29_scripts() {
+function xt9_scripts() {
 	// Enqueue theme stylesheet.
 	wp_enqueue_style( 'x-t9-style', get_template_directory_uri() . '/assets/css/style.css', array(), wp_get_theme()->get( 'Version' ) );
 }
 
-add_action( 'wp_enqueue_scripts', 'x29_scripts' );
+add_action( 'wp_enqueue_scripts', 'xt9_scripts' );
 
 /**
  * Archive title
  *
  * @return string archive title
  */
-function x29_get_the_archive_title() {
+function xt9_get_the_archive_title() {
 	$title = '';
 	if ( is_category() ) {
 		$title = single_cat_title( '', false );
@@ -42,11 +42,11 @@ function x29_get_the_archive_title() {
 	} elseif ( is_author() ) {
 		$title = get_the_author();
 	} elseif ( is_year() ) {
-		$title = get_the_date( _x( 'Y', 'yearly archives date format', 'X-T9' ) );
+		$title = get_the_date( _x( 'Y', 'yearly archives date format', 'x-t9' ) );
 	} elseif ( is_month() ) {
-		$title = get_the_date( _x( 'F Y', 'monthly archives date format', 'X-T9' ) );
+		$title = get_the_date( _x( 'F Y', 'monthly archives date format', 'x-t9' ) );
 	} elseif ( is_day() ) {
-		$title = get_the_date( _x( 'F j, Y', 'daily archives date format', 'X-T9' ) );
+		$title = get_the_date( _x( 'F j, Y', 'daily archives date format', 'x-t9' ) );
 	} elseif ( is_post_type_archive() ) {
 		$title = post_type_archive_title( '', false );
 	} elseif ( is_tax() ) {
@@ -64,12 +64,12 @@ function x29_get_the_archive_title() {
 		if ( $post_type ) {
 			$title = get_post_type_object( $post_type )->labels->name;
 		} else {
-			$title = __( 'Archives', 'X-T9' );
+			$title = __( 'Archives', 'x-t9' );
 		}
 	}
-	return apply_filters( 'x29_get_the_archive_title', $title );
+	return apply_filters( 'xt9_get_the_archive_title', $title );
 }
-add_filter( 'get_the_archive_title', 'x29_get_the_archive_title' );
+add_filter( 'get_the_archive_title', 'xt9_get_the_archive_title' );
 
 // Add block patterns.
 require get_template_directory() . '/inc/block-patterns.php';

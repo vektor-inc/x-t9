@@ -6,7 +6,7 @@
  */
 
 return array(
-	'title'      => __( 'Nav Float with header top contact', 'X-T9' ),
+	'title'      => __( 'Nav Float with header top contact', 'x-t9' ),
 	'categories' => array( 'header' ),
 	'blockTypes' => array( 'core/template-part/header' ),
 	'content'    => '<!-- wp:group {"style":{"spacing":{"padding":{"bottom":"0.75rem"}}},"layout":{"inherit":true}} -->

@@ -1,16 +1,7 @@
-:root {
-	// --wp--custom--typography--line-height--normal: 1.75em;
-	// --wp--custom--typography--line-height--heading: 1.5em;
-}
 html{
-
 	// 360px : 14px -> 1200px : 16px
 	font-size:clamp( 14px, calc( ( 100vw - 360px ) * ( 2 / ( 1200 - 360 ) ) + 14px ), 16px );
 
-}
-html:where(:not([lang="ja"])) {
-	// 360px : 1px -> 1200px : 14px
-	// font-size:calc( ( 100vw - 360px ) * ( 2 / ( 1200 - 360 ) ) + 16px );
 }
 body {
 	font-weight: 500;

@@ -2,15 +2,15 @@
 
 FSEテスト用テーマです
 
-## 開発
+## Develoment
 
-sass 監視
+sass watch
 ```
 npm run watch
 ```
 
 ---
-## メモ（試行錯誤中）
+## Memo（試行錯誤中）
 
 ### ほぼ確定の事項
 ### 余白の考え方
@@ -77,7 +77,6 @@ npm run watch
 
 360px : 14px -> 1200px : 16px 基準で自動可変
 ## 文字サイズジャンプ率
-
 
 large : * 1.25
 x-large : * 1.5
