@@ -1,4 +1,10 @@
 <?php
+/**
+ * Starter Content data
+ *
+ * @package vektor-inc/x-t9
+ */
+
 add_action( 'after_setup_theme', 'xt9_add_starter_content' );
 if ( is_customize_preview() ) {
 	add_theme_support( 'starter-content', xt9_add_starter_content() );
@@ -28,14 +34,9 @@ function xt9_add_starter_content() {
 			'information',
 		),
 		'options' => array(
-			'show_on_front'               => 'page',
-			'page_on_front'               => '{{front}}',
-			'page_for_posts'              => '{{information}}',
-			'xt9_lightning_theme_options' => array(
-				'layout' => array(
-					'front-page' => 'lp',
-				),
-			),
+			'show_on_front'  => 'page',
+			'page_on_front'  => '{{front}}',
+			'page_for_posts' => '{{information}}',
 		),
 	);
 	return $starter_content;
