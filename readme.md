@@ -2,9 +2,15 @@
 
 ![100%](https://raw.githubusercontent.com/vektor-inc/x-t9/master/screenshot.png)
 
-FSEテスト用テーマです
+The X-T9 is designed on the premise of full site editing function, and the user can flexibly customize the header, footer, etc. This theme is mainly intended for use on business sites.
+
+---
 
 ## Develoment
+
+```
+npm install
+```
 
 sass watch
 ```
@@ -18,7 +24,7 @@ npm run dist
 
 ---
 
-## CSS naming
+### CSS naming
 
 * [ Component name / Project name ]--[ attribute ]
 * [ Component name / Project name ]__[ element name ]
