@@ -12,7 +12,7 @@ return array(
 	'content'    => '<!-- wp:group {"backgroundColor":"bg-black","textColor":"text-normal-darkm"} -->
 	<div class="wp-block-group has-text-normal-darkm-color has-bg-black-background-color has-text-color has-background"><!-- wp:group {"style":{"spacing":{"padding":{"top":"1rem","right":"1rem","bottom":"0rem","left":"1rem"}}}} -->
 	<div class="wp-block-group" style="padding-top:1rem;padding-right:1rem;padding-bottom:0rem;padding-left:1rem"><!-- wp:image {"align":"center","width":180,"sizeSlug":"full","linkDestination":"media"} -->
-	<div class="wp-block-image"><figure class="aligncenter size-full is-resized"><img src="' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/x-t9-logo-white-trans.png" alt="" width="180"/></figure></div>
+	<div class="wp-block-image"><figure class="aligncenter size-full is-resized"><img src="' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/x-t9-logo-yoko-white-trans.png" alt="" width="180"/></figure></div>
 	<!-- /wp:image -->
 	
 	<!-- wp:social-links {"iconColor":"text-dark-bg","iconColorValue":"rgba( 255,255,255,0.6 )","size":"has-normal-icon-size","className":"is-style-logos-only","layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"1rem","margin":{"bottom":"1rem"}}}} -->
