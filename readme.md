@@ -15,6 +15,15 @@ npm run dist
 ```
 
 ---
+
+## CSS naming
+
+* [ Component name / Project name ]--[ attribute ]
+* [ Component name / Project name ]__[ element name ]
+* [ Component name / Project name ]__[ element name ]--[ attribute ]
+
+---
+
 ## Memo（試行錯誤中）
 
 ### ほぼ確定の事項
