@@ -1,0 +1,26 @@
+.wp-block-site-title {
+	a {
+		text-decoration-color:var(--wp--preset--color--border-normal);
+		&:hover {
+			text-decoration: underline;
+			text-decoration-thickness: 1px;
+			text-decoration-color:var(--wp--preset--color--text-normal);
+		}
+	}
+}
+.site-logo--set {
+	.wp-block-site-logo {
+		img {
+			width:auto;
+			height:clamp( 32px, calc( ( 100vw - 360px ) * ( 48 / ( 1200 - 360 ) ) + 32px ), 80px );
+		}
+	}
+	.wp-block-site-title {
+		font-size:clamp( 12px, calc( ( 100vw - 360px ) * ( 10 / ( 1200 - 360 ) ) + 12px ), 22px );
+		margin-bottom:4px;
+	}
+	.wp-block-site-tagline {
+		line-height: 1.4;
+		font-size:clamp( 10px, calc( ( 100vw - 360px ) * ( 4 / ( 1200 - 360 ) ) + 10px ), 14px );
+	}
+}

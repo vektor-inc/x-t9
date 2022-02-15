@@ -9,6 +9,11 @@ sass watch
 npm run watch
 ```
 
+dist
+```
+npm run dist
+```
+
 ---
 ## Memo（試行錯誤中）
 

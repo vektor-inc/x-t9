@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 @import "variables";
+@import "ulitilies";
 @import "size";
 @import "common";
 @import "block";
@@ -10,14 +11,4 @@
 @import "button";
 @import "navigation";
 @import "navigation_break_point";
-
-/*************************************
-ulitilies
-*/
-
-.mt-0 {
-	margin-top:0 !important;
-}
-.mb-0 {
-	margin-bottom:0 !important;
-}
+@import "header";
