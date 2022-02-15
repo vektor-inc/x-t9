@@ -1,5 +1,7 @@
 # X-T9
 
+![100%](https://raw.githubusercontent.com/vektor-inc/x-t9/master/screenshot.png)
+
 FSEテスト用テーマです
 
 ## Develoment
