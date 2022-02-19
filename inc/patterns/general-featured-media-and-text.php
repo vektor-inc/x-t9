@@ -17,7 +17,7 @@ return array(
 	<!-- /wp:heading -->
 	
 	<!-- wp:paragraph {"textColor":"white"} -->
-	<p class="has-white-color has-text-color"><meta charset="utf-8">' . esc_html__( 'WordPress Theme The X-T9 is a block theme that supports the full site editing function.', 'x-t9' ) . '<br>' . esc_html__( 'You can flexible customize headers, footers, post elements, etc. that were not easy until now.', 'x-t9' ) . '</p>
+	<p class="has-white-color has-text-color"><meta charset="utf-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br />Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 	<!-- /wp:paragraph -->
 	
 	<!-- wp:buttons -->
