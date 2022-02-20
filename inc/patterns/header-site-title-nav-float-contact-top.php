@@ -42,8 +42,8 @@ return array(
 	<!-- /wp:group --></div>
 	<!-- /wp:group -->
 	
-	<!-- wp:group {"style":{"spacing":{"padding":{"top":"0.5rem","bottom":"0.5rem"}}}} -->
-	<div class="wp-block-group" style="padding-top:0.5rem;padding-bottom:0.5rem"><!-- wp:navigation {"className":"nav\u002d\u002dopen\u002d\u002dlg-up","layout":{"type":"flex","justifyContent":"right","orientation":"horizontal","flexWrap":"nowrap"},"fontSize":"small"} /--></div>
+	<!-- wp:group {"style":{"spacing":{"padding":{"top":"1rem","bottom":"0.5rem"}}}} -->
+	<div class="wp-block-group" style="padding-top:1rem;padding-bottom:0.5rem"><!-- wp:navigation {"className":"nav\u002d\u002dopen\u002d\u002dlg-up","layout":{"type":"flex","justifyContent":"right","orientation":"horizontal","flexWrap":"nowrap"},"fontSize":"small"} /--></div>
 	<!-- /wp:group --></div>
 	<!-- /wp:group --></div>
 	<!-- /wp:group --></div>
