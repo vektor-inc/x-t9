@@ -49,3 +49,18 @@
 		}	
 	}
 }
+
+.wp-block-post-template--media {
+	.wp-block-post{
+		display: flex;
+		gap:var(--wp--custom--spacing--medium);
+
+		grid-template-columns: minmax(180px, 100%) minmax(300px, 100%);
+	}
+	.wp-block-post-featured-image {
+
+	}
+	.wp-block-group {
+		width:min
+	}
+}
