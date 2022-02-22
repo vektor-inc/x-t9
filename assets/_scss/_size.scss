@@ -10,9 +10,9 @@ body {
 
 h1,h2,h3,h4,h5,h6 {
 	line-height: var(--wp--custom--typography--line-height--heading);
-
 	// margin = Ideal margin - half-leading（ (line-height - 1em ) /2 ）
 	--wp--style--block-gap: calc( 1.5em - ( ( var(--wp--custom--typography--line-height--heading) - 1em ) / 2 ) );
+	margin-bottom:1rem;
 }
 :is( h1,h2,h3,h4,h5,h6 ) + :is( h2,h3,h4,h5,h6 ){
 	--wp--style--block-gap: calc( 1em - ( ( var(--wp--custom--typography--line-height--heading) - 1em ) / 2 ) );
