@@ -4,16 +4,3 @@
  .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper{
 	padding:3px;
  }
-
-/*
-固定ページではWordPressから自動的に吐き出されるが、
-アーカイブページでは吐き出されないためにフォールバックとして追加
-*/
-h1.has-background,
-h2.has-background,
-h3.has-background,
-h4.has-background,
-h5.has-background,
-h6.has-background {
-    padding: 1.25em 2.375em;
-}
