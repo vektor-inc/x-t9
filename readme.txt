@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc
 Tested up to: 5.9.0
 Requires PHP: 5.6
-Stable tag: 0.1.1
+Stable tag: 0.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,6 +12,9 @@ The X-T9 is designed on the premise of full site editing function, and the user 
 GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
+
+0.2.0
+[ Design tuning ] Fix content width process
 
 0.1.1
 [ Design tuning ] Fix h1 margin-top since 0.1.0
