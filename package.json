@@ -10,10 +10,10 @@
     "postcss:all": "npx postcss assets/_scss/*.css --use autoprefixer postcss-minify -d assets/css/ --no-map",
     "rimraf:css": "npx rimraf assets/_scss/*.css",
     "build:css": "run-s sass postcss:all rimraf:css",
-    "watch": "nodemon -e scss --watch assets/_scss -x \"npm run build:css\"",
-    "copy": "cpx './**/*' ./dist/x-t9 --include-empty-dirs && cpx './.wp-env.json' ./dist/x-t9",
-    "clean": "rimraf ./dist/x-t9/dist && rimraf ./dist/x-t9/node_modules",
-    "dist": "run-s copy clean",
+    "watch": "nodemon -e scss --watch assets/_scss -x \"npm run build:css && npm run dist\"",
+    "copy": "npx gulp dist",
+    "zip": "cd dist && zip -r x-t9.zip x-t9",
+    "dist": "run-s copy zip",
     "composer:install:win": "wp-env run composer \"composer install\"",
     "composer:install:mac": "wp-env run composer 'composer install'",
     "phpunit:win": "wp-env run phpunit \"phpunit -c /var/www/html/wp-content/plugins/x-t9/phpunit.xml.dist --verbose\"",
@@ -22,16 +22,17 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.3.4",
+    "cpx": "^1.5.0",
     "grunt": "~1.3.0",
     "grunt-wp-i18n": "~0.5.0",
     "grunt-wp-readme-to-markdown": "~1.0.0",
+    "gulp": "^4.0.2",
     "nodemon": "^2.0.12",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.3.6",
     "postcss-cli": "^8.3.1",
     "postcss-minify": "^1.1.0",
-    "sass": "^1.39.2",
-    "cpx": "^1.5.0",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "sass": "^1.39.2"
   }
 }
