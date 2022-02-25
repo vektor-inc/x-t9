@@ -3,6 +3,7 @@ var gulp = require('gulp');
 gulp.task('dist', function() {
 	return gulp.src(
 			[
+				'./**/*.json',
 				'./**/*.php',
 				'./**/*.txt',
 				'./**/*.css',
@@ -21,6 +22,7 @@ gulp.task('dist', function() {
 				'./inc/**',
 				'./parts/**',
 				'./templates/**',
+				'./LICENSE',
 				"!./tests/**",
 				"!./dist/**",
 				"!./node_modules/**"
