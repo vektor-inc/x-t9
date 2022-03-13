@@ -176,6 +176,7 @@
             "fontFamily": "var(--wp--preset--font-family--system-font)"
         },
 		"color": {
+			"background": "#fff",
 			"text": "var(--wp--preset--color--text-normal)"
 		},
 		"elements": {

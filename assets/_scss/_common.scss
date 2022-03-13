@@ -7,9 +7,6 @@ body {
 	font-weight: 500;
 	line-height: var(--wp--custom--typography--line-height--normal);
 }
-main {
-	margin:0;
-}
 a {
 	text-decoration-thickness: 1px;
 	text-underline-offset: 0.25em;
@@ -17,30 +14,7 @@ a {
 		text-decoration: none;
 	}
 }
-h1,h2,h3,h4,h5,h6 {
-	line-height: var(--wp--custom--typography--line-height--heading);
-}
-h2,h3,h4,h5,h6 {
-	// margin = Ideal margin - half-leading（ (line-height - 1em ) /2 ）
-	margin-top: calc( 1.5em - ( ( var(--wp--custom--typography--line-height--heading) - 1em ) / 2 ) );
-}
-:is( h1,h2,h3,h4,h5,h6 ) + :is( h2,h3,h4,h5,h6 ){
-	margin-top: calc( 1em - ( ( var(--wp--custom--typography--line-height--heading) - 1em ) / 2 ) );
-}
-:is( h1,h2,h3,h4,h5,h6 ) + :id( p, ul, ol, dl ) {
-	margin-top:1rem;
-}
-p {
-	// margin = Ideal margin - half-leading（ (line-height - 1em ) /2 ）
-	margin-top: calc( 1.5em - ( ( var(--wp--custom--typography--line-height--normal) - 1em ) / 2 ) );
-}
-p {
-	margin-top:0;
-}
-hr {
-	margin-top:0;
-	margin-bottom:0;
-}
+
 figure {
 	max-width: 100%;
 	margin:0;

@@ -1,0 +1,34 @@
+main,
+hr {
+	margin-top:0;
+	margin-bottom:0;
+}
+h1,h2,h3,h4,h5,h6 {
+	// line-height is not margin but, reason of writned to here is line-height has deep engagement with this margin.
+	line-height: var(--wp--custom--typography--line-height--heading);
+	margin-bottom:0;
+}
+h2,h3,h4,h5,h6 {
+	// margin = Ideal margin - half-leading（ (line-height - 1em ) /2 ）
+	margin-top: calc( 1.5em - ( ( var(--wp--custom--typography--line-height--heading) - 1em ) / 2 ) );
+}
+:is( h1,h2,h3,h4,h5,h6 ) + :is( h2,h3,h4,h5,h6 ){
+	margin-top: calc( 1em - ( ( var(--wp--custom--typography--line-height--heading) - 1em ) / 2 ) );
+}
+:is( h1,h2,h3,h4,h5,h6 ) + :is( p, ul, ol, dl ) {
+	// margin = Ideal margin - half-leading（ (line-height - 1em ) /2 ）
+	margin-top: calc( 1.5em - ( ( var(--wp--custom--typography--line-height--normal) - 1em ) / 2 ) );
+	margin-bottom:0 ;
+}
+
+figure,
+table,
+.wp-block-buttons {
+	margin-top:var(--wp--custom--spacing--medium);
+}
+main {
+	li {
+		margin-top:0.5em;
+		margin-bottom:0.5em;
+	}
+}
