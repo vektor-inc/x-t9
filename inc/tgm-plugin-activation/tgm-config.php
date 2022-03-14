@@ -42,41 +42,29 @@ function xt9_register_required_plugins() {
 	 * Array of plugin arrays. Required keys are name and slug.
 	 * If the source is NOT from the .org repo, then source is also required.
 	 */
-	$plugins = array();
-	if ( is_plugin_active( 'vk-blocks-pro/vk-blocks.php' ) ) {
-		$plugins = array(
-
-			// This is an example of how to include a plugin bundled with a theme.
-			array(
-				'name'     => 'VK All in One Expansion Unit (Free)', // The plugin name.
-				'slug'     => 'vk-all-in-one-expansion-unit', // The plugin slug (typically the folder name).
-				'required' => false, // If false, the plugin is only 'recommended' instead of required.
-				'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-			),
-		);
-	} else {
-		$plugins = array(
-			array(
-				'name'             => 'VK Blocks (Free)', // The plugin name.
-				'slug'             => 'vk-blocks', // The plugin slug (typically the folder name).
-				'required'         => false, // If false, the plugin is only 'recommended' instead of required.
-				'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-			),
-			array(
-				'name'             => 'VK Block Patterns', // The plugin name.
-				'slug'             => 'vk-blocks', // The plugin slug (typically the folder name).
-				'required'         => false, // If false, the plugin is only 'recommended' instead of required.
-				'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-			),
-			// This is an example of how to include a plugin bundled with a theme.
-			array(
-				'name'             => 'VK All in One Expansion Unit (Free)', // The plugin name.
-				'slug'             => 'vk-all-in-one-expansion-unit', // The plugin slug (typically the folder name).
-				'required'         => false, // If false, the plugin is only 'recommended' instead of required.
-				'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-			),
+	if ( ! function_exists( 'is_plugin_active' ) ) {
+		include_once ABSPATH . 'wp-admin/includes/plugin.php';
+	}
+	if ( ! is_plugin_active( 'vk-blocks-pro/vk-blocks.php' ) ) {
+		$plugins[] = array(
+			'name'             => 'VK Blocks', // The plugin name.
+			'slug'             => 'vk-blocks', // The plugin slug (typically the folder name).
+			'required'         => false, // If false, the plugin is only 'recommended' instead of required.
+			'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
 		);
 	}
+	$plugins[] = array(
+		'name'             => 'VK Block Patterns', // The plugin name.
+		'slug'             => 'vk-block-patterns', // The plugin slug (typically the folder name).
+		'required'         => false, // If false, the plugin is only 'recommended' instead of required.
+		'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+	);
+	$plugins[] = array(
+		'name'             => 'VK All in One Expansion Unit', // The plugin name.
+		'slug'             => 'vk-all-in-one-expansion-unit', // The plugin slug (typically the folder name).
+		'required'         => false, // If false, the plugin is only 'recommended' instead of required.
+		'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+	);
 
 	/*
 	 * Array of configuration settings. Amend each line as needed.
