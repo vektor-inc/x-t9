@@ -34,8 +34,7 @@ return array(
 	<!-- /wp:social-links -->
 	
 	<!-- wp:group {"style":{"spacing":{"padding":{"left":"1rem"}}}} -->
-	<div class="wp-block-group" style="padding-left:1rem">
-	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"},"style":{"spacing":{"margin":{"top":"0px","bottom":"0px"}}}} -->
+	<div class="wp-block-group" style="padding-left:1rem"><!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"},"style":{"spacing":{"margin":{"top":"0px","bottom":"0px"}}}} -->
 	<div class="wp-block-buttons" style="margin-top:0px;margin-bottom:0px"><!-- wp:button {"width":100,"style":{"border":{"radius":"0px"},"spacing":{"padding":{"top":"0rem","bottom":"0rem"}}},"fontSize":"small"} -->
 	<div class="wp-block-button has-custom-width wp-block-button__width-100 has-custom-font-size has-small-font-size"><a class="wp-block-button__link" style="border-radius:0px;padding-top:0rem;padding-bottom:0rem">Contact</a></div>
 	<!-- /wp:button --></div>
