@@ -21,5 +21,8 @@ but actually not added case exist that reset padding to be aboid confusing.
 .has-background,
 :is(.wp-block-group):where(.has-background){
 	padding: 0;
-	overflow: hidden;
+	overflow: hidden; // cope with height
+}
+.wp-block-button .has-background{
+	overflow: inherit; // cope with multiple buttons
 }

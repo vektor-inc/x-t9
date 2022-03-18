@@ -1,8 +1,8 @@
 === X-T9 ===
 Contributors: kurudrive,vektor-inc
-Tested up to: 5.9.1
+Tested up to: 5.9.2
 Requires PHP: 5.6
-Stable tag: 0.3.1
+Stable tag: 0.4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,8 +13,13 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+0.4.0
+[ Add ] Add tgm
+[ Design Bug fix ] Header button margin tuning
+[ Design Bug fix ] Fix header logo aspect
+
 0.3.1
-[ Design Bug xix ] Header button margin tuning
+[ Design Bug fix ] Header button margin tuning
 
 0.3.0
 [ Specification Change ] Margin tuning
