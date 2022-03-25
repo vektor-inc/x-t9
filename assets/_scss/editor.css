@@ -1,0 +1,11 @@
+/**
+ * edit.css
+ * Edit screen override
+ */
+.edit-post-visual-editor__post-title-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+.site-logo--set .wp-block-site-logo .custom-logo {
+  height: auto;
+}
