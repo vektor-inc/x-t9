@@ -6,7 +6,7 @@
 		margin-left:0.5em;
 	}
 	&__container {
-		--wp--style--block-gap: var(--wp--custom--spacing--medium);
+		gap: var(--wp--custom--spacing--medium);
 		> li > a {
 			white-space: nowrap;
 		}
