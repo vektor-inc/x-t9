@@ -13,6 +13,11 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+0.5.0
+[ Design Bug fix ] Global Menu item margin
+[ Design Bug fix ] Add box-sizing
+[ Design Bug fix ] Fix button padding
+
 0.4.1
 [ Design Bug fix ] The image sticks out
 
