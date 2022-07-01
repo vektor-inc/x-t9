@@ -1,17 +1,25 @@
 /* 
  * Navigation Styles
  */
- .wp-block-navigation {
+
+.wp-block-navigation {
 	& &__submenu-icon {
 		margin-left:0.5em;
 	}
-	&__container {
-		gap: var(--wp--custom--spacing--medium);
-		> li > a {
-			white-space: nowrap;
+	// PC Menu style
+	&__responsive-container:where(:not(.has-modal-open)){
+		.wp-block-navigation__container__container {
+			& > .wp-block-navigation-item{
+				padding : 1em;
+			}
 		}
 	}
+	// Mobile menu open toggle button
+	& &__responsive-container-open{
+		margin:10px;
+	}
 }
+
 /* 
  * Sub Navigation Styles
  */
@@ -21,9 +29,6 @@
 }
 .wp-block-navigation__responsive-container:not(.has-modal-open){
 	.wp-block-navigation__submenu-container {
-		.wp-block-navigation & {
-			padding-top:0.5em;
-		}
 		.wp-block-navigation-item {
 			background-color:var(--wp--preset--color--primary);
 			border-bottom:1px solid var( --wp--preset--color--border-normal-darkbg );
