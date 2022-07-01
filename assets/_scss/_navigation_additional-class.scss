@@ -41,6 +41,14 @@
 	 }
  }
 
+.nav--first-nowrap {
+	:where(.wp-block-navigation__container) {
+		& > .wp-block-navigation-item {
+			white-space: nowrap;
+		}
+	}
+}
+
  /****************************************************** 
  * active-border-bottom
  */
