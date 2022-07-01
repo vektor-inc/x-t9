@@ -1,0 +1,71 @@
+/* 
+ * Additonal class
+ */
+
+ @use "variables" as var;
+
+ .nav--open--lg-up {
+	 @media (min-width: var.$lg-min){
+		 // 閉じるボタンを非表示にする
+		 // Change to hidden close button
+		 .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) .wp-block-navigation__responsive-container-close {
+			 display: none;
+		 }
+		 // メニュー部分を表示にする
+		 // Change to display navigation
+		 .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+			 display: block;
+			 // Default propaties
+			 // width: 100%;
+			 // position: relative;
+			 // z-index: auto;
+			 // background-color: inherit;
+		 }
+	 }
+	 @media (max-width: var.$md-max){
+		 // 閉じるボタンを表示にする
+		 // Change to display close button
+		 .wp-block-navigation__responsive-container-open:not(.always-shown) {
+			 display: block;
+		 }
+		 // メニュー部分を非表示にする
+		 // Change to hidden navigation
+		 .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+			 display: none;
+			 position: fixed;
+			 top: 0;
+			 left: 0;
+			 right: 0;
+			 bottom: 0;
+		 }
+	 }
+ }
+
+ /****************************************************** 
+ * active-border-bottom
+ */
+ .nav--active-border-bottom {
+	.wp-block-navigation__responsive-container:where(:not(.is-menu-open)) {
+		:where(.wp-block-navigation__container){
+			gap:0;
+			& > .wp-block-navigation-item{
+				padding : 1em;
+				position: relative;
+				&::after{
+					transition: all 0.2s ease-out;
+					width:0%;
+					content: "";
+					display: block;
+					bottom: 0; left: 0;
+					position: absolute;
+					border-bottom:2px solid var(--wp--preset--color--primary);
+				}
+				&:is(:hover,.current-menu-item){
+					&::after{
+						width:100%;
+					}
+				}
+			}
+		}
+	}
+ }
