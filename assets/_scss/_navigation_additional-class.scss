@@ -49,7 +49,6 @@
 		:where(.wp-block-navigation__container){
 			gap:0;
 			& > .wp-block-navigation-item{
-				padding : 1em;
 				position: relative;
 				&::after{
 					transition: all 0.2s ease-out;

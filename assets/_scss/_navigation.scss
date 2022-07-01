@@ -8,7 +8,7 @@
 	}
 	// PC Menu style
 	&__responsive-container:where(:not(.has-modal-open)){
-		.wp-block-navigation__container__container {
+		.wp-block-navigation__container {
 			& > .wp-block-navigation-item{
 				padding : 1em;
 			}

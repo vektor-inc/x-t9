@@ -44,7 +44,7 @@ return array(
 	<!-- /wp:group -->
 	
 	<!-- wp:group -->
-	<div class="wp-block-group"><!-- wp:navigation {"ref":3046,"className":"nav\u002d\u002dopen\u002d\u002dlg-up nav\u002d\u002dactive-border-bottom","layout":{"type":"flex","justifyContent":"right","orientation":"horizontal","flexWrap":"nowrap"},"fontSize":"small"} /--></div>
+	<div class="wp-block-group"><!-- wp:navigation {"className":"nav\u002d\u002dopen\u002d\u002dlg-up nav\u002d\u002dactive-border-bottom","layout":{"type":"flex","justifyContent":"right","orientation":"horizontal","flexWrap":"nowrap"},"fontSize":"small"} /--></div>
 	<!-- /wp:group --></div>
 	<!-- /wp:group --></div>
 	<!-- /wp:group --></div>
