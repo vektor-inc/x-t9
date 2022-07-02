@@ -13,7 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
-
+[ Design Improvement ] Footer add .nav--text-inline 
 [ Design Improvement ] Global nav accessibility improvement
 
 0.6.1
