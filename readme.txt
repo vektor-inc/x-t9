@@ -13,6 +13,9 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+
+[ Design Improvement ] Global nav accessibility improvement
+
 0.6.1
 [ Design Bug fix ] Global Menu item padding
 
