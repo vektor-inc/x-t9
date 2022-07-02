@@ -49,8 +49,7 @@
 		:where(.wp-block-navigation__container){
 			gap:0;
 			& > .wp-block-navigation-item{
-				position: relative;
-				&::after{
+				& > a::after{
 					transition: all 0.2s ease-out;
 					width:0%;
 					content: "";
@@ -59,7 +58,7 @@
 					position: absolute;
 					border-bottom:2px solid var(--wp--preset--color--primary);
 				}
-				&:is(:hover,.current-menu-item){
+				& > a:is(:hover,.current-menu-item){
 					&::after{
 						width:100%;
 					}
