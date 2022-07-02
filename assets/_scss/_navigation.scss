@@ -3,9 +3,6 @@
  */
 
 .wp-block-navigation {
-	& &__submenu-icon {
-		// margin-left:0.5em;
-	}
 	// PC Menu style
 	&__responsive-container:where(:not(.has-modal-open)){
 		--submenu-icon-size: 12px;
@@ -23,12 +20,16 @@
 				}
 				& > .wp-block-navigation__submenu-icon {
 					grid-area: 1/-1;
-					// align-self: calc( 50% - ( var(--submenu-icon-size) ) / 2 );
 					justify-self: end;
 					width:var(--submenu-icon-size);
 					height:var(--submenu-icon-size);
 					margin-right:var(--nav-top-item-padding);
 					display: block;
+					&[aria-expanded=true]{
+						svg {
+							transform: rotate(180deg);
+						}
+					}
 				}
 			}
 		}
