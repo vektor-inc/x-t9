@@ -33,21 +33,19 @@ return array(
 	<div class="wp-block-group" style="padding-top:0.7rem;padding-right:1rem;padding-bottom:0.7rem"><!-- wp:site-logo {"width":200} /--></div>
 	<!-- /wp:group -->
 	
-	<!-- wp:group {"layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between"}} -->
-	<div class="wp-block-group"><!-- wp:navigation {"className":"nav\u002d\u002dopen\u002d\u002dlg-up","layout":{"type":"flex","justifyContent":"left","orientation":"horizontal","flexWrap":"nowrap"},"fontSize":"small"} /-->
+	<!-- wp:group {"layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between","flexWrap":"wrap"}} -->
+	<div class="wp-block-group"><!-- wp:navigation {"className":"nav\u002d\u002dopen\u002d\u002dlg-up nav\u002d\u002dactive-border-bottom","layout":{"type":"flex","justifyContent":"left","orientation":"horizontal","flexWrap":"nowrap"},"fontSize":"small"} /-->
 	
-	<!-- wp:group {"style":{"spacing":{"padding":{"left":"1em"}}}} -->
-	<div class="wp-block-group" style="padding-left:1em"><!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"},"style":{"spacing":{"margin":{"top":"0px","bottom":"0px"}}}} -->
+	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"},"style":{"spacing":{"margin":{"top":"0px","bottom":"0px"}}}} -->
 	<div class="wp-block-buttons" style="margin-top:0px;margin-bottom:0px"><!-- wp:button {"style":{"border":{"radius":"0px"},"spacing":{"padding":{"top":"0.25rem","bottom":"0.25rem"}}},"fontSize":"small"} -->
 	<div class="wp-block-button has-custom-font-size has-small-font-size"><a class="wp-block-button__link" style="border-radius:0px;padding-top:0.25rem;padding-bottom:0.25rem">Contact</a></div>
 	<!-- /wp:button --></div>
 	<!-- /wp:buttons --></div>
 	<!-- /wp:group --></div>
 	<!-- /wp:group --></div>
-	<!-- /wp:group --></div>
 	<!-- /wp:group -->
 	
-	<!-- wp:separator {"color":"border-light","className":"is-style-wide"} -->
-	<hr class="wp-block-separator has-text-color has-background has-border-light-background-color has-border-light-color is-style-wide"/>
+	<!-- wp:separator {"opacity":"css","backgroundColor":"border-light","className":"is-style-wide"} -->
+	<hr class="wp-block-separator has-text-color has-border-light-color has-css-opacity has-border-light-background-color has-background is-style-wide"/>
 	<!-- /wp:separator -->',
 );

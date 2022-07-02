@@ -63,7 +63,7 @@
 					position: absolute;
 					border-bottom:2px solid var(--wp--preset--color--primary);
 				}
-				& > a:is(:hover,.current-menu-item){
+				& > :is(a:hover,.current-menu-item > a){
 					&::after{
 						width:100%;
 					}
