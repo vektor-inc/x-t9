@@ -4,13 +4,32 @@
 
 .wp-block-navigation {
 	& &__submenu-icon {
-		margin-left:0.5em;
+		// margin-left:0.5em;
 	}
 	// PC Menu style
 	&__responsive-container:where(:not(.has-modal-open)){
+		--submenu-icon-size: 12px;
+		--nav-top-item-padding: 1em;
 		.wp-block-navigation__container {
 			& > .wp-block-navigation-item{
-				padding : 1em;
+				display: grid;
+				position: relative;
+				& > a {
+					padding : var(--nav-top-item-padding);
+					grid-area: 1/-1;
+				}
+				&.has-child > a {
+					padding-right:calc( var(--submenu-icon-size) + 1em + 0.5em );
+				}
+				& > .wp-block-navigation__submenu-icon {
+					grid-area: 1/-1;
+					// align-self: calc( 50% - ( var(--submenu-icon-size) ) / 2 );
+					justify-self: end;
+					width:var(--submenu-icon-size);
+					height:var(--submenu-icon-size);
+					margin-right:var(--nav-top-item-padding);
+					display: block;
+				}
 			}
 		}
 	}
