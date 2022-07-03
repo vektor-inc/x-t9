@@ -13,6 +13,9 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+0.9.0
+[ Design Improvement ] Footer bottom sticky
+
 0.8.0
 [ Add function ] Header fixed
 [ Specification Change ] Abolished border light color
