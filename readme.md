@@ -30,6 +30,16 @@ npm run dist
 * [ Component name / Project name ]__[ element name ]
 * [ Component name / Project name ]__[ element name ]--[ attribute ]
 
+
+---
+
+### Colors
+
+| Color name |  |
+|-| ------------- |
+| border-normal | 白背景の線  |
+| border-normal-darkbg | 黒背景での通常線 |
+
 ---
 
 ## Memo（試行錯誤中）

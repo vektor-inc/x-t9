@@ -29,8 +29,8 @@ return array(
 	<!-- /wp:column --></div>
 	<!-- /wp:columns -->
 	
-	<!-- wp:separator {"color":"border-light","className":"is-style-wide"} -->
-	<hr class="wp-block-separator has-text-color has-background has-border-light-background-color has-border-light-color is-style-wide"/>
+	<!-- wp:separator {"color":"border-normal","className":"is-style-wide"} -->
+	<hr class="wp-block-separator has-text-color has-background has-border-normal-background-color is-style-wide"/>
 	<!-- /wp:separator -->
 	<!-- /wp:post-template -->',
 );
