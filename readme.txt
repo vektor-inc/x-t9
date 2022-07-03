@@ -14,6 +14,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 == Changelog ==
 
 [ Add function ] Header fixed
+[ Specification Change ] Abolished border light color
 
 0.7.0
 [ Design Improvement ] Header pattern update

@@ -14,8 +14,8 @@ return array(
 	<!-- /wp:heading -->
 	
 	<!-- wp:group {"layout":{"inherit":true}} -->
-	<div class="wp-block-group"><!-- wp:separator {"color":"border-light","className":"is-style-wide"} -->
-	<hr class="wp-block-separator has-text-color has-background has-border-light-background-color has-border-light-color is-style-wide"/>
+	<div class="wp-block-group"><!-- wp:separator {"color":"border-normal","className":"is-style-wide"} -->
+	<hr class="wp-block-separator has-text-color has-background has-border-normal-background-color has-border-normal-color is-style-wide"/>
 	<!-- /wp:separator -->
 	
 	<!-- wp:query {"queryId":9,"query":{"perPage":"2","pages":"0","offset":0,"postType":"post","categoryIds":[],"tagIds":[],"order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false},"displayLayout":{"type":"list","columns":3},"layout":{"inherit":false}} -->
