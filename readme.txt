@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc
 Tested up to: 5.9.2
 Requires PHP: 5.6
-Stable tag: 0.7.0
+Stable tag: 0.8.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+0.8.0
 [ Add function ] Header fixed
 [ Specification Change ] Abolished border light color
 
