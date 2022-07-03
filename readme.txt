@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Add function ] Header fixed
+
 0.7.0
 [ Design Improvement ] Header pattern update
 [ Design Improvement ] Footer add .nav--text-inline 
