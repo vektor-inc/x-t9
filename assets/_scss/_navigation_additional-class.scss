@@ -74,12 +74,12 @@
  }
 
  .nav--text-inline {
-	gap:0;
 	--nav--text-inline--border:var(--wp--preset--color--border-normal);
 	&.nav--darkbg{
 		--nav--text-inline--border:var(--wp--preset--color--border-normal-darkbg);
 	}
 	.wp-block-navigation__container{	
+		gap:0;
 		& > .wp-block-navigation-item {
 			border-left:1px solid var(--nav--text-inline--border);
 			&:last-child {
