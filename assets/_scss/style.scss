@@ -13,6 +13,18 @@
 @import "navigation_additional-class";
 @import "header";
 @import "header_additional-class";
+@import "footer";
+
+html{
+	height:100%; // to be footer bottom sticky
+	@media ( min-width:601px ) {
+		height:calc( 100% - var(--wp-admin--admin-bar--height) );
+	}
+}
+body,
+.wp-site-blocks{
+	height:100%; // to be footer bottom sticky
+}
 
 /*
 .has-background is automatically added padding by core.
