@@ -8,3 +8,21 @@
 		}
 	}
 }
+
+.scrolled-header-fixed {
+	position: fixed;
+	z-index: 9999;
+	width:100vw;
+	transition: all 0.5s ease-out;
+	top:-200px;
+	&.wp-block-group{
+		overflow: visible;
+	}
+	.header-fixed-active & {
+		top:var(--wp-admin--admin-bar--height);
+	}
+	.edit-site-block-editor__block-list & {
+		position: relative;
+		top:0;
+	}
+}

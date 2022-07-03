@@ -5,6 +5,10 @@
  * @package vektor-inc/x-t9
  */
 
+$theme_opt = wp_get_theme( get_template() );
+
+define( 'XT9_THEME_VERSION', $theme_opt->Version ); // phpcs:ignore
+
 if ( ! function_exists( 'xt9_support' ) ) :
 	function xt9_support() {
 
@@ -27,6 +31,21 @@ function xt9_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'xt9_scripts' );
+
+/**
+ * Load JavaScript
+ *
+ * @return void
+ */
+function xt9_add_script() {
+	wp_register_script( 'xt9-js', get_template_directory_uri() . '/assets/js/main.js', array(), XT9_THEME_VERSION, true );
+	$options = array(
+		'header_scrool' => true,
+	);
+	wp_localize_script( 'xt9-js', 'xt9Opt', apply_filters( 'xt9_localize_options', $options ) );
+	wp_enqueue_script( 'xt9-js' );
+}
+add_action( 'wp_enqueue_scripts', 'xt9_add_script' );
 
 /**
  * Archive title
