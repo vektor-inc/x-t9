@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Improvement ][ table ] thead th specify to center
+
 0.9.0
 [ Design Improvement ] Footer bottom sticky
 
