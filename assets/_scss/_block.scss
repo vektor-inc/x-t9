@@ -4,3 +4,14 @@
  .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper{
 	padding:3px;
  }
+
+ .wp-block-table {
+	thead th.has-text-align-right {
+		text-align: center;
+	} 
+	figcaption {
+		margin-top: 0.4rem;
+		text-align: center;
+		font-size: 0.75rem;
+	}
+}
