@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc
 Tested up to: 5.9.2
 Requires PHP: 5.6
-Stable tag: 0.9.0
+Stable tag: 0.9.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,7 +13,9 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+0.9.1
 [ Design Improvement ][ table ] thead th specify to center
+[ Design bug fix ] Header Fixed admin bar logout margin
 
 0.9.0
 [ Design Improvement ] Footer bottom sticky

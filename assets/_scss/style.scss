@@ -39,3 +39,7 @@ but actually not added case exist that reset padding to be aboid confusing.
 .wp-block-button .has-background{
 	overflow: inherit; // cope with multiple buttons
 }
+
+body:not(.admin-bar) {
+	--wp-admin--admin-bar--height:0;
+}
