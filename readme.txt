@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Improvement ] Add form css ( input / select / textarea )
+
 0.9.1
 [ Design Improvement ][ table ] thead th specify to center
 [ Design bug fix ] Header Fixed admin bar logout margin
