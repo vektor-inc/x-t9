@@ -35,4 +35,10 @@ main {
 		margin-top:0.5em;
 		margin-bottom:0.5em;
 	}
+	input,
+	textarea,
+	select{
+		padding:0.5em;
+		border:1px solid var(--wp--preset--color--border-normal);
+	}
 }
