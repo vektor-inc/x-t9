@@ -14,6 +14,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 == Changelog ==
 
 [ Design Improvement ] Add form css ( input / select / textarea )
+[ Specification Change ] Delete margin-top from first-child heading
 
 0.9.1
 [ Design Improvement ][ table ] thead th specify to center
