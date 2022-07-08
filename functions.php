@@ -79,9 +79,9 @@ function xt9_get_the_archive_title() {
 	} else {
 		global $wp_query;
 		// get post type.
-		$post_type = $wp_query->query_vars['post_type'];
-		if ( $post_type ) {
-			$title = get_post_type_object( $post_type )->labels->name;
+		if ( ! empty( $wp_query->query_vars['post_type'] ) ) {
+			$post_type = $wp_query->query_vars['post_type'];
+			$title     = get_post_type_object( $post_type )->labels->name;
 		} else {
 			$title = __( 'Archives', 'x-t9' );
 		}
