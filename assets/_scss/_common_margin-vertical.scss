@@ -11,6 +11,9 @@ h1,h2,h3,h4,h5,h6 {
 h2,h3,h4,h5,h6 {
 	// margin = Ideal margin - half-leading（ (line-height - 1em ) /2 ）
 	margin-top: calc( 1.5em - ( ( var(--wp--custom--typography--line-height--heading) - 1em ) / 2 ) );
+	&:first-child {
+		margin-top:0;
+	}
 }
 :is( h1,h2,h3,h4,h5,h6 ) + :is( h2,h3,h4,h5,h6 ){
 	margin-top: calc( 1em - ( ( var(--wp--custom--typography--line-height--heading) - 1em ) / 2 ) );
