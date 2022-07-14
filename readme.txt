@@ -14,7 +14,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 == Changelog ==
 
 [ Design Improvement ] Add form css ( input / select / textarea )
-[ Specification Change ] Delete margin-top from first-child heading
+[ Design Improvement ] Add Table Border CSS
+[ Design Improvement ] Delete margin-top from first-child heading
 [ Bug fix ] Cope with All in One SEO PHP Notice
 
 0.9.1
