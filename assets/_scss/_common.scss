@@ -42,3 +42,11 @@ main {
 		border:1px solid var(--wp--preset--color--border-normal);
 	}
 }
+
+table {
+	&,
+	th,
+	td {
+		border:1px solid var(--wp--preset--color--border-normal);
+	}
+}
