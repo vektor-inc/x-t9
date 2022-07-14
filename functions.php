@@ -92,5 +92,8 @@ add_filter( 'get_the_archive_title', 'xt9_get_the_archive_title' );
 
 // Add block patterns.
 require get_template_directory() . '/inc/block-patterns.php';
-
+// Add Block Styles
+require get_template_directory() . '/inc/block-styles.php';
+// Load TGM
 require get_template_directory() . '/inc/tgm-plugin-activation/tgm-config.php';
+
