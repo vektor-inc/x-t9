@@ -147,7 +147,7 @@
         },
         "custom": {
 			"content-size":{
-				"normal": "min( 1110px, 90% )"
+				"normal": "min( 1110px, 90vw )"
 			},
 			"spacing":{
 				"x-small": "calc(var(--wp--custom--spacing--medium) / 4)",
