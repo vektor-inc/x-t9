@@ -1,0 +1,5 @@
+{
+    "require": {
+        "vektor-inc/vk-helpers": "^0.0.2"
+    }
+}
