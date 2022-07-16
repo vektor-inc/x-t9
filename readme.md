@@ -41,7 +41,6 @@ npm run dist
 | border-normal-darkbg | 黒背景での通常線 |
 
 ---
-
 ## Memo（試行錯誤中）
 
 ### ほぼ確定の事項
@@ -72,6 +71,15 @@ blockGap を使用しない場合でも余白は margin-bottom:0; にして marg
 margin-top: var( --wp--style--block-gap );
 margin-bottom: 0; 
 ```
+
+| Spacing |  |
+|-| ------------- |
+| xs | 詰めたいがびたっとつくのはまずい場合  |
+| sm | 通常の間隔より狭い  |
+| md | 段落など通常のブロック要素の余白 |
+| lg | 複数のブロックの塊 |
+| xl | セクション最内側など |
+
 #### theme.json で blockGap は null 指定する（ほぼ確定）
 
 でないと margin-top に強めに追加されて以下のように追加される
