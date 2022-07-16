@@ -44,7 +44,8 @@
  /****************************************************** 
  * active-border-bottom
  */
- .nav--active-border-bottom {
+
+ *[class*="nav--active-border-bottom"] {
 	.wp-block-navigation__responsive-container:where(:not(.is-menu-open)) {
 		:where(.wp-block-navigation__container){
 			gap:0;
@@ -71,9 +72,9 @@
 			}
 		}
 	}
- }
+}
 
- .nav--text-inline {
+*[class*="nav--text-inline"] {
 	--nav--text-inline--border:var(--wp--preset--color--border-normal);
 	&.nav--darkbg{
 		--nav--text-inline--border:var(--wp--preset--color--border-normal-darkbg);
@@ -92,4 +93,4 @@
 			}
 		}
 	}
- }
+}
