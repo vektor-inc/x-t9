@@ -223,15 +223,7 @@
 				"typography": {
 					"lineHeight": "1.5"
 				}
-			},
-			"core/query-pagination": {
-				"spacing": {
-					"margin": { 
-						"top":"var(--wp--custom--spacing--medium)",
-						"bottom":"var(--wp--custom--spacing--medium)"
-					 }
-				}
-			}				
+			}			
 		}
     },
 	"customTemplates": [

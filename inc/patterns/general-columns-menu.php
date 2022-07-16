@@ -1,6 +1,6 @@
 <?php
 /**
- * Columns Menu
+ * Columns Menu Section
  *
  * @package vektor-inc/x-t9
  */
@@ -29,9 +29,7 @@ return array(
 	<!-- /wp:button --></div>
 	<!-- /wp:buttons -->
 	
-	<!-- wp:spacer {"height":30} -->
-	<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
-	<!-- /wp:spacer --></div>
+	</div>
 	<!-- /wp:column -->
 	
 	<!-- wp:column -->
@@ -53,9 +51,7 @@ return array(
 	<!-- /wp:button --></div>
 	<!-- /wp:buttons -->
 	
-	<!-- wp:spacer {"height":30} -->
-	<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
-	<!-- /wp:spacer --></div>
+	</div>
 	<!-- /wp:column -->
 
 	<!-- wp:column -->
@@ -77,9 +73,7 @@ return array(
 	<!-- /wp:button --></div>
 	<!-- /wp:buttons -->
 	
-	<!-- wp:spacer {"height":30} -->
-	<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
-	<!-- /wp:spacer --></div>
+	</div>
 	<!-- /wp:column -->
 
 	<!-- wp:column -->
@@ -101,10 +95,11 @@ return array(
 	<!-- /wp:button --></div>
 	<!-- /wp:buttons -->
 	
-	<!-- wp:spacer {"height":30} -->
-	<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
-	<!-- /wp:spacer --></div>
+	</div>
 	<!-- /wp:column -->
 	</div>
-	<!-- /wp:columns -->',
+	<!-- /wp:columns -->
+	<!-- wp:spacer {"height":"","className":"is-style-spacer-xl"} -->
+	<div style="height:" aria-hidden="true" class="wp-block-spacer is-style-spacer-xl"></div>
+	<!-- /wp:spacer -->',
 );
