@@ -13,10 +13,11 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ] Add Spacer common style and template update
+[ Specification Change ] Comvert to loop template 
 [ Design Improvement ] Add form css ( input / select / textarea )
 [ Design Improvement ] Add Table Border CSS
 [ Design Improvement ] Delete margin-top from first-child heading
-[ Specification Change ] Comvert to loop template 
 [ Bug fix ] Cope with All in One SEO PHP Notice
 
 0.9.1

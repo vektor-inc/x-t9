@@ -1,6 +1,6 @@
 <?php
 /**
- * Featured Media and Text
+ * Featured Hero Media and Text Section
  *
  * @package vektor-inc/x-t9
  */

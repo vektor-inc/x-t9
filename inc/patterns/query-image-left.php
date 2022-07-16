@@ -13,13 +13,23 @@ return array(
 	<div class="wp-block-query">
 	
 	<!-- wp:pattern {"slug":"x-t9/post-template-image-left"} /-->	
+
+	<!-- wp:spacer {"height":"","className":"is-style-spacer-md"} -->
+	<div style="height:" aria-hidden="true" class="wp-block-spacer is-style-spacer-md"></div>
+	<!-- /wp:spacer -->
 	
 	<!-- wp:query-pagination {"paginationArrow":"chevron","layout":{"type":"flex","justifyContent":"center","orientation":"horizontal","flexWrap":"wrap"}} -->
 	<!-- wp:query-pagination-previous {"label":"' . esc_html__( 'Prev', 'x-t9' ) . '"} /-->
-	
+
 	<!-- wp:query-pagination-numbers /-->
 	
 	<!-- wp:query-pagination-next {"label":"' . esc_html__( 'Next', 'x-t9' ) . '"} /-->
-	<!-- /wp:query-pagination --></div>
+	<!-- /wp:query-pagination -->
+
+	<!-- wp:spacer {"height":"","className":"is-style-spacer-md"} -->
+	<div style="height:" aria-hidden="true" class="wp-block-spacer is-style-spacer-md"></div>
+	<!-- /wp:spacer -->
+
+	</div>
 	<!-- /wp:query -->',
 );
