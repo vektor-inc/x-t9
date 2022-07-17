@@ -1,11 +1,14 @@
 /*
- * Search Form
+ * Core block styles overrides
  */
- .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper{
-	padding:3px;
- }
+ 
+/* Search ------------------------------------------------- */
+.wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper{
+padding:3px;
+}
 
- .wp-block-table {
+/* Table ------------------------------------------------- */
+.wp-block-table {
 	thead th.has-text-align-right {
 		text-align: center;
 	} 
@@ -13,5 +16,13 @@
 		margin-top: 0.4rem;
 		text-align: center;
 		font-size: 0.75rem;
+	}
+}
+
+/* Form ------------------------------------------------- */
+.wp-block-post-comments-form {
+	input:not([type=submit]),
+	textarea {
+		border-color:var( --wp--preset--color--border-normal );
 	}
 }
