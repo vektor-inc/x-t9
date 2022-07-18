@@ -26,3 +26,8 @@
 		border-color:var( --wp--preset--color--border-normal );
 	}
 }
+
+/* Image ------------------------------------------------- */
+.wp-block-image figcaption {
+	margin-bottom:0;
+}

@@ -37,7 +37,6 @@ main {
 		padding:0.5em;
 		border:1px solid var(--wp--preset--color--border-normal);
 	}
-
 }
 
 table {
@@ -46,4 +45,7 @@ table {
 	td {
 		border:1px solid var(--wp--preset--color--border-normal);
 	}
+}
+iframe {
+	max-width: 100%;
 }

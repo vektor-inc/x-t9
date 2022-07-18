@@ -18,6 +18,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 [ Design Tuning ] Add form css ( input / select / textarea )
 [ Design Tuning ] Add Table Border CSS
 [ Design Tuning ] Add dashed border to Spacer on editor screen
+[ Design Tuning ] Add iframe max-width 100%
 [ Design Tuning ] Delete margin-top from next element of spacer block
 [ Design Tuning ] Delete margin-top from first-child heading
 [ Design Tuning ] Space system tuning
