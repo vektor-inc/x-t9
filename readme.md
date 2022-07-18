@@ -39,6 +39,7 @@ npm run dist
 |-| ------------- |
 | border-normal | 白背景の線  |
 | border-normal-darkbg | 黒背景での通常線 |
+| bg-light-gray | 背景用の明るい灰色 |
 
 ---
 ## Memo（試行錯誤中）

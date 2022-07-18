@@ -15,11 +15,12 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 [ Specification Change ] Add Spacer common style and template update
 [ Specification Change ] Comvert to loop template 
-[ Design Improvement ] Add form css ( input / select / textarea )
-[ Design Improvement ] Add Table Border CSS
-[ Design Improvement ] Delete margin-top from first-child heading
-[ Design Improvement ] Add dashed border to Spacer on editor screen
-[ Design Improvement ] Delete margin-top from next element of spacer block
+[ Design Tuning ] Add form css ( input / select / textarea )
+[ Design Tuning ] Add Table Border CSS
+[ Design Tuning ] Add dashed border to Spacer on editor screen
+[ Design Tuning ] Delete margin-top from next element of spacer block
+[ Design Tuning ] Delete margin-top from first-child heading
+[ Design Tuning ] Space system tuning
 [ Bug fix ] Cope with All in One SEO PHP Notice
 [ Bug fix ] Fix Editor screen padding
 
