@@ -18,6 +18,13 @@ h2,h3,h4,h5,h6 {
 :is( h1,h2,h3,h4,h5,h6 ) + :is( h2,h3,h4,h5,h6 ){
 	margin-top: calc( 1em - ( ( var(--wp--custom--typography--line-height--heading) - 1em ) / 2 ) );
 }
+
+// スペーサーブロックの次の要素の上部には margin-top が自動的に 0 になるようにする
+// Delete margin-top from next element of spacer block
+:is( .wp-block-spacer,.vk_spacer ) + :is( * ){
+	margin-top: 0
+}
+
 :is( h1,h2,h3,h4,h5,h6 ) + :is( p, ul, ol, dl ) {
 	// margin = Ideal margin - half-leading（ (line-height - 1em ) /2 ）
 	margin-top: calc( 1.5em - ( ( var(--wp--custom--typography--line-height--normal) - 1em ) / 2 ) );
