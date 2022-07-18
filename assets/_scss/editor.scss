@@ -25,6 +25,12 @@
 	content:"This is .scrolled-header-fixed";
 }
 
+/* Spacer ------------------------------------------------- */
+
+.wp-block-spacer {
+	border:1px dashed var(--wp--preset--color--border-normal);
+}
+
 /* Editor Screen Padding ------------------------------------------------- */
 
 .wp-site-blocks,
