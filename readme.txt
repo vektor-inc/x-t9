@@ -19,6 +19,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 [ Design Improvement ] Add Table Border CSS
 [ Design Improvement ] Delete margin-top from first-child heading
 [ Bug fix ] Cope with All in One SEO PHP Notice
+[ Bug fix ] Fix Editor screen padding
 
 0.9.1
 [ Design Improvement ][ table ] thead th specify to center
