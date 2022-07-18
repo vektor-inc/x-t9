@@ -3,17 +3,17 @@
  */
 
  .is-style-spacer-xs {
-	height:var(--wp--custom--spacing--x-small);
+	height:var(--wp--custom--spacing--x-small) !important;
  }
  .is-style-spacer-sm {
-	height:var(--wp--custom--spacing--small);
+	height:var(--wp--custom--spacing--small) !important;
  }
  .is-style-spacer-md {
-	height:var(--wp--custom--spacing--medium);
+	height:var(--wp--custom--spacing--medium) !important;
  }
  .is-style-spacer-lg {
-	height:var(--wp--custom--spacing--large);
+	height:var(--wp--custom--spacing--large) !important;
  }
  .is-style-spacer-xl {
-	height:var(--wp--custom--spacing--x-large);
+	height:var(--wp--custom--spacing--x-large) !important;
  }
