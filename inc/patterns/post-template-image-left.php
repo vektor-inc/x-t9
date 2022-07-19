@@ -21,10 +21,6 @@ return array(
 	<div class="wp-block-group has-text-bright-color has-text-color"><!-- wp:post-date /--></div>
 	<!-- /wp:group -->
 	
-	<!-- wp:spacer {"height":15} -->
-	<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
-	<!-- /wp:spacer -->
-	
 	<!-- wp:post-excerpt {"moreText":"' . esc_html__( 'Read more', 'x-t9' ) . '"} /--></div>
 	<!-- /wp:column --></div>
 	<!-- /wp:columns -->
