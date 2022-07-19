@@ -38,14 +38,23 @@ main {
 		border:1px solid var(--wp--preset--color--border-normal);
 	}
 }
+textarea {
+	width:100%;
+}
 
-table {
+iframe {
+	max-width: 100%;
+}
+
+// お問い合わせフォームなど手打ちした場合用
+table,
+.wp-block-table table {
+	border-collapse: collapse;
+    width: 100%;
 	&,
 	th,
 	td {
 		border:1px solid var(--wp--preset--color--border-normal);
+		padding: 0.5em 0.8em;
 	}
-}
-iframe {
-	max-width: 100%;
 }

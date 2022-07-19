@@ -32,7 +32,6 @@ h2,h3,h4,h5,h6 {
 figure,
 ul,
 ol,
-p,
 blockquote,
 .wp-block-table,
 .wp-block-buttons {
@@ -40,16 +39,15 @@ blockquote,
 	margin-block-start: var(--wp--custom--spacing--medium);
 }
 
+p,
+main ul li {
+	margin-top: var(--wp--custom--spacing--small);	
+	margin-block-start: var(--wp--custom--spacing--small);	
+}
+
 // スペーサーブロックの次の要素の上部には margin-top が自動的に 0 になるようにする
 // Delete margin-top from next element of spacer block
 :is( .wp-block-spacer,.vk_spacer ) + :is( * ){
 	margin-top: 0;
 	margin-block-start: 0;
-}
-
-main {
-	li {
-		margin-top:0.5em;
-		margin-bottom:0.5em;
-	}
 }
