@@ -33,13 +33,11 @@ return array(
 	<div style="height:" aria-hidden="true" class="wp-block-spacer is-style-spacer-md"></div>
 	<!-- /wp:spacer -->
 	
-	<!-- wp:query-pagination {"paginationArrow":"chevron","layout":{"type":"flex","justifyContent":"center","orientation":"horizontal","flexWrap":"wrap"}} -->
-	<!-- wp:query-pagination-previous {"label":"Prev"} /-->
-	
-	<!-- wp:query-pagination-numbers /-->
-	
-	<!-- wp:query-pagination-next {"label":"Next"} /-->
-	<!-- /wp:query-pagination --></div>
+	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+	<div class="wp-block-buttons"><!-- wp:button {"fontSize":"x-small"} -->
+	<div class="wp-block-button has-custom-font-size has-x-small-font-size"><a class="wp-block-button__link" href="/information/">Information list</a></div>
+	<!-- /wp:button --></div>
+	<!-- /wp:buttons --></div>
 	<!-- /wp:query -->
 	
 	<!-- wp:spacer {"height":"","className":"is-style-spacer-xl"} -->
