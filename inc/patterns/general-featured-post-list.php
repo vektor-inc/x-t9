@@ -2,6 +2,9 @@
 /**
  * Featured Post List Section
  *
+ * 固定ページに貼り付け用です。アーカイブペジ用ではありません。
+ * This Pattern is for Page.
+ *
  * @package vektor-inc/x-t9
  */
 
@@ -27,7 +30,9 @@ return array(
 	<!-- wp:query {"queryId":9,"query":{"perPage":"2","pages":"0","offset":0,"postType":"post","categoryIds":[],"tagIds":[],"order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false},"displayLayout":{"type":"list","columns":3},"layout":{"inherit":false}} -->
 	<div class="wp-block-query">
 	
+	<!-- wp:post-template -->
 	<!-- wp:pattern {"slug":"x-t9/post-template-image-left"} /-->
+	<!-- /wp:post-template -->
 
 	<!-- wp:spacer {"height":"","className":"is-style-spacer-md"} -->
 	<div style="height:" aria-hidden="true" class="wp-block-spacer is-style-spacer-md"></div>
@@ -38,6 +43,7 @@ return array(
 	<div class="wp-block-button has-custom-font-size has-x-small-font-size"><a class="wp-block-button__link" href="/information/">Information list</a></div>
 	<!-- /wp:button --></div>
 	<!-- /wp:buttons --></div>
+	
 	<!-- /wp:query -->
 	
 	<!-- wp:spacer {"height":"","className":"is-style-spacer-xl"} -->

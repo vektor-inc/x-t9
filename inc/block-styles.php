@@ -5,6 +5,7 @@
  * @package vektor-inc/x-t9
  */
 
+/* Navigation ----------------------------------------------------------- */
 register_block_style(
 	'core/navigation',
 	array(
@@ -22,6 +23,7 @@ register_block_style(
 	)
 );
 
+/* Spacer --------------------------------------------------------------- */
 register_block_style(
 	'core/spacer',
 	array(

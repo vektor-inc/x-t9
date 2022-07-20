@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ] Change Post template 2 column
 [ Specification Change ] Add Spacer common style and template update
 [ Specification Change ] Comvert to loop template 
 [ Design Tuning ] Add form css ( input / select / textarea )
