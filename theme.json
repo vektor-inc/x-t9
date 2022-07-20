@@ -157,7 +157,7 @@
 				"x-large":  "calc(var(--wp--custom--spacing--medium) * 2)",
 				"editor-padding": "2rem",
 				"button-sm":  "0.3em 1em",
-				"menu-indent":  "1rem"
+				"menu-indent":  "0.875rem"
 			},
             "typography": {
                 "line-height": {
@@ -254,6 +254,11 @@
 			"name": "footer",
 			"title": "Footer",
 			"area": "footer"
+		},
+		{
+			"name": "sidebar-post",
+			"title": "Sidebar Post",
+			"area": "uncategorized"
 		}
 	]
 }

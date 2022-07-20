@@ -17,3 +17,7 @@
  .is-style-spacer-xl {
 	height:var(--wp--custom--spacing--x-large) !important;
  }
+
+ .wp-block-columns.main-layout {
+	gap:var(--wp--custom--spacing--x-large);
+ }

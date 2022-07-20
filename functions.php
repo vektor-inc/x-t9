@@ -47,6 +47,13 @@ function xt9_add_script() {
 }
 add_action( 'wp_enqueue_scripts', 'xt9_add_script' );
 
+// Add block patterns.
+require get_template_directory() . '/inc/block-patterns.php';
+// Add Block Styles.
+require get_template_directory() . '/inc/block-styles.php';
+// Load TGM.
+require get_template_directory() . '/inc/tgm-plugin-activation/tgm-config.php';
+
 /**
  * Archive title
  *
@@ -90,10 +97,26 @@ function xt9_get_the_archive_title() {
 }
 add_filter( 'get_the_archive_title', 'xt9_get_the_archive_title' );
 
-// Add block patterns.
-require get_template_directory() . '/inc/block-patterns.php';
-// Add Block Styles
-require get_template_directory() . '/inc/block-styles.php';
-// Load TGM
-require get_template_directory() . '/inc/tgm-plugin-activation/tgm-config.php';
+/**
+ * Year Artchive list 'year' and count insert to inner </a>
+ *
+ * @param string $html link html.
+ * @return string $html added string html
+ */
+function xt9_archives_link( $html ) {
+	return preg_replace( '@</a>(.+?)</li>@', '\1</a></li>', $html );
+}
+add_filter( 'get_archives_link', 'xt9_archives_link' );
 
+/**
+ * Category list count insert to inner </a>
+ *
+ * @param string $output : output html.
+ * @param array  $args : list categories args.
+ * @return string $output : return string
+ */
+function xt9_list_categories( $output, $args ) {
+	$output = preg_replace( '/<\/a>\s*\((\d+)\)/', ' ($1)</a>', $output );
+	return $output;
+}
+add_filter( 'wp_list_categories', 'xt9_list_categories', 10, 2 );
