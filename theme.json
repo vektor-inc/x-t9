@@ -149,6 +149,9 @@
 			"content-size":{
 				"normal": "min( 1110px, 90vw )"
 			},
+			"layout":{
+				"sidebar": "220px"
+			},
 			"spacing":{
 				"x-small": "calc(var(--wp--custom--spacing--medium) / 4)",
 				"small": "calc(var(--wp--custom--spacing--medium) / 2)",

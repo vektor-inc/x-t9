@@ -64,3 +64,20 @@ register_block_style(
 		'style_handle' => 'x-t9-style',
 	)
 );
+/* Layout ----------------------------------------------------------- */
+register_block_style(
+	'core/columns',
+	array(
+		'name'         => 'main-layout',
+		'label'        => __( 'Main layout', 'x-t9' ),
+		'style_handle' => 'x-t9-style',
+	),
+);
+register_block_style(
+	'core/column',
+	array(
+		'name'         => 'main-layout-sidebar',
+		'label'        => __( 'Sidebar', 'x-t9' ),
+		'style_handle' => 'x-t9-style',
+	),
+);
