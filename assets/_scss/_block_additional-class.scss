@@ -1,7 +1,9 @@
 /*
  * core block 
  */
-
+/*-------------------------------------------*/
+/*  Spacer
+/*-------------------------------------------*/
  .is-style-spacer-xs {
 	height:var(--wp--custom--spacing--x-small) !important;
  }
@@ -18,6 +20,13 @@
 	height:var(--wp--custom--spacing--x-large) !important;
  }
 
- .wp-block-columns.main-layout {
+/*-------------------------------------------*/
+/*  Column
+/*-------------------------------------------*/
+.is-style-main-layout {
 	gap:var(--wp--custom--spacing--x-large);
- }
+}
+.is-style-main-layout-sidebar {
+	flex-grow: unset !important;
+	flex-basis:var(--wp--custom--layout--sidebar) !important;
+}

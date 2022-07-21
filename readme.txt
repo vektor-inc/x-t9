@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Add Block Style ] Column Layout / Spacer / Navigation
 [ Specification Change ] Change Post template 2 column
 [ Specification Change ] Add Spacer common style and template update
 [ Specification Change ] Comvert to loop template 
@@ -22,7 +23,6 @@ GitHub : https://github.com/vektor-inc/x-t9
 [ Design Tuning ] Add iframe max-width 100%
 [ Design Tuning ] Delete margin-top from next element of spacer block
 [ Design Tuning ] Delete margin-top from first-child heading
-[ Design Tuning ] Space system tuning
 [ Bug fix ] Cope with All in One SEO PHP Notice
 [ Bug fix ] Fix Editor screen padding
 
