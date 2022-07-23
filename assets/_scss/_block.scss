@@ -41,7 +41,9 @@
 /*-------------------------------------------*/
 /*  Category / Archive block
 /*-------------------------------------------*/
-ul[class*="wp-block"][class*="list"],
+ul.wp-block-archives-list,
+ul.wp-block-categories-list,
+ul[class*="wp-block"][class*="__list"],
 ul[class*="vk_"][class*="list"]{
 	padding: 0;
 	margin:0; 
