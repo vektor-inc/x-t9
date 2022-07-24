@@ -9,3 +9,8 @@ $md-min: 768px;
 $lg-min: 992px;
 $xl-min: 1200px;
 $xxl-min: 1400px;
+
+body {
+	--vk-size-radius:0;
+	--vk-color-border-light: var(--wp--preset--color--border-normal);
+}
