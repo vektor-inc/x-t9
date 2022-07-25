@@ -26,6 +26,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 [ Design Tuning ] Add Bootstrap and ExUnit Override css
 [ Bug fix ] Cope with All in One SEO PHP Notice
 [ Bug fix ] Fix Editor screen padding
+[ Bug fix ] Fix Footer pattern name
 
 0.9.1
 [ Design Improvement ][ table ] thead th specify to center

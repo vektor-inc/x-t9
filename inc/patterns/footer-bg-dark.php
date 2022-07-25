@@ -1,12 +1,12 @@
 <?php
 /**
- * Nav Float with header top contact
+ * Footer BG Dark
  *
  * @package vektor-inc/x-t9
  */
 
 return array(
-	'title'      => __( 'Nav Float with header top contact', 'x-t9' ),
+	'title'      => __( 'Footer BG Dark', 'x-t9' ),
 	'categories' => array( 'footer' ),
 	'blockTypes' => array( 'core/template-part/footer' ),
 	'content'    => '<!-- wp:group {"backgroundColor":"bg-black","textColor":"text-normal-darkm"} -->
