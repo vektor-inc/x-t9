@@ -3,6 +3,10 @@ ulitilies
 */
 @use "variables" as var;
 
+.text-light {
+	font-weight: lighter !important;
+}
+
 .mt-0 {
 	margin-top:0 !important;
 }

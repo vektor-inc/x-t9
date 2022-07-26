@@ -46,12 +46,15 @@ function x29_register_block_patterns() {
 
 	$block_patterns = array(
 		'footer-bg-dark',
+		'footer-bg-dark-3col',
 		'header-site-title-nav-float-contact-top',
 		'header-logo-nav-float-contact-top',
 		'header-logo-nav-float-contact-inline',
 		'hidden-404',
 		'query-image-left',
+		'query-subcontent',
 		'post-template-image-left',
+		'post-template-subcontent',
 		'general-columns-menu',
 		'general-featured-media-and-text',
 		'general-featured-post-list',
