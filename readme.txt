@@ -14,6 +14,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 == Changelog ==
 
 [ Add Block Style ] Column Layout / Spacer / Navigation
+[ Add Block Style ][ navigation ] Vertical with hr / Vertical text list
 [ Specification Change ] Change Post template 2 column
 [ Specification Change ] Add Spacer common style and template update
 [ Specification Change ] Comvert to loop template 

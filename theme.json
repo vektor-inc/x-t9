@@ -55,7 +55,7 @@
 				},
 				{
 					"slug": "text-normal-darkbg",
-					"color": "rgba( 255,255,255,0.9 )",
+					"color": "rgba( 255,255,255,0.8 )",
 					"name": "Text Normal (Dark BG)"
 				},
 				{
@@ -65,7 +65,7 @@
 				},
 				{
 					"slug": "border-normal-darkbg",
-					"color": "rgba( 255,255,255,0.15 )",
+					"color": "rgba( 255,255,255,0.1 )",
 					"name": "Border Normal (Dark BG)"
 				}
 			],

@@ -139,3 +139,41 @@
 		 }
 	 }
  }
+
+/****************************************************** 
+ *  Vertical Navigation common styles
+ */
+.wp-block-navigation.is-vertical {
+	.wp-block-navigation__container {
+		--wp--style--block-gap:0;
+		gap:0;
+		width:100%;
+	}
+	.wp-block-navigation-item {
+		width:100%;
+		display: block;
+		box-sizing: border-box;
+		a {
+			padding:0;
+		}
+	}
+	.wp-block-navigation__submenu-container {
+		display: block;
+		height:auto;
+		width:100%;
+		position: relative;
+		opacity: 1;
+		visibility: visible;
+		background: none;
+	}
+	@media (min-width: 782px) {
+		.has-child .wp-block-navigation__submenu-container {
+			left:0;
+		}
+	}
+}
+
+.has-text-normal-darkbg-color {
+	--wp--preset--color--border-normal:var(--wp--preset--color--border-normal-darkbg);
+	--wp--preset--color--text-normal:var(--wp--preset--color--text-normal-darkbg);
+}
