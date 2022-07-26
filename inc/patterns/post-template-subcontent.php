@@ -17,7 +17,7 @@ return array(
 	<div class="wp-block-group"><!-- wp:post-featured-image {"width":"60px","height":"60px"} /-->
 	
 	<!-- wp:group {"layout":{"type":"default"}} -->
-	<div class="wp-block-group"><!-- wp:post-date {"textColor":"text-dark-darkbg","fontSize":"x-small"} /-->
+	<div class="wp-block-group"><!-- wp:post-date {"textColor":"text-secondary-darkbg","fontSize":"x-small"} /-->
 	
 	<!-- wp:post-title {"level":6,"isLink":true,"className":"text-light ","fontSize":"small"} /--></div>
 	<!-- /wp:group --></div>

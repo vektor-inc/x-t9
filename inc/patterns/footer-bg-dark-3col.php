@@ -92,10 +92,10 @@ return array(
 	<!-- /wp:separator -->
 	
 	<!-- wp:group {"style":{"spacing":{"padding":{"top":"0.5rem","bottom":"0.5rem"}}},"layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between"}} -->
-	<div class="wp-block-group" style="padding-top:0.5rem;padding-bottom:0.5rem"><!-- wp:navigation {"textColor":"text-dark-darkbg","overlayMenu":"never","className":"nav\u002d\u002dtext-inline nav\u002d\u002ddarkbg","layout":{"type":"flex","justifyContent":"center"},"fontSize":"x-small"} /-->
+	<div class="wp-block-group" style="padding-top:0.5rem;padding-bottom:0.5rem"><!-- wp:navigation {"textColor":"text-secondary-darkbg","overlayMenu":"never","className":"nav\u002d\u002dtext-inline nav\u002d\u002ddarkbg","layout":{"type":"flex","justifyContent":"center"},"fontSize":"x-small"} /-->
 	
-	<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase"}},"textColor":"text-dark-darkbg","fontSize":"x-small"} -->
-	<p class="has-text-align-center has-text-dark-darkbg-color has-text-color has-x-small-font-size" style="text-transform:uppercase">Copyright (C) X-T9 All Rights Reserved.</p>
+	<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase"}},"textColor":"text-secondary-darkbg","fontSize":"x-small"} -->
+	<p class="has-text-align-center has-text-secondary-darkbg-color has-text-color has-x-small-font-size" style="text-transform:uppercase">Copyright (C) X-T9 All Rights Reserved.</p>
 	<!-- /wp:paragraph --></div>
 	<!-- /wp:group --></div>
 	<!-- /wp:group --></div>

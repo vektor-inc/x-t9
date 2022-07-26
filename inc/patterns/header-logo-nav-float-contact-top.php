@@ -11,7 +11,7 @@ return array(
 	'blockTypes' => array( 'core/template-part/header' ),
 	'content'    => '<!-- wp:group {"layout":{"inherit":true}} -->
 	<div class="wp-block-group"><!-- wp:group {"layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between"}} -->
-	<div class="wp-block-group"><!-- wp:site-tagline {"textColor":"text-bright","fontSize":"x-small"} /-->
+	<div class="wp-block-group"><!-- wp:site-tagline {"textColor":"text-secondary","fontSize":"x-small"} /-->
 	
 	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->
 	<div class="wp-block-buttons"><!-- wp:button {"style":{"border":{"radius":"0px"},"spacing":{"padding":{"top":"0.2rem","bottom":"0.2rem","left":"2rem","right":"2rem"}}},"fontSize":"small"} -->
