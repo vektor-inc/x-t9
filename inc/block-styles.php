@@ -22,6 +22,22 @@ register_block_style(
 		'style_handle' => 'x-t9-style',
 	)
 );
+register_block_style(
+	'core/navigation',
+	array(
+		'name'         => 'nav--vertical-with-hr',
+		'label'        => __( 'Vertical with hr', 'x-t9' ),
+		'style_handle' => 'x-t9-style',
+	)
+);
+register_block_style(
+	'core/navigation',
+	array(
+		'name'         => 'nav--vertical-text-list',
+		'label'        => __( 'Vertical text list', 'x-t9' ),
+		'style_handle' => 'x-t9-style',
+	)
+);
 
 /* Spacer --------------------------------------------------------------- */
 register_block_style(
