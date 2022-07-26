@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Add Block Template ] Add Footer 3colmun template
 [ Add Block Style ] Column Layout / Spacer / Navigation
 [ Add Block Style ][ navigation ] Vertical with hr / Vertical text list
 [ Specification Change ] Change Post template 2 column
