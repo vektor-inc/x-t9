@@ -16,8 +16,8 @@ return array(
 	<!-- wp:column {"verticalAlignment":"top","width":"66.66%"} -->
 	<div class="wp-block-column is-vertically-aligned-top" style="flex-basis:66.66%"><!-- wp:post-title {"isLink":true,"style":{"spacing":{"margin":{"bottom":"0rem"}}}} /-->
 
-	<!-- wp:group {"textColor":"text-bright","layout":{"type":"flex","allowOrientation":false}} -->
-	<div class="wp-block-group has-text-bright-color has-text-color"><!-- wp:post-date /--></div>
+	<!-- wp:group {"textColor":"text-secondary","layout":{"type":"flex","allowOrientation":false}} -->
+	<div class="wp-block-group has-text-secondary-color has-text-color"><!-- wp:post-date /--></div>
 	<!-- /wp:group -->
 	
 	<!-- wp:post-excerpt {"moreText":"' . esc_html__( 'Read more', 'x-t9' ) . '"} /--></div>
