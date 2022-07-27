@@ -9,7 +9,11 @@ return array(
 	'title'      => __( 'Footer BG Dark', 'x-t9' ),
 	'categories' => array( 'footer' ),
 	'blockTypes' => array( 'core/template-part/footer' ),
-	'content'    => '<!-- wp:group {"backgroundColor":"bg-black","textColor":"text-normal-darkm"} -->
+	'content'    => '
+	<!-- wp:separator {"backgroundColor":"primary","className":"is-style-wide"} -->
+	<hr class="wp-block-separator has-text-color has-primary-color has-alpha-channel-opacity has-primary-background-color has-background is-style-wide"/>
+	<!-- /wp:separator -->
+	<!-- wp:group {"backgroundColor":"bg-black","textColor":"text-normal-darkm"} -->
 	<div class="wp-block-group has-text-normal-darkbg-color has-bg-black-background-color has-text-color has-background"><!-- wp:group {"style":{"spacing":{"padding":{"top":"1.5rem","bottom":"1.5rem"}}},"layout":{"inherit":true}} -->
 	<div class="wp-block-group" style="padding-top:1.5rem;padding-bottom:1.5rem"><!-- wp:image {"align":"center","width":180,"sizeSlug":"full","linkDestination":"media"} -->
 	<figure class="wp-block-image aligncenter size-full is-resized"><img src="' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/x-t9-logo-yoko-white-trans.png" alt="" width="180"/></figure>
