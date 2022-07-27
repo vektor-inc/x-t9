@@ -269,11 +269,6 @@
 			"area": "footer"
 		},
 		{
-			"name": "footer-3col",
-			"title": "Footer 3colmun",
-			"area": "footer"
-		},
-		{
 			"name": "sidebar-post",
 			"title": "Sidebar Post",
 			"area": "uncategorized"
