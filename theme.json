@@ -242,6 +242,13 @@
     },
 	"customTemplates": [
 		{
+			"name": "page-2col",
+			"title": "Page 2column",
+			"postTypes": [
+				"page"
+			]
+		},
+		{
 			"name": "page-lp",
 			"title": "Page LP",
 			"postTypes": [
