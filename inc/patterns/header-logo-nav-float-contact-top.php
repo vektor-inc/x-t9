@@ -26,7 +26,7 @@ return array(
 	<!-- /wp:group -->
 	
 	<!-- wp:group {"style":{"spacing":{"padding":{"top":"5px","bottom":"5px"}}}} -->
-	<div class="wp-block-group" style="padding-top:5px;padding-bottom:5px"><!-- wp:navigation {"className":"nav\u002d\u002dactive-border-bottom","layout":{"type":"flex","justifyContent":"left","orientation":"horizontal","flexWrap":"wrap"}} /--></div>
+	<div class="wp-block-group" style="padding-top:5px;padding-bottom:5px"><!-- wp:navigation {"className":"nav\u002d\u002dopen\u002d\u002dlg-up nav\u002d\u002dfirst-nowrap is-style-nav\u002d\u002dactive-border-bottom","layout":{"type":"flex","justifyContent":"right","orientation":"horizontal","flexWrap":"nowrap"},"fontSize":"small"} /--></div>
 	<!-- /wp:group --></div>
 	<!-- /wp:group -->
 	
