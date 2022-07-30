@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Other ] Change Template Name(Label) 
+
 0.11.0
 [ Add Template ] Add Page 2column template
 
