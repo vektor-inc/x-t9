@@ -50,6 +50,7 @@ function x29_register_block_patterns() {
 		'header-site-title-nav-float-contact-top',
 		'header-logo-nav-float-contact-top',
 		'header-logo-nav-float-contact-inline',
+		'header-logo-nav-center',
 		'hidden-404',
 		'query-image-left',
 		'query-subcontent',
