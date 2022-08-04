@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Add Block Template ] Add Footer 1colmun BG Bright template
+
 [ Specification Change ] Change Block style name 
 [ Specification Change ] Change Template Name(Label) 
 
