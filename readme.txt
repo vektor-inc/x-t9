@@ -13,8 +13,9 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
-[ Add Block Template ] Add Footer 3colmun BG Bright template
-
+[ Add Block Pattern ] Add Footer 3colmun BG Bright template
+[ Add Block Pattern ] Add Footer 1colmun BG Bright template
+[ Add fonts ] Add Source Serif Pro
 [ Specification Change ] Change Block style name 
 [ Specification Change ] Change Template Name(Label) 
 
@@ -138,6 +139,11 @@ This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
+
+Source Serif Font
+Copyright 2014-2021 Adobe (http://www.adobe.com/)
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://github.com/adobe-fonts/source-serif
 
 Block Pattern Images:
 
