@@ -13,6 +13,10 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Add Block Pattern ] Add Header Logo Nav Center
+[ Add Block Pattern ] Add Header Logo Nav Contact side by side Wide
+[ Add Block Pattern ] Add Header Logo Nav Contact flex between wide
+[ Add Block Pattern ] Add Footer BG Bright Logo Nav Float
 [ Add Block Pattern ] Add Footer BG Bright Center Nav pattern
 [ Add Block Pattern ] Add Footer BG Bright 3colmun pattern
 [ Add Block Pattern ] Add Footer BG Bright pattern
