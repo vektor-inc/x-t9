@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Add Block Pattern ] Add Footer 3colmun BG Bright template
 [ Add Block Pattern ] Add Footer 1colmun BG Bright template
 [ Add fonts ] Add Source Serif Pro
 [ Specification Change ] Change Block style name 

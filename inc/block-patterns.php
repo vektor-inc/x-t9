@@ -48,6 +48,7 @@ function x29_register_block_patterns() {
 		'footer-bg-dark',
 		'footer-bg-dark-3col',
 		'footer-bg-bright',
+		'footer-bg-bright-3col',
 		'header-site-title-nav-float-contact-top',
 		'header-logo-nav-float-contact-top',
 		'header-logo-nav-float-contact-inline',
