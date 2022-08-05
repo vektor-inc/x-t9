@@ -1,12 +1,12 @@
 <?php
 /**
- * Footer BG Dark
+ * Footer BG Dark 3col
  *
  * @package vektor-inc/x-t9
  */
 
 return array(
-	'title'      => __( 'Footer BG Dark', 'x-t9' ),
+	'title'      => __( 'Footer BG Dark 3col', 'x-t9' ),
 	'categories' => array( 'footer' ),
 	'blockTypes' => array( 'core/template-part/footer' ),
 	'content'    => '
