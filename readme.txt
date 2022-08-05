@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc
 Tested up to: 6.0.1
 Requires PHP: 5.6
-Stable tag: 0.11.0
+Stable tag: 0.12.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+0.12.0
 [ Add Block Pattern ] Add Header Logo Nav Center
 [ Add Block Pattern ] Add Header Logo Nav Contact side by side Wide
 [ Add Block Pattern ] Add Header Logo Nav Contact flex between wide
