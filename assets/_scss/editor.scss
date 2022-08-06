@@ -4,43 +4,43 @@
  * Edit screen override
  */
 
- .edit-post-visual-editor__post-title-wrapper {
-	 margin-bottom:1.5rem;
- }
+.edit-post-visual-editor__post-title-wrapper {
+	margin-bottom: 1.5rem;
+}
 
- .site-logo--set .wp-block-site-logo .custom-logo {
-	 height:auto;
- }
+.site-logo--set .wp-block-site-logo .custom-logo {
+	height: auto;
+}
 
- .edit-site-block-editor__block-list .scrolled-header-fixed::after{
+.edit-site-block-editor__block-list .scrolled-header-fixed::after {
 	position: absolute;
-	font-size:12px;
-	color:#fff;
+	font-size: 12px;
+	color: #fff;
 	background-color: var(--wp-admin-theme-color);
 	padding: 2px 5px;
 	line-height: 1.1;
-	width:fit-content;
-	height:fit-content;
+	width: fit-content;
+	height: fit-content;
 	border-radius: 0;
-	content:"This is .scrolled-header-fixed";
+	content: "This is .scrolled-header-fixed";
 }
 
 /* Spacer ------------------------------------------------- */
 
 .wp-block-spacer {
-	border:1px dashed var(--wp--preset--color--border-normal);
+	border: 1px dashed var(--wp--preset--color--border-normal);
 }
 
 /* Editor Screen Padding ------------------------------------------------- */
 
 // サイトエディタではヘッダーやフッターに左右余白がつかないように not 指定
-body > .is-root-container:not(.wp-site-blocks), 
+body>.is-root-container:not(.wp-site-blocks),
 .edit-post-visual-editor__post-title-wrapper,
 .wp-block-group.alignfull,
 .wp-block-group.has-background,
 .wp-block-cover.alignfull,
-.is-root-container .wp-block[data-align="full"] > .wp-block-group,
-.is-root-container .wp-block[data-align="full"] > .wp-block-cover {
+.is-root-container .wp-block[data-align="full"]>.wp-block-group,
+.is-root-container .wp-block[data-align="full"]>.wp-block-cover {
 	padding-left: var(--wp--custom--spacing--editor-padding);
 	padding-right: var(--wp--custom--spacing--editor-padding);
 }
@@ -57,4 +57,17 @@ body > .is-root-container:not(.wp-site-blocks),
 .is-root-container .wp-block[data-align="full"] {
 	margin-left: calc(-1 * var(--wp--custom--spacing--editor-padding)) !important;
 	margin-right: calc(-1 * var(--wp--custom--spacing--editor-padding)) !important;
+}
+
+/* なんか勝手にコアに余白入れられるのが気に入らないので削除 */
+figure,
+ul,
+ol,
+blockquote,
+.wp-block-table,
+.wp-block-buttons {
+	&:first-child {
+		margin-top: 0;
+		margin-block-start: 0;
+	}
 }
