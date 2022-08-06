@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Editor Design tuning ] Editor screen css tuning
+
 0.12.0
 [ Add Block Pattern ] Add Header Logo Nav Center
 [ Add Block Pattern ] Add Header Logo Nav Contact side by side Wide
