@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug fix ] Footer bottom sticky
+
 [ Editor Design tuning ] Editor screen css tuning
 
 0.12.0
