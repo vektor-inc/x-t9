@@ -21,7 +21,7 @@
 html{
 	height:100%; // to be footer bottom sticky
 	@media ( min-width:601px ) {
-		height:calc( 100% - var(--wp-admin--admin-bar--height) );
+		height:calc( 100% - var(--wp-admin--admin-bar--height, 0px) );
 	}
 }
 body,
