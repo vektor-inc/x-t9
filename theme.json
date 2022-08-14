@@ -70,12 +70,12 @@
 				},
 				{
 					"slug": "text-bright",
-					"color": "rgba(0,0,0,0.5)",
+					"color": "rgba(0,0,0,0.51)",
 					"name": "Text Bright (Will be abolished)"
 				},
 				{
 					"slug": "text-dark-darkbg",
-					"color": "rgba( 255,255,255,0.6 )",
+					"color": "rgba( 255,255,255,0.61 )",
 					"name": "Text Dark (Will be abolished)"
 				}
 			],
