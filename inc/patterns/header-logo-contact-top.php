@@ -1,12 +1,12 @@
 <?php
 /**
- * Nav Float with header top contact
+ * Header top contact
  *
  * @package vektor-inc/x-t9
  */
 
 return array(
-	'title'      => __( 'Nav Float with header top contact', 'x-t9' ),
+	'title'      => __( 'Header top contact', 'x-t9' ),
 	'categories' => array( 'header' ),
 	'blockTypes' => array( 'core/template-part/header' ),
 	'content'    => '<!-- wp:group {"layout":{"inherit":true}} -->
