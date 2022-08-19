@@ -107,9 +107,9 @@
 
     // 上スクロールで表示
     let showScrollUp = document.querySelectorAll('.js-show-scrollUp');
+    let start_position = 0;
     // function
     let show_scroll_up_func = () => {
-        let start_position = 0;
         let window_position = window.pageYOffset;
         for (let i = 0; i < showScrollUp.length; i++) {
             if (window_position <= start_position) {
