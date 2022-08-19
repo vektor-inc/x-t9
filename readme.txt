@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Pattern update ] Column Menu Section
+
 0.12.2
 [ Bug fix ] Fix theme json color confrict
 
