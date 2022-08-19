@@ -8,8 +8,8 @@
 return array(
 	'title'      => __( 'Columns Menu Section', 'x-t9' ),
 	'categories' => array( 'featured', 'media', 'columns' ),
-	'content'    => '<!-- wp:cover {"overlayColor":"bg-light-gray","isDark":false,"align":"full","style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}}}} -->
-	<div class="wp-block-cover alignfull is-light" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><span aria-hidden="true" class="wp-block-cover__background has-bg-light-gray-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"inherit":true}} -->
+	'content'    => '<!-- wp:cover {"overlayColor":"white","isDark":false,"align":"full","style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}}}} -->
+	<div class="wp-block-cover alignfull is-light" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><span aria-hidden="true" class="wp-block-cover__background has-white-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"inherit":true}} -->
 	<div class="wp-block-group"><!-- wp:spacer {"height":"","className":"is-style-spacer-xl"} -->
 	<div style="height:" aria-hidden="true" class="wp-block-spacer is-style-spacer-xl"></div>
 	<!-- /wp:spacer -->
