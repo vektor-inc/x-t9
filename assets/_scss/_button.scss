@@ -1,22 +1,24 @@
 .wp-block-button__link.has-background {
 	padding: 0.667em 1.333em;
 }
+
 .wp-block-button__link,
 .wp-block-search__button,
 .wp-block-post-excerpt__more-link,
 .wp-block-button__link.has-primary-background-color {
 	transition: all 0.1s ease-in;
 	background-color: var(--wp--preset--color--primary);
-	color:var(--wp--preset--color--text-normal-darkbg);
+	color: var(--wp--preset--color--text-normal-darkbg);
 	text-decoration: none;
 	border-radius: 0;
-	&:hover{
+
+	&:hover {
 		--wp--preset--color--primary: var(--wp--preset--color--primary-hover);
 	}
 }
 
-.wp-block-button.is-style-outline{
-	a:hover{
+.wp-block-button.is-style-outline {
+	a:hover {
 		background-color: var(--wp--preset--color--primary-hover);
 		color: #fff;
 	}
