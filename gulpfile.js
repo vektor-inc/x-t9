@@ -3,6 +3,8 @@ var gulp = require('gulp');
 gulp.task('dist', function() {
 	return gulp.src(
 			[
+				'!./.wp-env.json',
+				'!./.wp-env.override.json',
 				'./**/*.json',
 				'./**/*.php',
 				'./**/*.txt',
