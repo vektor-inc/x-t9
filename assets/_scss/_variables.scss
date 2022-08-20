@@ -11,7 +11,7 @@ $xl-min: 1200px;
 $xxl-min: 1400px;
 
 body {
-	--vk-size-radius:0;
+	--vk-size-radius: 0;
 	--vk-color-border-light: var(--wp--preset--color--border-normal);
 }
 
@@ -19,7 +19,7 @@ body {
  * 親のラッパーで背景が濃い場合用のテキスト色が指定されている場合に、通常の色をDarkBG用の色で上書きする
  */
 .has-text-normal-darkbg-color {
-	--wp--preset--color--border-normal:var(--wp--preset--color--border-normal-darkbg);
-	--wp--preset--color--text-normal:var(--wp--preset--color--text-normal-darkbg);
-	--wp--preset--color--text-secondary:var(--wp--preset--color--text-secondary-darkbg);
+	--wp--preset--color--border-normal: var(--wp--preset--color--border-normal-darkbg);
+	--wp--preset--color--text-normal: var(--wp--preset--color--text-normal-darkbg);
+	--wp--preset--color--text-secondary: var(--wp--preset--color--text-secondary-darkbg);
 }

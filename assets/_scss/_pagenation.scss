@@ -1,24 +1,26 @@
 .wp-block-query-pagination,
-.wp-block-comments-pagination{
-	.wp-block-query &{
-		gap:0;
+.wp-block-comments-pagination {
+	.wp-block-query & {
+		gap: 0;
 	}
+
 	&-numbers .page-numbers,
 	&-previous,
-	&-next{
+	&-next {
 		line-height: 1;
-		padding:10px 1em;
-		color:var(--wp--preset--color--text-normal-darkbg);
+		padding: 10px 1em;
+		color: var(--wp--preset--color--text-normal-darkbg);
 		background-color: var(--wp--preset--color--primary);
 		text-decoration: none;
-		&:hover{
+
+		&:hover {
 			background-color: var(--wp--preset--color--primary-hover);
 		}
 	}
-	.page-numbers.current{
-		color:var(--wp--preset--color--text-normal);
+
+	.page-numbers.current {
+		color: var(--wp--preset--color--text-normal);
 		background-color: var(--wp--preset--color--bg-light-gray);
-		border:1px solid var(--wp--preset--color--border-normal);
+		border: 1px solid var(--wp--preset--color--border-normal);
 	}
 }
-
