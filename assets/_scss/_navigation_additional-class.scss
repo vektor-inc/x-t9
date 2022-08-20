@@ -52,7 +52,7 @@
 
 *[class*="nav--active-border-bottom"] {
 	.wp-block-navigation__responsive-container:where(:not(.is-menu-open)) {
-		:where(.wp-block-navigation__container) {
+		:where(.wp-block-navigation__container, .wp-block-page-list) {
 			gap: 0;
 
 			&>.wp-block-navigation-item {
@@ -92,7 +92,7 @@
 		--nav--text-inline--border: var(--wp--preset--color--border-normal-darkbg);
 	}
 
-	.wp-block-navigation__container {
+	:where(.wp-block-navigation__container, .wp-block-page-list) {
 		gap: 0;
 
 		&>.wp-block-navigation-item {

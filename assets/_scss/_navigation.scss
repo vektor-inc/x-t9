@@ -6,7 +6,7 @@
 	--submenu-icon-size: 12px;
 	--nav-top-item-padding-horizontal: 0.9em;
 
-	.wp-block-navigation__container {
+	:where(.wp-block-navigation__container, .wp-block-page-list) {
 		&>.wp-block-navigation-item {
 			&>a {
 				padding-left: var(--nav-top-item-padding-horizontal);
@@ -17,7 +17,7 @@
 
 	// PC Menu style
 	&__responsive-container:where(:not(.has-modal-open)) {
-		.wp-block-navigation__container {
+		:where(.wp-block-navigation__container, .wp-block-page-list) {
 			&>.wp-block-navigation-item {
 				display: grid;
 				position: relative;
@@ -86,7 +86,7 @@
  * Navigation Modal Styles
  */
 .has-modal-open {
-	.wp-block-navigation__container {
+	:where(.wp-block-navigation__container, .wp-block-page-list) {
 		--wp--style--block-gap: 0;
 
 		&,
@@ -131,7 +131,7 @@
 			}
 		}
 
-		.wp-block-navigation__container {
+		:where(.wp-block-navigation__container, .wp-block-page-list) {
 
 			.has-child .submenu-container,
 			.has-child .wp-block-navigation__submenu-container {
@@ -147,7 +147,7 @@
 			.wp-block-navigation__responsive-close {
 				.wp-block-navigation__responsive-dialog {
 					.wp-block-navigation__responsive-container-content {
-						.wp-block-navigation__container {
+						:where(.wp-block-navigation__container, .wp-block-page-list) {
 							.wp-block-navigation-item {
 								.wp-block-navigation-item__content {}
 							}
@@ -163,7 +163,7 @@
  *  Vertical Navigation common styles
  */
 .wp-block-navigation.is-vertical {
-	.wp-block-navigation__container {
+	:where(.wp-block-navigation__container, .wp-block-page-list) {
 		--wp--style--block-gap: 0;
 		gap: 0;
 		width: 100%;
