@@ -3,3 +3,4 @@ node_modules/
 dist/
 assets/js/
 assets/css/
+.wp-env.override.json
