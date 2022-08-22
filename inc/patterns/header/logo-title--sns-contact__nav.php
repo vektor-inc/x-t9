@@ -1,12 +1,12 @@
 <?php
 /**
- * Site title with header top contact
+ * Logo - Site title -- ( SNS | Contact ) / Nav
  *
  * @package vektor-inc/x-t9
  */
 
 return array(
-	'title'      => __( 'Logo | Site title | ( SNS | Contact / Nav )', 'x-t9' ),
+	'title'      => __( 'Logo - Site title -- ( SNS - Contact ) / Nav', 'x-t9' ),
 	'categories' => array( 'header' ),
 	'blockTypes' => array( 'core/template-part/header' ),
 	'content'    => '<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"left":"0rem","right":"0rem"}}},"layout":{"inherit":true}} -->

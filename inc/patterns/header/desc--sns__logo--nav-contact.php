@@ -1,12 +1,12 @@
 <?php
 /**
- * Inline contact with Header Top
+ * Description -- SNS / Logo -- Nav - Contact
  *
  * @package vektor-inc/x-t9
  */
 
 return array(
-	'title'      => __( 'Inline contact with Header Top', 'x-t9' ),
+	'title'      => __( 'Description -- SNS / Logo -- Nav - Contact', 'x-t9' ),
 	'categories' => array( 'header' ),
 	'blockTypes' => array( 'core/template-part/header' ),
 	'content'    => '<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"0.25rem","bottom":"0.25rem"}}},"backgroundColor":"bg-light-gray","className":"is-style-default"} -->

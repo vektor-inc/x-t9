@@ -1,20 +1,22 @@
 <?php
 /**
- * Logo Nav Contact side by side Wide
+ * Logo --- Nav --- Contact
  *
  * @package vektor-inc/x-t9
  */
 
 return array(
-	'title'      => __( 'Logo Nav Contact side by side Wide', 'x-t9' ),
+	'title'      => __( 'Logo --- Nav --- Contact', 'x-t9' ),
 	'categories' => array( 'header' ),
 	'blockTypes' => array( 'core/template-part/header' ),
 	'content'    => '<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"left":"1rem","right":"1rem","top":"0rem","bottom":"0rem"}}},"layout":{"inherit":true}} -->
 	<div class="wp-block-group alignfull" style="padding-top:0rem;padding-right:1rem;padding-bottom:0rem;padding-left:1rem"><!-- wp:group {"align":"full","layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between","flexWrap":"nowrap"}} -->
 	<div class="wp-block-group alignfull"><!-- wp:group {"style":{"spacing":{"padding":{"right":"1rem","top":"0.7rem","bottom":"0.7rem"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-	<div class="wp-block-group" style="padding-top:0.7rem;padding-right:1rem;padding-bottom:0.7rem"><!-- wp:site-logo {"width":200} /-->
+	<div class="wp-block-group" style="padding-top:0.7rem;padding-right:1rem;padding-bottom:0.7rem"><!-- wp:site-logo {"width":200} /--></div>
+	<!-- /wp:group -->
 	
-	<!-- wp:navigation {"className":"nav\u002d\u002dopen\u002d\u002dlg-up nav\u002d\u002dfirst-nowrap is-style-nav\u002d\u002dactive-border-bottom","layout":{"type":"flex","justifyContent":"right","orientation":"horizontal","flexWrap":"nowrap"},"fontSize":"small"} /--></div>
+	<!-- wp:group {"style":{"spacing":{"padding":{"right":"1rem","top":"0.7rem","bottom":"0.7rem"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+	<div class="wp-block-group" style="padding-top:0.7rem;padding-right:1rem;padding-bottom:0.7rem"><!-- wp:navigation {"className":"nav\u002d\u002dopen\u002d\u002dlg-up nav\u002d\u002dfirst-nowrap is-style-nav\u002d\u002dactive-border-bottom","layout":{"type":"flex","justifyContent":"right","orientation":"horizontal","flexWrap":"nowrap"},"fontSize":"small"} /--></div>
 	<!-- /wp:group -->
 	
 	<!-- wp:group {"layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between","flexWrap":"wrap"}} -->
@@ -34,9 +36,11 @@ return array(
 	<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"left":"1rem","right":"1rem","top":"0rem","bottom":"0rem"}}},"backgroundColor":"white","className":"scrolled-header-fixed","layout":{"inherit":true}} -->
 	<div class="wp-block-group alignfull scrolled-header-fixed has-white-background-color has-background" style="padding-top:0rem;padding-right:1rem;padding-bottom:0rem;padding-left:1rem"><!-- wp:group {"align":"full","layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between","flexWrap":"nowrap"}} -->
 	<div class="wp-block-group alignfull"><!-- wp:group {"style":{"spacing":{"padding":{"right":"1rem","top":"0.7rem","bottom":"0.7rem"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-	<div class="wp-block-group" style="padding-top:0.7rem;padding-right:1rem;padding-bottom:0.7rem"><!-- wp:site-logo {"width":200} /-->
+	<div class="wp-block-group" style="padding-top:0.7rem;padding-right:1rem;padding-bottom:0.7rem"><!-- wp:site-logo {"width":200} /--></div>
+	<!-- /wp:group -->
 	
-	<!-- wp:navigation {"className":"nav\u002d\u002dopen\u002d\u002dlg-up nav\u002d\u002dactive-border-bottom","layout":{"type":"flex","justifyContent":"left","orientation":"horizontal","flexWrap":"nowrap"},"fontSize":"small"} /--></div>
+	<!-- wp:group {"style":{"spacing":{"padding":{"right":"1rem","top":"0.7rem","bottom":"0.7rem"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+	<div class="wp-block-group" style="padding-top:0.7rem;padding-right:1rem;padding-bottom:0.7rem"><!-- wp:navigation {"className":"nav\u002d\u002dopen\u002d\u002dlg-up nav\u002d\u002dactive-border-bottom","layout":{"type":"flex","justifyContent":"left","orientation":"horizontal","flexWrap":"nowrap"},"fontSize":"small"} /--></div>
 	<!-- /wp:group -->
 	
 	<!-- wp:group {"layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between","flexWrap":"wrap"}} -->
