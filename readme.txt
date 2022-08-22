@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ] Update Header Pattern name
+
 0.12.3
 [ Pattern update ] Column Menu Section
 [ Design Bug fix ] Fix default navigation design css
