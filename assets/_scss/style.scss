@@ -18,15 +18,17 @@
 @import "plugin-override/bootstrap-override";
 @import "plugin-override/veu-override";
 
-html{
-	height:100%; // to be footer bottom sticky
-	@media ( min-width:601px ) {
-		height:calc( 100% - var(--wp-admin--admin-bar--height) );
+html {
+	height: 100%; // to be footer bottom sticky
+
+	@media (min-width:601px) {
+		height: calc(100% - var(--wp-admin--admin-bar--height, 0px));
 	}
 }
+
 body,
-.wp-site-blocks{
-	height:100%; // to be footer bottom sticky
+.wp-site-blocks {
+	height: 100%; // to be footer bottom sticky
 }
 
 /*
@@ -35,14 +37,15 @@ padding: 1.25em 2.375em;
 but actually not added case exist that reset padding to be aboid confusing.
 */
 .has-background,
-:is(.wp-block-group):where(.has-background){
+:is(.wp-block-group):where(.has-background) {
 	padding: 0; // 編集画面の枠線ブロックなど弊害が出るのでこの指定は解除したい
 	overflow: hidden; // cope with height
 }
-.wp-block-button .has-background{
+
+.wp-block-button .has-background {
 	overflow: inherit; // cope with multiple buttons
 }
 
 body:not(.admin-bar) {
-	--wp-admin--admin-bar--height:0;
+	--wp-admin--admin-bar--height: 0;
 }

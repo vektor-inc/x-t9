@@ -1,8 +1,8 @@
 === X-T9 ===
 Contributors: kurudrive,vektor-inc
-Tested up to: 6.0.1
+Tested up to: 6.0
 Requires PHP: 5.6
-Stable tag: 0.12.0
+Stable tag: 0.12.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,17 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ] Update Header Pattern name
+
+0.12.3
+[ Pattern update ] Column Menu Section
+[ Design Bug fix ] Fix default navigation design css
+
+0.12.2
+[ Bug fix ] Fix theme json color confrict
+
+0.12.1
+[ Bug fix ] Footer bottom sticky
 [ Editor Design tuning ] Editor screen css tuning
 
 0.12.0
