@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc
 Tested up to: 6.0
 Requires PHP: 5.6
-Stable tag: 0.13.0
+Stable tag: 0.14.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+0.14.0
 [ Add Template ] Add Single 1column template
 [ Bug fix ] Cope with child theme load template part
 [ Design Bug fix ] Fix subnavigation text color
