@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug fix ] Cope with child theme load template part
 [ Design Bug fix ] Fix subnavigation text color
 
 0.13.0
