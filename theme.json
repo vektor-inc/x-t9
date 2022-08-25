@@ -294,6 +294,13 @@
 				"page",
 				"post"
 			]
+		},
+		{
+			"name": "single-1col",
+			"title": "Single 1 column",
+			"postTypes": [
+				"post"
+			]
 		}
 	],
 	"templateParts": [

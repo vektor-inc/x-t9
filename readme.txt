@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Add Template ] Add Single 1column template
 [ Bug fix ] Cope with child theme load template part
 [ Design Bug fix ] Fix subnavigation text color
 
