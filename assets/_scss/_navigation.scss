@@ -60,13 +60,13 @@
  * Sub Navigation Styles
  */
 .wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
-	color: var(--wp--preset--color--text-normal-darkbg);
-	border: none;
+	border: none; // コアが border を付与してくるので打ち消す
 }
 
 .wp-block-navigation__responsive-container:not(.has-modal-open) {
 	.wp-block-navigation__submenu-container {
 		.wp-block-navigation-item {
+			color: var(--wp--preset--color--text-normal-darkbg); // ブロック側で指定可能になっているが、既存のパターンが未指定だったり未指定のサイトが未指定だったりするので2022年内はフォールバックで残しておく
 			background-color: var(--wp--preset--color--primary);
 			border-bottom: 1px solid var(--wp--preset--color--border-normal-darkbg);
 
