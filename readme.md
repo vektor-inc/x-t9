@@ -37,9 +37,13 @@ npm run dist
 
 | Color name |  |
 |-| ------------- |
-| border-normal | 白背景の線  |
-| border-normal-darkbg | 黒背景での通常線 |
-| bg-light-gray | 背景用の明るい灰色 |
+| text-normal | 通常テキスト色 |
+| text-secondary | 少し色を薄くするなど、通常文字色より目立たなくする色 |
+| border-normal | 白背景の線色  |
+| bg-light-gray | 背景アクセント用の明るい灰色 |
+| text-normal-darkbg | 背景色が濃い場合のテキスト色 |
+| text-secondary-darkbg | 背景色が濃い場合のセカンダリ色 |
+| border-normal-darkbg | 背景色が濃い場合の線色 |
 
 ---
 ## Memo（試行錯誤中）
