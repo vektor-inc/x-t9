@@ -107,6 +107,7 @@
 		"typography": {
 			"dropCap": false,
 			"lineHeight": true,
+			"fluid": true,
 			"fontFamilies": [
 				{
 					"slug": "system-font",
@@ -148,17 +149,23 @@
 				{
 					"name": "X small",
 					"slug": "x-small",
-					"size": "0.75rem"
+					"size": "0.75rem",
+					"fluid": false
 				},
 				{
 					"name": "Small",
 					"slug": "small",
-					"size": "0.875rem"
+					"size": "0.875rem",
+					"fluid": false
 				},
 				{
 					"name": "Medium",
 					"slug": "medium",
-					"size": "1rem"
+					"size": "1rem",
+					"fluid": {
+						"min": "0.875rem",
+						"max": "1.125rem"
+					}
 				},
 				{
 					"name": "Large",
