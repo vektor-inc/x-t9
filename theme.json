@@ -89,6 +89,34 @@
 			"blockGap": null,
 			"margin": true,
 			"padding": true,
+			"spacingSizes": [
+				{
+					"//": "Why the choice of slugs in the 10,20,30 format: https://wp.me/p2AvED-pxv ",
+					"name": "XS",
+					"slug": "30",
+					"size": "var(--wp--custom--spacing--x-small)"
+				},
+				{
+					"name": "S",
+					"slug": "40",
+					"size": "var(--wp--custom--spacing--small)"
+				},
+				{
+					"name": "M",
+					"slug": "50",
+					"size": "var(--wp--custom--spacing--medium)"
+				},
+				{
+					"name": "L",
+					"slug": "60",
+					"size": "var(--wp--custom--spacing--large)"
+				},
+				{
+					"name": "XL",
+					"slug": "70",
+					"size": "var(--wp--custom--spacing--x-large)"
+				}
+			],
 			"units": [
 				"px",
 				"em",
