@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ][ 6.1 ] Cope with settings.spacing.spacingSizes
+
 0.14.0
 [ Add Template ] Add Single 1column template
 [ Bug fix ] Cope with child theme load template part

@@ -89,6 +89,33 @@
 			"blockGap": null,
 			"margin": true,
 			"padding": true,
+			"spacingSizes": [
+				{
+					"name": "XS",
+					"slug": "x-small",
+					"size": "0.5rem"
+				},
+				{
+					"name": "S",
+					"slug": "small",
+					"size": "0.75rem"
+				},
+				{
+					"name": "M",
+					"slug": "medium",
+					"size": "1rem"
+				},
+				{
+					"name": "L",
+					"slug": "large",
+					"size": "var(--wp--custom--spacing--large)"
+				},
+				{
+					"name": "XL",
+					"slug": "xl",
+					"size": "var(--wp--custom--spacing--x-large)"
+				}
+			],
 			"units": [
 				"px",
 				"em",
