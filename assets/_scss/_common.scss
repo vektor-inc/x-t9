@@ -32,13 +32,18 @@ figure {
 	}
 }
 
-main {
+/* Reset iOS Style */
+select {
+	-webkit-appearance: none;
+	appearance: none;
+}
+/* / Reset iOS Style */
 
+main {
 	ul,
 	ol {
 		padding-left: 1.5em;
 	}
-
 	input,
 	textarea,
 	select {

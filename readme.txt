@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug fix ] fix select box height on iOS
 [ Specification Change ][ 6.1 ] Cope with settings.spacing.spacingSizes
 
 0.14.0
