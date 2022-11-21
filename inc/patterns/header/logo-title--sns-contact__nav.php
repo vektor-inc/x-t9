@@ -53,8 +53,8 @@ return array(
 	<!-- /wp:separator --></div>
 	<!-- /wp:group -->
 	
-	<!-- wp:group {"backgroundColor":"white","className":"scrolled-header-fixed","layout":{"inherit":true}} -->
-	<div class="wp-block-group scrolled-header-fixed has-white-background-color has-background"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+	<!-- wp:group {"backgroundColor":"base","className":"scrolled-header-fixed","layout":{"inherit":true}} -->
+	<div class="wp-block-group scrolled-header-fixed has-base-background-color has-background"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
 	<div class="wp-block-group"><!-- wp:site-logo {"width":60,"className":"auto-size"} /-->
 	
 	<!-- wp:group -->

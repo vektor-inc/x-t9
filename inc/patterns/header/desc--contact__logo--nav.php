@@ -35,8 +35,8 @@ return array(
 	<!-- /wp:separator --></div>
 	<!-- /wp:group -->
 	
-	<!-- wp:group {"backgroundColor":"white","className":"scrolled-header-fixed  ","layout":{"inherit":true}} -->
-	<div class="wp-block-group scrolled-header-fixed has-white-background-color has-background"><!-- wp:group {"layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between"}} -->
+	<!-- wp:group {"backgroundColor":"base","className":"scrolled-header-fixed  ","layout":{"inherit":true}} -->
+	<div class="wp-block-group scrolled-header-fixed has-base-background-color has-background"><!-- wp:group {"layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between"}} -->
 	<div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0.5rem","bottom":"0.5rem"}}}} -->
 	<div class="wp-block-group" style="padding-top:0.5rem;padding-bottom:0.5rem"><!-- wp:site-logo {"width":220} /--></div>
 	<!-- /wp:group -->
