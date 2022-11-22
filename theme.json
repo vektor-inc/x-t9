@@ -96,7 +96,7 @@
 			"customDuotone": true
 		},
 		"spacing": {
-			"blockGap": null,
+			"blockGap": true,
 			"margin": true,
 			"padding": true,
 			"spacingSizes": [
@@ -251,6 +251,9 @@
 		}
 	},
 	"styles": {
+		"spacing": {
+			"blockGap": "var(--wp--custom--spacing--medium)"
+		},
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--system-font)"
 		},
