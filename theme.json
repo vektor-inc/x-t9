@@ -14,6 +14,11 @@
 			"defaultPalette": true,
 			"palette": [
 				{
+					"slug": "base",
+					"color": "#fff",
+					"name": "Base"
+				},
+				{
 					"slug": "primary",
 					"color": "#233A73",
 					"name": "Primary"
@@ -39,9 +44,9 @@
 					"name": "Border Normal"
 				},
 				{
-					"slug": "bg-light-gray",
-					"color": "#f9f9f9",
-					"name": "BG Light Gray"
+					"slug": "bg-pale",
+					"color": "rgba( 0, 0, 0, 0, 0.05)",
+					"name": "BG Pale"
 				},
 				{
 					"slug": "bg-dark-gray",
@@ -77,6 +82,11 @@
 					"slug": "text-dark-darkbg",
 					"color": "rgba( 255,255,255,0.61 )",
 					"name": "Text Dark (Will be abolished)"
+				},
+				{
+					"slug": "bg-light-gray",
+					"color": "var(--wp--preset--color--bg-pale)",
+					"name": "BG Light Gray (Will be abolished)"
 				}
 			],
 			"customGradient": true,
