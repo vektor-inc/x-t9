@@ -18,7 +18,7 @@
 }
 
 .wp-block-button.is-style-outline {
-	a:hover {
+	& > .wp-block-button__link:not(.has-background):hover {
 		background-color: var(--wp--preset--color--primary-hover);
 		color: #fff;
 	}
