@@ -58,16 +58,3 @@ body>.is-root-container:not(.wp-site-blocks),
 	margin-left: calc(-1 * var(--wp--custom--spacing--editor-padding)) !important;
 	margin-right: calc(-1 * var(--wp--custom--spacing--editor-padding)) !important;
 }
-
-/* なんか勝手にコアに余白入れられるのが気に入らないので削除 */
-figure,
-ul,
-ol,
-blockquote,
-.wp-block-table,
-.wp-block-buttons {
-	&:first-child {
-		margin-top: 0;
-		margin-block-start: 0;
-	}
-}

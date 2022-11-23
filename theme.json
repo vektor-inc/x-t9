@@ -309,6 +309,13 @@
 			"core/navigation": {
 				"typography": {
 					"lineHeight": "1.5"
+				},
+				"elements": {
+					"link": {
+						"typography": {
+							"textDecoration": "none"
+						}
+					}
 				}
 			}
 		}
