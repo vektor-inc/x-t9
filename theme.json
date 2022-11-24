@@ -14,9 +14,14 @@
 			"defaultPalette": true,
 			"palette": [
 				{
-					"slug": "base",
+					"slug": "bg-base",
 					"color": "#fff",
-					"name": "Base"
+					"name": "BG Base"
+				},
+				{
+					"slug": "bg-pale",
+					"color": "rgba( 0, 0, 0, 0.05)",
+					"name": "BG Pale"
 				},
 				{
 					"slug": "primary",
@@ -44,19 +49,9 @@
 					"name": "Border Normal"
 				},
 				{
-					"slug": "bg-pale",
-					"color": "rgba( 0, 0, 0, 0.05)",
-					"name": "BG Pale"
-				},
-				{
-					"slug": "bg-dark-gray",
-					"color": "#262626",
-					"name": "BG Dark Gray"
-				},
-				{
-					"slug": "bg-black",
-					"color": "#222222",
-					"name": "BG Black"
+					"slug": "bg-dark",
+					"color": "#222",
+					"name": "BG Dark ( Base Contrast )"
 				},
 				{
 					"slug": "text-normal-darkbg",
@@ -72,21 +67,6 @@
 					"slug": "border-normal-darkbg",
 					"color": "rgba( 255,255,255,0.1 )",
 					"name": "Border Normal (Dark BG)"
-				},
-				{
-					"slug": "text-bright",
-					"color": "rgba(0,0,0,0.51)",
-					"name": "Text Bright (Will be abolished)"
-				},
-				{
-					"slug": "text-dark-darkbg",
-					"color": "rgba( 255,255,255,0.61 )",
-					"name": "Text Dark (Will be abolished)"
-				},
-				{
-					"slug": "bg-light-gray",
-					"color": "var(--wp--preset--color--bg-pale)",
-					"name": "BG Light Gray (Will be abolished)"
 				}
 			],
 			"customGradient": true,

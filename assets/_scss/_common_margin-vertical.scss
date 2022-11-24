@@ -66,6 +66,6 @@ blockquote,
 }
 
 body .is-layout-constrained > * + *,
-body .is-layout-flow > * + .wp-block-spacer {
+body .is-layout-flow > * + :is(.wp-block-spacer, .wp-block-navigation, .wp-block-query) {
 	margin-top:0;
 }

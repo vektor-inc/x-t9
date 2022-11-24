@@ -6,9 +6,19 @@
 		"color": {
 			"palette": [
 				{
-					"slug": "base",
+					"slug": "bg-base",
 					"color": "#222",
-					"name": "Base"
+					"name": "BG Base"
+				},
+				{
+					"slug": "bg-pale",
+					"color": "#151515",
+					"name": "BG Pale"
+				},
+				{
+					"slug": "bg-dark",
+					"color": "#f5f5f5",
+					"name": "BG Dark ( Base Contrast )"
 				},
 				{
 					"slug": "primary",
@@ -36,21 +46,6 @@
 					"name": "Border Normal"
 				},
 				{
-					"slug": "bg-pale",
-					"color": "#151515",
-					"name": "BG Pale"
-				},
-				{
-					"slug": "bg-dark-gray",
-					"color": "#262626",
-					"name": "BG Dark Gray"
-				},
-				{
-					"slug": "bg-black",
-					"color": "#222222",
-					"name": "BG Black"
-				},
-				{
 					"slug": "text-normal-darkbg",
 					"color": "rgba( 255,255,255,0.8 )",
 					"name": "Text Normal (Dark BG)"
@@ -64,6 +59,16 @@
 					"slug": "border-normal-darkbg",
 					"color": "rgba( 255,255,255,0.1 )",
 					"name": "Border Normal (Dark BG)"
+				},
+				{
+					"slug": "bg-dark-gray",
+					"color": "var(--wp--preset--color--bg-pale)",
+					"name": "BG Dark Gray (Will be abolished)"
+				},
+				{
+					"slug": "bg-black",
+					"color": "var(--wp--preset--color--bg-pale)",
+					"name": "BG Black (Will be abolished)"
 				},
 				{
 					"slug": "text-bright",
@@ -90,7 +95,7 @@
 	},
 	"styles": {
 		"color": {
-			"background": "var(--wp--preset--color--base)",
+			"background": "var(--wp--preset--color--bg-base)",
 			"text": "var(--wp--preset--color--text-normal)"
 		}
 	}
