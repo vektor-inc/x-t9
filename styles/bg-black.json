@@ -51,9 +51,6 @@
 					"name": "Text Normal (Dark BG)"
 				},
 				{
-					"//": " Dark BG Set ( Base is black that Dark = white )"
-				},
-				{
 					"slug": "text-secondary-darkbg",
 					"color": "rgba( 0,0,0,0.6 )",
 					"name": "Text Secondary (Dark BG)"

@@ -287,6 +287,9 @@
 		},
 		"blocks": {
 			"core/navigation": {
+				"spacing": {
+					"blockGap": "0"
+				},
 				"typography": {
 					"lineHeight": "1.5"
 				},
