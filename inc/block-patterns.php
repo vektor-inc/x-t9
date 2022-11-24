@@ -53,7 +53,7 @@ function x29_register_block_patterns() {
 		'footer-bg-bright-center-nav',
 		'header/desc--contact__logo--nav',
 		'header/desc--sns__logo--nav-contact',
-		'header/logo__nav__center',
+		'header/logo__desc__nav__center',
 		'header/logo---nav---contact',
 		'header/logo-nav---contact',
 		'header/logo-title--sns-contact__nav',
