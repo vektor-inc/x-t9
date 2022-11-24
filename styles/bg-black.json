@@ -47,43 +47,21 @@
 				},
 				{
 					"slug": "text-normal-darkbg",
-					"color": "rgba( 255,255,255,0.8 )",
+					"color": "rgba( 0,0,0,0.8 )",
 					"name": "Text Normal (Dark BG)"
 				},
 				{
+					"//": " Dark BG Set ( Base is black that Dark = white )"
+				},
+				{
 					"slug": "text-secondary-darkbg",
-					"color": "rgba( 255,255,255,0.6 )",
+					"color": "rgba( 0,0,0,0.6 )",
 					"name": "Text Secondary (Dark BG)"
 				},
 				{
 					"slug": "border-normal-darkbg",
-					"color": "rgba( 255,255,255,0.1 )",
+					"color": "rgba( 0,0,0,0.1 )",
 					"name": "Border Normal (Dark BG)"
-				},
-				{
-					"slug": "bg-dark-gray",
-					"color": "var(--wp--preset--color--bg-pale)",
-					"name": "BG Dark Gray (Will be abolished)"
-				},
-				{
-					"slug": "bg-black",
-					"color": "var(--wp--preset--color--bg-pale)",
-					"name": "BG Black (Will be abolished)"
-				},
-				{
-					"slug": "text-bright",
-					"color": "rgba(0,0,0,0.51)",
-					"name": "Text Bright (Will be abolished)"
-				},
-				{
-					"slug": "text-dark-darkbg",
-					"color": "rgba( 255,255,255,0.61 )",
-					"name": "Text Dark (Will be abolished)"
-				},
-				{
-					"slug": "bg-light-gray",
-					"color": "var(--wp--preset--color--bg-pale)",
-					"name": "BG Light Gray (Will be abolished)"
 				},
 				{
 					"slug": "contrast",
