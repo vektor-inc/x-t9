@@ -102,6 +102,7 @@
 		&.is-menu-open {
 			.wp-block-navigation-item {
 				border-left: none;
+				border-right: none;
 			}
 		}
 	}
@@ -126,6 +127,17 @@
 	// Dusable sub menu
 	& .has-child .wp-block-navigation__submenu-container {
 		display: none;
+	}
+	// Modal
+	& > .wp-block-navigation__responsive-container {
+		&.is-menu-open {
+			.wp-block-navigation-item {
+				border-left: none;
+				&:last-child {
+					border-right: none;
+				}
+			}
+		}
 	}
 }
 
