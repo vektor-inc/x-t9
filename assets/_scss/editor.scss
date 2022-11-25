@@ -3,7 +3,6 @@
  * edit.css
  * Edit screen override
  */
-
 .edit-post-visual-editor__post-title-wrapper {
 	margin-bottom: 1.5rem;
 }
@@ -23,6 +22,12 @@
 	height: fit-content;
 	border-radius: 0;
 	content: "This is .scrolled-header-fixed";
+}
+
+// reset block margin top
+.is-layout-constrained > * + :is(.wp-block-spacer, .wp-block-columns, .wp-block-navigation, .wp-block-query) {
+	margin-top:0;
+	margin-block-start:0;
 }
 
 /* Spacer ------------------------------------------------- */

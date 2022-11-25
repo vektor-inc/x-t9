@@ -48,7 +48,7 @@ body .is-layout-flow > * + {
 	margin-top: 0;
 	margin-block-start: 0;
 }
-.wp-site-blocks > footer {
+.wp-site-blocks > :is( header, main, footer) {
 	margin-block-start: 0;
 }
 body .is-layout-constrained > * + *,
