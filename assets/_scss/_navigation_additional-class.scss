@@ -91,11 +91,11 @@
  */
 *[class*="nav--text-inline"] {
 	--nav--text-inline--border: var(--wp--preset--color--border-normal);
-
+	// border:1px solid #ff0000 !important;
 	&.nav--darkbg {
 		--nav--text-inline--border: var(--wp--preset--color--border-normal-darkbg);
 	}
-	& > .wp-block-navigation__responsive-container {
+	& > :is(.wp-block-navigation__container,.wp-block-navigation__responsive-container) {
 		.wp-block-navigation-item {
 			border-left: 1px solid var(--nav--text-inline--border);
 		}
@@ -124,7 +124,8 @@
 			}
 		}
 	}
-	// Dusable sub menu
+	// Dusable sub menu and icon
+	.wp-block-navigation__submenu-icon,
 	& .has-child .wp-block-navigation__submenu-container {
 		display: none;
 	}

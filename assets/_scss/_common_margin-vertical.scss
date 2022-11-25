@@ -1,56 +1,40 @@
 * {
 	// margin-block-start: 0;
-	margin-block-end: 0;
+	// margin-block-end: 0;
 }
 
-main,
-hr {
-	margin-top: 0;
-	margin-bottom: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	// line-height is not margin but, reason of writned to here is line-height has deep engagement with this margin.
-	line-height: var(--wp--custom--typography--line-height--heading);
-	margin-bottom: 0;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-	// margin = Ideal margin - half-leading（ (line-height - 1em ) /2 ）
-	margin-top: calc(1.5em - ((var(--wp--custom--typography--line-height--heading) - 1em) / 2));
-
-	&:first-child {
-		margin-top: 0;
+body .is-layout-flow > * + {
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		// margin = Ideal margin - half-leading（ (line-height - 1em ) /2 ）
+		margin-block-start: calc(1.5em - ((var(--wp--custom--typography--line-height--heading) - 1em) / 2));
+		&:first-child {
+			margin-block-start: 0;
+		}
+	}
+	:is(h1, h2, h3, h4, h5, h6)+ :is(h2, h3, h4, h5, h6) {
+		margin-block-start: calc(1em - ((var(--wp--custom--typography--line-height--heading) - 1em) / 2));
+	}
+	:is(h1, h2, h3, h4, h5, h6)+ :is(p, ul, ol, dl) {
+		// margin = Ideal margin - half-leading（ (line-height - 1em ) /2 ）
+		margin-block-start: calc(1.5em - ((var(--wp--custom--typography--line-height--normal) - 1em) / 2));
+	}
+	:is(
+	p,
+	figure,
+	ul,
+	ol,
+	blockquote,
+	.wp-block-table,
+	.wp-block-buttons) {
+		// margin-top: var(--wp--custom--spacing--medium);
+		// margin-block-start: var(--wp--custom--spacing--medium);
 	}
 }
 
-:is(h1, h2, h3, h4, h5, h6)+ :is(h2, h3, h4, h5, h6) {
-	margin-top: calc(1em - ((var(--wp--custom--typography--line-height--heading) - 1em) / 2));
-}
-
-:is(h1, h2, h3, h4, h5, h6)+ :is(p, ul, ol, dl) {
-	// margin = Ideal margin - half-leading（ (line-height - 1em ) /2 ）
-	margin-top: calc(1.5em - ((var(--wp--custom--typography--line-height--normal) - 1em) / 2));
-}
-
-figure,
-ul,
-ol,
-blockquote,
-.wp-block-table,
-.wp-block-buttons {
-	// margin-top: var(--wp--custom--spacing--medium);
-	// margin-block-start: var(--wp--custom--spacing--medium);
-}
 
 // p,
 // main ul li {
@@ -64,7 +48,9 @@ blockquote,
 	margin-top: 0;
 	margin-block-start: 0;
 }
-
+.wp-site-blocks > footer {
+	margin-block-start: 0;
+}
 body .is-layout-constrained > * + *,
 body .is-layout-flow > * + :is(.wp-block-spacer, .wp-block-navigation, .wp-block-query) {
 	margin-top:0;
