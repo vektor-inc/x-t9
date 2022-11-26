@@ -67,7 +67,7 @@
 .wp-block-navigation__responsive-container:not(.has-modal-open) {
 	.wp-block-navigation__submenu-container {
 		.wp-block-navigation-item {
-			color: var(--wp--preset--color--text-normal-darkbg); // ブロック側で指定可能になっているが、既存のパターンが未指定だったり未指定のサイトが未指定だったりするので2022年内はフォールバックで残しておく
+			color: #fff; // No relation under Bright BG and Dark BG
 			background-color: var(--wp--preset--color--primary);
 			border-bottom: 1px solid var(--wp--preset--color--border-normal-darkbg);
 
