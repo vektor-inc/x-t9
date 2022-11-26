@@ -11,7 +11,7 @@ return array(
 	'content'    => '<!-- wp:group {"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
 	<div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0"><!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70"}}},"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--70);margin-bottom:var(--wp--preset--spacing--70)"><!-- wp:columns {"style":{"spacing":{}},"className":"vk_block-margin-0\u002d\u002dmargin-bottom"} -->
-	<div class="wp-block-columns vk_block-margin-0--margin-bottom"><!-- wp:column -->
+	<div class="wp-block-columns"><!-- wp:column -->
 	<div class="wp-block-column"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
 	<figure class="wp-block-image size-full"><img src="' .  esc_url( get_template_directory_uri() ) . '/inc/patterns/images/' . 'sample-image-gray.png" alt=""/></figure>
 	<!-- /wp:image -->
