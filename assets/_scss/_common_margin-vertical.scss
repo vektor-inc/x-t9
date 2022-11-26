@@ -35,13 +35,6 @@ body .is-layout-flow > * + {
 	}
 }
 
-
-// p,
-// main ul li {
-// 	margin-top: var(--wp--custom--spacing--small);
-// 	margin-block-start: var(--wp--custom--spacing--small);
-// }
-
 // スペーサーブロックの次の要素の上部には margin-top が自動的に 0 になるようにする
 // Delete margin-top from next element of spacer block
 :is(.wp-block-spacer, .vk_spacer)+ :is(*) {
