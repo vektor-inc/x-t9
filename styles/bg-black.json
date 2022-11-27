@@ -6,21 +6,6 @@
 		"color": {
 			"palette": [
 				{
-					"slug": "bg-base",
-					"color": "#222",
-					"name": "BG Base"
-				},
-				{
-					"slug": "bg-pale",
-					"color": "#151515",
-					"name": "BG Pale"
-				},
-				{
-					"slug": "bg-dark",
-					"color": "#f5f5f5",
-					"name": "BG Dark ( Base Contrast )"
-				},
-				{
 					"slug": "primary",
 					"color": "#233A73",
 					"name": "Primary"
@@ -31,9 +16,19 @@
 					"name": "Primary Hover"
 				},
 				{
+					"slug": "bg-base",
+					"color": "#222",
+					"name": "BG Base"
+				},
+				{
+					"slug": "bg-pale",
+					"color": "#151515",
+					"name": "BG Pale"
+				},
+				{
 					"slug": "text-normal",
 					"color": "#fff",
-					"name": "Text Normal "
+					"name": "Text Normal"
 				},
 				{
 					"slug": "text-secondary",
@@ -46,24 +41,24 @@
 					"name": "Border Normal"
 				},
 				{
+					"slug": "bg-dark",
+					"color": "#172c5f",
+					"name": "BG Dark"
+				},
+				{
 					"slug": "text-normal-darkbg",
-					"color": "rgba( 0,0,0,0.8 )",
+					"color": "#fff",
 					"name": "Text Normal (Dark BG)"
 				},
 				{
 					"slug": "text-secondary-darkbg",
-					"color": "rgba( 0,0,0,0.6 )",
+					"color": "rgba(255,255,255,0.5)",
 					"name": "Text Secondary (Dark BG)"
 				},
 				{
 					"slug": "border-normal-darkbg",
-					"color": "rgba( 0,0,0,0.1 )",
+					"color": "rgba( 255,255,255,0.1 )",
 					"name": "Border Normal (Dark BG)"
-				},
-				{
-					"slug": "contrast",
-					"color": "#fff",
-					"name": "Contrast Color"
 				}
 			]
 		}

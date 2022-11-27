@@ -157,6 +157,13 @@
 			border-bottom: 1px solid var(--wp--preset--color--border-normal);
 		}
 
+		&.has-text-normal-darkbg-color {
+			&>.wp-block-navigation-item__content,
+			&>a.wp-block-navigation-item__content {
+				border-bottom: 1px solid var(--wp--preset--color--border-normal-darkbg);
+			}
+		}
+
 		.wp-block-navigation__submenu-container {
 			display: block;
 			height: auto;
