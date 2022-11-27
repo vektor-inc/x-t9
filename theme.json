@@ -14,16 +14,6 @@
 			"defaultPalette": true,
 			"palette": [
 				{
-					"slug": "bg-base",
-					"color": "#fff",
-					"name": "BG Base"
-				},
-				{
-					"slug": "bg-pale",
-					"color": "rgba( 0, 0, 0, 0.05)",
-					"name": "BG Pale"
-				},
-				{
 					"slug": "primary",
 					"color": "#233A73",
 					"name": "Primary"
@@ -32,6 +22,16 @@
 					"slug": "primary-hover",
 					"color": "#1c45ab",
 					"name": "Primary Hover"
+				},
+				{
+					"slug": "bg-base",
+					"color": "#fff",
+					"name": "BG Base"
+				},
+				{
+					"slug": "bg-pale",
+					"color": "rgba( 0, 0, 0, 0.05)",
+					"name": "BG Pale"
 				},
 				{
 					"slug": "text-normal",
@@ -55,7 +55,7 @@
 				},
 				{
 					"slug": "text-normal-darkbg",
-					"color": "rgba( 255,255,255,0.8 )",
+					"color": "rgba( 255,255,255,0.7 )",
 					"name": "Text Normal (Dark BG)"
 				},
 				{
