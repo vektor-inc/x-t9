@@ -17,12 +17,12 @@
 				},
 				{
 					"slug": "bg-primary",
-					"color": "#222",
+					"color": "#151515",
 					"name": "BG Primary"
 				},
 				{
 					"slug": "bg-secondary",
-					"color": "#151515",
+					"color": "#222",
 					"name": "BG Secondary"
 				},
 				{
