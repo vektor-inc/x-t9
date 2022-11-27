@@ -24,14 +24,14 @@
 					"name": "Primary Hover"
 				},
 				{
-					"slug": "bg-base",
+					"slug": "bg-primary",
 					"color": "#fff",
-					"name": "BG Base"
+					"name": "BG Primary"
 				},
 				{
-					"slug": "bg-pale",
+					"slug": "bg-secondary",
 					"color": "rgba( 0, 0, 0, 0.05)",
-					"name": "BG Pale"
+					"name": "BG Secondary"
 				},
 				{
 					"slug": "text-normal",

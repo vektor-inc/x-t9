@@ -9,8 +9,8 @@ return array(
 	'title'      => __( 'Footer BG Bright', 'x-t9' ),
 	'categories' => array( 'footer' ),
 	'blockTypes' => array( 'core/template-part/footer' ),
-	'content'    => '<!-- wp:group {"style":{"border":{"top":{"color":"var:preset|color|primary","width":"2px"}}},"backgroundColor":"bg-pale","textColor":"text-normal","className":"has-text-color"} -->
-	<div class="wp-block-group has-text-color has-text-normal-color has-bg-pale-background-color has-background" style="border-top-color:var(--wp--preset--color--primary);border-top-width:2px"><!-- wp:group {"layout":{"inherit":true,"type":"constrained"}} -->
+	'content'    => '<!-- wp:group {"style":{"border":{"top":{"color":"var:preset|color|primary","width":"2px"}}},"backgroundColor":"bg-secondary","textColor":"text-normal","className":"has-text-color"} -->
+	<div class="wp-block-group has-text-color has-text-normal-color has-bg-secondary-background-color has-background" style="border-top-color:var(--wp--preset--color--primary);border-top-width:2px"><!-- wp:group {"layout":{"inherit":true,"type":"constrained"}} -->
 	<div class="wp-block-group"><!-- wp:spacer {"className":"is-style-spacer-lg"} -->
 	<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-lg"></div>
 	<!-- /wp:spacer -->

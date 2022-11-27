@@ -16,14 +16,14 @@
 					"name": "Primary Hover"
 				},
 				{
-					"slug": "bg-base",
+					"slug": "bg-primary",
 					"color": "#222",
-					"name": "BG Base"
+					"name": "BG Primary"
 				},
 				{
-					"slug": "bg-pale",
+					"slug": "bg-secondary",
 					"color": "#151515",
-					"name": "BG Pale"
+					"name": "BG Secondary"
 				},
 				{
 					"slug": "text-normal",
@@ -65,7 +65,7 @@
 	},
 	"styles": {
 		"color": {
-			"background": "var(--wp--preset--color--bg-base)",
+			"background": "var(--wp--preset--color--bg-primary)",
 			"text": "var(--wp--preset--color--text-normal)"
 		}
 	}
