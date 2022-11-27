@@ -14,8 +14,8 @@ return array(
 	<div class="wp-block-group"><!-- wp:site-tagline {"textColor":"text-secondary","fontSize":"x-small"} /-->
 	
 	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->
-	<div class="wp-block-buttons"><!-- wp:button {"style":{"border":{"radius":"0px"},"spacing":{"padding":{"top":"0.2rem","bottom":"0.2rem","left":"2rem","right":"2rem"}}},"fontSize":"small"} -->
-	<div class="wp-block-button has-custom-font-size has-small-font-size"><a class="wp-block-button__link wp-element-button" style="border-radius:0px;padding-top:0.2rem;padding-right:2rem;padding-bottom:0.2rem;padding-left:2rem">Contact</a></div>
+	<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","style":{"border":{"radius":"0px"},"spacing":{"padding":{"top":"0.2rem","bottom":"0.2rem","left":"2rem","right":"2rem"}}},"fontSize":"small"} -->
+	<div class="wp-block-button has-custom-font-size has-small-font-size"><a class="wp-block-button__link has-primary-background-color has-background wp-element-button" style="border-radius:0px;padding-top:0.2rem;padding-right:2rem;padding-bottom:0.2rem;padding-left:2rem">Contact</a></div>
 	<!-- /wp:button --></div>
 	<!-- /wp:buttons --></div>
 	<!-- /wp:group -->
@@ -41,8 +41,14 @@ return array(
 	<div class="wp-block-group" style="padding-top:0;padding-bottom:0"><!-- wp:site-logo {"width":220} /--></div>
 	<!-- /wp:group -->
 	
-	<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"0","right":"0","left":"0"}}}} -->
-	<div class="wp-block-group" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:navigation {"ref":11229,"className":"nav\u002d\u002dactive-border-bottom","layout":{"type":"flex","justifyContent":"left","orientation":"horizontal","flexWrap":"wrap"}} /--></div>
+	<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"0","right":"0","left":"0"}}},"layout":{"type":"flex","flexWrap":"nowrap"},"fontSize":"x-small"} -->
+	<div class="wp-block-group has-x-small-font-size" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:navigation {"ref":11229,"className":"nav\u002d\u002dactive-border-bottom","layout":{"type":"flex","justifyContent":"left","orientation":"horizontal","flexWrap":"wrap"},"fontSize":"small"} /-->
+	
+	<!-- wp:buttons -->
+	<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","right":"var:preset|spacing|50","bottom":"var:preset|spacing|30","left":"var:preset|spacing|50"}}},"fontSize":"small"} -->
+	<div class="wp-block-button has-custom-font-size has-small-font-size"><a class="wp-block-button__link has-primary-background-color has-background wp-element-button" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--50)">Contact</a></div>
+	<!-- /wp:button --></div>
+	<!-- /wp:buttons --></div>
 	<!-- /wp:group --></div>
 	<!-- /wp:group -->
 	
