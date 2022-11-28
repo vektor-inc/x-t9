@@ -11,45 +11,47 @@
 return array(
 	'title'      => __( 'Featured post list', 'x-t9' ),
 	'categories' => array( 'featured' ),
-	'content'    => '<!-- wp:cover {"overlayColor":"bg-light-gray","isDark":false,"align":"full","style":{"spacing":{"padding":{"top":"0px","bottom":"0px"}}}} -->
-	<div class="wp-block-cover alignfull is-light" style="padding-top:0px;padding-bottom:0px"><span aria-hidden="true" class="has-bg-light-gray-background-color has-background-dim-100 wp-block-cover__gradient-background has-background-dim"></span><div class="wp-block-cover__inner-container">
-	<!-- wp:spacer {"height":"","className":"is-style-spacer-xl"} -->
-	<div style="height:" aria-hidden="true" class="wp-block-spacer is-style-spacer-xl"></div>
-	<!-- /wp:spacer -->
-	<!-- wp:heading {"textAlign":"center","style":{"spacing":{"margin":{"top":"0px"}}}} -->
-	<h2 class="has-text-align-center" id="information" style="margin-top:0px">Information</h2>
+	'content'    => '<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"bg-secondary","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignfull has-bg-secondary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)"><!-- wp:heading {"textAlign":"center","style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|50"}}}} -->
+	<h2 class="has-text-align-center" id="information" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--50)">Information</h2>
 	<!-- /wp:heading -->
-	<!-- wp:spacer {"height":"","className":"is-style-spacer-md"} -->
-	<div style="height:" aria-hidden="true" class="wp-block-spacer is-style-spacer-md"></div>
-	<!-- /wp:spacer -->
-	<!-- wp:group {"layout":{"inherit":true}} -->
-	<div class="wp-block-group"><!-- wp:separator {"color":"border-normal","className":"is-style-wide"} -->
-	<hr class="wp-block-separator has-text-color has-background has-border-normal-background-color has-border-normal-color is-style-wide"/>
+	
+	<!-- wp:group {"layout":{"inherit":true,"type":"constrained"}} -->
+	<div class="wp-block-group"><!-- wp:separator {"opacity":"css","backgroundColor":"border-normal","className":"is-style-wide"} -->
+	<hr class="wp-block-separator has-text-color has-border-normal-color has-css-opacity has-border-normal-background-color has-background is-style-wide"/>
 	<!-- /wp:separator -->
 	
-	<!-- wp:query {"queryId":9,"query":{"perPage":"2","pages":"0","offset":0,"postType":"post","categoryIds":[],"tagIds":[],"order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false},"displayLayout":{"type":"list","columns":3},"layout":{"inherit":false}} -->
-	<div class="wp-block-query">
+	<!-- wp:query {"queryId":9,"query":{"perPage":"2","pages":"0","offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"parents":[]},"displayLayout":{"type":"list","columns":3},"layout":{"inherit":false}} -->
+	<div class="wp-block-query"><!-- wp:post-template -->
+	<!-- wp:columns {"verticalAlignment":"top","style":{"spacing":{"margin":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}}} -->
+	<div class="wp-block-columns are-vertically-aligned-top" style="margin-top:var(--wp--preset--spacing--50);margin-bottom:var(--wp--preset--spacing--50)"><!-- wp:column {"verticalAlignment":"top","width":"33.33%"} -->
+	<div class="wp-block-column is-vertically-aligned-top" style="flex-basis:33.33%"><!-- wp:post-featured-image {"isLink":true,"style":{"spacing":{"margin":{"top":"0","right":"0","bottom":"0","left":"0"}},"border":{"width":"1px"}},"borderColor":"border-normal"} /--></div>
+	<!-- /wp:column -->
 	
-	<!-- wp:post-template -->
-	<!-- wp:pattern {"slug":"x-t9/post-template-image-left"} /-->
+	<!-- wp:column {"verticalAlignment":"top","width":"66.66%"} -->
+	<div class="wp-block-column is-vertically-aligned-top" style="flex-basis:66.66%"><!-- wp:post-title {"isLink":true,"style":{"spacing":{"margin":{"bottom":"0rem"}}}} /-->
+	
+	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|40","margin":{"top":"var:preset|spacing|30","bottom":"0"}}},"textColor":"text-secondary","layout":{"type":"flex","allowOrientation":false}} -->
+	<div class="wp-block-group has-text-secondary-color has-text-color" style="margin-top:var(--wp--preset--spacing--30);margin-bottom:0"><!-- wp:post-date {"style":{"spacing":{"margin":{"top":"0"}}}} /-->
+	
+	<!-- wp:post-terms {"term":"category","prefix":"Category : "} /--></div>
+	<!-- /wp:group -->
+	
+	<!-- wp:post-excerpt {"moreText":"Read more","style":{"spacing":{"margin":{"top":"var:preset|spacing|40","right":"0","bottom":"0","left":"0"}}}} /--></div>
+	<!-- /wp:column --></div>
+	<!-- /wp:columns -->
+	
+	<!-- wp:separator {"className":"has-text-color has-background has-border-normal-background-color is-style-wide"} -->
+	<hr class="wp-block-separator has-alpha-channel-opacity has-text-color has-background has-border-normal-background-color is-style-wide"/>
+	<!-- /wp:separator -->
 	<!-- /wp:post-template -->
-
-	<!-- wp:spacer {"height":"","className":"is-style-spacer-md"} -->
-	<div style="height:" aria-hidden="true" class="wp-block-spacer is-style-spacer-md"></div>
-	<!-- /wp:spacer -->
 	
-	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-	<div class="wp-block-buttons"><!-- wp:button {"fontSize":"x-small"} -->
-	<div class="wp-block-button has-custom-font-size has-x-small-font-size"><a class="wp-block-button__link" href="/information/">Information list</a></div>
+	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|50","bottom":"0"}}}} -->
+	<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--50);margin-bottom:0"><!-- wp:button {"fontSize":"x-small"} -->
+	<div class="wp-block-button has-custom-font-size has-x-small-font-size"><a class="wp-block-button__link wp-element-button" href="/information/">Information list</a></div>
 	<!-- /wp:button --></div>
 	<!-- /wp:buttons --></div>
-	
-	<!-- /wp:query -->
-	
-	<!-- wp:spacer {"height":"","className":"is-style-spacer-xl"} -->
-	<div style="height:" aria-hidden="true" class="wp-block-spacer is-style-spacer-xl"></div>
-	<!-- /wp:spacer -->
-	
-	</div><!-- /wp:group --></div>
-	</div><!-- /wp:cover -->',
+	<!-- /wp:query --></div>
+	<!-- /wp:group --></div>
+	<!-- /wp:group -->',
 );

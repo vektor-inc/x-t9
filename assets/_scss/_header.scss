@@ -1,6 +1,6 @@
 .wp-block-site-title {
 	a {
-		text-decoration-color: var(--wp--preset--color--border-normal);
+		text-decoration: none;
 
 		&:hover {
 			text-decoration: underline;

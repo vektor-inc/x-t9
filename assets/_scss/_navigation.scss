@@ -17,7 +17,8 @@
 
 	// PC Menu style
 	&__responsive-container:where(:not(.has-modal-open)) {
-		:where(.wp-block-navigation__container, .wp-block-page-list) {
+		// :where(.wp-block-navigation__container, 
+		// .wp-block-page-list) {
 			&>.wp-block-navigation-item {
 				display: grid;
 				position: relative;
@@ -27,9 +28,10 @@
 					grid-area: 1/-1;
 				}
 
-				&.has-child>a {
+				*:where(:not(.is-style-nav--text-inline)) &.has-child>a {
 					// Additional Padding for submenu-icon
 					padding-right: calc(var(--submenu-icon-size) + var(--nav-top-item-padding-horizontal) + 0.5em);
+					border:1px solid #ff0000;
 				}
 
 				&>.wp-block-navigation__submenu-icon {
@@ -47,7 +49,7 @@
 					}
 				}
 			}
-		}
+		// }
 	}
 
 	// Mobile menu open toggle button
@@ -55,7 +57,6 @@
 		margin: 10px;
 	}
 }
-
 /* 
  * Sub Navigation Styles
  */
@@ -66,7 +67,7 @@
 .wp-block-navigation__responsive-container:not(.has-modal-open) {
 	.wp-block-navigation__submenu-container {
 		.wp-block-navigation-item {
-			color: var(--wp--preset--color--text-normal-darkbg); // ブロック側で指定可能になっているが、既存のパターンが未指定だったり未指定のサイトが未指定だったりするので2022年内はフォールバックで残しておく
+			color: #fff; // No relation under Bright BG and Dark BG
 			background-color: var(--wp--preset--color--primary);
 			border-bottom: 1px solid var(--wp--preset--color--border-normal-darkbg);
 
@@ -132,7 +133,6 @@
 		}
 
 		:where(.wp-block-navigation__container, .wp-block-page-list) {
-
 			.has-child .submenu-container,
 			.has-child .wp-block-navigation__submenu-container {
 				width: 100%;

@@ -1,48 +1,45 @@
-<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+<!-- wp:template-part {"slug":"header","theme":"x-t9","tagName":"header"} /-->
 
-<!-- wp:group {"tagName":"main","align":"full","layout":{"inherit":true}} -->
-<main class="wp-block-group alignfull"><!-- wp:cover {"overlayColor":"bg-light-gray","minHeight":50,"isDark":false,"align":"full","style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}}}} -->
-	<div class="wp-block-cover alignfull is-light" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;min-height:50px"><span aria-hidden="true" class="wp-block-cover__background has-bg-light-gray-background-color has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"inherit":true}} -->
-	<div class="wp-block-group"><!-- wp:spacer {"height":"","className":"is-style-spacer-lg"} -->
-	<div style="height:" aria-hidden="true" class="wp-block-spacer is-style-spacer-lg"></div>
-	<!-- /wp:spacer -->
-	
-	<!-- wp:post-title {"textAlign":"center","level":1,"fontSize":"page-title"} /-->
-	
-	<!-- wp:spacer {"height":"","className":"is-style-spacer-lg"} -->
-	<div style="height:" aria-hidden="true" class="wp-block-spacer is-style-spacer-lg"></div>
-	<!-- /wp:spacer --></div>
-	<!-- /wp:group --></div></div>
+<!-- wp:group {"tagName":"main","align":"full","layout":{"inherit":true,"type":"constrained"}} -->
+<main class="wp-block-group alignfull">
+	<!-- wp:cover {"overlayColor":"bg-secondary","minHeight":50,"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","right":"var:preset|spacing|50","bottom":"var:preset|spacing|70","left":"var:preset|spacing|50"},"margin":{"top":"0","bottom":"0"}}}} -->
+	<div class="wp-block-cover alignfull"
+		style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--50);min-height:50px">
+		<span aria-hidden="true"
+			class="wp-block-cover__background has-bg-secondary-background-color has-background-dim-100 has-background-dim"></span>
+		<div class="wp-block-cover__inner-container">
+			<!-- wp:post-title {"textAlign":"center","level":1,"style":{"spacing":{"margin":{"top":"0","right":"0","bottom":"0","left":"0"}}},"textColor":"text-normal","fontSize":"page-title"} /-->
+		</div>
+	</div>
 	<!-- /wp:cover -->
-	
+
 	<!-- wp:separator {"align":"full","backgroundColor":"border-normal","className":"is-style-wide"} -->
-	<hr class="wp-block-separator alignfull has-text-color has-border-normal-color has-alpha-channel-opacity has-border-normal-background-color has-background is-style-wide"/>
+	<hr
+		class="wp-block-separator alignfull has-text-color has-border-normal-color has-alpha-channel-opacity has-border-normal-background-color has-background is-style-wide" />
 	<!-- /wp:separator -->
-	
+
 	<!-- wp:spacer {"height":"","className":"is-style-spacer-xl"} -->
 	<div style="height:" aria-hidden="true" class="wp-block-spacer is-style-spacer-xl"></div>
 	<!-- /wp:spacer -->
-	
-	
 
-		<!-- wp:columns {"className":"is-style-main-layout"} -->
-		<div class="wp-block-columns is-style-main-layout">
-			<!-- wp:column -->
-			<div class="wp-block-column">
+	<!-- wp:columns {"className":"is-style-main-layout"} -->
+	<div class="wp-block-columns is-style-main-layout">
+		<!-- wp:column -->
+		<div class="wp-block-column">
 			<!-- wp:post-content /-->
-			</div>
-			<!-- /wp:column -->
-		
-			<!-- wp:column {"className":"is-style-main-layout-sidebar"} -->
-			<div class="wp-block-column is-style-main-layout-sidebar">
-			
-			</div>
-			<!-- /wp:column --></div>
-			<!-- /wp:columns -->
-	
+		</div>
+		<!-- /wp:column -->
+
+		<!-- wp:column {"className":"is-style-main-layout-sidebar"} -->
+		<div class="wp-block-column is-style-main-layout-sidebar"></div>
+		<!-- /wp:column -->
+	</div>
+	<!-- /wp:columns -->
+
 	<!-- wp:spacer {"height":"","className":"is-style-spacer-xl"} -->
 	<div style="height:" aria-hidden="true" class="wp-block-spacer is-style-spacer-xl"></div>
-	<!-- /wp:spacer --></main>
-	<!-- /wp:group -->
-	
-<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
+	<!-- /wp:spacer -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"x-t9","tagName":"footer"} /-->

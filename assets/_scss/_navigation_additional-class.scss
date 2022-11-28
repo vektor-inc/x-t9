@@ -53,8 +53,6 @@
 *[class*="nav--active-border-bottom"] {
 	.wp-block-navigation__responsive-container:where(:not(.is-menu-open)) {
 		:where(.wp-block-navigation__container, .wp-block-page-list) {
-			gap: 0;
-
 			&>.wp-block-navigation-item {
 				&>a {
 					padding-top: 1em;
@@ -84,19 +82,36 @@
 
 /****************************************************** 
  * Text inline
+ is-style-nav--text-inline
+
+	nav.wp-block-navigation.is-style-nav--text-inline 
+	> .wp-block-navigation__responsive-container.is-menu-open.has-modal-open
+	. wp-block-navigation__container
+
  */
 *[class*="nav--text-inline"] {
 	--nav--text-inline--border: var(--wp--preset--color--border-normal);
-
+	// border:1px solid #ff0000 !important;
 	&.nav--darkbg {
 		--nav--text-inline--border: var(--wp--preset--color--border-normal-darkbg);
 	}
+	& > :is(.wp-block-navigation__container,.wp-block-navigation__responsive-container) {
+		.wp-block-navigation-item {
+			border-left: 1px solid var(--nav--text-inline--border);
+		}
+		&.is-menu-open {
+			.wp-block-navigation-item {
+				border-left: none;
+				border-right: none;
+			}
+		}
+	}
 
 	:where(.wp-block-navigation__container, .wp-block-page-list) {
-		gap: 0;
+		// gap: 0;
 
 		&>.wp-block-navigation-item {
-			border-left: 1px solid var(--nav--text-inline--border);
+			// border-left: 1px solid var(--nav--text-inline--border);
 
 			&:last-child {
 				border-right: 1px solid var(--nav--text-inline--border);
@@ -105,6 +120,22 @@
 			&>a {
 				&:hover {
 					text-decoration: underline;
+				}
+			}
+		}
+	}
+	// Dusable sub menu and icon
+	.wp-block-navigation__submenu-icon,
+	& .has-child .wp-block-navigation__submenu-container {
+		display: none;
+	}
+	// Modal
+	& > .wp-block-navigation__responsive-container {
+		&.is-menu-open {
+			.wp-block-navigation-item {
+				border-left: none;
+				&:last-child {
+					border-right: none;
 				}
 			}
 		}
@@ -120,14 +151,17 @@
 	.wp-block-navigation-item {
 		margin: 0;
 
-		a:hover {
-			text-decoration: underline;
-		}
-
 		&>.wp-block-navigation-item__content,
 		&>a.wp-block-navigation-item__content {
 			padding: 0.8em;
 			border-bottom: 1px solid var(--wp--preset--color--border-normal);
+		}
+
+		&.has-text-normal-darkbg-color {
+			&>.wp-block-navigation-item__content,
+			&>a.wp-block-navigation-item__content {
+				border-bottom: 1px solid var(--wp--preset--color--border-normal-darkbg);
+			}
 		}
 
 		.wp-block-navigation__submenu-container {
