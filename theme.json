@@ -307,6 +307,11 @@
 			}
 		},
 		"blocks": {
+			"core/button": {
+				"color": {
+					"background": "var(--wp--preset--color--primary)"
+				}
+			},
 			"core/navigation": {
 				"spacing": {
 					"blockGap": "0"
