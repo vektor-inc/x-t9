@@ -16,6 +16,16 @@
 					"name": "Primary Hover"
 				},
 				{
+					"slug": "bg-primary",
+					"color": "#fff",
+					"name": "BG Primary"
+				},
+				{
+					"slug": "bg-secondary",
+					"color": "rgba( 0, 0, 0, 0.05)",
+					"name": "BG Secondary"
+				},
+				{
 					"slug": "text-normal",
 					"color": "#333",
 					"name": "Text Normal "
@@ -31,23 +41,13 @@
 					"name": "Border Normal"
 				},
 				{
-					"slug": "bg-light-gray",
-					"color": "#f9f9f9",
-					"name": "BG Light Gray"
-				},
-				{
-					"slug": "bg-dark-gray",
-					"color": "#262626",
-					"name": "BG Dark Gray"
-				},
-				{
-					"slug": "bg-black",
-					"color": "#222222",
-					"name": "BG Black"
+					"slug": "bg-dark",
+					"color": "#222",
+					"name": "BG Dark ( Base Contrast )"
 				},
 				{
 					"slug": "text-normal-darkbg",
-					"color": "rgba( 255,255,255,0.8 )",
+					"color": "rgba( 255,255,255,0.7 )",
 					"name": "Text Normal (Dark BG)"
 				},
 				{
@@ -59,16 +59,6 @@
 					"slug": "border-normal-darkbg",
 					"color": "rgba( 255,255,255,0.1 )",
 					"name": "Border Normal (Dark BG)"
-				},
-				{
-					"slug": "text-bright",
-					"color": "rgba(0,0,0,0.51)",
-					"name": "Text Bright (Will be abolished)"
-				},
-				{
-					"slug": "text-dark-darkbg",
-					"color": "rgba( 255,255,255,0.61 )",
-					"name": "Text Dark (Will be abolished)"
 				}
 			]
 		}
