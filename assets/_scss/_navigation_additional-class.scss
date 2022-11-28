@@ -181,22 +181,3 @@
 		}
 	}
 }
-
-/****************************************************** 
- * Vertical text list
- */
-*[class*="nav--vertical-text-list"] {
-
-	.wp-block-navigation-item,
-	.wp-block-navigation-item.wp-block.block-editor-block-list__block {
-		margin-top: 0.8em;
-
-		a:hover {
-			text-decoration: underline;
-		}
-	}
-
-	.wp-block-navigation__submenu-container {
-		margin-left: var(--wp--custom--spacing--menu-indent);
-	}
-}
