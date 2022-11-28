@@ -36,8 +36,8 @@ return array(
 	
 	<!-- wp:column -->
 	<div class="wp-block-column"><!-- wp:group {"style":{"border":{"bottom":{"color":"var:preset|color|border-normal","width":"1px"}},"spacing":{"padding":{"bottom":"var:preset|spacing|30"},"margin":{"bottom":"var:preset|spacing|30"}}}} -->
-	<div class="wp-block-group" style="border-bottom-color:var(--wp--preset--color--border-normal);border-bottom-width:1px;margin-bottom:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30)"><!-- wp:heading {"level":4,"style":{"spacing":{"margin":{"top":"0","right":"0","bottom":"0","left":"0"}}},"className":"is-style-vk-heading-plain"} -->
-	<h4 class="is-style-vk-heading-plain" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0">Contents</h4>
+	<div class="wp-block-group" style="border-bottom-color:var(--wp--preset--color--border-normal);border-bottom-width:1px;margin-bottom:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30)"><!-- wp:heading {"level":4,"style":{"spacing":{"margin":{"top":"0","right":"0","bottom":"0","left":"0"},"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"backgroundColor":"bg-secondary"} -->
+	<h4 class="has-bg-secondary-background-color has-background" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">Contents</h4>
 	<!-- /wp:heading --></div>
 	<!-- /wp:group -->
 	
@@ -47,8 +47,8 @@ return array(
 	<!-- wp:column -->
 	<div class="wp-block-column"><!-- wp:group -->
 	<div class="wp-block-group"><!-- wp:group {"style":{"border":{"bottom":{"color":"var:preset|color|border-normal","width":"1px"}},"spacing":{"padding":{"bottom":"var:preset|spacing|30"},"margin":{"bottom":"var:preset|spacing|30"}}}} -->
-	<div class="wp-block-group" style="border-bottom-color:var(--wp--preset--color--border-normal);border-bottom-width:1px;margin-bottom:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30)"><!-- wp:heading {"level":4,"style":{"spacing":{"margin":{"top":"0","right":"0","bottom":"0","left":"0"}}},"className":"is-style-vk-heading-plain"} -->
-	<h4 class="is-style-vk-heading-plain" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0">Information</h4>
+	<div class="wp-block-group" style="border-bottom-color:var(--wp--preset--color--border-normal);border-bottom-width:1px;margin-bottom:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30)"><!-- wp:heading {"level":4,"style":{"spacing":{"margin":{"top":"0","right":"0","bottom":"0","left":"0"},"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"backgroundColor":"bg-secondary","className":"is-style-vk-heading-default"} -->
+	<h4 class="is-style-vk-heading-default has-bg-secondary-background-color has-background" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">Information</h4>
 	<!-- /wp:heading --></div>
 	<!-- /wp:group -->
 	
@@ -90,7 +90,7 @@ return array(
 	
 	<!-- wp:group {"align":"full","style":{"border":{"top":{"color":"var:preset|color|border-normal","width":"1px"}}},"className":"mt-0","layout":{"inherit":true,"type":"constrained"}} -->
 	<div class="wp-block-group alignfull mt-0" style="border-top-color:var(--wp--preset--color--border-normal);border-top-width:1px"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0.5rem","bottom":"0.5rem"}}},"layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between"}} -->
-	<div class="wp-block-group" style="padding-top:0.5rem;padding-bottom:0.5rem"><!-- wp:navigation {"ref":11229,"showSubmenuIcon":false,"overlayMenu":"never","className":"nav\u002d\u002dtext-inline nav\u002d\u002ddarkbg","layout":{"type":"flex","justifyContent":"center"},"fontSize":"x-small"} /-->
+	<div class="wp-block-group" style="padding-top:0.5rem;padding-bottom:0.5rem"><!-- wp:navigation {"ref":11229,"showSubmenuIcon":false,"overlayMenu":"never","className":"is-style-nav\u002d\u002dtext-inline","layout":{"type":"flex","justifyContent":"center"},"fontSize":"x-small"} /-->
 	
 	<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase"}},"fontSize":"x-small"} -->
 	<p class="has-text-align-center has-x-small-font-size" style="text-transform:uppercase">Copyright (C) X-T9 All Rights Reserved.</p>

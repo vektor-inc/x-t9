@@ -28,7 +28,7 @@ return array(
 	
 	<!-- wp:group {"align":"full","style":{"border":{"top":{"color":"var:preset|color|border-normal-darkbg","width":"1px"}}},"className":"mt-0","layout":{"inherit":true,"type":"constrained"}} -->
 	<div class="wp-block-group alignfull mt-0" style="border-top-color:var(--wp--preset--color--border-normal-darkbg);border-top-width:1px"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0.5rem","bottom":"0.5rem"}}},"layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between"}} -->
-	<div class="wp-block-group" style="padding-top:0.5rem;padding-bottom:0.5rem"><!-- wp:navigation {"ref":11229,"textColor":"text-secondary-darkbg","showSubmenuIcon":false,"overlayMenu":"never","className":"nav\u002d\u002dtext-inline nav\u002d\u002ddarkbg","layout":{"type":"flex","justifyContent":"center"},"fontSize":"x-small"} /-->
+	<div class="wp-block-group" style="padding-top:0.5rem;padding-bottom:0.5rem"><!-- wp:navigation {"ref":11229,"textColor":"text-secondary-darkbg","showSubmenuIcon":false,"overlayMenu":"never","className":"is-style-nav\u002d\u002dtext-inline","layout":{"type":"flex","justifyContent":"center"},"fontSize":"x-small"} /-->
 	
 	<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase"}},"textColor":"text-secondary-darkbg","fontSize":"x-small"} -->
 	<p class="has-text-align-center has-text-secondary-darkbg-color has-text-color has-x-small-font-size" style="text-transform:uppercase">Copyright (C) X-T9 All Rights Reserved.</p>
