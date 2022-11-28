@@ -1,5 +1,14 @@
 var gulp = require('gulp');
 
+const replace = require('gulp-replace')
+
+gulp.task('convert-dynamic', function (done) {
+	gulp.src(['./inc/patterns/*.php' ])
+		.pipe(replace( 'src="http://localhost:8888/wp-content/themes/x-t9', 'src="\' . esc_url( get_template_directory_uri() ) . \'' ))
+		.pipe(gulp.dest('./inc/patterns/'));
+	done();
+});
+
 gulp.task('dist', function() {
 	return gulp.src(
 			[

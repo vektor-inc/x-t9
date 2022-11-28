@@ -11,7 +11,7 @@ return array(
 	'content'    => '<!-- wp:columns {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
 	<div class="wp-block-columns" style="margin-top:0;margin-bottom:0"><!-- wp:column -->
 	<div class="wp-block-column"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
-	<figure class="wp-block-image size-full"><img src="' .  esc_url( get_template_directory_uri() ) . '/inc/patterns/images/' . 'sample-image-gray.png" alt=""/></figure>
+	<figure class="wp-block-image size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/' . 'sample-image-gray.png" alt=""/></figure>
 	<!-- /wp:image -->
 	
 	<!-- wp:heading {"level":5} -->
@@ -31,7 +31,7 @@ return array(
 	
 	<!-- wp:column -->
 	<div class="wp-block-column"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
-	<figure class="wp-block-image size-full"><img src="' .  esc_url( get_template_directory_uri() ) . '/inc/patterns/images/' . 'sample-image-gray.png" alt=""/></figure>
+	<figure class="wp-block-image size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/' . 'sample-image-gray.png" alt=""/></figure>
 	<!-- /wp:image -->
 	
 	<!-- wp:heading {"level":5} -->
@@ -51,7 +51,7 @@ return array(
 	
 	<!-- wp:column -->
 	<div class="wp-block-column"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
-	<figure class="wp-block-image size-full"><img src="' .  esc_url( get_template_directory_uri() ) . '/inc/patterns/images/' . 'sample-image-gray.png" alt=""/></figure>
+	<figure class="wp-block-image size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/' . 'sample-image-gray.png" alt=""/></figure>
 	<!-- /wp:image -->
 	
 	<!-- wp:heading {"level":5} -->
@@ -71,7 +71,7 @@ return array(
 	
 	<!-- wp:column -->
 	<div class="wp-block-column"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
-	<figure class="wp-block-image size-full"><img src="' .  esc_url( get_template_directory_uri() ) . '/inc/patterns/images/' . 'sample-image-gray.png" alt=""/></figure>
+	<figure class="wp-block-image size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/' . 'sample-image-gray.png" alt=""/></figure>
 	<!-- /wp:image -->
 	
 	<!-- wp:heading {"level":5} -->
