@@ -30,7 +30,7 @@
 				},
 				{
 					"slug": "bg-secondary",
-					"color": "rgba( 0, 0, 0, 0.05)",
+					"color": "#f5f5f5",
 					"name": "BG Secondary"
 				},
 				{
@@ -270,6 +270,17 @@
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--x-large)",
 					"lineHeight": "var(--wp--custom--typography--line-height--heading)"
+				},
+				"color": {
+					"background": "var(--wp--preset--color--bg-secondary)"
+				},
+				"spacing": {
+					"padding": {
+						"left": "var(--wp--preset--spacing--40)",
+						"right": "var(--wp--preset--spacing--40)",
+						"top": "var(--wp--preset--spacing--30)",
+						"bottom": "var(--wp--preset--spacing--30)"
+					}
 				}
 			},
 			"h5": {
