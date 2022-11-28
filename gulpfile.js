@@ -18,9 +18,9 @@ gulp.task('convert-dynamic', function (done) {
 		.pipe(replace( 'moreText":"続きを読む"', 'moreText":"\' . esc_html__( \'Read more\', "x-t9" ) . \'"' ))
 		.pipe(gulp.dest('./inc/patterns/'));
 	// Read more
-	gulp.src(['./inc/patterns/*.php' ])
-		.pipe(replace( '>Read more</', '>\' . esc_html__( \'Read more\', \'x-t9\' ) . \'</' ))
-		.pipe(gulp.dest('./inc/patterns/'));
+	// gulp.src(['./inc/patterns/*.php' ])
+	// 	.pipe(replace( '>Read more</', '>\' . esc_html__( "Read more", "x-t9" ) . \'</' ))
+	// 	.pipe(gulp.dest('./inc/patterns/'));
 	// gulp.src(['./inc/patterns/*.php' ])
 	// 	.pipe(replace( '>続きを読む</', '>\' . esc_html__( "Read more", "x-t9" ) . \'</' ))
 	// 	.pipe(gulp.dest('./inc/patterns/'));
