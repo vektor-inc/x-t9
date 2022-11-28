@@ -12,10 +12,10 @@ gulp.task('convert-dynamic', function (done) {
 		.pipe(gulp.dest('./inc/patterns/'));
 	// Read more Excerpt
 	gulp.src(['./inc/patterns/*.php' ])
-		.pipe(replace( 'moreText":"Read more"', 'moreText":"\' . esc_html__( \'Read more\', "x-t9" ) . \'"' ))
+		.pipe(replace( 'moreText":"Read more"', 'moreText":"\' . esc_html__( "Read more", "x-t9" ) . \'"' ))
 		.pipe(gulp.dest('./inc/patterns/'));
 	gulp.src(['./inc/patterns/*.php' ])
-		.pipe(replace( 'moreText":"続きを読む"', 'moreText":"\' . esc_html__( \'Read more\', "x-t9" ) . \'"' ))
+		.pipe(replace( 'moreText":"続きを読む"', 'moreText":"\' . esc_html__( "Read more", "x-t9" ) . \'"' ))
 		.pipe(gulp.dest('./inc/patterns/'));
 	// Read more
 	// gulp.src(['./inc/patterns/*.php' ])
