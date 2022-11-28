@@ -12,7 +12,7 @@ return array(
 	'content'    => '<!-- wp:group {"style":{"border":{"top":{"color":"var:preset|color|primary","width":"2px"}},"spacing":{"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"bg-dark","className":"has-text-normal-darkbg-color has-text-color"} -->
 	<div class="wp-block-group has-text-normal-darkbg-color has-text-color has-bg-dark-background-color has-background" style="border-top-color:var(--wp--preset--color--primary);border-top-width:2px;margin-top:0;margin-bottom:0"><!-- wp:group {"style":{"spacing":{"padding":{"top":"1.5rem","bottom":"1.5rem"}}},"layout":{"inherit":true,"type":"constrained"}} -->
 	<div class="wp-block-group" style="padding-top:1.5rem;padding-bottom:1.5rem"><!-- wp:image {"align":"center","width":180,"sizeSlug":"full","linkDestination":"media"} -->
-	<figure class="wp-block-image aligncenter size-full is-resized"><img src="http://localhost:8888/wp-content/themes/x-t9/inc/patterns/images/x-t9-logo-yoko-white-trans.png" alt="" width="180"/></figure>
+	<figure class="wp-block-image aligncenter size-full is-resized"><img src="' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/x-t9-logo-yoko-white-trans.png" alt="" width="180"/></figure>
 	<!-- /wp:image -->
 	
 	<!-- wp:social-links {"iconColor":"text-dark-bg","iconColorValue":"rgba( 255,255,255,0.6 )","size":"has-normal-icon-size","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|40","left":"var:preset|spacing|40"},"margin":{"top":"var:preset|spacing|40"}}},"className":"is-style-logos-only","layout":{"type":"flex","justifyContent":"center"}} -->

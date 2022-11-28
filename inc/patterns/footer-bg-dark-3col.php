@@ -15,7 +15,7 @@ return array(
 	<div class="wp-block-columns"><!-- wp:column -->
 	<div class="wp-block-column"><!-- wp:group -->
 	<div class="wp-block-group"><!-- wp:image {"width":180,"sizeSlug":"full","linkDestination":"media"} -->
-	<figure class="wp-block-image size-full is-resized"><img src="http://localhost:8888/wp-content/themes/x-t9/inc/patterns/images/logo-sample-darkbg.png" alt="" width="180"/></figure>
+	<figure class="wp-block-image size-full is-resized"><img src="' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/logo-sample-darkbg.png" alt="" width="180"/></figure>
 	<!-- /wp:image -->
 	
 	<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"var:preset|spacing|40"}}}} -->
