@@ -63,6 +63,7 @@ function x29_register_block_patterns() {
 		'post-template-image-left',
 		'post-template-subcontent',
 		'general-columns-menu',
+		'general-columns-sidebar-layout',
 		'general-featured-media-and-text',
 		'general-featured-post-list',
 	);
