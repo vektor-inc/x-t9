@@ -12,7 +12,6 @@
 	color: #fff; // BG Secondary and Dark both white
 	text-decoration: none;
 	border-radius: var(--wp--custom--radius--button);
-
 	&:hover {
 		--wp--preset--color--primary: var(--wp--preset--color--primary-hover);
 	}
@@ -22,5 +21,22 @@
 	& > .wp-block-button__link:not(.has-background):hover {
 		background-color: var(--wp--preset--color--primary-hover);
 		color: #fff;
+	}
+}
+.vk_button {
+	.vk_button_link:hover  {
+		filter: brightness(1.1) saturate(2);
+		opacity: 1;
+	}
+}
+.vk_button_link{
+	&.is-style-outline {
+		&:hover {
+			background-color: var(--wp--preset--color--primary-hover);
+			.has-text-color {
+				border-color: var(--wp--preset--color--primary-hover);
+			}
+			color: #fff;
+		}
 	}
 }
