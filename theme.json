@@ -363,14 +363,29 @@
 	],
 	"templateParts": [
 		{
+			"name": "footer",
+			"title": "Footer",
+			"area": "footer"
+		},
+		{
 			"name": "header",
 			"title": "Header",
 			"area": "header"
 		},
 		{
-			"name": "footer",
-			"title": "Footer",
-			"area": "footer"
+			"name": "loop-archive",
+			"title": "Sidebar(Post)",
+			"area": "uncategorized"
+		},
+		{
+			"name": "page-header-page",
+			"title": "Page Header ( page )",
+			"area": "uncategorized"
+		},
+		{
+			"name": "page-header-single",
+			"title": "Page Header ( single )",
+			"area": "uncategorized"
 		},
 		{
 			"name": "sidebar-post",
