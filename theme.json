@@ -245,7 +245,8 @@
 			"h1": {
 				"typography": {
 					"fontWeight": "700",
-					"fontSize": "var(--wp--preset--font-size--huge)"
+					"fontSize": "var(--wp--preset--font-size--huge)",
+					"lineHeight": "var(--wp--custom--typography--line-height--heading)"
 				},
 				"spacing": {
 					"margin": {
