@@ -1,12 +1,12 @@
 <?php
 /**
- * Footer BG Bright Center Nav
+ * Footer BG Secondary Center Nav
  *
  * @package vektor-inc/x-t9
  */
 
 return array(
-	'title'      => __( 'Footer BG Bright Center Nav', 'x-t9' ),
+	'title'      => __( 'Footer BG Secondary Center Nav', 'x-t9' ),
 	'categories' => array( 'footer' ),
 	'blockTypes' => array( 'core/template-part/footer' ),
 	'content'    => '<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|60"}},"border":{"top":{"color":"var:preset|color|primary","width":"2px"}}},"backgroundColor":"bg-light-gray","className":"has-text-color"} -->

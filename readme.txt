@@ -41,10 +41,10 @@ GitHub : https://github.com/vektor-inc/x-t9
 [ Add Block Pattern ] Add Header Logo Nav Center
 [ Add Block Pattern ] Add Header Logo Nav Contact side by side Wide
 [ Add Block Pattern ] Add Header Logo Nav Contact flex between wide
-[ Add Block Pattern ] Add Footer BG Bright Logo Nav Float
-[ Add Block Pattern ] Add Footer BG Bright Center Nav pattern
-[ Add Block Pattern ] Add Footer BG Bright 3colmun pattern
-[ Add Block Pattern ] Add Footer BG Bright pattern
+[ Add Block Pattern ] Add Footer BG Secondary Logo Nav Float
+[ Add Block Pattern ] Add Footer BG Secondary Center Nav pattern
+[ Add Block Pattern ] Add Footer BG Secondary 3colmun pattern
+[ Add Block Pattern ] Add Footer BG Secondary pattern
 [ Add fonts ] Add Source Serif Pro
 [ Specification Change ] Change Block style name 
 [ Specification Change ] Change Template Name(Label) 

@@ -1,12 +1,12 @@
 <?php
 /**
- * Footer BG Bright
+ * Footer BG Secondary
  *
  * @package vektor-inc/x-t9
  */
 
 return array(
-	'title'      => __( 'Footer BG Bright', 'x-t9' ),
+	'title'      => __( 'Footer BG Secondary', 'x-t9' ),
 	'categories' => array( 'footer' ),
 	'blockTypes' => array( 'core/template-part/footer' ),
 	'content'    => '<!-- wp:group {"style":{"border":{"top":{"color":"var:preset|color|primary","width":"2px"}}},"backgroundColor":"bg-secondary","textColor":"text-normal","className":"has-text-color"} -->
