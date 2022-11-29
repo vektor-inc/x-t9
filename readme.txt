@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Add Theme Style ] Sweet
 [ Add Pattern ] Sidebar Layout 
 [ Specification Change ] Convert Page header to template-parts
 [ Specification Change ][ Styles ] Add H4 Design from theme.json
