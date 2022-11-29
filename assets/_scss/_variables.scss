@@ -11,7 +11,7 @@ $xl-min: 1200px;
 $xxl-min: 1400px;
 
 body {
-	--vk-size-radius: 0;
+	--vk-size-radius: var(--wp--custom--radius--button);
 	--vk-color-border-light: var(--wp--preset--color--border-normal);
 }
 

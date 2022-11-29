@@ -15,6 +15,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 [ Add Theme Style ] Sweet
 [ Add Pattern ] Sidebar Layout 
+[ Specification Change ] Add button radius
 [ Specification Change ] Convert Page header to template-parts
 [ Specification Change ][ Styles ] Add H4 Design from theme.json
 [ Specification Change ][ Styles ] Delete "Vertical text list"

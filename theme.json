@@ -212,6 +212,9 @@
 			"layout": {
 				"sidebar": "220px"
 			},
+			"radius": {
+				"button": "0.2rem"
+			},
 			"spacing": {
 				"x-small": "calc(var(--wp--custom--spacing--medium) / 4)",
 				"small": "calc(var(--wp--custom--spacing--medium) / 2)",

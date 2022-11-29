@@ -14,8 +14,8 @@ return array(
 	<div class="wp-block-group"><!-- wp:site-tagline {"textColor":"text-secondary","fontSize":"x-small"} /-->
 	
 	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->
-	<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","style":{"border":{"radius":"0px"},"spacing":{"padding":{"top":"0.2rem","bottom":"0.2rem","left":"2rem","right":"2rem"}}},"fontSize":"small"} -->
-	<div class="wp-block-button has-custom-font-size has-small-font-size"><a class="wp-block-button__link has-primary-background-color has-background wp-element-button" style="border-radius:0px;padding-top:0.2rem;padding-right:2rem;padding-bottom:0.2rem;padding-left:2rem">Contact</a></div>
+	<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","style":{"spacing":{"padding":{"top":"0.2rem","bottom":"0.2rem","left":"2rem","right":"2rem"}},"border":{"radius":{"topLeft":"0px","topRight":"0px"}}},"fontSize":"small"} -->
+	<div class="wp-block-button has-custom-font-size has-small-font-size"><a class="wp-block-button__link has-primary-background-color has-background wp-element-button" style="border-top-left-radius:0px;border-top-right-radius:0px;padding-top:0.2rem;padding-right:2rem;padding-bottom:0.2rem;padding-left:2rem">Contact</a></div>
 	<!-- /wp:button --></div>
 	<!-- /wp:buttons --></div>
 	<!-- /wp:group -->

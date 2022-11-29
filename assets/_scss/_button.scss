@@ -2,6 +2,7 @@
 	padding: 0.667em 1.333em;
 }
 
+.btn,
 .wp-block-button__link,
 .wp-block-search__button,
 .wp-block-post-excerpt__more-link,
@@ -10,7 +11,7 @@
 	background-color: var(--wp--preset--color--primary);
 	color: #fff; // BG Secondary and Dark both white
 	text-decoration: none;
-	border-radius: 0;
+	border-radius: var(--wp--custom--radius--button);
 
 	&:hover {
 		--wp--preset--color--primary: var(--wp--preset--color--primary-hover);

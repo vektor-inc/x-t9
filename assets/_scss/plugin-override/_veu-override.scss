@@ -11,6 +11,14 @@
 		text-decoration: none;
 	}
 }
+.veu_socialSet {
+	ul {
+		gap:4px;
+		.sb_copy .sb_icon_inner {
+			padding-bottom:5px;
+		}
+	}
+}
 .veu_socialSet.veu_contentAddSection ul li {
 	margin-top:0;
 	margin-left:0;
