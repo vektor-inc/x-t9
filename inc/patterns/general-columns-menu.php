@@ -11,12 +11,20 @@ return array(
 	'content'    => '<!-- wp:columns {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
 	<div class="wp-block-columns" style="margin-top:0;margin-bottom:0"><!-- wp:column -->
 	<div class="wp-block-column"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
-	<figure class="wp-block-image size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/' . 'sample-image-gray.png" alt=""/></figure>
+	<figure class="wp-block-image size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/sample-image-gray.png" alt=""/></figure>
 	<!-- /wp:image -->
+	
+	<!-- wp:spacer {"className":"is-style-spacer-md"} -->
+	<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-md"></div>
+	<!-- /wp:spacer -->
 	
 	<!-- wp:heading {"level":5} -->
 	<h5 id="vk-blocks">Title Text</h5>
 	<!-- /wp:heading -->
+	
+	<!-- wp:spacer {"className":"is-style-spacer-sm"} -->
+	<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-sm"></div>
+	<!-- /wp:spacer -->
 	
 	<!-- wp:paragraph -->
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -31,12 +39,20 @@ return array(
 	
 	<!-- wp:column -->
 	<div class="wp-block-column"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
-	<figure class="wp-block-image size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/' . 'sample-image-gray.png" alt=""/></figure>
+	<figure class="wp-block-image size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/sample-image-gray.png" alt=""/></figure>
 	<!-- /wp:image -->
+	
+	<!-- wp:spacer {"className":"is-style-spacer-md"} -->
+	<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-md"></div>
+	<!-- /wp:spacer -->
 	
 	<!-- wp:heading {"level":5} -->
 	<h5 id="vk-blocks">Title Text</h5>
 	<!-- /wp:heading -->
+	
+	<!-- wp:spacer {"className":"is-style-spacer-sm"} -->
+	<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-sm"></div>
+	<!-- /wp:spacer -->
 	
 	<!-- wp:paragraph -->
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -51,12 +67,20 @@ return array(
 	
 	<!-- wp:column -->
 	<div class="wp-block-column"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
-	<figure class="wp-block-image size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/' . 'sample-image-gray.png" alt=""/></figure>
+	<figure class="wp-block-image size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/sample-image-gray.png" alt=""/></figure>
 	<!-- /wp:image -->
+	
+	<!-- wp:spacer {"className":"is-style-spacer-md"} -->
+	<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-md"></div>
+	<!-- /wp:spacer -->
 	
 	<!-- wp:heading {"level":5} -->
 	<h5 id="vk-blocks">Title Text</h5>
 	<!-- /wp:heading -->
+	
+	<!-- wp:spacer {"className":"is-style-spacer-sm"} -->
+	<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-sm"></div>
+	<!-- /wp:spacer -->
 	
 	<!-- wp:paragraph -->
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -71,12 +95,20 @@ return array(
 	
 	<!-- wp:column -->
 	<div class="wp-block-column"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
-	<figure class="wp-block-image size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/' . 'sample-image-gray.png" alt=""/></figure>
+	<figure class="wp-block-image size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/sample-image-gray.png" alt=""/></figure>
 	<!-- /wp:image -->
+	
+	<!-- wp:spacer {"className":"is-style-spacer-md"} -->
+	<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-md"></div>
+	<!-- /wp:spacer -->
 	
 	<!-- wp:heading {"level":5} -->
 	<h5 id="vk-blocks">Title Text</h5>
 	<!-- /wp:heading -->
+	
+	<!-- wp:spacer {"className":"is-style-spacer-sm"} -->
+	<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-sm"></div>
+	<!-- /wp:spacer -->
 	
 	<!-- wp:paragraph -->
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -91,7 +123,7 @@ return array(
 	<!-- /wp:columns -->
 	
 	<!-- wp:spacer {"className":"is-style-spacer-xl"} -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-xl"></div>
-<!-- /wp:spacer -->
+	<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-xl"></div>
+	<!-- /wp:spacer -->
 	',
 );

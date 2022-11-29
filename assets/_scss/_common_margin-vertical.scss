@@ -1,40 +1,17 @@
-body .is-layout-flow > * + {
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
+body .is-layout-flow > * {
+	:is( h2, h3, h4, h5, h6 ) {
 		// margin = Ideal margin - half-leading（ (line-height - 1em ) /2 ）
-		margin-block-start: calc(1.5em - ((var(--wp--custom--typography--line-height--heading) - 1em) / 2));
 		&:first-child {
 			margin-block-start: 0;
 		}
-	}
-	:is(h1, h2, h3, h4, h5, h6)+ :is(h2, h3, h4, h5, h6) {
-		margin-block-start: calc(1em - ((var(--wp--custom--typography--line-height--heading) - 1em) / 2));
-	}
-	:is(h1, h2, h3, h4, h5, h6)+ :is(p, ul, ol, dl) {
-		// margin = Ideal margin - half-leading（ (line-height - 1em ) /2 ）
-		margin-block-start: calc(1.5em - ((var(--wp--custom--typography--line-height--normal) - 1em) / 2));
-	}
-	:is(
-	p,
-	figure,
-	ul,
-	ol,
-	blockquote,
-	.wp-block-table,
-	.wp-block-buttons) {
-		// margin-top: var(--wp--custom--spacing--medium);
-		// margin-block-start: var(--wp--custom--spacing--medium);
 	}
 }
 
 // スペーサーブロックの次の要素の上部には margin-top が自動的に 0 になるようにする
 // Delete margin-top from next element of spacer block
-:is(.wp-block-spacer, .vk_spacer)+ :is(*) {
-	margin-top: 0;
+body .is-layout-flow > :is(.wp-block-spacer, .vk_spacer) + * {
 	margin-block-start: 0;
+	margin-top: 0;
 }
 .wp-site-blocks > :is( header, main, footer) {
 	margin-block-start: 0;
