@@ -11,7 +11,7 @@ return array(
 	'content'    => '<!-- wp:columns {"className":"is-style-main-layout"} -->
 	<div class="wp-block-columns is-style-main-layout"><!-- wp:column -->
 	<div class="wp-block-column"><!-- wp:heading -->
-	<h2>Main Column</h2>
+	<h2>' . esc_html__( 'Main Column', 'x-t9' ) . '</h2>
 	<!-- /wp:heading -->
 	
 	<!-- wp:paragraph -->
@@ -21,7 +21,7 @@ return array(
 	
 	<!-- wp:column {"className":"is-style-main-layout-sidebar"} -->
 	<div class="wp-block-column is-style-main-layout-sidebar"><!-- wp:heading {"level":4,"className":"is-style-title-sub-col"} -->
-	<h4 class="is-style-title-sub-col">Side Column</h4>
+	<h4 class="is-style-title-sub-col">' . esc_html__( 'Side Column', 'x-t9' ) . '</h4>
 	<!-- /wp:heading -->
 	
 	<!-- wp:paragraph -->

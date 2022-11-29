@@ -155,3 +155,9 @@ href="' . esc_url( get_post_type_archive_link( 'post' )  ) . '
 
 >Read more</
 >' . esc_html__( 'Read more', 'x-t9' ) . '</
+
+>Main Column</
+>' . esc_html__( 'Main Column', 'x-t9' ) . '</
+
+>Side Column</
+>' . esc_html__( 'Side Column', 'x-t9' ) . '</
