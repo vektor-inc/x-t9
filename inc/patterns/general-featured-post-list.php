@@ -13,7 +13,7 @@ return array(
 	'categories' => array( 'featured' ),
 	'content'    => '<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"bg-secondary","layout":{"type":"constrained"}} -->
 	<div class="wp-block-group alignfull has-bg-secondary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)"><!-- wp:heading {"textAlign":"center","style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|50"}}}} -->
-	<h2 class="has-text-align-center" id="information" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--50)">Information</h2>
+	<h2 class="has-text-align-center" id="information" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--50)">' . esc_html__( 'Information', 'x-t9' ) . '</h2>
 	<!-- /wp:heading -->
 	
 	<!-- wp:group {"layout":{"inherit":true,"type":"constrained"}} -->
@@ -37,7 +37,7 @@ return array(
 	<!-- wp:post-terms {"term":"category","prefix":"Category : "} /--></div>
 	<!-- /wp:group -->
 	
-	<!-- wp:post-excerpt {"moreText":"Read more","style":{"spacing":{"margin":{"top":"var:preset|spacing|40","right":"0","bottom":"0","left":"0"}}}} /--></div>
+	<!-- wp:post-excerpt {"moreText":"' . esc_html__( 'Read more', 'x-t9' ) . '","style":{"spacing":{"margin":{"top":"var:preset|spacing|40","right":"0","bottom":"0","left":"0"}}}} /--></div>
 	<!-- /wp:column --></div>
 	<!-- /wp:columns -->
 	
