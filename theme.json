@@ -224,8 +224,8 @@
 			},
 			"typography": {
 				"line-height": {
-					"normal": "1.75em",
-					"heading": "1.5em"
+					"normal": "1.75",
+					"heading": "1.5"
 				}
 			}
 		}

@@ -69,3 +69,7 @@ body>.is-root-container:not(.wp-site-blocks),
 	margin-left: calc(-1 * var(--wp--custom--spacing--editor-padding)) !important;
 	margin-right: calc(-1 * var(--wp--custom--spacing--editor-padding)) !important;
 }
+
+.is-layout-constrained > .wp-block-spacer + *{
+	margin-block-start: 0;
+}

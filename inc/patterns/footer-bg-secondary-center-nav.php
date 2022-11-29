@@ -11,7 +11,19 @@ return array(
 	'blockTypes' => array( 'core/template-part/footer' ),
 	'content'    => '<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|60"}},"border":{"top":{"color":"var:preset|color|primary","width":"2px"}}},"backgroundColor":"bg-secondary","className":"has-text-color"} -->
 	<div class="wp-block-group has-text-color has-bg-secondary-background-color has-background" style="border-top-color:var(--wp--preset--color--primary);border-top-width:2px;padding-top:var(--wp--preset--spacing--60)"><!-- wp:group {"layout":{"inherit":true,"type":"constrained"}} -->
-	<div class="wp-block-group"><!-- wp:site-logo {"width":200,"align":"center","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|50"}}}} /-->
+	<div class="wp-block-group"><!-- wp:site-logo {"width":200,"align":"center","style":{"spacing":{"margin":{"bottom":"0"}}}} /-->
+	
+	<!-- wp:spacer {"className":"is-style-spacer-md"} -->
+	<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-md"></div>
+	<!-- /wp:spacer -->
+	
+	<!-- wp:paragraph {"align":"center","fontSize":"small"} -->
+	<p class="has-text-align-center has-small-font-size">ZIP 000-0000<br>Address here prefecture<br>City address 0-0-0<br>TEL : 000-000-0000</p>
+	<!-- /wp:paragraph -->
+	
+	<!-- wp:spacer {"className":"is-style-spacer-md"} -->
+	<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-md"></div>
+	<!-- /wp:spacer -->
 	
 	<!-- wp:navigation {"showSubmenuIcon":false,"className":"is-style-nav\u002d\u002dtext-inline","layout":{"type":"flex","justifyContent":"center"},"fontSize":"x-small"} /-->
 	
