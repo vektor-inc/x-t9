@@ -45,12 +45,17 @@ function x29_register_block_patterns() {
 	}
 
 	$block_patterns = array(
-		'footer-bg-dark',
-		'footer-bg-dark-3col',
-		'footer-bg-secondary',
-		'footer-bg-secondary-3col',
-		'footer-bg-secondary-logo-nav-float',
-		'footer-bg-secondary-center-nav',
+		'columns/columns-menu',
+		'columns/columns-sidebar-layout',
+		'featured/featured-columns-menu',
+		'featured/featured-media-and-text',
+		'featured/featured-post-list',
+		'footer/footer-bg-dark',
+		'footer/footer-bg-dark-3col',
+		'footer/footer-bg-secondary',
+		'footer/footer-bg-secondary-3col',
+		'footer/footer-bg-secondary-logo-nav-float',
+		'footer/footer-bg-secondary-center-nav',
 		'header/desc--contact__logo--nav',
 		'header/desc--sns__logo--nav-contact',
 		'header/logo__desc__nav__center',
@@ -62,10 +67,6 @@ function x29_register_block_patterns() {
 		'query-subcontent',
 		'post-template-image-left',
 		'post-template-subcontent',
-		'general-columns-menu',
-		'general-columns-sidebar-layout',
-		'general-featured-media-and-text',
-		'general-featured-post-list',
 	);
 
 	/**

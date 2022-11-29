@@ -1,13 +1,13 @@
 <?php
 /**
- * Columns Menu Section
+ * Columns Menu
  *
  * @package vektor-inc/x-t9
  */
 
 return array(
-	'title'      => __( 'Columns Menu Section', 'x-t9' ),
-	'categories' => array( 'featured', 'media', 'columns' ),
+	'title'      => __( 'Columns Menu', 'x-t9' ),
+	'categories' => array( 'media', 'columns' ),
 	'content'    => '<!-- wp:columns {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
 	<div class="wp-block-columns" style="margin-top:0;margin-bottom:0"><!-- wp:column -->
 	<div class="wp-block-column"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->

@@ -148,6 +148,12 @@ src="' . esc_url( get_template_directory_uri() ) . '
 href="http://localhost:8888/information/
 href="' . esc_url( get_post_type_archive_link( 'post' )  ) . '
 
+"url":"http://localhost:8888/wp-content/themes/x-t9
+"url":"' . esc_url( get_template_directory_uri() ) . '
+
+url(http://localhost:8888/wp-content/themes/x-t9
+url(' . esc_url( get_template_directory_uri() ) . '
+
 "moreText":"Read more"
 "moreText":"' . esc_html__( 'Read more', 'x-t9' ) . '"
 

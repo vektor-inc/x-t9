@@ -16,7 +16,6 @@ body .is-layout-flow > :is(.wp-block-spacer, .vk_spacer) + * {
 .wp-site-blocks > :is( header, main, footer) {
 	margin-block-start: 0;
 }
-body .is-layout-constrained > * + *,
 body .is-layout-flow > * + :is(.wp-block-spacer, .wp-block-navigation, .wp-block-query) {
 	margin-top:0;
 }
