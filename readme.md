@@ -138,6 +138,10 @@ Exclude : readme.md,gulpfile.js
 >お知らせ</
 >Information</
 
+"ref":11229,
+
+#### .php のみ対象
+
 src="http://localhost:8888/wp-content/themes/x-t9
 src="' . esc_url( get_template_directory_uri() ) . '
 
@@ -162,4 +166,3 @@ href="' . esc_url( get_post_type_archive_link( 'post' )  ) . '
 >Side Column</
 >' . esc_html__( 'Side Column', 'x-t9' ) . '</
 
-"ref":11229,
