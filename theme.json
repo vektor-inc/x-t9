@@ -300,11 +300,6 @@
 				"color": {
 					"text": "var(--wp--preset--color--text-normal)"
 				}
-			},
-			"div": {
-				"spacing": {
-					"marginTop": "0"
-				}
 			}
 		},
 		"blocks": {
