@@ -16,8 +16,8 @@ return array(
 	<!-- wp:group {"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group"><!-- wp:columns {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
 	<div class="wp-block-columns" style="margin-top:0;margin-bottom:0"><!-- wp:column -->
-	<div class="wp-block-column"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
-	<figure class="wp-block-image size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/sample-image-gray.png" alt=""/></figure>
+	<div class="wp-block-column"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","style":{"border":{"width":"1px"}},"borderColor":"border-normal"} -->
+	<figure class="wp-block-image size-full has-custom-border"><img src="' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/sample-image-gray.png" alt="" class="has-border-color has-border-normal-border-color" style="border-width:1px"/></figure>
 	<!-- /wp:image -->
 	
 	<!-- wp:spacer {"className":"is-style-spacer-md"} -->
@@ -38,14 +38,14 @@ return array(
 	
 	<!-- wp:buttons -->
 	<div class="wp-block-buttons"><!-- wp:button {"style":{"spacing":{"padding":{"top":"0.3em","bottom":"0.3em","left":"1em","right":"1em"}}},"className":"is-style-outline","fontSize":"small"} -->
-	<div class="wp-block-button has-custom-font-size is-style-outline has-small-font-size"><a class="wp-block-button__link wp-element-button" href="" style="padding-top:0.3em;padding-right:1em;padding-bottom:0.3em;padding-left:1em">Read more</a></div>
+	<div class="wp-block-button has-custom-font-size is-style-outline has-small-font-size"><a class="wp-block-button__link wp-element-button" href="" style="padding-top:0.3em;padding-right:1em;padding-bottom:0.3em;padding-left:1em">' . esc_html__( 'Read more', 'x-t9' ) . '</a></div>
 	<!-- /wp:button --></div>
 	<!-- /wp:buttons --></div>
 	<!-- /wp:column -->
 	
 	<!-- wp:column -->
-	<div class="wp-block-column"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
-	<figure class="wp-block-image size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/sample-image-gray.png" alt=""/></figure>
+	<div class="wp-block-column"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","style":{"border":{"width":"1px"}},"borderColor":"border-normal"} -->
+	<figure class="wp-block-image size-full has-custom-border"><img src="' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/sample-image-gray.png" alt="" class="has-border-color has-border-normal-border-color" style="border-width:1px"/></figure>
 	<!-- /wp:image -->
 	
 	<!-- wp:spacer {"className":"is-style-spacer-md"} -->
@@ -66,14 +66,14 @@ return array(
 	
 	<!-- wp:buttons -->
 	<div class="wp-block-buttons"><!-- wp:button {"style":{"spacing":{"padding":{"top":"0.3em","bottom":"0.3em","left":"1em","right":"1em"}}},"className":"is-style-outline","fontSize":"small"} -->
-	<div class="wp-block-button has-custom-font-size is-style-outline has-small-font-size"><a class="wp-block-button__link wp-element-button" href="" style="padding-top:0.3em;padding-right:1em;padding-bottom:0.3em;padding-left:1em">Read more</a></div>
+	<div class="wp-block-button has-custom-font-size is-style-outline has-small-font-size"><a class="wp-block-button__link wp-element-button" href="" style="padding-top:0.3em;padding-right:1em;padding-bottom:0.3em;padding-left:1em">' . esc_html__( 'Read more', 'x-t9' ) . '</a></div>
 	<!-- /wp:button --></div>
 	<!-- /wp:buttons --></div>
 	<!-- /wp:column -->
 	
 	<!-- wp:column -->
-	<div class="wp-block-column"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
-	<figure class="wp-block-image size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/sample-image-gray.png" alt=""/></figure>
+	<div class="wp-block-column"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","style":{"border":{"width":"1px"}},"borderColor":"border-normal"} -->
+	<figure class="wp-block-image size-full has-custom-border"><img src="' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/sample-image-gray.png" alt="" class="has-border-color has-border-normal-border-color" style="border-width:1px"/></figure>
 	<!-- /wp:image -->
 	
 	<!-- wp:spacer {"className":"is-style-spacer-md"} -->
@@ -94,14 +94,14 @@ return array(
 	
 	<!-- wp:buttons -->
 	<div class="wp-block-buttons"><!-- wp:button {"style":{"spacing":{"padding":{"top":"0.3em","bottom":"0.3em","left":"1em","right":"1em"}}},"className":"is-style-outline","fontSize":"small"} -->
-	<div class="wp-block-button has-custom-font-size is-style-outline has-small-font-size"><a class="wp-block-button__link wp-element-button" href="" style="padding-top:0.3em;padding-right:1em;padding-bottom:0.3em;padding-left:1em">Read more</a></div>
+	<div class="wp-block-button has-custom-font-size is-style-outline has-small-font-size"><a class="wp-block-button__link wp-element-button" href="" style="padding-top:0.3em;padding-right:1em;padding-bottom:0.3em;padding-left:1em">' . esc_html__( 'Read more', 'x-t9' ) . '</a></div>
 	<!-- /wp:button --></div>
 	<!-- /wp:buttons --></div>
 	<!-- /wp:column -->
 	
 	<!-- wp:column -->
-	<div class="wp-block-column"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
-	<figure class="wp-block-image size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/sample-image-gray.png" alt=""/></figure>
+	<div class="wp-block-column"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","style":{"border":{"width":"1px"}},"borderColor":"border-normal"} -->
+	<figure class="wp-block-image size-full has-custom-border"><img src="' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/sample-image-gray.png" alt="" class="has-border-color has-border-normal-border-color" style="border-width:1px"/></figure>
 	<!-- /wp:image -->
 	
 	<!-- wp:spacer {"className":"is-style-spacer-md"} -->
@@ -122,7 +122,7 @@ return array(
 	
 	<!-- wp:buttons -->
 	<div class="wp-block-buttons"><!-- wp:button {"style":{"spacing":{"padding":{"top":"0.3em","bottom":"0.3em","left":"1em","right":"1em"}}},"className":"is-style-outline","fontSize":"small"} -->
-	<div class="wp-block-button has-custom-font-size is-style-outline has-small-font-size"><a class="wp-block-button__link wp-element-button" href="" style="padding-top:0.3em;padding-right:1em;padding-bottom:0.3em;padding-left:1em">Read more</a></div>
+	<div class="wp-block-button has-custom-font-size is-style-outline has-small-font-size"><a class="wp-block-button__link wp-element-button" href="" style="padding-top:0.3em;padding-right:1em;padding-bottom:0.3em;padding-left:1em">' . esc_html__( 'Read more', 'x-t9' ) . '</a></div>
 	<!-- /wp:button --></div>
 	<!-- /wp:buttons --></div>
 	<!-- /wp:column --></div>
