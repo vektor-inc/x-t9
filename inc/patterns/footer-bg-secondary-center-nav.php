@@ -13,7 +13,7 @@ return array(
 	<div class="wp-block-group has-text-color has-bg-light-gray-background-color has-background" style="border-top-color:var(--wp--preset--color--primary);border-top-width:2px;padding-top:var(--wp--preset--spacing--60)"><!-- wp:group {"layout":{"inherit":true,"type":"constrained"}} -->
 	<div class="wp-block-group"><!-- wp:site-logo {"width":200,"align":"center","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|50"}}}} /-->
 	
-	<!-- wp:navigation {"ref":11229,"showSubmenuIcon":false,"className":"is-style-nav\u002d\u002dtext-inline","layout":{"type":"flex","justifyContent":"center"},"fontSize":"x-small"} /-->
+	<!-- wp:navigation {"showSubmenuIcon":false,"className":"is-style-nav\u002d\u002dtext-inline","layout":{"type":"flex","justifyContent":"center"},"fontSize":"x-small"} /-->
 	
 	<!-- wp:social-links {"iconColor":"text-secondary","iconColorValue":"rgba(0,0,0,0.5)","size":"has-normal-icon-size","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|40","left":"var:preset|spacing|40"},"margin":{"top":"var:preset|spacing|50","right":"0","bottom":"0","left":"0"}}},"className":"is-style-logos-only","layout":{"type":"flex","justifyContent":"center"}} -->
 	<ul class="wp-block-social-links has-normal-icon-size has-icon-color is-style-logos-only" style="margin-top:var(--wp--preset--spacing--50);margin-right:0;margin-bottom:0;margin-left:0"><!-- wp:social-link {"url":"https://wordpress.org/","service":"facebook"} /-->

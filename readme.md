@@ -125,3 +125,41 @@ line-height : 1.5
 #### ブロック上下（Gap）
 
 文字サイズ基準 : 2em
+
+---
+
+# Replace
+
+Exclude : readme.md,gulpfile.js
+
+"moreText":"続きを読む"
+"moreText":"Read more"
+
+>お知らせ</
+>Information</
+
+src="http://localhost:8888/wp-content/themes/x-t9
+src="' . esc_url( get_template_directory_uri() ) . '
+
+href="http://localhost:8888/information/
+href="' . esc_url( get_post_type_archive_link( 'post' )  ) . '
+
+"moreText":"Read more"
+"moreText":"' . esc_html__( 'Read more', 'x-t9' ) . '"
+
+>Service</
+>' . esc_html__( 'Service', 'x-t9' ) . '</
+
+>Information</
+>' . esc_html__( 'Information', 'x-t9' ) . '</
+
+>Read more</
+>' . esc_html__( 'Read more', 'x-t9' ) . '</
+
+>Main Column</
+>' . esc_html__( 'Main Column', 'x-t9' ) . '</
+
+>Side Column</
+>' . esc_html__( 'Side Column', 'x-t9' ) . '</
+
+"ref":11229,

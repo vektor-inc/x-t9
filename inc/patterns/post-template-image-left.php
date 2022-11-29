@@ -22,7 +22,7 @@ return array(
 	<!-- wp:post-terms {"term":"category","prefix":"Category : "} /--></div>
 	<!-- /wp:group -->
 	
-	<!-- wp:post-excerpt {"moreText":"Read more","style":{"spacing":{"margin":{"top":"var:preset|spacing|40","right":"0","bottom":"0","left":"0"}}}} /--></div>
+	<!-- wp:post-excerpt {"moreText":"' . esc_html__( 'Read more', 'x-t9' ) . '","style":{"spacing":{"margin":{"top":"var:preset|spacing|40","right":"0","bottom":"0","left":"0"}}}} /--></div>
 	<!-- /wp:column --></div>
 	<!-- /wp:columns -->
 	

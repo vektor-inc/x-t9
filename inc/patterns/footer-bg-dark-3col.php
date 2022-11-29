@@ -37,18 +37,18 @@ return array(
 	<!-- wp:column -->
 	<div class="wp-block-column"><!-- wp:group {"style":{"border":{"bottom":{"color":"var:preset|color|border-normal-darkbg","width":"1px"}},"spacing":{"padding":{"bottom":"var:preset|spacing|30"},"margin":{"bottom":"var:preset|spacing|30"}}}} -->
 	<div class="wp-block-group" style="border-bottom-color:var(--wp--preset--color--border-normal-darkbg);border-bottom-width:1px;margin-bottom:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30)"><!-- wp:heading {"level":4,"style":{"spacing":{"margin":{"top":"0","right":"0","bottom":"0","left":"0"},"padding":{"top":"0","right":"0","bottom":"0","left":"0"}},"color":{"background":"#00000000"}},"textColor":"text-normal-darkbg"} -->
-	<h4 class="has-text-normal-darkbg-color has-text-color has-background" style="background-color:#00000000;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">Contents</h4>
+	<h4 class="has-text-normal-darkbg-color has-text-color has-background" style="background-color:#00000000;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">' . esc_html__( 'Service', 'x-t9' ) . '</h4>
 	<!-- /wp:heading --></div>
 	<!-- /wp:group -->
 	
-	<!-- wp:navigation {"ref":11229,"textColor":"text-normal-darkbg","showSubmenuIcon":false,"overlayMenu":"never","className":"is-style-nav\u002d\u002dvertical-with-hr","layout":{"type":"flex","orientation":"vertical"},"fontSize":"x-small"} /--></div>
+	<!-- wp:navigation {"textColor":"text-normal-darkbg","showSubmenuIcon":false,"overlayMenu":"never","className":"is-style-nav\u002d\u002dvertical-with-hr","layout":{"type":"flex","orientation":"vertical"},"fontSize":"x-small"} /--></div>
 	<!-- /wp:column -->
 	
 	<!-- wp:column -->
 	<div class="wp-block-column"><!-- wp:group -->
 	<div class="wp-block-group"><!-- wp:group {"style":{"border":{"bottom":{"color":"var:preset|color|border-normal-darkbg","width":"1px"}},"spacing":{"padding":{"bottom":"var:preset|spacing|30"},"margin":{"bottom":"var:preset|spacing|30"}}}} -->
 	<div class="wp-block-group" style="border-bottom-color:var(--wp--preset--color--border-normal-darkbg);border-bottom-width:1px;margin-bottom:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30)"><!-- wp:heading {"level":4,"style":{"spacing":{"margin":{"top":"0","right":"0","bottom":"0","left":"0"},"padding":{"top":"0","right":"0","bottom":"0","left":"0"}},"color":{"background":"#00000000"}},"textColor":"text-normal-darkbg"} -->
-	<h4 class="has-text-normal-darkbg-color has-text-color has-background" style="background-color:#00000000;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">Information</h4>
+	<h4 class="has-text-normal-darkbg-color has-text-color has-background" style="background-color:#00000000;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">' . esc_html__( 'Information', 'x-t9' ) . '</h4>
 	<!-- /wp:heading --></div>
 	<!-- /wp:group -->
 	
@@ -90,7 +90,7 @@ return array(
 	
 	<!-- wp:group {"align":"full","style":{"border":{"top":{"color":"var:preset|color|border-normal-darkbg","width":"1px"}}},"className":"mt-0","layout":{"inherit":true,"type":"constrained"}} -->
 	<div class="wp-block-group alignfull mt-0" style="border-top-color:var(--wp--preset--color--border-normal-darkbg);border-top-width:1px"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0.5rem","bottom":"0.5rem"}}},"layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between"}} -->
-	<div class="wp-block-group" style="padding-top:0.5rem;padding-bottom:0.5rem"><!-- wp:navigation {"ref":11229,"textColor":"text-secondary-darkbg","overlayMenu":"never","className":"nav\u002d\u002dtext-inline nav\u002d\u002ddarkbg is-style-nav\u002d\u002dtext-inline","layout":{"type":"flex","justifyContent":"center","orientation":"horizontal"},"fontSize":"x-small"} /-->
+	<div class="wp-block-group" style="padding-top:0.5rem;padding-bottom:0.5rem"><!-- wp:navigation {"textColor":"text-secondary-darkbg","overlayMenu":"never","className":"nav\u002d\u002dtext-inline nav\u002d\u002ddarkbg is-style-nav\u002d\u002dtext-inline","layout":{"type":"flex","justifyContent":"center","orientation":"horizontal"},"fontSize":"x-small"} /-->
 	
 	<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase"}},"textColor":"text-secondary-darkbg","fontSize":"x-small"} -->
 	<p class="has-text-align-center has-text-secondary-darkbg-color has-text-color has-x-small-font-size" style="text-transform:uppercase">Copyright (C) X-T9 All Rights Reserved.</p>
