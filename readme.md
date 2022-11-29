@@ -130,6 +130,8 @@ line-height : 1.5
 
 # Replace
 
+Exclude : readme.md,gulpfile.js
+
 "moreText":"続きを読む"
 "moreText":"Read more"
 
@@ -145,9 +147,11 @@ href="' . esc_url( get_post_type_archive_link( 'post' )  ) . '
 "moreText":"Read more"
 "moreText":"' . esc_html__( 'Read more', 'x-t9' ) . '"
 
+>Service</
+>' . esc_html__( 'Service', 'x-t9' ) . '</
+
 >Information</
 >' . esc_html__( 'Information', 'x-t9' ) . '</
 
 >Read more</
 >' . esc_html__( 'Read more', 'x-t9' ) . '</
-
