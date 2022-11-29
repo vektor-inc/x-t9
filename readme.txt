@@ -1,8 +1,8 @@
 === X-T9 ===
 Contributors: kurudrive,vektor-inc
-Tested up to: 6.0
-Requires PHP: 5.6
-Stable tag: 0.14.0
+Tested up to: 6.1
+Requires PHP: 7.2
+Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,12 +13,14 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+1.0.0
 [ Add Theme Style ] Sweet
 [ Add Pattern ] Sidebar Layout 
 [ Specification Change ] Add button radius
 [ Specification Change ] Convert Page header to template-parts
 [ Specification Change ][ Styles ] Add H4 Design from theme.json
 [ Specification Change ][ Styles ] Delete "Vertical text list"
+[ Specification Change ][ Styles ] Change color palette
 [ Specification Change ][ 6.1 ] Cope with settings.spacing.spacingSizes
 
 0.14.0
