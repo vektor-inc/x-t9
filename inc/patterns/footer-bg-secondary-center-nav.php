@@ -9,8 +9,8 @@ return array(
 	'title'      => __( 'Footer BG Secondary Center Nav', 'x-t9' ),
 	'categories' => array( 'footer' ),
 	'blockTypes' => array( 'core/template-part/footer' ),
-	'content'    => '<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|60"}},"border":{"top":{"color":"var:preset|color|primary","width":"2px"}}},"backgroundColor":"bg-light-gray","className":"has-text-color"} -->
-	<div class="wp-block-group has-text-color has-bg-light-gray-background-color has-background" style="border-top-color:var(--wp--preset--color--primary);border-top-width:2px;padding-top:var(--wp--preset--spacing--60)"><!-- wp:group {"layout":{"inherit":true,"type":"constrained"}} -->
+	'content'    => '<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|60"}},"border":{"top":{"color":"var:preset|color|primary","width":"2px"}}},"backgroundColor":"bg-secondary","className":"has-text-color"} -->
+	<div class="wp-block-group has-text-color has-bg-secondary-background-color has-background" style="border-top-color:var(--wp--preset--color--primary);border-top-width:2px;padding-top:var(--wp--preset--spacing--60)"><!-- wp:group {"layout":{"inherit":true,"type":"constrained"}} -->
 	<div class="wp-block-group"><!-- wp:site-logo {"width":200,"align":"center","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|50"}}}} /-->
 	
 	<!-- wp:navigation {"showSubmenuIcon":false,"className":"is-style-nav\u002d\u002dtext-inline","layout":{"type":"flex","justifyContent":"center"},"fontSize":"x-small"} /-->
