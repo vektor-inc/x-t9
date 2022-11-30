@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc
 Tested up to: 6.1
 Requires PHP: 7.2
-Stable tag: 1.1.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,9 +13,9 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
-1.1.0
-[ Other ] Change pattern name
-[ Other ] Add header fixed group style
+1.0.1
+[ Specification Change ] Change pattern name
+[ Specification Change ] Add header fixed group style
 
 1.0.0
 [ Add Theme Style ] Sweet
