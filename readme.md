@@ -174,3 +174,6 @@ href="' . esc_url( get_post_type_archive_link( 'post' )  ) . '
 
 >Contact</
 >' . esc_html__( 'Contact', 'x-t9' ) . '</
+
+"Category : "
+"' . esc_html__( 'Category : ', 'x-t9' ) . '"
