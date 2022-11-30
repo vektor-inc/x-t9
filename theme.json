@@ -36,7 +36,7 @@
 				{
 					"slug": "text-normal",
 					"color": "#333",
-					"name": "Text Normal "
+					"name": "Text Normal"
 				},
 				{
 					"slug": "text-secondary",
@@ -331,7 +331,7 @@
 	"customTemplates": [
 		{
 			"name": "page-2col",
-			"title": "Page 2 column",
+			"title": "Page 2columns",
 			"postTypes": [
 				"page"
 			]
@@ -353,7 +353,7 @@
 		},
 		{
 			"name": "single-1col",
-			"title": "Single 1 column",
+			"title": "Single 1column",
 			"postTypes": [
 				"post"
 			]

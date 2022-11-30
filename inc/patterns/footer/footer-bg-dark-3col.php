@@ -6,7 +6,7 @@
  */
 
 return array(
-	'title'      => __( 'Footer BG Dark 3col', 'x-t9' ),
+	'title'      => __( 'Footer BG Dark 3columns', 'x-t9' ),
 	'categories' => array( 'footer' ),
 	'blockTypes' => array( 'core/template-part/footer' ),
 	'content'    => '<!-- wp:group {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"border":{"top":{"color":"var:preset|color|primary","width":"2px"}}},"backgroundColor":"bg-dark","textColor":"text-normal-darkbg"} -->
