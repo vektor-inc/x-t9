@@ -48,7 +48,7 @@ function x29_register_block_patterns() {
 		'columns/columns-menu',
 		'columns/columns-sidebar-layout',
 		'featured/featured-columns-menu',
-		'featured/featured-media-and-text',
+		'featured/featured-hero-media-and-text',
 		'featured/featured-post-list',
 		'footer/footer-bg-dark',
 		'footer/footer-bg-dark-3col',
