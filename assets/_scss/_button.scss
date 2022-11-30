@@ -29,14 +29,16 @@
 		opacity: 1;
 	}
 }
-.vk_button_link{
-	&.is-style-outline {
-		&:hover {
-			background-color: var(--wp--preset--color--primary-hover);
-			.has-text-color {
-				border-color: var(--wp--preset--color--primary-hover);
+.vk_button {
+	.vk_button_link{
+		&.is-style-outline {
+			&:hover {
+				background-color: var(--wp--preset--color--primary-hover);
+				.has-text-color {
+					border-color: var(--wp--preset--color--primary-hover);
+				}
+				color: #fff;
 			}
-			color: #fff;
 		}
 	}
 }
