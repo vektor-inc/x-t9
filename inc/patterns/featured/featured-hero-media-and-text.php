@@ -6,7 +6,7 @@
  */
 
 return array(
-	'title'      => __( 'Hero Media and text', 'x-t9' ),
+	'title'      => __( 'Hero Media and Text', 'x-t9' ),
 	'categories' => array( 'featured' ),
 	'content'    => '<!-- wp:cover {"url":"' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/x-t9-featured-sky.jpg","hasParallax":true,"dimRatio":20,"overlayColor":"black","minHeight":0,"isDark":false,"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"},"margin":{"top":"0","bottom":"0"}}}} -->
 	<div class="wp-block-cover alignfull is-light has-parallax" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim-20 has-background-dim"></span><div role="img" class="wp-block-cover__image-background has-parallax" style="background-position:50% 50%;background-image:url(' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/x-t9-featured-sky.jpg)"></div><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"inherit":true,"type":"constrained"}} -->
