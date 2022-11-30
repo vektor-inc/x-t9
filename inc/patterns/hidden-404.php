@@ -3,9 +3,10 @@
  * 404 content.
  */
 return array(
-	'title'    => __( '404 content', 'x-t9' ),
-	'inserter' => false,
-	'content'  => '<!-- wp:spacer {"height":80} -->
+	'title'      => __( '404 Content', 'x-t9' ),
+	'inserter'   => false,
+	'categories' => array( 'pages' ),
+	'content'    => '<!-- wp:spacer {"height":80} -->
 					<div style="height:80px" aria-hidden="true" class="wp-block-spacer"></div>
 					<!-- /wp:spacer -->
 					<!-- wp:paragraph {"align":"center"} -->

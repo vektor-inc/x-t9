@@ -14,11 +14,11 @@
  */
 function x29_register_block_patterns() {
 	$block_pattern_categories = array(
-		'featured' => array( 'label' => __( 'Featured', 'x-t9' ) ),
-		'footer'   => array( 'label' => __( 'Footers', 'x-t9' ) ),
-		'header'   => array( 'label' => __( 'Headers', 'x-t9' ) ),
-		'query'    => array( 'label' => __( 'Query', 'x-t9' ) ),
-		'pages'    => array( 'label' => __( 'Pages', 'x-t9' ) ),
+		'featured' => array( 'label' => _x( 'Featured', 'Pattern Category', 'x-t9' ) ),
+		'footer'   => array( 'label' => _x( 'Footers', 'Pattern Category', 'x-t9' ) ),
+		'header'   => array( 'label' => _x( 'Headers', 'Pattern Category', 'x-t9' ) ),
+		'query'    => array( 'label' => _x( 'Query', 'Pattern Category', 'x-t9' ) ),
+		'pages'    => array( 'label' => _x( 'Pages', 'Pattern Category', 'x-t9' ) ),
 	);
 
 	/**
