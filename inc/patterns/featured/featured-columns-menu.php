@@ -131,6 +131,10 @@ return array(
 	
 	<!-- wp:spacer {"height":"50px"} -->
 	<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
-	<!-- /wp:spacer --></div></div>
+	<!-- /wp:spacer -->
+	
+	<!-- wp:separator {"backgroundColor":"border-normal","className":"is-style-wide"} -->
+<hr class="wp-block-separator has-text-color has-border-normal-color has-alpha-channel-opacity has-border-normal-background-color has-background is-style-wide"/>
+<!-- /wp:separator --></div></div>
 	<!-- /wp:cover -->',
 );
