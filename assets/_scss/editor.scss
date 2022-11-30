@@ -11,7 +11,7 @@
 	height: auto;
 }
 
-.edit-site-block-editor__block-list .scrolled-header-fixed::after {
+.edit-site-block-editor__block-list :is(.scrolled-header-fixed,.is-style-scrolled-header-fixed)::after {
 	position: absolute;
 	font-size: 12px;
 	color: #fff;

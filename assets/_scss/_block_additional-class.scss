@@ -35,3 +35,33 @@ body .is-style-main-layout.is-layout-flex {
 	flex-grow: unset !important;
 	flex-basis: var(--wp--custom--layout--sidebar) !important;
 }
+
+/*-------------------------------------------*/
+/*  Group
+/*-------------------------------------------*/
+// .scrolled-header-fixed ... before 1.0 ( additional class)
+// .is-style-scrolled-header-fixed ... @since 1.1.0 ( block style )
+*[class*="scrolled-header-fixed"]{
+	position: fixed;
+	z-index: 9999;
+	width: 100vw;
+	transition: all 0.5s ease-out;
+	top: -200px;
+
+	&.wp-block-group {
+		overflow: visible;
+	}
+
+	.header-fixed-active & {
+		top: 0;
+
+		@media (min-width:601px) {
+			top: var(--wp-admin--admin-bar--height);
+		}
+	}
+
+	.edit-site-block-editor__block-list & {
+		position: relative;
+		top: 0;
+	}
+}

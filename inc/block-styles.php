@@ -72,7 +72,7 @@ register_block_style(
 		'style_handle' => 'x-t9-style',
 	)
 );
-/* Layout ----------------------------------------------------------- */
+/* Scrolled ----------------------------------------------------------- */
 register_block_style(
 	'core/columns',
 	array(
@@ -86,6 +86,16 @@ register_block_style(
 	array(
 		'name'         => 'main-layout-sidebar',
 		'label'        => __( 'Sidebar', 'x-t9' ),
+		'style_handle' => 'x-t9-style',
+	),
+);
+
+/* Layout ----------------------------------------------------------- */
+register_block_style(
+	'core/group',
+	array(
+		'name'         => 'scrolled-header-fixed',
+		'label'        => __( 'Fixed header', 'x-t9' ),
 		'style_handle' => 'x-t9-style',
 	),
 );
