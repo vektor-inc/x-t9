@@ -132,12 +132,6 @@ line-height : 1.5
 
 Exclude : readme.md,gulpfile.js
 
-"moreText":"続きを読む"
-"moreText":"Read more"
-
->お知らせ</
->Information</
-
 "ref":11229,
 
 #### .php のみ対象

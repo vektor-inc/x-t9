@@ -10,6 +10,15 @@ gulp.task('convert-dynamic', function (done) {
 	gulp.src(['./inc/patterns/*.php' ])
 		.pipe(replace( 'href="http://localhost:8888/information/', 'href="\' . esc_url( get_post_type_archive_link( \'post\' )  ) . \'' ))
 		.pipe(gulp.dest('./inc/patterns/'));
+	gulp.src(['./inc/patterns/*.php' ])
+		.pipe(replace( '続きを読む', 'Read more' ))
+		.pipe(gulp.dest('./inc/patterns/'));
+	gulp.src(['./inc/patterns/*.php' ])
+		.pipe(replace( 'お知らせ', 'Information' ))
+		.pipe(gulp.dest('./inc/patterns/'));
+	gulp.src(['./inc/patterns/*.php' ])
+		.pipe(replace( 'カテゴリー', 'Category' ))
+		.pipe(gulp.dest('./inc/patterns/'));
 	done();
 });
 
