@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ] Change back h4 design and add design from css
+
 1.0.11
 [ Bug fix ] Adjustment css margin-block-start
 [ Bug fix ] Adjustment css width behavior on editor screen.
