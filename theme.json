@@ -82,28 +82,33 @@
 			"spacingSizes": [
 				{
 					"//": "Why the choice of slugs in the 10,20,30 format: https://wp.me/p2AvED-pxv ",
-					"name": "XS",
+					"name": "X-T9 XXS",
 					"slug": "30",
+					"size": "var(--wp--custom--spacing--xx-small)"
+				},
+				{
+					"name": "X-T9 XS",
+					"slug": "40",
 					"size": "var(--wp--custom--spacing--x-small)"
 				},
 				{
-					"name": "S",
-					"slug": "40",
+					"name": "X-T9 S",
+					"slug": "50",
 					"size": "var(--wp--custom--spacing--small)"
 				},
 				{
-					"name": "M",
-					"slug": "50",
+					"name": "X-T9 M",
+					"slug": "60",
 					"size": "var(--wp--custom--spacing--medium)"
 				},
 				{
-					"name": "L",
-					"slug": "60",
+					"name": "X-T9 L",
+					"slug": "70",
 					"size": "var(--wp--custom--spacing--large)"
 				},
 				{
-					"name": "XL",
-					"slug": "70",
+					"name": "X-T9 XL",
+					"slug": "80",
 					"size": "var(--wp--custom--spacing--x-large)"
 				}
 			],
@@ -216,11 +221,12 @@
 				"button": "0.2rem"
 			},
 			"spacing": {
-				"x-small": "calc(var(--wp--custom--spacing--medium) / 4)",
-				"small": "calc(var(--wp--custom--spacing--medium) / 2)",
-				"medium": "1.5rem",
-				"large": "calc(var(--wp--custom--spacing--medium) * 1.5)",
-				"x-large": "calc(var(--wp--custom--spacing--medium) * 2)",
+				"xx-small": "calc(var(--wp--custom--spacing--small) / 4)",
+				"x-small": "calc(var(--wp--custom--spacing--small) / 2)",
+				"small": "1.5rem",
+				"medium": "calc(var(--wp--custom--spacing--small) * 1.5)",
+				"large": "calc(var(--wp--custom--spacing--small) * 2)",
+				"x-large": "calc(var(--wp--custom--spacing--small) * 3)",
 				"editor-padding": "2rem",
 				"button-sm": "0.3em 1em",
 				"menu-indent": "0.875rem"
@@ -235,7 +241,7 @@
 	},
 	"styles": {
 		"spacing": {
-			"blockGap": "var(--wp--custom--spacing--medium)"
+			"blockGap": "var(--wp--custom--spacing--small)"
 		},
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--system-font)"

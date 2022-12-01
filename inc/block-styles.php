@@ -35,6 +35,14 @@ register_block_style(
 register_block_style(
 	'core/spacer',
 	array(
+		'name'         => 'spacer-xxs',
+		'label'        => __( 'XXS', 'x-t9' ),
+		'style_handle' => 'x-t9-style',
+	)
+);
+register_block_style(
+	'core/spacer',
+	array(
 		'name'         => 'spacer-xs',
 		'label'        => __( 'XS', 'x-t9' ),
 		'style_handle' => 'x-t9-style',
