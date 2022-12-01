@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug fix ] Adjustment css width behavior on editor screen.
+
 1.0.10
 [ Bug fix ] Fix VK Blocks Pro Slider Block alignfull
 
