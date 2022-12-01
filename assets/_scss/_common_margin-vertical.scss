@@ -1,30 +1,51 @@
-body .is-layout-flow > * {
+/**
+theme.json の blockGap がつける余白をリセット
+
+body がないと
+body .is-layout-constrained > * + * {
+などコアの指定に負ける
+*/
+
+body .wp-site-blocks > :is(	
+	header,
+	main,
+	footer,
+	section,
+	article,
+	aside,
+	.wp-block-template-part
+	){
+		margin-block-start: 0;
+		margin-top: 0;
+}
+body :is( .wp-site-blocks, .is-layout-constrained, .is-layout-flow ) {
+	// スペーサーブロック & 次の要素の上部には margin-top が自動的に 0 になるようにする
+	// Delete margin-top from next element of spacer block
+	& > :is( .wp-block-spacer, .vk_spacer ) {
+		&,
+		& + * {
+			margin-block-start: 0;
+			margin-top: 0;
+		}
+	}
+	// グループ内の最初の見出しには上部余白がつかないようにする
 	:is( h2, h3, h4, h5, h6 ) {
-		// margin = Ideal margin - half-leading（ (line-height - 1em ) /2 ）
 		&:first-child {
 			margin-block-start: 0;
 		}
 	}
-}
-
-.wp-site-blocks > :is( header, main, footer) {
-	margin-block-start: 0;
-}
-
-body {
-	:is( .is-layout-constrained, .is-layout-flow ) {
-		// スペーサーブロックの次の要素の上部には margin-top が自動的に 0 になるようにする
-		// Delete margin-top from next element of spacer block
-		& > :is( .wp-block-spacer, .vk_spacer ) {
-			&,
-			& + * {
-				margin-block-start: 0;
-				margin-top: 0;
-			}
-		}
-		& > * + :is( hr, .wp-block-cover, .wp-block-navigation, .wp-block-query ) {
-			margin-block-start: 0;
-			margin-top: 0;
-		}
+	& > * + :is(
+		hr,
+		.wp-block-template-part,
+		.wp-block-post-content,
+		.wp-block-group,
+		.wp-block-cover,
+		.wp-block-navigation,
+		.wp-block-query,
+		.vk_slider,
+		.vk_outer
+	) {
+		margin-block-start: 0;
+		margin-top: 0;
 	}
 }
