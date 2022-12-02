@@ -24,21 +24,7 @@ npm run dist
 
 ---
 
-### Colors
-
-| Color name |  |
-|-| ------------- |
-| text-normal | 通常テキスト色 |
-| text-secondary | 少し色を薄くするなど、通常文字色より目立たなくする色 |
-| border-normal | 白背景の線色  |
-| bg-light-gray | 背景アクセント用の明るい灰色 |
-| text-normal-darkbg | 背景色が濃い場合のテキスト色 |
-| text-secondary-darkbg | 背景色が濃い場合のセカンダリ色 |
-| border-normal-darkbg | 背景色が濃い場合の線色 |
-
----
-
-### 余白の考え方 : 上余白基準
+### Spacing
 
 @update 1.1.0
 
