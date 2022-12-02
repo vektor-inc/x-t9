@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ] Color specify of theme.json
 [ Specification Change ] Delete site logo width specification from CSS
 
 1.1.1

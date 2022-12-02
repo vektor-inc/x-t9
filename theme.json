@@ -240,15 +240,15 @@
 		}
 	},
 	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--bg-primary)",
+			"text": "var(--wp--preset--color--text-normal)"
+		},
 		"spacing": {
 			"blockGap": "var(--wp--custom--spacing--small)"
 		},
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--system-font)"
-		},
-		"color": {
-			"background": "#fff",
-			"text": "var(--wp--preset--color--text-normal)"
 		},
 		"elements": {
 			"h1": {
