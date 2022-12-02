@@ -8,8 +8,8 @@
 return array(
 	'title'      => __( 'Columns Menu', 'x-t9' ),
 	'categories' => array( 'media', 'columns' ),
-	'content'    => '<!-- wp:columns {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
-	<div class="wp-block-columns" style="margin-top:0;margin-bottom:0"><!-- wp:column -->
+	'content'    => '<!-- wp:columns {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"text-normal"} -->
+	<div class="wp-block-columns has-text-normal-color has-text-color" style="margin-top:0;margin-bottom:0"><!-- wp:column -->
 	<div class="wp-block-column"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","style":{"border":{"width":"1px"}},"borderColor":"border-normal"} -->
 	<figure class="wp-block-image size-full has-custom-border"><img src="' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/sample-image-gray.png" alt="" class="has-border-color has-border-normal-border-color" style="border-width:1px"/></figure>
 	<!-- /wp:image -->
