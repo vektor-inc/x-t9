@@ -11,10 +11,18 @@
 return array(
 	'title'      => __( 'Post List Section', 'x-t9' ),
 	'categories' => array( 'featured' ),
-	'content'    => '<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"bg-secondary","layout":{"type":"constrained"}} -->
-	<div class="wp-block-group alignfull has-bg-secondary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)"><!-- wp:heading {"textAlign":"center","style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|50"}}}} -->
-	<h2 class="has-text-align-center" id="information" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--50)">' . esc_html__( 'Information', 'x-t9' ) . '</h2>
+	'content'    => '<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"0","bottom":"0"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"bg-secondary","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignfull has-bg-secondary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0"><!-- wp:spacer {"className":"is-style-spacer-lg"} -->
+	<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-lg"></div>
+	<!-- /wp:spacer -->
+	
+	<!-- wp:heading {"textAlign":"center"} -->
+	<h2 class="has-text-align-center" id="information">' . esc_html__( 'Information', 'x-t9' ) . '</h2>
 	<!-- /wp:heading -->
+	
+	<!-- wp:spacer {"className":"is-style-spacer-md"} -->
+	<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-md"></div>
+	<!-- /wp:spacer -->
 	
 	<!-- wp:group {"layout":{"inherit":true,"type":"constrained"}} -->
 	<div class="wp-block-group"><!-- wp:separator {"opacity":"css","backgroundColor":"border-normal","className":"is-style-wide"} -->
@@ -48,10 +56,14 @@ return array(
 	
 	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|50","bottom":"0"}}}} -->
 	<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--50);margin-bottom:0"><!-- wp:button {"fontSize":"x-small"} -->
-	<div class="wp-block-button has-custom-font-size has-x-small-font-size"><a class="wp-block-button__link wp-element-button" href="' . esc_url( get_post_type_archive_link( 'post' ) ) . '">Information list</a></div>
+	<div class="wp-block-button has-custom-font-size has-x-small-font-size"><a class="wp-block-button__link wp-element-button" href="' . esc_url( get_post_type_archive_link( 'post' )  ) . '">Information list</a></div>
 	<!-- /wp:button --></div>
 	<!-- /wp:buttons --></div>
 	<!-- /wp:query --></div>
-	<!-- /wp:group --></div>
+	<!-- /wp:group -->
+	
+	<!-- wp:spacer {"className":"is-style-spacer-lg"} -->
+	<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-lg"></div>
+	<!-- /wp:spacer --></div>
 	<!-- /wp:group -->',
 );

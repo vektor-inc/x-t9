@@ -46,6 +46,21 @@ npm run dist
 | border-normal-darkbg | 背景色が濃い場合の線色 |
 
 ---
+
+### 余白の考え方 : 上余白基準
+
+Specified from theme.json
+
+| name | default |  |
+|-|-|------------ |
+| xxs | 0.375rem | Don't fit |
+| xs | 0.75rem | For when you want narrower than normal paragraph margins  |
+| sm | 1.5rem | Block margin / Gap margin |
+| md | 2.4rem | Group margin |
+| lg | 4rem | Section margin |
+| xl | 6rem | Template bottom margin and so on |
+
+---
 ## Memo（試行錯誤中）
 
 ### ほぼ確定の事項
@@ -64,17 +79,6 @@ npm run dist
 
 そもそも余白をどれだけつけるかは場所によって異なるし、
 場所によってはコアが .has-background に padding を追加しないケースがあるので、余計な混乱を避けるために css で 0　指定しておく。
-
-### 余白の考え方 : 上余白基準
-
-
-| Spacing |  |
-|-| ------------- |
-| xs | 詰めたいがびたっとつくのはまずい場合  |
-| sm | 通常の間隔より狭い  |
-| md | 段落など通常のブロック要素の余白 |
-| lg | 複数のブロックの塊 |
-| xl | セクション最内側など |
 
 ---
 
@@ -131,12 +135,6 @@ line-height : 1.5
 # Replace
 
 Exclude : readme.md,gulpfile.js
-
-"moreText":"続きを読む"
-"moreText":"Read more"
-
->お知らせ</
->Information</
 
 "ref":11229,
 

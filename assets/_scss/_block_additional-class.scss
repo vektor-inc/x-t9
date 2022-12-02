@@ -4,6 +4,9 @@
 /*-------------------------------------------*/
 /*  Spacer
 /*-------------------------------------------*/
+.is-style-spacer-xxs {
+	height: var(--wp--custom--spacing--xx-small) !important;
+}
 .is-style-spacer-xs {
 	height: var(--wp--custom--spacing--x-small) !important;
 }
