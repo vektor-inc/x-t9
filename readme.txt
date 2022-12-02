@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ] Delete site logo width specification from CSS
+
 1.1.1
 [ Other ] Translation adjustment
 

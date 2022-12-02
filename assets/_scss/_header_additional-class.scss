@@ -4,7 +4,6 @@
 	.wp-block-site-logo {
 		img {
 			width: auto;
-			height: clamp(32px, calc((100vw - 360px) * (48 / (1200 - 360)) + 32px), 80px);
 		}
 	}
 
