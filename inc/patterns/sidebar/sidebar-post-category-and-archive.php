@@ -8,9 +8,8 @@
  * @package vektor-inc/X-T9
  */
 return array(
-	'title'      => __( 'Sidebar Category and Archive', 'x-t9' ),
-	'inserter'   => false,
-	'categories' => array(),
+	'title'      => __( 'Sidebar Category / Archive', 'x-t9' ),
+	'categories' => array( 'sidebar' ),
 	'content'    => '<!-- wp:heading {"level":4,"style":{"spacing":{"margin":{"top":"0","right":"0","bottom":"0","left":"0"}}}} -->
 	<h4 style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0">' . esc_html__( 'Category', 'x-t9' ) . '</h4>
 	<!-- /wp:heading -->
