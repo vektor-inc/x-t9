@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc
 Tested up to: 6.1
 Requires PHP: 7.2
-Stable tag: 1.2.2
+Stable tag: 1.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+1.2.3
 [ Update Pattern ] Add tag Cloud block to sidebar
 [ Design tuning ] Reset Browser User agent margin
 [ Design tuning ][ Archive Blcok ] Add width 100% to select tag
