@@ -53,6 +53,8 @@ require get_template_directory() . '/inc/block-patterns.php';
 require get_template_directory() . '/inc/block-styles.php';
 // Load TGM.
 require get_template_directory() . '/inc/tgm-plugin-activation/tgm-config.php';
+// Starter Content
+require dirname( __FILE__ ) . '/inc/starter-content.php';
 
 /**
  * Archive title
