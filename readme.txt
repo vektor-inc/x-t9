@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design tuning ][ Archive Blcok ] Add width 100% to select tag
+
 1.2.2
 [ Other ] Translation adjustment
 

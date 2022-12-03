@@ -108,3 +108,9 @@ ul[class*="vk_"][class*="list"] {
 		padding-left: calc(var(--vk-margin-list-menu-left-first) + var(--wp--custom--spacing--menu-indent) * 7);
 	}
 }
+
+*[class*="wp-block"][class*="-dropdown"]{
+	& > select {
+		width: 100%;
+	}
+}
