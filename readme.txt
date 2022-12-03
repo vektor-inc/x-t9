@@ -15,6 +15,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 [ Specification Change ] Color specify of theme.json
 [ Specification Change ] Delete site logo width specification from CSS
+[ Specification Change ] Sidebar post comvert to pattern
 
 1.1.1
 [ Other ] Translation adjustment

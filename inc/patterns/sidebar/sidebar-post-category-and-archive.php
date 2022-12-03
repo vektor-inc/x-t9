@@ -1,0 +1,29 @@
+<?php
+/**
+ * Sidebar Category and Archive.
+ * 
+ * To cope with translation, the text is not written in the pattern.
+ * 
+ * @since 1.1.2
+ * @package vektor-inc/X-T9
+ */
+return array(
+	'title'      => __( 'Sidebar Category and Archive', 'x-t9' ),
+	'inserter'   => false,
+	'categories' => array(),
+	'content'    => '<!-- wp:heading {"level":4,"style":{"spacing":{"margin":{"top":"0","right":"0","bottom":"0","left":"0"}}}} -->
+	<h4 style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0">' . esc_html__( 'Category', 'x-t9' ) . '</h4>
+	<!-- /wp:heading -->
+	
+	<!-- wp:categories {"showHierarchy":true} /-->
+	
+	<!-- wp:spacer {"className":"is-style-spacer-md"} -->
+	<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-md"></div>
+	<!-- /wp:spacer -->
+	
+	<!-- wp:heading {"level":4,"style":{"spacing":{"margin":{"top":"0","right":"0","bottom":"0","left":"0"}}}} -->
+	<h4 style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0">' . esc_html__( 'Archive', 'x-t9' ) . '</h4>
+	<!-- /wp:heading -->
+	
+	<!-- wp:archives /-->',
+);
