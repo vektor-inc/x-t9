@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Update Pattern ] Add tag Cloud block to sidebar
 [ Design tuning ] Reset Browser User agent margin
 [ Design tuning ][ Archive Blcok ] Add width 100% to select tag
 

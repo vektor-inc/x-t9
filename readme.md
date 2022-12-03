@@ -127,6 +127,9 @@ href="' . esc_url( get_post_type_archive_link( 'post' )  ) . '
 >Archive</
 >' . esc_html__( 'Archive', 'x-t9' ) . '</
 
+>Tag Cloud</
+>' . esc_html__( 'Tag Cloud', 'x-t9' ) . '</
+
 "Category : "
 "' . esc_html__( 'Category : ', 'x-t9' ) . '"
 

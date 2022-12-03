@@ -16,13 +16,27 @@ return array(
 	
 	<!-- wp:categories {"showHierarchy":true} /-->
 	
-	<!-- wp:spacer {"className":"is-style-spacer-md"} -->
-	<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-md"></div>
+	<!-- wp:spacer {"className":"is-style-spacer-sm"} -->
+	<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-sm"></div>
 	<!-- /wp:spacer -->
 	
 	<!-- wp:heading {"level":4,"style":{"spacing":{"margin":{"top":"0","right":"0","bottom":"0","left":"0"}}}} -->
 	<h4 style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0">' . esc_html__( 'Archive', 'x-t9' ) . '</h4>
 	<!-- /wp:heading -->
 	
-	<!-- wp:archives /-->',
+	<!-- wp:archives /-->
+	
+	<!-- wp:spacer {"className":"is-style-spacer-sm"} -->
+<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-sm"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"level":4} -->
+<h4>' . esc_html__( 'Tag Cloud', 'x-t9' ) . '</h4>
+<!-- /wp:heading -->
+
+<!-- wp:spacer {"className":"is-style-spacer-xxs"} -->
+<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-xxs"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:tag-cloud {"taxonomy":"category","smallestFontSize":"0.75rem","largestFontSize":"1.25rem"} /-->',
 );
