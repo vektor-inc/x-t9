@@ -67,8 +67,8 @@ function x29_register_block_patterns() {
 		'sidebar/sidebar-post-category-and-archive',
 		'query-image-left',
 		'query-subcontent',
-		'post-template-image-left',
-		'post-template-subcontent',
+		'post-template-image-left', // used by loop-archive.html
+		// 'post-template-subcontent',
 	);
 
 	/**
