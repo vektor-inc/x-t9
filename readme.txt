@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design tuning ] Header pattern
+
 1.2.4
 [ Design tuning ] Tuning typography margin
 

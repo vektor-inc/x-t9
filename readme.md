@@ -81,7 +81,7 @@ Specified from theme.json
 
 # Replace
 
-Exclude : readme.md,gulpfile.js
+Exclude : readme.txt,readme.md,gulpfile.js
 
 "ref":11229,
 

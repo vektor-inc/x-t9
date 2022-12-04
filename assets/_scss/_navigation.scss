@@ -19,7 +19,7 @@
 	&__responsive-container:where(:not(.has-modal-open)) {
 		// :where(.wp-block-navigation__container, 
 		// .wp-block-page-list) {
-			&>.wp-block-navigation-item {
+			.wp-block-navigation__container > .wp-block-navigation-item {
 				display: grid;
 				position: relative;
 				white-space: nowrap;
@@ -31,7 +31,6 @@
 				*:where(:not(.is-style-nav--text-inline)) &.has-child>a {
 					// Additional Padding for submenu-icon
 					padding-right: calc(var(--submenu-icon-size) + var(--nav-top-item-padding-horizontal) + 0.5em);
-					border:1px solid #ff0000;
 				}
 
 				&>.wp-block-navigation__submenu-icon {
