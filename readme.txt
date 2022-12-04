@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change / Bug fix ] built in Post template 
 [ Design tuning ] HTML Site Map Block
 [ Design tuning ] Header pattern
 
