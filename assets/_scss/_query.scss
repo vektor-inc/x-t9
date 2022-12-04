@@ -14,6 +14,7 @@
 	}
 
 	.wp-block-post-featured-image {
+		min-width:60px; // タイトルの文字数が多い場合に画像が潰れないように応急補正
 		img {
 			aspect-ratio: 320 / 180;
 			object-fit: cover;

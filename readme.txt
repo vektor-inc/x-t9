@@ -13,6 +13,9 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+1.2.6
+[ Bug fix ] Cope with feature image aspect bug on a lot of title text in quely pattern image small
+
 1.2.5
 [ Specification Change / Bug fix ] built in Post template 
 [ Design tuning ] HTML Site Map Block
