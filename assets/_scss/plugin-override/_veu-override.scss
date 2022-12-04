@@ -24,3 +24,15 @@
 	margin-left:0;
 	margin-right:0;
 }
+.veu_sitemap {
+	:is(	
+		.sitemap-post-type-title,
+		li
+	) a {
+		text-decoration: none;
+		&:hover {
+			color:var(--wp--preset--color--primary-hover);
+			text-decoration: underline;
+		}
+	}
+}

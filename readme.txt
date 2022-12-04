@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design tuning ] HTML Site Map Block
 [ Design tuning ] Header pattern
 
 1.2.4
