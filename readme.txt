@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug fix ] Fix full width and wide and edit screen.
+
 1.2.6
 [ Bug fix ] Cope with feature image aspect bug on a lot of title text in quely pattern image small
 
