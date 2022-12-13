@@ -9,19 +9,33 @@
 		max-width: 100vw;
 	}
 }
-
 .alignwide {
 	width: calc(100% + (100vw - 100%) / 2);
 	margin-left: calc((100% - 100vw) / 4);
 	margin-right: calc((100% - 100vw) / 4);
-
 	&.wp-block-image {
 		max-width: 100vw;
 	}
 }
-
 .vk_slider {
 	&.alignfull {
 		width:100vw;
+	}
+}
+
+// override theme.json styles.spacing.padding & settings.useRootPaddingAwareAlignments
+body .is-layout-constrained {
+	& > .alignfull {
+		margin-left: calc(50% - 50vw);
+		margin-right: calc(50% - 50vw);
+	}
+	& > .alignwide {
+		margin-left: calc((100% - 100vw) / 4) !important;
+		margin-right: calc((100% - 100vw) / 4) !important;
+	}
+	& > .vk_outer-width-full {
+		max-width: 100vw !important;
+		margin-left: calc(50% - 50vw)!important;
+		margin-right: calc(50% - 50vw)!important;
 	}
 }
