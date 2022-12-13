@@ -237,7 +237,8 @@
 					"heading": "1.5"
 				}
 			}
-		}
+		},
+		"useRootPaddingAwareAlignments": true
 	},
 	"styles": {
 		"color": {
@@ -245,7 +246,13 @@
 			"text": "var(--wp--preset--color--text-normal)"
 		},
 		"spacing": {
-			"blockGap": "var(--wp--custom--spacing--small)"
+			"blockGap": "var(--wp--custom--spacing--small)",
+			"padding": {
+				"top": 0,
+				"right": "var(--wp--preset--spacing--30)",
+				"bottom": 0,
+				"left": "var(--wp--preset--spacing--30)"
+			}
 		},
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--system-font)"
