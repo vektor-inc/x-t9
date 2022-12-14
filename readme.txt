@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc
 Tested up to: 6.1
 Requires PHP: 7.2
-Stable tag: 1.2.6
+Stable tag: 1.2.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+1.2.7
 [ Bug fix ] Fix full width and wide and edit screen.
 
 1.2.6
