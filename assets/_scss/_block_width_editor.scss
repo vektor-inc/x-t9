@@ -17,7 +17,7 @@ body {
 			max-width: 100%;
 		}
 	}
-	.is-layout-constrained,
+	.is-layout-constrained:where(:not(.alignfull):not(.alignwide)),
 	.vk_outer-width-full.vk_outer-paddingLR-zero .wp-block.is-layout-constrained {
 		max-width:var(--wp--custom--content-size--normal);
 		margin-left: auto;
