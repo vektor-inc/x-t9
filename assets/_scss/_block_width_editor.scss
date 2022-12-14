@@ -1,5 +1,22 @@
+// In editor screen need to no content outer layout
+// 編集画面ではアウターでの幅指定がないので、コンテンツ幅は max-width で処理する
 body {
 	--wp--custom--content-size--normal:1110px;
+	.alignwide,
+	.alignfull {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.alignfull {
+		&,
+		&.vk_slider {
+			width: 100%;
+		}
+		&.wp-block-image {
+			// Default block style overwrite
+			max-width: 100%;
+		}
+	}
 	.is-layout-constrained,
 	.vk_outer-width-full.vk_outer-paddingLR-zero .wp-block.is-layout-constrained {
 		max-width:var(--wp--custom--content-size--normal);
@@ -20,21 +37,6 @@ body {
 			&.alignwide {
 				max-width: min( calc( 100% - ( 100% - var(--wp--custom--content-size--normal) ) / 2 ), 100% );
 				}
-			}
-	.alignwide,
-	.alignfull {
-		margin-left: auto;
-		margin-right: auto;
-	}
-	.alignfull {
-		&,
-		&.vk_slider {
-			width: 100%;
-		}
-		&.wp-block-image {
-			// Default block style overwrite
-			max-width: 100%;
-		}
 	}
 	// for site editor
 	.is-layout-constrained.wp-block-group{
