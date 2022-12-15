@@ -60,6 +60,9 @@ ul[class*="vk_"][class*="list"] {
 		padding: 0;
 		margin: 0;
 	}
+	& > li:first-child {
+		border-top: 1px solid var(--wp--preset--color--border-normal);
+	}
 
 	li {
 		list-style: none;
@@ -76,7 +79,7 @@ ul[class*="vk_"][class*="list"] {
 		a:hover,
 		&.current-cat>a,
 		&.current_page_item>a {
-			background-color: var(--wp--preset--color--bg-light-gray);
+			background-color: rgba(0,0,0,0.03);
 		}
 	}
 
