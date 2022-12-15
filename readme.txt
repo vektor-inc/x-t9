@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug fix ] Fix The image protrudes
+
 1.2.9
 [ Bug fix ] Fix full width and wide and edit screen.
 
