@@ -168,13 +168,13 @@
 					"fluid": false,
 					"name": "Tiny",
 					"slug": "tiny",
-					"size": "calc( var(--wp--preset--font-size--normal) / var(--wp--custom--font--scale) )"
+					"size": "calc( var(--wp--preset--font-size--x-small) / var(--wp--custom--font--scale) )"
 				},
 				{
 					"fluid": false,
 					"name": "X small",
 					"slug": "x-small",
-					"size": "calc( var(--wp--preset--font-size--normal) / var(--wp--custom--font--scale) )"
+					"size": "calc( var(--wp--preset--font-size--small) / var(--wp--custom--font--scale) )"
 				},
 				{
 					"fluid": false,
