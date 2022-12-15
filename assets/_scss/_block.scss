@@ -44,6 +44,9 @@
 		border-color: var(--wp--preset--color--border-normal);
 	}
 }
+.wp-block-comments .wp-block-button {
+	margin-top: var(--wp--custom--spacing--small);
+}
 
 /*-------------------------------------------*/
 /*  Category / Archive block
@@ -61,7 +64,13 @@ ul[class*="vk_"][class*="list"] {
 		margin: 0;
 	}
 	& > li:first-child {
-		border-top: 1px solid var(--wp--preset--color--border-normal);
+		&:is( 
+			.current-cat,
+			.current_page_item,
+			[area-current="page"]
+		 ){
+			border-top: 1px solid var(--wp--preset--color--border-normal);
+		}
 	}
 
 	li {
@@ -78,7 +87,8 @@ ul[class*="vk_"][class*="list"] {
 
 		a:hover,
 		&.current-cat>a,
-		&.current_page_item>a {
+		&.current_page_item>a,
+		a[area-current="page"] {
 			background-color: rgba(0,0,0,0.03);
 		}
 	}
