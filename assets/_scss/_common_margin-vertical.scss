@@ -10,6 +10,21 @@ p{
 		// 意図する余白 - この要素の上側のレディング - 上の要素の下側のレディング（要素検出が難しいので同じと仮定）
 		// 意図する余白 - ( line-height - 文字サイズ ) / 2(上下片方だけにする) ) -（上の要素の下側のレディング（同じとして）
 		margin-block-start:calc( var(--wp--custom--spacing--small) - ( ( 1.5rem - 1rem ) / 2 ) -  ( ( 1.5rem - 1rem ) / 2 ) );
+		margin-block-end:calc( var(--wp--custom--spacing--small) - ( ( 1.5rem - 1rem ) / 2 ) -  ( ( 1.5rem - 1rem ) / 2 ) );
+		&:first-child {
+			margin-block-start: 0;
+		}
+		&:last-child {
+			margin-block-end: 0;
+		}
+	}
+}
+:is( h2, h3, h4, h5, h6 ) {
+	&,
+	body :is( .wp-site-blocks, .is-layout-constrained, .is-layout-flow ) > * + &{
+		margin-block-start:1.5em;
+		// 意図する余白 - この要素の下側のレディング
+		margin-block-end: calc( var(--wp--custom--spacing--small) - (  1em - 1em * var(--wp--custom--typography--line-height--heading) ) / 2 );
 	}
 }
 
@@ -19,6 +34,11 @@ p{
 		// 見出しの下の余白は見出しの上側よりも小さめになるように / 通常の p の上側の余白よりは大きくする
 		margin-block-start:1.25em;
 	}
+}
+
+:is( ul,ol,dl ) {
+	margin-block-start: var(--wp--custom--spacing--small);
+	margin-block-end: var(--wp--custom--spacing--small);
 }
 
 body .wp-site-blocks > :is(	
@@ -56,11 +76,6 @@ body :is( .wp-site-blocks, .is-layout-constrained, .is-layout-flow ) {
 	) {
 		margin-block-start: 0;
 		margin-top: 0;
-	}
-	& > * + :is( h2, h3, h4, h5, h6 ) {
-		margin-block-start:1.5em;
-		// 意図する余白 - この要素の下側のレディング
-		margin-block-end: calc( var(--wp--custom--spacing--small) - (  1em - 1em * var(--wp--custom--typography--line-height--heading) ) / 2 );
 	}
 	// グループ内の最初の見出しには上部余白がつかないようにする
 	:is( h2, h3, h4, h5, h6 ) {
