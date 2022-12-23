@@ -27,7 +27,13 @@ html {
 	}
 }
 
-body,
+// :not([data-resizable-iframe-connected=""] を追加した理由は、iframe からこの指定を除外するためです。
+// body に height:100%; が効いてしまうと、例えば Google Map の埋め込みコードを入れた場合、
+// 編集画面で地図のプレビューが表示されない。
+// Reason of added :not([data-resizable-iframe-connected=""] is to be exclude this specification from iframe.
+// If the height:100%; affect to all body tag that, for example, If you put in Google Map's iframe tag,
+// it become to not display preview on editor.
+body:where(:not([data-resizable-iframe-connected=""])),
 .wp-site-blocks {
 	height: 100%; // to be footer bottom sticky
 }
