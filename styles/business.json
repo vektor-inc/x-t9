@@ -1,0 +1,67 @@
+
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+	"version": 2,
+	"title": "Business",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "primary",
+					"color": "#9D3425",
+					"name": "Primary"
+				},
+				{
+					"slug": "primary-hover",
+					"color": "#BD5F51",
+					"name": "Primary Hover"
+				},
+				{
+					"slug": "bg-primary",
+					"color": "#244557",
+					"name": "BG Primary"
+				},
+				{
+					"slug": "bg-secondary",
+					"color": "#80939D",
+					"name": "BG Secondary"
+				},
+				{
+					"slug": "text-normal",
+					"color": "#FFFFFF",
+					"name": "Text Normal"
+				},
+				{
+					"slug": "text-secondary",
+					"color": "rgba( 255,255,255,0.7 )",
+					"name": "Text Secondary"
+				},
+				{
+					"slug": "border-normal",
+					"color": "rgba( 255,255,255,0.5 )",
+					"name": "Border Normal"
+				},
+				{
+					"slug": "bg-dark",
+					"color": "#D2DDDE",
+					"name": "BG Dark ( Base Contrast )"
+				},
+				{
+					"slug": "text-normal-darkbg",
+					"color": "#244557",
+					"name": "Text Normal (Dark BG)"
+				},
+				{
+					"slug": "text-secondary-darkbg",
+					"color": "rgba( 36,69,87,0.5 )",
+					"name": "Text Secondary (Dark BG)"
+				},
+				{
+					"slug": "border-normal-darkbg",
+					"color": "rgba( 36,69,87,0.2 )",
+					"name": "Border Normal (Dark BG)"
+				}
+			]
+		}
+	}
+}

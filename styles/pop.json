@@ -1,0 +1,66 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+	"version": 2,
+	"title": "Pop",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "primary",
+					"color": "#FB85AD",
+					"name": "Primary"
+				},
+				{
+					"slug": "primary-hover",
+					"color": "#FFB1CC",
+					"name": "Primary Hover"
+				},
+				{
+					"slug": "bg-primary",
+					"color": "#FFF2B2",
+					"name": "BG Primary"
+				},
+				{
+					"slug": "bg-secondary",
+					"color": "#A7D9DD",
+					"name": "BG Secondary"
+				},
+				{
+					"slug": "text-normal",
+					"color": "#2F7085",
+					"name": "Text Normal"
+				},
+				{
+					"slug": "text-secondary",
+					"color": "rgba( 47,112,133,0.7 )",
+					"name": "Text Secondary"
+				},
+				{
+					"slug": "border-normal",
+					"color": "rgba( 255,242,178,0.5 )",
+					"name": "Border Normal"
+				},
+				{
+					"slug": "bg-dark",
+					"color": "#4FAEB6",
+					"name": "BG Dark ( Base Contrast )"
+				},
+				{
+					"slug": "text-normal-darkbg",
+					"color": "#FFF",
+					"name": "Text Normal (Dark BG)"
+				},
+				{
+					"slug": "text-secondary-darkbg",
+					"color": "rgba( 255,255,255,0.7 )",
+					"name": "Text Secondary (Dark BG)"
+				},
+				{
+					"slug": "border-normal-darkbg",
+					"color": "rgba( 255,255,255,0.5 )",
+					"name": "Border Normal (Dark BG)"
+				}
+			]
+		}
+	}
+}
