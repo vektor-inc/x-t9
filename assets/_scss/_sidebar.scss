@@ -6,3 +6,23 @@
 		background-color: var(--wp--preset--color--bg-secondary);
 	}
 }
+
+.wp-block-tag-cloud .tag-cloud-link {
+	background: var(--wp--preset--color--bg-secondary) ;
+	color: var(--wp--preset--color--text-normal);
+	padding: .2em .4em;
+	margin: .1em ;
+	border-radius: 4px;
+	text-decoration: none;
+	line-height: 1.2;
+
+	&:before {
+		content: '#';
+		padding-right: 2px;
+		font-size: .85em;
+	}
+
+	&:hover {
+		color: var(--wp--preset--color--text-secondary);
+	}
+}
