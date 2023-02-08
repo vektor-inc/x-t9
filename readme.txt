@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Tuning ] Delete heading margin bottom
+
 1.3.4
 [ Bug fix ] Fix custom HTML block iframe preview don't display on editor screen.
 
