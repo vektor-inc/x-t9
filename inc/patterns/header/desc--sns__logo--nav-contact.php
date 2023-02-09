@@ -25,16 +25,16 @@ return array(
 	<!-- /wp:group -->
 	
 	<!-- wp:group {"style":{"spacing":{"padding":{"bottom":"0","top":"0"},"margin":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"},"blockGap":"var:preset|spacing|40"}},"layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between"}} -->
-	<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--30);margin-bottom:var(--wp--preset--spacing--30);padding-top:0;padding-bottom:0"><!-- wp:group {"style":{"spacing":{"padding":{"right":"2rem"}}}} -->
-	<div class="wp-block-group" style="padding-right:2rem"><!-- wp:site-logo {"width":220} /--></div>
+	<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--30);margin-bottom:var(--wp--preset--spacing--30);padding-top:0;padding-bottom:0"><!-- wp:group {"style":{"spacing":{"right":"var:preset|spacing|40"}}}} -->
+	<div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--40)"><!-- wp:site-logo {"width":180} /--></div>
 	<!-- /wp:group -->
 	
-	<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"0","right":"0","left":"0"},"blockGap":"var:preset|spacing|50"}},"layout":{"type":"flex","flexWrap":"nowrap"},"fontSize":"x-small"} -->
+	<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"0","right":"0","left":"0"},"blockGap":"var:preset|spacing|40"}},"layout":{"type":"flex","flexWrap":"nowrap"},"fontSize":"x-small"} -->
 	<div class="wp-block-group has-x-small-font-size" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:navigation {"className":"nav\u002d\u002dopen\u002d\u002dlg-up is-style-nav\u002d\u002dactive-border-bottom","layout":{"type":"flex","justifyContent":"left","orientation":"horizontal","flexWrap":"wrap"},"style":{"spacing":{"blockGap":"0"}},"fontSize":"small"} /-->
 	
 	<!-- wp:buttons -->
-	<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","right":"var:preset|spacing|50","bottom":"var:preset|spacing|30","left":"var:preset|spacing|50"}}},"fontSize":"small"} -->
-	<div class="wp-block-button has-custom-font-size has-small-font-size"><a class="wp-block-button__link has-primary-background-color has-background wp-element-button" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--50)">' . esc_html__( 'Contact', 'x-t9' ) . '</a></div>
+	<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","right":"var:preset|spacing|50","bottom":"var:preset|spacing|30","left":"var:preset|spacing|50"}}},"fontSize":"x-small"} -->
+	<div class="wp-block-button has-custom-font-size has-x-small-font-size"><a class="wp-block-button__link has-primary-background-color has-background wp-element-button" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--50)">' . esc_html__( 'Contact', 'x-t9' ) . '</a></div>
 	<!-- /wp:button --></div>
 	<!-- /wp:buttons --></div>
 	<!-- /wp:group --></div>
@@ -48,15 +48,15 @@ return array(
 	<!-- wp:group {"backgroundColor":"bg-primary","className":"scrolled-header-fixed  ","layout":{"inherit":true,"type":"constrained"}} -->
 	<div class="wp-block-group scrolled-header-fixed has-bg-primary-background-color has-background"><!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"},"blockGap":"var:preset|spacing|40"}},"layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between"}} -->
 	<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--30);margin-bottom:var(--wp--preset--spacing--30)"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"0"}}}} -->
-	<div class="wp-block-group" style="padding-top:0;padding-bottom:0"><!-- wp:site-logo {"width":220} /--></div>
+	<div class="wp-block-group" style="padding-top:0;padding-bottom:0"><!-- wp:site-logo {"width":180} /--></div>
 	<!-- /wp:group -->
 	
-	<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"0","right":"0","left":"0"},"blockGap":"var:preset|spacing|50"}},"layout":{"type":"flex","flexWrap":"nowrap"},"fontSize":"x-small"} -->
+	<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"0","right":"0","left":"0"},"blockGap":"var:preset|spacing|40"}},"layout":{"type":"flex","flexWrap":"nowrap"},"fontSize":"x-small"} -->
 	<div class="wp-block-group has-x-small-font-size" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:navigation {"className":"nav\u002d\u002dopen\u002d\u002dlg-up is-style-nav\u002d\u002dactive-border-bottom","layout":{"type":"flex","justifyContent":"left","orientation":"horizontal","flexWrap":"wrap"},"fontSize":"small"} /-->
 	
 	<!-- wp:buttons -->
-	<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","right":"var:preset|spacing|50","bottom":"var:preset|spacing|30","left":"var:preset|spacing|50"}}},"fontSize":"small"} -->
-	<div class="wp-block-button has-custom-font-size has-small-font-size"><a class="wp-block-button__link has-primary-background-color has-background wp-element-button" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--50)">' . esc_html__( 'Contact', 'x-t9' ) . '</a></div>
+	<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","right":"var:preset|spacing|50","bottom":"var:preset|spacing|30","left":"var:preset|spacing|50"}}},"fontSize":"x-small"} -->
+	<div class="wp-block-button has-custom-font-size has-x-small-font-size"><a class="wp-block-button__link has-primary-background-color has-background wp-element-button" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--50)">' . esc_html__( 'Contact', 'x-t9' ) . '</a></div>
 	<!-- /wp:button --></div>
 	<!-- /wp:buttons --></div>
 	<!-- /wp:group --></div>
