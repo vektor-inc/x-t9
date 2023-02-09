@@ -57,7 +57,6 @@ function x29_register_block_patterns() {
 		'footer/footer-bg-secondary-3col',
 		'footer/footer-bg-secondary-logo-nav-float',
 		'footer/footer-bg-secondary-center-nav',
-		'header/desc--contact__logo--nav',
 		'header/desc--sns__logo--nav-contact',
 		'header/logo__desc__nav__center',
 		'header/logo---nav---contact',

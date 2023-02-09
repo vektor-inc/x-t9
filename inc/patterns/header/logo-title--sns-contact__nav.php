@@ -22,8 +22,8 @@ return array(
 	<!-- /wp:group --></div>
 	<!-- /wp:group -->
 	
-	<!-- wp:group {"style":{"spacing":{"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|30"}}} -->
-	<div class="wp-block-group" style="margin-top:0;margin-bottom:0"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40"}}},"layout":{"type":"flex","allowOrientation":false,"justifyContent":"right"}} -->
+	<!-- wp:group {"style":{"spacing":{"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|30","padding":{"bottom":"var:preset|spacing|30"}}}} -->
+	<div class="wp-block-group" style="margin-top:0;margin-bottom:0;padding-bottom:var(--wp--preset--spacing--30)"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40"}}},"layout":{"type":"flex","allowOrientation":false,"justifyContent":"right"}} -->
 	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--40)"><!-- wp:social-links {"iconColor":"text-secondary","iconColorValue":"rgba(0,0,0,0.5)","size":"has-small-icon-size","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|40","left":"var:preset|spacing|40"}}},"className":"is-style-logos-only d-md-up","layout":{"type":"flex","justifyContent":"right"}} -->
 	<ul class="wp-block-social-links has-small-icon-size has-icon-color is-style-logos-only d-md-up"><!-- wp:social-link {"url":"https://wordpress.org/","service":"facebook"} /-->
 	
@@ -43,7 +43,7 @@ return array(
 	<!-- /wp:group --></div>
 	<!-- /wp:group -->
 	
-	<!-- wp:navigation {"className":"nav\u002d\u002dopen\u002d\u002dlg-up nav\u002d\u002dfirst-nowrap is-style-nav\u002d\u002dactive-border-bottom","layout":{"type":"flex","justifyContent":"right","orientation":"horizontal","flexWrap":"nowrap"},"fontSize":"small"} /--></div>
+	<!-- wp:navigation {"className":"nav\u002d\u002dopen\u002d\u002dlg-up nav\u002d\u002dfirst-nowrap is-style-nav\u002d\u002dactive-border-bottom","layout":{"type":"flex","justifyContent":"right","orientation":"horizontal","flexWrap":"nowrap"},"fontSize":"x-small"} /--></div>
 	<!-- /wp:group --></div>
 	<!-- /wp:group --></div>
 	<!-- /wp:group -->
@@ -54,12 +54,12 @@ return array(
 	<!-- /wp:group -->
 	
 	<!-- wp:group {"backgroundColor":"bg-primary","className":"scrolled-header-fixed","layout":{"inherit":true,"type":"constrained"}} -->
-	<div class="wp-block-group scrolled-header-fixed has-bg-primary-background-color has-background"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
-	<div class="wp-block-group"><!-- wp:site-logo {"width":60,"className":"auto-size","style":{"spacing":{"margin":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}}} /-->
+	<div class="wp-block-group scrolled-header-fixed has-bg-primary-background-color has-background"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30)"><!-- wp:site-logo {"width":60,"className":"auto-size","style":{"spacing":{"margin":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}}} /-->
 	
 	<!-- wp:group -->
-	<div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"padding":{"top":"5px"}}},"layout":{"type":"flex","allowOrientation":false,"justifyContent":"right"}} -->
-	<div class="wp-block-group" style="padding-top:5px"><!-- wp:navigation {"className":"nav\u002d\u002dopen\u002d\u002dlg-up nav\u002d\u002dactive-border-bottom nav\u002d\u002dfirst-nowrap","layout":{"type":"flex","justifyContent":"right","orientation":"horizontal","flexWrap":"nowrap"},"fontSize":"small"} /-->
+	<div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0"}}},"layout":{"type":"flex","allowOrientation":false,"justifyContent":"right"}} -->
+	<div class="wp-block-group" style="padding-top:0"><!-- wp:navigation {"className":"nav\u002d\u002dopen\u002d\u002dlg-up nav\u002d\u002dactive-border-bottom nav\u002d\u002dfirst-nowrap","layout":{"type":"flex","justifyContent":"right","orientation":"horizontal","flexWrap":"nowrap"},"fontSize":"x-small"} /-->
 	
 	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"},"style":{"spacing":{"margin":{"top":"0px","bottom":"0px"}}}} -->
 	<div class="wp-block-buttons" style="margin-top:0px;margin-bottom:0px"><!-- wp:button {"backgroundColor":"primary","style":{"spacing":{"padding":{"top":"0rem","bottom":"0rem"}}},"fontSize":"small"} -->
