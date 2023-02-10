@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Tuning ] Update Header Pattern
+
 1.3.5
 [ Design Tuning ] Delete heading margin bottom
 
