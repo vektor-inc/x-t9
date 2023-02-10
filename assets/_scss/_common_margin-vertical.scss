@@ -23,8 +23,6 @@ p{
 	&,
 	body :is( .wp-site-blocks, .is-layout-constrained, .is-layout-flow ) > * + &{
 		margin-block-start:1.5em;
-		// 意図する余白 - この要素の下側のレディング
-		margin-block-end: calc( var(--wp--custom--spacing--small) - (  1em - 1em * var(--wp--custom--typography--line-height--heading) ) / 2 );
 	}
 }
 

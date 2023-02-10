@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc
 Tested up to: 6.1
 Requires PHP: 7.2
-Stable tag: 1.3.4
+Stable tag: 1.3.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,6 +12,11 @@ The X-T9 is designed on the premise of full site editing function, and the user 
 GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
+
+[ Design Tuning ] Update Header Pattern
+
+1.3.5
+[ Design Tuning ] Delete heading margin bottom
 
 1.3.4
 [ Bug fix ] Fix custom HTML block iframe preview don't display on editor screen.
