@@ -53,7 +53,8 @@
 
 	// Mobile menu open toggle button
 	& &__responsive-container-open {
-		margin: 10px;
+		border:1px solid var(--wp--preset--color--text-normal);
+		padding: 2px;
 	}
 }
 /* 
