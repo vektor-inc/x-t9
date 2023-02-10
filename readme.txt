@@ -13,7 +13,6 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
-1.4.0
 [ Design Tuning ] Update Header Pattern
 
 1.3.5
