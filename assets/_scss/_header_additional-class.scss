@@ -10,3 +10,11 @@
 		font-size: clamp(10px, calc((100vw - 360px) * (4 / (1200 - 360)) + 10px), 14px);
 	}
 }
+.header--transparent {
+	position:absolute;
+	z-index: 100;
+	width:100svw;
+	.edit-site-block-editor__block-list & {
+		max-width:100svw;
+	} 
+}
