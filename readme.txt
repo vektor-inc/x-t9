@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ] Add content constrained to 1 column template ( cope with 6.2 )
+
 1.4.0
 [ Design Tuning ] Update Header Pattern
 
