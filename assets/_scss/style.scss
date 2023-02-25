@@ -46,7 +46,8 @@ but actually not added case exist that reset padding to be aboid confusing.
 .has-background,
 :is(.wp-block-group):where(.has-background) {
 	padding: 0; // 編集画面の枠線ブロックなど弊害が出るのでこの指定は解除したい
-	overflow: hidden; // cope with height
+	// Don't use hidden. Because it bring to header navigation sub menu hidden.
+	// overflow: hidden; 
 }
 
 .wp-block-button .has-background {
