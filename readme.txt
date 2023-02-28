@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Tuning ] Delete margin-top from next element of Cover and Group Block.
 [ Design Tuning ] Cope with Dark bg color about image caption text color.
 
 1.5.0
