@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Tuning ] Cope with Dark bg color about image caption text color.
+
 1.5.0
 [ Design Tuning ] Update Header Pattern
 [ Specification Change ] Add content constrained to 1 column template ( cope with 6.2 )
