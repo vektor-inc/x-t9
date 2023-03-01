@@ -1,22 +1,28 @@
-.alignfull {
-	width: auto;
-	/* Don't use 100vw!! cope with windows */
-	margin-left: calc(50% - 50vw);
-	margin-right: calc(50% - 50vw);
-
-	&.wp-block-image {
-		// Default block style overwrite
-		max-width: 100vw;
+.alignfull,
+.vk_outer-width-full {
+	&,
+	.is-layout-constrained & {
+		width: auto;
+		max-width: 100vw !important;
+		/* Don't use 100vw!! cope with windows */
+		margin-left: calc(50% - 50vw) !important;
+		margin-right: calc(50% - 50vw) !important;
+		&.wp-block-image {
+			// Default block style overwrite
+			max-width: 100vw;
+		}
 	}
 }
 
 .alignwide {
-	width: calc(100% + (100vw - 100%) / 2);
-	margin-left: calc((100% - 100vw) / 4);
-	margin-right: calc((100% - 100vw) / 4);
-
-	&.wp-block-image {
-		max-width: 100vw;
+	&,
+	.is-layout-constrained & {
+		width: calc(100% + (100vw - 100%) / 2);
+		margin-left: calc((100% - 100vw) / 4) !important;
+		margin-right: calc((100% - 100vw) / 4) !important;
+		&.wp-block-image {
+			max-width: 100vw;
+		}
 	}
 }
 
