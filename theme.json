@@ -222,7 +222,7 @@
 				"sidebar": "220px"
 			},
 			"radius": {
-				"button": "0.2rem"
+				"button": "0.1rem"
 			},
 			"font": {
 				"scale": "1.15"
