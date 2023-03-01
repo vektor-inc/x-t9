@@ -15,6 +15,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 [ Design Tuning ] Delete margin-top from next element of Cover and Group Block.
 [ Design Tuning ] Cope with Dark bg color about image caption text color.
+[ Bug fix ] Fix sidebar tag cloud Block not specified post_tag.
 
 1.5.0
 [ Design Tuning ] Update Header Pattern
