@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc
 Tested up to: 6.1
 Requires PHP: 7.2
-Stable tag: 1.5.0
+Stable tag: 1.6.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+1.6.0
 [ Design Specification Change ] Button border-radius 0.2rem -> 0.1rem
 [ Design Tuning ] Delete margin-top from next element of Cover and Group Block.
 [ Design Tuning ] Cope with Dark bg color about image caption text color.
