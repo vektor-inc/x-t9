@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Specification Change ] Change main layout gap XL -> L
+
 1.6.0
 [ Design Specification Change ] Button border-radius 0.2rem -> 0.1rem
 [ Design Tuning ] Delete margin-top from next element of Cover and Group Block.
