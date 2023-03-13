@@ -6,6 +6,9 @@
 			"contentSize": "var(--wp--custom--content-size--normal)",
 			"wideSize": "calc( var(--wp--custom--content-size--normal) + ( 100vw - var(--wp--custom--content-size--normal) ) / 2 )"
 		},
+		"position": {
+			"sticky": true
+		},
 		"color": {
 			"background": true,
 			"text": true,
