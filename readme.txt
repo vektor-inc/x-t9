@@ -15,6 +15,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 [ Design Specification Change ] Change main layout gap XL -> L
 [ Specification Change ] Cope with position sticky ( WordPress 6.2 )
+[ Other ] Apply is-style-scrolled-header class to header
 
 1.6.0
 [ Design Specification Change ] Button border-radius 0.2rem -> 0.1rem
