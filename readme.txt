@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+1.7.0
 [ Design Specification Change ] Change main layout gap XL -> L
 [ Specification Change ] Cope with position sticky ( WordPress 6.2 )
 [ Other ] Apply is-style-scrolled-header class to header
