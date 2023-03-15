@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ] Change button outline border width 2px -> 1px
+
 1.7.0
 [ Design Specification Change ] Change main layout gap XL -> L
 [ Specification Change ] Cope with position sticky ( WordPress 6.2 )
