@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc
 Tested up to: 6.1
 Requires PHP: 7.2
-Stable tag: 1.8.0
+Stable tag: 1.8.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,7 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
-[ Design Bug Fix ] Cope with VK Blocks Button Color
+1.8.1
+[ Design Bug Fix ] Cope with VK Blocks Button hover color and post list title underline
 
 1.8.0
 [ Specification Change ] Change button outline border width 2px -> 1px
