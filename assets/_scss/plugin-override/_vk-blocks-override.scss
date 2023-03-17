@@ -1,0 +1,11 @@
+// Cope with VK Button Block hover color
+.vk_button .is-style-outline:hover.has-vk-color-primary-color{
+	&,
+	.editor-styles-wrapper & {
+		--wp--preset--color--vk-color-primary:var(--wp--preset--color--primary-hover);
+	}
+}
+// Cope with post list block title
+.postListText_title a {
+	text-decoration: none;
+}
