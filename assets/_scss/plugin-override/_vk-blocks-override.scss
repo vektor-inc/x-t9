@@ -6,6 +6,7 @@
 	}
 }
 // Cope with post list block title
-.postListText_title a {
+.postListText_title a,
+.vk_post_title > a {
 	text-decoration: none;
 }
