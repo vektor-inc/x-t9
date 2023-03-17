@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Bug Fix ] Cope with VK Blocks Button Color
+
 1.8.0
 [ Specification Change ] Change button outline border width 2px -> 1px
 
