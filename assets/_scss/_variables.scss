@@ -13,6 +13,8 @@ $xxl-min: 1400px;
 body {
 	--vk-size-radius: var(--wp--custom--radius--button);
 	--vk-color-border-light: var(--wp--preset--color--border-normal);
+	// cope with VK Blocks
+	--wp--preset--color--vk-color-primary: var(--wp--preset--color--primary);
 }
 
 /*-----------------------------------------------------------------------------------
