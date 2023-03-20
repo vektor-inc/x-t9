@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Desin Tuning ] Cope with VK Blocks Button color and core button hover color
+
 1.8.2
 [ Design Bug Fix ] Cope with VK Blocks Pro Card Layout title link under line 
 
