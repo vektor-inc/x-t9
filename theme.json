@@ -9,6 +9,9 @@
 		"position": {
 			"sticky": true
 		},
+		"dimensions": {
+			"minHeight": true
+		},
 		"color": {
 			"background": true,
 			"text": true,
@@ -314,6 +317,11 @@
 			"core/button": {
 				"color": {
 					"background": "var(--wp--preset--color--primary)"
+				}
+			},
+			"core/cover": {
+				"dimensions": {
+					"minHeight": "0"
 				}
 			},
 			"core/navigation": {
