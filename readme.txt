@@ -14,6 +14,9 @@ GitHub : https://github.com/vektor-inc/x-t9
 == Changelog ==
 
 [ Specification Change ][ theme.json ] add specify min-height 0 to cover block
+[ Desin Tuning ] Cope with VK Blocks Button color and core button hover color
+[ Desin Tuning ] Specify the select box max width
+[ Desin Tuning ] Cope with VK Blocks Pro Table of Contents Block
 
 1.8.2
 [ Design Bug Fix ] Cope with VK Blocks Pro Card Layout title link under line 

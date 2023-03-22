@@ -56,7 +56,7 @@
 ul.wp-block-archives-list,
 ul.wp-block-categories-list,
 ul[class*="wp-block"][class*="__list"],
-ul[class*="vk_"][class*="list"] {
+ul[class*="vk_"][class*="list"]:where(:not(.vk_tableOfContents_list)) {
 	padding: 0;
 	margin: 0;
 	--vk-margin-list-menu-left-first: var(--wp--custom--spacing--menu-indent);
