@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc
 Tested up to: 6.1
 Requires PHP: 7.2
-Stable tag: 1.8.2
+Stable tag: 1.9.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+1.9.0
 [ Specification Change ][ theme.json ] add specify min-height 0 to cover block
 [ Desin Tuning ] Cope with VK Blocks Button color and core button hover color
 [ Desin Tuning ] Specify the select box max width
