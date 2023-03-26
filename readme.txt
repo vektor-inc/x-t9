@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ][ page-header ] add container width group to wrap
+
 1.9.0
 [ Specification Change ][ theme.json ] add specify min-height 0 to cover block
 [ Desin Tuning ] Cope with VK Blocks Button color and core button hover color
