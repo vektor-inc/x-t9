@@ -85,22 +85,3 @@ body > .is-root-container:not(.wp-site-blocks),
 .is-layout-constrained > .wp-block-spacer + * {
   margin-block-start: 0;
 }
-
-/* Inline Code ------------------------------------------------- */
-.rich-text {
-  &:not(pre) > code {
-    display: inline-flex;
-    margin: 0 0.5em;
-    padding: 0.25em 0.5em;
-    align-items: center;
-    background-color: #f7f7f7;
-    border: 1px solid #d9d9d9;
-    border-radius: 2px;
-    color: #333;
-    font-size: 0.9em;
-    line-height: 1;
-  }
-  &:focus:not(pre) > code[data-rich-text-format-boundary] {
-    background-color: #d9d9d9;
-  }
-}
