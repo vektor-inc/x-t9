@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Add ] Add Search Result Template
 [ Design Tuning ] Add styles to inline code block.
 
 1.10.0
