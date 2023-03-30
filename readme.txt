@@ -15,6 +15,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 [ Add ] Add Search Result Template
 [ Design Tuning ] Add styles to inline code block.
+[ Design Tuning ] Tagcloud Block
 
 1.10.0
 [ Specification Change ][ page-header ] add container width group to wrap
