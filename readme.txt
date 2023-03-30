@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc
 Tested up to: 6.1
 Requires PHP: 7.2
-Stable tag: 1.3.5
+Stable tag: 1.10.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,43 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Add ] Add Search Result Template
+
+1.10.0
+[ Specification Change ][ page-header ] add container width group to wrap
+
+1.9.0
+[ Specification Change ][ theme.json ] add specify min-height 0 to cover block
+[ Desin Tuning ] Cope with VK Blocks Button color and core button hover color
+[ Desin Tuning ] Specify the select box max width
+[ Desin Tuning ] Cope with VK Blocks Pro Table of Contents Block
+[ Bug fix ] Mobile menu button position right
+
+1.8.2
+[ Design Bug Fix ] Cope with VK Blocks Pro Card Layout title link under line 
+
+1.8.1
+[ Design Bug Fix ] Cope with VK Blocks Button hover color and post list title underline
+
+1.8.0
+[ Specification Change ] Change button outline border width 2px -> 1px
+
+1.7.0
+[ Design Specification Change ] Change main layout gap XL -> L
+[ Specification Change ] Cope with position sticky ( WordPress 6.2 )
+[ Other ] Apply is-style-scrolled-header class to header
+
+1.6.0
+[ Design Specification Change ] Button border-radius 0.2rem -> 0.1rem
+[ Design Tuning ] Delete margin-top from next element of Cover and Group Block.
+[ Design Tuning ] Cope with Dark bg color about image caption text color.
+[ Bug fix ] Fix sidebar tag cloud Block not specified post_tag.
+
+1.5.0
+[ Design Tuning ] Update Header Pattern
+[ Specification Change ] Add content constrained to 1 column template ( cope with 6.2 )
+
+1.4.0
 [ Design Tuning ] Update Header Pattern
 
 1.3.5

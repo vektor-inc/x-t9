@@ -38,5 +38,5 @@ return array(
 <div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-xxs"></div>
 <!-- /wp:spacer -->
 
-<!-- wp:tag-cloud {"taxonomy":"category","smallestFontSize":"0.75rem","largestFontSize":"1.25rem"} /-->',
+<!-- wp:tag-cloud {"taxonomy":"post_tag","smallestFontSize":"0.75rem","largestFontSize":"1.25rem","style":{"spacing":{"margin":{"top":"0","right":"0","bottom":"0","left":"0"}}}} /-->',
 );

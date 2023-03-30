@@ -1,12 +1,9 @@
 .btn-primary {
 	background-color: var(--wp--preset--color--primary);
 	border-color: var(--wp--preset--color--primary);
-	:hover{
+	&:hover{
 		background-color: var(--wp--preset--color--primary-hover);
 	}
-}
-.btn {
-	border-radius: var(--vk-size-radius);
 }
 .btn-sm {
 	padding-left:1.25em;

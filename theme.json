@@ -6,6 +6,12 @@
 			"contentSize": "var(--wp--custom--content-size--normal)",
 			"wideSize": "calc( var(--wp--custom--content-size--normal) + ( 100vw - var(--wp--custom--content-size--normal) ) / 2 )"
 		},
+		"position": {
+			"sticky": true
+		},
+		"dimensions": {
+			"minHeight": true
+		},
 		"color": {
 			"background": true,
 			"text": true,
@@ -222,7 +228,7 @@
 				"sidebar": "220px"
 			},
 			"radius": {
-				"button": "0.2rem"
+				"button": "0.1rem"
 			},
 			"font": {
 				"scale": "1.15"
@@ -311,6 +317,11 @@
 			"core/button": {
 				"color": {
 					"background": "var(--wp--preset--color--primary)"
+				}
+			},
+			"core/cover": {
+				"dimensions": {
+					"minHeight": "0"
 				}
 			},
 			"core/navigation": {

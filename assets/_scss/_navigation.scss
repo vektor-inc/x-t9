@@ -3,6 +3,12 @@
  */
 
 .wp-block-navigation {
+	// Cope with mobile menu in align right
+	&.items-justified-right {
+		& > :where( button ) {
+			float:right;
+		}
+	}
 	--submenu-icon-size: 12px;
 	--nav-top-item-padding-horizontal: 0.9em;
 

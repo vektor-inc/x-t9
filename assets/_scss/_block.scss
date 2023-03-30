@@ -27,6 +27,8 @@
 /* Image ------------------------------------------------- */
 .wp-block-image figcaption {
 	margin-bottom: 0;
+	// Probably this color specify is become could set from theme.json near future but now first aid.
+	color:var(--wp--preset--color--text-normal);
 }
 
 /*-------------------------------------------*/
@@ -54,7 +56,7 @@
 ul.wp-block-archives-list,
 ul.wp-block-categories-list,
 ul[class*="wp-block"][class*="__list"],
-ul[class*="vk_"][class*="list"] {
+ul[class*="vk_"][class*="list"]:where(:not(.vk_tableOfContents_list)) {
 	padding: 0;
 	margin: 0;
 	--vk-margin-list-menu-left-first: var(--wp--custom--spacing--menu-indent);
