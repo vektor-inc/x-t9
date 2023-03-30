@@ -133,7 +133,7 @@ ul[class*="vk_"][class*="list"]:where(:not(.vk_tableOfContents_list)) {
 /*-------------------------------------------*/
 /*  Tag Cloud
 /*-------------------------------------------*/
-.wp-block-tag-cloud .tag-cloud-link {
+.tag-cloud-link {
 	color: var(--wp--preset--color--text-secondary);
 	border: solid 1px var(--wp--preset--color--border-normal);
 	padding: .2em .4em;
