@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Add ] Add Search Result Template
+
 1.10.0
 [ Specification Change ][ page-header ] add container width group to wrap
 
