@@ -129,3 +129,24 @@ ul[class*="vk_"][class*="list"]:where(:not(.vk_tableOfContents_list)) {
 		width: 100%;
 	}
 }
+
+/*-------------------------------------------*/
+/*  Tag Cloud
+/*-------------------------------------------*/
+.tag-cloud-link {
+	color: var(--wp--preset--color--text-secondary);
+	border: solid 1px var(--wp--preset--color--border-normal);
+	padding: .2em .4em;
+	margin: .1em ;
+	border-radius: 2px;
+	text-decoration: none;
+	line-height: 1.2;
+	&:before {
+		content: '#';
+		padding-right: 2px;
+		font-size: .85em;
+	}
+	&:hover {
+		color: var(--wp--preset--color--text-normal);
+	}
+}
