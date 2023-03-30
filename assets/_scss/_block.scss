@@ -134,22 +134,19 @@ ul[class*="vk_"][class*="list"]:where(:not(.vk_tableOfContents_list)) {
 /*  Tag Cloud
 /*-------------------------------------------*/
 .wp-block-tag-cloud .tag-cloud-link {
-	//background: var(--wp--preset--color--bg-secondary) ;
 	color: var(--wp--preset--color--text-secondary);
-	border: solid 1px var(--wp--preset--color--text-secondary);
+	border: solid 1px var(--wp--preset--color--border-normal);
 	padding: .2em .4em;
 	margin: .1em ;
-	border-radius: 4px;
+	border-radius: 2px;
 	text-decoration: none;
 	line-height: 1.2;
-
 	&:before {
 		content: '#';
 		padding-right: 2px;
 		font-size: .85em;
 	}
-
 	&:hover {
-		color: var(--wp--preset--color--text-secondary);
+		color: var(--wp--preset--color--text-normal);
 	}
 }
