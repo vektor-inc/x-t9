@@ -14,7 +14,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 == Changelog ==
 
 [ Add ] Add Search Result Template
-[ Design Tuning ] Tagcloud Block
+[ Design Tuning ] Add styles to inline code block.
+[ Design Tuning ] Tag cloud Block
 [ Design Bug Fix ] Fixed the CSS that affect not intentional to Post List Block
 
 1.10.0
@@ -28,7 +29,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 [ Bug fix ] Mobile menu button position right
 
 1.8.2
-[ Design Bug Fix ] Cope with VK Blocks Pro Card Layout title link under line 
+[ Design Bug Fix ] Cope with VK Blocks Pro Card Layout title link under line
 
 1.8.1
 [ Design Bug Fix ] Cope with VK Blocks Button hover color and post list title underline
@@ -98,7 +99,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 [ Bug fix ] Cope with feature image aspect bug on a lot of title text in quely pattern image small
 
 1.2.5
-[ Specification Change / Bug fix ] built in Post template 
+[ Specification Change / Bug fix ] built in Post template
 [ Design tuning ] HTML Site Map Block
 [ Design tuning ] Header pattern
 
@@ -165,7 +166,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 1.0.0
 [ Add Theme Style ] Sweet
-[ Add Pattern ] Sidebar Layout 
+[ Add Pattern ] Sidebar Layout
 [ Specification Change ] Add button radius
 [ Specification Change ] Convert Page header to template-parts
 [ Specification Change ][ Styles ] Add H4 Design from theme.json
@@ -201,8 +202,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 [ Add Block Pattern ] Add Footer BG Secondary 3colmun pattern
 [ Add Block Pattern ] Add Footer BG Secondary pattern
 [ Add fonts ] Add Source Serif Pro
-[ Specification Change ] Change Block style name 
-[ Specification Change ] Change Template Name(Label) 
+[ Specification Change ] Change Block style name
+[ Specification Change ] Change Template Name(Label)
 
 0.11.0
 [ Add Template ] Add Page 2column template
@@ -211,10 +212,10 @@ GitHub : https://github.com/vektor-inc/x-t9
 [ Add Block Template ] Add Footer 3colmun template
 [ Add Block Style ] Column Layout / Spacer / Navigation
 [ Add Block Style ][ navigation ] Vertical with hr / Vertical text list
-[ Specification Change ] text-bright -> text-secondary / text-dark-darkbg -> text-secondary-darkbg 
+[ Specification Change ] text-bright -> text-secondary / text-dark-darkbg -> text-secondary-darkbg
 [ Specification Change ] Change Post template 2 column
 [ Specification Change ] Add Spacer common style and template update
-[ Specification Change ] Comvert to loop template 
+[ Specification Change ] Comvert to loop template
 [ Design Tuning ] Add form css ( input / select / textarea )
 [ Design Tuning ] Add Table Border CSS
 [ Design Tuning ] Add dashed border to Spacer on editor screen
@@ -240,7 +241,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 0.7.0
 [ Design Improvement ] Header pattern update
-[ Design Improvement ] Footer add .nav--text-inline 
+[ Design Improvement ] Footer add .nav--text-inline
 [ Design Improvement ] Global nav accessibility improvement
 
 0.6.1
@@ -301,7 +302,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 0.0.3
 [ Other ] Change screen shot
-[ Specification Change ][ Patterns ][ Header ][ Change default header ] Change type to using text site title 
+[ Specification Change ][ Patterns ][ Header ][ Change default header ] Change type to using text site title
 [ Specification Change ] Abolished starter content and changed to front-page.php processing
 
 0.0.2
