@@ -151,16 +151,15 @@ ul[class*="vk_"][class*="list"]:where(:not(.vk_tableOfContents_list)) {
 .wp-block-post-content {
   :not(pre) > code {
     display: inline-flex;
-    margin: 0 0.5em;
-    padding: 0.25em 0.5em;
+    margin: 0 0.4em;
+    padding: 0.2em 0.4em;
     align-items: center;
     background-color: var(--wp--preset--color--bg-secondary);
     border: 1px solid var(--wp--preset--color--border-normal);
     border-radius: 2px;
     color: var(--wp--preset--color--text-normal);
     font-size: 0.9em;
-    line-height: 1;
-
+    line-height: 1.1;
     :focus:not(pre) > code[data-rich-text-format-boundary] {
       background-color: var(--wp--preset--color--border-normal);
     }
