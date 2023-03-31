@@ -15,7 +15,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 [ Add ] Add Search Result Template
 [ Design Tuning ] Add styles to inline code block.
-[ Design Tuning ] Tagcloud Block
+[ Design Tuning ] Tag cloud Block
+[ Design Bug Fix ] Fixed the CSS that affect not intentional to Post List Block
 
 1.10.0
 [ Specification Change ][ page-header ] add container width group to wrap
