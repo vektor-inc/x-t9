@@ -97,8 +97,7 @@
 		--nav--text-inline--border: var(--wp--preset--color--border-normal-darkbg);
 	}
 
-	&> :is(.wp-block-navigation__container,
-		.wp-block-navigation__responsive-container) {
+	&> :is(.wp-block-navigation__container, .wp-block-navigation__responsive-container) {
 		.wp-block-navigation-item {
 			border-left: 1px solid var(--nav--text-inline--border);
 		}
