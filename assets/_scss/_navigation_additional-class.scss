@@ -2,7 +2,7 @@
  * Navigation Additonal class
  */
 
-@use "variables" as var;
+@use 'variables' as var;
 
 .nav--open--lg-up {
 	@media (min-width: var.$lg-min) {
@@ -46,11 +46,11 @@
 	}
 }
 
-/****************************************************** 
+/******************************************************
  * active-border-bottom
  */
 
-*[class*="nav--active-border-bottom"] {
+*[class*='nav--active-border-bottom'] {
 	.wp-block-navigation__responsive-container:where(:not(.is-menu-open)) {
 		:where(.wp-block-navigation__container, .wp-block-page-list) {
 			&>.wp-block-navigation-item {
@@ -62,7 +62,7 @@
 				&>a::after {
 					transition: all 0.2s ease-out;
 					width: 0%;
-					content: "";
+					content: '';
 					display: block;
 					bottom: 0;
 					left: 0;
@@ -80,7 +80,7 @@
 	}
 }
 
-/****************************************************** 
+/******************************************************
  * Text inline
  is-style-nav--text-inline
 
@@ -89,7 +89,7 @@
 	. wp-block-navigation__container
 
  */
-*[class*="nav--text-inline"] {
+*[class*='nav--text-inline'] {
 	--nav--text-inline--border: var(--wp--preset--color--border-normal);
 
 	// border:1px solid #ff0000 !important;
@@ -147,10 +147,10 @@
 	}
 }
 
-/****************************************************** 
+/******************************************************
  * Vertical with hr
  */
-*[class*="nav--vertical-with-hr"] {
+*[class*='nav--vertical-with-hr'] {
 	--wp--custom--spacing--menu-indent: 0.8em;
 
 	.wp-block-navigation-item {
