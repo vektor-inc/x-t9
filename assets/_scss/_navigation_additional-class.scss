@@ -1,4 +1,4 @@
-/* 
+/*
  * Navigation Additonal class
  */
 
@@ -70,7 +70,7 @@
 					border-bottom: 2px solid var(--wp--preset--color--primary);
 				}
 
-				&> :is(a:hover, .current-menu-item > a) {
+				&> :is(a:hover, .current-menu-item > a, .current-menu-ancestor) {
 					&::after {
 						width: 100%;
 					}
@@ -84,7 +84,7 @@
  * Text inline
  is-style-nav--text-inline
 
-	nav.wp-block-navigation.is-style-nav--text-inline 
+	nav.wp-block-navigation.is-style-nav--text-inline
 	> .wp-block-navigation__responsive-container.is-menu-open.has-modal-open
 	. wp-block-navigation__container
 
@@ -114,7 +114,6 @@
 		// gap: 0;
 
 		&>.wp-block-navigation-item {
-
 			&:last-child {
 				border-right: 1px solid var(--nav--text-inline--border);
 			}
