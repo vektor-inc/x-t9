@@ -54,91 +54,72 @@
 /*-------------------------------------------*/
 /*  Category / Archive block
 /*-------------------------------------------*/
-ul.wp-block-archives-list,
-ul.wp-block-categories-list,
-ul[class*="wp-block"][class*="__list"]:where(:not(.wp-block-latest-posts__list)),
-ul[class*="vk_"][class*="list"]:where(:not(.vk_tableOfContents_list)) {
-    padding: 0;
-    margin: 0;
-    --vk-margin-list-menu-left-first: var(--wp--custom--spacing--menu-indent);
-  ul {
-    padding: 0;
-    margin: 0;
-  }
-  & > li:first-child {
-    &:is(.current-cat, .current_page_item, [area-current='page']) {
-      border-top: 1px solid var(--wp--preset--color--border-normal);
-    }
-  }
+ul:is(.wp-block-archives-list,
+	.wp-block-categories-list,
+	.vk_taxonomy-list,
+	.vk_archive-list) {
+	padding: 0;
+	margin: 0;
+	--vk-margin-list-menu-left-first: var(--wp--custom--spacing--menu-indent);
 
-  li {
-    list-style: none;
-    margin: 0;
-    font-size: var(--wp--preset--font-size--small);
+	ul {
+		padding: 0;
+		margin: 0;
+	}
 
-    a {
-      display: block;
-      padding: 0.5em var(--vk-margin-list-menu-left-first);
-      border-bottom: 1px solid var(--wp--preset--color--border-normal);
-      text-decoration: none;
-    }
+	&>li:first-child {
+		&:is(.current-cat, .current_page_item, [area-current='page']) {
+			border-top: 1px solid var(--wp--preset--color--border-normal);
+		}
+	}
 
-    a:hover,
-    &.current-cat > a,
-    &.current_page_item > a,
-    a[area-current='page'] {
-      background-color: rgba(0, 0, 0, 0.03);
-    }
-  }
+	li {
+		list-style: none;
+		margin: 0;
+		font-size: var(--wp--preset--font-size--small);
 
-  li li a {
-    padding-left: calc(
-      var(--vk-margin-list-menu-left-first) +
-        var(--wp--custom--spacing--menu-indent)
-    );
-  }
+		a {
+			display: block;
+			padding: 0.5em var(--vk-margin-list-menu-left-first);
+			border-bottom: 1px solid var(--wp--preset--color--border-normal);
+			text-decoration: none;
+		}
 
-  li li li a {
-    padding-left: calc(
-      var(--vk-margin-list-menu-left-first) +
-        var(--wp--custom--spacing--menu-indent) * 2
-    );
-  }
+		a:hover,
+		&.current-cat>a,
+		&.current_page_item>a,
+		a[area-current='page'] {
+			background-color: rgba(0, 0, 0, 0.03);
+		}
+	}
 
-  li li li li a {
-    padding-left: calc(
-      var(--vk-margin-list-menu-left-first) +
-        var(--wp--custom--spacing--menu-indent) * 3
-    );
-  }
+	li li a {
+		padding-left: calc(var(--vk-margin-list-menu-left-first) + var(--wp--custom--spacing--menu-indent));
+	}
 
-  li li li li li a {
-    padding-left: calc(
-      var(--vk-margin-list-menu-left-first) +
-        var(--wp--custom--spacing--menu-indent) * 4
-    );
-  }
+	li li li a {
+		padding-left: calc(var(--vk-margin-list-menu-left-first) + var(--wp--custom--spacing--menu-indent) * 2);
+	}
 
-  li li li li li li a {
-    padding-left: calc(
-      var(--vk-margin-list-menu-left-first) +
-        var(--wp--custom--spacing--menu-indent) * 5
-    );
-  }
+	li li li li a {
+		padding-left: calc(var(--vk-margin-list-menu-left-first) + var(--wp--custom--spacing--menu-indent) * 3);
+	}
 
-  li li li li li li li a {
-    padding-left: calc(
-      var(--vk-margin-list-menu-left-first) +
-        var(--wp--custom--spacing--menu-indent) * 6
-    );
-  }
+	li li li li li a {
+		padding-left: calc(var(--vk-margin-list-menu-left-first) + var(--wp--custom--spacing--menu-indent) * 4);
+	}
 
-  li li li li li li li li a {
-    padding-left: calc(
-      var(--vk-margin-list-menu-left-first) +
-        var(--wp--custom--spacing--menu-indent) * 7
-    );
-  }
+	li li li li li li a {
+		padding-left: calc(var(--vk-margin-list-menu-left-first) + var(--wp--custom--spacing--menu-indent) * 5);
+	}
+
+	li li li li li li li a {
+		padding-left: calc(var(--vk-margin-list-menu-left-first) + var(--wp--custom--spacing--menu-indent) * 6);
+	}
+
+	li li li li li li li li a {
+		padding-left: calc(var(--vk-margin-list-menu-left-first) + var(--wp--custom--spacing--menu-indent) * 7);
+	}
 }
 
 *[class*='wp-block'][class*='-dropdown'] {
