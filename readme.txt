@@ -14,6 +14,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 == Changelog ==
 
 [ Design Tuning ] Add styles when displaying child level menu pages in the navigation block.
+[ Specification Change ] Change list style selector for side navigation
 
 1.11.0
 [ Add ] Add Search Result Template
