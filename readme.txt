@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ] Font size system
 [ Design Tuning ] Add styles when displaying child level menu pages in the navigation block.
 [ Specification Change ] Change list style selector for side navigation
 
