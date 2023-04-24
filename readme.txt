@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc
 Tested up to: 6.2
 Requires PHP: 7.2
-Stable tag: 1.11.0
+Stable tag: 1.12.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,6 +12,11 @@ The X-T9 is designed on the premise of full site editing function, and the user 
 GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
+
+1.12.0
+[ Specification Change ] Font size system
+[ Design Tuning ] Add styles when displaying child level menu pages in the navigation block.
+[ Specification Change ] Change list style selector for side navigation
 
 1.11.0
 [ Add ] Add Search Result Template
