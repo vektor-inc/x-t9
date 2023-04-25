@@ -186,7 +186,7 @@
 					"fluid": false,
 					"name": "Small",
 					"slug": "small",
-					"size": "clamp(12.56px, calc( 12.56px + (100vw - 360px) * ( (13.56 - 12.56) / (1200 - 360)) ), 13.56px)"
+					"size": "clamp(12.56px, calc( 12.56px + (100vw - 360px) * ( (13.91 - 12.56) / (1200 - 360)) ), 13.91px)"
 				},
 				{
 					"name": "Medium",
@@ -196,27 +196,27 @@
 				{
 					"name": "Large",
 					"slug": "large",
-					"size": "clamp(15.61px, calc( 15.61px + (100vw - 360px) * ( (18.88 - 15.61) / (1200 - 360)) ), 18.88px)"
+					"size": "clamp(15.61px, calc( 15.61px + (100vw - 360px) * ( (18.4 - 15.61) / (1200 - 360)) ), 18.4px)"
 				},
 				{
 					"name": "X Large",
 					"slug": "x-large",
-					"size": "clamp(17.4px, calc( 17.4px + (100vw - 360px) * ( (22.28 - 17.4) / (1200 - 360)) ), 22.28px)"
+					"size": "clamp(17.4px, calc( 17.4px + (100vw - 360px) * ( (21.16 - 17.4) / (1200 - 360)) ), 21.16px)"
 				},
 				{
 					"name": "XX Large",
 					"slug": "xx-large",
-					"size": "clamp(19.4px, calc( 19.4px + (100vw - 360px) * ( (26.29 - 19.4) / (1200 - 360)) ), 26.29px)"
+					"size": "clamp(19.4px, calc( 19.4px + (100vw - 360px) * ( (24.33 - 19.4) / (1200 - 360)) ), 24.33px)"
 				},
 				{
 					"name": "XXX Large",
 					"slug": "xxx-large",
-					"size": "clamp(21.64px, calc( 21.64px + (100vw - 360px) * ( (31 - 21.64) / (1200 - 360)) ), 31px)"
+					"size": "clamp(21.64px, calc( 21.64px + (100vw - 360px) * ( (27.98 - 21.64) / (1200 - 360)) ), 27.98px)"
 				},
 				{
 					"name": "Huge",
 					"slug": "huge",
-					"size": "clamp(24.12px, calc( 24.12px + (100vw - 360px) * ( (36.6-24.12) / (1200 - 360)) ), 36.6px)"
+					"size": "clamp(24.12px, calc( 24.12px + (100vw - 360px) * ( (32.18-24.12) / (1200 - 360)) ), 32.18px)"
 				}
 			]
 		},
