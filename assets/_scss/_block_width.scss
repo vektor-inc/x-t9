@@ -1,12 +1,13 @@
 .alignfull,
 .vk_outer-width-full {
+
 	&,
 	.is-layout-constrained & {
 		width: auto;
 		max-width: 100vw !important;
-		/* Don't use 100vw!! cope with windows */
 		margin-left: calc(50% - 50vw) !important;
 		margin-right: calc(50% - 50vw) !important;
+
 		&.wp-block-image {
 			// Default block style overwrite
 			max-width: 100vw;
@@ -15,19 +16,25 @@
 }
 
 .alignwide {
-	&,
-	.is-layout-constrained & {
+	.is-layout-constrained:where(:not(:is(.alignfull, .alignwide)))>& {
 		width: calc(100% + (100vw - 100%) / 2);
 		margin-left: calc((100% - 100vw) / 4) !important;
 		margin-right: calc((100% - 100vw) / 4) !important;
+
 		&.wp-block-image {
 			max-width: 100vw;
 		}
 	}
 }
 
-.vk_slider {
-	&.alignfull {
-		width:100vw;
+// in addition to setted _scss/_vk-blocks-override.scss
+
+.is-style-main-layout:has(.is-style-main-layout-sidebar) {
+	&>.wp-block-column {
+		:is(.alignfull, alignwide) {
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+			width: 100%;
+		}
 	}
 }
