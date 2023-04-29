@@ -17,6 +17,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 [ Design Tuning ] Header pattern update
 [ Bug fix ] Fix not intend horizontal scrollbar display
 [ Bug fix ] Fix content width control
+[ Bug fix ] Add restriction to alignfull and alignwide that in the columns block of has sidebar
 
 1.13.0
 [ Specification Change ] Font size system
