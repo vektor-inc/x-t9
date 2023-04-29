@@ -16,6 +16,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 [ Specification Change ] Change sidebar tag cloud max font size 1.25 -> 0.85
 [ Design Tuning ] Header pattern update
 [ Bug fix ] Fix not intend horizontal scrollbar display
+[ Bug fix ] Fix content width control
 
 1.13.0
 [ Specification Change ] Font size system

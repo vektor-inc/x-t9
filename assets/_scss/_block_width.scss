@@ -15,8 +15,7 @@
 }
 
 .alignwide {
-	&,
-	.is-layout-constrained & {
+	.is-layout-constrained:where(:not(:is(.alignfull,.alignwide))) > & {
 		width: calc(100% + (100vw - 100%) / 2);
 		margin-left: calc((100% - 100vw) / 4) !important;
 		margin-right: calc((100% - 100vw) / 4) !important;
@@ -25,6 +24,7 @@
 		}
 	}
 }
+// in addition to setted _scss/_vk-blocks-override.scss
 
 .vk_slider {
 	&.alignfull {
