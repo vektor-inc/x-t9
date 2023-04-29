@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc
 Tested up to: 6.2
 Requires PHP: 7.2
-Stable tag: 1.13.0
+Stable tag: 1.14.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+1.14.0
 [ Specification Change ] Change sidebar tag cloud max font size 1.25 -> 0.85
 [ Design Tuning ] Header pattern update
 [ Bug fix ] Fix not intend horizontal scrollbar display
