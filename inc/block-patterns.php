@@ -14,14 +14,14 @@
  */
 function xt9_register_block_patterns() {
 	$block_pattern_categories = array(
-		'featured'   => array( 'label' => _x( 'Featured', 'Pattern Category', 'x-t9' ) ),
-		'header'     => array( 'label' => _x( 'Headers', 'Pattern Category', 'x-t9' ) ),
-		'footer'     => array( 'label' => _x( 'Footers', 'Pattern Category', 'x-t9' ) ),
-		'sidebar'    => array( 'label' => _x( 'Sidebars', 'Pattern Category', 'x-t9' ) ),
-		'layout'     => array( 'label' => _x( 'Layout', 'Pattern Category', 'x-t9' ) ),
-		'query'      => array( 'label' => _x( 'Query', 'Pattern Category', 'x-t9' ) ),
-		'pages'      => array( 'label' => _x( 'Pages', 'Pattern Category', 'x-t9' ) ),
-		'pr_content' => array( 'label' => _x( 'PR Content', 'Pattern Category', 'x-t9' ) ),
+		'featured'    => array( 'label' => _x( 'Featured', 'Pattern Category', 'x-t9' ) ),
+		'header'      => array( 'label' => _x( 'Headers', 'Pattern Category', 'x-t9' ) ),
+		'footer'      => array( 'label' => _x( 'Footers', 'Pattern Category', 'x-t9' ) ),
+		'sidebar'     => array( 'label' => _x( 'Sidebars', 'Pattern Category', 'x-t9' ) ),
+		'layout'      => array( 'label' => _x( 'Layout', 'Pattern Category', 'x-t9' ) ),
+		'query'       => array( 'label' => _x( 'Query', 'Pattern Category', 'x-t9' ) ),
+		'pages'       => array( 'label' => _x( 'Pages', 'Pattern Category', 'x-t9' ) ),
+		'pr-contents' => array( 'label' => _x( 'PR Contents', 'Pattern Category', 'x-t9' ) ),
 	);
 
 	/**
@@ -48,8 +48,8 @@ function xt9_register_block_patterns() {
 	}
 
 	$block_patterns = array(
-		'columns/columns-menu',
-		'columns/columns-sidebar-layout',
+		'pr-contents/columns-menu',
+		'layout/sidebar-right',
 		'featured/featured-columns-menu',
 		'featured/featured-hero-media-and-text',
 		'featured/featured-post-list',
@@ -68,8 +68,7 @@ function xt9_register_block_patterns() {
 		'sidebar/sidebar-post-category-and-archive',
 		'query-image-left',
 		'query-subcontent',
-		'post-template-image-left', // used by loop-archive.html
-		// 'post-template-subcontent',
+		'post-template-image-left', // used by loop-archive.html.
 	);
 
 	/**
