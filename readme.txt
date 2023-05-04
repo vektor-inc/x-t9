@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ] Change pattern category
+
 1.14.0
 [ Specification Change ] Change sidebar tag cloud max font size 1.25 -> 0.85
 [ Design Tuning ] Header pattern update
