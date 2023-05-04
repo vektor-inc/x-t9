@@ -48,8 +48,8 @@ function xt9_register_block_patterns() {
 	}
 
 	$block_patterns = array(
-		'columns/columns-menu',
-		'columns/columns-sidebar-layout',
+		// 'columns/columns-menu',
+		// 'columns/columns-sidebar-layout',
 		'featured/featured-columns-menu',
 		'featured/featured-hero-media-and-text',
 		'featured/featured-post-list',
@@ -64,7 +64,7 @@ function xt9_register_block_patterns() {
 		'header/logo---nav---contact',
 		'header/logo-nav---contact',
 		'header/logo-title--sns-contact__nav',
-		'sidebar/sidebar-post-category-and-archive',
+		// 'sidebar/sidebar-post-category-and-archive',
 		'query-image-left',
 		'query-subcontent',
 		'post-template-image-left', // used by loop-archive.html
