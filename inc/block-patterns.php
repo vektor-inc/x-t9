@@ -12,14 +12,16 @@
  *
  * @return void
  */
-function x29_register_block_patterns() {
+function xt9_register_block_patterns() {
 	$block_pattern_categories = array(
-		'featured' => array( 'label' => _x( 'Featured', 'Pattern Category', 'x-t9' ) ),
-		'header'   => array( 'label' => _x( 'Headers', 'Pattern Category', 'x-t9' ) ),
-		'footer'   => array( 'label' => _x( 'Footers', 'Pattern Category', 'x-t9' ) ),
-		'sidebar'  => array( 'label' => _x( 'Sidebars', 'Pattern Category', 'x-t9' ) ),
-		'query'    => array( 'label' => _x( 'Query', 'Pattern Category', 'x-t9' ) ),
-		'pages'    => array( 'label' => _x( 'Pages', 'Pattern Category', 'x-t9' ) ),
+		'featured'   => array( 'label' => _x( 'Featured', 'Pattern Category', 'x-t9' ) ),
+		'header'     => array( 'label' => _x( 'Headers', 'Pattern Category', 'x-t9' ) ),
+		'footer'     => array( 'label' => _x( 'Footers', 'Pattern Category', 'x-t9' ) ),
+		'sidebar'    => array( 'label' => _x( 'Sidebars', 'Pattern Category', 'x-t9' ) ),
+		'layout'     => array( 'label' => _x( 'Layout', 'Pattern Category', 'x-t9' ) ),
+		'query'      => array( 'label' => _x( 'Query', 'Pattern Category', 'x-t9' ) ),
+		'pages'      => array( 'label' => _x( 'Pages', 'Pattern Category', 'x-t9' ) ),
+		'pr_content' => array( 'label' => _x( 'PR Content', 'Pattern Category', 'x-t9' ) ),
 	);
 
 	/**
@@ -37,7 +39,7 @@ function x29_register_block_patterns() {
 	 *     }
 	 * }
 	 */
-	$block_pattern_categories = apply_filters( 'x29_block_pattern_categories', $block_pattern_categories );
+	$block_pattern_categories = apply_filters( 'xt9_block_pattern_categories', $block_pattern_categories );
 
 	foreach ( $block_pattern_categories as $name => $properties ) {
 		if ( ! WP_Block_Pattern_Categories_Registry::get_instance()->is_registered( $name ) ) {
@@ -76,7 +78,7 @@ function x29_register_block_patterns() {
 	 *
 	 * @param array $block_patterns List of block patterns by name.
 	 */
-	$block_patterns = apply_filters( 'x29_block_patterns', $block_patterns );
+	$block_patterns = apply_filters( 'xt9_block_patterns', $block_patterns );
 
 	foreach ( $block_patterns as $block_pattern ) {
 		$pattern_file = get_theme_file_path( '/inc/patterns/' . $block_pattern . '.php' );
@@ -87,4 +89,4 @@ function x29_register_block_patterns() {
 		);
 	}
 }
-add_action( 'init', 'x29_register_block_patterns', 9 );
+add_action( 'init', 'xt9_register_block_patterns', 9 );
