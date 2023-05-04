@@ -7,7 +7,7 @@
 
 return array(
 	'title'      => __( 'Sidebar Layout', 'x-t9' ),
-	'categories' => array( 'columns' ),
+	'categories' => array( 'layout' ),
 	'content'    => '<!-- wp:columns {"className":"is-style-main-layout"} -->
 	<div class="wp-block-columns is-style-main-layout"><!-- wp:column -->
 	<div class="wp-block-column"><!-- wp:heading -->
