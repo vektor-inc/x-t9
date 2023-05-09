@@ -3,11 +3,15 @@ h1,h2,h3,h4,h5,h6,p,ul,ol {
 	margin-top:0;
 	margin-bottom:0;
 }
-body, html {
+body {
 	// Cope with not intend horizontal scrollbar display
 	// margin-left: calc(50% - 50vw) などのネガティブマージンで横スクロールが発生するのを防ぐ
 	// 本来スクロール分を調整する手法の方が正確だが、コードを簡素化するためにこの方法を採用
     overflow-x: hidden;
+
+	// @ 1.15.1 
+	// Change selector body,html {} -> body {}
+	// * If specify "html, body" then scrolled js not work 
 }
 html {
 	// 360px : 14px -> 1200px : 16px

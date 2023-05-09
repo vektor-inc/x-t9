@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug fix ] Fix Header fix not work since 1.14.0
+
 1.15.0
 [ Specification Change ] Change pattern category
 
