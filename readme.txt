@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug fix ] Fix CSS for VK Blocks Page list from ancestors CSS from ver 1.12.0
+
 1.15.1
 [ Bug fix ] Fix Header fix not work since 1.14.0
 
