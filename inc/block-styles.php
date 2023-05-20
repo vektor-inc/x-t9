@@ -80,7 +80,8 @@ register_block_style(
 		'style_handle' => 'x-t9-style',
 	)
 );
-/* Scrolled ----------------------------------------------------------- */
+
+/* Layout ----------------------------------------------------------- */
 register_block_style(
 	'core/columns',
 	array(
@@ -98,7 +99,7 @@ register_block_style(
 	),
 );
 
-/* Layout ----------------------------------------------------------- */
+/* Scrolled ----------------------------------------------------------- */
 register_block_style(
 	'core/group',
 	array(
