@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design tuning ] Padding tuning of sidebar heading
 1.15.4
 [ Bug fix ] header pattern bug fix
 
