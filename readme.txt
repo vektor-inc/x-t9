@@ -14,6 +14,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 == Changelog ==
 
 [ Design tuning ] Padding tuning of sidebar heading
+[ Specification Change ] Custom style CSS file name
+
 1.15.4
 [ Bug fix ] header pattern bug fix
 
