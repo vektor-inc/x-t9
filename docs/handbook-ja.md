@@ -27,6 +27,13 @@ X-T9 を有効化すると以下のプラグインのインストール案内が
 
 ※ VK Blocks Pro をお持ちの方は VK Blocks はインストールせずに VK Blocks Pro の zip ファイルを手動でアップロードしてください。
 
+### その他事前に入れてあるプラグイン
+
+* WP Multibyte Patch
+* Simple Page Ordering
+* Simple Lightbox
+* Create Block Theme
+* Category Order and Taxonomy Terms Order
 * All-in-One WP Migration
 
 ---
@@ -272,3 +279,8 @@ works-Industry
 * クエリを 制作実績 に変更
 * 表示件数を 6 に
 
+-----------------------------------------------
+
+運用について
+
+プラグイン Create Block Theme で
