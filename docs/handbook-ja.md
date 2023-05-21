@@ -8,10 +8,10 @@
 
 外観 > テーマ > 新規追加 から X-T9 を検索・インストール・有効化してください。
 
-* WordPress.org  
-https://wordpress.org/themes/x-t9/
 * X-T9 公式サイト  
 https://x-t9.vektor-inc.co.jp/
+* WordPress.org  
+https://wordpress.org/themes/x-t9/
 * GitHUb  
 https://github.com/vektor-inc/x-t9
 
@@ -21,20 +21,24 @@ https://github.com/vektor-inc/x-t9
 
 X-T9 を有効化すると以下のプラグインのインストール案内があります。
 
-* VK all in one Expansion Unit
-* VK Blocks
-* VK Block Patterns
+* VK All in One Expansion Unit（その他各種機能強化）
+* VK Blocks （ブロック拡張機能強化）
+* VK Block Patterns （ブロックパターン機能強化）
 
-VK Blocks Pro をお持ちの方は VK Blocks はインストールせずに VK Blocks Pro の zip ファイルを手動でアップロードしてください。
+※ VK Blocks Pro をお持ちの方は VK Blocks はインストールせずに VK Blocks Pro の zip ファイルを手動でアップロードしてください。
 
 * All-in-One WP Migration
 
 ---
 
-## ExUnit の設定
+## ▲　ExUnit 設定の変更事項
 
-* SNS > 自動挿入のチェックを外す
-* デフォルトサムネイルの設定
+事前に以下の設定を変更します。
+
+* ExUnit > 有効化設定 > Call To Action を有効に設定
+* ExUnit > メイン設定 > SNS > ソーシャルボタン > 自動挿入のチェックを外す
+* ExUnit > メイン設定 > SNS > Follow me box > Follow me ユニットを本文の下に表示する のチェックを外す
+* ExUnit > メイン設定 > デフォルトサムネイル画像の設定 > 適当に画像を登録
 
 ---
 
@@ -184,14 +188,14 @@ b. 投稿コンテンツブロックを削除してサイトエディタで編�
 
 * ExUnit > 有効化設定 >Call To Action を有効化
 * カスタム投稿タイプ CTA に新規投稿 > パターンから選ぶ
-* フッターテンプレートパーツへの配置
+* フッターテンプレートパーツへ CTA ブロックを配置
 * お問い合わせでは表示しない設定にしておく
 
 ---
 
 ## 固定ページの２カラムテンプレートを作る
 
-* 先祖階層からのページリストブロック配置
+* サイドバーに「先祖階層からのページリスト」ブロック配置
 
 ---
 
@@ -211,6 +215,8 @@ b. 投稿コンテンツブロックを削除してサイトエディタで編�
 ---
 
 ## 投稿タイプ 制作実績の作成
+
+カスタム投稿タイプマネージャー （ExUnitの機能）から以下を作成
 
 制作実績
 works
