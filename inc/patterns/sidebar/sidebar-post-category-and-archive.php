@@ -13,22 +13,14 @@ return array(
 	'content'    => '<!-- wp:heading {"level":4,"className":"has-large-font-size","fontSize":"large"} -->
 	<h4 class="wp-block-heading has-large-font-size">' . esc_html__( 'Category', 'x-t9' ) . '</h4>
 	<!-- /wp:heading -->
-	
-	<!-- wp:categories {"showHierarchy":true} /-->
-	
-	<!-- wp:spacer {"className":"is-style-spacer-sm"} -->
-	<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-sm"></div>
-	<!-- /wp:spacer -->
-	
-	<!-- wp:heading {"level":4,"className":"has-large-font-size","fontSize":"large"} -->
+
+<!-- wp:categories {"showHierarchy":true} /-->
+
+<!-- wp:heading {"level":4,"className":"has-large-font-size","fontSize":"large"} -->
 <h4 class="wp-block-heading has-large-font-size">' . esc_html__( 'Archive', 'x-t9' ) . '</h4>
-	<!-- /wp:heading -->
-	
-	<!-- wp:archives /-->
-	
-	<!-- wp:spacer {"className":"is-style-spacer-sm"} -->
-	<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-sm"></div>
-<!-- /wp:spacer -->
+<!-- /wp:heading -->
+
+<!-- wp:archives /-->
 
 <!-- wp:heading {"level":4,"className":"has-large-font-size","fontSize":"large"} -->
 <h4 class="wp-block-heading has-large-font-size">' . esc_html__( 'Tag Cloud', 'x-t9' ) . '</h4>
