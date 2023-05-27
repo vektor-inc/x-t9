@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Tuning ][ VK Blocks icon ] Margin tuning of Icon Block of the VK Blocks
+
 1.16.4
 [ Design Bug fix ] Fix(reset) navigation block gap on edit screen
 
