@@ -111,8 +111,6 @@
 	}
 
 	:where(.wp-block-navigation__container, .wp-block-page-list) {
-		// gap: 0;
-
 		&>.wp-block-navigation-item {
 			&:last-child {
 				border-right: 1px solid var(--nav--text-inline--border);
