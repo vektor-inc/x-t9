@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc
 Tested up to: 6.2
 Requires PHP: 7.2
-Stable tag: 1.16.2
+Stable tag: 1.16.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,11 +13,11 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
-[ Design bug fix ] submenu loses to fix header in the edit screen
+1.16.3
+[ Design Bug fix ] submenu loses to fix header in the edit screen
 
 1.16.2
 [ Design Tuning ] Delete unnecessary class on footer nav
-
 
 1.16.1
 [ Design Tuning ] Delete sidebar non intentional spacer
