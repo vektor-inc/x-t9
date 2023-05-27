@@ -78,8 +78,8 @@ return array(
 	<!-- /wp:post-template -->
 	
 	<!-- wp:query-no-results -->
-	<!-- wp:paragraph {"placeholder":"クエリーが何も結果を返さない場合に表示するテキストまたはブロックを追加します。","textColor":"text-normal-darkbg"} -->
-	<p class="has-text-normal-darkbg-color has-text-color">投稿はありません</p>
+	<!-- wp:paragraph {"textColor":"text-normal-darkbg"} -->
+	<p class="has-text-normal-darkbg-color has-text-color">No posts.</p>
 	<!-- /wp:paragraph -->
 	<!-- /wp:query-no-results --></div>
 	<!-- /wp:query --></div>
