@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Bug fix ] Fix(reset) navigation block gap on edit screen
+
 1.16.3
 [ Design Bug fix ] submenu loses to fix header in the edit screen
 
