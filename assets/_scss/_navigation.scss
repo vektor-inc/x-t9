@@ -72,6 +72,7 @@
 
 .wp-block-navigation__responsive-container:not(.has-modal-open) {
 	.wp-block-navigation__submenu-container {
+		z-index: 99999; // .crolled-header-fixed specified z-index: 9999; so If less than 9999 that submenu loses to the fix header in the edit screen
 		.wp-block-navigation-item {
 			color: #fff; // No relation under Bright BG and Dark BG
 			background-color: var(--wp--preset--color--primary);

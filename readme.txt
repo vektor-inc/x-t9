@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design bug fix ] submenu loses to fix header in the edit screen
+
 1.16.1
 [ Design Tuning ] Delete sidebar non intentional spacer
 
