@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Tuning ] Delete VK Breadcrumb top margin
 [ Design Tuning ] Delete sidebar h4 a text underline
 [ Design Tuning ] wp-block-post-author__avatar margin
 
