@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Tuning ] wp-block-post-author__avatar margin
+
 1.16.5
 [ Design Tuning ][ VK Blocks icon ] Margin tuning of Icon Block of the VK Blocks
 
