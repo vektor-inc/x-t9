@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Tuning ] Delete underline from post term block
+
 1.16.6
 [ Design Tuning ] Delete VK Breadcrumb top margin
 [ Design Tuning ] Delete sidebar h4 a text underline
