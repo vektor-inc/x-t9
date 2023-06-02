@@ -6,6 +6,9 @@
 		padding-left:var(--wp--custom--spacing--menu-indent);
 		padding-right:var(--wp--custom--spacing--menu-indent);
 		background-color: var(--wp--preset--color--bg-secondary);
+		a {
+			text-decoration: none;
+		}
 	}
 	select {
 		width:100%;
