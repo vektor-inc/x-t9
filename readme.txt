@@ -14,6 +14,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 == Changelog ==
 
 [ Design Tuning ] Delete underline from post term block
+[ Design Tuning ][ Header pattern ] Logo --- Nav --- Contact
 
 1.16.6
 [ Design Tuning ] Delete VK Breadcrumb top margin
