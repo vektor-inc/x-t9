@@ -40,7 +40,7 @@ return array(
 	<!-- /wp:separator -->
 	<!-- /wp:post-template -->
 
-	<!-- wp:spacer {"height":"","className":"is-style-spacer-md"} -->
+	<!-- wp:spacer {"className":"is-style-spacer-md"} -->
 	<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-md"></div>
 	<!-- /wp:spacer -->
 	

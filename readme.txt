@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc
 Tested up to: 6.2
 Requires PHP: 7.2
-Stable tag: 1.16.7
+Stable tag: 1.16.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,8 +13,11 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+1.16.8
+[ Bug fix ] Fix spacer block recovery ( Template )
+
 1.16.7
-[ Bug fix ] Fix Pattern recovery
+[ Bug fix ] Fix spacer block recovery ( Pattern )
 
 1.16.6
 [ Design Tuning ] Delete VK Breadcrumb top margin
