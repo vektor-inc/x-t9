@@ -41,7 +41,7 @@ return array(
 	<!-- /wp:post-template -->
 
 	<!-- wp:spacer {"height":"","className":"is-style-spacer-md"} -->
-	<div style="height:" aria-hidden="true" class="wp-block-spacer is-style-spacer-md"></div>
+	<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-md"></div>
 	<!-- /wp:spacer -->
 	
 	<!-- wp:query-pagination {"paginationArrow":"chevron","layout":{"type":"flex","justifyContent":"center","orientation":"horizontal","flexWrap":"wrap"}} -->
@@ -52,8 +52,8 @@ return array(
 	<!-- wp:query-pagination-next {"label":"' . esc_html__( 'Next', 'x-t9' ) . '"} /-->
 	<!-- /wp:query-pagination -->
 
-	<!-- wp:spacer {"height":"","className":"is-style-spacer-md"} -->
-	<div style="height:" aria-hidden="true" class="wp-block-spacer is-style-spacer-md"></div>
+	<!-- wp:spacer {"className":"is-style-spacer-md"} -->
+	<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-md"></div>
 	<!-- /wp:spacer -->
 
 	</div>
