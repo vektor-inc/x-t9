@@ -180,7 +180,7 @@
 					"fluid": false,
 					"name": "X small",
 					"slug": "x-small",
-					"size": "clamp(11px, calc(11px + (100vw - 360px) * ( (12 -11) / (1200 - 360)) ), 12px)"
+					"size": "clamp(11px, calc(11px + (100vw - 360px) * ( (12 - 11) / (1200 - 360)) ), 12px)"
 				},
 				{
 					"fluid": false,
