@@ -136,7 +136,7 @@
 		"typography": {
 			"dropCap": false,
 			"lineHeight": true,
-			"fluid": true,
+			"fluid": false,
 			"fontFamilies": [
 				{
 					"slug": "system-font",
