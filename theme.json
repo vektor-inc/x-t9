@@ -136,7 +136,7 @@
 		"typography": {
 			"dropCap": false,
 			"lineHeight": true,
-			"fluid": true,
+			"fluid": false,
 			"fontFamilies": [
 				{
 					"slug": "system-font",
@@ -332,6 +332,21 @@
 					"link": {
 						"typography": {
 							"textDecoration": "none"
+						}
+					}
+				}
+			},
+			"core/post-terms": {
+				"elements": {
+					"link": {
+						"typography": {
+							"textDecoration": "none",
+							"fontSize": "var(--wp--preset--font-size--x-small)"
+						},
+						":hover": {
+							"typography": {
+								"textDecoration": "underline"
+							}
 						}
 					}
 				}

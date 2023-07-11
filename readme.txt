@@ -13,6 +13,10 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ] Deactive typography fruid
+[ Design Tuning ] Delete underline from post term block
+[ Design Tuning ][ Header pattern ] Logo --- Nav --- Contact
+
 1.16.8
 [ Bug fix ] Fix spacer block recovery ( Template )
 
