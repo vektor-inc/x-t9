@@ -15,7 +15,7 @@
 		"color": {
 			"background": true,
 			"text": true,
-			"link": false,
+			"link": true,
 			"custom": true,
 			"defaultPalette": true,
 			"palette": [

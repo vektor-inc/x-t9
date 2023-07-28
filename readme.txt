@@ -13,6 +13,9 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+
+[ Update ] Support color link
+
 1.17.1
 [ Bug fix ] Fix font size x-small
 
