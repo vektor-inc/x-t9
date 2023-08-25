@@ -25,10 +25,28 @@
 }
 
 /* Image ------------------------------------------------- */
-.wp-block-image figcaption {
+.wp-block-image {
+	figcaption {
 	margin-bottom: 0;
 	// Probably this color specify is become could set from theme.json near future but now first aid.
 	color: var(--wp--preset--color--text-normal);
+	}
+	&.aligncenter {
+		margin-right: auto;
+		margin-left: auto;
+	}
+	&.alignright {
+		float: right;	
+		margin-inline-start: 1em;
+		margin-inline-end: 0;
+		margin-bottom: 0.5em;
+	}
+	&.alignleft {
+		float: left;
+		margin-inline-start: 0;
+		margin-inline-end: 1em;
+		margin-bottom: 0.5em;
+	}
 }
 
 /*-------------------------------------------*/
