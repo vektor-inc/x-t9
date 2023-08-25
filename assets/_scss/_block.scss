@@ -37,15 +37,13 @@
 	}
 	&.alignright {
 		float: right;	
-		margin-inline-start: 1em;
+		margin-inline-start: 2em;
 		margin-inline-end: 0;
-		margin-bottom: 0.5em;
 	}
 	&.alignleft {
 		float: left;
 		margin-inline-start: 0;
-		margin-inline-end: 1em;
-		margin-bottom: 0.5em;
+		margin-inline-end: 2em;
 	}
 }
 
