@@ -31,7 +31,7 @@ return array(
 	<!-- wp:post-terms {"term":"category","prefix":"' . esc_html__( 'Category : ', 'x-t9' ) . '"} /--></div>
 	<!-- /wp:group -->
 	
-	<!-- wp:post-excerpt {"moreText":"' . esc_html__( 'Read more', 'x-t9' ) . '","style":{"spacing":{"margin":{"top":"var:preset|spacing|40","right":"0","bottom":"0","left":"0"}}}} /--></div>
+	<!-- wp:post-excerpt {"style":{"spacing":{"margin":{"top":"var:preset|spacing|40","right":"0","bottom":"0","left":"0"}}}} /--><!-- wp:read-more /--></div>
 	<!-- /wp:column --></div>
 	<!-- /wp:columns -->
 	
