@@ -12,6 +12,9 @@
 		"dimensions": {
 			"minHeight": true
 		},
+		"background": {
+			"backgroundImage": true
+		},
 		"color": {
 			"background": true,
 			"text": true,
