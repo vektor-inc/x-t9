@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ] Added support for the background image feature in Group blocks, introduced in WordPress 6.4.
+
 1.17.1
 [ Bug fix ] Fix font size x-small
 
