@@ -1,8 +1,8 @@
 === X-T9 ===
 Contributors: kurudrive,vektor-inc
-Tested up to: 6.2
+Tested up to: 6.4
 Requires PHP: 7.2
-Stable tag: 1.17.1
+Stable tag: 1.18.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+1.18.0
 [ Specification Change ] Added support for the background image feature in Group blocks, introduced in WordPress 6.4.
 
 1.17.1
