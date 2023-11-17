@@ -13,6 +13,10 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+
+[ Specification Change ] Change the read more style in the post excerpt to no background
+
+
 1.18.0
 [ Specification Change ] Added support for the background image feature in Group blocks, introduced in WordPress 6.4.
 
