@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ] Fix site title markup other than home for accessibility.
+
 1.18.0
 [ Specification Change ] Added support for the background image feature in Group blocks, introduced in WordPress 6.4.
 

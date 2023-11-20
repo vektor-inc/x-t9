@@ -399,6 +399,11 @@
 			"area": "header"
 		},
 		{
+			"name": "header-home",
+			"title": "Header Home",
+			"area": "header-home"
+		},
+		{
 			"name": "loop-archive",
 			"title": "Loop Archive",
 			"area": "uncategorized"

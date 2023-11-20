@@ -1,4 +1,7 @@
 .wp-block-site-title {
+	font-weight: bold;
+	line-height: var(--wp--custom--typography--line-height--heading);
+
 	a {
 		text-decoration: none;
 
