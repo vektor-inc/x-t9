@@ -5,7 +5,7 @@
  * @package vektor-inc/x-t9
  */
 
- function w3csspress_register_block_pattern_header() {
+function xt9_register_block_pattern_header() {
 
 	register_block_pattern(
 		'x-t9/header/logo-title--sns-contact__nav',
@@ -156,4 +156,4 @@
 	);
 }
 
-w3csspress_register_block_pattern_header();
+xt9_register_block_pattern_header();
