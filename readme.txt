@@ -12,6 +12,7 @@ The X-T9 is designed on the premise of full site editing function, and the user 
 GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
+[ Translation ready ] button on featured-post-list
 
 1.18.0
 [ Specification Change ] Added support for the background image feature in Group blocks, introduced in WordPress 6.4.
