@@ -12,6 +12,8 @@ The X-T9 is designed on the premise of full site editing function, and the user 
 GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
+
+[ Specification Change ] Add style border radius 0 to .card 
 [ Translation ready ] button on featured-post-list
 
 1.18.0
