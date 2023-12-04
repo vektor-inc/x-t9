@@ -314,6 +314,24 @@
 			}
 		},
 		"blocks": {
+			"core/site-title": {
+				"typography": {
+					"fontWeight": "700",
+					"lineHeight": "var(--wp--custom--typography--line-height--heading)"
+				},
+				"elements": {
+					"link": {
+						"typography": {
+							"textDecoration": "none"
+						},
+						":hover": {
+							"typography": {
+								"textDecoration": "underline"
+							}
+						}
+					}
+				}
+			},
 			"core/button": {
 				"color": {
 					"background": "var(--wp--preset--color--primary)"
