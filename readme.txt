@@ -15,6 +15,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 [ Specification Change ] Add style border radius 0 to .card 
 [ Translation ready ] button on featured-post-list
+[ Bug Fix ] Fixed a bug where the submenu's background color and text color were not being applied.
 
 1.18.0
 [ Specification Change ] Added support for the background image feature in Group blocks, introduced in WordPress 6.4.
