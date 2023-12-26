@@ -171,3 +171,10 @@ ul:is(.wp-block-archives-list,
 		color: var(--wp--preset--color--text-normal);
 	}
 }
+/*-------------------------------------------*/
+/*  Post Date Block
+/*-------------------------------------------*/
+// theme.json から指定可能になったらそちらに移行
+.wp-block-post-date time{
+	white-space:nowrap;
+}

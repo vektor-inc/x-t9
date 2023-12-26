@@ -14,6 +14,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 == Changelog ==
 
 [ Specification Change ] Add style border radius 0 to .card 
+[ Specification Change ] Add nowrap CSS specification to post date block.
 [ Translation ready ] button on featured-post-list
 [ Bug Fix ] Fixed a bug where the submenu's background color and text color were not being applied.
 
