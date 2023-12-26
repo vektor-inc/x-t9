@@ -15,6 +15,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 [ Specification Change ] Change the style specification of the 'site-title' block from a CSS file to theme.json.
 [ Specification Change ] Add style border radius 0 to .card 
+[ Specification Change ] Add nowrap CSS specification to post date block.
 [ Translation ready ] button on featured-post-list
 [ Bug Fix ] Fixed a bug where the submenu's background color and text color were not being applied.
 
