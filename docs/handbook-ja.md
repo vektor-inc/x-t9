@@ -4,7 +4,8 @@
 
 ## 環境の準備
 
-* 設定 > 一般 で日本語にしてください。
+* 設定 > 一般 で日本語に設定
+* 設定 > 一般 で時刻のフォーマットを任意に設定
 * プラグイン WP Multibyte Patch をインストール・有効化
 
 ## テーマのインストール
@@ -30,11 +31,11 @@ X-T9 を有効化すると以下のプラグインのインストール案内が
 
 ※ VK Blocks Pro をお持ちの方は VK Blocks はインストールせずに VK Blocks Pro の zip ファイルを手動でアップロードしてください。
 
+ダッシュボードに表示される通知は消しても構いません。
+
 ### その他事前に入れてあるプラグイン
 
-* WP Multibyte Patch
 * Simple Page Ordering
-* Simple Lightbox
 * Create Block Theme
 * Category Order and Taxonomy Terms Order
 * All-in-One WP Migration
@@ -43,17 +44,17 @@ X-T9 を有効化すると以下のプラグインのインストール案内が
 
 ## グローバルスタイルの設定
 
-###  サイト全体の色合いなどの指定
+###  サイト全体の色合いなどの指定できる
 
-* 外観 > エディタ > テンプレート > フロントページなど適当に選ぶ
-* 右上の半月アイコンをクリックするとスタイル設定画面に入れる
-* スタイル一覧へ → いろいろ選べる
+* 外観 > エディタ > スタイル
+  外観 > エディタ > テンプレート > 何かテンプレートを選択して右上の半月アイコンをクリック > スタイル一覧でも設定可能
+
+サイト全体の色合いのセットを切り替える事が可能
 
 ### カラーパレットの変更
 
-* スタイル設定画面 > 色 > パレット
-* パレットの テーマ の右の３点アイコン > 詳細を表示  
-各色が変更可能
+* スタイル設定画面 > 色 > パレット > 各種色が変更可能
+* スタイル設定画面 > 色 > パレット の下部からカスタムカラーの追加も可能
 
 ### 追加CSS
 
@@ -65,22 +66,27 @@ X-T9 を有効化すると以下のプラグインのインストール案内が
 
 ページが先にあった方がナビゲーションが設定しやすいので、先に以下の固定ページを作ります。
 
+外観 > エディタ > 固定ページ からも追加可能  
+
+...だが、6.4ではまだ従来の方法のがやりやすいので、従来通りの画面がおすすめ。
+
 * 既存ページは削除
 * HOME
 * サービス案内
 	- 子ページ一覧をあとで配置
   * サービスの流れ
-    - patterns.vektor-inc.co.jp からもってくる  
-    - ページ属性パネルから親を指定
+    - [patterns.vektor-inc.co.jp からもってくる](https://patterns.vektor-inc.co.jp/?post_type=vk-patterns&supported-themes=&license-classification=free&pattern-industry=&pattern-category=flow&demo-site=&post_date_date_after=&post_date_date_before=&s=&vkfs_orderby=&vkfs_form_id=11755)
+    - ページ属性パネルから親ページを「サービス案内」に指定
   * よくある質問
-    - ページ属性パネルから親を指定
+    - [patterns.vektor-inc.co.jp からもってくる](https://patterns.vektor-inc.co.jp/?post_type=vk-patterns&supported-themes=&license-classification=free&pattern-industry=&pattern-category=qa&demo-site=&post_date_date_after=&post_date_date_before=&s=&vkfs_orderby=&vkfs_form_id=11755)
+    - ページ属性パネルから親ページを「サービス案内」に指定
 * 会社案内
 * お知らせ
 * お問い合わせ
 * プライバシーポリシー
 * サイトマップ
 
-! 固定ページ一覧でスラッグを変更しておく事
+__! 固定ページ一覧でスラッグを変更しておく事__
 
 * 設定 > 表示設定 でトップページの固定ページと投稿トップを指定指定
 
