@@ -45,7 +45,7 @@ X-T9 を有効化すると以下のプラグインのインストール案内が
 
 管理画面 > ExUnit > メイン設定 > デフォルトサムネイル画像 から登録してください
 
-![sample-image-gray](https://raw.githubusercontent.com/vektor-inc/x-t9/docs/dummy-images/sample-image-gray.png)
+![sample-image-gray](https://raw.githubusercontent.com/vektor-inc/x-t9/master/docs/dummy-images/sample-image-gray.png)
 
 ---
 
@@ -148,7 +148,7 @@ X-T9 を有効化すると以下のプラグインのインストール案内が
 
 サイトロゴブロックをクリックしてサイトロゴを登録
 
-![sample-image-gray](https://raw.githubusercontent.com/vektor-inc/x-t9/master/docs/dummy-images/logo-sample.png)
+![sample-image-gray](https://raw.githubusercontent.com/vektor-inc/x-t9/master/docs/dummy-images/head-logo-bk.png)
 
 #### サイトアイコンの登録
 
