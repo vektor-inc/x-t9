@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc
 Tested up to: 6.4
 Requires PHP: 7.2
-Stable tag: 1.18.0
+Stable tag: 1.19.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+1.19.0
 [ Specification Change ] Change the style specification of the 'site-title' block from a CSS file to theme.json.
 [ Specification Change ] Add style border radius 0 to .card 
 [ Specification Change ] Add nowrap CSS specification to post date block.
