@@ -45,6 +45,7 @@ gulp.task('dist', function() {
 				'./assets/**',
 				'./inc/**',
 				'./parts/**',
+				'./vendor/**',
 				'./templates/**',
 				'./LICENSE',
 				"!./tests/**",
