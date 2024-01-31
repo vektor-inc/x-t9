@@ -5,6 +5,9 @@
  * @package vektor-inc/x-t9
  */
 
+// Composer autoload.
+require_once __DIR__ . '/vendor/autoload.php';
+
 $theme_opt = wp_get_theme( get_template() );
 
 define( 'XT9_THEME_VERSION', $theme_opt->Version ); // phpcs:ignore
