@@ -83,3 +83,29 @@
     }
 
 })(window, document);
+
+
+/*----------------------------------------------------------*/
+/*  navigation submenu description
+/*----------------------------------------------------------*/
+//コアが修正されたら削除する。Navigation Link ブロックとは異なり、Navigation Submenu ブロックはメニュー項目の説明 HTML をレンダリングしないため追加。
+//Navigation Submenu block does not render menu item description #52505
+
+document.addEventListener('DOMContentLoaded', function() {
+    // サブメニューを持つナビゲーションアイテムを対象にループします。
+    document.querySelectorAll('nav .wp-block-navigation-item.has-child').forEach(function(item) {
+        // サブメニューを持つアイテム内のすべてのリンクを対象にループします。
+        item.querySelectorAll('a').forEach(function(link) {
+            // data-description属性を持つリンクを対象にします。
+            if (link.hasAttribute('data-description')) {
+                const description = link.getAttribute('data-description');
+                // 説明テキストを含む新しいspan要素を作成します。
+                const descriptionSpan = document.createElement('span');
+                descriptionSpan.className = 'wp-block-navigation-item__description';
+                descriptionSpan.textContent = description;
+                // この新しいspan要素をリンクの直後に挿入します。
+                link.parentNode.insertBefore(descriptionSpan, link.nextSibling);
+            }
+        });
+    });
+});
