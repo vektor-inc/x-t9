@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug fix ] Fixed navigation submenu block not rendering menu item description HTML
+
 1.20.0
 [ Specification Change ] TGM load from composer
 
