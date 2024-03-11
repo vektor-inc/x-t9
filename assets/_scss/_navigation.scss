@@ -81,7 +81,6 @@
 
 		.wp-block-navigation-item {
 			border-bottom: 1px solid var(--wp--preset--color--border-normal-darkbg);
-			background-color: var(--wp--preset--color--primary);
 			&:hover {
 				background-color: var(--wp--preset--color--primary-hover);
 			}
@@ -224,7 +223,7 @@
 		position: absolute;
 		opacity: 1;
 		visibility: hidden;
-		background: none;
+		color: initial;
 		transition: opacity .1s linear;
 	}
 
