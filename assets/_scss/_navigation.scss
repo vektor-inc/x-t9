@@ -120,7 +120,7 @@
 .has-modal-open {
 	:where(.wp-block-navigation__container, .wp-block-page-list) {
 		--wp--style--block-gap: 0;
-
+		gap: 0;
 		&,
 		li,
 		li .wp-block-navigation-item__content {
@@ -196,8 +196,8 @@
  */
 .wp-block-navigation.is-vertical {
 	:where(.wp-block-navigation__container, .wp-block-page-list) {
-		--wp--style--block-gap: 0;
-		gap: 0;
+		// --wp--style--block-gap: 0;
+		// gap: 0;
 		width: 100%;
 	}
 
