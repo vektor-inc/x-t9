@@ -71,7 +71,7 @@
 /* 
  * Sub Navigation Styles
  */
-.wp-block-navigation-submenu {
+.wp-block-navigation.is-vertical .wp-block-navigation-submenu {
 	display: flex;
 	position: relative;
 }
