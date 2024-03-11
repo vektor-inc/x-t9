@@ -81,6 +81,7 @@
 
 		.wp-block-navigation-item {
 			border-bottom: 1px solid var(--wp--preset--color--border-normal-darkbg);
+			background-color: var(--wp--preset--color--primary);
 			&:hover {
 				background-color: var(--wp--preset--color--primary-hover);
 			}
