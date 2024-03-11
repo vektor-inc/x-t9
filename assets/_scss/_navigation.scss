@@ -71,6 +71,11 @@
 /* 
  * Sub Navigation Styles
  */
+.wp-block-navigation-submenu {
+	display: flex;
+	position: relative;
+}
+
 .wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
 	border: none; // コアが border を付与してくるので打ち消す
 }
@@ -206,10 +211,11 @@
 		display: block;
 		height: auto;
 		width: 100%;
-		position: relative;
+		position: absolute;/* 変更前 relative */
 		opacity: 1;
-		visibility: visible;
+		visibility: hidden;/* 変更前 visible */
 		background: none;
+		transition: opacity .1s linear;/* 新規追加 */
 	}
 
 	@media (min-width: 782px) {
