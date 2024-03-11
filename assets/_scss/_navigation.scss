@@ -105,6 +105,15 @@
 	}
 }
 
+:where(.wp-block-navigation .wp-block-navigation__submenu-container) {
+	& .wp-block-navigation-itema:not(.wp-element-button),
+	& .wp-block-navigation-submenu a:not(.wp-element-button),
+	& .wp-block-navigation-submenu button.wp-block-navigation-item__content,
+	& .wp-block-pages-list__item button.wp-block-navigation-item__content {
+		padding: .5em 1em;
+	}
+}
+
 /****************************************************** 
  * Navigation Modal Styles
  */
@@ -192,7 +201,7 @@
 		width: 100%;
 	}
 
-	.wp-block-navigation-item:not(.wp-block-navigation-submenu) {
+	.wp-block-navigation-item {
 		width: 100%;
 		display: block;
 		box-sizing: border-box;
@@ -202,15 +211,20 @@
 		}
 	}
 
+	.wp-block-navigation-item {
+		display: flex;
+		position: relative;
+	}
+	
 	.wp-block-navigation__submenu-container {
 		display: block;
 		height: auto;
 		width: 100%;
-		position: absolute;/* 変更前 relative */
+		position: absolute;
 		opacity: 1;
-		visibility: hidden;/* 変更前 visible */
+		visibility: hidden;
 		background: none;
-		transition: opacity .1s linear;/* 新規追加 */
+		transition: opacity .1s linear;
 	}
 
 	@media (min-width: 782px) {
