@@ -201,12 +201,12 @@
 		width: 100%;
 	}
 
-	.wp-block-navigation-item {
+	> .wp-block-navigation-item {
 		width: 100%;
 		display: block;
 		box-sizing: border-box;
 
-		a {
+		> a {
 			padding: 0;
 		}
 	}
