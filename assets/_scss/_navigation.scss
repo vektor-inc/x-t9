@@ -71,11 +71,6 @@
 /* 
  * Sub Navigation Styles
  */
-.wp-block-navigation.is-vertical .wp-block-navigation-submenu {
-	display: flex;
-	position: relative;
-}
-
 .wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
 	border: none; // コアが border を付与してくるので打ち消す
 }
@@ -197,7 +192,7 @@
 		width: 100%;
 	}
 
-	.wp-block-navigation-item {
+	.wp-block-navigation-item:not(.wp-block-navigation-submenu) {
 		width: 100%;
 		display: block;
 		box-sizing: border-box;
