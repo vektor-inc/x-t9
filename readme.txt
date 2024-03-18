@@ -12,6 +12,7 @@ The X-T9 is designed on the premise of full site editing function, and the user 
 GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
+[ Design Bug fix ]Fix indented li > ul margin in list__block
 
 1.20.0
 [ Specification Change ] TGM load from composer
