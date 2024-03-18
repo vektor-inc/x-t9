@@ -34,7 +34,7 @@ p{
 	}
 }
 
-:is( ul,ol,dl ) {
+:is( ul,ol,dl ):not(li > ul) {
 	margin-block-start: var(--wp--custom--spacing--small);
 	margin-block-end: var(--wp--custom--spacing--small);
 }
