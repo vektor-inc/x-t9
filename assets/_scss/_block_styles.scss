@@ -31,7 +31,7 @@
 /*-------------------------------------------*/
 /*  Column
 /*-------------------------------------------*/
-body .is-style-main-layout.is-layout-flex {
+body :where(.is-style-main-layout.is-layout-flex) {
 	gap: var(--wp--custom--spacing--large);
 }
 
