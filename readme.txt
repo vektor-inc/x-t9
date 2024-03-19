@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug Fix ] Fix column block gap setting not taking effect in individual posts
+
 1.20.0
 [ Specification Change ] TGM load from composer
 
