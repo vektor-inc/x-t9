@@ -34,7 +34,7 @@ p{
 	}
 }
 
-:is( ul,ol,dl ):not(li > ul) {
+:is( ul,ol,dl ):where(:not( li > ul , li > ol )) { //特異性を抑えたいので:where()を使用 
 	margin-block-start: var(--wp--custom--spacing--small);
 	margin-block-end: var(--wp--custom--spacing--small);
 }
