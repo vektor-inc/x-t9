@@ -16,6 +16,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 [ Design bug fix ] Addressed inability to change sidebar h4 design in individual posts
 
+[ Bug Fix ] Fix column block gap setting not taking effect in individual posts
+
 1.20.0
 [ Specification Change ] TGM load from composer
 
