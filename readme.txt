@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design bug fix ] Addressed inability to change sidebar h4 design in individual posts
+
 1.20.0
 [ Specification Change ] TGM load from composer
 
