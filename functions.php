@@ -123,3 +123,22 @@ function xt9_list_categories( $output, $args ) {
 	return $output;
 }
 add_filter( 'wp_list_categories', 'xt9_list_categories', 10, 2 );
+
+
+/**
+ * Navigation Submenu block do render menu item description
+ */
+//コアが修正されたら削除する。Navigation Link ブロックとは異なり、Navigation Submenu ブロックはメニュー項目の説明 HTML をレンダリングしないため追加。
+//Navigation Submenu block does not render menu item description #52505
+function xt9_add_description_to_navigation_items( $block_content, $block ) {
+    if ('core/navigation-submenu' === $block['blockName'] && !empty($block['attrs']['description'])) {
+        $description = esc_attr($block['attrs']['description']);
+        // 説明用のspanタグを作成
+        $description_span = '<span class="wp-block-navigation-item__description">' . $description . '</span>';
+        // aタグ内の最後に説明を挿入
+        // 正規表現を用いて、aタグの終了直前に挿入
+        $block_content = preg_replace('/<\/a>/', $description_span . '</a>', $block_content, 1);
+    }
+    return $block_content;
+}
+add_filter('render_block', 'xt9_add_description_to_navigation_items', 10, 2);
