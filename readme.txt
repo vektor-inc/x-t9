@@ -12,6 +12,8 @@ The X-T9 is designed on the premise of full site editing function, and the user 
 GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
+[ Editor Design Bug Fix ]Fix the width being wrong when setting to alignwide in editor
+
 [ Design Bug fix ]Fix indented li > ul margin in list__block
 
 [ Design bug fix ] Addressed inability to change sidebar h4 design in individual posts
