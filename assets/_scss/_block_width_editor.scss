@@ -29,7 +29,8 @@ body {
 			&.alignwide {
 				margin-left: calc((100% - 100vw) / 4) !important;
 				margin-right: calc((100% - 100vw) / 4) !important;
-				// max-width: min( calc( 100% - ( 100% - var(--wp--custom--content-size--normal) ) / 2 ), 100% );
+				// 6.5で通常時の幅（max-width:var(--wp--custom--content-size--normal);）が利いてしまうため追加
+				max-width: var(--wp--style--global--wide-size);
 				}
 	}
 	// for site editor
