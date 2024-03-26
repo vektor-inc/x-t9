@@ -20,6 +20,9 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 [ Bug Fix ] Fix column block gap setting not taking effect in individual posts
 
+[ Design Tuning ]　Adjustment when using submenus in core block navigation.
+[ Bug Fix ] Fixed a bug where the core block navigation's gap was not being applied.
+
 1.20.0
 [ Specification Change ] TGM load from composer
 
