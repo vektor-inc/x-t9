@@ -127,7 +127,27 @@
 				"vw",
 				"vh",
 				"em",
-				"rem"
+				"rem",
+				"svw",
+				"lvw",
+				"dvw",
+				"svh",
+				"lvh",
+				"dvh",
+				"svi",
+				"lvi",
+				"dvi",
+				"svb",
+				"lvb",
+				"dvb",
+				"vmin",
+				"svmin",
+				"lvmin",
+				"dvmin",
+				"vmax",
+				"svmax",
+				"lvmax",
+				"dvmax"
 			]
 		},
 		"border": {
