@@ -13,9 +13,10 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
-[ Specification Change ] Allow using CSS level 4 viewport-relative units
-[ Editor Design Bug Fix ]Fix the width being wrong when setting to alignwide in editor
-[ Design Bug fix ]Fix indented li > ul margin in list__block
+[ Specification Change ][ 6.5 ] Attend to backgroundSize
+[ Specification Change ][ 6.5 ] Allow using CSS level 4 viewport-relative units
+[ Editor Design Bug Fix ][ 6.5 ] Fix the width being wrong when setting to alignwide in editor
+[ Design Bug fix ] Fix indented li > ul margin in list__block
 [ Design bug fix ] Addressed inability to change sidebar h4 design in individual posts
 [ Bug Fix ] Fix column block gap setting not taking effect in individual posts
 
