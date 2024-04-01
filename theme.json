@@ -10,7 +10,8 @@
 			"sticky": true
 		},
 		"dimensions": {
-			"minHeight": true
+			"minHeight": true,
+			"aspectRatio": true
 		},
 		"background": {
 			"backgroundImage": true,

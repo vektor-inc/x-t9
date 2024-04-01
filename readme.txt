@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ][ 6.5 ] Attend to aspectRatio
 [ Specification Change ][ 6.5 ] Attend to backgroundSize
 [ Specification Change ][ 6.5 ] Allow using CSS level 4 viewport-relative units
 [ Editor Design Bug Fix ][ 6.5 ] Fix the width being wrong when setting to alignwide in editor
