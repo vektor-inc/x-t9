@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Editor Design Bug fix ]Editor: Fixed incorrect placement when vk_gridcolcard_item_body has .is-layout-constrained.
 [ Specification Change ] Allow using CSS level 4 viewport-relative units
 [ Editor Design Bug Fix ]Fix the width being wrong when setting to alignwide in editor
 [ Design Bug fix ]Fix indented li > ul margin in list__block
