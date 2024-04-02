@@ -1,8 +1,8 @@
 === X-T9 ===
-Contributors: kurudrive,vektor-inc
-Tested up to: 6.4
+Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei
+Tested up to: 6.5
 Requires PHP: 7.2
-Stable tag: 1.20.0
+Stable tag: 1.21.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+1.21.0
 [ Specification Change ][ 6.5 ] Attend to aspectRatio
 [ Specification Change ][ 6.5 ] Attend to backgroundSize
 [ Specification Change ][ 6.5 ] Allow using CSS level 4 viewport-relative units
