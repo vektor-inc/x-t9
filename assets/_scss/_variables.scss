@@ -16,7 +16,8 @@ body {
 	// cope with VK Blocks
 	--wp--preset--color--vk-color-primary: var(--wp--preset--color--primary);
 }
-.has-vk-color-primary-border-color { // For lightning theme
+// Support lightning theme class
+.has-vk-color-primary-border-color { 
     border-color: var(--wp--preset--color--vk-color-primary);
 }
 /*-----------------------------------------------------------------------------------
