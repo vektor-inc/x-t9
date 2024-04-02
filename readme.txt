@@ -13,12 +13,14 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
-[ Editor Design Bug fix ]Editor: Fixed incorrect placement when vk_gridcolcard_item_body has .is-layout-constrained.
-[ Specification Change ] Allow using CSS level 4 viewport-relative units
-[ Editor Design Bug Fix ]Fix the width being wrong when setting to alignwide in editor
-[ Design Bug fix ]Fix indented li > ul margin in list__block
+[ Specification Change ][ 6.5 ] Attend to aspectRatio
+[ Specification Change ][ 6.5 ] Attend to backgroundSize
+[ Specification Change ][ 6.5 ] Allow using CSS level 4 viewport-relative units
+[ Editor Design Bug Fix ][ 6.5 ] Fix the width being wrong when setting to alignwide in editor
+[ Design Bug fix ] Fix indented li > ul margin in list__block
 [ Design bug fix ] Addressed inability to change sidebar h4 design in individual posts
 [ Bug Fix ] Fix column block gap setting not taking effect in individual posts
+[ Editor Design Bug fix ]Editor: Fixed incorrect placement when vk_gridcolcard_item_body has .is-layout-constrained.
 
 1.20.0
 [ Specification Change ] TGM load from composer

@@ -10,10 +10,12 @@
 			"sticky": true
 		},
 		"dimensions": {
-			"minHeight": true
+			"minHeight": true,
+			"aspectRatio": true
 		},
 		"background": {
-			"backgroundImage": true
+			"backgroundImage": true,
+			"backgroundSize": true
 		},
 		"color": {
 			"background": true,
