@@ -15,6 +15,11 @@ body {
 		margin-left: auto;
 		margin-right: auto;
 	}
+	// VK グリッドカラムカードは display: grid;で .is-layout-constrained の要素がmargin:auto;だと中央に寄ってしまうので打ち消し
+	.vk_gridcolcard_item_body .is-layout-constrained{
+		margin-left: unset;
+		margin-right: unset;
+	}
 	:is( 
 		.edit-post-visual-editor__post-title-wrapper,
 		.block-editor-block-list__layout.is-root-container

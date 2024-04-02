@@ -20,6 +20,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 [ Design Bug fix ] Fix indented li > ul margin in list__block
 [ Design bug fix ] Addressed inability to change sidebar h4 design in individual posts
 [ Bug Fix ] Fix column block gap setting not taking effect in individual posts
+[ Editor Design Bug fix ]Editor: Fixed incorrect placement when vk_gridcolcard_item_body has .is-layout-constrained.
 
 1.20.0
 [ Specification Change ] TGM load from composer
