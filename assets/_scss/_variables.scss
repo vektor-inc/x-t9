@@ -16,7 +16,10 @@ body {
 	// cope with VK Blocks
 	--wp--preset--color--vk-color-primary: var(--wp--preset--color--primary);
 }
-
+// Support lightning theme class
+.has-vk-color-primary-border-color { 
+    border-color: var(--wp--preset--color--vk-color-primary);
+}
 /*-----------------------------------------------------------------------------------
  * 親のラッパーで背景が濃い場合用のテキスト色が指定されている場合に、通常の色をDarkBG用の色で上書きする
  */
