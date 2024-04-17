@@ -15,6 +15,15 @@
 	height: auto;
 }
 
+// Reset Header Fixed in Editor
+:is( 
+	.edit-site-editor-canvas__block-list, /* since WordPress 6.5 */
+	.edit-site-block-editor__block-list /* up to WordPress 6.4 */
+	) *[class*="scrolled-header-fixed"]{
+	position: relative;
+	top: 0;
+}
+
 .edit-site-block-editor__block-list :is(.scrolled-header-fixed, .is-style-scrolled-header-fixed)::after {
 	position: absolute;
 	font-size: 12px;
