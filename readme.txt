@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei
 Tested up to: 6.5
 Requires PHP: 7.2
-Stable tag: 1.21.1
+Stable tag: 1.22.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,9 +13,10 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
-[ Design Bug fix ] Fixed padding being added when the submenu has background.
+1.22.0
 [ Specification Change ] Delete theme name from templates.
 [ Specification Change ] Change the twitter icon to X
+[ Design Bug fix ] Fixed padding being added when the submenu has background.
 
 1.21.1
 [ Design Bug fix ][ 6.5 ] Fixed an issue that prevented editing of the fixed header area in WordPress 6.5.
