@@ -14,6 +14,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 == Changelog ==
 
 [ Design Bug fix ] Fixed padding being added when the submenu has background.
+[ Specification Change ] Delete theme name from templates.
 
 1.21.1
 [ Design Bug fix ][ 6.5 ] Fixed an issue that prevented editing of the fixed header area in WordPress 6.5.
