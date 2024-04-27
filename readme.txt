@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ] Remove the bottom margin from the p tag.
+
 1.22.1
 [ Design Bug fix ] Fix Description -- SNS / Logo -- Nav - Contact pattern alignment
 
