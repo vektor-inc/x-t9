@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Bug fix ] Fix Description -- SNS / Logo -- Nav - Contact pattern alignment
+
 1.22.0
 [ Specification Change ] Delete theme name from templates.
 [ Specification Change ] Change the twitter icon to X
