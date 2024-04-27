@@ -22,6 +22,13 @@ gulp.task('convert-dynamic', function (done) {
 	done();
 });
 
+gulp.task('remove-theme-name', function () {
+    const targetFiles = './**/*.html';  // HTMLfiles path
+    return gulp.src(targetFiles, { base: './' })
+        .pipe(replace('"theme":"x-t9",', ''))
+        .pipe(gulp.dest('.'));
+});
+
 gulp.task('dist', function() {
 	return gulp.src(
 			[
