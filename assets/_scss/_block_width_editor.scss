@@ -1,78 +1,89 @@
 // In editor screen need to no content outer layout
 // 編集画面ではアウターでの幅指定がないので、コンテンツ幅は max-width で処理する
-body {
-	--wp--custom--content-size--normal:1110px;
-	.alignwide,
-	.alignfull {
-		&.wp-block-image {
-			// Default block style overwrite
-			max-width: 100%;
-		}
-	}
-	.is-layout-constrained:where(:not(.alignfull):not(.alignwide):not(.vk_outer-width-full)),
-	.vk_outer-width-full.vk_outer-paddingLR-zero .wp-block.is-layout-constrained {
-		max-width:var(--wp--custom--content-size--normal);
-		margin-left: auto;
-		margin-right: auto;
-	}
-	// VK グリッドカラムカードは display: grid;で .is-layout-constrained の要素がmargin:auto;だと中央に寄ってしまうので打ち消し
-	.vk_gridcolcard_item_body .is-layout-constrained{
-		margin-left: unset;
-		margin-right: unset;
-	}
-	:is( 
-		.edit-post-visual-editor__post-title-wrapper,
-		.block-editor-block-list__layout.is-root-container
-	) > .block-editor-block-list__block:where(
-		:not(.alignleft)
-		:not(.alignright)
-		:not(.alignfull)
-		:not(.alignwide)
-		:not(.vk_outer-width-full)
-		) {
-			max-width:var(--wp--custom--content-size--normal);
-			&.alignwide {
-				margin-left: calc((100% - 100vw) / 4) !important;
-				margin-right: calc((100% - 100vw) / 4) !important;
-				// 6.5で通常時の幅（max-width:var(--wp--custom--content-size--normal);）が利いてしまうため追加
-				max-width: var(--wp--style--global--wide-size);
-				}
-	}
-	// for site editor
-	.is-layout-constrained.wp-block-group{
-		&,
-		&[class*="wp-container-"] {
-			& > .alignfull {
-				width:auto;
-				margin-left: calc(50% - 50vw);
-				margin-right: calc(50% - 50vw);
-			}
-		}
+
+.editor-styles-wrapper{
+	--vk-width-editor-wrapper:100dvw;
+	--vk-width-editor-container:calc(var(--vk-width-editor-wrapper) * 0.8);
+	--vk-width-editor-sidebar:280px;
+	--vk-width-editor-leftmenu:160px;
+	--vk-width-editor-leftmenu-folded:36px;
+	--vk-width-editor-list-view-sidebar:0:
+}
+// リストビューが開いている場合
+.interface-interface-skeleton__body:has(.interface-interface-skeleton__secondary-sidebar){
+	.editor-styles-wrapper {
+		--vk-width-editor-list-view-sidebar:350px:
 	}
 }
-// WordPress before 6.1
-body {
-	.alignwide,
-	.alignfull {
-		// margin-left: auto;
-		// margin-right: auto;
+
+
+.editor-styles-wrapper {
+	box-sizing: border-box !important;
+}
+
+// 左管理メニュー非表示
+.is-fullscreen-mode {
+	// 右展開
+	.is-sidebar-opened .editor-styles-wrapper {
+		border:5px solid #00ff00;
+		--vk-width-editor-wrapper:calc(100dvw - var(--vk-width-editor-sidebar));
 	}
-	.alignfull {
-		&,
-		&.vk_slider {
-			// width: 100%;
+}
+
+// 左管理メニュー表示
+body:not(.is-fullscreen-mode) {
+	.editor-styles-wrapper {
+		border:5px solid #0000ff;
+		--vk-width-editor-wrapper:calc(100dvw - var(--vk-width-editor-leftmenu));
+	}
+	// 右展開
+	.is-sidebar-opened .editor-styles-wrapper {
+		border:5px solid #0ff0ff;
+		--vk-width-editor-wrapper:calc( 100dvw - var(--vk-width-editor-leftmenu) - var(--vk-width-editor-sidebar) );
+	}
+}
+// 左管理メニュー表示（ 折りたたみ ）
+body.auto-fold,
+body.folded {
+	color: #F00 !important;
+	.editor-styles-wrapper {
+		border:5px solid #0000ff;
+		--vk-width-editor-wrapper:calc(100dvw - var(--vk-width-editor-leftmenu-folded));
+	}
+	// 右展開
+	.is-sidebar-opened .editor-styles-wrapper {
+		border:5px solid #f00;
+		--vk-width-editor-wrapper:calc( 100dvw - var(--vk-width-editor-leftmenu-folded) - var(--vk-width-editor-sidebar) );
+	}
+
+}
+
+
+.editor-styles-wrapper {
+	padding: 0 !important;
+	.is-layout-constrained:where(:not(.alignfull):not(.alignfull):not(.is-root-container)) {
+		border:1px solid #ff0000;
+		max-width:var(--vk-width-editor-container);
+		margin-left:auto;
+		margin-right:auto;
+	}
+	.is-layout-constrained,
+	.block-editor-block-list__layout.is-root-container {
+		& > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+			max-width:var(--vk-width-editor-container);
+			--wp--custom--content-size--normal : var(--vk-width-editor-container);
 		}
 	}
 }
 
-body {
-	.edit-post-visual-editor__post-title-wrapper, 
-	.block-editor-block-list__layout.is-root-container {
-		&.is-layout-constrained :is( .alignfull,.vk_outer-width-full ){
-			width:100vw;
-			max-width: 100vw !important;
-			margin-left: calc(50% - 50vw) !important;
-			margin-right: calc(50% - 50vw) !important;
-		}
+//////////////////////////////////////////////////////////////
+/// .alignfull
+//////////////////////////////////////////////////////////////
+.editor-styles-wrapper :is( .is-layout-constrained ){
+	.alignfull {
+		max-width : var(--vk-width-editor-wrapper) !important;
+		margin-left:0 !important;
+		margin-right:0 !important;
 	}
 }
+

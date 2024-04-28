@@ -1,0 +1,78 @@
+// In editor screen need to no content outer layout
+// 編集画面ではアウターでの幅指定がないので、コンテンツ幅は max-width で処理する
+body {
+	--wp--custom--content-size--normal:1110px;
+	.alignwide,
+	.alignfull {
+		&.wp-block-image {
+			// Default block style overwrite
+			max-width: 100%;
+		}
+	}
+	.is-layout-constrained:where(:not(.alignfull):not(.alignwide):not(.vk_outer-width-full)),
+	.vk_outer-width-full.vk_outer-paddingLR-zero .wp-block.is-layout-constrained {
+		max-width:var(--wp--custom--content-size--normal);
+		margin-left: auto;
+		margin-right: auto;
+	}
+	// VK グリッドカラムカードは display: grid;で .is-layout-constrained の要素がmargin:auto;だと中央に寄ってしまうので打ち消し
+	.vk_gridcolcard_item_body .is-layout-constrained{
+		margin-left: unset;
+		margin-right: unset;
+	}
+	:is( 
+		.edit-post-visual-editor__post-title-wrapper,
+		.block-editor-block-list__layout.is-root-container
+	) > .block-editor-block-list__block:where(
+		:not(.alignleft)
+		:not(.alignright)
+		:not(.alignfull)
+		:not(.alignwide)
+		:not(.vk_outer-width-full)
+		) {
+			max-width:var(--wp--custom--content-size--normal);
+			&.alignwide {
+				margin-left: calc((100% - 100vw) / 4) !important;
+				margin-right: calc((100% - 100vw) / 4) !important;
+				// 6.5で通常時の幅（max-width:var(--wp--custom--content-size--normal);）が利いてしまうため追加
+				max-width: var(--wp--style--global--wide-size);
+				}
+	}
+	// for site editor
+	.is-layout-constrained.wp-block-group{
+		&,
+		&[class*="wp-container-"] {
+			& > .alignfull {
+				width:auto;
+				margin-left: calc(50% - 50vw);
+				margin-right: calc(50% - 50vw);
+			}
+		}
+	}
+}
+// WordPress before 6.1
+body {
+	.alignwide,
+	.alignfull {
+		// margin-left: auto;
+		// margin-right: auto;
+	}
+	.alignfull {
+		&,
+		&.vk_slider {
+			// width: 100%;
+		}
+	}
+}
+
+body {
+	.edit-post-visual-editor__post-title-wrapper, 
+	.block-editor-block-list__layout.is-root-container {
+		&.is-layout-constrained :is( .alignfull,.vk_outer-width-full ){
+			width:100vw;
+			max-width: 100vw !important;
+			margin-left: calc(50% - 50vw) !important;
+			margin-right: calc(50% - 50vw) !important;
+		}
+	}
+}
