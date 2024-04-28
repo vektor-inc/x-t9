@@ -2,76 +2,105 @@
 // 編集画面ではアウターでの幅指定がないので、コンテンツ幅は max-width で処理する
 
 .editor-styles-wrapper{
-	--vk-width-editor-wrapper:100dvw;
-	--vk-width-editor-container:calc(var(--vk-width-editor-wrapper) * 0.8);
-	--vk-width-editor-sidebar:280px;
-	--vk-width-editor-leftmenu:160px;
-	--vk-width-editor-leftmenu-folded:36px;
-	--vk-width-editor-list-view-sidebar:0:
+	--vk-editor-wrapper:100dvw;
+	--vk-editor-container:calc(var(--vk-editor-wrapper) * 0.8);
+	--vk-editor-sidebar:280px;
+	--vk-editor-leftmenu:160px;
+	--vk-editor-leftmenu-folded:36px;
+	--vk-editor-list-view-sidebar:350px;
+	--wp--custom--content-size--normal : var(--vk-editor-container);
 }
 // リストビューが開いている場合
-.interface-interface-skeleton__body:has(.interface-interface-skeleton__secondary-sidebar){
-	.editor-styles-wrapper {
-		--vk-width-editor-list-view-sidebar:350px:
-	}
-}
-
 
 .editor-styles-wrapper {
 	box-sizing: border-box !important;
 }
 
-// 左管理メニュー非表示
-.is-fullscreen-mode {
-	// 右展開
-	.is-sidebar-opened .editor-styles-wrapper {
-		border:5px solid #00ff00;
-		--vk-width-editor-wrapper:calc(100dvw - var(--vk-width-editor-sidebar));
+// 左管理メニュー非表示 //////////////////////////////////
+body.is-fullscreen-mode {
+	// 右表示
+	.edit-post-layout.is-sidebar-opened {
+		.editor-styles-wrapper {
+			--vk-editor-wrapper:calc(100dvw - var(--vk-editor-sidebar));
+		}
+		// リストビュー表示
+		.interface-interface-skeleton__body:has(.interface-interface-skeleton__secondary-sidebar){
+			.editor-styles-wrapper {
+				--vk-editor-wrapper:calc(100dvw - var(--vk-editor-sidebar) - var(--vk-editor-list-view-sidebar) );
+			}
+		}
+	}
+	// リストビュー表示
+	.interface-interface-skeleton__body:has(.interface-interface-skeleton__secondary-sidebar){
+		.editor-styles-wrapper {
+			--vk-editor-wrapper:calc(100dvw - var(--vk-editor-list-view-sidebar) );
+		}
 	}
 }
 
-// 左管理メニュー表示
+// 左管理メニュー表示 //////////////////////////////////
 body:not(.is-fullscreen-mode) {
 	.editor-styles-wrapper {
-		border:5px solid #0000ff;
-		--vk-width-editor-wrapper:calc(100dvw - var(--vk-width-editor-leftmenu));
+		--vk-editor-wrapper:calc(100dvw - var(--vk-editor-leftmenu));
 	}
-	// 右展開
-	.is-sidebar-opened .editor-styles-wrapper {
-		border:5px solid #0ff0ff;
-		--vk-width-editor-wrapper:calc( 100dvw - var(--vk-width-editor-leftmenu) - var(--vk-width-editor-sidebar) );
+	// リストビュー表示
+	.interface-interface-skeleton__body:has(.interface-interface-skeleton__secondary-sidebar){
+		.editor-styles-wrapper {
+			--vk-editor-wrapper:calc(100dvw - var(--vk-editor-leftmenu) - var(--vk-editor-list-view-sidebar) );
+		}
+	}
+	// 右表示
+	.is-sidebar-opened {
+		.editor-styles-wrapper {
+			--vk-editor-wrapper:calc( 100dvw - var(--vk-editor-leftmenu) - var(--vk-editor-sidebar) );
+		}
+		// リストビュー表示
+		.interface-interface-skeleton__body:has(.interface-interface-skeleton__secondary-sidebar){
+			.editor-styles-wrapper {
+				--vk-editor-wrapper:calc(100dvw - var(--vk-editor-leftmenu) - var(--vk-editor-sidebar) - var(--vk-editor-list-view-sidebar) );
+			}
+		}
 	}
 }
-// 左管理メニュー表示（ 折りたたみ ）
-body.auto-fold,
-body.folded {
-	color: #F00 !important;
+// 左管理メニュー表示（ 折りたたみ ） //////////////////////////////////
+body:not(.is-fullscreen-mode).auto-fold,
+body:not(.is-fullscreen-mode).folded {
 	.editor-styles-wrapper {
-		border:5px solid #0000ff;
-		--vk-width-editor-wrapper:calc(100dvw - var(--vk-width-editor-leftmenu-folded));
+		--vk-editor-wrapper:calc(100dvw - var(--vk-editor-leftmenu-folded));
 	}
-	// 右展開
-	.is-sidebar-opened .editor-styles-wrapper {
-		border:5px solid #f00;
-		--vk-width-editor-wrapper:calc( 100dvw - var(--vk-width-editor-leftmenu-folded) - var(--vk-width-editor-sidebar) );
+	// リストビュー表示
+	.interface-interface-skeleton__body:has(.interface-interface-skeleton__secondary-sidebar){
+		.editor-styles-wrapper {
+			--vk-editor-wrapper:calc(100dvw - var(--vk-editor-leftmenu-folded) - var(--vk-editor-list-view-sidebar) );
+		}
 	}
-
+	// 右表示
+	.is-sidebar-opened {
+		.editor-styles-wrapper {
+			--vk-editor-wrapper:calc( 100dvw - var(--vk-editor-leftmenu-folded) - var(--vk-editor-sidebar) );
+		}
+		// リストビュー表示
+		.interface-interface-skeleton__body:has(.interface-interface-skeleton__secondary-sidebar){
+			.editor-styles-wrapper {
+				--vk-editor-wrapper:calc(100dvw - var(--vk-editor-leftmenu-folded) - var(--vk-editor-sidebar) - var(--vk-editor-list-view-sidebar) );
+			}
+		}
+	}
 }
 
 
 .editor-styles-wrapper {
 	padding: 0 !important;
 	.is-layout-constrained:where(:not(.alignfull):not(.alignfull):not(.is-root-container)) {
-		border:1px solid #ff0000;
-		max-width:var(--vk-width-editor-container);
+		max-width:var(--vk-editor-container);
 		margin-left:auto;
 		margin-right:auto;
 	}
 	.is-layout-constrained,
 	.block-editor-block-list__layout.is-root-container {
 		& > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
-			max-width:var(--vk-width-editor-container);
-			--wp--custom--content-size--normal : var(--vk-width-editor-container);
+			max-width:var(--vk-editor-container);
+			--wp--custom--content-size--normal : var(--vk-editor-container);
 		}
 	}
 }
@@ -81,7 +110,7 @@ body.folded {
 //////////////////////////////////////////////////////////////
 .editor-styles-wrapper :is( .is-layout-constrained ){
 	.alignfull {
-		max-width : var(--vk-width-editor-wrapper) !important;
+		max-width : var(--vk-editor-wrapper) !important;
 		margin-left:0 !important;
 		margin-right:0 !important;
 	}
