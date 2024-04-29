@@ -90,7 +90,6 @@ body:not(.is-fullscreen-mode).folded {
 
 
 .editor-styles-wrapper {
-	padding: 0 !important;
 	.is-layout-constrained:where(:not(.alignfull):not(.alignfull):not(.is-root-container)) {
 		max-width:var(--vk-editor-container);
 		margin-left:auto;
