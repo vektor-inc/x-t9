@@ -1,5 +1,5 @@
 // In editor screen need to no content outer layout
-// 編集画面ではアウターでの幅指定がないので、コンテンツ幅は max-width で処理する
+// 編集画面ではアウターでのコンテンツ幅 + マイナスオフセットではなく、max-width で処理する
 
 .editor-styles-wrapper{
 	--vk-editor-wrapper:100dvw;
@@ -88,19 +88,14 @@ body:not(.is-fullscreen-mode).folded {
 	}
 }
 
-
 .editor-styles-wrapper {
-	.is-layout-constrained:where(:not(.alignfull):not(.alignfull):not(.is-root-container)) {
+	// サイトエディタのの直下でコンテンツ幅を指定したアウターを使ってしまっている
+	// → しかし編集画面ではマイナスオフセットを使わず、max-width で処理しているので、コンテンツ幅になっていると都合が悪い
+	// → そのため、.is-root-container と .is-root-container > .wp-block はコンテンツ幅を除外している
+	.is-layout-constrained:where(:not(.alignfull)):where(:not(.alignwide)):where(:not(.is-root-container)):where(:not(.is-root-container > .wp-block)) {
 		max-width:var(--vk-editor-container);
 		margin-left:auto;
 		margin-right:auto;
-	}
-	.is-layout-constrained,
-	.block-editor-block-list__layout.is-root-container {
-		& > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
-			max-width:var(--vk-editor-container);
-			--wp--custom--content-size--normal : var(--vk-editor-container);
-		}
 	}
 }
 
@@ -127,4 +122,3 @@ body:not(.is-fullscreen-mode).folded {
 		margin-right:auto !important;
 	}
 }
-
