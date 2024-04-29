@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Bug fix ] Fixed a width issue on the edit screen.
+
 1.23.0
 [ Specification Change ] Remove the bottom margin from the p tag.
 
