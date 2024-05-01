@@ -10,10 +10,12 @@
 			"sticky": true
 		},
 		"dimensions": {
-			"minHeight": true
+			"minHeight": true,
+			"aspectRatio": true
 		},
 		"background": {
-			"backgroundImage": true
+			"backgroundImage": true,
+			"backgroundSize": true
 		},
 		"color": {
 			"background": true,
@@ -123,11 +125,31 @@
 			],
 			"units": [
 				"px",
+				"%",
+				"vw",
+				"vh",
 				"em",
 				"rem",
-				"vh",
-				"vw",
-				"%"
+				"svw",
+				"lvw",
+				"dvw",
+				"svh",
+				"lvh",
+				"dvh",
+				"svi",
+				"lvi",
+				"dvi",
+				"svb",
+				"lvb",
+				"dvb",
+				"vmin",
+				"svmin",
+				"lvmin",
+				"dvmin",
+				"vmax",
+				"svmax",
+				"lvmax",
+				"dvmax"
 			]
 		},
 		"border": {

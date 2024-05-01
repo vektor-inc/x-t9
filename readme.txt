@@ -1,8 +1,8 @@
 === X-T9 ===
-Contributors: kurudrive,vektor-inc
-Tested up to: 6.4
+Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei
+Tested up to: 6.5
 Requires PHP: 7.2
-Stable tag: 1.20.0
+Stable tag: 1.23.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,6 +14,30 @@ GitHub : https://github.com/vektor-inc/x-t9
 == Changelog ==
 
 [ Bug fix ] Fixed navigation submenu block not rendering menu item description HTML
+
+1.23.0
+[ Specification Change ] Remove the bottom margin from the p tag.
+
+1.22.1
+[ Design Bug fix ] Fix Description -- SNS / Logo -- Nav - Contact pattern alignment
+
+1.22.0
+[ Specification Change ] Delete theme name from templates.
+[ Specification Change ] Change the twitter icon to X
+[ Design Bug fix ] Fixed padding being added when the submenu has background.
+
+1.21.1
+[ Design Bug fix ][ 6.5 ] Fixed an issue that prevented editing of the fixed header area in WordPress 6.5.
+
+1.21.0
+[ Specification Change ][ 6.5 ] Attend to aspectRatio
+[ Specification Change ][ 6.5 ] Attend to backgroundSize
+[ Specification Change ][ 6.5 ] Allow using CSS level 4 viewport-relative units
+[ Design Bug fix ][ 6.5 ] Fix the width being wrong when setting to alignwide in editor
+[ Design Bug fix ] Fix indented li > ul margin in list__block
+[ Design Bug fix ] Addressed inability to change sidebar h4 design in individual posts
+[ Design Bug fix ] Fix column block gap setting not taking effect in individual posts
+[ Design Bug fix ]Editor: Fixed incorrect placement when vk_gridcolcard_item_body has .is-layout-constrained.
 
 1.20.0
 [ Specification Change ] TGM load from composer
