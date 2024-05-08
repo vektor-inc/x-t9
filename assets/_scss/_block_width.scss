@@ -1,6 +1,10 @@
+:root {
+	--vk-width-wrapper:100dvw;
+}
+
 .alignfull,
 .vk_outer-width-full {
-
+	// 直下でもconstrainedの中でも幅は同じ
 	&,
 	.is-layout-constrained & {
 		width: auto;
@@ -29,9 +33,10 @@
 
 // in addition to setted _scss/_vk-blocks-override.scss
 
+// サイドバーがある場合の幅調整
 .is-style-main-layout:has(.is-style-main-layout-sidebar) {
 	&>.wp-block-column {
-		:is(.alignfull, alignwide) {
+		:is(.alignfull, .alignwide) {
 			margin-left: 0 !important;
 			margin-right: 0 !important;
 			width: 100%;

@@ -1,16 +1,15 @@
 // In editor screen need to no content outer layout
-// 編集画面ではアウターでのコンテンツ幅 + マイナスオフセットではなく、max-width で処理する
+// ★★★ 編集画面ではアウターでのコンテンツ幅 + マイナスオフセットではなく、max-width で処理する ★★★
 
 .editor-styles-wrapper{
-	--vk-editor-wrapper:100dvw;
-	--vk-editor-container:calc(var(--vk-editor-wrapper) * 0.8);
+	--vk-width-wrapper:100dvw;
+	--vk-editor-container:calc(var(--vk-width-wrapper) * 0.8);
 	--vk-editor-sidebar:280px;
 	--vk-editor-leftmenu:160px;
 	--vk-editor-leftmenu-folded:36px;
 	--vk-editor-list-view-sidebar:350px;
 	--wp--custom--content-size--normal : var(--vk-editor-container);
 }
-// リストビューが開いている場合
 
 .editor-styles-wrapper {
 	box-sizing: border-box !important;
@@ -21,19 +20,19 @@ body.is-fullscreen-mode {
 	// 右表示
 	.edit-post-layout.is-sidebar-opened {
 		.editor-styles-wrapper {
-			--vk-editor-wrapper:calc(100dvw - var(--vk-editor-sidebar));
+			--vk-width-wrapper:calc(100dvw - var(--vk-editor-sidebar));
 		}
 		// リストビュー表示
 		.interface-interface-skeleton__body:has(.interface-interface-skeleton__secondary-sidebar){
 			.editor-styles-wrapper {
-				--vk-editor-wrapper:calc(100dvw - var(--vk-editor-sidebar) - var(--vk-editor-list-view-sidebar) );
+				--vk-width-wrapper:calc(100dvw - var(--vk-editor-sidebar) - var(--vk-editor-list-view-sidebar) );
 			}
 		}
 	}
 	// リストビュー表示
 	.interface-interface-skeleton__body:has(.interface-interface-skeleton__secondary-sidebar){
 		.editor-styles-wrapper {
-			--vk-editor-wrapper:calc(100dvw - var(--vk-editor-list-view-sidebar) );
+			--vk-width-wrapper:calc(100dvw - var(--vk-editor-list-view-sidebar) );
 		}
 	}
 }
@@ -41,23 +40,23 @@ body.is-fullscreen-mode {
 // 左管理メニュー表示 //////////////////////////////////
 body:not(.is-fullscreen-mode) {
 	.editor-styles-wrapper {
-		--vk-editor-wrapper:calc(100dvw - var(--vk-editor-leftmenu));
+		--vk-width-wrapper:calc(100dvw - var(--vk-editor-leftmenu));
 	}
 	// リストビュー表示
 	.interface-interface-skeleton__body:has(.interface-interface-skeleton__secondary-sidebar){
 		.editor-styles-wrapper {
-			--vk-editor-wrapper:calc(100dvw - var(--vk-editor-leftmenu) - var(--vk-editor-list-view-sidebar) );
+			--vk-width-wrapper:calc(100dvw - var(--vk-editor-leftmenu) - var(--vk-editor-list-view-sidebar) );
 		}
 	}
 	// 右表示
 	.is-sidebar-opened {
 		.editor-styles-wrapper {
-			--vk-editor-wrapper:calc( 100dvw - var(--vk-editor-leftmenu) - var(--vk-editor-sidebar) );
+			--vk-width-wrapper:calc( 100dvw - var(--vk-editor-leftmenu) - var(--vk-editor-sidebar) );
 		}
 		// リストビュー表示
 		.interface-interface-skeleton__body:has(.interface-interface-skeleton__secondary-sidebar){
 			.editor-styles-wrapper {
-				--vk-editor-wrapper:calc(100dvw - var(--vk-editor-leftmenu) - var(--vk-editor-sidebar) - var(--vk-editor-list-view-sidebar) );
+				--vk-width-wrapper:calc(100dvw - var(--vk-editor-leftmenu) - var(--vk-editor-sidebar) - var(--vk-editor-list-view-sidebar) );
 			}
 		}
 	}
@@ -66,23 +65,23 @@ body:not(.is-fullscreen-mode) {
 body:not(.is-fullscreen-mode).auto-fold,
 body:not(.is-fullscreen-mode).folded {
 	.editor-styles-wrapper {
-		--vk-editor-wrapper:calc(100dvw - var(--vk-editor-leftmenu-folded));
+		--vk-width-wrapper:calc(100dvw - var(--vk-editor-leftmenu-folded));
 	}
 	// リストビュー表示
 	.interface-interface-skeleton__body:has(.interface-interface-skeleton__secondary-sidebar){
 		.editor-styles-wrapper {
-			--vk-editor-wrapper:calc(100dvw - var(--vk-editor-leftmenu-folded) - var(--vk-editor-list-view-sidebar) );
+			--vk-width-wrapper:calc(100dvw - var(--vk-editor-leftmenu-folded) - var(--vk-editor-list-view-sidebar) );
 		}
 	}
 	// 右表示
 	.is-sidebar-opened {
 		.editor-styles-wrapper {
-			--vk-editor-wrapper:calc( 100dvw - var(--vk-editor-leftmenu-folded) - var(--vk-editor-sidebar) );
+			--vk-width-wrapper:calc( 100dvw - var(--vk-editor-leftmenu-folded) - var(--vk-editor-sidebar) );
 		}
 		// リストビュー表示
 		.interface-interface-skeleton__body:has(.interface-interface-skeleton__secondary-sidebar){
 			.editor-styles-wrapper {
-				--vk-editor-wrapper:calc(100dvw - var(--vk-editor-leftmenu-folded) - var(--vk-editor-sidebar) - var(--vk-editor-list-view-sidebar) );
+				--vk-width-wrapper:calc(100dvw - var(--vk-editor-leftmenu-folded) - var(--vk-editor-sidebar) - var(--vk-editor-list-view-sidebar) );
 			}
 		}
 	}
