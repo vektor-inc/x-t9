@@ -80,6 +80,14 @@ register_block_style(
 		'style_handle' => 'x-t9-style',
 	)
 );
+register_block_style(
+	'core/spacer',
+	array(
+		'name'         => 'spacer-xxl',
+		'label'        => __( 'XXL', 'x-t9' ),
+		'style_handle' => 'x-t9-style',
+	)
+);
 
 /* Layout ----------------------------------------------------------- */
 register_block_style(

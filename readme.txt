@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei
 Tested up to: 6.5
 Requires PHP: 7.2
-Stable tag: 1.24.0
+Stable tag: 1.24.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,6 +12,9 @@ The X-T9 is designed on the premise of full site editing function, and the user 
 GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
+
+1.24.1
+[ Specifiction Change ] Add spacer block style XXL 
 
 1.24.0
 [ Design Bug fix ] Rollback deleted p tag margin-bottom 1.23.0 / Delete margin-bottom in case of only next block is spacer.
