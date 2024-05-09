@@ -52,6 +52,12 @@ body .wp-site-blocks > :is(
 		margin-top: 0;
 }
 
+// 次の要素が スペーサーブロック / レスポンシブスペーサー の場合は margin-bottom を 0 にする
+*:has( + :is( .wp-block-spacer, .vk_spacer ) ){
+	margin-bottom:0;
+	margin-block-end: 0;
+}
+
 body :is( .wp-site-blocks, .is-layout-constrained, .is-layout-flow ) {
 	// スペーサーブロック / グループ / カバーの 次の要素の上部には margin-top が自動的に 0 になるようにする
 	// Delete margin-top from next element of spacer / group / cover block
