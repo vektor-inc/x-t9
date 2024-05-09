@@ -121,6 +121,11 @@
 					"name": "XL",
 					"slug": "80",
 					"size": "var(--wp--custom--spacing--x-large)"
+				},
+				{
+					"name": "XXL",
+					"slug": "90",
+					"size": "var(--wp--custom--spacing--xx-large)"
 				}
 			],
 			"units": [
@@ -264,6 +269,7 @@
 				"medium": "2.4rem",
 				"large": "4rem",
 				"x-large": "6rem",
+				"xx-large": "9rem",
 				"editor-padding": "2rem",
 				"button-sm": "0.3em 1em",
 				"menu-indent": "0.875rem"
