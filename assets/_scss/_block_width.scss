@@ -1,32 +1,29 @@
-:root {
-	--vk-width-wrapper:100dvw;
-}
-
 .alignfull,
 .vk_outer-width-full {
 	// 直下でもconstrainedの中でも幅は同じ
 	&,
 	.is-layout-constrained & {
 		width: auto;
-		max-width: 100vw !important;
-		margin-left: calc(50% - 50vw) !important;
-		margin-right: calc(50% - 50vw) !important;
-
+		max-width: var(--wp--custom--width--wrapper) !important;
 		&.wp-block-image {
 			// Default block style overwrite
-			max-width: 100vw;
+			max-width: var(--wp--custom--width--wrapper);
 		}
+	}
+	.is-layout-constrained & {
+		margin-left: calc( 50% - var(--wp--custom--width--wrapper) / 2 ) !important;
+		margin-right: calc (50% - var(--wp--custom--width--wrapper) / 2 ) !important;
 	}
 }
 
 .alignwide {
 	.is-layout-constrained:where(:not(:is(.alignfull, .alignwide)))>& {
-		width: calc(100% + (100vw - 100%) / 2);
-		margin-left: calc((100% - 100vw) / 4) !important;
-		margin-right: calc((100% - 100vw) / 4) !important;
+		width: calc(100% + (var(--wp--custom--width--wrapper) - 100%) / 2);
+		margin-left: calc((100% - var(--wp--custom--width--wrapper)) / 4) !important;
+		margin-right: calc((100% - var(--wp--custom--width--wrapper)) / 4) !important;
 
 		&.wp-block-image {
-			max-width: 100vw;
+			max-width: var(--wp--custom--width--wrapper);
 		}
 	}
 }

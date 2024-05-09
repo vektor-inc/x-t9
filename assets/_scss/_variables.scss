@@ -15,6 +15,11 @@ body {
 	--vk-color-border-light: var(--wp--preset--color--border-normal);
 	// cope with VK Blocks
 	--wp--preset--color--vk-color-primary: var(--wp--preset--color--primary);
+
+	// Some theme.json defined variable change 1.24.0 later then
+	// fallback variables
+	--wp--custom--content-size--normal :var(--wp--custom--width--content);
+	--wp--custom--layout--sidebar : var(--wp--custom--width--sidebat);
 }
 // Support lightning theme class
 .has-vk-color-primary-border-color { 
