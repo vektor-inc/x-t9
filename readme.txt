@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Bug fix ] Rollback deleted p tag margin-bottom 1.23.0 / Delete margin-bottom in case of only next block is spacer.
 [ Specifiction Change ] 
  --wp--custom--content-size--normal -> --wp--custom--width--content
  --wp--custom--layout--sidebar -> --wp--custom--width--sidebar
