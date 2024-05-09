@@ -13,6 +13,9 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specifiction Change ] 
+ --wp--custom--content-size--normal -> --wp--custom--width--content
+ --wp--custom--layout--sidebar -> --wp--custom--width--sidebar
 [ Design Bug fix ] Fixed a width issue on the edit screen.
 [ Design Tuning ] Add size option xxl. 
 

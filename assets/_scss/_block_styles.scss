@@ -41,7 +41,7 @@ body :where(.is-style-main-layout.is-layout-flex) {
 
 .is-style-main-layout-sidebar {
 	flex-grow: unset !important;
-	flex-basis: var(--wp--custom--layout--sidebar) !important;
+	flex-basis: var(--wp--custom--width--sidebar) !important;
 }
 
 /*-------------------------------------------*/
