@@ -195,10 +195,18 @@
 		width: 100%;
 	}
 
+	.items-justified-right .wp-block-navigation-item {
+		text-align: end;
+	}
+
 	.wp-block-navigation-item {
-		width: 100%;
+		width: initial;
 		display: block;
 		box-sizing: border-box;
+
+		.items-justified-right & {
+			text-align: end;
+		}
 
 		a {
 			padding: 0;

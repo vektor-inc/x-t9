@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug fix ] Fix the display when vertically aligned in the center and right aligned.
+
 1.24.1
 [ Specifiction Change ] Add spacer block style XXL 
 
