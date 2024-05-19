@@ -23,34 +23,32 @@
 		}
 	}
 
-	// PC Menu style
-	&__responsive-container:where(:not(.has-modal-open)) {
-
-		// :where(.wp-block-navigation__container, 
-		// .wp-block-page-list) {
-		.wp-block-navigation__container>.wp-block-navigation-item {
+  // PC Menu style
+  &__responsive-container:where(:not(.has-modal-open)) {
+	.wp-block-navigation__container {
+		&>.wp-block-navigation-item {
 			display: grid;
-			position: relative;
-			white-space: nowrap;
-
+	        position: relative;
+    	    white-space: nowrap;
+			
 			&>a {
-				grid-area: 1/-1;
-			}
+          		grid-area: 1/-1;
+        	}
 
-			*:where(:not(.is-style-nav--text-inline)) &.has-child>a {
+        	*:where(:not(.is-style-nav--text-inline)) &.has-child>a {
 				// Additional Padding for submenu-icon
-				padding-right: calc(var(--submenu-icon-size) + var(--nav-top-item-padding-horizontal) + 0.5em);
+				padding-right: calc( var(--submenu-icon-size) + var(--nav-top-item-padding-horizontal) + 0.5em );
 			}
 
-			&>.wp-block-navigation__submenu-icon {
+        	&>.wp-block-navigation__submenu-icon {
 				grid-area: 1/-1;
 				justify-self: end;
-				width: var(--submenu-icon-size);
-				height: var(--submenu-icon-size);
-				margin-right: var(--nav-top-item-padding-horizontal);
-				display: block;
-
-				&[aria-expanded=true] {
+        		width: var(--submenu-icon-size);
+        		height: var(--submenu-icon-size);
+        		margin-right: var(--nav-top-item-padding-horizontal);
+        		display: block;
+				
+				&[aria-expanded='true'] {
 					svg {
 						transform: rotate(180deg);
 					}
@@ -58,9 +56,21 @@
 			}
 		}
 
-		// }
+    // Text alignment
+    &.items-justified-left>.wp-block-navigation-item>a {
+		text-align-last: left;
 	}
 
+    &.items-justified-center>.wp-block-navigation-item>a,
+    &.items-justified-space-between>.wp-block-navigation-item>a {
+		text-align-last: center;
+	}
+	
+	&.items-justified-right>.wp-block-navigation-item>a {
+    	text-align-last: right;
+    }
+    }
+  }
 	// Mobile menu open toggle button
 	& &__responsive-container-open {
 		border: 1px solid var(--wp--preset--color--text-normal);
@@ -88,6 +98,7 @@
 			&__content {
 				font-size: var(--wp--preset--font-size--x-small);
 				padding: 1em 1.5em;
+				gap: .375rem;
 			}
 		}
 	}
