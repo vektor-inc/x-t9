@@ -10,13 +10,13 @@ p{
 		// 意図する余白 - この要素の上側のレディング - 上の要素の下側のレディング（要素検出が難しいので同じと仮定）
 		// 意図する余白 - ( line-height - 文字サイズ ) / 2(上下片方だけにする) ) -（上の要素の下側のレディング（同じとして）
 		margin-block-start:calc( var(--wp--custom--spacing--small) - ( ( 1.5rem - 1rem ) / 2 ) -  ( ( 1.5rem - 1rem ) / 2 ) );
+		margin-block-end:calc( var(--wp--custom--spacing--small) - ( ( 1.5rem - 1rem ) / 2 ) - ( ( 1.5rem - 1rem ) / 2 ) );
 		&:first-child {
 			margin-block-start: 0;
 		}
-		// もともとグループ内の最後の要素だけ余白ナシにしていたが、
-		// スペーサーの余白に加算されてしまい、意図しない余白が生じるため、全ての p 要素に余白を持たせるように変更
-		margin-bottom:0;
-		margin-block-end: 0;
+		&:last-child {
+			margin-block-end: 0;
+		}
 	}
 }
 :is( h2, h3, h4, h5, h6 ) {
@@ -50,6 +50,12 @@ body .wp-site-blocks > :is(
 	){
 		margin-block-start: 0;
 		margin-top: 0;
+}
+
+// 次の要素が スペーサーブロック / レスポンシブスペーサー の場合は margin-bottom を 0 にする
+*:has( + :is( .wp-block-spacer, .vk_spacer ) ){
+	margin-bottom:0;
+	margin-block-end: 0;
 }
 
 body :is( .wp-site-blocks, .is-layout-constrained, .is-layout-flow ) {

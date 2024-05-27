@@ -28,6 +28,10 @@
 	height: var(--wp--custom--spacing--x-large) !important;
 }
 
+.is-style-spacer-xxl {
+	height: var(--wp--custom--spacing--xx-large) !important;
+}
+
 /*-------------------------------------------*/
 /*  Column
 /*-------------------------------------------*/
@@ -37,7 +41,7 @@ body :where(.is-style-main-layout.is-layout-flex) {
 
 .is-style-main-layout-sidebar {
 	flex-grow: unset !important;
-	flex-basis: var(--wp--custom--layout--sidebar) !important;
+	flex-basis: var(--wp--custom--width--sidebar) !important;
 }
 
 /*-------------------------------------------*/

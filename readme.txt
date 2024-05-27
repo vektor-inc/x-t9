@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei
 Tested up to: 6.5
 Requires PHP: 7.2
-Stable tag: 1.23.0
+Stable tag: 1.24.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,6 +14,20 @@ GitHub : https://github.com/vektor-inc/x-t9
 == Changelog ==
 
 [ Bug fix ] Fixed navigation submenu block not rendering menu item description HTML
+
+[ Design Tuning ] Add styles to inline kbd block.
+[ Bug fix ] Fix the display when vertically aligned in the center and right aligned.
+
+1.24.1
+[ Specifiction Change ] Add spacer block style XXL 
+
+1.24.0
+[ Design Bug fix ] Rollback deleted p tag margin-bottom 1.23.0 / Delete margin-bottom in case of only next block is spacer.
+[ Specifiction Change ] 
+ --wp--custom--content-size--normal -> --wp--custom--width--content
+ --wp--custom--layout--sidebar -> --wp--custom--width--sidebar
+[ Design Bug fix ] Fixed a width issue on the edit screen.
+[ Design Tuning ] Add size option xxl. 
 
 1.23.0
 [ Specification Change ] Remove the bottom margin from the p tag.

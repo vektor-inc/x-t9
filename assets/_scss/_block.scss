@@ -131,7 +131,8 @@ ul:is(.wp-block-archives-list,
 
 /* Inline Code ------------------------------------------------- */
 .wp-block-post-content {
-	:not(pre)>code {
+	:not(pre)>code,
+	kbd {
 		display: inline-flex;
 		margin: 0 0.4em;
 		padding: 0.2em 0.4em;
@@ -143,9 +144,14 @@ ul:is(.wp-block-archives-list,
 		font-size: 0.9em;
 		line-height: 1.1;
 
-		:focus:not(pre)>code[data-rich-text-format-boundary] {
+		:focus:not(pre)>code[data-rich-text-format-boundary],
+		:focus>kbd[data-rich-text-format-boundary] {
 			background-color: var(--wp--preset--color--border-normal);
 		}
+	}
+
+	kbd {
+		border-bottom-width: 3px;
 	}
 }
 

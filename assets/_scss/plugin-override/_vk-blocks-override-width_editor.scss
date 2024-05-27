@@ -1,0 +1,9 @@
+.vk_outer {
+	.vk_outer_container .block-editor-inner-blocks {
+		.is-layout-constrained:where(:not(.alignwide):not(.alignfull)) {
+			max-width: var(--wp--style--global--content-size);
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
