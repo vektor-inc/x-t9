@@ -14,6 +14,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 == Changelog ==
 
 [ Design Tuning ] Add styles to inline kbd block.
+[ Bug fix ] Fix the display when vertically aligned in the center and right aligned.
 
 1.24.1
 [ Specifiction Change ] Add spacer block style XXL 
