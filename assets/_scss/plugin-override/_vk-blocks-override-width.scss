@@ -1,0 +1,37 @@
+
+/*-------------------------------------------*/
+/* vk_outer
+/*-------------------------------------------*/
+.vk_outer-paddingLR-zero .vk_outer_container > .alignwide {
+	max-width: var(--wp--style--global--wide-size);
+	margin-left:auto !important;
+	margin-right:auto !important;
+}
+.vk_outer-width-full:where(:not(.vk_outer-paddingLR-zero)) {
+	.vk_outer_container > .alignwide {
+		width: calc(100% + (var(--wp--custom--width--wrapper) - 100%) / 2);
+		margin-left: calc((100% - var(--wp--custom--width--wrapper)) / 4) !important;
+		margin-right: calc((100% - var(--wp--custom--width--wrapper)) / 4) !important;
+	}
+}
+// .vk_outer-paddingLR-none => content size
+.vk_outer-width-full.vk_outer-paddingLR-none {
+	.vk_outer_container {
+		max-width: var(--wp--style--global--content-size);
+		margin-left: auto;
+		margin-right: auto;
+	}
+	// VK Blocks で .vk_outer-width-full.vk_outer-paddingLR-none で calc(50vw - 50%); されてるので打消し
+	.is-layout-flow & {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+/*-------------------------------------------*/
+/* vk_slider
+/*-------------------------------------------*/
+.vk_slider {
+	&.alignfull {
+		width: var(--wp--custom--width--wrapper);
+	}
+}

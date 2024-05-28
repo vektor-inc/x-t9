@@ -102,6 +102,9 @@
 				color: #fff; // No relation under Bright BG and Dark BG
 			}
 		}
+		&:where(.has-background){
+			padding:unset; // Cancel the padding added by the WordPress core
+		}
 	}
 }
 
@@ -205,8 +208,22 @@
 		width: 100%;
 		display: block;
 		box-sizing: border-box;
+	}
 
-		> a {
+	.items-justified-right .wp-block-navigation-item {
+		text-align: end;
+	}
+
+	.wp-block-navigation-item {
+		width: initial;
+		display: block;
+		box-sizing: border-box;
+
+		.items-justified-right & {
+			text-align: end;
+		}
+
+		a {
 			padding: 0;
 		}
 	}
