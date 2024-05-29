@@ -109,7 +109,7 @@
 }
 
 :where(.wp-block-navigation .wp-block-navigation__submenu-container) {
-	& .wp-block-navigation-itema:not(.wp-element-button),
+	& .wp-block-navigation-item a:not(.wp-element-button),
 	& .wp-block-navigation-submenu a:not(.wp-element-button),
 	& .wp-block-navigation-submenu button.wp-block-navigation-item__content,
 	& .wp-block-pages-list__item button.wp-block-navigation-item__content {
