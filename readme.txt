@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Tuning ]　Adjustment when using submenus in core block navigation.
+[ Bug Fix ] Fixed a bug where the core block navigation's gap was not being applied.
 [ Design Tuning ] Add styles to inline kbd block.
 [ Bug fix ] Fix the display when vertically aligned in the center and right aligned.
 

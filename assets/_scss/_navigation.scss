@@ -108,13 +108,25 @@
 	}
 }
 
+.wp-block-navigation .wp-block-navigation__submenu-container {
+	padding: .5em 1em;
+
+	.wp-block-navigation-item a:not(.wp-element-button),
+	.wp-block-navigation-submenu a:not(.wp-element-button),
+	.wp-block-navigation-submenu button.wp-block-navigation-item__content,
+	.wp-block-pages-list__item button.wp-block-navigation-item__content {
+		padding-top: .25em;
+		padding-bottom: .25em;
+	}
+}
+
 /****************************************************** 
  * Navigation Modal Styles
  */
 .has-modal-open {
 	:where(.wp-block-navigation__container, .wp-block-page-list) {
 		--wp--style--block-gap: 0;
-
+		gap: 0;
 		&,
 		li,
 		li .wp-block-navigation-item__content {
@@ -195,6 +207,12 @@
 		width: 100%;
 	}
 
+	> .wp-block-navigation-item {
+		width: 100%;
+		display: block;
+		box-sizing: border-box;
+	}
+
 	.items-justified-right .wp-block-navigation-item {
 		text-align: end;
 	}
@@ -213,14 +231,20 @@
 		}
 	}
 
+	.wp-block-navigation-item {
+		display: flex;
+		position: relative;
+	}
+	
 	.wp-block-navigation__submenu-container {
 		display: block;
 		height: auto;
 		width: 100%;
-		position: relative;
+		position: absolute;
 		opacity: 1;
-		visibility: visible;
-		background: none;
+		visibility: hidden;
+		color: initial;
+		transition: opacity .1s linear;
 	}
 
 	@media (min-width: 782px) {
