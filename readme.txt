@@ -1,8 +1,8 @@
 === X-T9 ===
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei
-Tested up to: 6.5
-Requires PHP: 7.2
-Stable tag: 1.24.1
+Tested up to: 6.6
+Requires PHP: 7.4
+Stable tag: 1.25.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+1.25.0
 [ Other ][ 6.6 ] Fix readmore and pagenation button text color
 [ Other ][ 6.6 ] Fix scrolled header
 [ Design Tuning ] Add styles to inline kbd block.
