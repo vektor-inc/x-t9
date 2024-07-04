@@ -13,7 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
-[ Other ][ 6.6 ] Attend to WordPress 6.6 ( Fix scrolled header  )
+[ Other ][ 6.6 ] Fix readmore and pagenation button text color
+[ Other ][ 6.6 ] Fix scrolled header
 [ Design Tuning ] Add styles to inline kbd block.
 [ Bug fix ] Fix the display when vertically aligned in the center and right aligned.
 
