@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Other ] Attend to WordPress 6.6 ( Fix scrolled header  )
 [ Design Tuning ] Add styles to inline kbd block.
 [ Bug fix ] Fix the display when vertically aligned in the center and right aligned.
 
