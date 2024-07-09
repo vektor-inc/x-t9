@@ -31,13 +31,15 @@
 .wp-block-button.is-style-outline {
 	& > .wp-block-button__link {
 		border-width:1px;
+		// 6.6で コアのデフォルトスタイルが負けるようになり、背景色がついてしまうので追加
+		background-color:transparent;
+		color: currentColor;
 	}
 	& > .wp-block-button__link:not(.has-background):hover {
 		background-color: var(--wp--preset--color--primary-hover);
 		color: #fff;
 	}
 	& > .has-text-color:hover {
-		// background-color: currentColor;
 		color:#fff !important;
 	}
 }
