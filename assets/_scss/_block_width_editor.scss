@@ -2,117 +2,73 @@
 // ★ 編集画面ではアウターでのコンテンツ幅 + マイナスオフセットではなく、max-width で処理する
 // * constrained の中にある .alignfull や .alignwide がある場合は constrained の幅を全幅にする
 
-//////////////////////////////////////////////////////////////
-/// Variable Setting
-//////////////////////////////////////////////////////////////
-
-.editor-styles-wrapper{
-	--vk-editor-container:calc(var(--wp--custom--width--wrapper) * 0.8);
-	--vk-editor-sidebar:280px;
-	--vk-editor-leftmenu:160px;
-	--vk-editor-leftmenu-folded:36px;
-	--vk-editor-list-view-sidebar:350px;
-	--wp--custom--width--content : var(--vk-editor-container);
-	--wp--style--global--wide-size: calc( var(--vk-editor-container) + ( var(--wp--custom--width--wrapper) - var(--vk-editor-container) ) / 2 );
-}
-
 .editor-styles-wrapper {
-	box-sizing: border-box !important;
-}
+	--vk-width-editor-sidebar:0px; 
+	--vk-width-editor-leftmenu:0px;
+	--vk-width-editor-list-view-sidebar:0px; // Be aware that calc cannot calculate if there is no unit.
 
-// 左管理メニュー非表示 //////////////////////////////////
-body.is-fullscreen-mode {
-	// 右表示
-	.edit-post-layout.is-sidebar-opened {
-		.editor-styles-wrapper {
-			--wp--custom--width--wrapper:calc(100dvw - var(--vk-editor-sidebar));
-		}
-		// リストビュー表示
-		.interface-interface-skeleton__body:has(.interface-interface-skeleton__secondary-sidebar){
-			.editor-styles-wrapper {
-				--wp--custom--width--wrapper:calc(100dvw - var(--vk-editor-sidebar) - var(--vk-editor-list-view-sidebar) );
-			}
-		}
-	}
-	// リストビュー表示
-	.interface-interface-skeleton__body:has(.interface-interface-skeleton__secondary-sidebar){
-		.editor-styles-wrapper {
-			--wp--custom--width--wrapper:calc(100dvw - var(--vk-editor-list-view-sidebar) );
-		}
+	// full
+	--wp--custom--width--wrapper:calc( 100svw - var(--vk-width-editor-sidebar) - var(--vk-width-editor-leftmenu) - var(--vk-width-editor-list-view-sidebar) );
+
+	// wide
+	--wp--custom--width--wide:calc(var(--wp--custom--width--wrapper) * 0.9 );
+	--wp--style--global--wide-size:calc(var(--wp--custom--width--wrapper) * 0.9 );
+
+	// content
+	.block-editor-block-list__layout.is-root-container > :where(:not(.alignleft):not(.alignright):not(.alignfull)),
+	.is-layout-constrained > * {
+		--wp--custom--width--content:calc(var(--wp--custom--width--wrapper) * 0.8 );
+		--wp--style--global--content-size:calc(var(--wp--custom--width--wrapper) * 0.8 );
 	}
 }
 
-// 左管理メニュー表示 //////////////////////////////////
-body:not(.is-fullscreen-mode) {
-	.editor-styles-wrapper {
-		--wp--custom--width--wrapper:calc(100dvw - var(--vk-editor-leftmenu));
-	}
-	// リストビュー表示
-	.interface-interface-skeleton__body:has(.interface-interface-skeleton__secondary-sidebar){
-		.editor-styles-wrapper {
-			--wp--custom--width--wrapper:calc(100dvw - var(--vk-editor-leftmenu) - var(--vk-editor-list-view-sidebar) );
-		}
-	}
-	// 右表示
-	.is-sidebar-opened {
-		.editor-styles-wrapper {
-			--wp--custom--width--wrapper:calc( 100dvw - var(--vk-editor-leftmenu) - var(--vk-editor-sidebar) );
-		}
-		// リストビュー表示
-		.interface-interface-skeleton__body:has(.interface-interface-skeleton__secondary-sidebar){
-			.editor-styles-wrapper {
-				--wp--custom--width--wrapper:calc(100dvw - var(--vk-editor-leftmenu) - var(--vk-editor-sidebar) - var(--vk-editor-list-view-sidebar) );
-			}
-		}
-	}
+//  In case the left sidebar is open ( not full screen mode )
+html:has(:not(.is-fullscreen-mode)) .editor-styles-wrapper {
+	--vk-width-editor-leftmenu:160px;
 }
-// 左管理メニュー表示（ 折りたたみ ） //////////////////////////////////
-body:not(.is-fullscreen-mode).auto-fold,
-body:not(.is-fullscreen-mode).folded {
-	.editor-styles-wrapper {
-		--wp--custom--width--wrapper:calc(100dvw - var(--vk-editor-leftmenu-folded));
-	}
-	// リストビュー表示
-	.interface-interface-skeleton__body:has(.interface-interface-skeleton__secondary-sidebar){
-		.editor-styles-wrapper {
-			--wp--custom--width--wrapper:calc(100dvw - var(--vk-editor-leftmenu-folded) - var(--vk-editor-list-view-sidebar) );
-		}
-	}
-	// 右表示
-	.is-sidebar-opened {
-		.editor-styles-wrapper {
-			--wp--custom--width--wrapper:calc( 100dvw - var(--vk-editor-leftmenu-folded) - var(--vk-editor-sidebar) );
-		}
-		// リストビュー表示
-		.interface-interface-skeleton__body:has(.interface-interface-skeleton__secondary-sidebar){
-			.editor-styles-wrapper {
-				--wp--custom--width--wrapper:calc(100dvw - var(--vk-editor-leftmenu-folded) - var(--vk-editor-sidebar) - var(--vk-editor-list-view-sidebar) );
-			}
-		}
-	}
+html:has(:not(.is-fullscreen-mode)):has(.folded) .editor-styles-wrapper {
+	--vk-width-editor-leftmenu:36px;
+}
+
+// In case the right sidebar is open
+html:has(.editor-sidebar) .editor-styles-wrapper {
+	--vk-width-editor-sidebar:280px; 
+}
+
+// In case the block list view is open
+body:has(.interface-interface-skeleton__secondary-sidebar) .editor-styles-wrapper{
+	--vk-width-editor-list-view-sidebar:350px;
+}
+
+/// mobile / tablet iframe adjustment //////////////////////////
+body.block-editor-iframe__body.editor-styles-wrapper{
+	// タブレット / モバイル の場合はサイドパネルの幅の変数の値を0にする
+	--vk-width-editor-sidebar:0px;
+	--vk-width-editor-leftmenu:0px;
+	--vk-width-editor-list-view-sidebar:0px;
 }
 
 //////////////////////////////////////////////////////////////
-/// .is-layout-constrained の幅の制御
+/// full & wide
 //////////////////////////////////////////////////////////////
 
-.editor-styles-wrapper {
-	// .is-layout-constrained の最大幅をコンテンツ幅に指定
-	// サイトエディタのの直下でコンテンツ幅を指定したアウターを使ってしまっている
-	// → しかし編集画面ではマイナスオフセットを使わず、max-width で処理しているので、コンテンツ幅になっていると都合が悪い
-	// → そのため、.is-root-container と .is-root-container > .wp-block はコンテンツ幅を除外している
-	.is-layout-constrained:where(:not(.alignfull)):where(:not(.alignwide)):where(:not(.is-root-container)):where(:not(.is-root-container > .wp-block)) {
-		max-width:var(--vk-editor-container);
-		margin-left:auto;
-		margin-right:auto;
+// [data-align=full] {
+// 	&,
+// 	& > div:where(:not(.is-layout-constrained)) { // 編集画面で data-align の内側に div が追加されてしまうため、内側の div にも全幅指定しないと全幅が効かない
+// 		width:var(--vk-width-full);
+// 	}
+// }
+
+[data-align=wide] {
+	margin-left:auto;
+	margin-right:auto;
+	width:var(--wp--custom--width--wide);
+	html &,
+	& > div {
+		width:var(--wp--custom--width--wide);
+		max-width:var(--wp--custom--width--wide);
 	}
-	// constrained の中にある .alignfull や .alignwide がある場合は constrained の幅を全幅にする
-	.is-layout-constrained:where(:has(:is(.alignfull,.alignwide))),
-	.block-editor-block-list__layout.is-root-container > :where(:not(.alignleft):not(.alignright):not(.alignfull)):has(:is(.alignfull,.alignwide)){
-		max-width: var(--wp--custom--width--wrapper);
-		.alignwide {
-			margin-left:auto !important;
-			margin-right:auto !important;
-		}
+	div:where(:not(.is-layout-constrained)) {
+		max-width:var(--wp--custom--width--wide);
 	}
 }
