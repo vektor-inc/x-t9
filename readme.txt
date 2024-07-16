@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Bug Fix ] Editor:Fix outline background of button style in WP6.6.
+
 1.25.0
 [ Other ][ 6.6 ] Fix readmore and pagenation button text color
 [ Other ][ 6.6 ] Fix scrolled header
