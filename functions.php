@@ -21,9 +21,9 @@ if ( ! function_exists( 'xt9_support' ) ) :
 		// Enqueue editor styles.
 		add_editor_style( 'assets/css/style.css' );
 
-		if ( version_compare( $GLOBALS['wp_version'], '6.5', '<' ) ) {
+		if ( version_compare( $GLOBALS['wp_version'], '6.6', '<' ) ) {
 			// WordPress under 6.5
-			add_editor_style( 'assets/css/editor-65.css' );
+			add_editor_style( 'assets/css/editor-wp65.css' );
 		} else {
 			// WordPress over 6.6
 			add_editor_style( 'assets/css/editor.css' );
