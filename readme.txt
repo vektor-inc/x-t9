@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Other ][ 6.6 ] Accommodate width adjustment on WordPress 6.6 edit screen
 [ Design Bug Fix ] Editor:Fix outline background of button style in WP6.6.
 
 1.25.0
