@@ -20,7 +20,14 @@ if ( ! function_exists( 'xt9_support' ) ) :
 
 		// Enqueue editor styles.
 		add_editor_style( 'assets/css/style.css' );
-		add_editor_style( 'assets/css/editor.css' );
+
+		if ( version_compare( $GLOBALS['wp_version'], '6.5', '<' ) ) {
+			// WordPress under 6.5
+			add_editor_style( 'assets/css/editor-65.css' );
+		} else {
+			// WordPress over 6.6
+			add_editor_style( 'assets/css/editor.css' );
+		}
 	}
 	add_action( 'after_setup_theme', 'xt9_support' );
 endif;
