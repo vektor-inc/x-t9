@@ -1,6 +1,5 @@
 // In editor screen need to no content outer layout
-// ★ 編集画面ではアウターでのコンテンツ幅 + マイナスオフセットではなく、max-width で処理する
-// * constrained の中にある .alignfull や .alignwide がある場合は constrained の幅を全幅にする
+// * .is-root-container に限って .is-layout-constrained でもコンテンツ幅にならないように指定してあり、中の要素は max-width でコンテンツ幅を処理している
 
 .editor-styles-wrapper {
 	--vk-width-editor-sidebar:0px; 
@@ -52,12 +51,12 @@ body.block-editor-iframe__body.editor-styles-wrapper{
 /// full & wide
 //////////////////////////////////////////////////////////////
 
-// [data-align=full] {
-// 	&,
-// 	& > div:where(:not(.is-layout-constrained)) { // 編集画面で data-align の内側に div が追加されてしまうため、内側の div にも全幅指定しないと全幅が効かない
-// 		width:var(--vk-width-full);
-// 	}
-// }
+// ルートコンテナ以外の .is-layout-constrained には max-width を指定
+.is-layout-constrained:where(:not(.is-root-container)) {
+	max-width: var(--wp--custom--width--content);
+	margin-left:auto;
+	margin-right:auto;
+}
 
 [data-align=wide] {
 	margin-left:auto;
