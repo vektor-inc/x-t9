@@ -14,6 +14,7 @@
 	--wp--style--global--wide-size:calc(var(--wp--custom--width--wrapper) * 0.9 );
 
 	// content
+	--wp--custom--width--content:calc(var(--wp--custom--width--wrapper) * 0.8 );
 	.block-editor-block-list__layout.is-root-container > :where(:not(.alignleft):not(.alignright):not(.alignfull)),
 	.is-layout-constrained > * {
 		--wp--custom--width--content:calc(var(--wp--custom--width--wrapper) * 0.8 );
