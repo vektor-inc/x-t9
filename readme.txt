@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 1.26.1
+Stable tag: 1.26.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,6 +12,9 @@ The X-T9 is designed on the premise of full site editing function, and the user 
 GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
+
+1.26.2
+[ Design Bug Fix ] First aid for an issue where the value of --wp--preset--font-size--huge defined in theme.json is being overwritten by WordPress
 
 1.26.1
 [ Design Bug Fix ] Fixed the width of the post title on the edit screen
