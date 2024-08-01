@@ -39,7 +39,7 @@
 		background-color: var(--wp--preset--color--primary-hover);
 		color: #fff;
 	}
-	& > .has-text-color:hover {
+	& > .has-text-color:where(:not(.has-background)):hover {
 		color:#fff !important;
 	}
 }
@@ -48,7 +48,7 @@
  * VK Blocks Hover color
  * --------------------------------- */
 .vk_button {
-	.vk_button_link:hover  {
+	.vk_button_link:where(:not(.has-text-color)):hover {
 		color:#fff;
 		opacity: 1;
 	}
