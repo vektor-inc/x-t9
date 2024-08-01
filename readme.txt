@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Bug Fix ][ button ]Fixed the button text color to not become white when hovering under certain settings
+
 1.26.2
 [ Design Bug Fix ] First aid for an issue where the value of --wp--preset--font-size--huge defined in theme.json is being overwritten by WordPress
 
