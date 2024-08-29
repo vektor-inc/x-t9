@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Bug Fix ] Add css for woocommerce plugin support
 [ Design Bug Fix ][ button ]Fixed the button text color to not become white when hovering under certain settings
 
 1.26.2
