@@ -131,3 +131,10 @@ function xt9_list_categories( $output, $args ) {
 	return $output;
 }
 add_filter( 'wp_list_categories', 'xt9_list_categories', 10, 2 );
+
+// WooCommerce が有効な場合のみ WooCommerce 用の CSS を読み込む
+function x_t9_enqueue_woocommerce_css() {
+    if ( class_exists( 'WooCommerce' ) ) {
+		wp_enqueue_style( 'x-t9-woo-style', get_template_directory_uri() . '/plugin-support/woocommerce/woo.css', array( 'x-t9-style' ), '1.0.0' );    }
+}
+add_action( 'wp_enqueue_scripts', 'x_t9_enqueue_woocommerce_css' );
