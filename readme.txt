@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Bug Fix ][ button ] Fixed an issue where has-vk-color-primary-color was not applied to the outline of core buttons.
+
 1.26.3
 [ Design Bug Fix ] Add css for woocommerce plugin support
 [ Design Bug Fix ][ button ]Fixed the button text color to not become white when hovering under certain settings
