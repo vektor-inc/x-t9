@@ -37,7 +37,6 @@
 	}
 	& > .wp-block-button__link:not(.has-background):hover {
 		background-color: var(--wp--preset--color--primary-hover);
-		border-color: var(--wp--preset--color--primary-hover);
 		color: #fff;
 	}
 	& > .has-text-color:where(:not(.has-background)):hover {
