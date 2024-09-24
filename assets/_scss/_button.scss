@@ -29,7 +29,7 @@
  * Outline color
  * --------------------------------- */
 .wp-block-button.is-style-outline {
-	& > .wp-block-button__link {
+	& > :where(.wp-block-button__link) { // has-vk-color-*が効かなくなるためwhereを追加
 		border-width:1px;
 		// 6.6で コアのデフォルトスタイルが負けるようになり、背景色がついてしまうので追加
 		background-color:transparent;
