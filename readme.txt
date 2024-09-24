@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 1.26.3
+Stable tag: 1.26.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+1.26.4
 [ Design Bug Fix ][ button ] Fixed an issue where has-vk-color-primary-color was not applied to the outline of core buttons.
 
 1.26.3
