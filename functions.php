@@ -36,19 +36,19 @@ endif;
 /**
  * Enqueue scripts and styles.
  */
-function xt9_scripts() {
+function xt9_enqueue_scripts() {
 	// Enqueue theme stylesheet.
 	wp_enqueue_style( 'x-t9-style', get_template_directory_uri() . '/assets/css/style.css', array(), wp_get_theme()->get( 'Version' ) );
 }
 
-add_action( 'wp_enqueue_scripts', 'xt9_scripts' );
+add_action( 'wp_enqueue_scripts', 'xt9_enqueue_scripts' );
 
 /**
  * Load JavaScript
  *
  * @return void
  */
-function xt9_add_script() {
+function xt9_enqueue_scripts_js() {
 	wp_register_script( 'xt9-js', get_template_directory_uri() . '/assets/js/main.js', array(), XT9_THEME_VERSION, true );
 	$options = array(
 		'header_scrool' => true,
@@ -56,7 +56,7 @@ function xt9_add_script() {
 	wp_localize_script( 'xt9-js', 'xt9Opt', apply_filters( 'xt9_localize_options', $options ) );
 	wp_enqueue_script( 'xt9-js' );
 }
-add_action( 'wp_enqueue_scripts', 'xt9_add_script' );
+add_action( 'wp_enqueue_scripts', 'xt9_enqueue_scripts_js' );
 
 // Add block patterns.
 require get_template_directory() . '/inc/block-patterns.php';
@@ -70,7 +70,7 @@ require get_template_directory() . '/inc/tgm-plugin-activation/tgm-config.php';
  *
  * @return string archive title
  */
-function xt9_get_the_archive_title() {
+function xt9_get_archive_title() {
 	$title = '';
 	if ( is_category() ) {
 		$title = single_cat_title( '', false );
@@ -104,12 +104,12 @@ function xt9_get_the_archive_title() {
 			$title = __( 'Archives', 'x-t9' );
 		}
 	}
-	return apply_filters( 'xt9_get_the_archive_title', $title );
+	return apply_filters( 'xt9_get_archive_title', $title );
 }
-add_filter( 'get_the_archive_title', 'xt9_get_the_archive_title' );
+add_filter( 'get_the_archive_title', 'xt9_get_archive_title' );
 
 /**
- * Year Artchive list 'year' and count insert to inner </a>
+ * Year Archive list 'year' and count insert to inner </a>
  *
  * @param string $html link html.
  * @return string $html added string html
@@ -133,8 +133,22 @@ function xt9_list_categories( $output, $args ) {
 add_filter( 'wp_list_categories', 'xt9_list_categories', 10, 2 );
 
 // WooCommerce が有効な場合のみ WooCommerce 用の CSS を読み込む
-function x_t9_enqueue_woocommerce_css() {
+function xt9_enqueue_woocommerce_css() {
     if ( class_exists( 'WooCommerce' ) ) {
-		wp_enqueue_style( 'x-t9-woo-style', get_template_directory_uri() . '/plugin-support/woocommerce/css/woo.css', array( 'x-t9-style' ), '1.0.0' );    }
+		wp_enqueue_style( 'xt9-woo-style', get_template_directory_uri() . '/plugin-support/woocommerce/css/woo.css', array( 'x-t9-style' ), '1.0.0' );
+	}
 }
-add_action( 'wp_enqueue_scripts', 'x_t9_enqueue_woocommerce_css' );
+add_action( 'wp_enqueue_scripts', 'xt9_enqueue_woocommerce_css' );
+
+/**
+ * Enqueue VK Blocks styles after theme styles
+ */
+function xt9_enqueue_vk_blocks_styles_after_theme() {
+	if ( defined( 'VK_BLOCKS_DIR_URL' ) ) {
+		if ( wp_style_is( 'vk-blocks-build-css', 'enqueued' ) ) {
+			wp_dequeue_style( 'vk-blocks-build-css' );
+		}
+		wp_enqueue_style( 'vk-blocks-build-css', VK_BLOCKS_DIR_URL . 'build/block-build.css', array( 'x-t9-style' ), VK_BLOCKS_VERSION );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'xt9_enqueue_vk_blocks_styles_after_theme' );
