@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Bug Fix ][ WooCommerce ] Fixed an issue where the number was not displayed in the WooCommerce quantity input field.
+
 1.26.4
 [ Design Bug Fix ][ button ] Fixed an issue where has-vk-color-primary-color was not applied to the outline of core buttons.
 

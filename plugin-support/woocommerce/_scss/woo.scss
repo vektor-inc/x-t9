@@ -31,16 +31,11 @@
 }
 
 /*-------------------------------------------*/
-/*	single
+/*	qty input-text form
 /*-------------------------------------------*/
-.single {
-.wc-block-add-to-cart-form {
-	.input-text{
-		padding-left: 0.5rem;
-		padding-right: 0.5rem;
-		text-align: right;
-		width: 5rem;
-	}
+.woocommerce :is(.quantity .input-text.qty, .wc-block-add-to-cart-form .quantity .input-text.qty) {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    text-align: right;
+    width: 5rem;
 }
-}
-
