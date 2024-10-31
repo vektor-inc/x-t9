@@ -10,13 +10,6 @@
 	--color-woo-image-border: #f2f2f2;
 }
 
-@mixin input-text_qty{
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
-	text-align: right;
-	width: 5rem;
-}
-
 /* コンテント幅を使用するインナーブロック有効 幅広時 */
 .woocommerce .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
     margin-left: auto !important;
@@ -40,18 +33,9 @@
 /*-------------------------------------------*/
 /*	qty input-text form
 /*-------------------------------------------*/
-.woocommerce {
-    .quantity {
-        .input-text.qty {
-            @include input-text_qty;
-        }
-    }
-
-    .wc-block-add-to-cart-form {
-        .quantity {
-            .input-text.qty {
-                @include input-text_qty;
-            }
-        }
-    }
+.woocommerce :is(.quantity .input-text.qty, .wc-block-add-to-cart-form .quantity .input-text.qty) {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    text-align: right;
+    width: 5rem;
 }
