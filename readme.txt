@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Bug Fix ] Fixed an issue where the wide block was aligned to the left within the full-width cover block.
+
 1.26.5
 [ Design Bug Fix ][ WooCommerce ] Fixed an issue where the number was not displayed in the WooCommerce quantity input field.
 
