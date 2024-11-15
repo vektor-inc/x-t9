@@ -14,6 +14,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 == Changelog ==
 
 [ Design Bug Fix ] Fixed an issue where the wide block was aligned to the left within the full-width cover block.
+[ Bug fix ] Avoiding translation errors in WordPress 6.7
 
 1.26.5
 [ Design Bug Fix ][ WooCommerce ] Fixed an issue where the number was not displayed in the WooCommerce quantity input field.
@@ -42,15 +43,15 @@ GitHub : https://github.com/vektor-inc/x-t9
 [ Bug fix ] Fix the display when vertically aligned in the center and right aligned.
 
 1.24.1
-[ Specifiction Change ] Add spacer block style XXL 
+[ Specifiction Change ] Add spacer block style XXL
 
 1.24.0
 [ Design Bug fix ] Rollback deleted p tag margin-bottom 1.23.0 / Delete margin-bottom in case of only next block is spacer.
-[ Specifiction Change ] 
+[ Specifiction Change ]
  --wp--custom--content-size--normal -> --wp--custom--width--content
  --wp--custom--layout--sidebar -> --wp--custom--width--sidebar
 [ Design Bug fix ] Fixed a width issue on the edit screen.
-[ Design Tuning ] Add size option xxl. 
+[ Design Tuning ] Add size option xxl.
 
 1.23.0
 [ Specification Change ] Remove the bottom margin from the p tag.
@@ -84,7 +85,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 1.19.0
 [ Specification Change ] Change the style specification of the 'site-title' block from a CSS file to theme.json.
-[ Specification Change ] Add style border radius 0 to .card 
+[ Specification Change ] Add style border radius 0 to .card
 [ Specification Change ] Add nowrap CSS specification to post date block.
 [ Translation ready ] button on featured-post-list
 [ Bug Fix ] Fixed a bug where the submenu's background color and text color were not being applied.
