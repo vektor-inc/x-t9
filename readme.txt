@@ -1,8 +1,8 @@
 === X-T9 ===
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei
-Tested up to: 6.6
+Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.26.5
+Stable tag: 1.26.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,7 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
-[ Design Bug Fix ] Fixed an issue where the wide block was aligned to the left within the full-width cover block.
+1.26.6
+[ Bug Fix ] Fixed an issue where the wide block was aligned to the left within the full-width cover block.
 [ Bug fix ] Avoiding translation errors in WordPress 6.7
 
 1.26.5
