@@ -167,6 +167,7 @@
 			"dropCap": false,
 			"lineHeight": true,
 			"fluid": false,
+			"writingMode": true,
 			"fontFamilies": [
 				{
 					"slug": "system-font",
