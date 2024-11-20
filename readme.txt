@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ] Added support for the "Writing Mode" option in Typography settings for WordPress 6.7.
+
 1.26.6
 [ Bug Fix ] Fixed an issue where the wide block was aligned to the left within the full-width cover block.
 [ Bug fix ] Avoiding translation errors in WordPress 6.7
