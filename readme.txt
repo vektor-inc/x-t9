@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.26.6
+Stable tag: 1.27.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+1.27.0
 [ Specification Change ] Added support for the "Writing Mode" option in Typography settings for WordPress 6.7.
 
 1.26.6
