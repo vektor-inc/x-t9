@@ -75,35 +75,47 @@
 	border: none; // コアが border を付与してくるので打ち消す
 }
 
-.wp-block-navigation__responsive-container:not(.has-modal-open) {
-	.wp-block-navigation__submenu-container {
-		z-index: 99999; // .crolled-header-fixed specified z-index: 9999; so If less than 9999 that submenu loses to the fix header in the edit screen
+.wp-block-navigation__responsive-container{
+	&:not(.has-modal-open) {
+		.wp-block-navigation__submenu-container {
+			z-index: 99999; // .crolled-header-fixed specified z-index: 9999; so If less than 9999 that submenu loses to the fix header in the edit screen
 
-		.wp-block-navigation-item {
-			border-bottom: 1px solid var(--wp--preset--color--border-normal-darkbg);
-			&:hover {
-				background-color: var(--wp--preset--color--primary-hover);
+			.wp-block-navigation-item {
+				border-bottom: 1px solid var(--wp--preset--color--border-normal-darkbg);
+				&:hover {
+					background-color: var(--wp--preset--color--primary-hover);
+				}
+
+				&__content {
+					font-size: var(--wp--preset--font-size--x-small);
+					padding: 1em 1.5em;
+				}
 			}
-
-			&__content {
-				font-size: var(--wp--preset--font-size--x-small);
-				padding: 1em 1.5em;
+			
+			&.has-vk-color-primary-background-color{ // Adjusted to override WordPress core CSS. (for VK Pattern Library)
+				background-color: var(--wp--preset--color--primary);
+			}
+			
+		}
+		.wp-block-navigation__submenu-container{
+			&:where(:not(.has-background)) {
+				.wp-block-navigation-item {
+					background-color: var(--wp--preset--color--primary);
+				}
+			}
+			&:where(:not(.has-text-color)) {
+				.wp-block-navigation-item {
+					color: #fff; // No relation under Bright BG and Dark BG
+				}
+			}
+			&:where(.has-background){
+				padding:unset; // Cancel the padding added by the WordPress core
 			}
 		}
 	}
-	.wp-block-navigation__submenu-container{
-		&:where(:not(.has-background)) {
-			.wp-block-navigation-item {
-				background-color: var(--wp--preset--color--primary);
-			}
-		}
-		&:where(:not(.has-text-color)) {
-			.wp-block-navigation-item {
-				color: #fff; // No relation under Bright BG and Dark BG
-			}
-		}
-		&:where(.has-background){
-			padding:unset; // Cancel the padding added by the WordPress core
+	&.has-modal-open{ // Adjusted to override WordPress core CSS. (for VK Pattern Library)
+		&.has-background.has-vk-color-primary-background-color{
+			background-color: var(--wp--preset--color--primary);
 		}
 	}
 }
