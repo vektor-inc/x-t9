@@ -1,6 +1,8 @@
 :is( .alignfull,.vk_outer-width-full ) {
 	&  >  :where(.is-layout-constrained ) {
 		max-width: var(--wp--style--global--content-size);
+		margin-left: auto;
+		margin-right: auto;
 	}
 	// 直下でもconstrainedの中でも幅は同じ
 	&,

@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Bug Fix ] Fixed an issue where constrained blocks were misaligned inside full-width blocks.
 [ Design Bug Fix ][ navigation ] Adjusted to override the WordPress core CSS of wp-block-navigation__submenu-container when the .has-vk-color-primary-background-color class is assigned. (for VK pattern library)
 
 1.27.0
