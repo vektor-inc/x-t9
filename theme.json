@@ -4,7 +4,7 @@
 	"settings": {
 		"layout": {
 			"contentSize": "var(--wp--custom--width--content)",
-			"wideSize": "calc( var(--wp--custom--width--content) + ( var(--wp--custom--width--wrapper) - var(--wp--custom--width--content) ) / 2 )"
+			"wideSize": "var(--wp--custom--width--wide)"
 		},
 		"position": {
 			"sticky": true
@@ -167,6 +167,7 @@
 			"dropCap": false,
 			"lineHeight": true,
 			"fluid": false,
+			"writingMode": true,
 			"fontFamilies": [
 				{
 					"slug": "system-font",
@@ -254,6 +255,7 @@
 			"width": {
 				"wrapper": "100dvw",
 				"content": "min( 1110px, 90vw )",
+				"wide": "calc( var(--wp--custom--width--content) + ( var(--wp--custom--width--wrapper) - var(--wp--custom--width--content) ) / 2 )",
 				"sidebar": "220px"
 			},
 			"layout": {
