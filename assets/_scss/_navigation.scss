@@ -203,7 +203,7 @@
 .wp-block-navigation.is-vertical {
 	:where(.wp-block-navigation__container, .wp-block-page-list) {
 		--wp--style--block-gap: 0;
-		gap: 0;
+		gap: inherit;
 		width: 100%;
 	}
 
