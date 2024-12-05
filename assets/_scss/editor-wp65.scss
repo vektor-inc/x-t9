@@ -59,11 +59,3 @@
 .is-layout-constrained>.wp-block-spacer+* {
 	margin-block-start: 0;
 }
-
-// Navigation -------------------------------------------------
-
-// overwrite .editor-styles-wrapper .is-layout-flex { gap: var(--wp--custom--spacing--small); } on editor
-.wp-block-navigation>.wp-block-navigation__container,
-.wp-block-navigation__responsive-container-content .wp-block-navigation__container {
-	gap: 0;
-}
