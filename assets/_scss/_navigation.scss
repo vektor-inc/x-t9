@@ -71,11 +71,11 @@
 /* 
  * Sub Navigation Styles
  */
-.wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
+ .wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
 	border: none; // コアが border を付与してくるので打ち消す
 }
 
-.wp-block-navigation__responsive-container{
+.wp-block-navigation {
 	&:not(.has-modal-open) {
 		.wp-block-navigation__submenu-container {
 			z-index: 99999; // .crolled-header-fixed specified z-index: 9999; so If less than 9999 that submenu loses to the fix header in the edit screen
@@ -119,16 +119,19 @@
 		}
 	}
 }
+ 
+footer .wp-block-navigation .wp-block-navigation__submenu-container {
+	width: 100%;
 
-.wp-block-navigation .wp-block-navigation__submenu-container {
-	padding: .5em 1em;
+	.wp-block-navigation-item {
 
-	.wp-block-navigation-item a:not(.wp-element-button),
-	.wp-block-navigation-submenu a:not(.wp-element-button),
-	.wp-block-navigation-submenu button.wp-block-navigation-item__content,
-	.wp-block-pages-list__item button.wp-block-navigation-item__content {
-		padding-top: .25em;
-		padding-bottom: .25em;
+		.wp-block-navigation-item a:not(.wp-element-button),
+		.wp-block-navigation-submenu a:not(.wp-element-button),
+		.wp-block-navigation-submenu button.wp-block-navigation-item__content,
+		.wp-block-pages-list__item button.wp-block-navigation-item__content {
+			padding-top: .25rem;
+			padding-bottom: .25rem;
+		}
 	}
 }
 
@@ -230,7 +233,6 @@
 	}
 
 	.wp-block-navigation-item {
-		width: initial;
 		display: block;
 		box-sizing: border-box;
 
@@ -244,7 +246,6 @@
 	}
 
 	.wp-block-navigation-item {
-		display: flex;
 		position: relative;
 	}
 	
