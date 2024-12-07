@@ -71,7 +71,7 @@
 /* 
  * Sub Navigation Styles
  */
- .wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
+.wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
 	border: none; // コアが border を付与してくるので打ち消す
 }
 
