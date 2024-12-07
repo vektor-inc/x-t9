@@ -1,4 +1,4 @@
-/* 
+/****************************************************** 
  * Navigation Styles
  */
 
@@ -24,7 +24,7 @@
 	}
 
 	// PC Menu style
-	&__responsive-container:where(:not(.has-modal-open)) {
+	&:where(:not(.has-modal-open)) {
 
 		// :where(.wp-block-navigation__container, 
 		// .wp-block-page-list) {
@@ -68,14 +68,14 @@
 	}
 }
 
-/* 
+/****************************************************** 
  * Sub Navigation Styles
  */
 .wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
 	border: none; // コアが border を付与してくるので打ち消す
 }
 
-.wp-block-navigation__responsive-container{
+.wp-block-navigation {
 	&:not(.has-modal-open) {
 		.wp-block-navigation__submenu-container {
 			z-index: 99999; // .crolled-header-fixed specified z-index: 9999; so If less than 9999 that submenu loses to the fix header in the edit screen
