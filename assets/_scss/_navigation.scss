@@ -1,8 +1,8 @@
-/* 
+/****************************************************** 
  * Navigation Styles
  */
 
- .wp-block-navigation {
+.wp-block-navigation {
 
 	// Cope with mobile menu in align right
 	&.items-justified-right {
@@ -24,7 +24,7 @@
 	}
 
 	// PC Menu style
-	&__responsive-container:where(:not(.has-modal-open)) {
+	&:where(:not(.has-modal-open)) {
 
 		// :where(.wp-block-navigation__container, 
 		// .wp-block-page-list) {
@@ -68,7 +68,7 @@
 	}
 }
 
-/* 
+/****************************************************** 
  * Sub Navigation Styles
  */
 .wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {

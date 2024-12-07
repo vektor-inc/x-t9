@@ -13,9 +13,9 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
-
 [ Design Tuning ]　Adjustment when using submenus in core block navigation.
 [ Bug Fix ] Fixed a bug where the core block navigation's gap was not being applied.
+[ Design Bug Fix ] Fix an issue where the CSS is not applied when the navigation is set to always display.
 
 1.27.1
 [ Design Bug Fix ] Fixed an issue where constrained blocks were misaligned inside full-width blocks.
