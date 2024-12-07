@@ -14,6 +14,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 == Changelog ==
 
 [ Specification Change ] Some measurement units have been removed.
+[ Design Bug Fix ] Fix an issue where the CSS is not applied when the navigation is set to always display.
 
 1.27.1
 [ Design Bug Fix ] Fixed an issue where constrained blocks were misaligned inside full-width blocks.
