@@ -24,7 +24,7 @@
 	}
 
 	// PC Menu style
-	&__responsive-container:where(:not(.has-modal-open)) {
+	&:where(:not(.has-modal-open)) {
 
 		// :where(.wp-block-navigation__container, 
 		// .wp-block-page-list) {
