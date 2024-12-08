@@ -23,12 +23,12 @@
 		}
 	}
 
-	// PC Menu style
-	&:where(:not(.has-modal-open)) {
-
-		// :where(.wp-block-navigation__container, 
-		// .wp-block-page-list) {
-		.wp-block-navigation__container>.wp-block-navigation-item {
+	// PC Menu style /////////////////////
+	// Overlay : on ( PC Mode )
+	&__responsive-container:where(:not(.has-modal-open)) :is( .wp-block-navigation__container, .wp-block-page-list),
+	// Overlay : off（ .wp-block-navigation の 直下になる ）
+	& > :is( .wp-block-navigation__container, .wp-block-page-list) {
+		&>.wp-block-navigation-item {
 			display: grid;
 			position: relative;
 			white-space: nowrap;
@@ -57,8 +57,6 @@
 				}
 			}
 		}
-
-		// }
 	}
 
 	// Mobile menu open toggle button
