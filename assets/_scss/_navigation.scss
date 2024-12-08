@@ -27,7 +27,7 @@
 	// Overlay : on ( Wide screen )
 	&__responsive-container:where(:not(.has-modal-open)) :is( .wp-block-navigation__container, .wp-block-page-list),
 	// Overlay : off（ It is now positioned directly below .wp-block-navigation. ）
-	& > :is( .wp-block-navigation__container, .wp-block-page-list) {
+	& > :where( .wp-block-navigation__container, .wp-block-page-list) {
 		&>.wp-block-navigation-item {
 			display: grid;
 			position: relative;
