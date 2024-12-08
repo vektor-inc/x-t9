@@ -24,9 +24,9 @@
 	}
 
 	// PC Menu style /////////////////////
-	// Overlay : on ( PC Mode )
+	// Overlay : on ( Wide screen )
 	&__responsive-container:where(:not(.has-modal-open)) :is( .wp-block-navigation__container, .wp-block-page-list),
-	// Overlay : off（ .wp-block-navigation の 直下になる ）
+	// Overlay : off（ It is now positioned directly below .wp-block-navigation. ）
 	& > :is( .wp-block-navigation__container, .wp-block-page-list) {
 		&>.wp-block-navigation-item {
 			display: grid;
