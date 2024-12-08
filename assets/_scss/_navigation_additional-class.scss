@@ -51,9 +51,9 @@
  */
 
  .wp-block-navigation[class*='nav--active-border-bottom'] {
-	// オーバーレイ指定だが画面が広い場合
+	// Overlay : on ( Wide screen )
 	.wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation__responsive-container-content > ul,
-	// オーバーレイを常にオフにする場合
+	// Overlay : off（ It is now positioned directly below .wp-block-navigation. ）
 	& > :is( .wp-block-navigation__container, .wp-block-page-list ) {
 			&>.wp-block-navigation-item {
 				&>a {
