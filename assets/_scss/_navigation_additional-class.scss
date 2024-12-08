@@ -50,8 +50,11 @@
  * active-border-bottom
  */
 
- .wp-block-navigation[class*='nav--active-border-bottom']:where(:not(.is-menu-open)) {
-		:where(.wp-block-navigation__container, .wp-block-page-list) {
+ .wp-block-navigation[class*='nav--active-border-bottom'] {
+	// Overlay : on ( Wide screen )
+	.wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation__responsive-container-content > ul,
+	// Overlay : off（ It is now positioned directly below .wp-block-navigation. ）
+	& > .wp-block-navigation__container {
 			&>.wp-block-navigation-item {
 				&>a {
 					padding-top: 1em;
