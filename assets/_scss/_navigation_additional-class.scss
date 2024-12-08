@@ -54,7 +54,7 @@
 	// オーバーレイ指定だが画面が広い場合
 	.wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation__responsive-container-content > ul,
 	// オーバーレイを常にオフにする場合
-	& > .wp-block-navigation__container {
+	& > :is( .wp-block-navigation__container, .wp-block-page-list ) {
 			&>.wp-block-navigation-item {
 				&>a {
 					padding-top: 1em;
