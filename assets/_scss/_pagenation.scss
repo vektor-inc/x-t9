@@ -19,6 +19,18 @@
 		}
 	}
 
+	&-numbers {
+		+ .wp-block-query-pagination-next {
+			margin-inline-start: .5em;
+		}
+	}
+
+	&-previous {
+		+ .wp-block-query-pagination-numbers {
+			margin-inline-start: .5em;
+		}
+	}
+
 	.page-numbers.current {
 		color: var(--wp--preset--color--text-normal);
 		background-color: var(--wp--preset--color--bg-light-gray);
