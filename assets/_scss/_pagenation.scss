@@ -9,7 +9,6 @@
 	&-next {
 		line-height: 1;
 		padding: 10px 1em;
-		margin-right:0.5em;
 		background-color: var(--wp--preset--color--primary);
 		&:hover {
 			background-color: var(--wp--preset--color--primary-hover);
@@ -17,6 +16,18 @@
 		:root & {
 			text-decoration: none;
 			color: #fff; // BG Secondary and Dark both white
+		}
+	}
+
+	&-numbers {
+		+ .wp-block-query-pagination-next {
+			margin-inline-start: .5em;
+		}
+	}
+
+	&-previous {
+		+ .wp-block-query-pagination-numbers {
+			margin-inline-start: .5em;
 		}
 	}
 
