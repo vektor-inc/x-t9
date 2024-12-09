@@ -24,7 +24,7 @@ return array(
 	<!-- wp:social-links {"iconColor":"text-secondary","iconColorValue":"rgba(0,0,0,0.5)","size":"has-normal-icon-size","style":{"spacing":{"blockGap":"1rem"}},"className":"is-style-logos-only","layout":{"type":"flex","justifyContent":"center"}} -->
 	<ul class="wp-block-social-links has-normal-icon-size has-icon-color is-style-logos-only"><!-- wp:social-link {"url":"https://wordpress.org/","service":"facebook"} /-->
 	
-	<!-- wp:social-link {"url":"https://wordpress.org/","service":"twitter"} /-->
+	<!-- wp:social-link {"url":"https://wordpress.org/","service":"x"} /-->
 	
 	<!-- wp:social-link {"url":"https://wordpress.org/","service":"instagram"} /-->
 	

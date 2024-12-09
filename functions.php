@@ -5,6 +5,9 @@
  * @package vektor-inc/x-t9
  */
 
+// Composer autoload.
+require_once __DIR__ . '/vendor/autoload.php';
+
 $theme_opt = wp_get_theme( get_template() );
 
 define( 'XT9_THEME_VERSION', $theme_opt->Version ); // phpcs:ignore
@@ -17,7 +20,15 @@ if ( ! function_exists( 'xt9_support' ) ) :
 
 		// Enqueue editor styles.
 		add_editor_style( 'assets/css/style.css' );
-		add_editor_style( 'assets/css/editor.css' );
+
+		$wp_version = get_bloginfo('version');
+		if ( version_compare( $wp_version, '6.6', '>=' ) ) {
+			// WordPress over 6.6
+			add_editor_style( 'assets/css/editor.css' );
+		} else {
+			// WordPress under 6.5
+			add_editor_style( 'assets/css/editor-wp65.css' );
+		}
 	}
 	add_action( 'after_setup_theme', 'xt9_support' );
 endif;
@@ -120,3 +131,10 @@ function xt9_list_categories( $output, $args ) {
 	return $output;
 }
 add_filter( 'wp_list_categories', 'xt9_list_categories', 10, 2 );
+
+// WooCommerce が有効な場合のみ WooCommerce 用の CSS を読み込む
+function x_t9_enqueue_woocommerce_css() {
+    if ( class_exists( 'WooCommerce' ) ) {
+		wp_enqueue_style( 'x-t9-woo-style', get_template_directory_uri() . '/plugin-support/woocommerce/css/woo.css', array( 'x-t9-style' ), '1.0.0' );    }
+}
+add_action( 'wp_enqueue_scripts', 'x_t9_enqueue_woocommerce_css' );

@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 @import "variables";
+@import "variables_wp660";
 @import "ulitilies";
 @import "common";
 @import "common_margin-vertical";
@@ -19,6 +20,7 @@
 @import "plugin-override/bootstrap-override";
 @import "plugin-override/veu-override";
 @import "plugin-override/vk-blocks-override";
+@import "plugin-override/vk-blocks-override-width";
 
 html {
 	height: 100%; // to be footer bottom sticky
