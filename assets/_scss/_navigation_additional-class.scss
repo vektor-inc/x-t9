@@ -52,7 +52,7 @@
 
  .wp-block-navigation[class*='nav--active-border-bottom'] {
 	// Overlay : mobile ( Wide screen )
-	.wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation__responsive-container-content > ul,
+	.wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation__responsive-container-content > .wp-block-navigation__container,
 	// Overlay : off（ It is now positioned directly below .wp-block-navigation. ）
 	& > :where( .wp-block-navigation__container, .wp-block-page-list ) {
 			&>.wp-block-navigation-item {
