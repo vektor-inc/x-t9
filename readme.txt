@@ -1,8 +1,8 @@
 === X-T9 ===
-Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei
+Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei,yukinobu
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.27.1
+Stable tag: 1.28.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,10 +13,12 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+1.28.0
 [ Specification Change ] Some measurement units have been removed.
 [ Design Tuning ]　Adjustment when using submenus in core block navigation.
 [ Design Bug Fix ] Fixed a bug where the core block navigation's gap was not being applied.
 [ Design Bug Fix ] Fix an issue where the CSS is not applied when the navigation is set to always display.
+[ Design Bug Fix ] Add margin to pagination previous and next buttons.
 
 1.27.1
 [ Design Bug Fix ] Fixed an issue where constrained blocks were misaligned inside full-width blocks.
