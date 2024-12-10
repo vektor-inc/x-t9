@@ -24,7 +24,7 @@
 	}
 
 	// PC Menu style /////////////////////
-	// Overlay : on ( Wide screen )
+	// Overlay : mobile ( Wide screen )
 	&__responsive-container:where(:not(.has-modal-open)) :is( .wp-block-navigation__container, .wp-block-page-list),
 	// Overlay : off（ It is now positioned directly below .wp-block-navigation. ）
 	& > :where( .wp-block-navigation__container, .wp-block-page-list) {
