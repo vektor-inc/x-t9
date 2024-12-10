@@ -153,11 +153,12 @@
 
 	.wp-block-navigation-item {
 		margin: 0;
+		border-top: 1px solid var(--wp--preset--color--border-normal);
 
 		&>.wp-block-navigation-item__content,
 		&>a.wp-block-navigation-item__content {
 			padding: 0.8em;
-			border-bottom: 1px solid var(--wp--preset--color--border-normal);
+			
 		}
 
 		&.has-text-normal-darkbg-color {
@@ -170,7 +171,7 @@
 
 		.wp-block-navigation__submenu-container {
 			display: block;
-			height: auto;
+			// height: auto;
 			width: 100%;
 
 			.wp-block-navigation-item {

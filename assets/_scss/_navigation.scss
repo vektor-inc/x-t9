@@ -29,7 +29,7 @@
 	// Overlay : off（ It is now positioned directly below .wp-block-navigation. ）
 	& > :where( .wp-block-navigation__container, .wp-block-page-list) {
 		&>.wp-block-navigation-item {
-			display: grid;
+			// display: grid;
 			position: relative;
 			white-space: nowrap;
 
@@ -79,33 +79,14 @@
 			z-index: 99999; // .crolled-header-fixed specified z-index: 9999; so If less than 9999 that submenu loses to the fix header in the edit screen
 
 			.wp-block-navigation-item {
-				border-bottom: 1px solid var(--wp--preset--color--border-normal-darkbg);
-				&:hover {
-					background-color: var(--wp--preset--color--primary-hover);
-				}
-
 				&__content {
 					font-size: var(--wp--preset--font-size--x-small);
 					padding: 1em 1.5em;
 				}
 			}
-			
-			&.has-vk-color-primary-background-color{ // Adjusted to override WordPress core CSS. (for VK Pattern Library)
-				background-color: var(--wp--preset--color--primary);
-			}
-			
+
 		}
 		.wp-block-navigation__submenu-container{
-			&:where(:not(.has-background)) {
-				.wp-block-navigation-item {
-					background-color: var(--wp--preset--color--primary);
-				}
-			}
-			&:where(:not(.has-text-color)) {
-				.wp-block-navigation-item {
-					color: #fff; // No relation under Bright BG and Dark BG
-				}
-			}
 			&:where(.has-background){
 				padding:unset; // Cancel the padding added by the WordPress core
 			}
@@ -118,20 +99,20 @@
 	}
 }
  
-footer .wp-block-navigation .wp-block-navigation__submenu-container {
-	width: 100%;
+// footer .wp-block-navigation .wp-block-navigation__submenu-container {
+// 	width: 100%;
 
-	.wp-block-navigation-item {
+// 	.wp-block-navigation-item {
 
-		.wp-block-navigation-item a:not(.wp-element-button),
-		.wp-block-navigation-submenu a:not(.wp-element-button),
-		.wp-block-navigation-submenu button.wp-block-navigation-item__content,
-		.wp-block-pages-list__item button.wp-block-navigation-item__content {
-			padding-top: .25rem;
-			padding-bottom: .25rem;
-		}
-	}
-}
+// 		.wp-block-navigation-item a:not(.wp-element-button),
+// 		.wp-block-navigation-submenu a:not(.wp-element-button),
+// 		.wp-block-navigation-submenu button.wp-block-navigation-item__content,
+// 		.wp-block-pages-list__item button.wp-block-navigation-item__content {
+// 			padding-top: .25rem;
+// 			padding-bottom: .25rem;
+// 		}
+// 	}
+// }
 
 /****************************************************** 
  * Navigation Modal Styles
@@ -211,51 +192,81 @@ footer .wp-block-navigation .wp-block-navigation__submenu-container {
 }
 
 /****************************************************** 
+ *  Horizontal Navigation common styles
+ */
+ .wp-block-navigation:where(:not(.is-vertical)) {
+	.wp-block-navigation__submenu-container{
+		&.has-vk-color-primary-background-color{ // Adjusted to override WordPress core CSS. (for VK Pattern Library)
+			background-color: var(--wp--preset--color--primary);
+		}
+		&:where(:not(.has-background)) {
+			.wp-block-navigation-item {
+				background-color: var(--wp--preset--color--primary);
+			}
+		}
+		.wp-block-navigation-item {
+			border-bottom: 1px solid var(--wp--preset--color--border-normal-darkbg);
+			&:hover {
+				background-color: var(--wp--preset--color--primary-hover);
+			}
+		}
+		&:where(:not(.has-text-color)) {
+			.wp-block-navigation-item {
+				color: #fff; // No relation under Bright BG and Dark BG
+			}
+		}
+	}
+ }
+/****************************************************** 
  *  Vertical Navigation common styles
  */
 .wp-block-navigation.is-vertical {
+	.wp-block-navigation-item {
+		display:flex;
+		flex-wrap: wrap;
+	}
 	:where(.wp-block-navigation__container, .wp-block-page-list) {
-		--wp--style--block-gap: 0;
-		gap: inherit;
-		width: 100%;
+	// 	--wp--style--block-gap: 0;
+	// 	gap: inherit;
+	// 	width: 100%;
 	}
 
 	> .wp-block-navigation-item {
 		width: 100%;
-		display: block;
-		box-sizing: border-box;
+		justify-content: space-between;
+		// display: block;
 	}
 
-	.items-justified-right .wp-block-navigation-item {
-		text-align: end;
-	}
+	// .items-justified-right .wp-block-navigation-item {
+	// 	text-align: end;
+	// }
 
-	.wp-block-navigation-item {
-		display: block;
-		box-sizing: border-box;
+	// .wp-block-navigation-item {
+	// 	display: block;
 
-		.items-justified-right & {
-			text-align: end;
-		}
+	// 	.items-justified-right & {
+	// 		text-align: end;
+	// 	}
 
-		a {
-			padding: 0;
-		}
-	}
+	// 	a {
+	// 		padding: 0;
+	// 	}
+	// }
 
-	.wp-block-navigation-item {
-		position: relative;
-	}
+	// .wp-block-navigation-item {
+	// 	position: relative;
+	// }
 	
 	.wp-block-navigation__submenu-container {
-		display: block;
-		height: auto;
-		width: 100%;
-		position: absolute;
-		opacity: 1;
-		visibility: hidden;
-		color: initial;
-		transition: opacity .1s linear;
+	// 	display: block;
+	// 	height: auto;
+	// 	width: 100%;
+		position: relative; // コア打ち消し
+		flex-basis: 100%;
+	// 	opacity: 1;
+	// 	visibility: hidden;
+	// 	color: initial;
+	// 	transition: opacity .1s linear;
 	}
 
 	@media (min-width: 782px) {
