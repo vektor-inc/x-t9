@@ -2,6 +2,25 @@
  * Navigation Styles
  */
 
+ /*
+Overlay : off ***********************
+.wp-block-navigation
+	& > ul.wp-block-navigation__container
+
+Overlay : mobile ***********************
+.wp-block-navigation
+	& > .wp-block-navigation__responsive-container.has-modal-open
+		.wp-block-navigation__responsive-container-content
+			& > .wp-block-navigation__container.is-responsive
+
+Overlay : allways ***********************
+.wp-block-navigation
+	& >.wp-block-navigation__responsive-container.has-modal-open
+		.wp-block-navigation__responsive-container-content
+			& > .wp-block-navigation__container.is-responsive
+*/
+
+
 .wp-block-navigation {
 
 	// Cope with mobile menu in align right
@@ -13,6 +32,11 @@
 
 	--submenu-icon-size: 12px;
 	--nav-top-item-padding-horizontal: 0.9em;
+
+	:where( .wp-block-navigation-item__content ) {
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+	}
 
 	:where(.wp-block-navigation__container, .wp-block-page-list) {
 		&>.wp-block-navigation-item {
@@ -36,7 +60,7 @@
 				grid-area: 1/-1;
 			}
 
-			&>.wp-block-navigation__submenu-icon {
+			&>:where(.wp-block-navigation__submenu-icon) {
 				grid-area: 1/-1;
 				justify-self: end;
 				width: var(--submenu-icon-size);
@@ -206,8 +230,5 @@
  *  Vertical Navigation common styles
  */
  :where( .wp-block-navigation.is-vertical ) {
-	:where( .wp-block-navigation-item__content ) {
-		padding-top: 0.5em;
-		padding-bottom: 0.5em;
-	}
+	// nothing now
 }
