@@ -148,41 +148,52 @@
 /******************************************************
  * Vertical with hr
  */
-*[class*='nav--vertical-with-hr'] {
+ .wp-block-navigation[class*='nav--vertical-with-hr'] {
 	--wp--custom--spacing--menu-indent: 0.8em;
-
+	width:100%;
 	.wp-block-navigation-item {
+		width: 100%;
+		justify-content: space-between;
+		display:flex;
+		flex-wrap: wrap;
 		margin: 0;
 		border-top: 1px solid var(--wp--preset--color--border-normal);
-
-		&>.wp-block-navigation-item__content,
-		&>a.wp-block-navigation-item__content {
-			padding: 0.8em;
-			
-		}
-
 		&.has-text-normal-darkbg-color {
-
 			&>.wp-block-navigation-item__content,
 			&>a.wp-block-navigation-item__content {
 				border-bottom: 1px solid var(--wp--preset--color--border-normal-darkbg);
 			}
 		}
-
-		.wp-block-navigation__submenu-container {
-			display: block;
-			// height: auto;
-			width: 100%;
-
-			.wp-block-navigation-item {
-				.wp-block-navigation-item__content {
-					padding-left: calc(var(--wp--custom--spacing--menu-indent) * 2);
-				}
-
-				.wp-block-navigation-item .wp-block-navigation-item__content {
-					padding-left: calc(var(--wp--custom--spacing--menu-indent) * 3);
+		&__content {
+			padding: 0.8em;
+		}
+		.wp-block-navigation-item >.wp-block-navigation__submenu-icon {
+			& > svg {
+				transform: rotate(0deg);
+			}
+			&[aria-expanded=true] {
+				& > svg {
+					transform: rotate(180deg);
 				}
 			}
+		}
+	}
+	.wp-block-navigation__submenu-container {
+		border: none; // コアが border を付与してくるので打ち消す
+		position: relative; // コア打ち消し
+		flex-basis: 100%; // サブメニューは折り返して横幅100%にするため
+		.wp-block-navigation-item {
+			.wp-block-navigation-item__content {
+				padding-left: calc(var(--wp--custom--spacing--menu-indent) * 2);
+			}
+			.wp-block-navigation-item .wp-block-navigation-item__content {
+				padding-left: calc(var(--wp--custom--spacing--menu-indent) * 3);
+			}
+		}
+	}
+	@media (min-width: 782px) {
+		.has-child .wp-block-navigation__submenu-container {
+			left: 0;
 		}
 	}
 }

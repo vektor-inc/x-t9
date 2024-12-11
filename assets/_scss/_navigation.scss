@@ -17,7 +17,6 @@
 	:where(.wp-block-navigation__container, .wp-block-page-list) {
 		&>.wp-block-navigation-item {
 			&>a {
-				padding-left: var(--nav-top-item-padding-horizontal);
 				padding-right: var(--nav-top-item-padding-horizontal);
 			}
 		}
@@ -35,11 +34,6 @@
 
 			&>a {
 				grid-area: 1/-1;
-			}
-
-			*:where(:not(.is-style-nav--text-inline)) &.has-child>a {
-				// Additional Padding for submenu-icon
-				padding-right: calc(var(--submenu-icon-size) + var(--nav-top-item-padding-horizontal) + 0.5em);
 			}
 
 			&>.wp-block-navigation__submenu-icon {
@@ -69,10 +63,6 @@
 /****************************************************** 
  * Sub Navigation Styles
  */
-.wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
-	border: none; // コアが border を付与してくるので打ち消す
-}
-
 .wp-block-navigation {
 	&:not(.has-modal-open) {
 		.wp-block-navigation__submenu-container {
@@ -98,21 +88,6 @@
 		}
 	}
 }
- 
-// footer .wp-block-navigation .wp-block-navigation__submenu-container {
-// 	width: 100%;
-
-// 	.wp-block-navigation-item {
-
-// 		.wp-block-navigation-item a:not(.wp-element-button),
-// 		.wp-block-navigation-submenu a:not(.wp-element-button),
-// 		.wp-block-navigation-submenu button.wp-block-navigation-item__content,
-// 		.wp-block-pages-list__item button.wp-block-navigation-item__content {
-// 			padding-top: .25rem;
-// 			padding-bottom: .25rem;
-// 		}
-// 	}
-// }
 
 /****************************************************** 
  * Navigation Modal Styles
@@ -126,7 +101,6 @@
 		li .wp-block-navigation-item__content {
 			width: 100%;
 			display: block;
-			box-sizing: border-box;
 		}
 
 		li .wp-block-navigation-item__content {
@@ -195,6 +169,13 @@
  *  Horizontal Navigation common styles
  */
  .wp-block-navigation:where(:not(.is-vertical)) {
+	.wp-block-navigation-item__content {
+		padding-left: var(--nav-top-item-padding-horizontal);
+	}
+	&:not(.has-background) .wp-block-navigation__submenu-container,
+	.wp-block-navigation__submenu-container{
+		border: none; // コアが border を付与してくるので打ち消す
+	}
 	.wp-block-navigation__submenu-container{
 		&.has-vk-color-primary-background-color{ // Adjusted to override WordPress core CSS. (for VK Pattern Library)
 			background-color: var(--wp--preset--color--primary);
@@ -209,6 +190,10 @@
 			&:hover {
 				background-color: var(--wp--preset--color--primary-hover);
 			}
+			*:where(:not(.is-style-nav--text-inline)) &.has-child>a {
+				// Additional Padding for submenu-icon
+				padding-right: calc(var(--submenu-icon-size) + var(--nav-top-item-padding-horizontal) + 0.5em);
+			}
 		}
 		&:where(:not(.has-text-color)) {
 			.wp-block-navigation-item {
@@ -220,58 +205,9 @@
 /****************************************************** 
  *  Vertical Navigation common styles
  */
-.wp-block-navigation.is-vertical {
-	.wp-block-navigation-item {
-		display:flex;
-		flex-wrap: wrap;
-	}
-	:where(.wp-block-navigation__container, .wp-block-page-list) {
-	// 	--wp--style--block-gap: 0;
-	// 	gap: inherit;
-	// 	width: 100%;
-	}
-
-	> .wp-block-navigation-item {
-		width: 100%;
-		justify-content: space-between;
-		// display: block;
-	}
-
-	// .items-justified-right .wp-block-navigation-item {
-	// 	text-align: end;
-	// }
-
-	// .wp-block-navigation-item {
-	// 	display: block;
-
-	// 	.items-justified-right & {
-	// 		text-align: end;
-	// 	}
-
-	// 	a {
-	// 		padding: 0;
-	// 	}
-	// }
-
-	// .wp-block-navigation-item {
-	// 	position: relative;
-	// }
-	
-	.wp-block-navigation__submenu-container {
-	// 	display: block;
-	// 	height: auto;
-	// 	width: 100%;
-		position: relative; // コア打ち消し
-		flex-basis: 100%;
-	// 	opacity: 1;
-	// 	visibility: hidden;
-	// 	color: initial;
-	// 	transition: opacity .1s linear;
-	}
-
-	@media (min-width: 782px) {
-		.has-child .wp-block-navigation__submenu-container {
-			left: 0;
-		}
+ :where( .wp-block-navigation.is-vertical ) {
+	:where( .wp-block-navigation-item__content ) {
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
 	}
 }
