@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.27.1
+Stable tag: 1.28.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,6 +12,9 @@ The X-T9 is designed on the premise of full site editing function, and the user 
 GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
+
+1.28.1
+[ Bug fix ] rollback 1.27.1
 
 1.27.1
 [ Design Bug Fix ] Fixed an issue where constrained blocks were misaligned inside full-width blocks.
