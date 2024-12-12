@@ -164,6 +164,7 @@
 			padding: 0.8em;
 		}
 		.wp-block-navigation-item >.wp-block-navigation__submenu-icon {
+			margin-right: var(--nav-top-item-padding-horizontal);
 			& > svg {
 				transform: rotate(0deg);
 			}
