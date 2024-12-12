@@ -142,7 +142,7 @@
 }
 
 /******************************************************
- * Vertical with hr
+ * Vertical with hr ( submenu animation 以外 )
  */
  .wp-block-navigation[class*='nav--vertical-with-hr'] {
 	--wp--custom--spacing--menu-indent: 0.8em;
@@ -191,5 +191,22 @@
 		.has-child .wp-block-navigation__submenu-container {
 			left: 0;
 		}
+	}
+}
+
+/****************************************************** 
+ * Vertical with hr submenu animation
+ */
+ .wp-block-navigation[class*='nav--vertical-with-hr'] {
+	.has-child .wp-block-navigation__submenu-container {
+		display: grid;
+		transition: all 1s ease-out;
+		overflow: hidden;
+		height:unset;
+		max-height:0vh;
+	}
+	.has-child:hover > .wp-block-navigation__submenu-container {
+		max-height:80svh;
+		overflow-y: scroll;
 	}
 }
