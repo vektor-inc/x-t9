@@ -131,64 +131,6 @@ Overlay : allways ***********************
 	}
 }
 
-/****************************************************** 
- * Navigation Modal Styles
- */
-.has-modal-open {
-	:where(.wp-block-navigation__container, .wp-block-page-list) {
-		--wp--style--block-gap: 0;
-		gap: 0;
-		&,
-		li,
-		li .wp-block-navigation-item__content {
-			width: 100%;
-			display: block;
-		}
-
-		li .wp-block-navigation-item__content {
-			border-bottom: 1px solid var(--wp--preset--color--border-normal);
-		}
-
-		li.has-child .wp-block-navigation__submenu-container {
-			width: 100%;
-		}
-
-		.current-menu-item .wp-block-navigation-item__content,
-		.wp-block-navigation-item__content:hover {
-			background-color: var(--wp--preset--color--bg-light-gray);
-		}
-	}
-
-	// .wp-block-navigation-item .wp-block-site-logo a {
-	// 	padding: 1em var(--wp--custom--spacing--menu-indent);
-	// }
-
-	.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
-		.wp-block-navigation-item {
-			.wp-block-navigation-item__content {
-				padding: 1em;
-				padding-left: var(--wp--custom--spacing--menu-indent);
-			}
-
-			li .wp-block-navigation-item__content {
-				padding-left: calc(var(--wp--custom--spacing--menu-indent) * 2);
-			}
-
-			li li .wp-block-navigation-item__content {
-				padding-left: calc(var(--wp--custom--spacing--menu-indent) * 3);
-			}
-		}
-
-		:where(.wp-block-navigation__container, .wp-block-page-list) {
-
-			.has-child .submenu-container,
-			.has-child .wp-block-navigation__submenu-container {
-				width: 100%;
-				padding: 0;
-			}
-		}
-	}
-}
 
 /****************************************************** 
  *  Horizontal Navigation common styles
