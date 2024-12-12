@@ -196,9 +196,9 @@
 }
 
 /****************************************************** 
- * Vertical with hr submenu animation
+ * Vertical with hr submenu no fold
  */
- .wp-block-navigation[class*='nav--vertical-with-hr'] {
+ .wp-block-navigation[class*='nav--vertical-with-hr']:where(:not([class*='nav--vertical-with-hr-and-no-fold'])) {
 	.has-child .wp-block-navigation__submenu-container {
 		display: grid;
 		transition: all 1s ease-out;
@@ -210,4 +210,16 @@
 		max-height:80svh;
 		overflow-y: scroll;
 	}
+}
+
+.wp-block-navigation[class*='nav--vertical-with-hr-and-no-fold'] {
+	.wp-block-navigation__submenu-container {
+		height:auto;
+		opacity: 1;
+		visibility: visible;
+	}
+	.wp-block-navigation__submenu-icon {
+		display: none;
+	}
+
 }

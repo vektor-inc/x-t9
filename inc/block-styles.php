@@ -34,6 +34,14 @@ add_action(
 				'style_handle' => 'x-t9-style',
 			)
 		);
+		register_block_style(
+			'core/navigation',
+			array(
+				'name'         => 'nav--vertical-with-hr-and-no-fold',
+				'label'        => __( 'Vertical with hr and no fold', 'x-t9' ),
+				'style_handle' => 'x-t9-style',
+			)
+		);
 
 		/* Spacer --------------------------------------------------------------- */
 		register_block_style(
