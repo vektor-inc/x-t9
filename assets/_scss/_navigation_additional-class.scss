@@ -99,7 +99,7 @@
 
 	// PC Mode ( * Display 1st level only )
 	.wp-block-navigation__responsive-container:where( :not(.is-menu-open) ), // Overlay close
-	& > :where( ul.wp-block-navigation__container ) { // No overlay mode
+	& > :where( .wp-block-navigation__container ) { // No overlay mode
 		.wp-block-navigation-item {
 			border-left: 1px solid var(--nav--text-inline--border);
 			&:last-child {
@@ -109,7 +109,7 @@
 				display: none;
 			}
 		}
-		&>.wp-block-navigation-item {
+		.wp-block-navigation-item {
 			&:last-child {
 				border-right: 1px solid var(--nav--text-inline--border);
 			}
@@ -179,6 +179,7 @@
 		border: none; // コアが border を付与してくるので打ち消す
 		position: relative; // コア打ち消し
 		flex-basis: 100%; // サブメニューは折り返して横幅100%にするため
+		background-color: unset; // コアが #fff を付与してくるので打ち消す
 		.wp-block-navigation-item {
 			.wp-block-navigation-item__content {
 				padding-left: calc(var(--wp--custom--spacing--menu-indent) * 2);
