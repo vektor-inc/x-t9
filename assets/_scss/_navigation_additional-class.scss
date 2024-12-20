@@ -147,7 +147,6 @@
  .wp-block-navigation[class*='nav--vertical-with-hr'] {
 	--wp--custom--spacing--menu-indent: 0.8em;
 	width:100%;
-
 	// Border specify /////////////////////
 	.wp-block-navigation-item {
 		&.has-text-normal-darkbg-color {
@@ -228,6 +227,10 @@
 	.has-child:hover > .wp-block-navigation__submenu-container {
 		max-height:80svh;
 		overflow-y: scroll;
+	}
+	// オーバーレイでは折りたたまないので max-height を上書き
+	.wp-block-navigation__responsive-container.has-modal-open .wp-block-navigation__submenu-container {
+		max-height:100%;
 	}
 }
 
