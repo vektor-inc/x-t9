@@ -16,17 +16,17 @@
 	// content
 	--wp--custom--width--content:calc(var(--wp--custom--width--wrapper) * 0.8 );
 	.block-editor-block-list__layout.is-root-container > :where(:not(.alignleft):not(.alignright):not(.alignfull)),
-	.is-layout-constrained > * {
+	.is-layout-constrained > *:where(:not(.alignfull)) {
 		--wp--custom--width--content:calc(var(--wp--custom--width--wrapper) * 0.8 );
 		--wp--style--global--content-size:calc(var(--wp--custom--width--wrapper) * 0.8 );
 	}
 }
 
 //  In case the left sidebar is open ( not full screen mode )
-html:has(:not(.is-fullscreen-mode)) .editor-styles-wrapper {
+body:where(:not(.is-fullscreen-mode)) .editor-styles-wrapper {
 	--vk-width-editor-leftmenu:160px;
 }
-html:has(:not(.is-fullscreen-mode)):has(.folded) .editor-styles-wrapper {
+body:where(:not(.is-fullscreen-mode)).folded .editor-styles-wrapper {
 	--vk-width-editor-leftmenu:36px;
 }
 
