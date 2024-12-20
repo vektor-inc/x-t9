@@ -14,7 +14,7 @@ add_action(
 			'core/navigation',
 			array(
 				'name'         => 'nav--active-border-bottom',
-				'label'        => __( 'Active Border Bottom', 'x-t9' ),
+				'label'        => __( 'Horizontal Active Border Bottom', 'x-t9' ),
 				'style_handle' => 'x-t9-style',
 			),
 		);
@@ -22,7 +22,7 @@ add_action(
 			'core/navigation',
 			array(
 				'name'         => 'nav--text-inline',
-				'label'        => __( 'Text Inline', 'x-t9' ),
+				'label'        => __( 'Horizontal Text Inline', 'x-t9' ),
 				'style_handle' => 'x-t9-style',
 			)
 		);
@@ -30,7 +30,15 @@ add_action(
 			'core/navigation',
 			array(
 				'name'         => 'nav--vertical-with-hr',
-				'label'        => __( 'Vertical with hr', 'x-t9' ),
+				'label'        => __( 'Vertical with HR', 'x-t9' ),
+				'style_handle' => 'x-t9-style',
+			)
+		);
+		register_block_style(
+			'core/navigation',
+			array(
+				'name'         => 'nav--vertical-with-hr-and-no-fold',
+				'label'        => __( 'Vertical with HR No Fold', 'x-t9' ),
 				'style_handle' => 'x-t9-style',
 			)
 		);

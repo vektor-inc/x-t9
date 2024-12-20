@@ -15,6 +15,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 1.28.0
 [ Specification Change ] Some measurement units have been removed.
+[ Specification Change ] Refactoring the design of the navigation block.
+[ Design Bug Fix ] Fixed a bug where the core block navigation's gap was not being applied.
 [ Design Bug Fix ] Fix an issue where the CSS is not applied when the navigation is set to always display.
 [ Design Bug Fix ] Add margin to pagination previous and next buttons.
 
