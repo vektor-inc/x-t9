@@ -216,13 +216,13 @@
 /****************************************************** 
  * Vertical with hr submenu
  */
- .wp-block-navigation[class*='nav--vertical-with-hr']:where(:not([class*='nav--vertical-with-hr-and-no-fold'])) {
+.wp-block-navigation[class*='nav--vertical-with-hr']:where(:not([class*='nav--vertical-with-hr-and-no-fold'])) {
 	.has-child .wp-block-navigation__submenu-container {
 		display: grid;
 		transition: all 1s ease-out;
 		overflow: hidden;
 		height:unset;
-		max-height:0vh;
+		max-height:0svh;
 	}
 	.has-child:hover > .wp-block-navigation__submenu-container {
 		max-height:80svh;
