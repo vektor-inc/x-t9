@@ -234,6 +234,20 @@
 	}
 }
 
+// 編集画面でメニュー項目を選択すると WordPress 標準がまた別のCSSを吐き出したりして崩れるので、.is-selected が付いたらサブ階層は強制的に表示する
+.wp-block-navigation[class*='nav--vertical-with-hr']:where(:not([class*='nav--vertical-with-hr-and-no-fold'])):has(.is-selected) {
+	.has-child .wp-block-navigation__submenu-container {
+		display: grid;
+		height: auto;
+		opacity: 1;
+		visibility: visible;
+		max-height: unset;
+	}
+}
+
+/****************************************************** 
+ * Vertical with hr submenu ( no fold )
+ */
 .wp-block-navigation[class*='nav--vertical-with-hr-and-no-fold'] {
 	.wp-block-navigation__submenu-container {
 		height:auto;
