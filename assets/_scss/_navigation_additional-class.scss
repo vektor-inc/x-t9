@@ -225,7 +225,7 @@
 		max-height:0svh;
 	}
 	.has-child:hover > .wp-block-navigation__submenu-container {
-		max-height:80svh;
+		max-height:100svh;
 		overflow-y: scroll;
 	}
 	// オーバーレイでは折りたたまないので max-height を上書き
