@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug fix ] Fixed an issue with full-width processing in the editor.
+
 1.28.0
 [ Specification Change ] Some measurement units have been removed.
 [ Specification Change ] Refactoring the design of the navigation block.
