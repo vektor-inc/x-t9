@@ -183,12 +183,12 @@
 				}
 			}
 	  	}
-		:where( .wp-block-navigation__submenu-container ) {
+		.wp-block-navigation__submenu-container {
 			border: none; // コアが border を付与してくるので打ち消す
 			position: relative; // コア打ち消し
 			background-color: unset; // コアが #fff を付与してくるので打ち消す
+			top:0; // Reset top:100% by core
 			width:100%;
-			top:0;
 			margin:0;
 			grid-row: 2 / 3;
 			grid-column: 1 / 3;
@@ -203,7 +203,9 @@
 		}
 	}
 	@media (min-width: 782px) {
-		.has-child .wp-block-navigation__submenu-container {
+		// Reset left:100% by core
+		.has-child .wp-block-navigation__submenu-container,
+		.has-child .wp-block-navigation__submenu-container .wp-block-navigation__submenu-container {
 			left: 0;
 		}
 	}
