@@ -18,7 +18,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 
 1.28.1
-[ Other ]　Rollback to 1.27.1
+[ Other ] Rollback to 1.27.1
 
 1.28.0
 [ Specification Change ] Some measurement units have been removed.
