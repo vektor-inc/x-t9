@@ -13,7 +13,12 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ( Redesign ) ][ Navigation ] Refactoring the design of the navigation block.
 [ Bug fix ] Fixed an issue with full-width processing in the editor.
+
+
+1.28.1
+[ Other ] Rollback to 1.27.1
 
 1.28.0
 [ Specification Change ] Some measurement units have been removed.
