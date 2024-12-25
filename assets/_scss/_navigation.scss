@@ -195,7 +195,7 @@ Overlay : allways ***********************
 /****************************************************** 
  *  Horizontal Navigation common styles
  */
- .wp-block-navigation:where(:not(.is-vertical)) {
+ .wp-block-navigation:where(:not(.is-vertical,.is-style-nav--vertical-with-hr-and-no-fold,.is-style-nav--vertical-with-hr )) {
 	.wp-block-navigation-item__content {
 		padding-left: var(--nav-top-item-padding-horizontal);
 	}
