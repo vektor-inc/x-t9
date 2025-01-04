@@ -14,6 +14,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 == Changelog ==
 
 [ Specification Change ] Update theme.json to V3
+[ Specification Change ] Add styles setting in syles json
 
 1.29.0
 [ Specification Change ( Redesign ) ][ Navigation ] Refactoring the design of the navigation block.
