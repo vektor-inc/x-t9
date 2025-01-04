@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ] Update theme.json to V3
+
 1.29.0
 [ Specification Change ( Redesign ) ][ Navigation ] Refactoring the design of the navigation block.
 [ Bug fix ] Fixed an issue with full-width processing in the editor.
