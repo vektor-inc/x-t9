@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
-	"version": 2,
+	"version": 3,
 	"title": "Sweet",
 	"settings": {
 		"color": {
@@ -61,6 +61,11 @@
 					"name": "Border Normal (Dark BG)"
 				}
 			]
+		}
+	},
+	"styles": {
+		"typography": {
+			"fontFamily": "var:preset|font-family|system-font"
 		}
 	}
 }
