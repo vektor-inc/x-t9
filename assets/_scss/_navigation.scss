@@ -105,6 +105,33 @@ Overlay : allways ***********************
 	}
 }
 
+/*-------------------------------------------*/
+/*   Navigation Item description
+/*-------------------------------------------*/
+.wp-block-navigation {
+	.wp-block-navigation-item__description {
+		display: block;
+		font-size: 0.88em;
+		opacity: 0.6;
+	}
+	&.items-justified-left {
+		.wp-block-navigation-item__description {
+			text-align: left;
+		}
+	}
+	&.items-justified-center,
+	&.items-justified-space-between { /* 項目の間隔 */
+		.wp-block-navigation-item__description {
+			text-align: center;
+		}
+	}
+	&.items-justified-right {
+		.wp-block-navigation-item__description {
+			text-align: right;
+		}
+	}
+}
+
 /****************************************************** 
  * Sub Navigation Styles
  */

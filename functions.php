@@ -21,7 +21,7 @@ if ( ! function_exists( 'xt9_support' ) ) :
 		// Enqueue editor styles.
 		add_editor_style( 'assets/css/style.css' );
 
-		$wp_version = get_bloginfo('version');
+		$wp_version = get_bloginfo( 'version' );
 		if ( version_compare( $wp_version, '6.6', '>=' ) ) {
 			// WordPress over 6.6
 			add_editor_style( 'assets/css/editor.css' );
@@ -134,7 +134,26 @@ add_filter( 'wp_list_categories', 'xt9_list_categories', 10, 2 );
 
 // WooCommerce が有効な場合のみ WooCommerce 用の CSS を読み込む
 function x_t9_enqueue_woocommerce_css() {
-    if ( class_exists( 'WooCommerce' ) ) {
+	if ( class_exists( 'WooCommerce' ) ) {
 		wp_enqueue_style( 'x-t9-woo-style', get_template_directory_uri() . '/plugin-support/woocommerce/css/woo.css', array( 'x-t9-style' ), '1.0.0' );    }
 }
 add_action( 'wp_enqueue_scripts', 'x_t9_enqueue_woocommerce_css' );
+
+/**
+ * Navigation Submenu block do render menu item description
+ */
+// コアが修正されたら削除する。
+// Navigation Link ブロックとは異なり、Navigation Submenu ブロックはメニュー項目の説明 HTML をレンダリングしないため追加。
+// Navigation Submenu block does not render menu item description #52505
+function xt9_add_description_to_navigation_items( $block_content, $block ) {
+	if ( 'core/navigation-submenu' === $block['blockName'] && ! empty( $block['attrs']['description'] ) ) {
+		$description = esc_attr( $block['attrs']['description'] );
+		// 説明用のspanタグを作成
+		$description_span = '<span class="wp-block-navigation-item__description">' . $description . '</span>';
+		// aタグ内の最後に説明を挿入
+		// 正規表現を用いて、aタグの終了直前に挿入
+		$block_content = preg_replace( '/<\/a>/', $description_span . '</a>', $block_content, 1 );
+	}
+	return $block_content;
+}
+add_filter( 'render_block', 'xt9_add_description_to_navigation_items', 10, 2 );

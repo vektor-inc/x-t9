@@ -15,6 +15,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 [ Specification Change ] Update theme.json to V3
 [ Specification Change ] Add styles setting in syles json
+[ Specification Change ][ Navigation ] Handle the display of menu item descriptions only for the first level of navigation.
 
 1.29.0
 [ Specification Change ( Redesign ) ][ Navigation ] Refactoring the design of the navigation block.
