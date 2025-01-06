@@ -109,8 +109,12 @@ Overlay : allways ***********************
 /*   Navigation Item description
 /*-------------------------------------------*/
 .wp-block-navigation {
+	// Display the description only when the parent is a navigation item.
+	& > :where(.wp-block-navigation-item) > :where(.wp-block-navigation-item__content) > 
 	.wp-block-navigation-item__description {
 		display: block;
+	}
+	.wp-block-navigation-item__description {
 		font-size: 0.88em;
 		opacity: 0.6;
 	}
