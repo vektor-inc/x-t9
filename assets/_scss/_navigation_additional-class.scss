@@ -50,9 +50,11 @@
  * active-border-bottom
  */
 
-*[class*='nav--active-border-bottom'] {
-	.wp-block-navigation__responsive-container:where(:not(.is-menu-open)) {
-		:where(.wp-block-navigation__container, .wp-block-page-list) {
+ .wp-block-navigation[class*='nav--active-border-bottom'] {
+	// Overlay : mobile ( Wide screen )
+	.wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation__responsive-container-content > .wp-block-navigation__container,
+	// Overlay : off（ It is now positioned directly below .wp-block-navigation. ）
+	& > :where( .wp-block-navigation__container, .wp-block-page-list ) {
 			&>.wp-block-navigation-item {
 				&>a {
 					padding-top: 1em;
@@ -77,7 +79,6 @@
 				}
 			}
 		}
-	}
 }
 
 /******************************************************
@@ -92,50 +93,46 @@
 *[class*='nav--text-inline'] {
 	--nav--text-inline--border: var(--wp--preset--color--border-normal);
 
-	// border:1px solid #ff0000 !important;
 	&.nav--darkbg {
 		--nav--text-inline--border: var(--wp--preset--color--border-normal-darkbg);
 	}
 
-	&> :is(.wp-block-navigation__container, .wp-block-navigation__responsive-container) {
+	// PC Mode ( * Display 1st level only )
+	.wp-block-navigation__responsive-container:where( :not(.is-menu-open) ), // Overlay close
+	& > :where( .wp-block-navigation__container ) { // No overlay mode
 		.wp-block-navigation-item {
 			border-left: 1px solid var(--nav--text-inline--border);
-		}
-
-		&.is-menu-open {
-			.wp-block-navigation-item {
-				border-left: none;
-				border-right: none;
+			&:last-child {
+				border-right: 1px solid var(--nav--text-inline--border);
+			}
+			.wp-block-navigation__submenu-icon {
+				display: none;
 			}
 		}
-	}
-
-	:where(.wp-block-navigation__container, .wp-block-page-list) {
-		&>.wp-block-navigation-item {
+		.wp-block-navigation-item {
 			&:last-child {
 				border-right: 1px solid var(--nav--text-inline--border);
 			}
 
-			&>a {
-				&:hover {
-					text-decoration: underline;
-				}
+			a:hover {
+				text-decoration: underline;
 			}
+		}
+		:where( .wp-block-navigation-item__content ) {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+		// Dusable sub menu
+		.has-child .wp-block-navigation__submenu-container {
+			display: none;
 		}
 	}
 
-	// Dusable sub menu and icon
-	.wp-block-navigation__submenu-icon,
-	& .has-child .wp-block-navigation__submenu-container {
-		display: none;
-	}
-
-	// Modal
+	// Modal open
 	&>.wp-block-navigation__responsive-container {
 		&.is-menu-open {
 			.wp-block-navigation-item {
 				border-left: none;
-
 				&:last-child {
 					border-right: none;
 				}
@@ -145,42 +142,121 @@
 }
 
 /******************************************************
- * Vertical with hr
+ * Vertical with hr ( submenu animation 以外 )
  */
-*[class*='nav--vertical-with-hr'] {
+ .wp-block-navigation[class*='nav--vertical-with-hr'] {
 	--wp--custom--spacing--menu-indent: 0.8em;
-
+	width:100%;
+	// Border specify /////////////////////
 	.wp-block-navigation-item {
-		margin: 0;
-
-		&>.wp-block-navigation-item__content,
-		&>a.wp-block-navigation-item__content {
-			padding: 0.8em;
-			border-bottom: 1px solid var(--wp--preset--color--border-normal);
-		}
-
 		&.has-text-normal-darkbg-color {
-
 			&>.wp-block-navigation-item__content,
 			&>a.wp-block-navigation-item__content {
 				border-bottom: 1px solid var(--wp--preset--color--border-normal-darkbg);
 			}
 		}
+	}
+	.wp-block-navigation-item__content {
+		border-bottom: 1px solid var(--wp--preset--color--border-normal);
+	}
 
+	// Menu item layout /////////////////////
+	.wp-block-navigation-item {
+		width:100%;
+		display:grid;
+		.wp-block-navigation-item__content {
+			grid-row: 1 / 2;
+			grid-column: 1 / 3;
+			padding: 0.8em;
+		}
+		.wp-block-navigation__submenu-icon  {
+			grid-row: 1 / 2;
+			grid-column: 2 / 3;
+			justify-self: end;
+			margin-right: var(--nav-top-item-padding-horizontal);
+			& > svg {
+				transform: rotate(0deg);
+			}
+			&[aria-expanded=true] {
+				& > svg {
+					transform: rotate(180deg);
+				}
+			}
+	  	}
 		.wp-block-navigation__submenu-container {
-			display: block;
-			height: auto;
-			width: 100%;
-
+			border: none; // コアが border を付与してくるので打ち消す
+			position: relative; // コア打ち消し
+			background-color: unset; // コアが #fff を付与してくるので打ち消す
+			top:0; // Reset top:100% by core
+			width:100%;
+			margin:0;
+			grid-row: 2 / 3;
+			grid-column: 1 / 3;
 			.wp-block-navigation-item {
 				.wp-block-navigation-item__content {
 					padding-left: calc(var(--wp--custom--spacing--menu-indent) * 2);
 				}
-
 				.wp-block-navigation-item .wp-block-navigation-item__content {
 					padding-left: calc(var(--wp--custom--spacing--menu-indent) * 3);
 				}
 			}
 		}
+	}
+	@media (min-width: 782px) {
+		// Reset left:100% by core
+		.has-child .wp-block-navigation__submenu-container,
+		.has-child .wp-block-navigation__submenu-container .wp-block-navigation__submenu-container {
+			left: 0;
+		}
+	}
+	// Hover /////////////////////
+	.wp-block-navigation-item__content:hover {
+		background-color: rgba(0,0,0,0.05);
+	}
+}
+
+/****************************************************** 
+ * Vertical with hr submenu
+ */
+.wp-block-navigation[class*='nav--vertical-with-hr']:where(:not([class*='nav--vertical-with-hr-and-no-fold'])) {
+	.has-child .wp-block-navigation__submenu-container {
+		display: grid;
+		transition: all 1s ease-out;
+		overflow: hidden;
+		height:unset;
+		max-height:0svh;
+	}
+	.has-child:hover > .wp-block-navigation__submenu-container {
+		max-height:100svh;
+		overflow-y: scroll;
+	}
+	// オーバーレイでは折りたたまないので max-height を上書き
+	.wp-block-navigation__responsive-container.has-modal-open .wp-block-navigation__submenu-container {
+		max-height:100%;
+	}
+}
+
+// 編集画面でメニュー項目を選択すると WordPress 標準がまた別のCSSを吐き出したりして崩れるので、.is-selected が付いたらサブ階層は強制的に表示する
+.wp-block-navigation[class*='nav--vertical-with-hr']:where(:not([class*='nav--vertical-with-hr-and-no-fold'])):has(.is-selected) {
+	.has-child .wp-block-navigation__submenu-container {
+		display: grid;
+		height: auto;
+		opacity: 1;
+		visibility: visible;
+		max-height: unset;
+	}
+}
+
+/****************************************************** 
+ * Vertical with hr submenu ( no fold )
+ */
+.wp-block-navigation[class*='nav--vertical-with-hr-and-no-fold'] {
+	.wp-block-navigation__submenu-container {
+		height:auto;
+		opacity: 1;
+		visibility: visible;
+	}
+	.wp-block-navigation__submenu-icon {
+		display: none;
 	}
 }

@@ -17,7 +17,7 @@
 // .vk_outer-paddingLR-none => content size
 .vk_outer-width-full.vk_outer-paddingLR-none {
 	.vk_outer_container {
-		max-width: var(--wp--style--global--content-size);
+		max-width: var(--wp--custom--width--content);
 		margin-left: auto;
 		margin-right: auto;
 	}
