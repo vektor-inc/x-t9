@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei,yukinobu
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.29.0
+Stable tag: 1.30.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+1.30.0
 [ Specification Change ] Update theme.json to V3
 [ Specification Change ] Add styles setting in syles json
 
