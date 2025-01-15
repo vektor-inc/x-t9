@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change / Bug fix ] Add z-index:9999 to footer.wp-block-template-part
+
 1.30.0
 [ Specification Change ] Update theme.json to V3
 [ Specification Change ] Add styles setting in syles json
