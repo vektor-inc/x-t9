@@ -29,6 +29,8 @@ if ( ! function_exists( 'xt9_support' ) ) :
 			// WordPress under 6.5
 			add_editor_style( 'assets/css/editor-wp65.css' );
 		}
+
+		add_theme_support( 'align-wide' );
 	}
 	add_action( 'after_setup_theme', 'xt9_support' );
 endif;
