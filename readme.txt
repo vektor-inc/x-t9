@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ] Added support for Fix full and wide.
 [ Specification Change / Bug fix ] Add z-index:9999 to footer.wp-block-template-part
 
 1.30.0
