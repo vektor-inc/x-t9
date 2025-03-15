@@ -1,0 +1,66 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+	"version": 2,
+	"title": "Foresty",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "primary",
+					"color": "#4F578E",
+					"name": "Primary"
+				},
+				{
+					"slug": "primary-hover",
+					"color": "#656FB5",
+					"name": "Primary Hover"
+				},
+				{
+					"slug": "bg-primary",
+					"color": "#FFFFFF",
+					"name": "BG Primary"
+				},
+				{
+					"slug": "bg-secondary",
+					"color": "#F2F6F0",
+					"name": "BG Secondary"
+				},
+				{
+					"slug": "text-normal",
+					"color": "#2F4849",
+					"name": "Text Normal"
+				},
+				{
+					"slug": "text-secondary",
+					"color": "rgba( 47,72,73,0.7 )",
+					"name": "Text Secondary"
+				},
+				{
+					"slug": "border-normal",
+					"color": "#E5EAE3",
+					"name": "Border Normal"
+				},
+				{
+					"slug": "bg-dark",
+					"color": "#4B7A7C",
+					"name": "BG Dark ( Base Contrast )"
+				},
+				{
+					"slug": "text-normal-darkbg",
+					"color": "#FFF",
+					"name": "Text Normal (Dark BG)"
+				},
+				{
+					"slug": "text-secondary-darkbg",
+					"color": "rgba( 255,255,255,0.7 )",
+					"name": "Text Secondary (Dark BG)"
+				},
+				{
+					"slug": "border-normal-darkbg",
+					"color": "rgba( 255,255,255,0.5 )",
+					"name": "Border Normal (Dark BG)"
+				}
+			]
+		}
+	}
+}
