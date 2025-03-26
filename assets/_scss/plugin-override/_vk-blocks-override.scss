@@ -10,27 +10,3 @@
 .vk_post_title > a {
 	text-decoration: none;
 }
-
-/*-------------------------------------------*/
-/* vk_icon
-/*-------------------------------------------*/
-// VK Blocks が display:inline-block 指定してある。
-// しかし inline-block　では下部に余白ができてしまうので flex に変更
-// 2023年7月末頃まで運用して問題なければ VK Blocks に反映してこちらは削除する
-.wp-block-vk-blocks-icon {
-	.vk_icon_frame {
-		display: flex;
-		.vk_icon_link {
-			display: flex;
-			.vk_icon_border {
-				display: flex;
-			}
-		}
-		&.text-center {
-			justify-content: center;
-		}
-		&.text-right {
-			justify-content: right;
-		}
-	}
-}

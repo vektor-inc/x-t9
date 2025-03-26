@@ -1,10 +1,10 @@
 {
 	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
-	"version": 2,
+	"version": 3,
 	"settings": {
 		"layout": {
 			"contentSize": "var(--wp--custom--width--content)",
-			"wideSize": "calc( var(--wp--custom--width--content) + ( var(--wp--custom--width--wrapper) - var(--wp--custom--width--content) ) / 2 )"
+			"wideSize": "var(--wp--custom--width--wide)"
 		},
 		"position": {
 			"sticky": true
@@ -87,6 +87,7 @@
 			"customDuotone": true
 		},
 		"spacing": {
+			"defaultSpacingSizes": false,
 			"blockGap": true,
 			"margin": true,
 			"padding": true,
@@ -140,21 +141,7 @@
 				"dvw",
 				"svh",
 				"lvh",
-				"dvh",
-				"svi",
-				"lvi",
-				"dvi",
-				"svb",
-				"lvb",
-				"dvb",
-				"vmin",
-				"svmin",
-				"lvmin",
-				"dvmin",
-				"vmax",
-				"svmax",
-				"lvmax",
-				"dvmax"
+				"dvh"
 			]
 		},
 		"border": {
@@ -167,6 +154,8 @@
 			"dropCap": false,
 			"lineHeight": true,
 			"fluid": false,
+			"writingMode": true,
+			"defaultFontSizes": false,
 			"fontFamilies": [
 				{
 					"slug": "system-font",
@@ -254,6 +243,7 @@
 			"width": {
 				"wrapper": "100dvw",
 				"content": "min( 1110px, 90vw )",
+				"wide": "calc( var(--wp--custom--width--content) + ( var(--wp--custom--width--wrapper) - var(--wp--custom--width--content) ) / 2 )",
 				"sidebar": "220px"
 			},
 			"layout": {

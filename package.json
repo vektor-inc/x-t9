@@ -6,11 +6,12 @@
 	"scripts": {
 		"build:script": "webpack --config webpack.js",
 		"sass": "sass --no-source-map assets/_scss/:assets/_scss/",
+		"sass:woocommerce": "sass --no-source-map --style=compressed plugin-support/woocommerce/_scss/woo.scss:plugin-support/woocommerce/css/woo.css",
 		"postcss:autoprefix": "npx postcss assets/_scss/*.css --use autoprefixer -r --no-map",
 		"postcss:minify": "npx postcss assets/_scss/*.css --use postcss-minify -d assets/css/ --no-map",
 		"postcss:all": "npx postcss assets/_scss/*.css --use autoprefixer postcss-minify -d assets/css/ --no-map",
 		"rimraf:css": "npx rimraf assets/_scss/*.css",
-		"build:css": "run-s sass postcss:all rimraf:css",
+		"build:css": "run-s sass postcss:all rimraf:css sass:woocommerce",
 		"build": "npx gulp convert-dynamic && npx gulp remove-theme-name && npm run build:script && npm run build:css",
 		"watch": "nodemon -e scss --watch assets/_scss -x \"npm run build:css && webpack --config webpack.js --watch && npm run dist\"",
 		"copy": "npx gulp dist",
