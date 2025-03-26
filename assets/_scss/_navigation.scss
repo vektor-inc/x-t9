@@ -238,3 +238,30 @@ Overlay : allways ***********************
  :where( .wp-block-navigation.is-vertical ) {
 	// nothing now
 }
+
+/****************************************************** 
+ *  Navigation Item description
+ */
+.wp-block-navigation {
+	.wp-block-navigation-item__description {
+		display: block;
+		font-size: 10px;
+		opacity: 0.6;
+	}
+	&.items-justified-left {
+		.wp-block-navigation-item__description {
+			text-align: left;
+		}
+	}
+	&.items-justified-center,
+	&.items-justified-space-between { /* 項目の間隔 */
+		.wp-block-navigation-item__description {
+			text-align: center;
+		}
+	}
+	&.items-justified-right {
+		.wp-block-navigation-item__description {
+			text-align: right;
+		}
+	}
+}
