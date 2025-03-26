@@ -13,9 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
-[ Bug fix ] Fixed navigation submenu block not rendering menu item description HTML
-
-
+[ Add Function ] Fixed navigation submenu block not rendering menu item description HTML
 [ Specification Change / Bug fix ] Add z-index:9999 to footer.wp-block-template-part
 [ Specification Change /  Design Tuning ] Removed margin tuning of Icon Block of the VK Blocks.
 
