@@ -106,6 +106,39 @@ Overlay : allways ***********************
 }
 
 /****************************************************** 
+ *  Navigation Item description
+ */
+.wp-block-navigation {
+	.wp-block-navigation-item__description {
+		display: block;
+		font-size: 10px;
+		opacity: 0.6;
+	}
+	.wp-block-navigation__submenu-container {
+		// ２階層目以降の description は非表示
+		// Descriptions are hidden beyond the second hierarchical level.
+		.wp-block-navigation-item__description {
+			display: none;
+		}
+	}
+	&.items-justified-center,
+	&.items-justified-space-between { /* 項目の間隔 */
+		// First level only
+		ul:where(:not(.wp-block-navigation-submenu)) > :where( li ) {
+			& > .wp-block-navigation-item__content,
+			& > .wp-block-navigation-item__description {
+				text-align: center;
+			}
+		}
+	}
+	&.items-justified-right {
+		.wp-block-navigation-item__description {
+			text-align: right;
+		}
+	}
+}
+
+/****************************************************** 
  * Sub Navigation Styles
  */
 .wp-block-navigation {
@@ -237,35 +270,4 @@ Overlay : allways ***********************
  */
  :where( .wp-block-navigation.is-vertical ) {
 	// nothing now
-}
-
-/****************************************************** 
- *  Navigation Item description
- */
-
- // Exclude if nav--text-inline
-  // テキストインラインの場合は除外
-.wp-block-navigation:where(:not(.is-style-nav--text-inline)) {
-	:where(.wp-block-navigation__container) > li > a > .wp-block-navigation-item__description {
-		display: block;
-		font-size: 10px;
-		opacity: 0.6;
-	}
-	&.items-justified-left {
-		.wp-block-navigation-item__description {
-			text-align: left;
-		}
-	}
-	&.items-justified-center,
-	&.items-justified-space-between { /* 項目の間隔 */
-		.wp-block-navigation-item__content,
-		.wp-block-navigation-item__description {
-			text-align: center;
-		}
-	}
-	&.items-justified-right {
-		.wp-block-navigation-item__description {
-			text-align: right;
-		}
-	}	
 }

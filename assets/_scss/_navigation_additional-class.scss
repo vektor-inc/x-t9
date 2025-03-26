@@ -98,11 +98,6 @@
 		--nav--text-inline--border: var(--wp--preset--color--border-normal-darkbg);
 	}
 
-	// 
-	.wp-block-navigation-item__description {
-		display: none;
-	}
-
 	// PC Mode ( * Display 1st level only )
 	.wp-block-navigation__responsive-container:where( :not(.is-menu-open) ), // Overlay close
 	& > :where( .wp-block-navigation__container ) { // No overlay mode
