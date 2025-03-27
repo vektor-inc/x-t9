@@ -87,10 +87,11 @@
 
 /*----------------------------------------------------------*/
 /*  navigation submenu description
+/*  6.8がリリースされたら削除する
+/*  下階層がある場合は正常に動作しない（追加されない）が 6.8 で対応されてるのでそのまま
 /*----------------------------------------------------------*/
-//6.8がリリースされたら削除する。Navigation Link ブロックとは異なり、Navigation Submenu ブロックはメニュー項目の説明 HTML をレンダリングしないため追加。
-// 下階層がある場合は追加されないが 6.8 で対応されてるのでそのまま
-//Navigation Submenu block does not render menu item description #52505
+// Navigation Link ブロックとは異なり、Navigation Submenu ブロックはメニュー項目の説明 HTML をレンダリングしないため追加。
+// Navigation Submenu block does not render menu item description #52505
 
 document.addEventListener('DOMContentLoaded', function() {
     // サブメニューを持つナビゲーションアイテムを対象にループします。

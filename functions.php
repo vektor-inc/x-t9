@@ -141,8 +141,9 @@ add_action( 'wp_enqueue_scripts', 'x_t9_enqueue_woocommerce_css' );
 
 /**
  * Navigation Submenu block do render menu item description
+ * 6.8がリリースされたら削除する
  */
-// コアが修正されたら削除する。Navigation Link ブロックとは異なり、Navigation Submenu ブロックはメニュー項目の説明 HTML をレンダリングしないため追加。
+// Navigation Link ブロックとは異なり、Navigation Submenu ブロックはメニュー項目の説明 HTML をレンダリングしないため追加。
 // Navigation Submenu block does not render menu item description #52505
 function xt9_add_description_to_navigation_items( $block_content, $block ) {
 	if ( 'core/navigation-submenu' === $block['blockName'] && ! empty( $block['attrs']['description'] ) ) {
