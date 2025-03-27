@@ -6,7 +6,6 @@
 
 @import 'block_width_editor';
 @import 'plugin-override/vk-blocks-override-width_editor';
-@import 'navigation_editor';
 
 .edit-post-visual-editor__post-title-wrapper {
 	margin-bottom: 1.5rem;
@@ -59,4 +58,11 @@
 
 .is-layout-constrained>.wp-block-spacer+* {
 	margin-block-start: 0;
+}
+
+/* navigation ------------------------------------------------- */
+.wp-block-navigation[class*='nav--vertical-with-hr']  {
+	.wp-block-navigation__container.block-editor-block-list__layout{
+		width:100%;
+	}
 }
