@@ -138,3 +138,24 @@ function x_t9_enqueue_woocommerce_css() {
 		wp_enqueue_style( 'x-t9-woo-style', get_template_directory_uri() . '/plugin-support/woocommerce/css/woo.css', array( 'x-t9-style' ), '1.0.0' );    }
 }
 add_action( 'wp_enqueue_scripts', 'x_t9_enqueue_woocommerce_css' );
+
+/**
+ * Navigation Submenu block do render menu item description
+ * 6.8がリリースされたら削除する
+ */
+// Navigation Link ブロックとは異なり、Navigation Submenu ブロックはメニュー項目の説明 HTML をレンダリングしないため追加。
+// Navigation Submenu block does not render menu item description #52505
+function xt9_add_description_to_navigation_items( $block_content, $block ) {
+	if ( 'core/navigation-submenu' === $block['blockName'] && ! empty( $block['attrs']['description'] ) ) {
+		$description = esc_attr( $block['attrs']['description'] );
+		// 説明用のspanタグを作成
+		$description_span = '<span class="wp-block-navigation-item__description">' . $description . '</span>';
+		// aタグ内の最後に説明を挿入
+		// 正規表現を用いて、aタグの終了直前に挿入
+		$block_content = preg_replace( '/<\/a>/', $description_span . '</a>', $block_content, 1 );
+	}
+	return $block_content;
+}
+if ( version_compare( get_bloginfo( 'version' ), '6.8', '<' ) ) {
+    add_filter( 'render_block', 'xt9_add_description_to_navigation_items', 10, 2 );
+}
