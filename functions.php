@@ -155,4 +155,6 @@ function xt9_add_description_to_navigation_items( $block_content, $block ) {
 	}
 	return $block_content;
 }
-add_filter( 'render_block', 'xt9_add_description_to_navigation_items', 10, 2 );
+if ( version_compare( get_bloginfo( 'version' ), '6.7', '<' ) ) {
+    add_filter( 'render_block', 'xt9_add_description_to_navigation_items', 10, 2 );
+}
