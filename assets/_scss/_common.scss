@@ -44,6 +44,12 @@ img {
 figure {
 	max-width: 100%;
 	margin: 0;
+	// WP 6.7.2 の時点で、スライダーアイテムブロックの中に画像を配置した場合に中央寄せが効かないため
+	// At WP 6.7.2, the image in the slider item block does not center align
+	&.aligncenter {
+		margin-left:auto;
+		margin-right:auto;
+	}
 }
 
 main {

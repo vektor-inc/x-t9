@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug fix ] Fix an issue where image block align center dosen't work when put into the slider item block.
+
 1.31.0
 [ Other ] Cope with menu item description HTML
 [ Specification Change / Bug fix ] Add z-index:9999 to footer.wp-block-template-part
