@@ -71,9 +71,9 @@
 					position: absolute;
 					border-bottom: 2px solid var(--wp--preset--color--primary);
 				}
-				// current-menu-item は li に付与されるのに、
-				// current-menu-ancestor は a に付与されるので注意...
-				&> :is(a:hover, .current-menu-item > a, .current-menu-ancestor) {
+				// .current-menu-ancestor は WP6.8になったら a に付与されるので追加
+				// :isの中の .current-menu-ancestor は WP6.8が安定したら削除
+				&> :is(a:hover, .current-menu-item > a, .current-menu-ancestor > a, .current-menu-ancestor) {
 					&::after {
 						width: 100%;
 					}
