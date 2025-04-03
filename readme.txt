@@ -13,7 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
-[ Other ][ 6.8 ] Fix current menu ancestor CSS class application for Navigation Block in WP6.6.
+[ Other ][ 6.8 ] Fix current menu ancestor CSS class application for Navigation Block in WP6.8.
 
 1.31.1
 [ Bug fix ] Fix an issue where image block align center dosen't work when put into the slider item block.
