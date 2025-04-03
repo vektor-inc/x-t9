@@ -71,7 +71,8 @@
 					position: absolute;
 					border-bottom: 2px solid var(--wp--preset--color--primary);
 				}
-				&> :is(a:hover, .current-menu-item > a, .current-menu-ancestor > a) {
+				// ↓ .current-menu-ancestor は WP6.8になったら a に付与されるので削除
+				&> :is(a:hover, .current-menu-item > a, .current-menu-ancestor > a, .current-menu-ancestor) {
 					&::after {
 						width: 100%;
 					}
