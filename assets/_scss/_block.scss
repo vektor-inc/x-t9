@@ -2,7 +2,8 @@
  * Core block styles overrides
  */
 
-.wp-block-post-excerpt__more-text {
+.wp-block-post-excerpt__more-text,
+.wp-block-read-more {
 	margin-block-start: var(--wp--custom--spacing--small);
 }
 
