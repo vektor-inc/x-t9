@@ -156,6 +156,9 @@ function xt9_add_description_to_navigation_items( $block_content, $block ) {
 	}
 	return $block_content;
 }
-if ( version_compare( get_bloginfo( 'version' ), '6.8', '<' ) ) {
+$version = get_bloginfo('version');
+if ( version_compare( preg_replace('/[^0-9.]/', '', $version), '6.8', '<' ) ) {
+	// 6.8 未満で実行（ 6.8 RC版やBeta版も除外 ）
+	// Run with a version earlier than 6.8 (excluding 6.8 RC and Beta versions)
     add_filter( 'render_block', 'xt9_add_description_to_navigation_items', 10, 2 );
 }
