@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei,yukinobu
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.31.1
+Stable tag: 1.32.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+1.32.0
 [ Other ][ 6.8 ] Fix current menu ancestor CSS class application for Navigation Block in WP6.8.
 [ Other ][ 6.8 ] The description display process was set to run on versions earlier than 6.8, but it was also running on 6.8 RC. Therefore, it has been modified so that it no longer runs on 6.8 RC.
 
