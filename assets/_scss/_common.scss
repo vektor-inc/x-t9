@@ -13,6 +13,14 @@ body {
 	// Change selector body,html {} -> body {}
 	// * If specify "html, body" then scrolled js not work 
 }
+
+html.has-modal-open body {
+	// Fix for Navigation Modal Link Jump (X-T9)
+	// モーダルメニューオープン時、ページ内リンクジャンプを正常に動かすため、
+	// モーダル中のみ body の overflow-x を visible にする。
+	overflow-x: visible !important;
+}
+
 html {
 	// 360px : 14px -> 1200px : 16px
 	font-size: clamp(14px, calc((100vw - 360px) * (2 / (1200 - 360)) + 14px), 16px);
