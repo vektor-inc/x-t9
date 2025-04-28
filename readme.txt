@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Other ] Adjust overflow-x for body when navigation modal menu is open to fix page anchor link scrolling.
+
 1.32.0
 [ Other ][ 6.8 ] Fix current menu ancestor CSS class application for Navigation Block in WP6.8.
 [ Other ][ 6.8 ] The description display process was set to run on versions earlier than 6.8, but it was also running on 6.8 RC. Therefore, it has been modified so that it no longer runs on 6.8 RC.
