@@ -16,9 +16,9 @@ body {
 
 html.has-modal-open body {
 	// Fix for Navigation Modal Link Jump (X-T9)
-	// モーダルメニューオープン時、ページ内リンクジャンプを正常に動かすため、
+	// モーダルメニューオープン時、同一ページ内にあるページ内リンクを正常に動かすため、
 	// モーダル中のみ body の overflow-x を visible にする。
-	overflow-x: visible !important;
+	overflow-x: visible;
 }
 
 html {
