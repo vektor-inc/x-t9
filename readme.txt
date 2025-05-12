@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+1.33.0
 [ Bug fix ] Fix an issue where scrolling to an anchor link caused the target content to be hidden behind the sticky header.
 [ Bug fix ] Adjust overflow-x for body when navigation modal menu is open to fix page anchor link navigation.
 
