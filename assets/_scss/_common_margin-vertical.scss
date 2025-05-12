@@ -1,3 +1,9 @@
+/* ページ内リンクのスムーススクロールでヘッダーの高さ分スクロール位置を調整するためのマージン */
+/* To adjust the scroll position by the height of the header for smooth scrolling of the page link */
+[id] {
+	scroll-margin-top: 85px;
+}
+
 /**
 body がないと
 body .is-layout-constrained > * + * {
