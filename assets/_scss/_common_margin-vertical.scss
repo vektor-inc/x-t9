@@ -1,7 +1,8 @@
 /* ページ内リンクのスムーススクロールでヘッダーの高さ分スクロール位置を調整するためのマージン */
 /* To adjust the scroll position by the height of the header for smooth scrolling of the page link */
-[id] {
-	scroll-margin-top: 85px;
+/* 本当は js でヘッダー高さを監視してCSS変数に入れた方が正確だが、汎用につき余計な不具合が発生しないようにCSSのみ */
+:where([id], :focus) {
+	scroll-margin-block-start: 85px;
 }
 
 /**
