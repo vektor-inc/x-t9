@@ -21,7 +21,7 @@ return array(
 	<div style="height:22px" aria-hidden="true" class="wp-block-spacer is-style-spacer-sm"></div>
 	<!-- /wp:spacer -->
 	
-	<!-- wp:social-links {"iconColor":"text-secondary","iconColorValue":"rgba(0,0,0,0.5)","size":"has-normal-icon-size","style":{"spacing":{"blockGap":"1rem"}},"className":"is-style-logos-only","layout":{"type":"flex","justifyContent":"center"}} -->
+	<!-- wp:social-links {"iconColor":"text-secondary","iconColorValue":"rgba(0,0,0,0.5)","openInNewTab":true,"size":"has-normal-icon-size","style":{"spacing":{"blockGap":"1rem"}},"className":"is-style-logos-only","layout":{"type":"flex","justifyContent":"center"}} -->
 	<ul class="wp-block-social-links has-normal-icon-size has-icon-color is-style-logos-only"><!-- wp:social-link {"url":"https://wordpress.org/","service":"facebook"} /-->
 	
 	<!-- wp:social-link {"url":"https://wordpress.org/","service":"x"} /-->
