@@ -379,11 +379,14 @@
 				}
 			},
 			"core/post-terms": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)",
+					"lineHeight": "1.5"
+				},
 				"elements": {
 					"link": {
 						"typography": {
-							"textDecoration": "none",
-							"fontSize": "var(--wp--preset--font-size--x-small)"
+							"textDecoration": "none"
 						},
 						":hover": {
 							"typography": {

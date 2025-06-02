@@ -14,6 +14,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 == Changelog ==
 
 [ Specification Change ] Social media links in the header and footer block patterns now open in a separate tab by default.
+[ Specification Change ] Make adjustments to the CSS of the core/post-terms block.
 [ Other ] Update anchor link CSS
 
 1.33.0
