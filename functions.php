@@ -162,3 +162,58 @@ if ( version_compare( preg_replace('/[^0-9.]/', '', $version), '6.8', '<' ) ) {
 	// Run with a version earlier than 6.8 (excluding 6.8 RC and Beta versions)
     add_filter( 'render_block', 'xt9_add_description_to_navigation_items', 10, 2 );
 }
+
+/**
+ * Add body class for post name, category ID, tag ID, and custom taxonomy ID.
+ * @param string $html class Array.
+ */
+function veu_add_body_class( $class ) {
+	if ( is_singular() ) {
+		global $post;
+		if ( $post->post_name ) {
+			$class[] = 'post-name-' . esc_attr( $post->post_name );
+		}
+
+		// カテゴリーIDを追加
+		$categories = get_the_category( $post->ID );
+		if ( $categories && ! is_wp_error( $categories ) ) {
+			foreach ( $categories as $category ) {
+				$class[] = 'category-id-' . $category->term_id;
+			}
+		}
+
+		// タグIDを追加
+		$tags = get_the_tags( $post->ID );
+		if ( $tags && ! is_wp_error( $tags ) ) {
+			foreach ( $tags as $tag ) {
+				$class[] = 'tag-id-' . $tag->term_id;
+			}
+		}
+
+		// カスタムタクソノミーIDを追加
+		$taxonomies = get_object_taxonomies( get_post_type( $post ), 'objects' );
+		foreach ( $taxonomies as $taxonomy ) {
+			// カテゴリー・タグ以外のタクソノミーのみ対象にする
+			if ( in_array( $taxonomy->name, ['category', 'post_tag'] ) ) {
+				continue;
+			}
+			$terms = wp_get_post_terms( $post->ID, $taxonomy->name );
+			if ( $terms && ! is_wp_error( $terms ) ) {
+				foreach ( $terms as $term ) {
+					$class[] = $taxonomy->name . '-id-' . $term->term_id;
+				}
+			}
+		}
+	}
+
+	if ( is_archive() || is_singular() || ( is_home() && ! is_front_page() ) ) {
+		if ( function_exists( 'vk_get_post_type' ) ) {
+			$post_type_info = vk_get_post_type();
+			if ( ! empty( $post_type_info['slug'] ) ) {
+				$class[] = 'post-type-' . $post_type_info['slug'];
+			}
+		}
+	}
+	return $class;
+}
+add_filter( 'body_class', 'veu_add_body_class' );
