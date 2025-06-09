@@ -128,7 +128,7 @@ Overlay : allways ***********************
  */
  .wp-block-navigation {
 	// First level & Horizontal only
-	ul:where(:not(.is-vertical)):where(:not(.wp-block-navigation-submenu)) > :where( li ) {
+	ul:where(:not(:is(.is-vertical,[class*="is-style-nav--vertical"] ))):where(:not(.wp-block-navigation-submenu)) > :where( li ) {
 		& > .wp-block-navigation-item__content,
 		& > .wp-block-navigation-item__description {
 			text-align: center;
