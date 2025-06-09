@@ -121,22 +121,26 @@ Overlay : allways ***********************
 			display: none;
 		}
 	}
-	&.items-justified-center,
-	&.items-justified-space-between { /* 項目の間隔 */
-		// First level only
-		ul:where(:not(.wp-block-navigation-submenu)) > :where( li ) {
+}
+
+/****************************************************** 
+ *  Navigation Alignments
+ *  .wp-block-navigation は階層が違うのに複数あるので注意。ここでは一番外側の要素を対象にしている。
+ */
+  .wp-block-navigation {
+	// Modal
+	& .wp-block-navigation__responsive-container:where(:not(.has-modal-open)) ul:where(:not(:is(.is-vertical,[class*="is-style-nav--vertical"] ))):where(:not(.wp-block-navigation-submenu)),
+	// No Modal
+	&:where(:not(.is-vertical)) > .wp-block-navigation__container {
+		// Not modal open & First level & Horizontal
+		& > :where( li ) {
 			& > .wp-block-navigation-item__content,
 			& > .wp-block-navigation-item__description {
 				text-align: center;
 			}
 		}
 	}
-	&.items-justified-right {
-		.wp-block-navigation-item__description {
-			text-align: right;
-		}
-	}
-}
+ }
 
 /****************************************************** 
  * Sub Navigation Styles
