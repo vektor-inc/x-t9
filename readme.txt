@@ -14,6 +14,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 == Changelog ==
 
 [ Specification Change ][ Navigation ] Text alignment is no longer affected by the navigation block's alignment setting. Previously, text alignment would follow the block's position, but this behavior has been disabled. / For horizontally aligned navigation blocks, only the first-level items are now center-aligned.
+[ Specification Change ][ Search button ] Add nowrap and padding tuning
 [ Specification Change ] Social media links in the header and footer block patterns now open in a separate tab by default.
 [ Specification Change ] Make adjustments to the CSS of the core/post-terms block.
 [ Other ] Update anchor link CSS
