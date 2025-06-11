@@ -17,6 +17,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 [ Specification Change ][ Search button ] Add nowrap and padding tuning
 [ Specification Change ] Social media links in the header and footer block patterns now open in a separate tab by default.
 [ Specification Change ] Make adjustments to the CSS of the core/post-terms block.
+[ Bug fix ] Fix unintentional br and indent in the page header of the home template
 [ Other ] Update anchor link CSS
 
 1.33.0
