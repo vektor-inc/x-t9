@@ -163,6 +163,11 @@
 					"fontFamily": "\"ヒラギノ角ゴ ProN\", \"Hiragino Kaku Gothic ProN\", \"メイリオ\", Meiryo, sans-serif"
 				},
 				{
+					"slug": "system-font-serif",
+					"name": "System Font Serif",
+					"fontFamily": "\"Yu Mincho\", \"Hiragino Mincho ProN\", \"Hiragino Mincho Pro\", \"MS PMincho\", \"MS Mincho\", serif"
+				},
+				{
 					"fontFamily": "\"Source Serif Pro\", serif",
 					"name": "Source Serif Pro",
 					"slug": "source-serif-pro",

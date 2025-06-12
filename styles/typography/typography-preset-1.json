@@ -5,13 +5,6 @@
 	"slug": "x-t9-2025",
 	"settings": {
 		"typography": {
-			"fontFamilies": [
-				{
-					"slug": "system-font",
-					"name": "System Font",
-					"fontFamily": "Helvetica Neue, Arial, \"Hiragino Kaku Gothic ProN\", \"Hiragino Sans\", Meiryo, sans-serif"
-				}
-			],
 			"fontSizes": [
 				{
 					"fluid": false,
@@ -68,22 +61,22 @@
 		"blocks": {
 			"core/site-title": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|source-serif-pro",
-					"fontWeight": "900",
-					"lineHeight": "1"
+					"fontFamily": "var:preset|font-family|system-font-serif",
+					"fontWeight": "700",
+					"lineHeight": "1.02"
+				}
+			},
+			"core/navigation": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|system-font-serif",
+					"fontWeight": "900"
 				}
 			}
 		},
 		"elements": {
-			"p": {
-				"typography": {
-					"fontFamily": "var:preset|font-family|system-font",
-					"fontWeight": "400"
-				}
-			},
 			"heading": {
 				"typography": {
-					"fontFamily": "var:preset|font-family|source-serif-pro",
+					"fontFamily": "var:preset|font-family|system-font-serif",
 					"fontWeight": "900",
 					"lineHeight": "1.2"
 				}
