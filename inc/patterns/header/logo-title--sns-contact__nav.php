@@ -43,7 +43,7 @@ return array(
 	<!-- /wp:group --></div>
 	<!-- /wp:group -->
 	
-	<!-- wp:navigation {"className":"nav\u002d\u002dopen\u002d\u002dlg-up nav\u002d\u002dfirst-nowrap is-style-nav\u002d\u002dactive-border-bottom","layout":{"type":"flex","justifyContent":"right","orientation":"horizontal","flexWrap":"nowrap"},"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}},"fontSize":"x-small"} /--></div>
+	<!-- wp:navigation {"icon":"menu","className":"nav\u002d\u002dopen\u002d\u002dlg-up nav\u002d\u002dfirst-nowrap is-style-nav\u002d\u002dactive-border-bottom","layout":{"type":"flex","justifyContent":"right","orientation":"horizontal","flexWrap":"nowrap"},"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}},"fontSize":"x-small"} /--></div>
 	<!-- /wp:group --></div>
 	<!-- /wp:group --></div>
 	<!-- /wp:group -->
@@ -59,7 +59,7 @@ return array(
 	
 	<!-- wp:group {"style":{"spacing":{"blockGap":"0"}}} -->
 	<div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0"},"blockGap":"var:preset|spacing|40"}},"layout":{"type":"flex","allowOrientation":false,"justifyContent":"right"}} -->
-	<div class="wp-block-group" style="padding-top:0"><!-- wp:navigation {"className":"nav\u002d\u002dopen\u002d\u002dlg-up nav\u002d\u002dfirst-nowrap is-style-nav\u002d\u002dactive-border-bottom","layout":{"type":"flex","justifyContent":"right","orientation":"horizontal","flexWrap":"nowrap"},"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}},"fontSize":"x-small"} /-->
+	<div class="wp-block-group" style="padding-top:0"><!-- wp:navigation {"icon":"menu","className":"nav\u002d\u002dopen\u002d\u002dlg-up nav\u002d\u002dfirst-nowrap is-style-nav\u002d\u002dactive-border-bottom","layout":{"type":"flex","justifyContent":"right","orientation":"horizontal","flexWrap":"nowrap"},"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}},"fontSize":"x-small"} /-->
 	
 	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"},"style":{"spacing":{"margin":{"top":"0px","bottom":"0px"}}}} -->
 	<div class="wp-block-buttons" style="margin-top:0px;margin-bottom:0px"><!-- wp:button {"backgroundColor":"primary","style":{"spacing":{"padding":{"top":"0rem","bottom":"0rem"}}},"fontSize":"small"} -->
