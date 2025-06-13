@@ -16,11 +16,6 @@
 					"name": "Primary Hover"
 				},
 				{
-					"slug": "secondary",
-					"color": "#009B9B",
-					"name": "Secondary"
-				},
-				{
 					"slug": "bg-primary",
 					"color": "#fff",
 					"name": "BG Primary"
@@ -64,6 +59,11 @@
 					"slug": "border-normal-darkbg",
 					"color": "rgba( 255,255,255,0.1 )",
 					"name": "Border Normal (Dark BG)"
+				},
+				{
+					"slug": "secondary",
+					"color": "#009B9B",
+					"name": "Secondary"
 				}
 			]
 		}
