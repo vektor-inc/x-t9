@@ -78,6 +78,11 @@
 					"slug": "border-normal-darkbg",
 					"color": "rgba( 255,255,255,0.1 )",
 					"name": "Border Normal (Dark BG)"
+				},
+				{
+					"slug": "secondary",
+					"color": "#715B23",
+					"name": "Secondary"
 				}
 			],
 			"customGradient": true,

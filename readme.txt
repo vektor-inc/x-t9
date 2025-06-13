@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ] Add color palette and secondary color
 [ Specification Change ][ Typography ] Add Serif font and Serif font preset
 [ Specification Change ][ Typography ] Add text-box: trim-both text;
 [ Specification Change ][ Navigation ] Text alignment is no longer affected by the navigation block's alignment setting. Previously, text alignment would follow the block's position, but this behavior has been disabled. / For horizontally aligned navigation blocks, only the first-level items are now center-aligned.
