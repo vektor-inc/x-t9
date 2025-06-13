@@ -1,5 +1,5 @@
 {
-	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"$schema": "https://schemas.wp.org/wp/6.7/theme.json",
 	"version": 3,
 	"title": "BG Black",
 	"settings": {
@@ -66,11 +66,6 @@
 					"name": "Secondary"
 				}
 			]
-		}
-	},
-	"styles": {
-		"typography": {
-			"fontFamily": "var:preset|font-family|system-font-serif"
 		}
 	}
 }
