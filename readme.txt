@@ -13,7 +13,6 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
-[ Specification Change ] Abolished the loop-archive template
 [ Specification Change ] Add color palette and secondary color
 [ Specification Change ][ Typography ] Add Serif font and Serif font preset
 [ Specification Change ][ Typography ] Add text-box: trim-both text;
