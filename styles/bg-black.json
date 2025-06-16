@@ -61,9 +61,9 @@
 					"name": "Border Normal (Dark BG)"
 				},
 				{
-					"slug": "secondary",
+					"slug": "complementary",
 					"color": "#715B23",
-					"name": "Secondary"
+					"name": "Complementary"
 				}
 			]
 		}
