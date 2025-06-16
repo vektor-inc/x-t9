@@ -1,3 +1,10 @@
+/* ページ内リンクのスムーススクロールでヘッダーの高さ分スクロール位置を調整するためのマージン */
+/* To adjust the scroll position by the height of the header for smooth scrolling of the page link */
+/* 本当は js でヘッダー高さを監視してCSS変数に入れた方が正確だが、汎用につき余計な不具合が発生しないようにCSSのみ */
+:where([id], :focus) {
+	scroll-margin-block-start: 85px;
+}
+
 /**
 body がないと
 body .is-layout-constrained > * + * {
@@ -10,7 +17,7 @@ p{
 		// 意図する余白 - この要素の上側のレディング - 上の要素の下側のレディング（要素検出が難しいので同じと仮定）
 		// 意図する余白 - ( line-height - 文字サイズ ) / 2(上下片方だけにする) ) -（上の要素の下側のレディング（同じとして）
 		margin-block-start:calc( var(--wp--custom--spacing--small) - ( ( 1.5rem - 1rem ) / 2 ) -  ( ( 1.5rem - 1rem ) / 2 ) );
-		margin-block-end:calc( var(--wp--custom--spacing--small) - ( ( 1.5rem - 1rem ) / 2 ) -  ( ( 1.5rem - 1rem ) / 2 ) );
+		margin-block-end:calc( var(--wp--custom--spacing--small) - ( ( 1.5rem - 1rem ) / 2 ) - ( ( 1.5rem - 1rem ) / 2 ) );
 		&:first-child {
 			margin-block-start: 0;
 		}
@@ -34,7 +41,7 @@ p{
 	}
 }
 
-:is( ul,ol,dl ) {
+:is( ul,ol,dl ):where(:not( li > ul , li > ol )) { //特異性を抑えたいので:where()を使用 
 	margin-block-start: var(--wp--custom--spacing--small);
 	margin-block-end: var(--wp--custom--spacing--small);
 }
@@ -50,6 +57,12 @@ body .wp-site-blocks > :is(
 	){
 		margin-block-start: 0;
 		margin-top: 0;
+}
+
+// 次の要素が スペーサーブロック / レスポンシブスペーサー の場合は margin-bottom を 0 にする
+*:has( + :is( .wp-block-spacer, .vk_spacer ) ){
+	margin-bottom:0;
+	margin-block-end: 0;
 }
 
 body :is( .wp-site-blocks, .is-layout-constrained, .is-layout-flow ) {
@@ -71,7 +84,8 @@ body :is( .wp-site-blocks, .is-layout-constrained, .is-layout-flow ) {
 		.wp-block-navigation,
 		.wp-block-query,
 		.vk_slider,
-		.vk_outer
+		.vk_outer,
+		.vk_breadcrumb
 	) {
 		margin-block-start: 0;
 		margin-top: 0;

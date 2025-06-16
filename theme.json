@@ -1,16 +1,21 @@
 {
 	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
-	"version": 2,
+	"version": 3,
 	"settings": {
 		"layout": {
-			"contentSize": "var(--wp--custom--content-size--normal)",
-			"wideSize": "calc( var(--wp--custom--content-size--normal) + ( 100vw - var(--wp--custom--content-size--normal) ) / 2 )"
+			"contentSize": "var(--wp--custom--width--content)",
+			"wideSize": "var(--wp--custom--width--wide)"
 		},
 		"position": {
 			"sticky": true
 		},
 		"dimensions": {
-			"minHeight": true
+			"minHeight": true,
+			"aspectRatio": true
+		},
+		"background": {
+			"backgroundImage": true,
+			"backgroundSize": true
 		},
 		"color": {
 			"background": true,
@@ -73,6 +78,11 @@
 					"slug": "border-normal-darkbg",
 					"color": "rgba( 255,255,255,0.1 )",
 					"name": "Border Normal (Dark BG)"
+				},
+				{
+					"slug": "complementary",
+					"color": "#715B23",
+					"name": "Complementary"
 				}
 			],
 			"customGradient": true,
@@ -82,6 +92,7 @@
 			"customDuotone": true
 		},
 		"spacing": {
+			"defaultSpacingSizes": false,
 			"blockGap": true,
 			"margin": true,
 			"padding": true,
@@ -116,15 +127,26 @@
 					"name": "XL",
 					"slug": "80",
 					"size": "var(--wp--custom--spacing--x-large)"
+				},
+				{
+					"name": "XXL",
+					"slug": "90",
+					"size": "var(--wp--custom--spacing--xx-large)"
 				}
 			],
 			"units": [
 				"px",
+				"%",
+				"vw",
+				"vh",
 				"em",
 				"rem",
-				"vh",
-				"vw",
-				"%"
+				"svw",
+				"lvw",
+				"dvw",
+				"svh",
+				"lvh",
+				"dvh"
 			]
 		},
 		"border": {
@@ -136,12 +158,19 @@
 		"typography": {
 			"dropCap": false,
 			"lineHeight": true,
-			"fluid": true,
+			"fluid": false,
+			"writingMode": true,
+			"defaultFontSizes": false,
 			"fontFamilies": [
 				{
 					"slug": "system-font",
 					"name": "System Font",
 					"fontFamily": "\"ヒラギノ角ゴ ProN\", \"Hiragino Kaku Gothic ProN\", \"メイリオ\", Meiryo, sans-serif"
+				},
+				{
+					"slug": "system-font-serif",
+					"name": "System Font Serif",
+					"fontFamily": "\"Yu Mincho\", \"Hiragino Mincho ProN\", \"Hiragino Mincho Pro\", \"MS PMincho\", \"MS Mincho\", serif"
 				},
 				{
 					"fontFamily": "\"Source Serif Pro\", serif",
@@ -174,64 +203,64 @@
 					"fluid": false,
 					"name": "Tiny",
 					"slug": "tiny",
-					"size": "calc( var(--wp--preset--font-size--x-small) / var(--wp--custom--font--scale) )"
+					"size": "10px"
 				},
 				{
 					"fluid": false,
 					"name": "X small",
 					"slug": "x-small",
-					"size": "calc( var(--wp--preset--font-size--small) / var(--wp--custom--font--scale) )"
+					"size": "clamp(11px, calc(11px + (100vw - 360px) * ( (12 - 11) / (1200 - 360)) ), 12px)"
 				},
 				{
 					"fluid": false,
 					"name": "Small",
 					"slug": "small",
-					"size": "calc( var(--wp--preset--font-size--normal) / var(--wp--custom--font--scale) )"
+					"size": "clamp(12.56px, calc( 12.56px + (100vw - 360px) * ( (13.91 - 12.56) / (1200 - 360)) ), 13.91px)"
 				},
 				{
 					"name": "Medium",
 					"slug": "medium",
-					"size": "1rem"
+					"size": "clamp(14px, calc( 14px + (100vw - 360px) * ( (16 - 14) / (1200 - 360)) ), 16px)"
 				},
 				{
 					"name": "Large",
 					"slug": "large",
-					"size": "calc( var(--wp--preset--font-size--normal) * var(--wp--custom--font--scale) )"
+					"size": "clamp(15.61px, calc( 15.61px + (100vw - 360px) * ( (18.4 - 15.61) / (1200 - 360)) ), 18.4px)"
 				},
 				{
 					"name": "X Large",
 					"slug": "x-large",
-					"size": "calc( var(--wp--preset--font-size--large) * var(--wp--custom--font--scale) )"
+					"size": "clamp(17.4px, calc( 17.4px + (100vw - 360px) * ( (21.16 - 17.4) / (1200 - 360)) ), 21.16px)"
 				},
 				{
 					"name": "XX Large",
 					"slug": "xx-large",
-					"size": "calc( var(--wp--preset--font-size--x-large) * var(--wp--custom--font--scale) )"
+					"size": "clamp(19.4px, calc( 19.4px + (100vw - 360px) * ( (24.33 - 19.4) / (1200 - 360)) ), 24.33px)"
 				},
 				{
 					"name": "XXX Large",
 					"slug": "xxx-large",
-					"size": "calc( var(--wp--preset--font-size--xx-large) * var(--wp--custom--font--scale) )"
+					"size": "clamp(21.64px, calc( 21.64px + (100vw - 360px) * ( (27.98 - 21.64) / (1200 - 360)) ), 27.98px)"
 				},
 				{
 					"name": "Huge",
 					"slug": "huge",
-					"size": "calc( var(--wp--preset--font-size--xxx-large) * var(--wp--custom--font--scale) )"
+					"size": "clamp(24.12px, calc( 24.12px + (100vw - 360px) * ( (32.18 - 24.12) / (1200 - 360)) ), 32.18px)"
 				}
 			]
 		},
 		"custom": {
-			"content-size": {
-				"normal": "min( 1110px, 90vw )"
+			"width": {
+				"wrapper": "100dvw",
+				"content": "min( 1110px, 90vw )",
+				"wide": "calc( var(--wp--custom--width--content) + ( var(--wp--custom--width--wrapper) - var(--wp--custom--width--content) ) / 2 )",
+				"sidebar": "220px"
 			},
 			"layout": {
 				"sidebar": "220px"
 			},
 			"radius": {
 				"button": "0.1rem"
-			},
-			"font": {
-				"scale": "1.15"
 			},
 			"spacing": {
 				"xx-small": "0.375rem",
@@ -240,6 +269,7 @@
 				"medium": "2.4rem",
 				"large": "4rem",
 				"x-large": "6rem",
+				"xx-large": "9rem",
 				"editor-padding": "2rem",
 				"button-sm": "0.3em 1em",
 				"menu-indent": "0.875rem"
@@ -314,6 +344,25 @@
 			}
 		},
 		"blocks": {
+			"core/site-title": {
+				"typography": {
+					"fontWeight": "700",
+					"lineHeight": "var(--wp--custom--typography--line-height--heading)",
+					"fontSize": "clamp(12px, calc((100vw - 360px) * (10 / (1200 - 360)) + 12px), 22px)"
+				},
+				"elements": {
+					"link": {
+						"typography": {
+							"textDecoration": "none"
+						},
+						":hover": {
+							"typography": {
+								"textDecoration": "underline"
+							}
+						}
+					}
+				}
+			},
 			"core/button": {
 				"color": {
 					"background": "var(--wp--preset--color--primary)"
@@ -335,6 +384,24 @@
 					"link": {
 						"typography": {
 							"textDecoration": "none"
+						}
+					}
+				}
+			},
+			"core/post-terms": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)",
+					"lineHeight": "1.5"
+				},
+				"elements": {
+					"link": {
+						"typography": {
+							"textDecoration": "none"
+						},
+						":hover": {
+							"typography": {
+								"textDecoration": "underline"
+							}
 						}
 					}
 				}
@@ -385,7 +452,7 @@
 		},
 		{
 			"name": "loop-archive",
-			"title": "Loop Archive",
+			"title": "Loop Archive ( Deprecated )",
 			"area": "uncategorized"
 		},
 		{
@@ -400,7 +467,7 @@
 		},
 		{
 			"name": "sidebar-post",
-			"title": "Sidebar(Post)",
+			"title": "Sidebar ( Post )",
 			"area": "uncategorized"
 		}
 	]

@@ -7,10 +7,10 @@
 
 return array(
 	'title'      => __( 'Columns Menu Section', 'x-t9' ),
-	'categories' => array( 'featured', 'media', 'columns' ),
+	'categories' => array( 'featured', 'pr-contents' ),
 	'content'    => '<!-- wp:cover {"url":"' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/sample-image-gray.png","hasParallax":true,"dimRatio":90,"overlayColor":"bg-primary","minHeight":250,"contentPosition":"center center","isDark":false,"align":"full","style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}}}} -->
-	<div class="wp-block-cover alignfull is-light has-parallax" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;min-height:250px"><span aria-hidden="true" class="wp-block-cover__background has-bg-primary-background-color has-background-dim-90 has-background-dim"></span><div role="img" class="wp-block-cover__image-background has-parallax" style="background-position:50% 50%;background-image:url(' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/sample-image-gray.png)"></div><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":"","className":"is-style-spacer-lg"} -->
-	<div style="height:" aria-hidden="true" class="wp-block-spacer is-style-spacer-lg"></div>
+	<div class="wp-block-cover alignfull is-light has-parallax" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;min-height:250px"><span aria-hidden="true" class="wp-block-cover__background has-bg-primary-background-color has-background-dim-90 has-background-dim"></span><div role="img" class="wp-block-cover__image-background has-parallax" style="background-position:50% 50%;background-image:url(' . esc_url( get_template_directory_uri() ) . '/inc/patterns/images/sample-image-gray.png)"></div><div class="wp-block-cover__inner-container"><!-- wp:spacer {"className":"is-style-spacer-lg"} -->
+	<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-lg"></div>
 	<!-- /wp:spacer -->
 	
 	<!-- wp:group {"layout":{"type":"constrained"}} -->

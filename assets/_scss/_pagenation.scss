@@ -9,12 +9,13 @@
 	&-next {
 		line-height: 1;
 		padding: 10px 1em;
-		color: #fff;
 		background-color: var(--wp--preset--color--primary);
-		text-decoration: none;
-
 		&:hover {
 			background-color: var(--wp--preset--color--primary-hover);
+		}
+		:root & {
+			text-decoration: none;
+			color: #fff; // BG Secondary and Dark both white
 		}
 	}
 
@@ -22,5 +23,13 @@
 		color: var(--wp--preset--color--text-normal);
 		background-color: var(--wp--preset--color--bg-light-gray);
 		border: 1px solid var(--wp--preset--color--border-normal);
+	}
+
+	.wp-block-query-pagination-next {
+		margin-inline-start: .5em;
+	}
+
+	.wp-block-query-pagination-previous {
+		margin-inline-end: .5em;
 	}
 }

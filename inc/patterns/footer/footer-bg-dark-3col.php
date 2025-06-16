@@ -22,10 +22,10 @@ return array(
 	<p style="margin-top:var(--wp--preset--spacing--40)">ZIP 000-0000<br>Address here prefecture <br>City address 0-0-0<br>TEL : 000-000-0000</p>
 	<!-- /wp:paragraph -->
 	
-	<!-- wp:social-links {"iconColor":"text-normal-darkbg","iconColorValue":"rgba( 255,255,255,0.8 )","size":"has-normal-icon-size","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|40","left":"var:preset|spacing|40"},"margin":{"top":"var:preset|spacing|40","bottom":"0","right":"0","left":"0"}}},"className":"is-style-logos-only","layout":{"type":"flex","justifyContent":"left"}} -->
+	<!-- wp:social-links {"iconColor":"text-normal-darkbg","iconColorValue":"rgba( 255,255,255,0.8 )","openInNewTab":true,"size":"has-normal-icon-size","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|40","left":"var:preset|spacing|40"},"margin":{"top":"var:preset|spacing|40","bottom":"0","right":"0","left":"0"}}},"className":"is-style-logos-only","layout":{"type":"flex","justifyContent":"left"}} -->
 	<ul class="wp-block-social-links has-normal-icon-size has-icon-color is-style-logos-only" style="margin-top:var(--wp--preset--spacing--40);margin-right:0;margin-bottom:0;margin-left:0"><!-- wp:social-link {"url":"https://wordpress.org/","service":"facebook"} /-->
 	
-	<!-- wp:social-link {"url":"https://wordpress.org/","service":"twitter"} /-->
+	<!-- wp:social-link {"url":"https://wordpress.org/","service":"x"} /-->
 	
 	<!-- wp:social-link {"url":"https://wordpress.org/","service":"instagram"} /-->
 	
@@ -78,8 +78,8 @@ return array(
 	<!-- /wp:post-template -->
 	
 	<!-- wp:query-no-results -->
-	<!-- wp:paragraph {"placeholder":"クエリーが何も結果を返さない場合に表示するテキストまたはブロックを追加します。","textColor":"text-normal-darkbg"} -->
-	<p class="has-text-normal-darkbg-color has-text-color">投稿はありません</p>
+	<!-- wp:paragraph {"textColor":"text-normal-darkbg"} -->
+	<p class="has-text-normal-darkbg-color has-text-color">No posts.</p>
 	<!-- /wp:paragraph -->
 	<!-- /wp:query-no-results --></div>
 	<!-- /wp:query --></div>
@@ -90,7 +90,7 @@ return array(
 	
 	<!-- wp:group {"align":"full","style":{"border":{"top":{"color":"var:preset|color|border-normal-darkbg","width":"1px"}}},"className":"mt-0","layout":{"inherit":true,"type":"constrained"}} -->
 	<div class="wp-block-group alignfull mt-0" style="border-top-color:var(--wp--preset--color--border-normal-darkbg);border-top-width:1px"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0.5rem","bottom":"0.5rem"}}},"layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between"}} -->
-	<div class="wp-block-group" style="padding-top:0.5rem;padding-bottom:0.5rem"><!-- wp:navigation {"textColor":"text-secondary-darkbg","overlayMenu":"never","className":"nav\u002d\u002dtext-inline nav\u002d\u002ddarkbg is-style-nav\u002d\u002dtext-inline","layout":{"type":"flex","justifyContent":"center","orientation":"horizontal"},"fontSize":"x-small"} /-->
+	<div class="wp-block-group" style="padding-top:0.5rem;padding-bottom:0.5rem"><!-- wp:navigation {"textColor":"text-secondary-darkbg","overlayMenu":"never","className":"is-style-nav\u002d\u002dtext-inline","layout":{"type":"flex","justifyContent":"center","orientation":"horizontal"},"fontSize":"x-small"} /-->
 	
 	<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase"}},"textColor":"text-secondary-darkbg","fontSize":"x-small"} -->
 	<p class="has-text-align-center has-text-secondary-darkbg-color has-text-color has-x-small-font-size" style="text-transform:uppercase">Copyright (C) X-T9 All Rights Reserved.</p>

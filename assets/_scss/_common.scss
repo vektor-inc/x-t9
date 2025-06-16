@@ -3,6 +3,23 @@ h1,h2,h3,h4,h5,h6,p,ul,ol {
 	margin-top:0;
 	margin-bottom:0;
 }
+body {
+	// Cope with not intend horizontal scrollbar display
+	// margin-left: calc(50% - 50vw) などのネガティブマージンで横スクロールが発生するのを防ぐ
+	// 本来スクロール分を調整する手法の方が正確だが、コードを簡素化するためにこの方法を採用
+    overflow-x: hidden;
+
+	// @ 1.15.1 
+	// Change selector body,html {} -> body {}
+	// * If specify "html, body" then scrolled js not work 
+}
+
+html.has-modal-open body {
+	// Fix for Navigation Modal Link Jump (X-T9)
+	// モーダルメニューオープン時、同一ページ内にあるページ内リンクを正常に動かすため、
+	// モーダル中のみ body の overflow-x を visible にする。
+	overflow-x: visible;
+}
 
 html {
 	// 360px : 14px -> 1200px : 16px
@@ -35,6 +52,12 @@ img {
 figure {
 	max-width: 100%;
 	margin: 0;
+	// WP 6.7.2 の時点で、スライダーアイテムブロックの中に画像を配置した場合に中央寄せが効かないため
+	// At WP 6.7.2, the image in the slider item block does not center align
+	&.aligncenter {
+		margin-left:auto;
+		margin-right:auto;
+	}
 }
 
 main {

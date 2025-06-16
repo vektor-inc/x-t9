@@ -19,8 +19,9 @@
 
 /**
  * Include the TGM_Plugin_Activation class.
+ * ( now loading from composer )
  */
-require_once dirname( __FILE__ ) . '/class-tgm-plugin-activation.php';
+// require_once dirname( __FILE__ ) . '/class-tgm-plugin-activation.php';
 
 add_action( 'tgmpa_register', 'xt9_register_required_plugins' );
 /**
