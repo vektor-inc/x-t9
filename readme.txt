@@ -15,7 +15,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 [ Specification Change ] Change theme screenshot
 [ Specification Change ] Abolished the loop-archive template
-[ Specification Change ] Add color palette and secondary color
+[ Specification Change ][ Color palette ] Add color palette and secondary color
+[ Specification Change ][ Color palette ] Add color palette Foresty
 [ Specification Change ][ Typography ] Add Serif font and Serif font preset
 [ Specification Change ][ Navigation ] Text alignment is no longer affected by the navigation block's alignment setting. Previously, text alignment would follow the block's position, but this behavior has been disabled. / For horizontally aligned navigation blocks, only the first-level items are now center-aligned.
 [ Specification Change ][ Navigation ] Changed the mobile menu toggle to use the "Menu" icon.
