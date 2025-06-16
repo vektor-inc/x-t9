@@ -7,7 +7,7 @@
 
 return array(
 	'title'      => __( 'Columns Menu', 'x-t9' ),
-	'categories' => array( 'media', 'columns' ),
+	'categories' => array( 'pr-contents' ),
 	'content'    => '<!-- wp:columns {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"text-normal"} -->
 	<div class="wp-block-columns has-text-normal-color has-text-color" style="margin-top:0;margin-bottom:0"><!-- wp:column -->
 	<div class="wp-block-column"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","style":{"border":{"width":"1px"}},"borderColor":"border-normal"} -->

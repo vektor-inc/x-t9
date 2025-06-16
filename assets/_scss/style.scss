@@ -1,12 +1,13 @@
 @charset "utf-8";
 
 @import "variables";
+@import "variables_wp660";
 @import "ulitilies";
 @import "common";
 @import "common_margin-vertical";
 @import "block";
 @import "block_width";
-@import "block_additional-class";
+@import "block_styles";
 @import "query";
 @import "pagenation";
 @import "button";
@@ -18,6 +19,8 @@
 @import "sidebar";
 @import "plugin-override/bootstrap-override";
 @import "plugin-override/veu-override";
+@import "plugin-override/vk-blocks-override";
+@import "plugin-override/vk-blocks-override-width";
 
 html {
 	height: 100%; // to be footer bottom sticky
@@ -46,7 +49,8 @@ but actually not added case exist that reset padding to be aboid confusing.
 .has-background,
 :is(.wp-block-group):where(.has-background) {
 	padding: 0; // 編集画面の枠線ブロックなど弊害が出るのでこの指定は解除したい
-	overflow: hidden; // cope with height
+	// Don't use hidden. Because it bring to header navigation sub menu hidden.
+	// overflow: hidden; 
 }
 
 .wp-block-button .has-background {

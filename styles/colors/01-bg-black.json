@@ -1,0 +1,71 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+	"version": 3,
+	"title": "BG Black",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "primary",
+					"color": "#233A73",
+					"name": "Primary"
+				},
+				{
+					"slug": "primary-hover",
+					"color": "#1c45ab",
+					"name": "Primary Hover"
+				},
+				{
+					"slug": "bg-primary",
+					"color": "#151515",
+					"name": "BG Primary"
+				},
+				{
+					"slug": "bg-secondary",
+					"color": "#222",
+					"name": "BG Secondary"
+				},
+				{
+					"slug": "text-normal",
+					"color": "#fff",
+					"name": "Text Normal"
+				},
+				{
+					"slug": "text-secondary",
+					"color": "rgba(255,255,255,0.5)",
+					"name": "Text Secondary"
+				},
+				{
+					"slug": "border-normal",
+					"color": "rgba( 255,255,255,0.1 )",
+					"name": "Border Normal"
+				},
+				{
+					"slug": "bg-dark",
+					"color": "#000",
+					"name": "BG Dark"
+				},
+				{
+					"slug": "text-normal-darkbg",
+					"color": "#fff",
+					"name": "Text Normal (Dark BG)"
+				},
+				{
+					"slug": "text-secondary-darkbg",
+					"color": "rgba(255,255,255,0.5)",
+					"name": "Text Secondary (Dark BG)"
+				},
+				{
+					"slug": "border-normal-darkbg",
+					"color": "rgba( 255,255,255,0.1 )",
+					"name": "Border Normal (Dark BG)"
+				},
+				{
+					"slug": "secondary",
+					"color": "#715B23",
+					"name": "Secondary"
+				}
+			]
+		}
+	}
+}

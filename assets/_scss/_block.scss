@@ -2,9 +2,9 @@
  * Core block styles overrides
  */
 
- .wp-block-post-excerpt__more-text {
+.wp-block-post-excerpt__more-text {
 	margin-block-start: var(--wp--custom--spacing--small);
- }
+}
 
 /* Search ------------------------------------------------- */
 .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper {
@@ -27,6 +27,8 @@
 /* Image ------------------------------------------------- */
 .wp-block-image figcaption {
 	margin-bottom: 0;
+	// Probably this color specify is become could set from theme.json near future but now first aid.
+	color: var(--wp--preset--color--text-normal);
 }
 
 /*-------------------------------------------*/
@@ -39,11 +41,12 @@
 .wp-block-post-comments-form {
 	margin-top: var(--wp--custom--spacing--medium);
 
-	input:not([type=submit]),
+	input:not([type='submit']),
 	textarea {
 		border-color: var(--wp--preset--color--border-normal);
 	}
 }
+
 .wp-block-comments .wp-block-button {
 	margin-top: var(--wp--custom--spacing--small);
 }
@@ -51,10 +54,11 @@
 /*-------------------------------------------*/
 /*  Category / Archive block
 /*-------------------------------------------*/
-ul.wp-block-archives-list,
-ul.wp-block-categories-list,
-ul[class*="wp-block"][class*="__list"],
-ul[class*="vk_"][class*="list"] {
+ul:is(.wp-block-archives-list,
+	.wp-block-categories-list,
+	.vk_ancestorPageList_list,
+	.vk_taxonomy-list,
+	.vk_archive-list) {
 	padding: 0;
 	margin: 0;
 	--vk-margin-list-menu-left-first: var(--wp--custom--spacing--menu-indent);
@@ -63,12 +67,9 @@ ul[class*="vk_"][class*="list"] {
 		padding: 0;
 		margin: 0;
 	}
-	& > li:first-child {
-		&:is( 
-			.current-cat,
-			.current_page_item,
-			[area-current="page"]
-		 ){
+
+	&>li:first-child {
+		&:is(.current-cat, .current_page_item, [area-current='page']) {
 			border-top: 1px solid var(--wp--preset--color--border-normal);
 		}
 	}
@@ -88,8 +89,8 @@ ul[class*="vk_"][class*="list"] {
 		a:hover,
 		&.current-cat>a,
 		&.current_page_item>a,
-		a[area-current="page"] {
-			background-color: rgba(0,0,0,0.03);
+		a[area-current='page'] {
+			background-color: rgba(0, 0, 0, 0.03);
 		}
 	}
 
@@ -122,8 +123,64 @@ ul[class*="vk_"][class*="list"] {
 	}
 }
 
-*[class*="wp-block"][class*="-dropdown"]{
-	& > select {
+*[class*='wp-block'][class*='-dropdown'] {
+	&>select {
 		width: 100%;
 	}
+}
+
+/* Inline Code ------------------------------------------------- */
+.wp-block-post-content {
+	:not(pre)>code,
+	kbd {
+		display: inline-flex;
+		margin: 0 0.4em;
+		padding: 0.2em 0.4em;
+		align-items: center;
+		background-color: var(--wp--preset--color--bg-secondary);
+		border: 1px solid var(--wp--preset--color--border-normal);
+		border-radius: 2px;
+		color: var(--wp--preset--color--text-normal);
+		font-size: 0.9em;
+		line-height: 1.1;
+
+		:focus:not(pre)>code[data-rich-text-format-boundary],
+		:focus>kbd[data-rich-text-format-boundary] {
+			background-color: var(--wp--preset--color--border-normal);
+		}
+	}
+
+	kbd {
+		border-bottom-width: 3px;
+	}
+}
+
+/*-------------------------------------------*/
+/*  Tag Cloud
+/*-------------------------------------------*/
+.tag-cloud-link {
+	color: var(--wp--preset--color--text-secondary);
+	border: solid 1px var(--wp--preset--color--border-normal);
+	padding: .2em .4em;
+	margin: .1em;
+	border-radius: 2px;
+	text-decoration: none;
+	line-height: 1.2;
+
+	&:before {
+		content: '#';
+		padding-right: 2px;
+		font-size: .85em;
+	}
+
+	&:hover {
+		color: var(--wp--preset--color--text-normal);
+	}
+}
+/*-------------------------------------------*/
+/*  Post Date Block
+/*-------------------------------------------*/
+// theme.json から指定可能になったらそちらに移行
+.wp-block-post-date time{
+	white-space:nowrap;
 }

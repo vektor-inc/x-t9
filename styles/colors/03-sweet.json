@@ -1,33 +1,33 @@
 {
-	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
-	"version": 2,
-	"title": "Red",
+	"$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+	"version": 3,
+	"title": "Sweet",
 	"settings": {
 		"color": {
 			"palette": [
 				{
 					"slug": "primary",
-					"color": "#c00000",
+					"color": "#e53d6a",
 					"name": "Primary"
 				},
 				{
 					"slug": "primary-hover",
-					"color": "#ff2222",
+					"color": "#ED2F82",
 					"name": "Primary Hover"
 				},
 				{
 					"slug": "bg-primary",
-					"color": "#fff",
+					"color": "#FBFAF2",
 					"name": "BG Primary"
 				},
 				{
 					"slug": "bg-secondary",
-					"color": "#f5f5f5",
+					"color": "#F5F3E9",
 					"name": "BG Secondary"
 				},
 				{
 					"slug": "text-normal",
-					"color": "#333",
+					"color": "#251f0f",
 					"name": "Text Normal"
 				},
 				{
@@ -37,12 +37,12 @@
 				},
 				{
 					"slug": "border-normal",
-					"color": "rgba( 0,0,0,0.1 )",
+					"color": "#e7e5d9",
 					"name": "Border Normal"
 				},
 				{
 					"slug": "bg-dark",
-					"color": "#222",
+					"color": "#493B12",
 					"name": "BG Dark ( Base Contrast )"
 				},
 				{
@@ -59,6 +59,11 @@
 					"slug": "border-normal-darkbg",
 					"color": "rgba( 255,255,255,0.1 )",
 					"name": "Border Normal (Dark BG)"
+				},
+				{
+					"slug": "secondary",
+					"color": "#00c38f",
+					"name": "Secondary"
 				}
 			]
 		}
