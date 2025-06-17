@@ -4,7 +4,7 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
-	// 直下でもconstrainedの中でも幅は同じ
+	// 直下でも constrained の中でも幅は同じ
 	&,
 	.is-layout-constrained & {
 		width: auto;
