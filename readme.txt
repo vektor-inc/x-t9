@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ] Change the read more style in the post excerpt to no background
 [ Specification Change ] Change theme screenshot
 [ Specification Change ] Abolished the loop-archive template
 [ Specification Change ][ Color palette ] Add color palette and Complementary color
