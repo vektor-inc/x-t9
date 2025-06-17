@@ -1,0 +1,61 @@
+@charset "utf-8";
+/**
+ * edit.css
+ * Edit screen override
+ */
+
+@import 'block_width_editor-wp65';
+@import 'plugin-override/vk-blocks-override-width_editor';
+
+.edit-post-visual-editor__post-title-wrapper {
+	margin-bottom: 1.5rem;
+}
+
+.site-logo--set .wp-block-site-logo .custom-logo {
+	height: auto;
+}
+// Reset Header Fixed in Editor
+:is( 
+	.block-editor-block-list__layout, /* since WordPress 6.6 */
+	.edit-site-editor-canvas__block-list, /* since WordPress 6.5 */
+	.edit-site-block-editor__block-list /* up to WordPress 6.4 */
+	) {
+		& *[class*="scrolled-header-fixed"]{
+			position: relative;
+			top: 0;
+		}
+		& :is(.scrolled-header-fixed, .is-style-scrolled-header-fixed)::after {
+			position: absolute;
+			top:0;
+			font-size: 12px;
+			color: #fff;
+			background-color: var(--wp-admin-theme-color);
+			padding: 2px 5px;
+			line-height: 1.1;
+			width: fit-content;
+			height: fit-content;
+			border-radius: 0;
+			content: 'This is .scrolled-header-fixed';
+		}
+}
+
+// reset block margin top
+:is(.is-layout-constrained, .wp-site-blocks)>*+ :is(.wp-block-spacer,
+	.wp-block-separator,
+	.wp-block-columns,
+	.wp-block-navigation,
+	.wp-block-query,
+	.wp-block-archives) {
+	margin-top: 0;
+	margin-block-start: 0;
+}
+
+/* Spacer ------------------------------------------------- */
+
+.wp-block-spacer {
+	border: 1px dashed var(--wp--preset--color--border-normal);
+}
+
+.is-layout-constrained>.wp-block-spacer+* {
+	margin-block-start: 0;
+}

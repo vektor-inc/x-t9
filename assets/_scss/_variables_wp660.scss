@@ -1,0 +1,4 @@
+// https://github.com/vektor-inc/x-t9/pull/293
+:root body {
+	--wp--preset--font-size--huge:clamp(24.12px, calc( 24.12px + (100vw - 360px) * ( (32.18 - 24.12) / (1200 - 360)) ), 32.18px);
+}

@@ -5,7 +5,7 @@
  */
 
 @import 'block_width_editor';
-@import 'block_width_editor_padding';
+@import 'plugin-override/vk-blocks-override-width_editor';
 
 .edit-post-visual-editor__post-title-wrapper {
 	margin-bottom: 1.5rem;
@@ -14,18 +14,29 @@
 .site-logo--set .wp-block-site-logo .custom-logo {
 	height: auto;
 }
-
-.edit-site-block-editor__block-list :is(.scrolled-header-fixed, .is-style-scrolled-header-fixed)::after {
-	position: absolute;
-	font-size: 12px;
-	color: #fff;
-	background-color: var(--wp-admin-theme-color);
-	padding: 2px 5px;
-	line-height: 1.1;
-	width: fit-content;
-	height: fit-content;
-	border-radius: 0;
-	content: 'This is .scrolled-header-fixed';
+// Reset Header Fixed in Editor
+:is( 
+	.block-editor-block-list__layout, /* since WordPress 6.6 */
+	.edit-site-editor-canvas__block-list, /* since WordPress 6.5 */
+	.edit-site-block-editor__block-list /* up to WordPress 6.4 */
+	) {
+		& *[class*="scrolled-header-fixed"]{
+			position: relative;
+			top: 0;
+		}
+		& :is(.scrolled-header-fixed, .is-style-scrolled-header-fixed)::after {
+			position: absolute;
+			top:0;
+			font-size: 12px;
+			color: #fff;
+			background-color: var(--wp-admin-theme-color);
+			padding: 2px 5px;
+			line-height: 1.1;
+			width: fit-content;
+			height: fit-content;
+			border-radius: 0;
+			content: 'This is .scrolled-header-fixed';
+		}
 }
 
 // reset block margin top
@@ -45,44 +56,20 @@
 	border: 1px dashed var(--wp--preset--color--border-normal);
 }
 
-/* Editor Screen Padding ------------------------------------------------- */
-
-// サイトエディタではヘッダーやフッターに左右余白がつかないように not 指定
-body>.is-root-container:not(.wp-site-blocks),
-.edit-post-visual-editor__post-title-wrapper,
-.alignfull:is(.wp-block-group,
-	.wp-block-group.has-background,
-	.wp-block-cover,
-	.vk_slider),
-.is-root-container .wp-block[data-align='full']>.wp-block-group,
-.is-root-container .wp-block[data-align='full']>.wp-block-cover {
-	// border:1px solid #ff0000;
-	// padding-left: var(--wp--custom--spacing--editor-padding);
-	// padding-right: var(--wp--custom--spacing--editor-padding);
-}
-
-.wp-site-blocks .alignfull,
-// .wp-site-blocks > .wp-block-group.has-background,
-// .wp-site-blocks > .wp-block-cover,
-// .wp-site-blocks > .wp-block-template-part > .wp-block-group.has-background,
-// .wp-site-blocks > .wp-block-template-part > .wp-block-cover,
-// body > .is-root-container > .wp-block-group.has-background,
-// body > .is-root-container > .wp-block-cover,
-// body > .is-root-container > .wp-block-template-part > .wp-block-group.has-background,
-// body > .is-root-container > .wp-block-template-part > .wp-block-cover,
-.is-root-container .wp-block[data-align="full"] {
-	// margin-left: calc(-1 * var(--wp--custom--spacing--editor-padding)) !important;
-	// margin-right: calc(-1 * var(--wp--custom--spacing--editor-padding)) !important;
-}
-
 .is-layout-constrained>.wp-block-spacer+* {
 	margin-block-start: 0;
 }
 
-// Navigation -------------------------------------------------
+/* navigation ------------------------------------------------- */
+// First level & Horizontal only
+ nav:where(:not(:is(.is-vertical,[class*="is-style-nav--vertical"] ))) .wp-block-navigation__container > .wp-block-navigation-item {
+	& > .wp-block-navigation-item__content {
+		text-align: center;
+	}
+ }
 
-// overwrite .editor-styles-wrapper .is-layout-flex { gap: var(--wp--custom--spacing--small); } on editor
-.wp-block-navigation>.wp-block-navigation__container,
-.wp-block-navigation__responsive-container-content .wp-block-navigation__container {
-	gap: 0;
+.wp-block-navigation[class*='nav--vertical-with-hr']  {
+	.wp-block-navigation__container.block-editor-block-list__layout{
+		width:100%;
+	}
 }

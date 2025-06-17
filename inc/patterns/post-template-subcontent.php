@@ -13,7 +13,7 @@ return array(
 	<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-xs"></div>
 	<!-- /wp:spacer -->
 	
-	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
 	<div class="wp-block-group"><!-- wp:post-featured-image {"width":"60px","height":"60px"} /-->
 	
 	<!-- wp:group {"layout":{"type":"default"}} -->

@@ -1,19 +1,21 @@
 {
 	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
-	"version": 2,
+	"version": 3,
 	"settings": {
 		"layout": {
-			"contentSize": "var(--wp--custom--content-size--normal)",
-			"wideSize": "calc( var(--wp--custom--content-size--normal) + ( 100vw - var(--wp--custom--content-size--normal) ) / 2 )"
+			"contentSize": "var(--wp--custom--width--content)",
+			"wideSize": "var(--wp--custom--width--wide)"
 		},
 		"position": {
 			"sticky": true
 		},
 		"dimensions": {
-			"minHeight": true
+			"minHeight": true,
+			"aspectRatio": true
 		},
 		"background": {
-			"backgroundImage": true
+			"backgroundImage": true,
+			"backgroundSize": true
 		},
 		"color": {
 			"background": true,
@@ -76,6 +78,11 @@
 					"slug": "border-normal-darkbg",
 					"color": "rgba( 255,255,255,0.1 )",
 					"name": "Border Normal (Dark BG)"
+				},
+				{
+					"slug": "complementary",
+					"color": "#715B23",
+					"name": "Complementary"
 				}
 			],
 			"customGradient": true,
@@ -85,6 +92,7 @@
 			"customDuotone": true
 		},
 		"spacing": {
+			"defaultSpacingSizes": false,
 			"blockGap": true,
 			"margin": true,
 			"padding": true,
@@ -119,15 +127,26 @@
 					"name": "XL",
 					"slug": "80",
 					"size": "var(--wp--custom--spacing--x-large)"
+				},
+				{
+					"name": "XXL",
+					"slug": "90",
+					"size": "var(--wp--custom--spacing--xx-large)"
 				}
 			],
 			"units": [
 				"px",
+				"%",
+				"vw",
+				"vh",
 				"em",
 				"rem",
-				"vh",
-				"vw",
-				"%"
+				"svw",
+				"lvw",
+				"dvw",
+				"svh",
+				"lvh",
+				"dvh"
 			]
 		},
 		"border": {
@@ -140,11 +159,18 @@
 			"dropCap": false,
 			"lineHeight": true,
 			"fluid": false,
+			"writingMode": true,
+			"defaultFontSizes": false,
 			"fontFamilies": [
 				{
 					"slug": "system-font",
 					"name": "System Font",
 					"fontFamily": "\"ヒラギノ角ゴ ProN\", \"Hiragino Kaku Gothic ProN\", \"メイリオ\", Meiryo, sans-serif"
+				},
+				{
+					"slug": "system-font-serif",
+					"name": "System Font Serif",
+					"fontFamily": "\"Yu Mincho\", \"Hiragino Mincho ProN\", \"Hiragino Mincho Pro\", \"MS PMincho\", \"MS Mincho\", serif"
 				},
 				{
 					"fontFamily": "\"Source Serif Pro\", serif",
@@ -224,8 +250,11 @@
 			]
 		},
 		"custom": {
-			"content-size": {
-				"normal": "min( 1110px, 90vw )"
+			"width": {
+				"wrapper": "100dvw",
+				"content": "min( 1110px, 90vw )",
+				"wide": "calc( var(--wp--custom--width--content) + ( var(--wp--custom--width--wrapper) - var(--wp--custom--width--content) ) / 2 )",
+				"sidebar": "220px"
 			},
 			"layout": {
 				"sidebar": "220px"
@@ -240,6 +269,7 @@
 				"medium": "2.4rem",
 				"large": "4rem",
 				"x-large": "6rem",
+				"xx-large": "9rem",
 				"editor-padding": "2rem",
 				"button-sm": "0.3em 1em",
 				"menu-indent": "0.875rem"
@@ -314,6 +344,25 @@
 			}
 		},
 		"blocks": {
+			"core/site-title": {
+				"typography": {
+					"fontWeight": "700",
+					"lineHeight": "var(--wp--custom--typography--line-height--heading)",
+					"fontSize": "clamp(12px, calc((100vw - 360px) * (10 / (1200 - 360)) + 12px), 22px)"
+				},
+				"elements": {
+					"link": {
+						"typography": {
+							"textDecoration": "none"
+						},
+						":hover": {
+							"typography": {
+								"textDecoration": "underline"
+							}
+						}
+					}
+				}
+			},
 			"core/button": {
 				"color": {
 					"background": "var(--wp--preset--color--primary)"
@@ -340,11 +389,14 @@
 				}
 			},
 			"core/post-terms": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)",
+					"lineHeight": "1.5"
+				},
 				"elements": {
 					"link": {
 						"typography": {
-							"textDecoration": "none",
-							"fontSize": "var(--wp--preset--font-size--x-small)"
+							"textDecoration": "none"
 						},
 						":hover": {
 							"typography": {
@@ -400,7 +452,7 @@
 		},
 		{
 			"name": "loop-archive",
-			"title": "Loop Archive",
+			"title": "Loop Archive ( Deprecated )",
 			"area": "uncategorized"
 		},
 		{
@@ -415,7 +467,7 @@
 		},
 		{
 			"name": "sidebar-post",
-			"title": "Sidebar(Post)",
+			"title": "Sidebar ( Post )",
 			"area": "uncategorized"
 		}
 	]

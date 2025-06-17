@@ -8,13 +8,21 @@
 .wp-block-button__link.has-primary-background-color {
 	transition: all 0.1s ease-in;
 	background-color: var(--wp--preset--color--primary);
-	color: #fff; // BG Secondary and Dark both white
 	text-decoration: none;
 	border-radius: var(--wp--custom--radius--button);
 	&:hover {
 		--wp--preset--color--primary: var(--wp--preset--color--primary-hover);
 	}
+	:root & {
+		text-decoration: none;
+		color: #fff; // BG Secondary and Dark both white
+	}
 }
+.wp-block-search__button{
+	white-space: nowrap;
+	padding:5px 1em;
+}
+
 /* ---------------------------------
  * Hover color
  * --------------------------------- */
@@ -25,15 +33,17 @@
  * Outline color
  * --------------------------------- */
 .wp-block-button.is-style-outline {
-	& > .wp-block-button__link {
+	& > :where(.wp-block-button__link) { // has-vk-color-*が効かなくなるためwhereを追加
 		border-width:1px;
+		// 6.6で コアのデフォルトスタイルが負けるようになり、背景色がついてしまうので追加
+		background-color:transparent;
+		color: currentColor;
 	}
 	& > .wp-block-button__link:not(.has-background):hover {
 		background-color: var(--wp--preset--color--primary-hover);
 		color: #fff;
 	}
-	& > .has-text-color:hover {
-		// background-color: currentColor;
+	& > .has-text-color:where(:not(.has-background)):hover {
 		color:#fff !important;
 	}
 }
@@ -42,7 +52,7 @@
  * VK Blocks Hover color
  * --------------------------------- */
 .vk_button {
-	.vk_button_link:hover  {
+	.vk_button_link:where(:not(.has-text-color)):hover {
 		color:#fff;
 		opacity: 1;
 	}

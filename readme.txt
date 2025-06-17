@@ -1,8 +1,8 @@
 === X-T9 ===
-Contributors: kurudrive,vektor-inc
-Tested up to: 6.4
-Requires PHP: 7.2
-Stable tag: 1.18.0
+Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei,yukinobu
+Tested up to: 6.8
+Requires PHP: 7.4
+Stable tag: 1.33.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,9 +13,138 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
-
 [ Specification Change ] Change the read more style in the post excerpt to no background
+[ Specification Change ] Change theme screenshot
+[ Specification Change ] Abolished the loop-archive template
+[ Specification Change ][ Color palette ] Add color palette and Complementary color
+[ Specification Change ][ Color palette ] Add color palette Foresty
+[ Specification Change ][ Typography ] Add Serif font and Serif font preset
+[ Specification Change ][ Navigation ] Text alignment is no longer affected by the navigation block's alignment setting. Previously, text alignment would follow the block's position, but this behavior has been disabled. / For horizontally aligned navigation blocks, only the first-level items are now center-aligned.
+[ Specification Change ][ Navigation ] Changed the mobile menu toggle to use the "Menu" icon.
+[ Specification Change ][ Search button ] Add nowrap and padding tuning
+[ Specification Change ] Social media links in the header and footer block patterns now open in a separate tab by default.
+[ Specification Change ] Make adjustments to the CSS of the core/post-terms block.
+[ Specification Change ][ Post subcontent Pattern ] Change to vertical align top.
+[ Bug fix ][ Header Pattern ] Fixed an issue where there was no top margin above the mobile menu toggle button.
+[ Bug fix ] Fix unintentional br and indent in the page header of the home template
+[ Other ] Update anchor link CSS
 
+1.33.0
+[ Bug fix ] Fix an issue where scrolling to an anchor link caused the target content to be hidden behind the sticky header.
+[ Bug fix ] Adjust overflow-x for body when navigation modal menu is open to fix page anchor link navigation.
+
+1.32.0
+[ Other ][ 6.8 ] Fix current menu ancestor CSS class application for Navigation Block in WP6.8.
+[ Other ][ 6.8 ] The description display process was set to run on versions earlier than 6.8, but it was also running on 6.8 RC. Therefore, it has been modified so that it no longer runs on 6.8 RC.
+
+1.31.1
+[ Bug fix ] Fix an issue where image block align center dosen't work when put into the slider item block.
+
+1.31.0
+[ Other ] Cope with menu item description HTML
+[ Specification Change / Bug fix ] Add z-index:9999 to footer.wp-block-template-part
+[ Specification Change /  Design Tuning ] Removed margin tuning of Icon Block of the VK Blocks.
+
+1.30.0
+[ Specification Change ] Update theme.json to V3
+[ Specification Change ] Add styles setting in syles json
+
+1.29.0
+[ Specification Change ( Redesign ) ][ Navigation ] Refactoring the design of the navigation block.
+[ Bug fix ] Fixed an issue with full-width processing in the editor.
+
+1.28.1
+[ Other ] Rollback to 1.27.1
+
+1.28.0
+[ Specification Change ] Some measurement units have been removed.
+[ Design Bug Fix ] Fix an issue where the CSS is not applied when the navigation is set to always display.
+[ Design Bug Fix ] Add margin to pagination previous and next buttons.
+
+1.27.1
+[ Design Bug Fix ] Fixed an issue where constrained blocks were misaligned inside full-width blocks.
+[ Design Bug Fix ][ navigation ] Adjusted to override the WordPress core CSS of wp-block-navigation__submenu-container when the .has-vk-color-primary-background-color class is assigned. (for VK pattern library)
+
+1.27.0
+[ Specification Change ] Added support for the "Writing Mode" option in Typography settings for WordPress 6.7.
+
+1.26.6
+[ Bug Fix ] Fixed an issue where the wide block was aligned to the left within the full-width cover block.
+[ Bug fix ] Avoiding translation errors in WordPress 6.7
+
+1.26.5
+[ Design Bug Fix ][ WooCommerce ] Fixed an issue where the number was not displayed in the WooCommerce quantity input field.
+
+1.26.4
+[ Design Bug Fix ][ button ] Fixed an issue where has-vk-color-primary-color was not applied to the outline of core buttons.
+
+1.26.3
+[ Design Bug Fix ] Add css for woocommerce plugin support
+[ Design Bug Fix ][ button ]Fixed the button text color to not become white when hovering under certain settings
+
+1.26.2
+[ Design Bug Fix ] First aid for an issue where the value of --wp--preset--font-size--huge defined in theme.json is being overwritten by WordPress
+
+1.26.1
+[ Design Bug Fix ] Fixed the width of the post title on the edit screen
+
+1.26.0
+[ Other ][ 6.6 ] Accommodate width adjustment on WordPress 6.6 edit screen
+[ Design Bug Fix ] Editor:Fix outline background of button style in WP6.6.
+
+1.25.0
+[ Other ][ 6.6 ] Fix readmore and pagenation button text color
+[ Other ][ 6.6 ] Fix scrolled header
+[ Design Tuning ] Add styles to inline kbd block.
+[ Bug fix ] Fix the display when vertically aligned in the center and right aligned.
+
+1.24.1
+[ Specifiction Change ] Add spacer block style XXL
+
+1.24.0
+[ Design Bug fix ] Rollback deleted p tag margin-bottom 1.23.0 / Delete margin-bottom in case of only next block is spacer.
+[ Specifiction Change ]
+ --wp--custom--content-size--normal -> --wp--custom--width--content
+ --wp--custom--layout--sidebar -> --wp--custom--width--sidebar
+[ Design Bug fix ] Fixed a width issue on the edit screen.
+[ Design Tuning ] Add size option xxl.
+
+1.23.0
+[ Specification Change ] Remove the bottom margin from the p tag.
+
+1.22.1
+[ Design Bug fix ] Fix Description -- SNS / Logo -- Nav - Contact pattern alignment
+
+1.22.0
+[ Specification Change ] Delete theme name from templates.
+[ Specification Change ] Change the twitter icon to X
+[ Design Bug fix ] Fixed padding being added when the submenu has background.
+
+1.21.1
+[ Design Bug fix ][ 6.5 ] Fixed an issue that prevented editing of the fixed header area in WordPress 6.5.
+
+1.21.0
+[ Specification Change ][ 6.5 ] Attend to aspectRatio
+[ Specification Change ][ 6.5 ] Attend to backgroundSize
+[ Specification Change ][ 6.5 ] Allow using CSS level 4 viewport-relative units
+[ Design Bug fix ][ 6.5 ] Fix the width being wrong when setting to alignwide in editor
+[ Design Bug fix ] Fix indented li > ul margin in list__block
+[ Design Bug fix ] Addressed inability to change sidebar h4 design in individual posts
+[ Design Bug fix ] Fix column block gap setting not taking effect in individual posts
+[ Design Bug fix ]Editor: Fixed incorrect placement when vk_gridcolcard_item_body has .is-layout-constrained.
+
+1.20.0
+[ Specification Change ] TGM load from composer
+
+1.19.1
+[ Bug Fix ] Security update
+
+1.19.0
+[ Specification Change ] Change the style specification of the 'site-title' block from a CSS file to theme.json.
+[ Specification Change ] Add style border radius 0 to .card
+[ Specification Change ] Add nowrap CSS specification to post date block.
+[ Translation ready ] button on featured-post-list
+[ Bug Fix ] Fixed a bug where the submenu's background color and text color were not being applied.
 
 1.18.0
 [ Specification Change ] Added support for the background image feature in Group blocks, introduced in WordPress 6.4.

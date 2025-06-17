@@ -1,6 +1,6 @@
 {
-	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
-	"version": 2,
+	"$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+	"version": 3,
 	"title": "Sweet",
 	"settings": {
 		"color": {
@@ -59,6 +59,11 @@
 					"slug": "border-normal-darkbg",
 					"color": "rgba( 255,255,255,0.1 )",
 					"name": "Border Normal (Dark BG)"
+				},
+				{
+					"slug": "complementary",
+					"color": "#00c38f",
+					"name": "Complementary"
 				}
 			]
 		}

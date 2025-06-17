@@ -1,11 +1,7 @@
 .wp-block-site-title {
 	a {
-		text-decoration: none;
-
 		&:hover {
-			text-decoration: underline;
 			text-decoration-thickness: 1px;
-			text-decoration-color: var(--wp--preset--color--text-normal);
 		}
 	}
 }

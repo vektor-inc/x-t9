@@ -56,7 +56,7 @@ return array(
 	
 	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|50","bottom":"0"}}}} -->
 	<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--50);margin-bottom:0"><!-- wp:button {"fontSize":"x-small"} -->
-	<div class="wp-block-button has-custom-font-size has-x-small-font-size"><a class="wp-block-button__link wp-element-button" href="' . esc_url( get_post_type_archive_link( 'post' )  ) . '">Information list</a></div>
+	<div class="wp-block-button has-custom-font-size has-x-small-font-size"><a class="wp-block-button__link wp-element-button" href="' . esc_url( get_post_type_archive_link( 'post' )  ) . '">' . esc_html__( 'Information list', 'x-t9' ) . '</a></div>
 	<!-- /wp:button --></div>
 	<!-- /wp:buttons --></div>
 	<!-- /wp:query --></div>
