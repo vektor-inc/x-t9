@@ -52,7 +52,7 @@ body.block-editor-iframe__body.editor-styles-wrapper{
 /// full & wide
 //////////////////////////////////////////////////////////////
 
-// ルートコンテナ以外の .is-layout-constrained には max-width を指定
+// ルートコンテナ以外の .is-layout-constrained の中の要素には max-width を指定
 .is-layout-constrained:where(:not(.is-root-container))> *:where(:not(:is(.alignfull, .alignwide))) {
 	max-width: var(--wp--custom--width--content);
 	margin-left:auto;
