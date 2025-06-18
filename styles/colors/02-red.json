@@ -1,58 +1,58 @@
 {
-	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"$schema": "https://schemas.wp.org/wp/6.7/theme.json",
 	"version": 3,
-	"title": "BG Black",
+	"title": "Red",
 	"settings": {
 		"color": {
 			"palette": [
 				{
 					"slug": "primary",
-					"color": "#233A73",
+					"color": "#c00000",
 					"name": "Primary"
 				},
 				{
 					"slug": "primary-hover",
-					"color": "#1c45ab",
+					"color": "#ff2222",
 					"name": "Primary Hover"
 				},
 				{
 					"slug": "bg-primary",
-					"color": "#151515",
+					"color": "#fff",
 					"name": "BG Primary"
 				},
 				{
 					"slug": "bg-secondary",
-					"color": "#222",
+					"color": "#f5f5f5",
 					"name": "BG Secondary"
 				},
 				{
 					"slug": "text-normal",
-					"color": "#fff",
+					"color": "#333",
 					"name": "Text Normal"
 				},
 				{
 					"slug": "text-secondary",
-					"color": "rgba(255,255,255,0.5)",
+					"color": "rgba(0,0,0,0.5)",
 					"name": "Text Secondary"
 				},
 				{
 					"slug": "border-normal",
-					"color": "rgba( 255,255,255,0.1 )",
+					"color": "rgba( 0,0,0,0.1 )",
 					"name": "Border Normal"
 				},
 				{
 					"slug": "bg-dark",
-					"color": "#000",
-					"name": "BG Dark"
+					"color": "#222",
+					"name": "BG Dark ( Base Contrast )"
 				},
 				{
 					"slug": "text-normal-darkbg",
-					"color": "#fff",
+					"color": "rgba( 255,255,255,0.7 )",
 					"name": "Text Normal (Dark BG)"
 				},
 				{
 					"slug": "text-secondary-darkbg",
-					"color": "rgba(255,255,255,0.5)",
+					"color": "rgba( 255,255,255,0.6 )",
 					"name": "Text Secondary (Dark BG)"
 				},
 				{
@@ -62,15 +62,10 @@
 				},
 				{
 					"slug": "complementary",
-					"color": "#715B23",
+					"color": "#009B9B",
 					"name": "Complementary"
 				}
 			]
-		}
-	},
-	"styles": {
-		"typography": {
-			"fontFamily": "var:preset|font-family|system-font-serif"
 		}
 	}
 }

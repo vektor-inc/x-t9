@@ -78,6 +78,11 @@
 					"slug": "border-normal-darkbg",
 					"color": "rgba( 255,255,255,0.1 )",
 					"name": "Border Normal (Dark BG)"
+				},
+				{
+					"slug": "complementary",
+					"color": "#715B23",
+					"name": "Complementary"
 				}
 			],
 			"customGradient": true,
@@ -161,6 +166,11 @@
 					"slug": "system-font",
 					"name": "System Font",
 					"fontFamily": "\"ヒラギノ角ゴ ProN\", \"Hiragino Kaku Gothic ProN\", \"メイリオ\", Meiryo, sans-serif"
+				},
+				{
+					"slug": "system-font-serif",
+					"name": "System Font Serif",
+					"fontFamily": "\"Yu Mincho\", \"Hiragino Mincho ProN\", \"Hiragino Mincho Pro\", \"MS PMincho\", \"MS Mincho\", serif"
 				},
 				{
 					"fontFamily": "\"Source Serif Pro\", serif",
@@ -442,7 +452,7 @@
 		},
 		{
 			"name": "loop-archive",
-			"title": "Loop Archive",
+			"title": "Loop Archive ( Deprecated )",
 			"area": "uncategorized"
 		},
 		{
