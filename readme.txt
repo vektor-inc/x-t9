@@ -13,11 +13,10 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
-[ Specification Change ][ Layout ]Readjust the CSS for layout width settings
-[ Specification Change ] Change theme screenshot
-[ Specification Change ] Abolished the loop-archive template
 [ Specification Change ][ Color palette ] Add color palette and Complementary color
 [ Specification Change ][ Color palette ] Add color palette Foresty
+[ Specification Change ][ Layout ]Readjust the CSS for layout width settings
+[ Specification Change ] Abolished the loop-archive template
 [ Specification Change ][ Typography ] Add Serif font and Serif font preset
 [ Specification Change ][ Navigation ] Text alignment is no longer affected by the navigation block's alignment setting. Previously, text alignment would follow the block's position, but this behavior has been disabled. / For horizontally aligned navigation blocks, only the first-level items are now center-aligned.
 [ Specification Change ][ Navigation ] Changed the mobile menu toggle to use the "Menu" icon.
@@ -27,6 +26,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 [ Specification Change ][ Post subcontent Pattern ] Change to vertical align top.
 [ Bug fix ][ Header Pattern ] Fixed an issue where there was no top margin above the mobile menu toggle button.
 [ Bug fix ] Fix unintentional br and indent in the page header of the home template
+[ Bug fix ] To prevent the footer and header from overlapping, I changed the z-index of the footer from 9999 to 9998.
+[ Other ] Change theme screenshot
 [ Other ] Update anchor link CSS
 
 1.33.0
