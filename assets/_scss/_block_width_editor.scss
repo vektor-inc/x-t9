@@ -53,13 +53,13 @@ body.block-editor-iframe__body.editor-styles-wrapper{
 //////////////////////////////////////////////////////////////
 
 // ルートコンテナ以外の .is-layout-constrained には max-width を指定
-.is-layout-constrained:where(:not(.is-root-container)) {
+.is-layout-constrained:where(:not(.is-root-container))> *:where(:not(:is(.alignfull, .alignwide))) {
 	max-width: var(--wp--custom--width--content);
 	margin-left:auto;
 	margin-right:auto;
 }
 
-[data-align=wide] {
+[data-align=wide]> *:where(:not(:is(.alignfull, .alignwide))) {
 	margin-left:auto;
 	margin-right:auto;
 	width:var(--wp--custom--width--wide);
