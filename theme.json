@@ -209,43 +209,58 @@
 					"fluid": false,
 					"name": "X small",
 					"slug": "x-small",
-					"size": "clamp(11px, calc(11px + (100vw - 360px) * ( (12 - 11) / (1200 - 360)) ), 12px)"
+					"size": "clamp(11px, calc(11px + (100svw - 360px) * ( (12 - 11) / (1200 - 360)) ), 12px)"
 				},
 				{
 					"fluid": false,
 					"name": "Small",
 					"slug": "small",
-					"size": "clamp(12.56px, calc( 12.56px + (100vw - 360px) * ( (13.91 - 12.56) / (1200 - 360)) ), 13.91px)"
+					"size": "clamp(12.56px, calc( 12.56px + (100svw - 360px) * ( (13.91 - 12.56) / (1200 - 360)) ), 13.91px)"
 				},
 				{
 					"name": "Medium",
 					"slug": "medium",
-					"size": "clamp(14px, calc( 14px + (100vw - 360px) * ( (16 - 14) / (1200 - 360)) ), 16px)"
+					"size": "clamp(14px, calc( 14px + (100svw - 360px) * ( (16 - 14) / (1200 - 360)) ), 16px)"
 				},
 				{
 					"name": "Large",
 					"slug": "large",
-					"size": "clamp(15.61px, calc( 15.61px + (100vw - 360px) * ( (18.4 - 15.61) / (1200 - 360)) ), 18.4px)"
+					"size": "clamp(16.10px, calc( 16.10px + (100svw - 360px) * ( (18.4 - 16.10) / (1200 - 360)) ), 18.4px)"
 				},
 				{
 					"name": "X Large",
 					"slug": "x-large",
-					"size": "clamp(17.4px, calc( 17.4px + (100vw - 360px) * ( (21.16 - 17.4) / (1200 - 360)) ), 21.16px)"
+					"size": "clamp(18.52px, calc( 18.52px + (100svw - 360px) * ( (21.16 - 18.52) / (1200 - 360)) ), 21.16px)"
 				},
 				{
 					"name": "XX Large",
 					"slug": "xx-large",
-					"size": "clamp(19.4px, calc( 19.4px + (100vw - 360px) * ( (24.33 - 19.4) / (1200 - 360)) ), 24.33px)"
+					"size": "clamp(21.29px, calc( 21.29px + (100svw - 360px) * ( (24.33 - 21.29) / (1200 - 360)) ), 24.33px)"
 				},
 				{
 					"name": "XXX Large",
 					"slug": "xxx-large",
-					"size": "clamp(21.64px, calc( 21.64px + (100vw - 360px) * ( (27.98 - 21.64) / (1200 - 360)) ), 27.98px)"
+					"size": "clamp(24.49px, calc( 24.49px + (100svw - 360px) * ( (27.98 - 24.49) / (1200 - 360)) ), 27.98px)"
 				},
 				{
 					"name": "Huge",
 					"slug": "huge",
-					"size": "clamp(24.12px, calc( 24.12px + (100vw - 360px) * ( (32.18 - 24.12) / (1200 - 360)) ), 32.18px)"
+					"size": "clamp(28.16px, calc( 28.16px + (100svw - 360px) * ( (32.18 - 28.16) / (1200 - 360)) ), 32.18px)"
+				},
+				{
+					"name": "X Huge",
+					"slug": "x-huge",
+					"size": "clamp(32.38px, calc( 32.38px + (100svw - 360px) * ( (37.24 - 32.38) / (1200 - 360)) ), 37.24px)"
+				},
+				{
+					"name": "XX Huge",
+					"slug": "xx-huge",
+					"size": "clamp(37.24px, calc( 37.24px + (100svw - 360px) * ( (42.56 - 37.24) / (1200 - 360)) ), 42.56px)"
+				},
+				{
+					"name": "XXX Huge",
+					"slug": "xxx-huge",
+					"size": "clamp(42.83px, calc( 42.83px + (100svw - 360px) * ( (48.94 - 42.83) / (1200 - 360)) ), 48.94px)"
 				}
 			]
 		},
