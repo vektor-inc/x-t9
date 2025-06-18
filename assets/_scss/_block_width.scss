@@ -1,31 +1,37 @@
+// WordPress標準の仕様の注意 :
+// .is-layout-constrained のクラスの中の要素にコンテンツ幅が適用されるのであって、
+// .is-layout-constrained のクラス自体にコンテンツ幅が適用されるわけではない。
+
 :is( .alignfull,.vk_outer-width-full ) {
-	&  >  :where(.is-layout-constrained ) {
-		max-width: var(--wp--style--global--content-size);
-		margin-left: auto;
-		margin-right: auto;
-	}
-	// 直下でもconstrainedの中でも幅は同じ
+	// 直下でも constrained の中でも幅は同じ
 	&,
 	.is-layout-constrained & {
-		width: auto;
+		width: var(--wp--custom--width--wrapper);
 		max-width: var(--wp--custom--width--wrapper) !important;
 		&.wp-block-image {
 			// Default block style overwrite
 			max-width: var(--wp--custom--width--wrapper);
 		}
 	}
-	.is-layout-constrained & {
+	.vk_outer_container > &,
+	// インナーコンテナを持つブロック直下に全幅指定された場合
+	.is-layout-constrained[class*="__inner-container"] > &,
+	// .is-layout-constrained > の中の要素（コンテンツ幅） > の中に全幅を配置された場合
+	.is-layout-constrained > * > & {
 		margin-left: calc( 50% - var(--wp--custom--width--wrapper) / 2 ) !important;
 		margin-right: calc( 50% - var(--wp--custom--width--wrapper) / 2 ) !important;
 	}
 }
 
 .alignwide {
-	.is-layout-constrained:where(:not(:is(.alignfull, .alignwide)))>& {
-		width: calc(100% + (var(--wp--custom--width--wrapper) - 100%) / 2);
+	width: calc(100% + (var(--wp--custom--width--wrapper) - 100%) / 2);
+	// 通常幅でインナーコンテナを持つブロック直下に幅広指定された場合
+	// （全幅や幅広のブロックのインナーコンテナの時点ではコンテンツ幅になっていないのでマイナスオフセットする必要がない）
+	:where(:not(:is(.alignfull, .alignwide))) > .is-layout-constrained[class*="__inner-container"] > &, 
+	// .is-layout-constrained > の中の要素（コンテンツ幅） > の中に幅広を配置された場合
+	.is-layout-constrained:where(:not(:is(.alignfull, .alignwide)))> :where(:not(:is(.alignfull, .alignwide))) > & {
 		margin-left: calc((100% - var(--wp--custom--width--wrapper)) / 4) !important;
 		margin-right: calc((100% - var(--wp--custom--width--wrapper)) / 4) !important;
-
 		&.wp-block-image {
 			max-width: var(--wp--custom--width--wrapper);
 		}
