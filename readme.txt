@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei,yukinobu
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.33.0
+Stable tag: 1.34.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,8 +13,23 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+1.34.0
+[ Specification Change ][ Color palette ] Add color palette and Complementary color
+[ Specification Change ][ Color palette ] Add color palette Foresty
+[ Specification Change ][ Layout ]Readjust the CSS for layout width settings
+[ Specification Change ] Abolished the loop-archive template
+[ Specification Change ][ Typography ] Add XXX Huge / XX Huge / X Huge Size / Change mobile font size
+[ Specification Change ][ Typography ] Add Serif font and Serif font preset
+[ Specification Change ][ Navigation ] Text alignment is no longer affected by the navigation block's alignment setting. Previously, text alignment would follow the block's position, but this behavior has been disabled. / For horizontally aligned navigation blocks, only the first-level items are now center-aligned.
+[ Specification Change ][ Navigation ] Changed the mobile menu toggle to use the "Menu" icon.
+[ Specification Change ][ Search button ] Add nowrap and padding tuning
 [ Specification Change ] Social media links in the header and footer block patterns now open in a separate tab by default.
 [ Specification Change ] Make adjustments to the CSS of the core/post-terms block.
+[ Specification Change ][ Post subcontent Pattern ] Change to vertical align top.
+[ Bug fix ][ Header Pattern ] Fixed an issue where there was no top margin above the mobile menu toggle button.
+[ Bug fix ] Fix unintentional br and indent in the page header of the home template
+[ Bug fix ] To prevent the footer and header from overlapping, I changed the z-index of the footer from 9999 to 9998.
+[ Other ] Change theme screenshot
 [ Other ] Update anchor link CSS
 
 1.33.0
