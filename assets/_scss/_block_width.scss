@@ -25,6 +25,11 @@
 
 .alignwide {
 	width: calc(100% + (var(--wp--custom--width--wrapper) - 100%) / 2);
+
+	// 幅広でマイナスオフセットが必要なケース *******************************//
+
+	// テンプレート側でコンテンツ幅のグループ > コンテンツブロックがコンテンツ幅 > 記事直下に幅広グループなどの場合
+	.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) > &,
 	// 通常幅でインナーコンテナを持つブロック直下に幅広指定された場合
 	// （全幅や幅広のブロックのインナーコンテナの時点ではコンテンツ幅になっていないのでマイナスオフセットする必要がない）
 	:where(:not(:is(.alignfull, .alignwide))) > .is-layout-constrained[class*="__inner-container"] > &, 

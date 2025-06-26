@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug Fix ] alignwide layout
+
 1.34.0
 [ Specification Change ][ Color palette ] Add color palette and Complementary color
 [ Specification Change ][ Color palette ] Add color palette Foresty
