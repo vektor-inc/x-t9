@@ -14,7 +14,7 @@ return array(
 	<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--50);margin-bottom:var(--wp--preset--spacing--50)"><!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
 	<div class="wp-block-group"><!-- wp:site-logo {"width":200} /-->
 	
-	<!-- wp:navigation {"showSubmenuIcon":false,"className":"is-style-nav\u002d\u002dtext-inline nav\u002d\u002dopen\u002d\u002dlg-up","layout":{"type":"flex","orientation":"horizontal","justifyContent":"right","flexWrap":"nowrap"},"fontSize":"small"} /--></div>
+	<!-- wp:navigation {"icon":"menu","showSubmenuIcon":false,"className":"is-style-nav\u002d\u002dtext-inline nav\u002d\u002dopen\u002d\u002dlg-up","layout":{"type":"flex","orientation":"horizontal","justifyContent":"right","flexWrap":"nowrap"},"fontSize":"small"} /--></div>
 	<!-- /wp:group --></div>
 	<!-- /wp:group -->
 	

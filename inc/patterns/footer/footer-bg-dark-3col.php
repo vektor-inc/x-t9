@@ -41,7 +41,7 @@ return array(
 	<!-- /wp:heading --></div>
 	<!-- /wp:group -->
 	
-	<!-- wp:navigation {"textColor":"text-normal-darkbg","showSubmenuIcon":false,"overlayMenu":"never","className":"is-style-nav\u002d\u002dvertical-with-hr","layout":{"type":"flex","orientation":"vertical"},"fontSize":"x-small"} /--></div>
+	<!-- wp:navigation {"icon":"menu","textColor":"text-normal-darkbg","showSubmenuIcon":false,"overlayMenu":"never","className":"is-style-nav\u002d\u002dvertical-with-hr","layout":{"type":"flex","orientation":"vertical"},"fontSize":"x-small"} /--></div>
 	<!-- /wp:column -->
 	
 	<!-- wp:column -->
