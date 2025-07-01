@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei,yukinobu
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.34.0
+Stable tag: 1.34.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+1.34.1
 [ Specification Change ][ Navigation ] Changed the footer mobile menu toggle to use the "Menu" icon.
 [ Bug fix ] Fix an issue where the footer menu, when displayed as a modal, gets hidden underneath the header.
 
