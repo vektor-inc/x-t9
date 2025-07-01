@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ][ Navigation ] Changed the footer mobile menu toggle to use the "Menu" icon.
 [ Bug fix ] Fix an issue where the footer menu, when displayed as a modal, gets hidden underneath the header.
 
 1.34.0

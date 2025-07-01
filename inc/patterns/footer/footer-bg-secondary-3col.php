@@ -90,7 +90,7 @@ return array(
 	
 	<!-- wp:group {"align":"full","style":{"border":{"top":{"color":"var:preset|color|border-normal","width":"1px"}}},"className":"mt-0","layout":{"inherit":true,"type":"constrained"}} -->
 	<div class="wp-block-group alignfull mt-0" style="border-top-color:var(--wp--preset--color--border-normal);border-top-width:1px"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0.5rem","bottom":"0.5rem"}}},"layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between"}} -->
-	<div class="wp-block-group" style="padding-top:0.5rem;padding-bottom:0.5rem"><!-- wp:navigation {"showSubmenuIcon":false,"overlayMenu":"never","className":"is-style-nav\u002d\u002dtext-inline","layout":{"type":"flex","justifyContent":"center"},"fontSize":"x-small"} /-->
+	<div class="wp-block-group" style="padding-top:0.5rem;padding-bottom:0.5rem"><!-- wp:navigation {"icon":"menu","showSubmenuIcon":false,"overlayMenu":"never","className":"is-style-nav\u002d\u002dtext-inline","layout":{"type":"flex","justifyContent":"center"},"fontSize":"x-small"} /-->
 	
 	<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase"}},"fontSize":"x-small"} -->
 	<p class="has-text-align-center has-x-small-font-size" style="text-transform:uppercase">Copyright (C) X-T9 All Rights Reserved.</p>
