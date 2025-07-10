@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug fix ] Fix an issue where an alignwide element placed directly under post content with a specified content width is not centered properly.
+
 1.34.1
 [ Specification Change ][ Navigation ] Changed the footer mobile menu toggle to use the "Menu" icon.
 [ Bug fix ] Fix an issue where the footer menu, when displayed as a modal, gets hidden underneath the header.

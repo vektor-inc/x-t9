@@ -29,7 +29,8 @@
 	// （全幅や幅広のブロックのインナーコンテナの時点ではコンテンツ幅になっていないのでマイナスオフセットする必要がない）
 	:where(:not(:is(.alignfull, .alignwide))) > .is-layout-constrained[class*="__inner-container"] > &, 
 	// .is-layout-constrained > の中の要素（コンテンツ幅） > の中に幅広を配置された場合
-	.is-layout-constrained:where(:not(:is(.alignfull, .alignwide)))> :where(:not(:is(.alignfull, .alignwide))) > & {
+	// ※ 2階層目がコンテンツ幅なので、最初の .is-layout-constrained の要素は alignll でも alignwide でも関係ない
+	.is-layout-constrained > :where(:not(:is(.alignfull, .alignwide))) > & {
 		margin-left: calc((100% - var(--wp--custom--width--wrapper)) / 4) !important;
 		margin-right: calc((100% - var(--wp--custom--width--wrapper)) / 4) !important;
 		&.wp-block-image {
