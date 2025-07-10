@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug fix ] Fixed an issue where the layout would break on Windows devices depending on the nesting state of blocks.
 [ Bug fix ] Fix an issue where an alignwide element placed directly under post content with a specified content width is not centered properly.
 
 1.34.1

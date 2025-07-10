@@ -6,7 +6,12 @@
 	// 直下でも constrained の中でも幅は同じ
 	&,
 	.is-layout-constrained & {
-		width: var(--wp--custom--width--wrapper);
+		// width: var(--wp--custom--width--wrapper);
+		// を指定してしまうを Windows でスクロールバーまでの幅を含めてた広さで検出してしまい、
+		// .alignfull のついていないHTML直下の要素の幅（100%）と差が発生する。
+		// これにより
+		// .alignfull > .is-layout-constrained > * と
+		// * > .is-layout-constrained > * で位置にズレが発生する
 		max-width: var(--wp--custom--width--wrapper) !important;
 		&.wp-block-image {
 			// Default block style overwrite
