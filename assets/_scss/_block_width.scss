@@ -18,6 +18,15 @@
 			max-width: var(--wp--custom--width--wrapper);
 		}
 	}
+}
+
+.alignwide {
+	width: calc(100% + (var(--wp--custom--width--wrapper) - 100%) / 2);
+}
+
+/** Minus offset for alignfull and alignwide *****************************/
+
+:is( .alignfull,.vk_outer-width-full ) {
 	.vk_outer_container > &,
 	// インナーコンテナを持つブロック直下に全幅指定された場合
 	.is-layout-constrained[class*="__inner-container"] > &,
@@ -29,7 +38,6 @@
 }
 
 .alignwide {
-	width: calc(100% + (var(--wp--custom--width--wrapper) - 100%) / 2);
 	// 通常幅でインナーコンテナを持つブロック直下に幅広指定された場合
 	// （全幅や幅広のブロックのインナーコンテナの時点ではコンテンツ幅になっていないのでマイナスオフセットする必要がない）
 	:where(:not(:is(.alignfull, .alignwide))) > .is-layout-constrained[class*="__inner-container"] > &, 
@@ -44,9 +52,8 @@
 	}
 }
 
-// in addition to setted _scss/_vk-blocks-override.scss
+/** サイドバーがある場合の幅調整 *****************************/
 
-// サイドバーがある場合の幅調整
 .is-style-main-layout:has(.is-style-main-layout-sidebar) {
 	&>.wp-block-column {
 		:is(.alignfull, .alignwide) {
