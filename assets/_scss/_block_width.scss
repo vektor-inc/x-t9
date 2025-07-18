@@ -30,8 +30,9 @@
 	.vk_outer_container > &,
 	// インナーコンテナを持つブロック直下に全幅指定された場合
 	.is-layout-constrained[class*="__inner-container"] > &,
-	// .is-layout-constrained > の中の要素（コンテンツ幅） > の中に全幅を配置された場合
-	.is-layout-constrained > * > & {
+	// .is-layout-constrained > の中の要素（コンテンツ幅） の中に全幅を配置された場合
+	// ※ 2階層目のコンテンツ幅の中にグループなどが入ってさらにその中になる事もあるので & の前に > は付けない
+	.is-layout-constrained > * & {
 		margin-left: calc( 50% - var(--wp--custom--width--wrapper) / 2 ) !important;
 		margin-right: calc( 50% - var(--wp--custom--width--wrapper) / 2 ) !important;
 	}
@@ -43,12 +44,12 @@
 	:where(:not(:is(.alignfull, .alignwide))) > .is-layout-constrained[class*="__inner-container"] > &, 
 	// .is-layout-constrained > の中の要素（コンテンツ幅） > の中に幅広を配置された場合
 	// ※ 2階層目がコンテンツ幅なので、最初の .is-layout-constrained の要素は alignll でも alignwide でも関係ない
-	.is-layout-constrained > :where(:not(:is(.alignfull, .alignwide))) > & {
+	.is-layout-constrained > :where(:not(:is(.alignfull, .alignwide))) > &,
+	// 通常幅の .is-layout-constrained の 中の要素（コンテンツ幅） の 中に幅広を配置された場合
+	// ※ 2階層目のコンテンツ幅の中にグループなどが入ってさらにその中になる事もあるので & の前に > は付けない
+	.is-layout-constrained:where(:not(:is(.alignfull, .alignwide))) > :where(:not(:is(.alignfull, .alignwide))) & {
 		margin-left: calc((100% - var(--wp--custom--width--wrapper)) / 4) !important;
 		margin-right: calc((100% - var(--wp--custom--width--wrapper)) / 4) !important;
-		&.wp-block-image {
-			max-width: var(--wp--custom--width--wrapper);
-		}
 	}
 }
 
