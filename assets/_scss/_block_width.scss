@@ -51,6 +51,14 @@
 		margin-left: calc((100% - var(--wp--custom--width--wrapper)) / 4) !important;
 		margin-right: calc((100% - var(--wp--custom--width--wrapper)) / 4) !important;
 	}
+	// alignwide や alignfull の中に入った alignwide は中央寄せ
+	@at-root {
+		.alignfull &,
+		.alignwide & {
+		  margin-left:  auto !important;
+		  margin-right: auto !important;
+		}
+	  }
 }
 
 /** サイドバーがある場合の幅調整 *****************************/
