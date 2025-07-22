@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei,yukinobu
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.34.2
+Stable tag: 1.34.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+1.34.3
 [ Bug fix ] Fixed a layout issue
 
 1.34.2
