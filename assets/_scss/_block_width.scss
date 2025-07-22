@@ -1,6 +1,16 @@
 // WordPress標準の仕様の注意 :
+
+// .is-layout-constrained がついている要素の中の要素が、
+// 最大幅 コンテンツ幅 / 左右 auto になる
+// .is-layout-constrained がついていない or .is-layout-flow のクラスの中の要素は
+// 最大幅は 100% になる（親の幅に追従）
+
 // .is-layout-constrained のクラスの中の要素にコンテンツ幅が適用されるのであって、
 // .is-layout-constrained のクラス自体にコンテンツ幅が適用されるわけではない。
+
+// .alignfull や .alignwide に is-layout-constrained が付いていようが、
+// 直下の alignfull や alignwide の要素は中央揃えにする（マイナスオフセットしない）
+
 
 :is( .alignfull,.vk_outer-width-full ) {
 	// 直下でも constrained の中でも幅は同じ
@@ -39,15 +49,21 @@
 }
 
 .alignwide {
+
 	// 通常幅でインナーコンテナを持つブロック直下に幅広指定された場合
 	// （全幅や幅広のブロックのインナーコンテナの時点ではコンテンツ幅になっていないのでマイナスオフセットする必要がない）
-	:where(:not(:is(.alignfull, .alignwide))) > .is-layout-constrained[class*="__inner-container"] > &, 
-	// .is-layout-constrained > の中の要素（コンテンツ幅） > の中に幅広を配置された場合
+	:where(:not(:is(.alignfull, .alignwide))) > .is-layout-constrained[class*="__inner-container"] > &,
+
+	// .is-layout-constrained > の直下の要素（コンテンツ幅） > の直下に幅広を配置された場合
 	// ※ 2階層目がコンテンツ幅なので、最初の .is-layout-constrained の要素は alignll でも alignwide でも関係ない
 	.is-layout-constrained > :where(:not(:is(.alignfull, .alignwide))) > &,
-	// 通常幅の .is-layout-constrained の 中の要素（コンテンツ幅） の 中に幅広を配置された場合
-	// ※ 2階層目のコンテンツ幅の中にグループなどが入ってさらにその中になる事もあるので & の前に > は付けない
-	.is-layout-constrained:where(:not(:is(.alignfull, .alignwide))) > :where(:not(:is(.alignfull, .alignwide))) & {
+
+	// 通常幅の .is-layout-constrained > の直下の要素（コンテンツ幅） の中（3階層）の更に中（4階層）以降に幅広を配置された場合にマイナスオフセットする
+	// ※ 3階層は既にひとつ上の項目でやってる
+	// ※ コンテンツ幅の中にグループなどが入ってさらにその中（4階層以上）になる事もあるので、2階層と3階層の間には > は付けない
+	// ※ is( .alignnfull, .alignwide ) > .alignwide の場合はマイナスオフセットしない
+
+	.is-layout-constrained:where(:not(:is(.alignfull,.alignwide))) > :where(:not(:is(.alignfull,.alignwide))) :where(:not(:is(.alignfull, .alignwide))) > & {
 		margin-left: calc((100% - var(--wp--custom--width--wrapper)) / 4) !important;
 		margin-right: calc((100% - var(--wp--custom--width--wrapper)) / 4) !important;
 	}
