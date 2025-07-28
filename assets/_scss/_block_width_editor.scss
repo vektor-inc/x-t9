@@ -1,4 +1,9 @@
 // In editor screen need to no content outer layout
+
+// 投稿コンテンツテンプレートで 
+// <!-- wp:post-content {"align":"full","layout":{"type":"constrained"}} /-->
+// のように constrained 指定がある場合は .is-root-container に .is-layout-constrained が付く
+
 // * .is-root-container に限って .is-layout-constrained でもコンテンツ幅にならないように指定してあり、中の要素は max-width でコンテンツ幅を処理している
 
 .editor-styles-wrapper {
