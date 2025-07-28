@@ -1,15 +1,17 @@
 // WordPress標準の仕様の注意 :
 
-// .is-layout-constrained がついている要素の中の要素が、
-// 最大幅 コンテンツ幅 / 左右 auto になる
-// .is-layout-constrained がついていない or .is-layout-flow のクラスの中の要素は
-// 最大幅は 100% になる（親の幅に追従）
+// .is-layout-constrained
+// 中の要素が 最大幅 : コンテンツ幅 / 左右 : auto になる
+
+// .is-layout-flow ( or .is-layout-constrained がついていない
+// 中の要素は 最大幅 : 100%（親の幅に追従）になる
 
 // .is-layout-constrained のクラスの中の要素にコンテンツ幅が適用されるのであって、
 // .is-layout-constrained のクラス自体にコンテンツ幅が適用されるわけではない。
 
 // .alignfull や .alignwide に is-layout-constrained が付いていようが、
-// 直下の alignfull や alignwide の要素は中央揃えにする（マイナスオフセットしない）
+// 直下の alignfull や alignwide の要素はコンテンツ幅の中に入っているわけではないため、
+// マイナスオフセットする必要はなく、中央揃えにする
 
 
 :is( .alignfull,.vk_outer-width-full ) {
