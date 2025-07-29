@@ -1,29 +1,30 @@
-// WordPress標準の仕様の注意 *****************************************
+/* WordPress標準の仕様の注意 *****************************************
 
-// .is-layout-constrained
-// 中の要素が 最大幅 : コンテンツ幅 / 左右 : auto になる
+.is-layout-constrained
+中の要素が 最大幅 : コンテンツ幅 / 左右 : auto になる
 
-// .is-layout-flow ( or .is-layout-constrained がついていない
-// 中の要素は 最大幅 : 100%（親の幅に追従）になる
+.is-layout-flow ( or .is-layout-constrained がついていない
+中の要素は 最大幅 : 100%（親の幅に追従）になる
 
-// コンテンツ幅（ .is-layout-constrained ）に指定すると
-// 「ネストしたブロックはコンテンツ幅を使用し、オプションで全幅、幅広に設定できます。」
-// の文字が表示される
+コンテンツ幅（ .is-layout-constrained ）に指定すると
+「ネストしたブロックはコンテンツ幅を使用し、オプションで全幅、幅広に設定できます。」
+の文字が表示される
 
-// .is-layout-constrained のクラスの中の要素にコンテンツ幅が適用されるのであって、
-// .is-layout-constrained のクラス自体にコンテンツ幅が適用されるわけではない。
+.is-layout-constrained のクラスの中の要素にコンテンツ幅が適用されるのであって、
+.is-layout-constrained のクラス自体にコンテンツ幅が適用されるわけではない。
 
-// マイナスオフセットする必要があるケース ******************************************
+/* マイナスオフセットする必要があるケース ******************************************
 
-// .alignfull や .alignwide に .is-layout-constrained が付いていようが、
-// .alignfull や .alignwide 直下の .alignfull や .alignwide の要素はコンテンツ幅の中に入っているわけではないため、
-// マイナスオフセットする必要はなく、中央揃えにする
+.alignfull や .alignwide に .is-layout-constrained が付いていようが、
+.alignfull や .alignwide 直下の .alignfull や .alignwide の要素はコンテンツ幅の中に入っているわけではないため、
+マイナスオフセットする必要はなく、中央揃えにする
 
-// 親要素が .is-layout-constrained の場合は中の要素がコンテンツ幅になるが、
-// 直下の .alignfull や .alignwide にはコンテンツ幅は適用されないのでマイナスオフセットする必要がない。
-// ただし、コンテンツ幅指定の中のブロック（コンテンツ幅）のさらに中で .alignfull や .alignwide が指定された場合は、
-// マイナスオフセットが必要になる。
+親要素が .is-layout-constrained の場合は中の要素がコンテンツ幅になるが、
+直下の .alignfull や .alignwide にはコンテンツ幅は適用されないのでマイナスオフセットする必要がない。
+ただし、コンテンツ幅指定の中のブロック（コンテンツ幅）のさらに中で .alignfull や .alignwide が指定された場合は、
+マイナスオフセットが必要になる。
 
+*/
 
 :is( .alignfull,.vk_outer-width-full ) {
 	// 直下でも constrained の中でも幅は同じ
