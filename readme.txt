@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ] add layout constrained to the 2-col templates
+
 1.34.3
 [ Bug fix ] Fixed a layout issue
 

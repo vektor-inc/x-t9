@@ -24,6 +24,13 @@
 ただし、コンテンツ幅指定の中のブロック（コンテンツ幅）のさらに中で .alignfull や .alignwide が指定された場合は、
 マイナスオフセットが必要になる。
 
+/* 編集画面での特性 ******************************************
+
+編集画面の .is-root-container 付与される .is-layout-constrained は、
+テンプレートファイルの single.html や page.html に
+<!-- wp:post-content {"layout":{"type":"constrained"}} /--> がある場合に付与される。
+<!-- wp:post-content /--> だけの場合は .is-root-container に .is-layout-flow が付与される。
+
 */
 
 :is( .alignfull,.vk_outer-width-full ) {
