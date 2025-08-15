@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug fix ] Fix default query in index /home / search ( If loading from a pattern automatically turns it into a custom query, then change it to writing directly to the template file instead. )
+
 1.34.4
 [ Specification Change ] add layout constrained to the 2-col templates
 
