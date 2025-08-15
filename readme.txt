@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei,yukinobu
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.34.4
+Stable tag: 1.34.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+1.34.5
 [ Bug fix ] Fix default query in index /home / search ( If loading from a pattern automatically turns it into a custom query, then change it to writing directly to the template file instead. )
 
 1.34.4
