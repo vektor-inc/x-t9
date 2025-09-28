@@ -11,7 +11,7 @@ footer.wp-block-template-part {
 	z-index:9998;
 	// モーダルが固定ヘッダーの下にならないように、開いてる時は 9999 に指定
 	// to avoid modal element on fixed header, set 9999 when modal is open.
-	html.has-modal-open & {
+	html.has-modal-open:not(:has(.is-menu-open)) & {
 		z-index:9999;
 	}
 }
