@@ -14,4 +14,9 @@ footer.wp-block-template-part {
 	html.has-modal-open:not(:has(.is-menu-open)) & {
 		z-index:9999;
 	}
+	// フッター内のメニューが開いてる時も 9999 に指定
+	// Set to 9999 when the menu in the footer is open.
+	&:has(.is-menu-open) {
+		z-index: 9999;
+	}
 }
