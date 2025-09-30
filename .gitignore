@@ -7,12 +7,12 @@ vendor/
 .wp-env.override.json
 
 # for AI Agents
-**/.serena
+**/.serena/**
 **/.github/copilot-instructions.md
-**/.github/instructions/
-**/.claude
-**/.cursor/rules
-**/.gemini/memories/
+**/.github/instructions/**
+**/.claude/**
+**/.cursor/rules/**
+**/.gemini/memories/**
 **/.mcp.json
 !.rulesync/.mcp.json
 **/.cursor/mcp.json
