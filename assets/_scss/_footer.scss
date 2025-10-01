@@ -17,7 +17,3 @@ footer.wp-block-template-part {
 		}
 	}
 }
- /* フォールバック例（JSでhtmlに付与する場合） */
-+html.is-footer-menu-open footer.wp-block-template-part { z-index: 9999; }
-/* 可能ならヘッダー側も明示 */
-+html.is-header-menu-open footer.wp-block-template-part { z-index: 9998; }
