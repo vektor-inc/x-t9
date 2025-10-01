@@ -9,14 +9,15 @@ footer.wp-block-template-part {
 	// フッター要素が固定ヘッダーの上にならないように 9998 にしておく
 	// scrolled-header-fixed is 9999, so set 9998 to avoid footer element on fixed header.
 	z-index:9998;
-	// モーダルが固定ヘッダーの下にならないように、開いてる時は 9999 に指定
-	// to avoid modal element on fixed header, set 9999 when modal is open.
-	html.has-modal-open:not(:has(.is-menu-open)) & {
-		z-index:9999;
-	}
-	// フッター内のメニューが開いてる時も 9999 に指定
-	// Set to 9999 when the menu in the footer is open.
+	// フッターに配置されたモーダルが固定ヘッダーの下にならないように、開いてる時は 9999 に指定
+	// Set the value to 9999 when open so that the modal placed in the footer does not go under the fixed header.
 	&:has(.is-menu-open) {
-		z-index: 9999;
+		html.has-modal-open & {
+			z-index:9999;
+		}
 	}
 }
+ /* フォールバック例（JSでhtmlに付与する場合） */
++html.is-footer-menu-open footer.wp-block-template-part { z-index: 9999; }
+/* 可能ならヘッダー側も明示 */
++html.is-header-menu-open footer.wp-block-template-part { z-index: 9998; }
