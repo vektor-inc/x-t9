@@ -5,3 +5,20 @@ assets/js/
 assets/css/
 vendor/
 .wp-env.override.json
+
+# for AI Agents
+**/.serena/**
+**/.github/copilot-instructions.md
+**/.github/instructions/**
+**/.claude/**
+**/.cursor/rules/**
+**/.gemini/memories/**
+**/.mcp.json
+!.rulesync/.mcp.json
+**/.cursor/mcp.json
+**/.vscode/mcp.json
+**/.codex/mcp-config.json
+**/.gemini/settings.json
+**/AGENTS.md
+**/CLAUDE.md
+**/GEMINI.md
