@@ -58,6 +58,9 @@
 		color:#fff;
 		opacity: 1;
 	}
+	.vk_button_link.has-vk-color-primary-background-color:hover{
+		background-color: var(--wp--preset--color--primary-hover);
+	}
 	.vk_button_link:where(:not(.has-vk-color-primary-color)):hover{
 		filter: brightness(1.1) saturate(2);
 	}
