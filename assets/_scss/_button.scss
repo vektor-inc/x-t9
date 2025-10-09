@@ -27,6 +27,7 @@
 /* ---------------------------------
  * Hover color
  * --------------------------------- */
+ // 独自にボタンに色指定をした場合にhover色を変える
  .wp-block-button__link.has-background:hover:where(:not(.has-primary-background-color)) {
 	filter: brightness(1.1) saturate(2);
  }
