@@ -1,7 +1,10 @@
+.btn,
 .btn-primary {
 	background-color: var(--wp--preset--color--primary);
 	border-color: var(--wp--preset--color--primary);
-	&:hover{
+	&:not(:disabled):not(.disabled):active,
+	&:is(:hover, :active, :focus){
+		border-color: var(--wp--preset--color--primary-hover);
 		background-color: var(--wp--preset--color--primary-hover);
 	}
 }

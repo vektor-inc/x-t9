@@ -12,6 +12,8 @@ The X-T9 is designed on the premise of full site editing function, and the user 
 GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
+
+[ Specification Change ] Changed buttons so that the same color as the primary hover is applied to :active and :focus states.
 [ Bug fix ] Prevented header menu from going under the footer.
 
 1.34.5

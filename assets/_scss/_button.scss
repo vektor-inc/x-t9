@@ -11,7 +11,7 @@
 	background-color: var(--wp--preset--color--primary);
 	text-decoration: none;
 	border-radius: var(--wp--custom--radius--button);
-	&:hover {
+	&:is(:hover, :active, :focus) {
 		--wp--preset--color--primary: var(--wp--preset--color--primary-hover);
 	}
 	:root & {
