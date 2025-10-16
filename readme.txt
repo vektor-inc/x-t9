@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ] CSS design adjustments related to forms
+
 1.34.6
 [ Specification Change ] Apply primary color VK Blocks button hover color.
 [ Specification Change ] Changed buttons so that the same color as the primary hover is applied to :active and :focus states.
