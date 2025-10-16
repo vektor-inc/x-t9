@@ -1,5 +1,5 @@
 /*************************************
-ulitilies
+Text Utilities
 */
 @use "variables" as var;
 
@@ -7,6 +7,13 @@ ulitilies
 	font-weight: lighter !important;
 }
 
+.text-danger {
+	color:#c00;
+}
+
+/**************
+Margin Utilities
+*/
 .mt-0 {
 	margin-top: 0 !important;
 }
@@ -14,6 +21,17 @@ ulitilies
 .mb-0 {
 	margin-bottom: 0 !important;
 }
+
+/**************
+Form Utilities
+*/
+.form-block {
+	width:100%;
+}
+
+/**************
+Display Utilities
+*/
 
 .d-none {
 	display: none;
