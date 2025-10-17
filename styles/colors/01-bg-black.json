@@ -41,6 +41,11 @@
 					"name": "Border Normal"
 				},
 				{
+					"slug": "danger",
+					"color": "#FF4D4D",
+					"name": "Danger"
+				},
+				{
 					"slug": "bg-dark",
 					"color": "#000",
 					"name": "BG Dark"

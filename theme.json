@@ -60,6 +60,11 @@
 					"name": "Border Normal"
 				},
 				{
+					"slug": "danger",
+					"color": "#C00000",
+					"name": "Danger"
+				},
+				{
 					"slug": "bg-dark",
 					"color": "#222",
 					"name": "BG Dark ( Base Contrast )"
