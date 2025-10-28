@@ -100,7 +100,7 @@ Overlay : allways ***********************
 
 	// Mobile menu open toggle button
 	& &__responsive-container-open {
-		border: 1px solid var(--wp--preset--color--text-normal);
+		border: 1px solid currentColor;
 		padding: 2px;
 	}
 }
