@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+1.35.1
 [ Bug fix ] Fixed an issue where the mobile menu border color did not match the icon color.
 
 1.35.0
