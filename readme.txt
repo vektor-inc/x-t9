@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug fix ] Fixed an issue where the mobile menu border color did not match the icon color.
+
 1.35.0
 [ Specification Change ] Add a z-index to prevent the header from being hidden behind the hero area.
 [ Specification Change ] Add Utility CSS class ( .form-block , .text-danger )
