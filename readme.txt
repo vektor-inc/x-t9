@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Other ] Add Utility CSS class ( .form-block , .text-danger )
 [ Specification Change ] CSS design adjustments related to forms
 
 1.34.6
