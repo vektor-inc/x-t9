@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei,yukinobu
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.34.6
+Stable tag: 1.35.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+1.35.0
 [ Specification Change ] Add a z-index to prevent the header from being hidden behind the hero area.
 [ Specification Change ] Add Utility CSS class ( .form-block , .text-danger )
 [ Specification Change ] CSS design adjustments related to forms
