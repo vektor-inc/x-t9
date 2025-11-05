@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei,yukinobu
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.35.0
+Stable tag: 1.35.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,8 +12,9 @@ The X-T9 is designed on the premise of full site editing function, and the user 
 GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
-[ Bug fix ] Adjusted z-index to prevent header from being hidden behind footer
 
+1.35.2
+[ Bug fix ] Adjusted z-index to prevent header from being hidden behind footer
 [ Bug fix ] add .text-danger class fallback color
 
 1.35.1
