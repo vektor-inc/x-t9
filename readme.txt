@@ -12,6 +12,7 @@ The X-T9 is designed on the premise of full site editing function, and the user 
 GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
+[ Bug fix ] Adjusted z-index to prevent header from being hidden behind footer
 
 1.35.1
 [ Bug fix ] Fixed an issue where the mobile menu border color did not match the icon color.
