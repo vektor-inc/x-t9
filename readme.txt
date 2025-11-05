@@ -14,6 +14,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 == Changelog ==
 [ Bug fix ] Adjusted z-index to prevent header from being hidden behind footer
 
+[ Bug fix ] add .text-danger class fallback color
+
 1.35.1
 [ Bug fix ] Fixed an issue where the mobile menu border color did not match the icon color.
 
