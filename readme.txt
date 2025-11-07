@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Other ] Prevent automatic text zooming on iPhone browsers
+
 1.35.2
 [ Bug fix ] Adjusted z-index to prevent header from being hidden behind footer
 [ Bug fix ] add .text-danger class fallback color
