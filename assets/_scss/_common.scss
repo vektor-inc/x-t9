@@ -9,6 +9,10 @@ body {
 	// 本来スクロール分を調整する手法の方が正確だが、コードを簡素化するためにこの方法を採用
     overflow-x: hidden;
 
+    // Prevent automatic text zooming on iPhone browsers
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+
 	// @ 1.15.1 
 	// Change selector body,html {} -> body {}
 	// * If specify "html, body" then scrolled js not work 
