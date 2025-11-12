@@ -33,6 +33,22 @@
 
 */
 
+/* 幅のサイズ指定について *****************************************
+
+このCSSでの幅指定は、レスポンシブに対応するために global サイズではなくカスタムサイズ（ --wp--custom--width--content / --wp--custom--width--wide  ）を使用する
+
+WordPress標準の --wp--style--global--content-size 及び --wp--style--global--wide-size は、サイトエディタでユーザーがピクセル指定してくる可能性があるが、それをされると画面幅が狭い時に突き抜けたりしてレイアウトが崩れる可能性が高い。
+
+これを回避するために --wp--custom--width--content では min() 関数を使用して、画面幅に応じた最大値を指定しているため、このカスタムサイズを使用して幅指定を行う。
+
+*/
+
+/* normal width */
+.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+	max-width: var(--wp--custom--width--content);
+}
+
+/* full width */
 :is( .alignfull,.vk_outer-width-full ) {
 	// 直下でも constrained の中でも幅は同じ
 	&,
@@ -51,8 +67,12 @@
 	}
 }
 
+/* wide width */
+.is-layout-constrained > .alignwide,
 .alignwide {
-	width: calc(100% + (var(--wp--custom--width--wrapper) - 100%) / 2);
+	max-width: var(--wp--custom--width--wide);
+	margin-left:auto;
+	margin-right:auto;
 }
 
 /** Minus offset for alignfull and alignwide *****************************/
@@ -85,8 +105,8 @@
 	// ※ is( .alignnfull, .alignwide ) > .alignwide の場合はマイナスオフセットしない
 
 	.is-layout-constrained:where(:not(:is(.alignfull,.alignwide))) > :where(:not(:is(.alignfull,.alignwide))) :where(:not(:is(.alignfull, .alignwide))) > & {
-		margin-left: calc((100% - var(--wp--custom--width--wrapper)) / 4) !important;
-		margin-right: calc((100% - var(--wp--custom--width--wrapper)) / 4) !important;
+		margin-left: calc((var(--wp--custom--width--content) - var(--wp--custom--width--wide)  ) / 2) !important;
+		margin-right: calc((var(--wp--custom--width--content) - var(--wp--custom--width--wide)  ) / 2) !important;
 	}
 }
 
