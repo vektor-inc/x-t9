@@ -43,12 +43,14 @@ WordPress標準の --wp--style--global--content-size 及び --wp--style--global-
 
 */
 
-/* normal width */
-.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+/* normal width  *****************************/
+// :where で詳細度を下げないと、個別のブロックでコンテント幅指定された場合も上書きしてしまうので注意
+.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)),
+:where(.is-layout-constrained) > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
 	max-width: var(--wp--custom--width--content);
 }
 
-/* full width */
+/* full width  *****************************/
 :is( .alignfull,.vk_outer-width-full ) {
 	// 直下でも constrained の中でも幅は同じ
 	&,
@@ -67,13 +69,12 @@ WordPress標準の --wp--style--global--content-size 及び --wp--style--global-
 	}
 }
 
-/* wide width */
-.is-layout-constrained > .alignwide,
+/* wide width  *****************************/
+// :where で詳細度を下げないと、個別のブロックで幅指定された場合も上書きしてしまうので注意
+.is-layout-constrained > :where(.alignwide),
 .alignwide {
 	width: var(--wp--custom--width--wide);
 	max-width: var(--wp--custom--width--wide);
-	margin-left:auto;
-	margin-right:auto;
 }
 
 /** Minus offset for alignfull and alignwide *****************************/
