@@ -2,24 +2,14 @@
 /*-------------------------------------------*/
 /* vk_outer
 /*-------------------------------------------*/
-.vk_outer-paddingLR-zero .vk_outer_container > .alignwide {
-	max-width: var(--wp--custom--width--wide);
-	margin-left:auto !important;
-	margin-right:auto !important;
-}
-// Outer ブロックの余白ありの場合は他の wide サイズとは違い、余白を除いた領域を基準に余白の半分をマイナスオフセットする
-.vk_outer-width-full:where(:not(.vk_outer-paddingLR-zero)) {
-	.vk_outer_container > .alignwide {
-		width: calc(100% + (var(--wp--custom--width--wrapper) - 100%) / 2);
-		// --wp--style--global--wide-size ではなくカスタムサイズで上書き
-		max-width:calc(100% + (var(--wp--custom--width--wrapper) - 100%) / 2);
-		margin-left: calc((100% - var(--wp--custom--width--wrapper)) / 4) !important;
-		margin-right: calc((100% - var(--wp--custom--width--wrapper)) / 4) !important;
-	}
-}
-// .vk_outer-paddingLR-none => content size
+
+// .vk_outer-paddingLR-none ( content size ) /////////////////////////
 .vk_outer-width-full.vk_outer-paddingLR-none {
-	.vk_outer_container {
+	.vk_outer_container > .alignwide {
+		margin-left: calc((var(--wp--custom--width--content) - var(--wp--custom--width--wide)  ) / 2) !important;
+		margin-right: calc((var(--wp--custom--width--content) - var(--wp--custom--width--wide)  ) / 2) !important;
+	}
+	.vk_outer_container .is-layout-flow {
 		max-width: var(--wp--custom--width--content);
 		margin-left: auto;
 		margin-right: auto;
@@ -30,6 +20,28 @@
 		padding-right: 0;
 	}
 }
+
+// .vk_outer-paddingLR-use /////////////////////////
+.vk_outer-width-full:where(.vk_outer-paddingLR-use) {
+	// .is-layout-constrained がついている場合はコンテンツ幅優先にするので除外している
+	.vk_outer_container:where(:not(.is-layout-constrained)) > .alignwide {
+		width: calc(100% + (var(--wp--custom--width--wrapper) - 100%) / 2);
+		// Outer ブロックの余白ありの場合は他の wide サイズとは違い、余白を除いた領域を基準に余白の半分をマイナスオフセットする
+		max-width:calc(100% + (var(--wp--custom--width--wrapper) - 100%) / 2);
+		margin-left: calc((100% - var(--wp--custom--width--wrapper)) / 4) !important;
+		margin-right: calc((100% - var(--wp--custom--width--wrapper)) / 4) !important;
+	}
+}
+
+// .vk_outer-paddingLR-zero /////////////////////////
+.vk_outer-width-full:where(.vk_outer-paddingLR-zero) {
+	.vk_outer_container > .alignwide {
+		max-width: var(--wp--custom--width--wide);
+		margin-left:auto !important;
+		margin-right:auto !important;
+	}
+}
+
 /*-------------------------------------------*/
 /* vk_slider
 /*-------------------------------------------*/
