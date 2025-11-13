@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change / Bug fix ] Fixed an issue where the layout would break when a custom content size was specified.
 [ Other ] Prevent automatic text zooming on iPhone browsers
 
 1.35.2
