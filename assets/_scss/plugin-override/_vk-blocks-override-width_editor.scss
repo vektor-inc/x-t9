@@ -1,9 +1,15 @@
-.vk_outer {
-	.vk_outer_container .block-editor-inner-blocks {
-		.is-layout-constrained:where(:not(.alignwide):not(.alignfull)) {
+.vk_outer-width-full:is(.vk_outer-paddingLR-use) {
+	.vk_outer_container .block-editor-inner-blocks > .is-layout-constrained {
+		// 余白あり指定だろうとWP標準のコンテンツ幅使用が設定されていたらそちらで上書き
+		&:where(:not(.alignwide):not(.alignfull)) {
 			max-width: var(--wp--style--global--content-size);
 			margin-left: auto;
 			margin-right: auto;
+		}
+		& > .alignwide {
+			border:1px solid #0000ff;
+			margin-left: calc((var(--wp--custom--width--content) - var(--wp--custom--width--wide)  ) / 2) !important;
+			margin-right: calc((var(--wp--custom--width--content) - var(--wp--custom--width--wide)  ) / 2) !important;
 		}
 	}
 }
