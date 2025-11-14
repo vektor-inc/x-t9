@@ -35,11 +35,24 @@
 
 /* 幅のサイズ指定について *****************************************
 
+***********************************
 このCSSでの幅指定は、レスポンシブに対応するために global サイズではなくカスタムサイズ（ --wp--custom--width--content / --wp--custom--width--wide  ）を使用する
+***********************************
 
-WordPress標準の --wp--style--global--content-size 及び --wp--style--global--wide-size は、サイトエディタでユーザーがピクセル指定してくる可能性があるが、それをされると画面幅が狭い時に突き抜けたりしてレイアウトが崩れる可能性が高い。
+WordPress標準の --wp--style--global--content-size 及び --wp--style--global--wide-size は max-width として出力される。
 
-これを回避するために --wp--custom--width--content では min() 関数を使用して、画面幅に応じた最大値を指定しているため、このカスタムサイズを使用して幅指定を行う。
+しかし、この手法は画面サイズが狭い場合に左右の余白がなくなる問題がある。
+
+これを回避するために、theme.json の contentSize の初期値に min( 900px.90vw ) のようにする事で回避できそうに見えるが、
+ユーザーがピクセル指定すると、min() を使用しないその数値で上書きされるため、やはり画面が狭い場合に左右の余白がなくなる問題が発生する。
+
+この問題を回避するために、
+
+1. min() 関数を使用してレスポンシブに左右余白ができる以下のカスタム変数を theme.json で定義
+--wp--custom--width--content : min( var(--wp--style--global--content-size), 90vw )
+--wp--custom--width--wide : min( var(--wp--style--global--wide-size), 95vw )
+
+2. このCSSファイルから WordPress が出力する global の幅指定を上書きする。
 
 */
 
