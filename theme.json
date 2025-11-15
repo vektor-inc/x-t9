@@ -3,8 +3,8 @@
 	"version": 3,
 	"settings": {
 		"layout": {
-			"contentSize": "var(--wp--custom--width--content)",
-			"wideSize": "var(--wp--custom--width--wide)"
+			"contentSize": "1100px",
+			"wideSize": "calc( var(--wp--style--global--content-size) + ( 100vw - var(--wp--style--global--content-size) ) / 2 )"
 		},
 		"position": {
 			"sticky": true
@@ -272,8 +272,8 @@
 		"custom": {
 			"width": {
 				"wrapper": "100dvw",
-				"content": "min( 1110px, 90vw )",
-				"wide": "calc( var(--wp--custom--width--content) + ( var(--wp--custom--width--wrapper) - var(--wp--custom--width--content) ) / 2 )",
+				"content": "min( var(--wp--style--global--content-size), 90vw )",
+				"wide": "min( var(--wp--style--global--wide-size), 95vw )",
 				"sidebar": "220px"
 			},
 			"layout": {
