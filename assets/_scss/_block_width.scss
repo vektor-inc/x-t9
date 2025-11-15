@@ -60,24 +60,16 @@ WordPress標準の --wp--style--global--content-size 及び --wp--style--global-
 global の幅を上書きするために custom の詳細度を上げてしまっているので、
 ページ内でブロック個別に指定した場合に出力される幅の数値も上書きしてしまう。
 
-そのため、数値指定されている場合は --wp--custom--width--content で上書きしないようにするために
-wp-container-core-group-is-layout-****** や
-wp-container-core-cover-is-layout-****** のようなクラス名を検出して除外する
+そのため、数値指定されている場合は --wp--custom--width--content で上書きしないようにする必要がある。
+数値指定されている場合は、識別するために .is-layout-custom がつくようにテーマ側で処理しているので、
+.is-layout-custom がある場合は上書きしないように除外する
 
 /* normal width  *****************************/
-// :where で詳細度を下げないと、個別のブロックでコンテント幅指定された場合も上書きしてしまうので注意
 
-// .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)),
-// :where(.is-layout-constrained) > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
-// 	max-width: var(--wp--custom--width--content);
-// }
-
-.is-layout-constrained{
-	// ブロック個別でカスタム幅指定がある場合は除外
-	&:where(:not([class*="wp-container-core-group-is-layout-"]):not([class*="wp-container-core-cover-is-layout-"])) {
-		& > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
-			max-width: var(--wp--custom--width--content);
-		}
+.is-layout-constrained {
+	// 個別に contentSize / wideSize が指定されている場合場合（.is-layout-custom）は除外
+	&:where(:not(.is-layout-custom)) > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+		max-width: var(--wp--custom--width--content);
 	}
 }
 
@@ -101,10 +93,8 @@ wp-container-core-cover-is-layout-****** のようなクラス名を検出して
 }
 
 /* wide width  *****************************/
-// :where で詳細度を下げないと、個別のブロックで幅指定された場合も上書きしてしまうので注意
-.is-layout-constrained > :where(.alignwide),
+.is-layout-constrained:where(:not(.is-layout-custom)) > .alignwide,
 .alignwide {
-	width: var(--wp--custom--width--wide);
 	max-width: var(--wp--custom--width--wide);
 }
 

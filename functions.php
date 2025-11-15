@@ -58,6 +58,8 @@ function xt9_add_script() {
 }
 add_action( 'wp_enqueue_scripts', 'xt9_add_script' );
 
+// Layout helpers.
+require get_template_directory() . '/inc/layout-helpers.php';
 // Add block patterns.
 require get_template_directory() . '/inc/block-patterns.php';
 // Add Block Styles.
