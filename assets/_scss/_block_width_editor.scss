@@ -10,15 +10,19 @@
 // カスタムレイアウトをピクセルで指定されると幅が狭い時に崩れるため、レスポンシブに対応したカスタム変数で上書き
 
 .editor-styles-wrapper {
+	// 編集画面の投稿タイトル
+	.editor-visual-editor__post-title-wrapper > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+		max-width: var(--wp--custom--width--content);
+	}
 	// カスタムコンテント幅を指定された場合に、最大幅を数値で指定されるので、画面が狭い場合に左右の余白がなくなる。
 	// これを回避するために、ルートに .is-layout-constrained が付与されている場合のみ
 	// --wp--custom--width--content で上書きする
 	// ※ ルートが .is-layout-constrained 関係なく指定するとテンプレート直下のブロックが全幅にならなくなる。
 	.is-root-container.is-layout-constrained {
-	& > :where(:not(.alignleft,.alignright,.alignfull)) {
-		max-width: var(--wp--custom--width--content);
+		& > :where(:not(.alignleft,.alignright,.alignfull)) {
+			max-width: var(--wp--custom--width--content);
+		}
 	}
-}
 	.block-editor-block-list__layout.is-root-container > .alignwide {
 		width: var(--wp--custom--width--wide);
 		max-width: var(--wp--custom--width--wide);
