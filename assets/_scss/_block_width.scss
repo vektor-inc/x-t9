@@ -67,10 +67,23 @@ global の幅を上書きするために custom の詳細度を上げてしま�
 
 /* normal width  *****************************/
 
-.is-layout-constrained {
-	// 個別に contentSize / wideSize が指定されている場合場合（.is-layout-custom）は除外
-	&:where(:not(.is-layout-custom)) > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
-		max-width: var(--wp--custom--width--content);
+// 個別に contentSize / wideSize が指定されている場合（.is-layout-custom）は除外
+// コンテント幅を指定すると inner-container にも .is-layout-constrained が付与されるため、
+// .is-layout-constrained 一つを基準にセレクタ指定すると誤動作の原因になるので入れ子に指定する
+.is-layout-constrained:where(:not(.is-layout-custom)) {
+	& > :where(.is-layout-constrained[class*="__inner-container"] ){
+		& > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+			max-width: var(--wp--custom--width--content);
+		}
+	}
+}
+:where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+	// ブロック個別のカスタム幅指定のないカバーブロックのインナーブロック
+	.is-layout-constrained:where(:not(.is-layout-custom)) > :where(.is-layout-constrained[class*="wp-block-cover__inner-container"] ),
+	// ブロック個別のカスタム幅指定のないインナーブロック以外のブロック
+	.is-layout-constrained:where(:not(.is-layout-custom)):where(:not(.is-layout-constrained[class*="__inner-container"]) ),
+	 >  &{
+			max-width: var(--wp--custom--width--content);
 	}
 }
 
@@ -94,9 +107,11 @@ global の幅を上書きするために custom の詳細度を上げてしま�
 }
 
 /* wide width  *****************************/
-.is-layout-constrained:where(:not(.is-layout-custom)) > .alignwide,
-.alignwide {
-	max-width: var(--wp--custom--width--wide);
+.alignwide  {
+	&,
+	.is-layout-constrained:where(:not(.is-layout-custom)) > :where(.is-layout-constrained[class*="__inner-container"] ) > & {
+		max-width: var(--wp--custom--width--wide);
+	}
 }
 
 /** Minus offset for alignfull and alignwide *****************************/
