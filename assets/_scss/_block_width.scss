@@ -129,14 +129,14 @@ global の幅を上書きするために custom の詳細度を上げてしま�
 
 	// .is-layout-constrained > の直下の要素（コンテンツ幅） > の直下に幅広を配置された場合
 	// ※ 2階層目がコンテンツ幅なので、最初の .is-layout-constrained の要素は alignll でも alignwide でも関係ない
-	.is-layout-constrained > :where(:not(:is(.alignfull, .alignwide))) > &,
+	.is-layout-constrained > :where(:not(:is(.alignfull, .alignwide)):not([class*="__inner-container"])) > &,
 
 	// 通常幅の .is-layout-constrained > の直下の要素（コンテンツ幅） の中（3階層）の更に中（4階層）以降に幅広を配置された場合にマイナスオフセットする
 	// ※ 3階層は既にひとつ上の項目でやってる
 	// ※ コンテンツ幅の中にグループなどが入ってさらにその中（4階層以上）になる事もあるので、2階層と3階層の間には > は付けない
 	// ※ is( .alignnfull, .alignwide ) > .alignwide の場合はマイナスオフセットしない
 
-	.is-layout-constrained:where(:not(:is(.alignfull,.alignwide))) > :where(:not(:is(.alignfull,.alignwide))) :where(:not(:is(.alignfull, .alignwide))) > & {
+	.is-layout-constrained:where(:not(:is(.alignfull,.alignwide))) > :where(:not(:is(.alignfull,.alignwide))):where(:not([class*="__inner-container"])) :where(:not(:is(.alignfull, .alignwide))):where(:not([class*="__inner-container"])) > & {
 		margin-left: calc((var(--wp--custom--width--content) - var(--wp--custom--width--wide)  ) / 2) !important;
 		margin-right: calc((var(--wp--custom--width--content) - var(--wp--custom--width--wide)  ) / 2) !important;
 	}
