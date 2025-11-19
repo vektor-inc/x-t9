@@ -71,7 +71,7 @@ main {
 	}
 }
 
-input:where(:not([type='checkbox']):not([type='radio']):not([type='file'])),
+input:where(:not([type='checkbox']):not([type='radio']):not([type='file']):not([type='submit'])),
 textarea,
 select {
 	padding: 0.7em;
@@ -121,6 +121,12 @@ hr {
 
 textarea {
 	width: 100%;
+}
+
+input[type='submit']{
+	cursor: pointer;
+	border:none;
+	padding:10px 1.5em;
 }
 
 iframe {
