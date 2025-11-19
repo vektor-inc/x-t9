@@ -67,10 +67,17 @@ global の幅を上書きするために custom の詳細度を上げてしま�
 
 /* normal width  *****************************/
 
-.is-layout-constrained {
-	// 個別に contentSize / wideSize が指定されている場合場合（.is-layout-custom）は除外
-	&:where(:not(.is-layout-custom)) > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
-		max-width: var(--wp--custom--width--content);
+// 個別に contentSize / wideSize が指定されている場合場合（.is-layout-custom）は除外
+// 本当は単純に 
+// .is-layout-constrained:where(:not(.is-layout-custom)) > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+// に指定したいが、カバーブロックの場合は
+// .is-layout-constrained.is-layout-custom > .is-layout-constrained.wp-block-cover__inner-container と言う感じで、
+// インナーにも .is-layout-constrained が付与され、そちらに反応してしまうため、class*="__inner-container"] で除外を追加している。
+.is-layout-constrained:where(:not(.is-layout-custom)) {
+	&:where(:not([class*="__inner-container"])){
+		& > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+			max-width: var(--wp--custom--width--content);
+		}
 	}
 }
 
