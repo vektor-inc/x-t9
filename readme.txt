@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Other ] Added overflow-x: hidden to html so VK Blocks slide animations no longer trigger a horizontal scrollbar.
 [ Other ] Prevent automatic text zooming on iPhone browsers
 
 1.35.2

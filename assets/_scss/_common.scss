@@ -28,13 +28,13 @@ html.has-modal-open body {
 html {
 	// 360px : 14px -> 1200px : 16px
 	font-size: clamp(14px, calc((100vw - 360px) * (2 / (1200 - 360)) + 14px), 16px);
-
 }
 
 body {
 	font-weight: 500;
 	line-height: var(--wp--custom--typography--line-height--normal);
 }
+
 
 * {
 	box-sizing: border-box;
