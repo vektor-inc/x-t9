@@ -101,7 +101,8 @@ global の幅を上書きするために custom の詳細度を上げてしま�
 }
 
 /* wide width  *****************************/
-.is-layout-constrained:where(:not(.is-layout-custom)) > .alignwide,
+// :where(:not([class*="__inner-container"])) はカスタムレイアウトのカバーブロックの場合に上書きしないように
+.is-layout-constrained:where(:not(.is-layout-custom)):where(:not([class*="__inner-container"])) > .alignwide,
 .alignwide {
 	max-width: var(--wp--custom--width--wide);
 }
