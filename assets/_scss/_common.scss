@@ -25,16 +25,9 @@ html.has-modal-open body {
 	overflow-x: visible;
 }
 
-html.has-modal-open {
-	// Keep modal navigation behavior when the viewport overflow is toggled
-	overflow-x: visible;
-}
-
 html {
 	// 360px : 14px -> 1200px : 16px
 	font-size: clamp(14px, calc((100vw - 360px) * (2 / (1200 - 360)) + 14px), 16px);
-	// Prevent viewport-level horizontal scrollbars caused by slide animations
-	overflow-x: hidden;
 }
 
 body {
