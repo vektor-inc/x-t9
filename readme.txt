@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+1.36.0
 [ Specification Change / Bug fix ] Fixed an issue where the layout would break when a custom content size was specified.
 [ Specification Change / Bug fix ] Add a style to input[type='submit'] because the submit button becomes invisible against a black background.
 [ Other ] Prevent automatic text zooming on iPhone browsers
