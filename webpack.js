@@ -1,12 +1,13 @@
 module.exports = {
   mode: 'production',
   devtool: false,
-  entry: [
-    './assets/_js/_master.js'
-  ],
+  entry: {
+    main: './assets/_js/_master.js',
+    'editor-layout': './assets/_js/_editor-layout.js',
+  },
   output: {
       path: __dirname + '/assets/js',
-      filename: 'main.js',
+      filename: '[name].js',
   },
   module: {
     // babel-loaderの設定
