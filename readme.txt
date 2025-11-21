@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug fix ] Fixed an issue where inputted text was hard to see against a dark background.
+
 1.36.0
 [ Specification Change / Bug fix ] Fixed an issue where the layout would break when a custom content size was specified.
 [ Specification Change / Bug fix ] Add a style to input[type='submit'] because the submit button becomes invisible against a black background.
