@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei,yukinobu
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.35.2
+Stable tag: 1.36.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+1.36.1
 [ Bug fix ] Fixed an issue where inputted text was hard to see against a dark background.
 
 1.36.0
