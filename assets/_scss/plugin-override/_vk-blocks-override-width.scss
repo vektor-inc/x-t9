@@ -55,7 +55,8 @@
 /* core/column をコンテンツ幅の半分のインナーブロックにする .is-vk-content-width-half 対応
 /* 基本的に VK Blocks 側で記載してある。 
 /* VK Blocks では幅の基準に --wp--style--global--content-size を使用しているが、
-/* テーマ側でカスタムプロパティ --wp--custom--width--content を定義しているためそちらで上書き
+/* X-T9 1.36 からはテーマ側でカスタムプロパティ --wp--custom--width--content を定義して
+/* それを基準に処理しているためそちらで上書き
 /*-------------------------------------------*/
 
 :not(.is-vk-row-reverse) > :first-child.is-vk-content-width-half,
