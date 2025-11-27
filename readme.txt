@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug fix ] Fixed an issue where the layout would break on mobile devices when 'Half Content Width' was specified in VK Blocks from version 1.36.0.
+
 1.36.1
 [ Bug fix ] Fixed an issue where inputted text was hard to see against a dark background.
 

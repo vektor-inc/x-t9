@@ -50,3 +50,32 @@
 		width: var(--wp--custom--width--wrapper);
 	}
 }
+
+/*-------------------------------------------*/
+/* core/column をコンテンツ幅の半分のインナーブロックにする .is-vk-content-width-half 対応
+/* 基本的に VK Blocks 側で記載してある。 
+/* VK Blocks では幅の基準に --wp--style--global--content-size を使用しているが、
+/* テーマ側でカスタムプロパティ --wp--custom--width--content を定義しているためそちらで上書き
+/*-------------------------------------------*/
+
+:not(.is-vk-row-reverse) > :first-child.is-vk-content-width-half,
+.is-vk-row-reverse > :nth-child(2).is-vk-content-width-half {
+	// 100svh では編集画面でパネルの幅などを含んでしまうため100%を使用
+	padding-left:calc( ( 100% - var(--wp--custom--width--content) ) / 2 ) !important;
+}
+:not(.is-vk-row-reverse) > :nth-child(2).is-vk-content-width-half,
+.is-vk-row-reverse > :first-child.is-vk-content-width-half {
+	padding-right:calc( ( 100% - var(--wp--custom--width--content) ) / 2 ) !important;
+}
+@media (max-width: 781.98px) {
+	// モバイルで縦積みの場合のみ打ち消し
+	.wp-block-columns:not(.is-not-stacked-on-mobile){
+		.is-vk-content-width-half{
+			padding-left:0 !important;
+			padding-right:0 !important;
+			&.is-layout-flow > * {
+				max-width: var(--wp--custom--width--content);
+			}
+		}
+	}
+}
