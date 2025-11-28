@@ -398,6 +398,7 @@
 					"blockGap": "0"
 				},
 				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)",
 					"lineHeight": "1.5"
 				},
 				"elements": {
