@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug fix ][ サブメニューアイテム ] サイトエディタからの文字サイズ指定が効かない不具合を修正
+
 1.36.2
 [ Bug fix ] Fixed an issue where the layout would break on mobile devices when 'Half Content Width' was specified in VK Blocks from version 1.36.0.
 
