@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug fix ][ サブメニューアイテム ] WordPress 6.9 で余白が小さくなる不具合不具合に対応
 [ Bug fix ][ サブメニューアイテム ] サイトエディタからの文字サイズ指定が効かない不具合を修正
 
 1.36.2

@@ -145,7 +145,7 @@ Overlay : allways ***********************
 /****************************************************** 
  * Sub Navigation Styles
  */
-.wp-block-navigation {
+.wp-block-navigation .has-child{
 	&:not(.has-modal-open) {
 		.wp-block-navigation__submenu-container {
 			header & {
