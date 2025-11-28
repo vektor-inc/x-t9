@@ -31,7 +31,8 @@ html {
 
 }
 
-body {
+// Global Style で上書きできるように where を付与している
+:where(body) {
 	font-weight: 500;
 	line-height: var(--wp--custom--typography--line-height--normal);
 }
@@ -47,6 +48,14 @@ a {
 	&:hover {
 		text-decoration: none;
 	}
+}
+// Global Style で上書きできるように where を付与している
+// theme.json で各 h element に指定すると、
+// Global Style で「すべて」の見出しにサイズを指定しても theme.json の指定に負けて反映されないため、
+// ここでまとめて指定する。
+// （「すべて」以外に個別に指定すれば theme.json の指定は上書きできる ）
+:where(h1,h2,h3,h4,h5,h6) {
+	line-height: var(--wp--custom--typography--line-height--heading);
 }
 
 img {
