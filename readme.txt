@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug fix ][ サブメニューアイテム ] テーマの余白指定が WordPress 6.9 の指定に上書きされる不具合を修正
 [ Bug fix ][ サブメニューアイテム ] サイトエディタからの文字サイズ指定が効かない不具合を修正
 
 1.36.2
