@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Other ][ Accordion ] WordPress 6.9 で追加されるアコーディオンブロックのデザイン調整
 [ Bug fix ] グローバルスタイルでタイポグラフィの行間・外観を指定しても効かない不具合を修正
 [ Bug fix ][ ナビゲーション ] サイトエディタで文字サイズの指定が効かない不具合を修正
 [ Bug fix ][ サブメニューアイテム ] テーマの余白指定が WordPress 6.9 の指定に上書きされる不具合を修正
