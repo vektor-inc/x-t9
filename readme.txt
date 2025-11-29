@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei,yukinobu
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.36.2
+Stable tag: 1.37.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,11 +13,12 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
-[ Other ][ Accordion ] WordPress 6.9 で追加されるアコーディオンブロックのデザイン調整
-[ Bug fix ] グローバルスタイルでタイポグラフィの行間・外観を指定しても効かない不具合を修正
-[ Bug fix ][ ナビゲーション ] サイトエディタで文字サイズの指定が効かない不具合を修正
-[ Bug fix ][ サブメニューアイテム ] テーマの余白指定が WordPress 6.9 の指定に上書きされる不具合を修正
-[ Bug fix ][ サブメニューアイテム ] サイトエディタからの文字サイズ指定が効かない不具合を修正
+1.37.0
+[ Other ][ Accordion ] Design adjustments for the accordion block introduced in WordPress 6.9
+[ Bug fix ] Fixed an issue where the typography line-height and appearance settings specified in Global Styles were not applied
+[ Bug fix ][ Navigation ] Fixed an issue where font size settings did not take effect in the Site Editor
+[ Bug fix ][ Submenu item ] Fixed an issue where theme spacing settings were overridden by those in WordPress 6.9
+[ Bug fix ][ Submenu item ] Fixed an issue where font size settings from the Site Editor were not applied
 
 1.36.2
 [ Bug fix ] Fixed an issue where the layout would break on mobile devices when 'Half Content Width' was specified in VK Blocks from version 1.36.0.
