@@ -409,6 +409,13 @@
 					}
 				}
 			},
+			"core/accordion-panel": {
+				"spacing": {
+					"margin": {
+						"top": "0"
+					}
+				}
+			},
 			"core/post-terms": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--small)",

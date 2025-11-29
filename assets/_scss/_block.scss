@@ -184,3 +184,11 @@ ul:is(.wp-block-archives-list,
 .wp-block-post-date time{
 	white-space:nowrap;
 }
+
+/*-------------------------------------------*/
+/*  accordion
+/*-------------------------------------------*/
+.wp-block-accordion-heading__toggle:hover .wp-block-accordion-heading__toggle-title {
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3px;
+}
