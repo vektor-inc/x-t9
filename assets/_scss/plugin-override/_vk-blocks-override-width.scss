@@ -9,7 +9,7 @@
 		margin-left: calc((var(--wp--custom--width--content) - var(--wp--custom--width--wide)  ) / 2) !important;
 		margin-right: calc((var(--wp--custom--width--content) - var(--wp--custom--width--wide)  ) / 2) !important;
 	}
-	.vk_outer_container .is-layout-flow {
+	.vk_outer_container {
 		max-width: var(--wp--custom--width--content);
 		margin-left: auto;
 		margin-right: auto;
