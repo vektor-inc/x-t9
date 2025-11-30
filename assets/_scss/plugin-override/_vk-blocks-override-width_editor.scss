@@ -12,3 +12,12 @@
 		}
 	}
 }
+.vk_outer-width-full:is(.vk_outer-paddingLR-none) {
+	.vk_outer_container .block-editor-inner-blocks > .is-layout-constrained {
+		& > .alignwide {
+			max-width: var(--wp--custom--width--wide);
+			margin-left: calc((var(--wp--custom--width--content) - var(--wp--custom--width--wide)  ) / 2) !important;
+			margin-right: calc((var(--wp--custom--width--content) - var(--wp--custom--width--wide)  ) / 2) !important;
+		}
+	}
+}

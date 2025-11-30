@@ -1,6 +1,6 @@
 === X-T9 ===
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei,yukinobu
-Tested up to: 6.8
+Tested up to: 6.9
 Requires PHP: 7.4
 Stable tag: 1.37.0
 License: GPLv2 or later
@@ -12,6 +12,8 @@ The X-T9 is designed on the premise of full site editing function, and the user 
 GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
+
+[ Bug fix ] Fixed a layout issue that occurred under certain conditions in the Outer block ( VK Blocks Pro ).
 
 1.37.0
 [ Other ][ Accordion ] Design adjustments for the accordion block introduced in WordPress 6.9
