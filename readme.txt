@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei,yukinobu
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.37.1
+Stable tag: 1.37.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+1.37.2
 [ Bug fix ] Fixed an issue where there was no padding on the left and right sides of the content width within the cover block when the screen was narrower than the content width.
 [ Bug fix ] Since placing 'wide' inside 'is-layout-flow' (which is normally not allowed) causes it to align to the left, an 'auto' specification was added.
 
