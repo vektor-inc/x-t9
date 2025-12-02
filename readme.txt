@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug fix ] Fixed an issue where there was no padding on the left and right sides of the content width within the cover block when the screen was narrower than the content width.
 [ Bug fix ] Since placing 'wide' inside 'is-layout-flow' (which is normally not allowed) causes it to align to the left, an 'auto' specification was added.
 
 1.37.1
