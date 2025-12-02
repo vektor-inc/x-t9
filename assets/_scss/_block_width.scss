@@ -103,8 +103,17 @@ global の幅を上書きするために custom の詳細度を上げてしま�
 /* wide width  *****************************/
 // :where(:not([class*="__inner-container"])) はカスタムレイアウトのカバーブロックの場合に上書きしないように
 .is-layout-constrained:where(:not(.is-layout-custom)):where(:not([class*="__inner-container"])) > .alignwide,
+// is-layout-flow の中の .alignwide はmax-width 指定を除外した方が良いかもしれないので今後検討
 .alignwide {
 	max-width: var(--wp--custom--width--wide);
+}
+
+/** Align auto for alignfull and alignwide *****************************/
+// is-layout-flow の中に wide を入れると（基本的には通常指定できない）左に寄ってしまうため auto 指定追加
+// ※ is-layout-flow の中の full/wide 指定はできないのだからそもそも mex-width 指定をさせずに親幅に追従の方が良いかもしれない
+.is-layout-flow .alignwide {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /** Minus offset for alignfull and alignwide *****************************/
