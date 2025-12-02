@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug fix ] Since placing 'wide' inside 'is-layout-flow' (which is normally not allowed) causes it to align to the left, an 'auto' specification was added.
+
 1.37.1
 [ Bug fix ] Fixed a layout issue that occurred under certain conditions in the Outer block ( VK Blocks Pro ).
 
