@@ -107,6 +107,13 @@ global の幅を上書きするために custom の詳細度を上げてしま�
 	max-width: var(--wp--custom--width--wide);
 }
 
+/** Align auto for alignfull and alignwide *****************************/
+// flow の中に wide を入れると左に寄ってしまうため auto 指定追加
+.is-layout-flow .alignwide {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 /** Minus offset for alignfull and alignwide *****************************/
 
 :is( .alignfull,.vk_outer-width-full ) {
