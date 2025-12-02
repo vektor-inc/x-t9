@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug fix ] 画面がコンテント幅よりも狭い場合に、カバーブロック内のコンテント幅左右に余白がなくなる不具合を修正
 [ Bug fix ] Since placing 'wide' inside 'is-layout-flow' (which is normally not allowed) causes it to align to the left, an 'auto' specification was added.
 
 1.37.1
