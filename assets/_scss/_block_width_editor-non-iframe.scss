@@ -30,9 +30,6 @@ body:where(:not(.is-fullscreen-mode)).folded .editor-styles-wrapper {
 }
 
 // In case the right sidebar is open
-html:has(.editor-sidebar) .editor-styles-wrapper {
-	--vk-width-editor-sidebar:280px; 
-}
 html:has(.editor-sidebar) .editor-styles-wrapper, // 6.8 -
 html:has(.interface-complementary-area__fill-sidebar) .editor-styles-wrapper // 6.9 +
 {
