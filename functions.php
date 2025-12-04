@@ -34,40 +34,6 @@ if ( ! function_exists( 'xt9_support' ) ) :
 endif;
 
 /**
- * Non iframe editor style enqueue
- */
-
-$xt9_is_iframe_editor = true;
-
-add_filter(
-	'block_editor_settings_all',
-	function ( $settings ) {
-		global $xt9_is_iframe_editor;
-		// __unstableDisableRenderToIframe が false (または未設定) なら iframe レンダリング。
-		$xt9_is_iframe_editor = empty( $settings['__unstableDisableRenderToIframe'] );
-		return $settings;
-	},
-	10,
-	1
-);
-
-add_action(
-	'enqueue_block_editor_assets',
-	function () {
-		global $xt9_is_iframe_editor;
-
-		if ( ! $xt9_is_iframe_editor ) {
-			wp_enqueue_style(
-				'xt9-editor-inline',
-				get_template_directory_uri() . '/assets/css/block_width_editor-non-iframe.css',
-				array( 'wp-edit-blocks' ),
-				XT9_THEME_VERSION
-			);
-		}
-	}
-);
-
-/**
  * Enqueue scripts and styles.
  */
 function xt9_scripts() {
