@@ -55,10 +55,9 @@
 		}
 	}
 
-	.wp-block-post-excerpt__more-text {
-		a {
-			font-size: var(--wp--preset--font-size--small);
-			padding: var(--wp--custom--spacing--button-sm);
-		}
+	.wp-block-post-excerpt__more-text a,
+	a.wp-block-read-more {
+		font-size: var(--wp--preset--font-size--small);
+		padding: var(--wp--custom--spacing--button-sm);
 	}
 }
