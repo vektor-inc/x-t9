@@ -26,7 +26,7 @@ if ( ! function_exists( 'xt9_support' ) ) :
 			// WordPress over 6.6
 			add_editor_style( 'assets/css/editor.css' );
 		} else {
-			// WordPress under 6.5
+			// WordPress under 6.6
 			add_editor_style( 'assets/css/editor-wp65.css' );
 		}
 	}
@@ -51,13 +51,15 @@ add_action( 'wp_enqueue_scripts', 'xt9_scripts' );
 function xt9_add_script() {
 	wp_register_script( 'xt9-js', get_template_directory_uri() . '/assets/js/main.js', array(), XT9_THEME_VERSION, true );
 	$options = array(
-		'header_scrool' => true,
+		'header_scroll' => true,
 	);
 	wp_localize_script( 'xt9-js', 'xt9Opt', apply_filters( 'xt9_localize_options', $options ) );
 	wp_enqueue_script( 'xt9-js' );
 }
 add_action( 'wp_enqueue_scripts', 'xt9_add_script' );
 
+// Layout helpers.
+require get_template_directory() . '/inc/layout-helpers.php';
 // Add block patterns.
 require get_template_directory() . '/inc/block-patterns.php';
 // Add Block Styles.
@@ -109,7 +111,7 @@ function xt9_get_the_archive_title() {
 add_filter( 'get_the_archive_title', 'xt9_get_the_archive_title' );
 
 /**
- * Year Artchive list 'year' and count insert to inner </a>
+ * Year Archive list 'year' and count insert to inner </a>
  *
  * @param string $html link html.
  * @return string $html added string html

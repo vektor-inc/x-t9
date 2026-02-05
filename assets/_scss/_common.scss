@@ -30,7 +30,8 @@ html {
 	font-size: clamp(14px, calc((100vw - 360px) * (2 / (1200 - 360)) + 14px), 16px);
 }
 
-body {
+// Global Style で上書きできるように where を付与している
+:where(body) {
 	font-weight: 500;
 	line-height: var(--wp--custom--typography--line-height--normal);
 }
@@ -47,6 +48,14 @@ a {
 	&:hover {
 		text-decoration: none;
 	}
+}
+// Global Style で上書きできるように where を付与している
+// theme.json で各 h element に指定すると、
+// Global Style で「すべて」の見出しにサイズを指定しても theme.json の指定に負けて反映されないため、
+// ここでまとめて指定する。
+// （「すべて」以外に個別に指定すれば theme.json の指定は上書きできる ）
+:where(h1,h2,h3,h4,h5,h6) {
+	line-height: var(--wp--custom--typography--line-height--heading);
 }
 
 img {
@@ -71,11 +80,12 @@ main {
 	}
 }
 
-input:where(:not([type='checkbox']):not([type='radio']):not([type='file'])),
+input:where(:not([type='checkbox']):not([type='radio']):not([type='file']):not([type='submit'])),
 textarea,
 select {
 	padding: 0.7em;
 	border: 1px solid var(--wp--preset--color--border-normal);
+	color:var(--wp--preset--color--text-normal);
 	background-color: var(--wp--preset--color--bg-primary);
 }
 input[type='checkbox'],
@@ -121,6 +131,12 @@ hr {
 
 textarea {
 	width: 100%;
+}
+
+input[type='submit']{
+	cursor: pointer;
+	border:none;
+	padding:10px 1.5em;
 }
 
 iframe {

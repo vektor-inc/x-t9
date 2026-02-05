@@ -2,20 +2,13 @@
 /*-------------------------------------------*/
 /* vk_outer
 /*-------------------------------------------*/
-.vk_outer-paddingLR-zero .vk_outer_container > .alignwide {
-	max-width: var(--wp--style--global--wide-size);
-	margin-left:auto !important;
-	margin-right:auto !important;
-}
-.vk_outer-width-full:where(:not(.vk_outer-paddingLR-zero)) {
-	.vk_outer_container > .alignwide {
-		width: calc(100% + (var(--wp--custom--width--wrapper) - 100%) / 2);
-		margin-left: calc((100% - var(--wp--custom--width--wrapper)) / 4) !important;
-		margin-right: calc((100% - var(--wp--custom--width--wrapper)) / 4) !important;
-	}
-}
-// .vk_outer-paddingLR-none => content size
+
+// .vk_outer-paddingLR-none ( content size ) /////////////////////////
 .vk_outer-width-full.vk_outer-paddingLR-none {
+	.vk_outer_container > .alignwide {
+		margin-left: calc((var(--wp--custom--width--content) - var(--wp--custom--width--wide)  ) / 2) !important;
+		margin-right: calc((var(--wp--custom--width--content) - var(--wp--custom--width--wide)  ) / 2) !important;
+	}
 	.vk_outer_container {
 		max-width: var(--wp--custom--width--content);
 		margin-left: auto;
@@ -27,11 +20,63 @@
 		padding-right: 0;
 	}
 }
+
+// .vk_outer-paddingLR-use /////////////////////////
+.vk_outer-width-full:where(.vk_outer-paddingLR-use) {
+	// .is-layout-constrained がついている場合はコンテンツ幅優先にするので除外している
+	.vk_outer_container:where(:not(.is-layout-constrained)) > .alignwide {
+		width: calc(100% + (var(--wp--custom--width--wrapper) - 100%) / 2);
+		// Outer ブロックの余白ありの場合は他の wide サイズとは違い、余白を除いた領域を基準に余白の半分をマイナスオフセットする
+		max-width:calc(100% + (var(--wp--custom--width--wrapper) - 100%) / 2);
+		margin-left: calc((100% - var(--wp--custom--width--wrapper)) / 4) !important;
+		margin-right: calc((100% - var(--wp--custom--width--wrapper)) / 4) !important;
+	}
+}
+
+// .vk_outer-paddingLR-zero /////////////////////////
+.vk_outer-width-full:where(.vk_outer-paddingLR-zero) {
+	.vk_outer_container > .alignwide {
+		max-width: var(--wp--custom--width--wide);
+		margin-left:auto !important;
+		margin-right:auto !important;
+	}
+}
+
 /*-------------------------------------------*/
 /* vk_slider
 /*-------------------------------------------*/
 .vk_slider {
 	&.alignfull {
 		width: var(--wp--custom--width--wrapper);
+	}
+}
+
+/*-------------------------------------------*/
+/* core/column をコンテンツ幅の半分のインナーブロックにする .is-vk-content-width-half 対応
+/* 基本的に VK Blocks 側で記載してある。 
+/* VK Blocks では幅の基準に --wp--style--global--content-size を使用しているが、
+/* X-T9 1.36 からはテーマ側でカスタムプロパティ --wp--custom--width--content を定義して
+/* それを基準に処理しているためそちらで上書き
+/*-------------------------------------------*/
+
+:not(.is-vk-row-reverse) > :first-child.is-vk-content-width-half,
+.is-vk-row-reverse > :nth-child(2).is-vk-content-width-half {
+	// 100svh では編集画面でパネルの幅などを含んでしまうため100%を使用
+	padding-left:calc( ( 100% - var(--wp--custom--width--content) ) / 2 ) !important;
+}
+:not(.is-vk-row-reverse) > :nth-child(2).is-vk-content-width-half,
+.is-vk-row-reverse > :first-child.is-vk-content-width-half {
+	padding-right:calc( ( 100% - var(--wp--custom--width--content) ) / 2 ) !important;
+}
+@media (max-width: 781.98px) {
+	// モバイルで縦積みの場合のみ打ち消し
+	.wp-block-columns:not(.is-not-stacked-on-mobile){
+		.is-vk-content-width-half{
+			padding-left:0 !important;
+			padding-right:0 !important;
+			&.is-layout-flow > * {
+				max-width: var(--wp--custom--width--content);
+			}
+		}
 	}
 }

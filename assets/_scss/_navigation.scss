@@ -63,9 +63,6 @@ Overlay : allways ***********************
 			}
 		}
 	}
-	.wp-block-navigation-item {
-		font-size: var(--wp--preset--font-size--small);
-	}
 
 	// PC Menu style /////////////////////
 	// Overlay : mobile ( Wide screen )
@@ -145,7 +142,15 @@ Overlay : allways ***********************
 /****************************************************** 
  * Sub Navigation Styles
  */
-.wp-block-navigation {
+.wp-block-navigation{
+	// Override the padding specified by WordPress 6.9
+	&:where(:not(.has-modal-open)) .has-child  {
+		.wp-block-navigation__submenu-container {
+			& >.wp-block-navigation-item .wp-block-navigation-item__content {
+				padding: 1em 1.5em;
+			}
+		}
+	}
 	&:not(.has-modal-open) {
 		.wp-block-navigation__submenu-container {
 			header & {
@@ -153,9 +158,8 @@ Overlay : allways ***********************
 			}
 
 			.wp-block-navigation-item {
+				font-size: var(--wp--preset--font-size--x-small);
 				&__content {
-					font-size: var(--wp--preset--font-size--x-small);
-					padding: 1em 1.5em;
 					font-weight: normal;
 				}
 			}

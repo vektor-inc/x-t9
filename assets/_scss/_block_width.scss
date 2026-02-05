@@ -33,6 +33,60 @@
 
 */
 
+/* 幅のサイズ指定について *****************************************
+
+***********************************
+このCSSでの幅指定は、レスポンシブに対応するために global サイズではなくカスタムサイズ（ --wp--custom--width--content / --wp--custom--width--wide  ）を使用する
+***********************************
+
+WordPress標準の --wp--style--global--content-size 及び --wp--style--global--wide-size は max-width として出力される。
+
+しかし、この手法は画面サイズが狭い場合に左右の余白がなくなる問題がある。
+
+これを回避するために、theme.json の contentSize の初期値に min( 900px.90vw ) のようにする事で回避できそうに見えるが、
+ユーザーがグローバルスタイルのレイアウトでピクセル指定すると、min() を使用しないその数値で上書きされるため、やはり画面が狭い場合に左右の余白がなくなる問題が発生する。
+
+この問題を回避するために、
+
+1. min() 関数を使用してレスポンシブに左右余白ができる以下のカスタム変数を theme.json で定義
+--wp--custom--width--content : min( var(--wp--style--global--content-size), 90vw )
+--wp--custom--width--wide : min( var(--wp--style--global--wide-size), 95vw )
+
+2. このCSSファイルから WordPress が出力する global の幅指定を上書きする。
+
+//// ブロック個別に幅指定された場合の対応 ////////////////////////////////////////
+
+但し、これでも問題は発生する。
+global の幅を上書きするために custom の詳細度を上げてしまっているので、
+ページ内でブロック個別に指定した場合に出力される幅の数値も上書きしてしまう。
+
+■ 回避策
+★ ★ ★ ブロック個別で数値指定されている場合は --wp--custom--width--content で上書きしないようにする必要がある ★ ★ ★ 
+数値指定されている場合は、識別するために .is-layout-custom がつくようにテーマ側で処理しているので、
+.is-layout-custom がある場合は上書きしないように除外する
+
+/* normal width  *****************************/
+
+// 個別に contentSize / wideSize が指定されている場合場合（.is-layout-custom）は除外
+// 本当は単純に 
+// .is-layout-constrained:where(:not(.is-layout-custom)) > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+// に指定して上書きしたいが、カバーブロックの場合は
+// .is-layout-constrained.wp-block-cover.is-layout-custom > .is-layout-constrained.wp-block-cover__inner-container 
+// と言う感じでインナーにも .is-layout-constrained が付与され、そちらに反応して個別指定の幅を上書きしてしまうため、class*="__inner-container"] で除外して指定する。
+
+ :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+	// ■ カバーブロックなどインナーコンテナがあるブロックの場合
+	[class*="wp-block"]:where(:not(.is-layout-custom)) > :where(.is-layout-constrained[class*="__inner-container"]) > &,
+	// ■ インナーコンテナがないブロックの場合
+	// :not([class*="__inner-container"] で除外する事により
+	// インナーコンテナがあるブロックで動作して個別のカスタム幅を上書ききしてしまわないようにしている
+	.is-layout-constrained:where(:not(.is-layout-custom):not([class*="__inner-container"])) > &{
+		max-width: var(--wp--custom--width--content);
+	}
+ }
+
+
+/* full width  *****************************/
 :is( .alignfull,.vk_outer-width-full ) {
 	// 直下でも constrained の中でも幅は同じ
 	&,
@@ -51,8 +105,20 @@
 	}
 }
 
+/* wide width  *****************************/
+// :where(:not([class*="__inner-container"])) はカスタムレイアウトのカバーブロックの場合に上書きしないように
+.is-layout-constrained:where(:not(.is-layout-custom)):where(:not([class*="__inner-container"])) > .alignwide,
+// is-layout-flow の中の .alignwide はmax-width 指定を除外した方が良いかもしれないので今後検討
 .alignwide {
-	width: calc(100% + (var(--wp--custom--width--wrapper) - 100%) / 2);
+	max-width: var(--wp--custom--width--wide);
+}
+
+/** Align auto for alignfull and alignwide *****************************/
+// is-layout-flow の中に wide を入れると（基本的には通常指定できない）左に寄ってしまうため auto 指定追加
+// ※ is-layout-flow の中の full/wide 指定はできないのだからそもそも mex-width 指定をさせずに親幅に追従の方が良いかもしれない
+.is-layout-flow .alignwide {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /** Minus offset for alignfull and alignwide *****************************/
@@ -77,16 +143,16 @@
 
 	// .is-layout-constrained > の直下の要素（コンテンツ幅） > の直下に幅広を配置された場合
 	// ※ 2階層目がコンテンツ幅なので、最初の .is-layout-constrained の要素は alignll でも alignwide でも関係ない
-	.is-layout-constrained > :where(:not(:is(.alignfull, .alignwide))) > &,
+	.is-layout-constrained > :where(:not(:is(.alignfull, .alignwide)):not([class*="__inner-container"])) > &,
 
 	// 通常幅の .is-layout-constrained > の直下の要素（コンテンツ幅） の中（3階層）の更に中（4階層）以降に幅広を配置された場合にマイナスオフセットする
 	// ※ 3階層は既にひとつ上の項目でやってる
 	// ※ コンテンツ幅の中にグループなどが入ってさらにその中（4階層以上）になる事もあるので、2階層と3階層の間には > は付けない
 	// ※ is( .alignnfull, .alignwide ) > .alignwide の場合はマイナスオフセットしない
 
-	.is-layout-constrained:where(:not(:is(.alignfull,.alignwide))) > :where(:not(:is(.alignfull,.alignwide))) :where(:not(:is(.alignfull, .alignwide))) > & {
-		margin-left: calc((100% - var(--wp--custom--width--wrapper)) / 4) !important;
-		margin-right: calc((100% - var(--wp--custom--width--wrapper)) / 4) !important;
+	.is-layout-constrained:where(:not(:is(.alignfull,.alignwide))) > :where(:not(:is(.alignfull,.alignwide))):where(:not([class*="__inner-container"])) :where(:not(:is(.alignfull, .alignwide))):where(:not([class*="__inner-container"])) > & {
+		margin-left: calc((var(--wp--custom--width--content) - var(--wp--custom--width--wide)  ) / 2) !important;
+		margin-right: calc((var(--wp--custom--width--content) - var(--wp--custom--width--wide)  ) / 2) !important;
 	}
 }
 
