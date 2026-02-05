@@ -111,7 +111,7 @@ function xt9_get_the_archive_title() {
 add_filter( 'get_the_archive_title', 'xt9_get_the_archive_title' );
 
 /**
- * Year Artchive list 'year' and count insert to inner </a>
+ * Year Archive list 'year' and count insert to inner </a>
  *
  * @param string $html link html.
  * @return string $html added string html
