@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Other ] Added overflow-x: hidden to html so VK Blocks slide animations no longer trigger a horizontal scrollbar.
+
  1.37.3
 [ Bug fix ] Fixed a layout issue in the editor when not using an iframe.
 
