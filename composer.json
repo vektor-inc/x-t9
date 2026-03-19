@@ -1,5 +1,5 @@
 {
     "require": {
-        "vektor-inc/tgm-plugin-activation": "^2.6"
+        "vektor-inc/tgm-plugin-activation": "^2.6.2"
     }
 }
