@@ -13,7 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
-[ Changed ] Replaced clamp string values with fluid object format ( min/max ) for all font sizes except tiny in theme.json typography settings
+[ Specification Change / Bug fix ] Replaced clamp string values with fluid object format ( min/max ) for all font sizes except tiny in theme.json typography settings
 [ Dev ] Excluded the docs directory from the dist task.
 
  1.37.3
