@@ -163,7 +163,10 @@
 		"typography": {
 			"dropCap": false,
 			"lineHeight": true,
-			"fluid": false,
+			"fluid": {
+				"minViewportWidth": "360px",
+				"maxViewportWidth": "1200px"
+			},
 			"writingMode": true,
 			"defaultFontSizes": false,
 			"fontFamilies": [
@@ -211,61 +214,103 @@
 					"size": "10px"
 				},
 				{
-					"fluid": false,
 					"name": "X small",
 					"slug": "x-small",
-					"size": "clamp(11px, calc(11px + (100svw - 360px) * ( (12 - 11) / (1200 - 360)) ), 12px)"
+					"size": "12px",
+					"fluid": {
+						"min": "11px",
+						"max": "12px"
+					}
 				},
 				{
-					"fluid": false,
 					"name": "Small",
 					"slug": "small",
-					"size": "clamp(12.56px, calc( 12.56px + (100svw - 360px) * ( (13.91 - 12.56) / (1200 - 360)) ), 13.91px)"
+					"size": "13.91px",
+					"fluid": {
+						"min": "12.56px",
+						"max": "13.91px"
+					}
 				},
 				{
 					"name": "Medium",
 					"slug": "medium",
-					"size": "clamp(14px, calc( 14px + (100svw - 360px) * ( (16 - 14) / (1200 - 360)) ), 16px)"
+					"size": "16px",
+					"fluid": {
+						"min": "14px",
+						"max": "16px"
+					}
 				},
 				{
 					"name": "Large",
 					"slug": "large",
-					"size": "clamp(16.10px, calc( 16.10px + (100svw - 360px) * ( (18.4 - 16.10) / (1200 - 360)) ), 18.4px)"
+					"size": "18.4px",
+					"fluid": {
+						"min": "16.10px",
+						"max": "18.4px"
+					}
 				},
 				{
 					"name": "X Large",
 					"slug": "x-large",
-					"size": "clamp(18.52px, calc( 18.52px + (100svw - 360px) * ( (21.16 - 18.52) / (1200 - 360)) ), 21.16px)"
+					"size": "21.16px",
+					"fluid": {
+						"min": "18.52px",
+						"max": "21.16px"
+					}
 				},
 				{
 					"name": "XX Large",
 					"slug": "xx-large",
-					"size": "clamp(21.29px, calc( 21.29px + (100svw - 360px) * ( (24.33 - 21.29) / (1200 - 360)) ), 24.33px)"
+					"size": "24.33px",
+					"fluid": {
+						"min": "21.29px",
+						"max": "24.33px"
+					}
 				},
 				{
 					"name": "XXX Large",
 					"slug": "xxx-large",
-					"size": "clamp(24.49px, calc( 24.49px + (100svw - 360px) * ( (27.98 - 24.49) / (1200 - 360)) ), 27.98px)"
+					"size": "27.98px",
+					"fluid": {
+						"min": "24.49px",
+						"max": "27.98px"
+					}
 				},
 				{
 					"name": "Huge",
 					"slug": "huge",
-					"size": "clamp(28.16px, calc( 28.16px + (100svw - 360px) * ( (32.18 - 28.16) / (1200 - 360)) ), 32.18px)"
+					"size": "32.18px",
+					"fluid": {
+						"min": "28.16px",
+						"max": "32.18px"
+					}
 				},
 				{
 					"name": "X Huge",
 					"slug": "x-huge",
-					"size": "clamp(32.38px, calc( 32.38px + (100svw - 360px) * ( (37.24 - 32.38) / (1200 - 360)) ), 37.24px)"
+					"size": "37.24px",
+					"fluid": {
+						"min": "32.38px",
+						"max": "37.24px"
+					}
 				},
 				{
 					"name": "XX Huge",
 					"slug": "xx-huge",
-					"size": "clamp(37.24px, calc( 37.24px + (100svw - 360px) * ( (42.56 - 37.24) / (1200 - 360)) ), 42.56px)"
+					"size": "42.56px",
+					"fluid": {
+						"min": "37.24px",
+						"max": "42.56px"
+					}
 				},
 				{
 					"name": "XXX Huge",
 					"slug": "xxx-huge",
-					"size": "clamp(42.83px, calc( 42.83px + (100svw - 360px) * ( (48.94 - 42.83) / (1200 - 360)) ), 48.94px)"
+					"size": "48.94px",
+					"fluid": {
+						"min": "42.83px",
+						"max": "48.94px"
+					}
 				}
 			]
 		},

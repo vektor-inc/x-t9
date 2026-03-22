@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ 仕様変更 ] theme.json の typography fontSizes において tiny 以外のフォントサイズを clamp 文字列から fluid オブジェクト形式に書き換え
+
  1.37.3
 [ Bug fix ] Fixed a layout issue in the editor when not using an iframe.
 
