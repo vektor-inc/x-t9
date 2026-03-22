@@ -57,7 +57,8 @@ gulp.task('dist', function() {
 				'./LICENSE',
 				"!./tests/**",
 				"!./dist/**",
-				"!./node_modules/**"
+				"!./node_modules/**",
+				"!./docs/**"
 			],
 			{ base: './' }
 		)
