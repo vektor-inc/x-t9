@@ -14,10 +14,10 @@ GitHub : https://github.com/vektor-inc/x-t9
 == Changelog ==
 
 [ Changed ] Replaced clamp string values with fluid object format ( min/max ) for all font sizes except tiny in theme.json typography settings
+[ Dev ] Excluded the docs directory from the dist task.
 
  1.37.3
 [ Bug fix ] Fixed a layout issue in the editor when not using an iframe.
-[ Dev ] Excluded the docs directory from the dist task.
 
 1.37.2
 [ Bug fix ] Fixed an issue where there was no padding on the left and right sides of the content width within the cover block when the screen was narrower than the content width.
