@@ -32,8 +32,6 @@ gulp.task('remove-theme-name', function () {
 gulp.task('dist', function() {
 	return gulp.src(
 			[
-				'!./.wp-env.json',
-				'!./.wp-env.override.json',
 				'./**/*.json',
 				'./**/*.php',
 				'./**/*.txt',
@@ -55,6 +53,12 @@ gulp.task('dist', function() {
 				'./vendor/**',
 				'./templates/**',
 				'./LICENSE',
+				'!./.wp-env.json',
+				'!./.wp-env.override.json',
+				'!./package.json',
+				'!./package-lock.json',
+				'!./composer.json',
+				'!./composer.lock',
 				"!./tests/**",
 				"!./dist/**",
 				"!./node_modules/**",
