@@ -76,7 +76,7 @@ WordPress出力:  0.875rem + (1vw - 3.6px) × 0.238
 
 | | 旧 X-T9 形式 | 現在の WordPress 標準形式 |
 |---|---|---|
-| **グローバル fluid** | `"fluid": true` | `"fluid": { "minViewportWidth": "360px", "maxViewportWidth": "1200px" }` |
+| **グローバル fluid** | `"fluid": false` | `"fluid": { "minViewportWidth": "360px", "maxViewportWidth": "1200px" }` |
 | **フォントサイズ指定** | `"size"` に clamp() を直書き | `"size"` にフォールバック値、`"fluid"` に min/max を宣言 |
 
 ```json
