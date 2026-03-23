@@ -1,5 +1,14 @@
 {
     "require": {
         "vektor-inc/tgm-plugin-activation": "^2.6.2"
+    },
+    "require-dev": {
+        "yoast/phpunit-polyfills": "^1.1",
+        "phpunit/phpunit": "^9.6"
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/"
+        ]
     }
 }
