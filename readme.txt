@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei,yukinobu
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.37.3
+Stable tag: 1.37.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+= 1.37.4 =
 [ Specification Change / Bug fix ] Replaced clamp string values with fluid object format ( min/max ) for all font sizes except tiny in theme.json typography settings
 [ Specification Change ] Removed hardcoded clamp() override for --wp--preset--font-size--huge in _variables_wp660.scss that was a workaround for a WordPress bug
 [ Dev ] Excluded the docs directory from the dist task.
