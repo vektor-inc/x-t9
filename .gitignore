@@ -5,6 +5,7 @@ assets/js/
 assets/css/
 vendor/
 .wp-env.override.json
+.phpunit.result.cache
 
 # for AI Agents
 **/.serena/**
