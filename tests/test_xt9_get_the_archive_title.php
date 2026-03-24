@@ -172,22 +172,27 @@ class Test_Xt9_Get_The_Archive_Title extends WP_UnitTestCase {
 			// Set the page_for_posts option. / page_for_posts オプションを設定.
 			update_option( 'page_for_posts', $case['page_for_posts'] );
 
+			// Save original query flags before mutating to enable safe restoration.
+			// 変更前のクエリフラグを退避して安全に復元できるようにする.
+			global $wp_query;
+			$original_is_home = $wp_query->is_home;
+			$original_is_page = $wp_query->is_page;
+
 			// Set is_home = true and is_page = true to simulate the blog top page state.
 			// is_page = true ensures is_front_page() checks is_page( page_on_front ), not is_home(),
 			// which guarantees is_front_page() returns false for this request.
 			// ブログトップページの状態を再現するため is_home を true に設定.
 			// is_page = true により is_front_page() が is_page( page_on_front ) で判定され、
 			// このリクエストでは is_front_page() が false になることを保証する.
-			global $wp_query;
 			$wp_query->is_home = true;
 			$wp_query->is_page = true;
 
 			// Execute the function under test. / テスト関数を実行.
 			$actual = xt9_get_the_archive_title();
 
-			// Reset query flags. / クエリフラグをリセット.
-			$wp_query->is_home = false;
-			$wp_query->is_page = false;
+			// Restore original query flags. / クエリフラグを元の値に復元.
+			$wp_query->is_home = $original_is_home;
+			$wp_query->is_page = $original_is_page;
 
 			// Clean up page_for_posts option (show_on_front/page_on_front restored by tearDown).
 			// page_for_posts オプションをクリーンアップ（show_on_front/page_on_front は tearDown で復元）.
