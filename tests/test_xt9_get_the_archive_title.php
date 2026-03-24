@@ -12,6 +12,48 @@
 class Test_Xt9_Get_The_Archive_Title extends WP_UnitTestCase {
 
 	/**
+	 * Store original option values before each test.
+	 * 各テスト前に元のオプション値を保存する.
+	 *
+	 * @var array
+	 */
+	private $original_options = array();
+
+	/**
+	 * Set up test fixtures.
+	 * テストフィクスチャのセットアップ.
+	 */
+	public function set_up() {
+		parent::set_up();
+
+		// Save original option values for later restoration.
+		// 後で復元するために元のオプション値を保存.
+		$this->original_options = array(
+			'show_on_front'  => get_option( 'show_on_front' ),
+			'page_on_front'  => get_option( 'page_on_front' ),
+			'page_for_posts' => get_option( 'page_for_posts' ),
+		);
+	}
+
+	/**
+	 * Tear down test fixtures.
+	 * テストフィクスチャのクリーンアップ.
+	 */
+	public function tear_down() {
+		// Restore original option values to avoid cross-test leakage.
+		// テスト間の副作用を防ぐため元のオプション値を復元.
+		foreach ( $this->original_options as $key => $value ) {
+			if ( false === $value ) {
+				delete_option( $key );
+			} else {
+				update_option( $key, $value );
+			}
+		}
+
+		parent::tear_down();
+	}
+
+	/**
 	 * Test xt9_get_the_archive_title() for category, tag, and author archives.
 	 * カテゴリー・タグ・著者アーカイブの各ケースをテストします。
 	 */
@@ -78,9 +120,9 @@ class Test_Xt9_Get_The_Archive_Title extends WP_UnitTestCase {
 	 * ブログトップページ（is_home() && !is_front_page()）のケースをテストします。
 	 *
 	 * Sets show_on_front to 'page' and assigns a static front page so that
-	 * is_home() and is_front_page() return different values.
+	 * is_home() returns true and is_front_page() returns false.
 	 * show_on_front = 'page' に設定し、フロントページ用固定ページを指定することで
-	 * is_home() と is_front_page() が別々になる状態を再現します。
+	 * is_home() が true、is_front_page() が false になる状態を再現します。
 	 */
 	public function test_xt9_get_the_archive_title_with_page_for_posts() {
 
@@ -102,8 +144,12 @@ class Test_Xt9_Get_The_Archive_Title extends WP_UnitTestCase {
 			)
 		);
 
-		// Configure front page settings to separate home and front page.
-		// フロントページと投稿ページを分離するために show_on_front を 'page' に設定.
+		// Configure front page settings so that is_home() and is_front_page() differ.
+		// is_home() と is_front_page() が別々になるようフロントページ設定を構成.
+		// With show_on_front = 'page', is_front_page() checks is_page( page_on_front )
+		// instead of is_home(), so setting is_home = true won't trigger is_front_page().
+		// show_on_front = 'page' の場合、is_front_page() は is_page( page_on_front ) を
+		// チェックするため、is_home = true でも is_front_page() は false になる.
 		update_option( 'show_on_front', 'page' );
 		update_option( 'page_on_front', $front_page_id );
 
@@ -126,24 +172,29 @@ class Test_Xt9_Get_The_Archive_Title extends WP_UnitTestCase {
 			// Set the page_for_posts option. / page_for_posts オプションを設定.
 			update_option( 'page_for_posts', $case['page_for_posts'] );
 
-			// Set the is_home flag directly to simulate the blog top page state.
-			// ブログトップページの状態を再現するため is_home フラグを直接設定.
+			// Set is_home = true and is_page = true to simulate the blog top page state.
+			// is_page = true ensures is_front_page() checks is_page( page_on_front ), not is_home(),
+			// which guarantees is_front_page() returns false for this request.
+			// ブログトップページの状態を再現するため is_home を true に設定.
+			// is_page = true により is_front_page() が is_page( page_on_front ) で判定され、
+			// このリクエストでは is_front_page() が false になることを保証する.
 			global $wp_query;
 			$wp_query->is_home = true;
+			$wp_query->is_page = true;
 
 			// Execute the function under test. / テスト関数を実行.
 			$actual = xt9_get_the_archive_title();
 
-			// Clean up options and query flags. / オプションとクエリフラグをクリーンアップ.
-			delete_option( 'page_for_posts' );
+			// Reset query flags. / クエリフラグをリセット.
 			$wp_query->is_home = false;
+			$wp_query->is_page = false;
+
+			// Clean up page_for_posts option (show_on_front/page_on_front restored by tearDown).
+			// page_for_posts オプションをクリーンアップ（show_on_front/page_on_front は tearDown で復元）.
+			delete_option( 'page_for_posts' );
 
 			// Assert the expected value. / 期待値をアサート.
 			$this->assertEquals( $case['expected'], $actual, $case['test_condition_name'] );
 		}
-
-		// Restore front page settings. / フロントページ設定を元に戻す.
-		update_option( 'show_on_front', 'posts' );
-		delete_option( 'page_on_front' );
 	}
 }

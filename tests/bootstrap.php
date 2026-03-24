@@ -33,6 +33,14 @@ if ( ! $_tests_dir ) {
 	$_tests_dir = '/tmp/wordpress-tests-lib';
 }
 
+// Verify the tests directory exists before proceeding.
+// 処理を続行する前にテストディレクトリの存在を確認.
+if ( ! file_exists( $_tests_dir . '/includes/functions.php' ) ) {
+	echo "Error: Could not find WordPress test library at {$_tests_dir}/includes/functions.php\n";
+	echo "Please set the WP_TESTS_DIR or WP_PHPUNIT__DIR environment variable to the correct path.\n";
+	exit( 1 );
+}
+
 // Give access to tests_add_filter() function.
 // tests_add_filter() 関数を使えるようにする.
 require_once $_tests_dir . '/includes/functions.php';
