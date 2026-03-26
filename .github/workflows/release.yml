@@ -89,6 +89,14 @@ jobs:
           name: dist
           path: dist/
 
+      - name: Copy test dependencies into dist for phpunit
+        run: |
+          cp -r vendor dist/${{ env.theme_name }}/vendor
+          for f in .phpunit.xml phpunit.xml phpunit.xml.dist; do
+            [ -f "$f" ] && cp "$f" "dist/${{ env.theme_name }}/$f" || true
+          done
+          [ -d tests ] && cp -r tests "dist/${{ env.theme_name }}/tests" || true
+
       - name: Create wp-env.override.json for dist
         run: |
           printf '{"themes": ["./dist/%s"]}' "${{ env.theme_name }}" > wp-env.override.json
