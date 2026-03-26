@@ -5,11 +5,13 @@ on:
     tags:
       - '[0-9]+.[0-9]+.[0-9]+'
 
+env:
+  theme_name: x-t9
+
 jobs:
-  build-and-release:
+  smoke_test:
+    name: Smoke Test
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -28,11 +30,102 @@ jobs:
       - name: Build zip
         run: npm run dist
 
+      - name: Upload dist artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+      - name: Check dist files
+        run: |
+          test -f dist/${{ env.theme_name }}/style.css
+          test -f dist/${{ env.theme_name }}/functions.php
+
+      - name: Create wp-env override for dist
+        run: |
+          printf '{"themes": ["./dist/%s"]}' "${{ env.theme_name }}" > .wp-env.override.json
+
+      - name: Start wp-env (dist)
+        run: |
+          for n in 1 2 3; do npx wp-env start --update && break || [ "$n" -lt 3 ] || exit 1; done
+
+      - name: Smoke test (activate theme)
+        run: npx wp-env run cli wp theme activate ${{ env.theme_name }}
+
+  php_unit:
+    name: PHP Unit Test
+    runs-on: ubuntu-latest
+    needs: smoke_test
+    strategy:
+      matrix:
+        php-versions: ['8.2', '8.3']
+        wp-versions: ['6.9']
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup PHP ${{ matrix.php-versions }}
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-versions }}
+
+      - name: Cache vendor
+        uses: actions/cache@v4
+        with:
+          path: vendor
+          key: ${{ runner.os }}-php${{ matrix.php-versions }}-${{ hashFiles('**/composer.lock') }}
+
+      - name: Install dependencies
+        run: npm install && composer install
+
+      - name: Download dist artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+      - name: Copy test dependencies into dist for phpunit
+        run: |
+          cp -r vendor dist/${{ env.theme_name }}/vendor
+          for f in .phpunit.xml phpunit.xml phpunit.xml.dist; do
+            [ -f "$f" ] && cp "$f" "dist/${{ env.theme_name }}/$f" || true
+          done
+          [ -d tests ] && cp -r tests "dist/${{ env.theme_name }}/tests" || true
+
+      - name: Create .wp-env.override.json for dist
+        run: |
+          printf '{"themes": ["./dist/%s"]}' "${{ env.theme_name }}" > .wp-env.override.json
+
+      - name: Start wp-env
+        run: |
+          for n in 1 2 3; do WP_ENV_PHP_VERSION=${{ matrix.php-versions }} WP_ENV_CORE=WordPress/WordPress#${{ matrix.wp-versions }} npx wp-env start --update && break || [ "$n" -lt 3 ] || exit 1; done
+
+      - name: Run PHPUnit
+        run: npm run phpunit
+
+  release:
+    name: Create Release
+    runs-on: ubuntu-latest
+    needs: [smoke_test, php_unit]
+    permissions:
+      contents: write
+    steps:
+      - name: Download dist artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v2
         with:
-          files: ./dist/x-t9.zip
+          files: ./dist/${{ env.theme_name }}.zip
           generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
