@@ -43,7 +43,7 @@ jobs:
 
       - name: Create wp-env override for dist
         run: |
-          printf '{"themes": ["./dist/%s"]}' "${{ env.theme_name }}" > wp-env.override.json
+          printf '{"themes": ["./dist/%s"]}' "${{ env.theme_name }}" > .wp-env.override.json
 
       - name: Start wp-env (dist)
         run: |
@@ -97,9 +97,9 @@ jobs:
           done
           [ -d tests ] && cp -r tests "dist/${{ env.theme_name }}/tests" || true
 
-      - name: Create wp-env.override.json for dist
+      - name: Create .wp-env.override.json for dist
         run: |
-          printf '{"themes": ["./dist/%s"]}' "${{ env.theme_name }}" > wp-env.override.json
+          printf '{"themes": ["./dist/%s"]}' "${{ env.theme_name }}" > .wp-env.override.json
 
       - name: Start wp-env
         run: |
