@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug Fix ] Fixed binary files (images, fonts, etc.) being corrupted during dist process
+
 = 1.37.4 =
 [ Specification Change / Bug fix ] Replaced clamp string values with fluid object format ( min/max ) for all font sizes except tiny in theme.json typography settings
 [ Specification Change ] Removed hardcoded clamp() override for --wp--preset--font-size--huge in _variables_wp660.scss that was a workaround for a WordPress bug
