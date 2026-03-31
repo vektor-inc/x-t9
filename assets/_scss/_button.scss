@@ -16,6 +16,8 @@ input[type='submit'],
 	}
 	:root & {
 		text-decoration: none;
+	}
+	:root &:not(.is-style-outline) {
 		color: #fff; // BG Secondary and Dark both white
 	}
 }
@@ -48,6 +50,15 @@ input[type='submit'],
 	& > .has-text-color:where(:not(.has-background)):hover {
 		color:#fff !important;
 	}
+}
+
+/* ---------------------------------
+ * VK Blocks Solid button border fix
+ * --------------------------------- */
+// .btn クラスに border-color: primary が指定されるため、
+// プライマリー以外の色を選んだ場合でもボーダーがprimaryカラーになってしまう問題を修正
+.vk_button .vk_button_link:not(.is-style-outline) {
+	border-color: transparent;
 }
 
 /* ---------------------------------
