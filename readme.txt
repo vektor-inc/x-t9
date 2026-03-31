@@ -13,6 +13,9 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Bug Fix ] Fixed an issue where the border color of VK Blocks solid-fill buttons was incorrectly set to the primary color when a non-primary color was selected
+[ Design Bug Fix ] Fixed an issue where the text and border color of VK Blocks outline-style buttons turned white when a non-primary color was selected, which occurred when VK Blocks Pro split loading was enabled
+
 [ Bug Fix ] Fixed binary files (images, fonts, etc.) being corrupted during dist process
 
 = 1.37.4 =
