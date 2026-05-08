@@ -13,7 +13,7 @@
 		"rimraf:css": "npx rimraf assets/_scss/*.css",
 		"build:css": "run-s sass postcss:all rimraf:css sass:woocommerce",
 		"build": "npx gulp convert-dynamic && npx gulp remove-theme-name && npm run build:script && npm run build:css",
-		"watch": "nodemon -e scss --watch assets/_scss -x \"npm run build:css && webpack --config webpack.js --watch && npm run dist\"",
+		"watch": "nodemon -e scss --watch assets/_scss --watch plugin-support/woocommerce/_scss -x \"npm run build:css && webpack --config webpack.js --watch && npm run dist\"",
 		"copy": "npx gulp dist",
 		"zip": "cd dist && zip -r x-t9.zip x-t9",
 		"dist": "run-s build copy zip",
