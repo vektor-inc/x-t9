@@ -49,11 +49,12 @@
     width: 5rem;
 }
 
-/*-------------------------------------------*/
-/*	woocommerce-MyAccount
-/*-------------------------------------------*/
+/* ------------------------------------------- */
+/* woocommerce-MyAccount */
+/* ------------------------------------------- */
 .woocommerce-account {
-	--wc-form-border-color :var(--wp--preset--color--border-normal);
+	--wc-form-border-color: var(--wp--preset--color--border-normal);
+
 	font-size: var(--wp--preset--font-size--small);
 	/* .woocommerce-MyAccount-navigation ********************/
 	.woocommerce-MyAccount-navigation {
@@ -61,14 +62,14 @@
 	}
 	.woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link {
 		padding: 1px 0;
+		border-bottom: 1px solid var(--wp--preset--color--border-normal);
 		&:first-child {
-			border-top:1px solid var(--wp--preset--color--border-normal);
+			border-top: 1px solid var(--wp--preset--color--border-normal);
 		}
-		&:is(.is-active,:hover) a {
+		&:is(.is-active, :hover, :focus-within) a {
 			background-color: var(--wp--preset--color--bg-secondary);
 			text-decoration: none;
 		}
-		border-bottom:1px solid var(--wp--preset--color--border-normal);
 		a {
 			display: block;
 			padding: var(--wp--custom--spacing--xx-small) var(--wp--custom--spacing--x-small);
@@ -76,24 +77,28 @@
 			&:hover {
 				text-decoration: none;
 			}
+			&:focus-visible {
+				outline: 2px solid var(--wp--preset--color--primary);
+				outline-offset: 2px;
+			}
 		}
 	}
 	/* .my-section ********************/
 	.my-section {
-		border:none;
+		border: none;
 		padding: 0;
-		margin-bottom:var(--wp--custom--spacing--large);
+		margin-bottom: var(--wp--custom--spacing--large);
 	}
 	.my-section-title {
-		font-size :var(--wp--preset--font-size--x-large);
-		margin-bottom:var(--wp--custom--spacing--small);
+		font-size: var(--wp--preset--font-size--x-large);
+		margin-bottom: var(--wp--custom--spacing--small);
 		i {
-			margin-right:0.25em;
+			margin-right: 0.25em;
 		}
 	}
 	fieldset {
-		padding:var(--wp--custom--spacing--small);
-		border:1px solid var(--wp--preset--color--border-normal);
+		padding: var(--wp--custom--spacing--small);
+		border: 1px solid var(--wp--preset--color--border-normal);
 		.form-row label {
 			margin-bottom: var(--wp--custom--spacing--xx-small);
 		}
