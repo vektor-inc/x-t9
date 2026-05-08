@@ -14,6 +14,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 == Changelog ==
 
 [ Bug Fix ] Fixed binary files (images, fonts, etc.) being corrupted during dist process
+[ Specification Change ] Added styling for WooCommerce MyAccount, Cart, and Checkout pages
 
 = 1.37.4 =
 [ Specification Change / Bug fix ] Replaced clamp string values with fluid object format ( min/max ) for all font sizes except tiny in theme.json typography settings
