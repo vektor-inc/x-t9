@@ -141,6 +141,14 @@ function x_t9_enqueue_woocommerce_css() {
 }
 add_action( 'wp_enqueue_scripts', 'x_t9_enqueue_woocommerce_css' );
 
+// Snow Monkey Forms が有効な場合のみ Snow Monkey Forms 用の CSS を読み込む
+function x_t9_enqueue_snow_monkey_forms_css() {
+	if ( class_exists( 'Snow_Monkey\Plugin\Forms\Bootstrap' ) ) {
+		wp_enqueue_style( 'x-t9-smf-style', get_template_directory_uri() . '/plugin-support/snow-monkey-forms/css/smf.css', array( 'x-t9-style' ), XT9_THEME_VERSION );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'x_t9_enqueue_snow_monkey_forms_css' );
+
 /**
  * Navigation Submenu block do render menu item description
  * 6.8がリリースされたら削除する
