@@ -17,6 +17,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 [ Specification Change ] Added styling for WooCommerce MyAccount, Cart, and Checkout pages
 [ Dev Environment ] Added plugin-support/woocommerce/_scss to npm run watch targets so that woo.scss changes are detected
 [ Bug Fix ] Fixed an issue where the select arrow was displayed twice on Snow Monkey Forms select boxes
+[ Dev Environment ] Removed unreachable "&& npm run dist" from the watch script since webpack --watch never exits
 
 = 1.37.4 =
 [ Specification Change / Bug fix ] Replaced clamp string values with fluid object format ( min/max ) for all font sizes except tiny in theme.json typography settings
