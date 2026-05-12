@@ -25,6 +25,13 @@
 	max-width: 100%;
 }
 
+.woocommerce .woocommerce-breadcrumb {
+	margin-bottom:0;
+}
+.wc-block-components-notice-banner {
+	margin-top:0;
+}
+
 /*-------------------------------------------*/
 /*	Archive
 /*-------------------------------------------*/
@@ -42,7 +49,10 @@
 /*-------------------------------------------*/
 /*	qty input-text form
 /*-------------------------------------------*/
-.woocommerce :is(.quantity .input-text.qty, .wc-block-add-to-cart-form .quantity .input-text.qty) {
+.woocommerce :is(
+	.quantity .input-text.qty,
+	.wc-block-add-to-cart-form .quantity .input-text.qty
+	) {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     text-align: right;
@@ -102,5 +112,77 @@
 		.form-row label {
 			margin-bottom: var(--wp--custom--spacing--xx-small);
 		}
+	}
+}
+
+/* ------------------------------------------- */
+/* woocommerce-cart-form */
+/* ------------------------------------------- */
+.woocommerce {
+	table.shop_table {
+		border:1px solid var(--wp--preset--color--border-normal);
+		border-collapse:collapse;
+		font-size: var(--wp--preset--font-size--small);
+		th {
+			font-weight: normal;
+			background-color: var(--wp--preset--color--bg-secondary);
+		}
+		img {
+			border:1px solid var(--wp--preset--color--border-normal);
+		}
+		td.product-price,
+		td.product-quantity,
+		td.product-subtotal {
+			text-align: right;
+		}
+		button{ /* クーポンを適用 / お買い物かごを更新 */
+			height:50px;
+		}
+		&.woocommerce-checkout-review-order-table{
+			td:last-child {
+				text-align: right;
+			}
+		}
+	}
+	.woocommerce-cart-form table.shop_table {
+		margin-bottom: var(--wp--custom--spacing--small);
+	}
+}
+
+.woocommerce-cart .cart-collaterals {
+	.cart_totals {
+		h2 {
+			font-weight: normal;
+			margin-bottom:var(--wp--custom--spacing--xx-small);
+		}
+		table {
+			border-collapse:collapse;
+		}
+		.cart-subtotal,
+		.order-total {
+			td {
+				text-align: right;
+			}
+		}
+		.wp-element-button {
+			padding: 0.5em 1em;
+			font-size: var(--wp--preset--font-size--large);
+		}
+	}
+}
+/* ------------------------------------------- */
+/* 商品一覧 */
+/* ------------------------------------------- */
+.wp-block-woocommerce-product-template {
+	h3 {
+		padding: 0;
+		background: none;
+	}
+	li.wc-block-product {
+	display: flex;
+	flex-direction: column;
+	}
+	.wp-block-woocommerce-product-button {
+		margin-top: auto;
 	}
 }
