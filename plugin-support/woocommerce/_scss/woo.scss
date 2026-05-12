@@ -174,10 +174,7 @@
 /* 商品一覧 */
 /* ------------------------------------------- */
 .wp-block-woocommerce-product-template {
-	h3 {
-		padding: 0;
-		background: none;
-	}
+	// カートに追加ボタンなどを下に揃える
 	li.wc-block-product {
 	display: flex;
 	flex-direction: column;
