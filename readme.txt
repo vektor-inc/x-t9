@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei,yukinobu
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.37.4
+Stable tag: 1.38.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+= 1.38.0 =
 [ Bug Fix ] Fixed binary files (images, fonts, etc.) being corrupted during dist process
 [ Specification Change ] Added styling for WooCommerce MyAccount, Cart, and Checkout pages
 [ Dev Environment ] Added plugin-support/woocommerce/_scss to npm run watch targets so that woo.scss changes are detected
