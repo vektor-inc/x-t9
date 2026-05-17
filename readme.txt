@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ New Feature ] Added WooCommerce templates (archive-product, single-product, page-cart, page-checkout, product-search-results)
+
 = 1.38.0 =
 [ Bug Fix ] Fixed binary files (images, fonts, etc.) being corrupted during dist process
 [ Specification Change ] Added styling for WooCommerce MyAccount, Cart, and Checkout pages
