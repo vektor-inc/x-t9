@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+/* ------------------------------------------- */
+/* Snow Monkey Forms                           */
+/* ------------------------------------------- */
+
+/*
+ * テーマの `select` には `assets/images/select-chevron.svg` を背景として表示しているが、
+ * Snow Monkey Forms はセレクトボックスのラッパー（.smf-select-control）側で
+ * .smf-select-control__toggle::before に独自のトグル矢印を表示しているため、
+ * テーマ側の背景画像をそのまま当てると矢印が二重に表示されてしまう。
+ * SMF のトグル矢印はフォーカス時の視覚フィードバックも担っているので、
+ * テーマ側の background-image だけを打ち消すのが妥当。
+ */
+.smf-form .smf-select-control__control {
+	background-image: none;
+}

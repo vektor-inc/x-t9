@@ -91,7 +91,8 @@ jobs:
 
       - name: Copy test dependencies into dist for phpunit
         run: |
-          cp -r vendor dist/${{ env.theme_name }}/vendor
+          rm -rf dist/${{ env.theme_name }}/vendor
+          cp -rL vendor dist/${{ env.theme_name }}/vendor
           for f in .phpunit.xml phpunit.xml phpunit.xml.dist; do
             [ -f "$f" ] && cp "$f" "dist/${{ env.theme_name }}/$f" || true
           done
