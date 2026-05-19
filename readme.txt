@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug Fix ] Fixed a console TypeError ( Cannot read properties of undefined (reading 'offsetHeight') ) on pages without a header tag, which prevented the scroll-related script from running
+
 = 1.38.0 =
 [ Bug Fix ] Fixed binary files (images, fonts, etc.) being corrupted during dist process
 [ Specification Change ] Added styling for WooCommerce MyAccount, Cart, and Checkout pages
