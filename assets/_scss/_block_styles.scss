@@ -59,7 +59,9 @@ body :where(.is-style-main-layout.is-layout-flex) {
 	&.wp-block-group {
 		overflow: visible;
 	}
-
+	// 注 : 
+	// header タグの要素がスクロールする事によってはじめて .header-fixed-active が付与されるため、
+	// header タグのないページでは動作しない。
 	.header-fixed-active & {
 		top: 0;
 
@@ -67,4 +69,11 @@ body :where(.is-style-main-layout.is-layout-flex) {
 			top: var(--wp-admin--admin-bar--height);
 		}
 	}
+}
+// WordPress標準の position 属性。stickyは出力されるのにfixedはフロントでは出力されないため。
+*[class*="is-position-fixed"]{
+	position:fixed;
+	top: calc(0px + var(--wp-admin--admin-bar--height, 0px));
+	width:100%;
+	z-index: 9999;
 }

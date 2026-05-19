@@ -67,3 +67,37 @@ function xt9_enqueue_block_editor_assets() {
 	);
 }
 add_action( 'enqueue_block_editor_assets', 'xt9_enqueue_block_editor_assets' );
+
+/**
+ * Enable the "Fixed" option in the core Position dropdown for the Group block.
+ *
+ * グループブロックの「位置」ドロップダウンにコア標準の Fixed 項目を表示する。
+ * core/group の block.json では supports.position.sticky のみ true で fixed は未設定のため、
+ * block_type_metadata フィルターで supports.position.fixed を true にして補う。
+ * クラス出力（is-position-fixed）やインライン CSS の生成はコア側が処理するので、
+ * テーマでは別途 CSS を用意する必要はない。
+ *
+ * @param array $metadata Block metadata as read from block.json.
+ * @return array Modified block metadata.
+ */
+function xt9_enable_group_fixed_position( $metadata ) {
+	// 対象は core/group のみ。
+	// Only target the core/group block.
+	if ( ! isset( $metadata['name'] ) || 'core/group' !== $metadata['name'] ) {
+		return $metadata;
+	}
+
+	// supports / supports.position が未定義のケースに備えて初期化する。
+	// Initialize in case supports / supports.position is missing.
+	if ( ! isset( $metadata['supports'] ) || ! is_array( $metadata['supports'] ) ) {
+		$metadata['supports'] = array();
+	}
+	if ( ! isset( $metadata['supports']['position'] ) || ! is_array( $metadata['supports']['position'] ) ) {
+		$metadata['supports']['position'] = array();
+	}
+
+	$metadata['supports']['position']['fixed'] = true;
+
+	return $metadata;
+}
+add_filter( 'block_type_metadata', 'xt9_enable_group_fixed_position' );

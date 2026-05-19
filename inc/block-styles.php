@@ -124,7 +124,7 @@ add_action(
 			'core/group',
 			array(
 				'name'         => 'scrolled-header-fixed',
-				'label'        => __( 'Fixed header', 'x-t9' ),
+				'label'        => __( 'Header: Scrolled', 'x-t9' ),
 				'style_handle' => 'x-t9-style',
 			),
 		);
