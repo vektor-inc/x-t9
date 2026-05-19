@@ -7,7 +7,8 @@
 			"wideSize": "calc( var(--wp--style--global--content-size) + ( 100vw - var(--wp--style--global--content-size) ) / 2 )"
 		},
 		"position": {
-			"sticky": true
+			"sticky": true,
+			"fixed": true
 		},
 		"dimensions": {
 			"minHeight": true,
