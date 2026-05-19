@@ -14,6 +14,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 == Changelog ==
 
 [ New Feature ][ Group Block ] Added "Header: Fixed" and "Header: Sticky" block styles
+[ New Feature ][ Group Block ] Enabled the "Fixed" option in the core Position dropdown by adding supports.position.fixed to core/group
 [ Specification Change ][ Group Block ] Renamed the existing "Fixed header" block style label to "Header: Scrolled" ( internal name "scrolled-header-fixed" is kept for backward compatibility )
 [ Bug Fix ] Fixed a console TypeError ( Cannot read properties of undefined (reading 'offsetHeight') ) on pages without a header tag, which prevented the scroll-related script from running
 
