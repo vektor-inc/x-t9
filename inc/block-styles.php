@@ -119,14 +119,34 @@ add_action(
 			),
 		);
 
-		/* Scrolled ----------------------------------------------------------- */
+		/* Header Setting ----------------------------------------------------- */
+		// グループブロックをヘッダーとして使う際の表示方式を選べる Block Style 群
+		// Block styles that let a Group block be used as a header with different display modes
 		register_block_style(
 			'core/group',
 			array(
+				// 本当は header--scrolled に変更したいが、旧版利用者が混乱するためそのまま
+				// 'name'         => 'header--scrolled',
 				'name'         => 'scrolled-header-fixed',
-				'label'        => __( 'Fixed header', 'x-t9' ),
+				'label'        => __( 'Header: Scrolled', 'x-t9' ),
 				'style_handle' => 'x-t9-style',
-			),
+			)
+		);
+		register_block_style(
+			'core/group',
+			array(
+				'name'         => 'header--fixed',
+				'label'        => __( 'Header: Fixed', 'x-t9' ),
+				'style_handle' => 'x-t9-style',
+			)
+		);
+		register_block_style(
+			'core/group',
+			array(
+				'name'         => 'header--sticky',
+				'label'        => __( 'Header: Sticky', 'x-t9' ),
+				'style_handle' => 'x-t9-style',
+			)
 		);
 	}
 );

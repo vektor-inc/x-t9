@@ -68,3 +68,15 @@ body :where(.is-style-main-layout.is-layout-flex) {
 		}
 	}
 }
+*[class*="header--fixed"]{
+	position:fixed;
+	top: calc(0px + var(--wp-admin--admin-bar--height, 0px));
+	width:100%;
+	z-index: 9999;
+}
+*[class*="header--sticky"]{
+	position:sticky;
+	top: calc(0px + var(--wp-admin--admin-bar--height, 0px));
+	width:100%;
+	z-index: 9999;
+}
