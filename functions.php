@@ -64,6 +64,10 @@ require get_template_directory() . '/inc/layout-helpers.php';
 require get_template_directory() . '/inc/block-patterns.php';
 // Add Block Styles.
 require get_template_directory() . '/inc/block-styles.php';
+// Typography control defaults for the editor inspector (WordPress 6.6+).
+if ( version_compare( get_bloginfo( 'version' ), '6.6', '>=' ) ) {
+	require get_template_directory() . '/inc/typography-defaults.php';
+}
 // Load TGM.
 require get_template_directory() . '/inc/tgm-plugin-activation/tgm-config.php';
 

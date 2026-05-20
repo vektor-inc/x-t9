@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ] Show font family, font size, appearance ( style / weight ), line height, and letter spacing typography controls by default in the editor inspector for blocks that support typography ( previously hidden behind the three-dot menu ); applied via supports.typography.__experimentalDefaultControls in the block_type_metadata filter
 [ New Feature ][ Group Block ] Enabled the core "Position: Fixed" option for the Group block ( supports.position.fixed via block_type_metadata filter + settings.position.fixed in theme.json, with frontend / editor CSS for is-position-fixed )
 [ Specification Change ][ Group Block ] Renamed the existing "Fixed header" block style label to "Header: Scrolled" ( internal name "scrolled-header-fixed" is kept for backward compatibility )
 [ Bug Fix ] Fixed a console TypeError ( Cannot read properties of undefined (reading 'offsetHeight') ) on pages without a header tag, which prevented the scroll-related script from running
