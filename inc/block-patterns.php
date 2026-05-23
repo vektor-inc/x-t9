@@ -69,6 +69,7 @@ function xt9_register_block_patterns() {
 		'query-image-left',
 		'query-subcontent',
 		'post-template-image-left', // used by loop-archive.html.
+		'navigation-overlay/overlay-default',
 	);
 
 	/**

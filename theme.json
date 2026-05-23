@@ -519,6 +519,11 @@
 			"area": "header"
 		},
 		{
+			"name": "navigation-overlay",
+			"title": "Navigation Overlay",
+			"area": "navigation-overlay"
+		},
+		{
 			"name": "loop-archive",
 			"title": "Loop Archive ( Deprecated )",
 			"area": "uncategorized"
