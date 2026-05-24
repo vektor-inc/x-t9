@@ -174,11 +174,13 @@ Overlay : allways ***********************
  *  Submenu Click
  */
  .wp-block-navigation .wp-block-navigation-item.open-on-click {
-	.wp-block-navigation-submenu__toggle {
-		padding-right: calc( var(--nav-top-item-padding-horizontal) + 1.2em );
+	// 詳細度を軽くするとエディタで WordPress コアの CSS に負けるので注意
+	button.wp-block-navigation-item__content:not(.wp-block-navigation-submenu__toggle),
+	.wp-block-navigation-item__content {
+		padding-right: calc( var(--nav-top-item-padding-horizontal) + 1.8em );
 	}
-	.wp-block-navigation-submenu__toggle+.wp-block-navigation__submenu-icon {
-		margin-left:-1.2em;
+	.wp-block-navigation-item__content+.wp-block-navigation__submenu-icon {
+		margin-left:-1.8em;
 	}
 }
 
@@ -249,10 +251,6 @@ Overlay : allways ***********************
 		}
 	}
 
-	// .wp-block-navigation-item .wp-block-site-logo a {
-	// 	padding: 1em var(--wp--custom--spacing--menu-indent);
-	// }
-
 	.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
 		.wp-block-navigation-item {
 			.wp-block-navigation-item__content {
@@ -287,6 +285,10 @@ Overlay : allways ***********************
 	.wp-block-navigation-item__content {
 		padding-left: var(--nav-top-item-padding-horizontal);
 	}
+	// エディタでコアが出力するCSSを上書きするため
+	.open-on-click .wp-block-navigation-item__content:not(.wp-block-navigation-submenu__toggle) {
+		padding-left: var(--nav-top-item-padding-horizontal);
+	}
 	&:not(.has-background) .wp-block-navigation__submenu-container,
 	.wp-block-navigation__submenu-container{
 		border: none; // コアが border を付与してくるので打ち消す
@@ -305,7 +307,7 @@ Overlay : allways ***********************
 			&:hover {
 				background-color: var(--wp--preset--color--primary-hover);
 			}
-			*:where(:not(.is-style-nav--text-inline)) &.has-child>a {
+			*:where(:not(.is-style-nav--text-inline)) &.has-child>.wp-block-navigation-item__content {
 				// Additional Padding for submenu-icon
 				padding-right: calc(var(--submenu-icon-size) + var(--nav-top-item-padding-horizontal) + 0.5em);
 			}
@@ -321,5 +323,13 @@ Overlay : allways ***********************
  *  Vertical Navigation common styles
  */
  :where( .wp-block-navigation.is-vertical ) {
-	// nothing now
+	// エディタで open-on-click の時にコアが出力してくる padding:0 の上書き
+	// ※ナビは処理が複雑で eidtor.scss に分けると影響関係がわからなくなるのでこちらに記載
+	.wp-block-navigation-item.open-on-click {
+		button.wp-block-navigation-item__content:not(.wp-block-navigation-submenu__toggle) {
+			padding-top: 0.5em;
+			padding-bottom: 0.5em;
+		}
+	}
 }
+
