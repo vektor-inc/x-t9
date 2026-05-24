@@ -3,7 +3,6 @@
  */
 
  /*
-
 // HTML hierarchy
 .wp-block-navigation {
 	.wp-block-navigation__responsive-container {
@@ -20,6 +19,21 @@
 		}
 	}
 }
+
+Direction : horizontal ***********************
+.wp-block-navigation.is-horizontal
+
+Direction : vertical ***********************
+.wp-block-navigation.is-vertical
+
+Submenu Display : hover ***********************
+.wp-block-navigation-submenu
+
+Submenu Display : click ***********************
+.wp-block-navigation-submenu.open-on-click
+
+Submenu Display : always ***********************
+.wp-block-navigation-submenu.open-always
 
 Overlay : off ***********************
 .wp-block-navigation
@@ -139,8 +153,39 @@ Overlay : allways ***********************
 	}
  }
 
+ /****************************************************** 
+ *  Submenu always
+ */
+// 7.0 のサブメニュー常時表示で gap が付与されてしまうので打ち消し
+// セレクタを弱くしてしまうとコアに負けるので注意
+.wp-block-navigation .wp-block-navigation-submenu.open-always.has-child {
+	gap:0;
+	.wp-block-navigation__submenu-container {
+		padding-left:0;
+		padding-right:0;
+		gap:0;
+		.wp-block-navigation-submenu {
+			gap:0;
+		}
+	}
+}
+
 /****************************************************** 
- * Sub Navigation Styles
+ *  Submenu Click
+ */
+ .wp-block-navigation .wp-block-navigation-item.open-on-click {
+	// 詳細度を軽くするとエディタで WordPress コアの CSS に負けるので注意
+	button.wp-block-navigation-item__content:not(.wp-block-navigation-submenu__toggle),
+	.wp-block-navigation-item__content {
+		padding-right: calc( var(--nav-top-item-padding-horizontal) + 1.8em );
+	}
+	.wp-block-navigation-item__content+.wp-block-navigation__submenu-icon {
+		margin-left:-1.8em;
+	}
+}
+
+/****************************************************** 
+ * Submenu Styles
  */
 .wp-block-navigation{
 	// Override the padding specified by WordPress 6.9
@@ -206,10 +251,6 @@ Overlay : allways ***********************
 		}
 	}
 
-	// .wp-block-navigation-item .wp-block-site-logo a {
-	// 	padding: 1em var(--wp--custom--spacing--menu-indent);
-	// }
-
 	.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
 		.wp-block-navigation-item {
 			.wp-block-navigation-item__content {
@@ -240,8 +281,13 @@ Overlay : allways ***********************
 /****************************************************** 
  *  Horizontal Navigation common styles
  */
- .wp-block-navigation:where(:not(.is-vertical,.is-style-nav--vertical-with-hr-and-no-fold,.is-style-nav--vertical-with-hr )) {
+ .wp-block-navigation:is(.is-horizontal) {
 	.wp-block-navigation-item__content {
+		padding-left: var(--nav-top-item-padding-horizontal);
+	}
+
+	// エディタでコアが出力するCSSを上書きするため
+	.open-on-click .wp-block-navigation-item__content:not(.wp-block-navigation-submenu__toggle) {
 		padding-left: var(--nav-top-item-padding-horizontal);
 	}
 	&:not(.has-background) .wp-block-navigation__submenu-container,
@@ -262,10 +308,6 @@ Overlay : allways ***********************
 			&:hover {
 				background-color: var(--wp--preset--color--primary-hover);
 			}
-			*:where(:not(.is-style-nav--text-inline)) &.has-child>a {
-				// Additional Padding for submenu-icon
-				padding-right: calc(var(--submenu-icon-size) + var(--nav-top-item-padding-horizontal) + 0.5em);
-			}
 		}
 		&:where(:not(.has-text-color)) {
 			.wp-block-navigation-item {
@@ -278,5 +320,13 @@ Overlay : allways ***********************
  *  Vertical Navigation common styles
  */
  :where( .wp-block-navigation.is-vertical ) {
-	// nothing now
+	// エディタで open-on-click の時にコアが出力してくる padding:0 の上書き
+	// ※ナビは処理が複雑で eidtor.scss に分けると影響関係がわからなくなるのでこちらに記載
+	.wp-block-navigation-item.open-on-click {
+		button.wp-block-navigation-item__content:not(.wp-block-navigation-submenu__toggle) {
+			padding-top: 0.5em;
+			padding-bottom: 0.5em;
+		}
+	}
 }
+
