@@ -214,6 +214,19 @@
 	.wp-block-navigation-item__content:hover {
 		background-color: rgba(0,0,0,0.05);
 	}
+
+	// 7.0 のサブメニュー常時表示で gap が付与されてしまうので打ち消し
+	.has-child.open-always {
+		gap:0;
+		.wp-block-navigation__submenu-container {
+			padding-left:0;
+			padding-right:0;
+			gap:0;
+			.wp-block-navigation-submenu {
+				gap:0;
+			}
+		}
+	}
 }
 
 /****************************************************** 
