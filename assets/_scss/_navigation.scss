@@ -285,6 +285,7 @@ Overlay : allways ***********************
 	.wp-block-navigation-item__content {
 		padding-left: var(--nav-top-item-padding-horizontal);
 	}
+
 	// エディタでコアが出力するCSSを上書きするため
 	.open-on-click .wp-block-navigation-item__content:not(.wp-block-navigation-submenu__toggle) {
 		padding-left: var(--nav-top-item-padding-horizontal);
@@ -307,10 +308,6 @@ Overlay : allways ***********************
 			&:hover {
 				background-color: var(--wp--preset--color--primary-hover);
 			}
-			*:where(:not(.is-style-nav--text-inline)) &.has-child>.wp-block-navigation-item__content {
-				// Additional Padding for submenu-icon
-				padding-right: calc(var(--submenu-icon-size) + var(--nav-top-item-padding-horizontal) + 0.5em);
-			}
 		}
 		&:where(:not(.has-text-color)) {
 			.wp-block-navigation-item {
@@ -323,6 +320,7 @@ Overlay : allways ***********************
  *  Vertical Navigation common styles
  */
  :where( .wp-block-navigation.is-vertical ) {
+
 	// エディタで open-on-click の時にコアが出力してくる padding:0 の上書き
 	// ※ナビは処理が複雑で eidtor.scss に分けると影響関係がわからなくなるのでこちらに記載
 	.wp-block-navigation-item.open-on-click {
