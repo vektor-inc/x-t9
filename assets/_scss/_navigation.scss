@@ -320,7 +320,6 @@ Overlay : allways ***********************
  *  Vertical Navigation common styles
  */
  :where( .wp-block-navigation.is-vertical ) {
-
 	// エディタで open-on-click の時にコアが出力してくる padding:0 の上書き
 	// ※ナビは処理が複雑で eidtor.scss に分けると影響関係がわからなくなるのでこちらに記載
 	.wp-block-navigation-item.open-on-click {
