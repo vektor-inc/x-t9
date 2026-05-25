@@ -1,12 +1,12 @@
 <?php
 /**
- * Sticky | Logo --- Nav - Contact
+ * Sticky | Logo -- Nav - Contact
  *
  * @package vektor-inc/x-t9
  */
 
 return array(
-	'title'      => __( 'Sticky | Logo --- Nav - Contact', 'x-t9' ),
+	'title'      => __( 'Sticky | Logo -- Nav - Contact', 'x-t9' ),
 	'categories' => array( 'header' ),
 	'blockTypes' => array( 'core/template-part/header' ),
 	'content'    => '<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"left":"0rem","right":"0rem"}},"position":{"type":"sticky","top":"0px"}},"backgroundColor":"bg-primary","layout":{"inherit":true,"type":"constrained"}} -->
