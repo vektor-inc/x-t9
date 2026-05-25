@@ -66,6 +66,7 @@ function xt9_register_block_patterns() {
 		'header/logo-nav---contact',
 		'header/logo-title--sns-contact__nav',
 		'header/sticky___logo--nav-contact',
+		'header/fixed-trans___logo--nav-contact',
 		'hidden-404',
 		'sidebar/sidebar-post-category-and-archive',
 		'query-image-left',
