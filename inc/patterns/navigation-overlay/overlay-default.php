@@ -32,6 +32,10 @@ return array(
 <div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","width":100} -->
 <div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link has-primary-background-color has-background wp-element-button">Contact</a></div>
 <!-- /wp:button --></div>
-<!-- /wp:buttons --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:spacer {"className":"is-style-spacer-md"} -->
+<div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-md"></div>
+<!-- /wp:spacer --></div>
 <!-- /wp:group -->',
 );
