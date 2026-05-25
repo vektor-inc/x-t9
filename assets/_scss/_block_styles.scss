@@ -79,5 +79,5 @@ body :where(.is-style-main-layout.is-layout-flex) {
 }
 header:has([class*="is-position-sticky"]){
 	position: sticky;
-	top:0;
+	top: calc(0px + var(--wp-admin--admin-bar--height, 0px));
 }
