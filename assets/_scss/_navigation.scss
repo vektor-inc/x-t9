@@ -52,6 +52,11 @@ Overlay : allways ***********************
 			& > .wp-block-navigation__container.is-responsive
 */
 
+// global-style で margin-block-start : 0 が出力されるが、
+// theme.json でまだ上書きできないっぽいので応急措置で上書き
+.admin-bar .wp-block-navigation-overlay-close{
+	margin-block-start:var(--wp-admin--admin-bar--height, 0px);
+}
 
 .wp-block-navigation {
 

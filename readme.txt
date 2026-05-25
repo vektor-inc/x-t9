@@ -20,6 +20,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 [ New Feature ][ Group Block ] Enabled the core "Position: Fixed" option for the Group block ( supports.position.fixed via block_type_metadata filter + settings.position.fixed in theme.json, with frontend / editor CSS for is-position-fixed )
 [ Specification Change ][ Group Block ] Renamed the existing "Fixed header" block style label to "Header: Scrolled" ( internal name "scrolled-header-fixed" is kept for backward compatibility )
 [ Bug Fix ] Fixed a console TypeError ( Cannot read properties of undefined (reading 'offsetHeight') ) on pages without a header tag, which prevented the scroll-related script from running
+[ New Feature ] Added "Sticky | Logo --- Nav - Contact" header pattern with position: sticky support
 
 = 1.38.0 =
 [ Bug Fix ] Fixed binary files (images, fonts, etc.) being corrupted during dist process
