@@ -77,3 +77,7 @@ body :where(.is-style-main-layout.is-layout-flex) {
 	width:100%;
 	z-index: 9999;
 }
+header:has([class*="is-position-sticky"]){
+	position: sticky;
+	top:0;
+}
