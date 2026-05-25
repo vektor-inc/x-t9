@@ -22,16 +22,9 @@
 @import "plugin-override/vk-blocks-override";
 @import "plugin-override/vk-blocks-override-width";
 
-html {
-	height: 100%; // to be footer bottom sticky
-
-	@media (min-width:601px) {
-		height: calc(100% - var(--wp-admin--admin-bar--height, 0px));
-	}
-}
-
+// For header and footer sticky
 .wp-site-blocks {
-	min-height: 100vh;     // viewport 高さ「以上」を保証（コンテンツが長くても大丈夫）
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	> main {
