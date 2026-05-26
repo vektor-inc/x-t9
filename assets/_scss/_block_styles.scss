@@ -70,6 +70,7 @@ body :where(.is-style-main-layout.is-layout-flex) {
 		}
 	}
 }
+
 // WordPress標準の position 属性。sticky は出力されるのに fixed はフロントでは出力されないため。
 // ヒーローエリアのカバーの最上部に固定する時になどに使用
 // ※ --wp-admin--admin-bar--height: 0; とか下手に定義すると、calcが効かなくて上部固定にならなくなるので注意
