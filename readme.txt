@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei,yukinobu
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.38.0
+Stable tag: 1.39.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+= 1.39.0 =
 [ New Feature ] Added "Navigation Overlay" template part area and a default overlay pattern for full-screen navigation
 [ Bug Fix ][ Navigation Block ] Fixed display issues on WordPress 7.0 ( updated selectors to handle the new submenu toggle button markup, cancelled the unwanted gap on always-open submenus, and adjusted padding for "Open on click" in the editor )
 [ Design Bug Fix ] Fixed an issue where buttons with a background color lost their padding ( excluded .wp-element-button from the .has-background padding reset )
