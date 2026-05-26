@@ -21,6 +21,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 [ Specification Change ][ Group Block ] Renamed the existing "Fixed header" block style label to "Header: Scrolled" ( internal name "scrolled-header-fixed" is kept for backward compatibility )
 [ Bug Fix ] Fixed a console TypeError ( Cannot read properties of undefined (reading 'offsetHeight') ) on pages without a header tag, which prevented the scroll-related script from running
 [ New Feature ] Added "Sticky | Logo --- Nav - Contact" header pattern with position: sticky support
+[ New Feature ] Added "Fixed Trans | Logo -- Nav - Contact" header pattern with a fixed transparent header layout
 [ New Feature ] Added "Transparent Header and Hero Area" header pattern combining a fixed transparent header with a full-height cover hero area
 
 = 1.38.0 =
