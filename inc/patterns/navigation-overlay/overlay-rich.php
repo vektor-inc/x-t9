@@ -84,7 +84,7 @@ return array(
 <div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-md"></div>
 <!-- /wp:spacer -->
 
-<!-- wp:navigation {"showSubmenuIcon":false,"submenuVisibility":"click","overlayMenu":"never","className":"is-style-nav\u002d\u002dvertical-with-hr","layout":{"orientation":"vertical"}} /-->
+<!-- wp:navigation {"showSubmenuIcon":false,"submenuVisibility":"always","overlayMenu":"never","className":"is-style-nav\u002d\u002dvertical-with-hr","layout":{"orientation":"vertical"}} /-->
 
 <!-- wp:spacer {"height":"35px","className":"is-style-spacer-sm"} -->
 <div style="height:35px" aria-hidden="true" class="wp-block-spacer is-style-spacer-sm"></div>

@@ -22,7 +22,7 @@ return array(
 <hr class="wp-block-separator has-text-color has-border-normal-color has-alpha-channel-opacity has-border-normal-background-color has-background is-style-wide"/>
 <!-- /wp:separator -->
 
-<!-- wp:navigation {"textColor":"text-normal","showSubmenuIcon":false,"submenuVisibility":"click","overlayMenu":"never","className":"is-style-nav\u002d\u002dvertical-with-hr","layout":{"orientation":"vertical"}} /-->
+<!-- wp:navigation {"textColor":"text-normal","showSubmenuIcon":false,"submenuVisibility":"always","overlayMenu":"never","className":"is-style-nav\u002d\u002dvertical-with-hr","layout":{"orientation":"vertical"}} /-->
 
 <!-- wp:spacer {"className":"is-style-spacer-md"} -->
 <div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-md"></div>
