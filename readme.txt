@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei,yukinobu
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.39.0
+Stable tag: 1.39.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+= 1.39.1 =
 [ Design Bug Fix ][ Navigation Block ] Fixed an issue where overlay navigation items were displayed with x-small font size by limiting x-small font size to horizontal navigation submenu items only
 
 = 1.39.0 =
