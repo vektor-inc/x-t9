@@ -1,8 +1,8 @@
 === X-T9 ===
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei,yukinobu
-Tested up to: 6.9
+Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.39.1
+Stable tag: 1.39.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,6 +12,9 @@ The X-T9 is designed on the premise of full site editing function, and the user 
 GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
+
+= 1.39.2 =
+[ Specification Change ] Updated WordPress version requirement to 7.0 or higher (Requires at least: 6.5 → 7.0, Tested up to: 6.9 → 7.0)
 
 = 1.39.1 =
 [ Design Bug Fix ][ Navigation Block ] Fixed an issue where overlay navigation items were displayed with x-small font size by limiting x-small font size to horizontal navigation submenu items only
