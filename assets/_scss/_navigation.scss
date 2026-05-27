@@ -208,7 +208,6 @@ Overlay : allways ***********************
 			}
 
 			.wp-block-navigation-item {
-				font-size: var(--wp--preset--font-size--x-small);
 				&__content {
 					font-weight: normal;
 				}
@@ -287,6 +286,14 @@ Overlay : allways ***********************
  *  Horizontal Navigation common styles
  */
  .wp-block-navigation:is(.is-horizontal) {
+	// 横メニューのサブメニューでのみ文字サイズが小さくなるように
+	&:where(:not(:has(.has-modal-open))) {
+		:where(.wp-block-navigation__submenu-container) {
+			:where(.wp-block-navigation-item) {
+				font-size: var(--wp--preset--font-size--x-small);
+			}
+		}
+	}
 	.wp-block-navigation-item__content {
 		padding-left: var(--nav-top-item-padding-horizontal);
 	}

@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Bug Fix ][ Navigation Block ] Fixed an issue where overlay navigation items were displayed with x-small font size by limiting x-small font size to horizontal navigation submenu items only
+
 = 1.39.0 =
 [ New Feature ] Added "Navigation Overlay" template part area and a default overlay pattern for full-screen navigation
 [ Bug Fix ][ Navigation Block ] Fixed display issues on WordPress 7.0 ( updated selectors to handle the new submenu toggle button markup, cancelled the unwanted gap on always-open submenus, and adjusted padding for "Open on click" in the editor )
