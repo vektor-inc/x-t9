@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug Fix ][ Navigation Block ] Fixed an issue where high CSS specificity of submenu styles affected customization
+
 = 1.39.2 =
 [ Specification Change ] Updated WordPress version requirement to 7.0 or higher (Requires at least: 6.5 → 7.0, Tested up to: 6.9 → 7.0)
 
