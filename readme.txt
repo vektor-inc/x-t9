@@ -13,7 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
-[ Spec Change ][ Navigation Block ] Lowered CSS specificity of submenu container styles using :where() to allow easier style overrides from the site editor
+[ Spec Change ][ Navigation Block ] Lowered CSS specificity of submenu container with :where() to allow style overrides
 
 = 1.39.2 =
 [ Specification Change ] Updated WordPress version requirement to 7.0 or higher (Requires at least: 6.5 → 7.0, Tested up to: 6.9 → 7.0)
