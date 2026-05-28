@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei,yukinobu
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.39.2
+Stable tag: 1.40.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+= 1.40.0 =
 [ New Feature ] Added support for the text columns feature introduced in WordPress 7.0
 [ Bug Fix ][ Navigation Block ] Fixed an issue where high CSS specificity of submenu styles affected customization
 
