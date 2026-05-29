@@ -1,15 +1,18 @@
 <?php
 /**
- * Overlay Default
+ * Title: Overlay Default
+ * Slug: x-t9/navigation-overlay/overlay-default
+ * Categories: navigation
+ * Block Types: core/template-part/navigation-overlay
+ * Description:
  *
- * @package vektor-inc/x-t9
+ * @package WordPress
+ * @subpackage x-t9
+ * @since X-T9 1.0
  */
 
-return array(
-	'title'      => __( 'Overlay Default', 'x-t9' ),
-	'categories' => array( 'navigation' ),
-	'blockTypes' => array( 'core/template-part/navigation-overlay' ),
-	'content'    => '<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}},"dimensions":{"minHeight":"100svh"},"typography":{"fontStyle":"normal","fontWeight":"400"}},"backgroundColor":"bg-primary","layout":{"type":"constrained"}} -->
+?>
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}},"dimensions":{"minHeight":"100svh"},"typography":{"fontStyle":"normal","fontWeight":"400"}},"backgroundColor":"bg-primary","layout":{"type":"constrained"}} -->
 <div class="wp-block-group has-bg-primary-background-color has-background" style="min-height:100svh;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40);font-style:normal;font-weight:400"><!-- wp:navigation-overlay-close /-->
 
 <!-- wp:search {"showLabel":false,"width":100,"widthUnit":"%","buttonText":"","buttonUseIcon":true,"style":{"spacing":{"margin":{"right":"var:preset|spacing|40","left":"var:preset|spacing|40"}}}} /-->
@@ -37,5 +40,4 @@ return array(
 <!-- wp:spacer {"className":"is-style-spacer-md"} -->
 <div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-md"></div>
 <!-- /wp:spacer --></div>
-<!-- /wp:group -->',
-);
+<!-- /wp:group -->

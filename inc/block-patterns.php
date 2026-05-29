@@ -6,7 +6,13 @@
  */
 
 /**
- * Registers block patterns and categories.
+ * Registers block pattern categories.
+ *
+ * パターン本体は WordPress 標準の /patterns ディレクトリから自動登録されるため、
+ * ここではカテゴリーのラベル登録のみを行う。
+ *
+ * Pattern files themselves are auto-registered by WordPress core from the
+ * theme's /patterns directory, so this only registers the category labels.
  *
  * @since X-T9 1.0
  *
@@ -46,45 +52,6 @@ function xt9_register_block_patterns() {
 		if ( ! WP_Block_Pattern_Categories_Registry::get_instance()->is_registered( $name ) ) {
 			register_block_pattern_category( $name, $properties );
 		}
-	}
-
-	$block_patterns = array(
-		'pr-contents/columns-menu',
-		'layout/sidebar-right',
-		'featured/featured-columns-menu',
-		'featured/featured-hero-media-and-text',
-		'featured/featured-post-list',
-		'footer/footer-bg-dark',
-		'footer/footer-bg-dark-3col',
-		'footer/footer-bg-secondary',
-		'footer/footer-bg-secondary-3col',
-		'footer/footer-bg-secondary-logo-nav-float',
-		'footer/footer-bg-secondary-center-nav',
-		'hidden-404',
-		'sidebar/sidebar-post-category-and-archive',
-		'query-image-left',
-		'query-subcontent',
-		'post-template-image-left', // used by loop-archive.html.
-		'navigation-overlay/overlay-default',
-		'navigation-overlay/overlay-rich',
-	);
-
-	/**
-	 * Filters the theme block patterns.
-	 *
-	 * @since X-T9 1.0
-	 *
-	 * @param array $block_patterns List of block patterns by name.
-	 */
-	$block_patterns = apply_filters( 'xt9_block_patterns', $block_patterns );
-
-	foreach ( $block_patterns as $block_pattern ) {
-		$pattern_file = get_theme_file_path( '/inc/patterns/' . $block_pattern . '.php' );
-
-		register_block_pattern(
-			'x-t9/' . $block_pattern,
-			require $pattern_file
-		);
 	}
 }
 add_action( 'init', 'xt9_register_block_patterns', 9 );
