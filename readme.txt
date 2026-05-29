@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Specification Change ] Show only the theme's own block patterns in the block inserter by disabling the core bundled patterns and the WordPress.org remote pattern directory
+
 = 1.40.0 =
 [ New Feature ] Added support for the text columns feature introduced in WordPress 7.0
 [ Bug Fix ][ Navigation Block ] Fixed an issue where high CSS specificity of submenu styles affected customization
