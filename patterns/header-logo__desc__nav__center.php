@@ -8,7 +8,7 @@
  *
  * @package WordPress
  * @subpackage x-t9
- * @since X-T9 1.0
+ * @since X-T9 1.0.0
  */
 
 ?>
