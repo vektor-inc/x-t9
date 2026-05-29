@@ -176,3 +176,7 @@ if ( version_compare( preg_replace('/[^0-9.]/', '', $version), '6.8', '<' ) ) {
 	// Run with a version earlier than 6.8 (excluding 6.8 RC and Beta versions)
     add_filter( 'render_block', 'xt9_add_description_to_navigation_items', 10, 2 );
 }
+
+// 旧バージョンから子テーマ作って block-patterns.php まで複製されてると、
+// 直接古いパターンファイルを require されると Fatal Error になるため、フォールバックとして古い形式のパターン読み込み関数を外している。
+remove_action( 'init', 'xt9_register_block_patterns', 9 );
