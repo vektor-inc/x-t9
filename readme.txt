@@ -13,6 +13,9 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Bug Fix ] Fixed an issue where the border color of VK Blocks solid-fill buttons was incorrectly set to the primary color when a non-primary color was selected
+[ Design Bug Fix ] Fixed an issue where the text and border color of VK Blocks outline-style buttons turned white when a non-primary color was selected, which occurred when VK Blocks Pro split loading was enabled
+
 = 1.40.0 =
 [ New Feature ] Added support for the text columns feature introduced in WordPress 7.0
 [ Bug Fix ][ Navigation Block ] Fixed an issue where high CSS specificity of submenu styles affected customization
