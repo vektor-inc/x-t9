@@ -13,6 +13,9 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Spec Change ] Moved block patterns to the WordPress standard /patterns directory so they are auto-registered by core ( previously registered via register_block_pattern() from /inc/patterns )
+[ Bug Fix ] Fixed a fatal error that could occur in child themes created from older versions, by removing the legacy pattern registration hook that tried to require deleted pattern files
+[ Design Bug Fix ] Fixed an issue where patterns using Position: Fixed were not displayed in the editor pattern preview
 [ Design Bug Fix ] Fixed an issue where the border color of VK Blocks solid-fill buttons was incorrectly set to the primary color when a non-primary color was selected
 [ Design Bug Fix ] Fixed an issue where the text and border color of VK Blocks outline-style buttons turned white when a non-primary color was selected, which occurred when VK Blocks Pro split loading was enabled
 
