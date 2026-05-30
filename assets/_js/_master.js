@@ -15,9 +15,11 @@
     window.addEventListener('DOMContentLoaded', bodyClass, false)
 
     // ヘッダー要素がない場合の判別
+    // getElementsByTagName は要素ゼロでも空の HTMLCollection（truthy）を返すため、
+    // 要素数で判定する必要がある。
     const siteHeader = document.getElementsByTagName('header');
 
-    if( xt9Opt.header_scrool && siteHeader ){
+    if( xt9Opt.header_scrool && siteHeader.length > 0 ){
 
         // ヘッダーの元の高さを取得
 		// Get Header Height
@@ -28,19 +30,19 @@
 
         let header_scrool_func = ()=>{
 
-            let siteHeader = document.getElementsByTagName('header');
-            let siteHeaderNext = siteHeader.nextElementSibling;
+            // HTMLCollection ではなく実要素に対して nextElementSibling を呼ぶ必要がある。
+            let siteHeaderNext = siteHeader[0].nextElementSibling;
 
             if( ! body_class_lock && window.pageYOffset > siteHeaderContainerHeight ){
                 // ヘッダースクロール識別用のclass追加
                 document.body.classList.add('header-fixed-active')
-                if(xt9Opt.add_header_offset_margin){
-                    // コンテナ部分をfixedにするので、ガクンとならないように、ヘッダーの次の要素にヘッダーの高さ分余白を追加する 
+                if(xt9Opt.add_header_offset_margin && siteHeaderNext){
+                    // コンテナ部分をfixedにするので、ガクンとならないように、ヘッダーの次の要素にヘッダーの高さ分余白を追加する
                     siteHeaderNext.style.marginTop = siteHeaderContainerHeight + "px";
                 }
             } else {
                 document.body.classList.remove('header-fixed-active')
-                if(xt9Opt.add_header_offset_margin){
+                if(xt9Opt.add_header_offset_margin && siteHeaderNext){
                     siteHeaderNext.style.marginTop = null;
                 }
             }

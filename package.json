@@ -7,13 +7,14 @@
 		"build:script": "webpack --config webpack.js",
 		"sass": "sass --no-source-map assets/_scss/:assets/_scss/",
 		"sass:woocommerce": "sass --no-source-map --style=compressed plugin-support/woocommerce/_scss/woo.scss:plugin-support/woocommerce/css/woo.css",
+		"sass:snow-monkey-forms": "sass --no-source-map --style=compressed plugin-support/snow-monkey-forms/_scss/smf.scss:plugin-support/snow-monkey-forms/css/smf.css",
 		"postcss:autoprefix": "npx postcss assets/_scss/*.css --use autoprefixer -r --no-map",
 		"postcss:minify": "npx postcss assets/_scss/*.css --use postcss-minify -d assets/css/ --no-map",
 		"postcss:all": "npx postcss assets/_scss/*.css --use autoprefixer postcss-minify -d assets/css/ --no-map",
 		"rimraf:css": "npx rimraf assets/_scss/*.css",
-		"build:css": "run-s sass postcss:all rimraf:css sass:woocommerce",
+		"build:css": "run-s sass postcss:all rimraf:css sass:woocommerce sass:snow-monkey-forms",
 		"build": "npx gulp convert-dynamic && npx gulp remove-theme-name && npm run build:script && npm run build:css",
-		"watch": "nodemon -e scss --watch assets/_scss -x \"npm run build:css && webpack --config webpack.js --watch && npm run dist\"",
+		"watch": "nodemon -e scss --watch assets/_scss --watch plugin-support/woocommerce/_scss --watch plugin-support/snow-monkey-forms/_scss -x \"npm run build:css && webpack --config webpack.js --watch\"",
 		"copy": "npx gulp dist",
 		"zip": "cd dist && zip -r x-t9.zip x-t9",
 		"dist": "run-s build copy zip",
@@ -21,7 +22,7 @@
 		"composer:install:mac": "wp-env run composer 'composer install'",
 		"phpunit:win": "npm run phpunit",
 		"phpunit:mac": "npm run phpunit",
-		"phpunit": "cd ../../.. && wp-env run tests-cli --env-cwd=wp-content/themes/x-t9 -- vendor/bin/phpunit -c phpunit.xml.dist"
+		"phpunit": "wp-env run tests-cli --env-cwd=wp-content/themes/x-t9 -- vendor/bin/phpunit -c phpunit.xml.dist"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.18.6",
@@ -42,6 +43,7 @@
 		"rimraf": "^3.0.2",
 		"sass": "^1.39.2",
 		"webpack": "^5.73.0",
-		"webpack-cli": "^4.10.0"
+		"webpack-cli": "^4.10.0",
+		"@wordpress/env": "^10.30.0"
 	}
 }

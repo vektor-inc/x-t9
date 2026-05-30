@@ -7,7 +7,8 @@
 			"wideSize": "calc( var(--wp--style--global--content-size) + ( 100vw - var(--wp--style--global--content-size) ) / 2 )"
 		},
 		"position": {
-			"sticky": true
+			"sticky": true,
+			"fixed": true
 		},
 		"dimensions": {
 			"minHeight": true,
@@ -167,6 +168,7 @@
 				"minViewportWidth": "360px",
 				"maxViewportWidth": "1200px"
 			},
+			"textColumns": true,
 			"writingMode": true,
 			"defaultFontSizes": false,
 			"fontFamilies": [
@@ -516,6 +518,11 @@
 			"name": "header",
 			"title": "Header",
 			"area": "header"
+		},
+		{
+			"name": "navigation-overlay",
+			"title": "Navigation Overlay",
+			"area": "navigation-overlay"
 		},
 		{
 			"name": "loop-archive",

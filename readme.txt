@@ -1,8 +1,8 @@
 === X-T9 ===
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei,yukinobu
-Tested up to: 6.9
+Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.37.4
+Stable tag: 1.40.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,7 +16,34 @@ GitHub : https://github.com/vektor-inc/x-t9
 [ Design Bug Fix ] Fixed an issue where the border color of VK Blocks solid-fill buttons was incorrectly set to the primary color when a non-primary color was selected
 [ Design Bug Fix ] Fixed an issue where the text and border color of VK Blocks outline-style buttons turned white when a non-primary color was selected, which occurred when VK Blocks Pro split loading was enabled
 
+= 1.40.0 =
+[ New Feature ] Added support for the text columns feature introduced in WordPress 7.0
+[ Bug Fix ][ Navigation Block ] Fixed an issue where high CSS specificity of submenu styles affected customization
+
+= 1.39.2 =
+[ Specification Change ] Updated WordPress version requirement to 7.0 or higher (Requires at least: 6.5 → 7.0, Tested up to: 6.9 → 7.0)
+
+= 1.39.1 =
+[ Design Bug Fix ][ Navigation Block ] Fixed an issue where overlay navigation items were displayed with x-small font size by limiting x-small font size to horizontal navigation submenu items only
+
+= 1.39.0 =
+[ New Feature ] Added "Navigation Overlay" template part area and a default overlay pattern for full-screen navigation
+[ Bug Fix ][ Navigation Block ] Fixed display issues on WordPress 7.0 ( updated selectors to handle the new submenu toggle button markup, cancelled the unwanted gap on always-open submenus, and adjusted padding for "Open on click" in the editor )
+[ Design Bug Fix ] Fixed an issue where buttons with a background color lost their padding ( excluded .wp-element-button from the .has-background padding reset )
+[ Specification Change ] Show font family, font size, appearance ( style / weight ), line height, and letter spacing typography controls by default in the editor inspector for blocks that support typography ( previously hidden behind the three-dot menu ); applied via supports.typography.__experimentalDefaultControls in the block_type_metadata filter
+[ New Feature ][ Group Block ] Enabled the core "Position: Fixed" option for the Group block ( supports.position.fixed via block_type_metadata filter + settings.position.fixed in theme.json, with frontend / editor CSS for is-position-fixed )
+[ Specification Change ][ Group Block ] Renamed the existing "Fixed header" block style label to "Header: Scrolled" ( internal name "scrolled-header-fixed" is kept for backward compatibility )
+[ Bug Fix ] Fixed a console TypeError ( Cannot read properties of undefined (reading 'offsetHeight') ) on pages without a header tag, which prevented the scroll-related script from running
+[ New Feature ] Added "Sticky | Logo --- Nav - Contact" header pattern with position: sticky support
+[ New Feature ] Added "Fixed Trans | Logo -- Nav - Contact" header pattern with a fixed transparent header layout
+[ New Feature ] Added "Transparent Header and Hero Area" header pattern combining a fixed transparent header with a full-height cover hero area
+
+= 1.38.0 =
 [ Bug Fix ] Fixed binary files (images, fonts, etc.) being corrupted during dist process
+[ Specification Change ] Added styling for WooCommerce MyAccount, Cart, and Checkout pages
+[ Dev Environment ] Added plugin-support/woocommerce/_scss to npm run watch targets so that woo.scss changes are detected
+[ Bug Fix ] Fixed an issue where the select arrow was displayed twice on Snow Monkey Forms select boxes
+[ Dev Environment ] Removed unreachable "&& npm run dist" from the watch script since webpack --watch never exits
 
 = 1.37.4 =
 [ Specification Change / Bug fix ] Replaced clamp string values with fluid object format ( min/max ) for all font sizes except tiny in theme.json typography settings

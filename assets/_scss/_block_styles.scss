@@ -59,12 +59,28 @@ body :where(.is-style-main-layout.is-layout-flex) {
 	&.wp-block-group {
 		overflow: visible;
 	}
-
+	// 注 : 
+	// header タグの要素がスクロールする事によってはじめて .header-fixed-active が付与されるため、
+	// header タグのないページでは動作しない。
 	.header-fixed-active & {
 		top: 0;
 
 		@media (min-width:601px) {
-			top: var(--wp-admin--admin-bar--height);
+			top: var(--wp-admin--admin-bar--height, 0px);
 		}
 	}
+}
+
+// WordPress標準の position 属性。sticky は出力されるのに fixed はフロントでは出力されないため。
+// ヒーローエリアのカバーの最上部に固定する時になどに使用
+// ※ --wp-admin--admin-bar--height: 0; とか下手に定義すると、calcが効かなくて上部固定にならなくなるので注意
+header.is-position-fixed{
+	position:fixed;
+	top: calc(0px + var(--wp-admin--admin-bar--height, 0px));
+	width:100%;
+	z-index: 9999;
+}
+header:has([class*="is-position-sticky"]){
+	position: sticky;
+	top: calc(0px + var(--wp-admin--admin-bar--height, 0px));
 }

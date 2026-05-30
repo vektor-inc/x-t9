@@ -64,6 +64,10 @@ require get_template_directory() . '/inc/layout-helpers.php';
 require get_template_directory() . '/inc/block-patterns.php';
 // Add Block Styles.
 require get_template_directory() . '/inc/block-styles.php';
+// Typography control defaults for the editor inspector (WordPress 6.6+).
+if ( version_compare( get_bloginfo( 'version' ), '6.6', '>=' ) ) {
+	require get_template_directory() . '/inc/typography-defaults.php';
+}
 // Load TGM.
 require get_template_directory() . '/inc/tgm-plugin-activation/tgm-config.php';
 
@@ -140,6 +144,14 @@ function x_t9_enqueue_woocommerce_css() {
 		wp_enqueue_style( 'x-t9-woo-style', get_template_directory_uri() . '/plugin-support/woocommerce/css/woo.css', array( 'x-t9-style' ), '1.0.0' );    }
 }
 add_action( 'wp_enqueue_scripts', 'x_t9_enqueue_woocommerce_css' );
+
+// Snow Monkey Forms が有効な場合のみ Snow Monkey Forms 用の CSS を読み込む
+function x_t9_enqueue_snow_monkey_forms_css() {
+	if ( class_exists( 'Snow_Monkey\Plugin\Forms\Bootstrap' ) ) {
+		wp_enqueue_style( 'x-t9-smf-style', get_template_directory_uri() . '/plugin-support/snow-monkey-forms/css/smf.css', array( 'x-t9-style' ), XT9_THEME_VERSION );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'x_t9_enqueue_snow_monkey_forms_css' );
 
 /**
  * Navigation Submenu block do render menu item description
