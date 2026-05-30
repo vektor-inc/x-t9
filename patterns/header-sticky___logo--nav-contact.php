@@ -22,7 +22,7 @@
 
 <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"flex","justifyContent":"right"}} -->
 <div class="wp-block-buttons" style="margin-top:0px;margin-bottom:0px"><!-- wp:button {"backgroundColor":"primary","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}},"typography":{"lineHeight":"1"}},"fontSize":"small"} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-primary-background-color has-background has-small-font-size has-custom-font-size wp-element-button" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);line-height:1">Contact</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link has-primary-background-color has-background has-small-font-size has-custom-font-size wp-element-button" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);line-height:1"><?php echo esc_html__( 'Contact', 'x-t9' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>

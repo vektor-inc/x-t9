@@ -33,7 +33,7 @@
 
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","width":100,"fontSize":"medium"} -->
-<div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link has-primary-background-color has-background has-medium-font-size has-custom-font-size wp-element-button">Contact</a></div>
+<div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link has-primary-background-color has-background has-medium-font-size has-custom-font-size wp-element-button"><?php echo esc_html__( 'Contact', 'x-t9' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons -->
 

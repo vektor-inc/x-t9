@@ -2,24 +2,61 @@ var gulp = require('gulp');
 
 const replace = require('gulp-replace')
 
-gulp.task('convert-dynamic', function (done) {
-	gulp.src(['./inc/patterns/*.php' ])
-		.pipe(replace( 'src="http://localhost:8888/wp-content/themes/x-t9', 'src="\' . esc_url( get_template_directory_uri() ) . \'' ))
-		.pipe(gulp.dest('./inc/patterns/'));
-	// post top link
-	gulp.src(['./inc/patterns/*.php' ])
-		.pipe(replace( 'href="http://localhost:8888/information/', 'href="\' . esc_url( get_post_type_archive_link( \'post\' )  ) . \'' ))
-		.pipe(gulp.dest('./inc/patterns/'));
-	gulp.src(['./inc/patterns/*.php' ])
-		.pipe(replace( '続きを読む', 'Read more' ))
-		.pipe(gulp.dest('./inc/patterns/'));
-	gulp.src(['./inc/patterns/*.php' ])
-		.pipe(replace( 'お知らせ', 'Information' ))
-		.pipe(gulp.dest('./inc/patterns/'));
-	gulp.src(['./inc/patterns/*.php' ])
-		.pipe(replace( 'カテゴリー', 'Category' ))
-		.pipe(gulp.dest('./inc/patterns/'));
-	done();
+// 開発用の文字列を本番用（動的・翻訳対応の PHP）へ置換する定義。
+// パターンは WordPress 標準の /patterns ディレクトリ配下に置かれ、各ファイルが独立した PHP として登録される。
+// 開発時は localhost の URL や素のテキスト（日本語含む）でプレビューし、ビルド時にここで本番用へ変換する。
+
+// 開発時に入力された日本語を英語へ変換する。
+// 後続のラベル翻訳（>Read more</ → esc_html__）より前に実行する必要があるため先頭に置く。
+const japaneseToEnglish = [
+	[ '続きを読む', 'Read more' ],
+	[ 'お知らせ', 'Information' ],
+	[ 'カテゴリー', 'Category' ],
+];
+
+const dynamicReplacements = [
+	// テーマディレクトリ URL（src 属性 / JSON の url プロパティ / CSS url()）
+	[ 'src="http://localhost:8888/wp-content/themes/x-t9', 'src="<?php echo esc_url( get_template_directory_uri() ); ?>' ],
+	[ '"url":"http://localhost:8888/wp-content/themes/x-t9', '"url":"<?php echo esc_url( get_template_directory_uri() ); ?>' ],
+	[ 'url(http://localhost:8888/wp-content/themes/x-t9', 'url(<?php echo esc_url( get_template_directory_uri() ); ?>' ],
+	// 投稿アーカイブへのリンク
+	[ 'href="http://localhost:8888/information/', 'href="<?php echo esc_url( get_post_type_archive_link( \'post\' ) ); ?>' ],
+	// クエリーループの「続きを読む」ラベル（moreText 属性）
+	[ '"moreText":"Read more"', '"moreText":"<?php echo esc_html__( \'Read more\', \'x-t9\' ); ?>"' ],
+	// 「Category : 」プレフィックス
+	[ '"Category : "', '"<?php echo esc_html__( \'Category : \', \'x-t9\' ); ?>"' ],
+];
+
+// 要素テキスト（>ラベル</）を翻訳関数へ置換する対象ラベル。
+const translatableLabels = [
+	'Service',
+	'Information',
+	'Read more',
+	'Main Column',
+	'Side Column',
+	'Contact',
+	'Category',
+	'Archive',
+	'Tag Cloud',
+];
+translatableLabels.forEach( function ( label ) {
+	dynamicReplacements.push( [
+		'>' + label + '</',
+		'><?php echo esc_html__( \'' + label + '\', \'x-t9\' ); ?></',
+	] );
+} );
+
+gulp.task('convert-dynamic', function () {
+	// 日本語→英語 → URL/ラベル変換 の順で適用する。
+	const replacements = japaneseToEnglish.concat( dynamicReplacements );
+
+	// 全置換を 1 つのストリームに連結し、stream を return して gulp に完了を待たせる。
+	return replacements.reduce(
+		function ( stream, pair ) {
+			return stream.pipe( replace( pair[0], pair[1] ) );
+		},
+		gulp.src( [ './patterns/*.php' ] )
+	).pipe( gulp.dest( './patterns/' ) );
 });
 
 gulp.task('remove-theme-name', function () {
