@@ -12,6 +12,7 @@ const japaneseToEnglish = [
 	[ '続きを読む', 'Read more' ],
 	[ 'お知らせ', 'Information' ],
 	[ 'カテゴリー', 'Category' ],
+	[ '検索', 'Search' ],
 ];
 
 const dynamicReplacements = [
@@ -38,6 +39,7 @@ const translatableLabels = [
 	'Category',
 	'Archive',
 	'Tag Cloud',
+	'Search',
 ];
 translatableLabels.forEach( function ( label ) {
 	dynamicReplacements.push( [

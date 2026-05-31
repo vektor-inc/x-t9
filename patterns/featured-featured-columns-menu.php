@@ -28,7 +28,7 @@
 <!-- /wp:spacer -->
 
 <!-- wp:heading {"level":5} -->
-<h5 id="vk-blocks">Title Text</h5>
+<h5>Title Text</h5>
 <!-- /wp:heading -->
 
 <!-- wp:spacer {"className":"is-style-spacer-xs"} -->
@@ -56,7 +56,7 @@
 <!-- /wp:spacer -->
 
 <!-- wp:heading {"level":5} -->
-<h5 id="vk-blocks">Title Text</h5>
+<h5>Title Text</h5>
 <!-- /wp:heading -->
 
 <!-- wp:spacer {"className":"is-style-spacer-xs"} -->
@@ -84,7 +84,7 @@
 <!-- /wp:spacer -->
 
 <!-- wp:heading {"level":5} -->
-<h5 id="vk-blocks">Title Text</h5>
+<h5>Title Text</h5>
 <!-- /wp:heading -->
 
 <!-- wp:spacer {"className":"is-style-spacer-xs"} -->
@@ -112,7 +112,7 @@
 <!-- /wp:spacer -->
 
 <!-- wp:heading {"level":5} -->
-<h5 id="vk-blocks">Title Text</h5>
+<h5>Title Text</h5>
 <!-- /wp:heading -->
 
 <!-- wp:spacer {"className":"is-style-spacer-xs"} -->

@@ -36,7 +36,7 @@
 <!-- /wp:spacer -->
 
 <!-- wp:heading {"level":5,"style":{"typography":{"fontStyle":"normal","fontWeight":"400"}},"fontSize":"medium","anchor":"vk-blocks"} -->
-<h5 id="vk-blocks" class="wp-block-heading has-medium-font-size" style="font-style:normal;font-weight:400">Title Text</h5>
+<h5 class="wp-block-heading has-medium-font-size" style="font-style:normal;font-weight:400">Title Text</h5>
 <!-- /wp:heading --></div>
 <!-- /wp:group -->
 
@@ -50,7 +50,7 @@
 <!-- /wp:spacer -->
 
 <!-- wp:heading {"level":5,"style":{"typography":{"fontStyle":"normal","fontWeight":"400"}},"fontSize":"medium","anchor":"vk-blocks"} -->
-<h5 id="vk-blocks" class="wp-block-heading has-medium-font-size" style="font-style:normal;font-weight:400">Title Text</h5>
+<h5 class="wp-block-heading has-medium-font-size" style="font-style:normal;font-weight:400">Title Text</h5>
 <!-- /wp:heading --></div>
 <!-- /wp:group -->
 
@@ -64,7 +64,7 @@
 <!-- /wp:spacer -->
 
 <!-- wp:heading {"level":5,"style":{"typography":{"fontStyle":"normal","fontWeight":"400"}},"fontSize":"medium","anchor":"vk-blocks"} -->
-<h5 id="vk-blocks" class="wp-block-heading has-medium-font-size" style="font-style:normal;font-weight:400">Title Text</h5>
+<h5 class="wp-block-heading has-medium-font-size" style="font-style:normal;font-weight:400">Title Text</h5>
 <!-- /wp:heading --></div>
 <!-- /wp:group -->
 
@@ -78,7 +78,7 @@
 <!-- /wp:spacer -->
 
 <!-- wp:heading {"level":5,"style":{"typography":{"fontStyle":"normal","fontWeight":"400"}},"fontSize":"medium","anchor":"vk-blocks"} -->
-<h5 id="vk-blocks" class="wp-block-heading has-medium-font-size" style="font-style:normal;font-weight:400">Title Text</h5>
+<h5 class="wp-block-heading has-medium-font-size" style="font-style:normal;font-weight:400">Title Text</h5>
 <!-- /wp:heading --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
