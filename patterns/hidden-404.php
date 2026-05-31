@@ -18,4 +18,4 @@
 <!-- wp:spacer {"className":"is-style-spacer-sm"} -->
 <div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-sm"></div>
 <!-- /wp:spacer -->
-<!-- wp:search {"label":"Search","showLabel":false,"width":50,"widthUnit":"%","buttonText":"Search","buttonUseIcon":true,"align":"center"} /-->
+<!-- wp:search {"label":"<?php echo esc_html__( 'Search', 'x-t9' ); ?>","showLabel":false,"width":50,"widthUnit":"%","buttonText":"Search","buttonUseIcon":true,"align":"center"} /-->

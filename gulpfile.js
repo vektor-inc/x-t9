@@ -27,6 +27,14 @@ const dynamicReplacements = [
 	[ '"moreText":"Read more"', '"moreText":"<?php echo esc_html__( \'Read more\', \'x-t9\' ); ?>"' ],
 	// 「Category : 」プレフィックス
 	[ '"Category : "', '"<?php echo esc_html__( \'Category : \', \'x-t9\' ); ?>"' ],
+	// "label":"テキスト"（wp:search 等）を翻訳関数経由に置換する。
+	// 既に <?php ... ?> へ変換済みの値は二重変換しないようスキップする。
+	[
+		/"label":"((?:(?!<\?php)[^"])+)"/g,
+		function ( match, text ) {
+			return '"label":"<?php echo esc_html__( \'' + text.replace( /'/g, '\\\'' ) + '\', \'x-t9\' ); ?>"';
+		},
+	],
 	// wp:navigation 内の "ref":数字 を削除（開発環境固有のメニュー ID を本番に持ち込まない）。
 	// wp:navigation の開始タグに限定して処理することで、wp:block（同期パターン/再利用ブロック）など
 	// 別ブロックの ref を誤って削除しないようにする。ref が属性のどの位置にあっても対応する。
