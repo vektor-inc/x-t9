@@ -82,7 +82,7 @@
 
 <!-- wp:query-no-results -->
 <!-- wp:paragraph {"placeholder":"クエリーが何も結果を返さない場合に表示するテキストまたはブロックを追加します。","textColor":"text-normal-darkbg"} -->
-<p class="has-text-normal-darkbg-color has-text-color">投稿はありません</p>
+<p class="has-text-normal-darkbg-color has-text-color"><?php echo esc_html__( 'No posts.', 'x-t9' ); ?></p>
 <!-- /wp:paragraph -->
 <!-- /wp:query-no-results --></div>
 <!-- /wp:query --></div>

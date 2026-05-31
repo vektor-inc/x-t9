@@ -82,7 +82,7 @@
 
 <!-- wp:query-no-results -->
 <!-- wp:paragraph {"textColor":"text-normal-darkbg"} -->
-<p class="has-text-normal-darkbg-color has-text-color">No posts.</p>
+<p class="has-text-normal-darkbg-color has-text-color"><?php echo esc_html__( 'No posts.', 'x-t9' ); ?></p>
 <!-- /wp:paragraph -->
 <!-- /wp:query-no-results --></div>
 <!-- /wp:query --></div>

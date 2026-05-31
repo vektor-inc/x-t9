@@ -13,6 +13,7 @@ const japaneseToEnglish = [
 	[ 'お知らせ', 'Information' ],
 	[ 'カテゴリー', 'Category' ],
 	[ '検索', 'Search' ],
+	[ '投稿はありません。', 'No posts.' ],
 ];
 
 const dynamicReplacements = [
@@ -40,6 +41,7 @@ const translatableLabels = [
 	'Archive',
 	'Tag Cloud',
 	'Search',
+	'No posts.',
 ];
 translatableLabels.forEach( function ( label ) {
 	dynamicReplacements.push( [
