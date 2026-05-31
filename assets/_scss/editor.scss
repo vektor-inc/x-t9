@@ -79,3 +79,8 @@
 *[class*="is-position-fixed"]{
 	width:100%;
 }
+
+// パターン一覧などの iframe で position:fixed だと表示自体されなくなってしまうので補正
+.block-editor-iframe__body .is-preview-mode .is-position-fixed {
+	position: relative !important;
+}
