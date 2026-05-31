@@ -27,6 +27,17 @@ const dynamicReplacements = [
 	[ '"moreText":"Read more"', '"moreText":"<?php echo esc_html__( \'Read more\', \'x-t9\' ); ?>"' ],
 	// 「Category : 」プレフィックス
 	[ '"Category : "', '"<?php echo esc_html__( \'Category : \', \'x-t9\' ); ?>"' ],
+	// wp:navigation 内の "ref":数字 を削除（開発環境固有のメニュー ID を本番に持ち込まない）。
+	// wp:navigation の開始タグに限定して処理することで、wp:block（同期パターン/再利用ブロック）など
+	// 別ブロックの ref を誤って削除しないようにする。ref が属性のどの位置にあっても対応する。
+	[
+		/<!-- wp:navigation \{[\s\S]*?-->/g,
+		function ( tag ) {
+			return tag
+				.replace( /"ref":\d+,?/, '' ) // ref 属性を除去
+				.replace( /,\}/, '}' );       // ref が末尾だった場合のダンギングカンマを修正
+		},
+	],
 ];
 
 // 要素テキスト（>ラベル</）を翻訳関数へ置換する対象ラベル。
