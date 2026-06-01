@@ -29,6 +29,15 @@ if ( ! function_exists( 'xt9_support' ) ) :
 			// WordPress under 6.5
 			add_editor_style( 'assets/css/editor-wp65.css' );
 		}
+
+		// Show only this theme's own block patterns in the inserter.
+		// Disable the core bundled patterns and the WordPress.org remote pattern
+		// directory so the inserter is not cluttered with unrelated patterns.
+		// インサーターにテーマ独自のブロックパターンだけを表示する。
+		// コアバンドルのパターンと WordPress.org のリモートパターンディレクトリを
+		// 無効化し、無関係なパターンでインサーターが煩雑にならないようにする。
+		remove_theme_support( 'core-block-patterns' );
+		add_filter( 'should_load_remote_block_patterns', '__return_false' );
 	}
 	add_action( 'after_setup_theme', 'xt9_support' );
 endif;
