@@ -30,6 +30,7 @@ if ( ! function_exists( 'xt9_register_block_pattern_categories' ) ) :
 			'query'              => array( 'label' => _x( 'Query', 'Pattern Category', 'x-t9' ) ),
 			'pages'              => array( 'label' => _x( 'Pages', 'Pattern Category', 'x-t9' ) ),
 			'flow'               => array( 'label' => _x( 'Flow', 'Pattern Category', 'x-t9' ) ),
+			'pricing'            => array( 'label' => _x( 'Pricing', 'Pattern Category', 'x-t9' ) ),
 			'pr-contents'        => array( 'label' => _x( 'PR Contents', 'Pattern Category', 'x-t9' ) ),
 		);
 
