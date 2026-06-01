@@ -89,48 +89,48 @@ Exclude : readme.txt,readme.md,gulpfile.js
 
 ```
 src="http://localhost:8888/wp-content/themes/x-t9
-src="' . esc_url( get_template_directory_uri() ) . '
+src="<?php echo esc_url( get_template_directory_uri() ); ?>
 
 "url":"http://localhost:8888/wp-content/themes/x-t9
-"url":"' . esc_url( get_template_directory_uri() ) . '
+"url":"<?php echo esc_url( get_template_directory_uri() ); ?>
 
 url(http://localhost:8888/wp-content/themes/x-t9
-url(' . esc_url( get_template_directory_uri() ) . '
+url(<?php echo esc_url( get_template_directory_uri() ); ?>
 
 href="http://localhost:8888/information/
-href="' . esc_url( get_post_type_archive_link( 'post' )  ) . '
+href="<?php echo esc_url( get_post_type_archive_link( 'post' )  ); ?>
 
 "moreText":"Read more"
-"moreText":"' . esc_html__( 'Read more', 'x-t9' ) . '"
+"moreText":"<?php echo esc_html__( 'Read more', 'x-t9' ); ?>"
 
 >Service</
->' . esc_html__( 'Service', 'x-t9' ) . '</
+><?php echo esc_html__( 'Service', 'x-t9' ); ?></
 
 >Information</
->' . esc_html__( 'Information', 'x-t9' ) . '</
+><?php echo esc_html__( 'Information', 'x-t9' ); ?></
 
 >Read more</
->' . esc_html__( 'Read more', 'x-t9' ) . '</
+><?php echo esc_html__( 'Read more', 'x-t9' ); ?></
 
 >Main Column</
->' . esc_html__( 'Main Column', 'x-t9' ) . '</
+><?php echo esc_html__( 'Main Column', 'x-t9' ); ?></
 
 >Side Column</
->' . esc_html__( 'Side Column', 'x-t9' ) . '</
+><?php echo esc_html__( 'Side Column', 'x-t9' ); ?></
 
 >Contact</
->' . esc_html__( 'Contact', 'x-t9' ) . '</
+><?php echo esc_html__( 'Contact', 'x-t9' ); ?></
 
 >Category</
->' . esc_html__( 'Category', 'x-t9' ) . '</
+><?php echo esc_html__( 'Category', 'x-t9' ); ?></
 
 >Archive</
->' . esc_html__( 'Archive', 'x-t9' ) . '</
+><?php echo esc_html__( 'Archive', 'x-t9' ); ?></
 
 >Tag Cloud</
->' . esc_html__( 'Tag Cloud', 'x-t9' ) . '</
+><?php echo esc_html__( 'Tag Cloud', 'x-t9' ); ?></
 
 "Category : "
-"' . esc_html__( 'Category : ', 'x-t9' ) . '"
+"<?php echo esc_html__( 'Category : ', 'x-t9' ); ?>"
 
 ```
