@@ -18,7 +18,7 @@
 <!-- /wp:spacer -->
 
 <!-- wp:heading {"className":"is-style-vk-heading-plain","style":{"typography":{"textAlign":"center"},"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
-<h2 class="wp-block-heading has-text-align-center is-style-vk-heading-plain" style="margin-top:0;margin-bottom:0">Service Flow</h2>
+<h2 class="wp-block-heading has-text-align-center is-style-vk-heading-plain" style="margin-top:0;margin-bottom:0"><?php echo esc_html__( 'Service Flow', 'x-t9' ); ?></h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"className":"has-vk-color-primary-color has-text-color has-link-color","style":{"elements":{"link":{"color":{"text":"var:preset|color|vk-color-primary"}}},"typography":{"textAlign":"center"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"vk-color-primary"} -->
@@ -40,7 +40,7 @@
 <!-- /wp:group -->
 
 <!-- wp:heading {"level":4,"className":"is-style-vk-heading-plain","style":{"typography":{"fontStyle":"normal","fontWeight":"700","lineHeight":"1"}}} -->
-<h4 class="wp-block-heading is-style-vk-heading-plain" style="font-style:normal;font-weight:700;line-height:1">Contact</h4>
+<h4 class="wp-block-heading is-style-vk-heading-plain" style="font-style:normal;font-weight:700;line-height:1"><?php echo esc_html__( 'Contact', 'x-t9' ); ?></h4>
 <!-- /wp:heading --></div>
 <!-- /wp:group -->
 
