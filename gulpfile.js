@@ -15,6 +15,7 @@ const japaneseToEnglish = [
 	[ '検索', 'Search' ],
 	[ '投稿はありません。', 'No posts.' ],
 	[ 'サービスの流れ', 'Service Flow' ],
+	[ '投稿一覧', 'Post List' ],
 ];
 
 const dynamicReplacements = [
@@ -63,6 +64,7 @@ const translatableLabels = [
 	'Search',
 	'No posts.',
 	'Service Flow',
+	'Post List',
 ];
 translatableLabels.forEach( function ( label ) {
 	dynamicReplacements.push( [

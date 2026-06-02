@@ -28,6 +28,7 @@ if ( ! function_exists( 'xt9_register_block_pattern_categories' ) ) :
 			'sidebar'            => array( 'label' => _x( 'Sidebars', 'Pattern Category', 'x-t9' ) ),
 			'layout'             => array( 'label' => _x( 'Layout', 'Pattern Category', 'x-t9' ) ),
 			'query'              => array( 'label' => _x( 'Query', 'Pattern Category', 'x-t9' ) ),
+			'post-list-section'  => array( 'label' => _x( 'Post List Section', 'Pattern Category', 'x-t9' ) ),
 			'pages'              => array( 'label' => _x( 'Pages', 'Pattern Category', 'x-t9' ) ),
 			'flow'               => array( 'label' => _x( 'Flow', 'Pattern Category', 'x-t9' ) ),
 			'pricing'            => array( 'label' => _x( 'Pricing', 'Pattern Category', 'x-t9' ) ),
