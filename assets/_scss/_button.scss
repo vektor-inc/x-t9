@@ -17,9 +17,6 @@ input[type='submit'],
 	:root & {
 		text-decoration: none;
 	}
-	:root &:not(.is-style-outline) {
-		color: #fff; // BG Secondary and Dark both white
-	}
 }
 .wp-block-search__button{
 	white-space: nowrap;
@@ -43,11 +40,8 @@ input[type='submit'],
 		background-color:transparent;
 		color: currentColor;
 	}
-	& > .wp-block-button__link:not(.has-background):hover {
+	& > .wp-block-button__link:hover {
 		background-color: var(--wp--preset--color--primary-hover);
-		color: #fff;
-	}
-	& > .has-text-color:where(:not(.has-background)):hover {
 		color:#fff !important;
 	}
 }
