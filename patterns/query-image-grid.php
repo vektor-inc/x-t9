@@ -8,7 +8,7 @@
  *
  * @package WordPress
  * @subpackage x-t9
- * @since X-T9 1.0
+ * @since X-T9 1.41.0
  */
 
 ?>
@@ -51,16 +51,16 @@
 
 <!-- wp:query-no-results -->
 <!-- wp:paragraph {"placeholder":"クエリーが何も結果を返さない場合に表示するテキストまたはブロックを追加します。","style":{"typography":{"textAlign":"center"}}} -->
-<p class="has-text-align-center">No posts.</p>
+<p class="has-text-align-center"><?php echo esc_html__( 'No posts.', 'x-t9' ); ?></p>
 <!-- /wp:paragraph -->
 <!-- /wp:query-no-results -->
 
 <!-- wp:query-pagination {"paginationArrow":"chevron","layout":{"type":"flex","justifyContent":"center","orientation":"horizontal","flexWrap":"wrap"}} -->
-<!-- wp:query-pagination-previous {"label":"前へ"} /-->
+<!-- wp:query-pagination-previous {"label":"<?php echo esc_html__( 'Prev', 'x-t9' ); ?>"} /-->
 
 <!-- wp:query-pagination-numbers /-->
 
-<!-- wp:query-pagination-next {"label":"次へ"} /-->
+<!-- wp:query-pagination-next {"label":"<?php echo esc_html__( 'Next', 'x-t9' ); ?>"} /-->
 <!-- /wp:query-pagination -->
 
 <!-- wp:spacer {"height":"var:preset|spacing|60","className":"is-style-spacer-md"} -->
