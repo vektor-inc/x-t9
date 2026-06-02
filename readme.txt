@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Spec Change ] Added a hover underline to post titles and the Read More button within the Query Loop block, and removed the top margin of post titles
 [ Spec Change ] Moved block patterns to the WordPress standard /patterns directory so they are auto-registered by core ( previously registered via register_block_pattern() from /inc/patterns )
 [ Spec Change ] Show only the theme's own block patterns in the block inserter by disabling the core bundled patterns and the WordPress.org remote pattern directory
 [ Bug Fix ] Fixed a fatal error that could occur in child themes created from older versions, by removing the legacy pattern registration hook that tried to require deleted pattern files
