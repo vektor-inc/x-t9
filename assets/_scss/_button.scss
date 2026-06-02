@@ -8,6 +8,7 @@ input[type='submit'],
 .wp-block-post-excerpt__more-link,
 .wp-block-button__link.has-primary-background-color {
 	transition: all 0.1s ease-in;
+	color:#fff; // more-link で黒字になってしまうため
 	background-color: var(--wp--preset--color--primary);
 	text-decoration: none;
 	border-radius: var(--wp--custom--radius--button);
