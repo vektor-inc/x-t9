@@ -10,10 +10,16 @@ const replace = require('gulp-replace')
 // 後続のラベル翻訳（>Read more</ → esc_html__）より前に実行する必要があるため先頭に置く。
 const japaneseToEnglish = [
 	[ '続きを読む', 'Read more' ],
+	[ '続きを読む ≫', 'Read more ≫' ],
 	[ 'お知らせ', 'Information' ],
 	[ 'カテゴリー', 'Category' ],
 	[ '検索', 'Search' ],
 	[ '投稿はありません。', 'No posts.' ],
+	[ 'サービスの流れ', 'Service Flow' ],
+	[ 'サービス', 'Service' ],
+	[ '投稿一覧', 'Post List' ],
+	[ '次へ', 'Next' ],
+	[ '前へ', 'Prev' ],
 ];
 
 const dynamicReplacements = [
@@ -25,6 +31,8 @@ const dynamicReplacements = [
 	[ 'href="http://localhost:8888/information/', 'href="<?php echo esc_url( get_post_type_archive_link( \'post\' ) ); ?>' ],
 	// クエリーループの「続きを読む」ラベル（moreText 属性）
 	[ '"moreText":"Read more"', '"moreText":"<?php echo esc_html__( \'Read more\', \'x-t9\' ); ?>"' ],
+	// 続きを読む（wp:read-more）ブロックのラベル（content 属性）
+	[ '"content":"Read more ≫"', '"content":"<?php echo esc_html__( \'Read more ≫\', \'x-t9\' ); ?>"' ],
 	// 「Category : 」プレフィックス
 	[ '"Category : "', '"<?php echo esc_html__( \'Category : \', \'x-t9\' ); ?>"' ],
 	// "label":"テキスト"（wp:search 等）を翻訳関数経由に置換する。
@@ -53,6 +61,7 @@ const translatableLabels = [
 	'Service',
 	'Information',
 	'Read more',
+	'Read more ≫',
 	'Main Column',
 	'Side Column',
 	'Contact',
@@ -61,6 +70,10 @@ const translatableLabels = [
 	'Tag Cloud',
 	'Search',
 	'No posts.',
+	'Service Flow',
+	'Post List',
+	'Prev',
+	'Next',
 ];
 translatableLabels.forEach( function ( label ) {
 	dynamicReplacements.push( [

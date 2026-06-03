@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Sidebar Category / Archive
- * Slug: x-t9/sidebar/sidebar-post-category-and-archive
+ * Slug: x-t9/sidebar-post-category-and-archive
  * Categories: sidebar
  * Description:
  *

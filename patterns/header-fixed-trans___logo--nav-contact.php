@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Fixed Trans | Logo -- Nav - Contact
- * Slug: x-t9/header/fixed-trans___logo--nav-contact
+ * Slug: x-t9/header-fixed-trans___logo--nav-contact
  * Categories: header
  * Block Types: core/template-part/header
  * Description:

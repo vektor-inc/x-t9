@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Transparent Header and Hero Area
- * Slug: x-t9/header/transheader-and-hero
+ * Slug: x-t9/header-transheader-and-hero
  * Categories: header
  * Block Types: core/template-part/header
  * Description:

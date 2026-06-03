@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Columns Menu
- * Slug: x-t9/pr-contents/columns-menu
+ * Slug: x-t9/pr-contents-columns-menu
  * Categories: pr-contents
  * Description:
  *

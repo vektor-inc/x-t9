@@ -26,6 +26,7 @@
 	}
 
 	.wp-block-post-title {
+		margin-top: 0;
 		font-size: var(--wp--preset--font-size--large);
 		:where(a:hover) {	
 			text-decoration: underline;

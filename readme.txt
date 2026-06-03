@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ New Feature ] Added block patterns ( Service Point, Service Flow, Pricing Plans, PR Contents, post list, and Query Loop patterns ) along with new "Post List Section", "Flow", and "Pricing" pattern categories
+[ Design Bug Fix ] Fixed an issue where footer patterns did not span the full width when pasted into the post content area
 [ Design Bug Fix ][ Navigation Block ] Fixed an issue where the overlay menu background turned white over a dark footer background, making the white menu text unreadable
 [ Design Bug Fix ][ Navigation Block ] Fixed an issue where the horizontal padding of text-inline style navigation items was lost ( restored on both the front-end and in the editor )
 [ Spec Change ] Added a hover underline to post titles and the Read More button within the Query Loop block, and removed the top margin of post titles

@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Overlay Rich
- * Slug: x-t9/navigation-overlay/overlay-rich
+ * Slug: x-t9/navigation-overlay-rich
  * Categories: navigation
  * Block Types: core/template-part/navigation-overlay
  * Description:

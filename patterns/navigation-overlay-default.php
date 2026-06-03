@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Overlay Default
- * Slug: x-t9/navigation-overlay/overlay-default
+ * Slug: x-t9/navigation-overlay-default
  * Categories: navigation
  * Block Types: core/template-part/navigation-overlay
  * Description:

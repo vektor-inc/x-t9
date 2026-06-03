@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Columns Menu Section
- * Slug: x-t9/featured/featured-columns-menu
+ * Slug: x-t9/featured-columns-menu
  * Categories: featured, pr-contents
  * Description:
  *
