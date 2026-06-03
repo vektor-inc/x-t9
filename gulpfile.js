@@ -16,6 +16,7 @@ const japaneseToEnglish = [
 	[ '検索', 'Search' ],
 	[ '投稿はありません。', 'No posts.' ],
 	[ 'サービスの流れ', 'Service Flow' ],
+	[ 'サービス', 'Service' ],
 	[ '投稿一覧', 'Post List' ],
 	[ '次へ', 'Next' ],
 	[ '前へ', 'Prev' ],
