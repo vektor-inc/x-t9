@@ -79,7 +79,7 @@
 <!-- /wp:spacer -->
 
 <!-- wp:paragraph -->
-<p>A representative will contact you to confirm the current status and ask about your requests. 6</p>
+<p>A representative will contact you to confirm the current status and ask about your requests.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
