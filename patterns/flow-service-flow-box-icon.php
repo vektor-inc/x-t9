@@ -12,7 +12,7 @@
  */
 
 ?>
-<!-- wp:group {"metadata":{"name":"Flow"},"align":"full","layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"name":"Flow","categories":["flow"],"patternName":"x-t9/service-flow-box-icon"},"align":"full","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull"><!-- wp:spacer {"className":"is-style-spacer-lg"} -->
 <div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-lg"></div>
 <!-- /wp:spacer -->
@@ -215,12 +215,12 @@
 <div class="wp-block-group"><!-- wp:group {"className":"vk_block-margin-0\u002d\u002dmargin-bottom","style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 <div class="wp-block-group vk_block-margin-0--margin-bottom"><!-- wp:group {"style":{"spacing":{"padding":{"right":"0.5rem","left":"0.5rem","top":"0px","bottom":"0px"}},"border":{"radius":"1px"}},"backgroundColor":"vk-color-primary","textColor":"text-normal-darkbg"} -->
 <div class="wp-block-group has-text-normal-darkbg-color has-vk-color-primary-background-color has-text-color has-background" style="border-radius:1px;padding-top:0px;padding-right:0.5rem;padding-bottom:0px;padding-left:0.5rem"><!-- wp:paragraph {"className":"vk_block-margin-0\u002d\u002dmargin-top vk_block-margin-0\u002d\u002dmargin-bottom","textColor":"white"} -->
-<p class="vk_block-margin-0--margin-top vk_block-margin-0--margin-bottom has-white-color has-text-color">6</p>
+<p class="vk_block-margin-0--margin-top vk_block-margin-0--margin-bottom has-white-color has-text-color">7</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
 <!-- wp:heading {"level":4,"className":"is-style-vk-heading-plain","style":{"typography":{"fontStyle":"normal","fontWeight":"700","lineHeight":"1"}}} -->
-<h4 class="wp-block-heading is-style-vk-heading-plain" style="font-style:normal;font-weight:700;line-height:1">Review &amp; Delivery</h4>
+<h4 class="wp-block-heading is-style-vk-heading-plain" style="font-style:normal;font-weight:700;line-height:1">Payment</h4>
 <!-- /wp:heading --></div>
 <!-- /wp:group -->
 
@@ -229,7 +229,7 @@
 <!-- /wp:spacer -->
 
 <!-- wp:paragraph -->
-<p>We will issue an invoice at the end of the delivery month, so please make payment by the end of the following month.</p>
+<p>We will issue an invoice at the end of the month of delivery, and payment is due by the end of the following month.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
