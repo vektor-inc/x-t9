@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Bug Fix ][ Navigation Block ] Fixed an issue where the overlay menu background turned white over a dark footer background, making the white menu text unreadable
 [ Spec Change ] Added a hover underline to post titles and the Read More button within the Query Loop block, and removed the top margin of post titles
 [ Spec Change ] Moved block patterns to the WordPress standard /patterns directory so they are auto-registered by core ( previously registered via register_block_pattern() from /inc/patterns )
 [ Spec Change ] Show only the theme's own block patterns in the block inserter by disabling the core bundled patterns and the WordPress.org remote pattern directory
