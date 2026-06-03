@@ -57,7 +57,7 @@
 <!-- /wp:spacer -->
 
 <!-- wp:paragraph {"className":"vk_block-margin-0\u002d\u002dmargin-top vk_block-margin-0\u002d\u002dmargin-bottom","style":{"typography":{"fontSize":"0.85rem","textAlign":"left"}}} -->
-<p class="has-text-align-left vk_block-margin-0--margin-top vk_block-margin-0--margin-bottom" style="font-size:0.85rem">This plan uses a pre-designed template for production.It is ideal when budget or timeline constraints are a priority.</p>
+<p class="has-text-align-left vk_block-margin-0--margin-top vk_block-margin-0--margin-bottom" style="font-size:0.85rem">This plan uses a pre-designed template for production. It is ideal when budget or timeline constraints are a priority.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
