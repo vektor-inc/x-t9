@@ -41,7 +41,7 @@
 <!-- wp:post-excerpt {"style":{"spacing":{"padding":{"top":"0","bottom":"0"},"margin":{"top":"0","bottom":"0"}}},"fontSize":"small"} /--></div>
 <!-- /wp:group -->
 
-<!-- wp:read-more {"content":"Read more ≫","style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"}}},"fontSize":"small"} /--></div>
+<!-- wp:read-more {"content":"<?php echo esc_html__( 'Read more ≫', 'x-t9' ); ?>","style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"}}},"fontSize":"small"} /--></div>
 <!-- /wp:group -->
 <!-- /wp:post-template -->
 
