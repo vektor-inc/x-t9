@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Post List Large Image Left
- * Slug: x-t9/post-list/post-list-large-image-left
+ * Slug: x-t9/post-list-large-image-left
  * Categories: post-list-section
  * Description:
  *

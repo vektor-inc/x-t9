@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Footer BG Secondary
- * Slug: x-t9/footer/footer-bg-secondary
+ * Slug: x-t9/footer-bg-secondary
  * Categories: footer
  * Block Types: core/template-part/footer
  * Description:
@@ -12,7 +12,7 @@
  */
 
 ?>
-<!-- wp:group {"metadata":{"categories":["footer"],"patternName":"x-t9/footer/footer-bg-secondary","name":"Footer BG Secondary"},"align":"full","className":"has-text-color","style":{"border":{"top":{"color":"var:preset|color|primary","width":"2px"}}},"backgroundColor":"bg-secondary","textColor":"text-normal"} -->
+<!-- wp:group {"metadata":{"categories":["footer"],"patternName":"x-t9/footer-bg-secondary","name":"Footer BG Secondary"},"align":"full","className":"has-text-color","style":{"border":{"top":{"color":"var:preset|color|primary","width":"2px"}}},"backgroundColor":"bg-secondary","textColor":"text-normal"} -->
 <div class="wp-block-group alignfull has-text-color has-text-normal-color has-bg-secondary-background-color has-background" style="border-top-color:var(--wp--preset--color--primary);border-top-width:2px"><!-- wp:group {"layout":{"inherit":true,"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:spacer {"className":"is-style-spacer-md"} -->
 <div style="height:100px" aria-hidden="true" class="wp-block-spacer is-style-spacer-md"></div>

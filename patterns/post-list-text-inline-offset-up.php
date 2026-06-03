@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Post List Text Inline Offset Up
- * Slug: x-t9/post-list/post-list-text-inline-offset-up
+ * Slug: x-t9/post-list-text-inline-offset-up
  * Categories: post-list-section
  * Description:
  *

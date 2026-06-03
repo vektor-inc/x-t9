@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Footer BG Secondary Logo Nav Float
- * Slug: x-t9/footer/footer-bg-secondary-logo-nav-float
+ * Slug: x-t9/footer-bg-secondary-logo-nav-float
  * Categories: footer
  * Block Types: core/template-part/footer
  * Description:
@@ -12,7 +12,7 @@
  */
 
 ?>
-<!-- wp:group {"metadata":{"categories":["footer"],"patternName":"x-t9/footer/footer-bg-secondary-logo-nav-float","name":"Footer BG Secondary Logo Nav Float"},"align":"full","style":{"border":{"top":{"color":"var:preset|color|primary","width":"2px"}}},"backgroundColor":"bg-secondary","textColor":"text-normal"} -->
+<!-- wp:group {"metadata":{"categories":["footer"],"patternName":"x-t9/footer-bg-secondary-logo-nav-float","name":"Footer BG Secondary Logo Nav Float"},"align":"full","style":{"border":{"top":{"color":"var:preset|color|primary","width":"2px"}}},"backgroundColor":"bg-secondary","textColor":"text-normal"} -->
 <div class="wp-block-group alignfull has-text-normal-color has-bg-secondary-background-color has-text-color has-background" style="border-top-color:var(--wp--preset--color--primary);border-top-width:2px"><!-- wp:group {"style":{"spacing":{"blockGap":"0","margin":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"layout":{"inherit":true,"type":"constrained"}} -->
 <div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--50);margin-bottom:var(--wp--preset--spacing--50)"><!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
 <div class="wp-block-group"><!-- wp:site-logo {"width":200} /-->

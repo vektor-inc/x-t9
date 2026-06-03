@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Footer BG Dark
- * Slug: x-t9/footer/footer-bg-dark
+ * Slug: x-t9/footer-bg-dark
  * Categories: footer
  * Block Types: core/template-part/footer
  * Description:
@@ -12,7 +12,7 @@
  */
 
 ?>
-<!-- wp:group {"metadata":{"categories":["footer"],"patternName":"x-t9/footer/footer-bg-dark","name":"Footer BG Dark"},"align":"full","className":"has-text-normal-darkbg-color has-text-color","style":{"border":{"top":{"color":"var:preset|color|primary","width":"2px"}},"spacing":{"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"bg-dark"} -->
+<!-- wp:group {"metadata":{"categories":["footer"],"patternName":"x-t9/footer-bg-dark","name":"Footer BG Dark"},"align":"full","className":"has-text-normal-darkbg-color has-text-color","style":{"border":{"top":{"color":"var:preset|color|primary","width":"2px"}},"spacing":{"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"bg-dark"} -->
 <div class="wp-block-group alignfull has-text-normal-darkbg-color has-text-color has-bg-dark-background-color has-background" style="border-top-color:var(--wp--preset--color--primary);border-top-width:2px;margin-top:0;margin-bottom:0"><!-- wp:group {"style":{"spacing":{"padding":{"top":"1.5rem","bottom":"1.5rem"}}},"layout":{"inherit":true,"type":"constrained"}} -->
 <div class="wp-block-group" style="padding-top:1.5rem;padding-bottom:1.5rem"><!-- wp:image {"width":"180px","sizeSlug":"full","linkDestination":"media","align":"center"} -->
 <figure class="wp-block-image aligncenter size-full is-resized"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/inc/patterns/images/x-t9-logo-yoko-white-trans.png" alt="" style="width:180px"/></figure>

@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Logo / Description / Nav
- * Slug: x-t9/header/logo__desc__nav__center
+ * Slug: x-t9/header-logo__desc__nav__center
  * Categories: header
  * Block Types: core/template-part/header
  * Description:

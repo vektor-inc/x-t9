@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Description -- SNS / Logo -- Nav - Contact
- * Slug: x-t9/header/desc--sns__logo--nav-contact
+ * Slug: x-t9/header-desc--sns__logo--nav-contact
  * Categories: header
  * Block Types: core/template-part/header
  * Description:

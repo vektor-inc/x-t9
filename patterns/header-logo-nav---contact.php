@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Logo - Nav --- Contact
- * Slug: x-t9/header/logo-nav---contact
+ * Slug: x-t9/header-logo-nav---contact
  * Categories: header
  * Block Types: core/template-part/header
  * Description:

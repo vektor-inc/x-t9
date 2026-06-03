@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Hero Media and Text
- * Slug: x-t9/featured/featured-hero-media-and-text
+ * Slug: x-t9/featured-hero-media-and-text
  * Categories: featured, pr-contents
  * Description:
  *

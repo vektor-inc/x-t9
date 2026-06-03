@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Footer BG Dark 3columns
- * Slug: x-t9/footer/footer-bg-dark-3col
+ * Slug: x-t9/footer-bg-dark-3col
  * Categories: footer
  * Block Types: core/template-part/footer
  * Description:
@@ -12,7 +12,7 @@
  */
 
 ?>
-<!-- wp:group {"metadata":{"categories":["footer"],"patternName":"x-t9/footer/footer-bg-dark-3col","name":"Footer BG Dark 3columns"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"border":{"top":{"color":"var:preset|color|primary","width":"2px"}}},"backgroundColor":"bg-dark","textColor":"text-normal-darkbg"} -->
+<!-- wp:group {"metadata":{"categories":["footer"],"patternName":"x-t9/footer-bg-dark-3col","name":"Footer BG Dark 3columns"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"border":{"top":{"color":"var:preset|color|primary","width":"2px"}}},"backgroundColor":"bg-dark","textColor":"text-normal-darkbg"} -->
 <div class="wp-block-group alignfull has-text-normal-darkbg-color has-bg-dark-background-color has-text-color has-background" style="border-top-color:var(--wp--preset--color--primary);border-top-width:2px;margin-top:0;margin-bottom:0"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"inherit":true,"type":"constrained"}} -->
 <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column -->

@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Media Text List with Offset BG Section
- * Slug: x-t9/pr-contents/media-txt-list-offset-bg
+ * Slug: x-t9/pr-contents-media-txt-list-offset-bg
  * Categories: pr-contents
  * Description: Media and Text Menu List with Offset BG Section.
  * keywords : Media and Text,Service Menu

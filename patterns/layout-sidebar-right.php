@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Sidebar Layout
- * Slug: x-t9/layout/sidebar-right
+ * Slug: x-t9/layout-sidebar-right
  * Categories: layout
  * Description:
  *

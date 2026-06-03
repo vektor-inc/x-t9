@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Sticky | Logo -- Nav - Contact
- * Slug: x-t9/header/sticky___logo--nav-contact
+ * Slug: x-t9/header-sticky___logo--nav-contact
  * Categories: header
  * Block Types: core/template-part/header
  * Description:

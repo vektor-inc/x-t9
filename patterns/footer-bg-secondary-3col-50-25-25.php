@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Footer BG Secondary 3columns 50-25-25
- * Slug: x-t9/footer/footer-bg-secondary-3col-50-25-25
+ * Slug: x-t9/footer-bg-secondary-3col-50-25-25
  * Categories: footer
  * Block Types: core/template-part/footer
  * Description:
