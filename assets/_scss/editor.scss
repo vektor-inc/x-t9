@@ -75,6 +75,11 @@
 	}
 }
 
+// コアが padding:0 付けてきて余白がなくなるので上書き
+.wp-block-navigation[class*='nav--text-inline'] .wp-block-navigation-item.open-on-click button.wp-block-navigation-item__content:not(.wp-block-navigation-submenu__toggle){
+	padding-left: var(--nav-top-item-padding-horizontal);
+}
+
 /* group ------------------------------------------------- */
 *[class*="is-position-fixed"]{
 	width:100%;
