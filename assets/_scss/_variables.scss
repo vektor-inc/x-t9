@@ -28,8 +28,10 @@ body {
 /*-----------------------------------------------------------------------------------
  * 親のラッパーで背景が濃い場合用のテキスト色が指定されている場合に、通常の色をDarkBG用の色で上書きする
  */
-.has-text-normal-darkbg-color {
-	--wp--preset--color--border-normal: var(--wp--preset--color--border-normal-darkbg);
-	--wp--preset--color--text-normal: var(--wp--preset--color--text-normal-darkbg);
-	--wp--preset--color--text-secondary: var(--wp--preset--color--text-secondary-darkbg);
-}
+
+// これをすると入れ子で中の要素の背景を白にした場合（ナビゲーションオーバーレイなど）に黒文字に戻せなくなる致命的な欠陥があるため 1.41 で廃止
+// .has-text-normal-darkbg-color {
+// 	--wp--preset--color--border-normal: var(--wp--preset--color--border-normal-darkbg);
+// 	--wp--preset--color--text-normal: var(--wp--preset--color--text-normal-darkbg);
+// 	--wp--preset--color--text-secondary: var(--wp--preset--color--text-secondary-darkbg);
+// }

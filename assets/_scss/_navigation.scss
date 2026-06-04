@@ -281,12 +281,18 @@ Overlay : allways ***********************
 		}
 	}
 
-	// ナビ背景色がない場合に、コアがモーダルの背景に白を指定してくるため、
-	// フッターなど親要素の背景が暗くて文字色を白に指定している場合に、
-	// モーダル背景白 / 文字色白 になってしまう不具合があるため、モーダル背景を上書き
-	// ※ オーバーレイテンプレートの場合はそちらで直接色指定すればいいのでこちらでは指定しない
-	.has-bg-dark-background-color &.wp-block-navigation__responsive-container.is-menu-open:not(.disable-default-overlay) {
-		background-color: var(--wp--preset--color--bg-dark);
+	// デフォルトモーダルでの色指定 ///////////
+	// なぜ必要か？
+	// フッターの背景に濃い色を指定した場合、必然的にユーザーは文字色を明るい色に設定する
+	// しかしながら、WordPress がデフォルトのモーダルに対して背景に白を指定してくるため、文字も白指定では見えなくなる。
+	// この問題を回避するため標準文字色を指定する
+	// ちなみにデフォルトモーダルの背景色をフッターと同じにする手法については、
+	// フッター背景色がカスタムカラーの場合に同じ色に指定する事が困難＆可能だったとしても指定がカオスになるため、白背景と割り切って余計な事をしない。
+	.wp-block-navigation__responsive-container.has-modal-open:where(:not(.disable-default-overlay)){
+		.wp-block-navigation-item__content.wp-block-navigation-item__content,
+		.wp-block-navigation__responsive-container-close {
+			color:var(--wp--preset--color--text-normal);
+		}
 	}
 }
 
