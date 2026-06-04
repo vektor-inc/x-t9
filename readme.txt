@@ -13,6 +13,10 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+= 1.41.1 =
+[ Spec Change ] Fine-tuned the spacing, column widths, and colors of the post list block patterns
+[ Spec Change ][ Query Loop Block ] Removed the site-specific queryId from Query Loop patterns so it is no longer included in the distributed patterns
+
 = 1.41.0 =
 [ Spec Change ][ Navigation Block ] Reworked dark-background color handling so links, text, and divider lines stay readable when a footer or other wrapper uses a dark background color
 [ New Feature ] Added block patterns ( Service Point, Service Flow, Pricing Plans, PR Contents, post list, and Query Loop patterns ) along with new "Post List Section", "Flow", and "Pricing" pattern categories

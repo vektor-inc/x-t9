@@ -55,6 +55,17 @@ const dynamicReplacements = [
 				.replace( /,\}/, '}' );       // ref が末尾だった場合のダンギングカンマを修正
 		},
 	],
+	// wp:query 内の "queryId":数字 を削除（サイト個別に採番される ID を本番に持ち込まない）。
+	// wp:query の開始タグに限定して処理することで、別ブロックの同名属性を誤って削除しないようにする。
+	[
+		/<!-- wp:query \{[\s\S]*?-->/g,
+		function ( tag ) {
+			return tag
+				.replace( /"queryId":\d+,?/, '' ) // queryId 属性を除去
+				.replace( /\{,/, '{' )            // queryId が先頭だった場合の余分なカンマを修正
+				.replace( /,\}/, '}' );           // queryId が末尾だった場合のダンギングカンマを修正
+		},
+	],
 ];
 
 // 要素テキスト（>ラベル</）を翻訳関数へ置換する対象ラベル。
