@@ -9,6 +9,7 @@ const replace = require('gulp-replace')
 // 開発時に入力された日本語を英語へ変換する。
 // 後続のラベル翻訳（>Read more</ → esc_html__）より前に実行する必要があるため先頭に置く。
 const japaneseToEnglish = [
+	[ 'お問い合わせ', 'Contact' ],
 	[ '続きを読む', 'Read more' ],
 	[ '続きを読む ≫', 'Read more ≫' ],
 	[ 'お知らせ', 'Information' ],
