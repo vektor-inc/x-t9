@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei,yukinobu
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.40.0
+Stable tag: 1.41.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+= 1.41.0 =
 [ Spec Change ][ Navigation Block ] Reworked dark-background color handling so links, text, and divider lines stay readable when a footer or other wrapper uses a dark background color
 [ New Feature ] Added block patterns ( Service Point, Service Flow, Pricing Plans, PR Contents, post list, and Query Loop patterns ) along with new "Post List Section", "Flow", and "Pricing" pattern categories
 [ Design Bug Fix ] Fixed an issue where footer patterns did not span the full width when pasted into the post content area
