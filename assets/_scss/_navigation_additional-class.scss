@@ -92,7 +92,6 @@
  */
 
 :is( *[class*='nav--text-inline'],*[class*='nav--vertical-with-hr'] ) {
-
 	// とりあえず通常の線の色を定義
 	--nav--color--hr: var(--wp--preset--color--border-normal);
 
