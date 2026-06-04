@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Spec Change ][ Navigation Block ] Reworked dark-background color handling so links, text, and divider lines stay readable when a footer or other wrapper uses a dark background color
 [ New Feature ] Added block patterns ( Service Point, Service Flow, Pricing Plans, PR Contents, post list, and Query Loop patterns ) along with new "Post List Section", "Flow", and "Pricing" pattern categories
 [ Design Bug Fix ] Fixed an issue where footer patterns did not span the full width when pasted into the post content area
 [ Design Bug Fix ][ Navigation Block ] Fixed an issue where the overlay menu background turned white over a dark footer background, making the white menu text unreadable

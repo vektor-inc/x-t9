@@ -48,7 +48,17 @@ a {
 	&:hover {
 		text-decoration: none;
 	}
+
+	// theme.json から 
+	// a:where(:not(.wp-element-button)) {
+	//     color: var(--wp--preset--color--text-normal);
+	// }
+	// が出力されてしまうため、背景が暗い時 or 白文字指定の時 にリンク文字が見えなくなってしまうので上書き
+	:is(.has-bg-dark-background-color,.has-text-normal-darkbg-color) &:where(:not(.wp-element-button)) {
+		color: var(--wp--preset--color--text-normal-darkbg);
+	}
 }
+
 // Global Style で上書きできるように where を付与している
 // theme.json で各 h element に指定すると、
 // Global Style で「すべて」の見出しにサイズを指定しても theme.json の指定に負けて反映されないため、

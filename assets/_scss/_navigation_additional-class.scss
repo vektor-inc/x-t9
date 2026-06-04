@@ -87,6 +87,32 @@
 }
 
 /******************************************************
+ * Text inline & Vertical with hr
+ * 線の色制御
+ */
+
+:is( *[class*='nav--text-inline'],*[class*='nav--vertical-with-hr'] ) {
+
+	// とりあえず通常の線の色を定義
+	--nav--color--hr: var(--wp--preset--color--border-normal);
+
+	// Text DarkBG //////////
+
+	// * 親要素の背景が黒 or 親要素の文字色が白
+	:is(.has-bg-dark-background-color, .has-text-normal-darkbg-color ) &,
+	// * ナビゲーションの文字色が白
+	&.has-text-normal-darkbg-color{
+		// * モーダルが閉じている時（空いている場合は除外）
+		&:not( .has-modal-open :is( *[class*='nav--text-inline'],*[class*='nav--vertical-with-hr']) ),
+		// * オーバーレイが開いてるが、オーバーレイ側で背景色黒か文字色白指定がある場合
+		.wp-block-navigation__responsive-container.disable-default-overlay.has-modal-open & {
+			// 線の色を明るい色に指定
+			--nav--color--hr: var(--wp--preset--color--border-normal-darkbg);
+		}
+	}
+}
+
+/******************************************************
  * Text inline
  is-style-nav--text-inline
 
@@ -96,19 +122,14 @@
 
  */
 *[class*='nav--text-inline'] {
-	--nav--text-inline--border: var(--wp--preset--color--border-normal);
-
-	&.nav--darkbg {
-		--nav--text-inline--border: var(--wp--preset--color--border-normal-darkbg);
-	}
 
 	// PC Mode ( * Display 1st level only )
 	.wp-block-navigation__responsive-container:where( :not(.is-menu-open) ), // Overlay close
 	& > :where( .wp-block-navigation__container ) { // No overlay mode
 		.wp-block-navigation-item {
-			border-left: 1px solid var(--nav--text-inline--border);
+			border-left: 1px solid var(--nav--color--hr);
 			&:last-child {
-				border-right: 1px solid var(--nav--text-inline--border);
+				border-right: 1px solid var(--nav--color--hr);
 			}
 		}
 		& >.wp-block-navigation-item {
@@ -141,17 +162,12 @@
  .wp-block-navigation[class*='nav--vertical-with-hr'] {
 	--wp--custom--spacing--menu-indent: 0.8em;
 	width:100%;
+
 	// Border specify /////////////////////
-	.wp-block-navigation-item {
-		&.has-text-normal-darkbg-color {
-			&>.wp-block-navigation-item__content,
-			&>a.wp-block-navigation-item__content {
-				border-bottom: 1px solid var(--wp--preset--color--border-normal-darkbg);
-			}
-		}
-	}
+
+	// Text Normal //////////
 	.wp-block-navigation-item__content {
-		border-bottom: 1px solid var(--wp--preset--color--border-normal);
+		border-bottom: 1px solid var(--nav--color--hr);
 	}
 
 	// Menu item layout /////////////////////
