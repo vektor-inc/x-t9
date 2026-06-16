@@ -32,7 +32,7 @@
 <div style="height:var(--wp--preset--spacing--30)" aria-hidden="true" class="wp-block-spacer is-style-default"></div>
 <!-- /wp:spacer -->
 
-<!-- wp:post-title {"level":6,"isLink":true,"className":"text-light ","style":{"typography":{"fontStyle":"normal","fontWeight":"400"},"elements":{"link":{"color":{"text":"#333333"}}},"color":{"text":"#333333"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"fontSize":"medium"} /-->
+<!-- wp:post-title {"level":6,"isLink":true,"style":{"typography":{"fontStyle":"normal","fontWeight":"400"},"elements":{"link":{"color":{"text":"#333333"}}},"color":{"text":"#333333"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"fontSize":"medium"} /-->
 
 <!-- wp:spacer {"height":"var:preset|spacing|40","className":"is-style-default"} -->
 <div style="height:var(--wp--preset--spacing--40)" aria-hidden="true" class="wp-block-spacer is-style-default"></div>
