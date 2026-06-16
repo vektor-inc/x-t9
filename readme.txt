@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Bug Fix ] Removed the text-light class from post titles in block patterns so the font weight set in the editor is no longer overridden by its font-weight: lighter !important
+
 = 1.41.1 =
 [ Spec Change ] Fine-tuned the spacing, column widths, and colors of the post list block patterns
 [ Spec Change ][ Query Loop Block ] Removed the site-specific queryId from Query Loop patterns so it is no longer included in the distributed patterns
