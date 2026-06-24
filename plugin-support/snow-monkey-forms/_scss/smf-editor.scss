@@ -10,8 +10,7 @@
  * SMF の編集パネルは白背景を前提とした設計のため、body の文字色を
  * 継承すると白文字になって見えなくなる。revert でブラウザ既定値に戻す。
  */
-.editor-styles-wrapper .snow-monkey-forms-setting-panel,
-.editor-styles-wrapper .snow-monkey-forms-setting-panel * {
+.editor-styles-wrapper .snow-monkey-forms-setting-panel {
 	color: revert;
 }
 
