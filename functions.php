@@ -30,6 +30,12 @@ if ( ! function_exists( 'xt9_support' ) ) :
 			add_editor_style( 'assets/css/editor-wp65.css' );
 		}
 
+		// Snow Monkey Forms が有効な場合のみエディタ用 CSS を読み込む。
+		// after_setup_theme 時点では plugins_loaded 済みのため class_exists で判定可能。
+		if ( class_exists( 'Snow_Monkey\Plugin\Forms\Bootstrap' ) ) {
+			add_editor_style( 'plugin-support/snow-monkey-forms/css/smf-editor.css' );
+		}
+
 		// Show only this theme's own block patterns in the inserter.
 		// Disable the core bundled patterns and the WordPress.org remote pattern
 		// directory so the inserter is not cluttered with unrelated patterns.
