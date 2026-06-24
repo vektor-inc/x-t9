@@ -15,3 +15,21 @@
 .smf-form .smf-select-control__control {
 	background-image: none;
 }
+
+/*
+ * Snow Monkey Forms form controls always use white background (--_color-white).
+ * The theme sets color: text-normal (= #fff in BG Black palette) on input/textarea/select,
+ * making text invisible on the white control background.
+ * Override with SMF's own --_color-text (#333) which is designed for white backgrounds.
+ * SMF フォームコントロールは常に白背景（--_color-white）を使用する。
+ * テーマが BG Black パレット時に text-normal = #fff を設定するため
+ * 白背景のコントロール上でテキストが見えなくなる。
+ * SMF 自身の --_color-text（#333, 白背景向け）で上書きする。
+ */
+.smf-form {
+	.smf-text-control__control,
+	.smf-textarea-control__control,
+	.smf-select-control__control {
+		color: var(--_color-text, #333);
+	}
+}

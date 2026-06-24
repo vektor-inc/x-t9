@@ -8,13 +8,13 @@
  * theme.json の styles.color.text によりエディタ iframe の body に
  * BG Black 等のダークパレット選択時は color: #fff が適用される。
  * SMF の編集パネルは白背景を前提とした設計のため、body の文字色を
- * 継承すると白文字になって見えなくなる。revert でブラウザ既定値に戻す。
+ * 継承すると白文字になって見えなくなる。initial でCSSの初期値に戻す。
  */
 .editor-styles-wrapper .snow-monkey-forms-setting-panel {
-	color: revert;
+	color: initial;
 }
 
-.editor-styles-wrapper .smf-item label,
+.editor-styles-wrapper .smf-item__label,
 .editor-styles-wrapper .smf-item .smf-item__description {
-	color: revert;
+	color: initial;
 }
