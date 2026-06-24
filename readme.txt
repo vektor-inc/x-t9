@@ -13,7 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
-* [ Design Bug Fix ][ Snow Monkey Forms ] Fixed an issue where form labels and description text in the Snow Monkey Forms editing panel turned white and became invisible when a dark palette such as BG Black was selected
+* [ Design Bug Fix ][ Snow Monkey Forms ] Fixed form labels in the editor turning white and invisible when a dark palette such as BG Black is selected
 
 = 1.41.2 =
 [ Design Bug Fix ] Removed the text-light class from post titles in block patterns so the font weight set in the editor is no longer overridden by its font-weight: lighter !important
