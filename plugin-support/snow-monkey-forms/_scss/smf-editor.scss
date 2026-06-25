@@ -18,3 +18,15 @@
 .editor-styles-wrapper .smf-item .smf-item__description {
 	color: initial;
 }
+
+/*
+ * エディタの style.css（_common.scss）が
+ *   input:where(:not([type="submit"])) { color: var(--wp--preset--color--text-normal) }
+ * を適用するため、ダークパレット選択時に SMF の date / month 等の input が白文字になる。
+ * smf.scss 側（フロントエンド）は color: var(--_color-text, #333) で上書き済みだが、
+ * smf.scss はエディタには読み込まれないため、エディタ用に同等の上書きが必要。
+ * initial を使って CSS の初期値に戻し、inherit による文字色汚染を断ち切る。
+ */
+.editor-styles-wrapper .smf-form .smf-text-control__control {
+	color: initial;
+}
