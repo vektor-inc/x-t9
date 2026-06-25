@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Bug Fix ][ Navigation Block ] Fixed an issue where horizontal navigation styles ( submenu font size, item padding, and submenu background ) were not applied on initial placement because the .is-horizontal class is absent by default
+
 = 1.41.2 =
 [ Design Bug Fix ] Removed the text-light class from post titles in block patterns so the font weight set in the editor is no longer overridden by its font-weight: lighter !important
 
