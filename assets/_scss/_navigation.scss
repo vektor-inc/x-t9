@@ -299,7 +299,11 @@ Overlay : allways ***********************
 /****************************************************** 
  *  Horizontal Navigation common styles
  */
- .wp-block-navigation:is(.is-horizontal) {
+ // .is-horizontal is not applied on initial placement; it only takes effect after
+ // switching to vertical and back to horizontal, so we target with :not(.is-vertical).
+ // .is-horizontal は初期配置の時はつかず、一度 vertical にして horizontal 指定しないと
+ // 効かないため、:not(.is-vertical) で指定している。
+ .wp-block-navigation:where(:not(.is-vertical)) {
 	// 横メニューのサブメニューでのみ文字サイズが小さくなるように
 	&:where(:not(:has(.has-modal-open))) {
 		:where(.wp-block-navigation__submenu-container) {
