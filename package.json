@@ -7,7 +7,7 @@
 		"build:script": "webpack --config webpack.js",
 		"sass": "sass --no-source-map assets/_scss/:assets/_scss/",
 		"sass:woocommerce": "sass --no-source-map --style=compressed plugin-support/woocommerce/_scss/woo.scss:plugin-support/woocommerce/css/woo.css",
-		"sass:snow-monkey-forms": "sass --no-source-map --style=compressed plugin-support/snow-monkey-forms/_scss/smf.scss:plugin-support/snow-monkey-forms/css/smf.css",
+		"sass:snow-monkey-forms": "sass --no-source-map --style=compressed plugin-support/snow-monkey-forms/_scss/smf.scss:plugin-support/snow-monkey-forms/css/smf.css plugin-support/snow-monkey-forms/_scss/smf-editor.scss:plugin-support/snow-monkey-forms/css/smf-editor.css",
 		"postcss:autoprefix": "npx postcss assets/_scss/*.css --use autoprefixer -r --no-map",
 		"postcss:minify": "npx postcss assets/_scss/*.css --use postcss-minify -d assets/css/ --no-map",
 		"postcss:all": "npx postcss assets/_scss/*.css --use autoprefixer postcss-minify -d assets/css/ --no-map",

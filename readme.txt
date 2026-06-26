@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Bug Fix ][ Snow Monkey Forms ] Fixed form labels and input fields becoming invisible ( white text on white background ) in both the editor and front end when a dark palette such as BG Black is selected
+
 = 1.41.3 =
 [ Design Bug Fix ][ Navigation Block ] Fixed an issue where horizontal navigation styles ( submenu font size, item padding, and submenu background ) were not applied on initial placement because the .is-horizontal class is absent by default
 [ Design Bug Fix ][ Navigation Block ] Fixed an issue where the submenu dropdown icon dropped below the menu text on hover when using the active-border-bottom additional class style
