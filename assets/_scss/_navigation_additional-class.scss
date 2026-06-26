@@ -56,7 +56,18 @@
 	// Overlay : off（ It is now positioned directly below .wp-block-navigation. ）
 	& > :where( .wp-block-navigation__container, .wp-block-page-list ) {
 			&>.wp-block-navigation-item {
-				&>:where(:is( a, .wp-block-navigation-submenu__toggle )) {
+				// Add vertical padding to the text. ////////////////////
+				// When the submenu opens on click, the whole item is wrapped by .wp-block-navigation-submenu__toggle,
+				// but on hover the submenu icon also gets .wp-block-navigation-submenu__toggle and the icon drops down,
+				// so exclude it with :not(.wp-block-navigation__submenu-icon).
+				// 文字の上下に余白を追加する。
+				// サブメニューの表示がクリックの場合は全体を .wp-block-navigation-submenu__toggle が囲うが、
+				// ホバーの場合はアイコン部分にも .wp-block-navigation-submenu__toggle がついてアイコンの位置が
+				// 下になってしまうため、:not(.wp-block-navigation__submenu-icon) で除外する。
+				&>:where(:is( 
+					a, 
+					.wp-block-navigation-submenu__toggle:where(:not(.wp-block-navigation__submenu-icon))
+				)) {
 					padding-top: 1em;
 					padding-bottom: 1em;
 				}
