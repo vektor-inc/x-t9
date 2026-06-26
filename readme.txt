@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei,yukinobu
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.41.4
+Stable tag: 1.41.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,6 +12,9 @@ The X-T9 is designed on the premise of full site editing function, and the user 
 GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
+
+= 1.41.5 =
+[ Other ] Change screenshot file
 
 = 1.41.4 =
 [ Design Bug Fix ][ Snow Monkey Forms ] Fixed form labels and input fields becoming invisible ( white text on white background ) in both the editor and front end when a dark palette such as BG Black is selected
