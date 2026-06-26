@@ -132,6 +132,7 @@ gulp.task('dist', function() {
 				'./**/*.otf',
 				'./**/*.less',
 				'./**/*.png',
+				'./**/*.jpg',
 				'./assets/**',
 				'./inc/**',
 				'./parts/**',
