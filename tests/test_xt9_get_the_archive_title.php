@@ -211,7 +211,8 @@ class Test_Xt9_Get_The_Archive_Title extends WP_UnitTestCase {
 	public function test_xt9_get_the_archive_title_with_unregistered_post_type_does_not_trigger_warning() {
 		// 未登録の post_type を設定.
 		global $wp_query;
-		$original_post_type = $wp_query->query_vars['post_type'] ?? '';
+		$post_type_key_existed = array_key_exists( 'post_type', $wp_query->query_vars );
+		$original_post_type    = $post_type_key_existed ? $wp_query->query_vars['post_type'] : null;
 		$wp_query->query_vars['post_type'] = 'unregistered_post_type_xyz';
 
 		// E_WARNING 発生を検知するためのフラグと error handler を設定.
@@ -232,7 +233,11 @@ class Test_Xt9_Get_The_Archive_Title extends WP_UnitTestCase {
 		} finally {
 			// error handler とクエリ変数を確実に復元.
 			restore_error_handler();
-			$wp_query->query_vars['post_type'] = $original_post_type;
+			if ( $post_type_key_existed ) {
+				$wp_query->query_vars['post_type'] = $original_post_type;
+			} else {
+				unset( $wp_query->query_vars['post_type'] );
+			}
 		}
 
 		// 未登録の post_type で E_WARNING が発生しないことを確認.
