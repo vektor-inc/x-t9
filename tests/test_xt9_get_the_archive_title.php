@@ -202,4 +202,42 @@ class Test_Xt9_Get_The_Archive_Title extends WP_UnitTestCase {
 			$this->assertEquals( $case['expected'], $actual, $case['test_condition_name'] );
 		}
 	}
+
+	/**
+	 * 未登録の投稿タイプが設定された場合に E_WARNING が発生しないことをテストします。
+	 * PHP 8.0 以降では get_post_type_object() が null を返す際に ->labels->name アクセスで
+	 * 警告が発生するため、null ガードが正しく機能しているかを検証します。
+	 */
+	public function test_xt9_get_the_archive_title_with_unregistered_post_type_does_not_trigger_warning() {
+		// 未登録の post_type を設定.
+		global $wp_query;
+		$original_post_type = $wp_query->query_vars['post_type'] ?? '';
+		$wp_query->query_vars['post_type'] = 'unregistered_post_type_xyz';
+
+		// E_WARNING 発生を検知するためのフラグと error handler を設定.
+		$warning_occurred = false;
+		set_error_handler(
+			function( $errno ) use ( &$warning_occurred ) {
+				if ( E_WARNING === $errno ) {
+					$warning_occurred = true;
+				}
+				return true;
+			}
+		);
+
+		$result = null;
+		try {
+			// テスト関数を実行.
+			$result = xt9_get_the_archive_title();
+		} finally {
+			// error handler とクエリ変数を確実に復元.
+			restore_error_handler();
+			$wp_query->query_vars['post_type'] = $original_post_type;
+		}
+
+		// 未登録の post_type で E_WARNING が発生しないことを確認.
+		$this->assertFalse( $warning_occurred, '未登録の post_type で E_WARNING が発生した' );
+		// フォールバック値が 'Archives' であることを確認.
+		$this->assertEquals( __( 'Archives', 'x-t9' ), $result, '未登録の post_type のフォールバックが Archives でない' );
+	}
 }
