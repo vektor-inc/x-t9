@@ -13,7 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
-* [ 不具合修正 ] PHP 8.0 以降で未登録の投稿タイプアーカイブへアクセスした際に PHP 警告が記録される不具合を修正
+[ Bug Fix ] Fixed PHP warning recorded when accessing an archive of an unregistered post type on PHP 8.0 or later
 
 = 1.41.6 =
 [ Other ] Change screenshot file
