@@ -121,8 +121,10 @@ function xt9_get_the_archive_title() {
 		global $wp_query;
 		// get post type.
 		if ( ! empty( $wp_query->query_vars['post_type'] ) ) {
-			$post_type = $wp_query->query_vars['post_type'];
-			$title     = get_post_type_object( $post_type )->labels->name;
+			$post_type     = $wp_query->query_vars['post_type'];
+			// get_post_type_object() は未登録の投稿タイプに対して null を返すため、null ガードを入れる.
+			$post_type_obj = get_post_type_object( $post_type );
+			$title         = $post_type_obj ? $post_type_obj->labels->name : __( 'Archives', 'x-t9' );
 		} else {
 			$title = __( 'Archives', 'x-t9' );
 		}

@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug Fix ] Fixed PHP warning recorded when accessing an archive of an unregistered post type on PHP 8.0 or later
+
 = 1.41.6 =
 [ Other ] Change screenshot file
 
