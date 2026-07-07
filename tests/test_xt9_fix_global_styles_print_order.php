@@ -34,146 +34,196 @@ class Test_Xt9_Fix_Global_Styles_Print_Order extends WP_UnitTestCase {
 	}
 
 	/**
-	 * Test that wp-block-library is added as a dependency of global-styles
-	 * when both handles are registered and wp-block-library is enqueued.
-	 * 両方のハンドルが登録され、wp-block-library が enqueue されている場合に、
-	 * global-styles の依存関係へ wp-block-library が追加されることをテストします.
+	 * Test xt9_fix_global_styles_print_order() across the full set of registration /
+	 * enqueue / dequeue conditions it needs to handle.
+	 *
+	 * Each case's starting state is expressed as a data-driven `setup` list of
+	 * register / enqueue / dequeue actions (rather than one bespoke test method per
+	 * condition), per testing/phpunit.md's "条件と期待値をセットで配列に入れてループ
+	 * しながら処理する" convention. Because more than one aspect of the resulting
+	 * state can matter for a given case (global-styles registration state, its deps,
+	 * and the final print queue), each case declares only the `expected_*` keys that
+	 * are relevant to it; keys that are omitted are simply not asserted.
+	 *
+	 * xt9_fix_global_styles_print_order() が扱う登録・enqueue・dequeue の
+	 * 各条件を網羅的にテストします。
+	 *
+	 * 条件ごとに個別のテストメソッドを用意するのではなく、各ケースの開始状態を
+	 * register / enqueue / dequeue の操作列（`setup`）としてデータ化し、
+	 * testing/phpunit.md の「条件と期待値をセットで配列に入れてループしながら
+	 * 処理する」規約に沿ってループ実行します。ケースによって確認すべき観点
+	 * （ global-styles の登録状態・その deps・最終的な print queue ）が異なるため、
+	 * 各ケースはそのケースに関係する `expected_*` キーのみを宣言し、
+	 * 宣言されていないキーは検証をスキップします.
 	 */
-	public function test_adds_wp_block_library_as_dependency_when_enqueued() {
-		// Register both style handles the way WordPress core does, and enqueue
-		// wp-block-library the way wp_common_block_scripts_and_styles() does.
-		// WordPress core と同様の形でハンドルを登録し、
-		// wp_common_block_scripts_and_styles() と同様に wp-block-library を enqueue する.
-		wp_register_style( 'wp-block-library', false );
-		wp_enqueue_style( 'wp-block-library' );
-		wp_register_style( 'global-styles', false );
+	public function test_xt9_fix_global_styles_print_order() {
+		global $wp_styles;
 
-		xt9_fix_global_styles_print_order();
+		$test_cases = array(
+			array(
+				'test_condition_name'    => 'wp-block-library が直接 enqueue されている場合 => global-styles の依存関係に追加される',
+				'setup'                  => array(
+					array( 'action' => 'register', 'handle' => 'wp-block-library' ),
+					array( 'action' => 'enqueue', 'handle' => 'wp-block-library' ),
+					array( 'action' => 'register', 'handle' => 'global-styles' ),
+				),
+				'run_twice'              => false,
+				'expected_deps_contains' => true,
+			),
+			array(
+				'test_condition_name'    => '他の enqueue 済みハンドル経由で wp-block-library が間接的に読み込まれる場合 => global-styles の依存関係に追加される',
+				'setup'                  => array(
+					array( 'action' => 'register', 'handle' => 'wp-block-library' ),
+					// Some other handle depends on wp-block-library and is the one actually enqueued.
+					// 他のハンドルが wp-block-library に依存し、そのハンドル自体が enqueue される.
+					array(
+						'action' => 'register',
+						'handle' => 'some-other-enqueued-style',
+						'deps'   => array( 'wp-block-library' ),
+					),
+					array( 'action' => 'enqueue', 'handle' => 'some-other-enqueued-style' ),
+					array( 'action' => 'register', 'handle' => 'global-styles' ),
+				),
+				'run_twice'              => false,
+				'expected_deps_contains' => true,
+			),
+			array(
+				'test_condition_name'    => '2回実行した場合 => 依存関係が重複追加されない（冪等性）',
+				'setup'                  => array(
+					array( 'action' => 'register', 'handle' => 'wp-block-library' ),
+					array( 'action' => 'enqueue', 'handle' => 'wp-block-library' ),
+					array( 'action' => 'register', 'handle' => 'global-styles' ),
+				),
+				'run_twice'              => true,
+				'expected_deps_contains' => true,
+				'expected_deps_count'    => 1,
+			),
+			array(
+				'test_condition_name'                => 'global-styles が未登録の場合（クラシックテーマ等） => エラーも変更も発生せず、global-styles は登録されないまま',
+				'setup'                              => array(
+					array( 'action' => 'register', 'handle' => 'wp-block-library' ),
+					array( 'action' => 'enqueue', 'handle' => 'wp-block-library' ),
+					// global-styles is intentionally left unregistered.
+					// global-styles は意図的に未登録の状態にする.
+				),
+				'run_twice'                          => false,
+				'expected_global_styles_registered'  => false,
+			),
+			array(
+				'test_condition_name'    => 'wp-block-library が未登録の場合 => global-styles の依存関係に追加されない',
+				'setup'                  => array(
+					array( 'action' => 'register', 'handle' => 'global-styles' ),
+					// wp-block-library is intentionally left unregistered.
+					// wp-block-library は意図的に未登録の状態にする.
+				),
+				'run_twice'              => false,
+				'expected_deps_contains' => false,
+			),
+			array(
+				// Regression case for a side effect flagged in code review: if a plugin or
+				// child theme intentionally calls wp_dequeue_style( 'wp-block-library' ) for
+				// performance reasons, this function must not add it as a dependency of
+				// global-styles, because WP_Dependencies::do_items() would then force
+				// wp-block-library to print anyway (dependencies are pulled in as long as
+				// they are *registered*, regardless of whether they were themselves
+				// enqueued). Doing so would silently defeat the dequeue and reload
+				// wp-block-library on every page.
+				// コードレビューで指摘された副作用の再現防止ケース。パフォーマンス目的で
+				// プラグインや子テーマが wp_dequeue_style( 'wp-block-library' ) を
+				// 呼んでいる場合、この関数はそれを wp-block-library への依存関係として
+				// 追加してはいけません。WP_Dependencies::do_items() は「登録されている
+				// だけ」の依存を出力対象へ引き込んでしまうため、依存関係を追加すると
+				// dequeue が無効化され、全ページで wp-block-library が
+				// 強制的に再ロードされてしまいます.
+				'test_condition_name'     => '第三者プラグイン等が wp-block-library を dequeue している場合 => 依存関係に追加されず、キューにも復活しない（強制ロードされない）',
+				'setup'                   => array(
+					array( 'action' => 'register', 'handle' => 'wp-block-library' ),
+					array( 'action' => 'enqueue', 'handle' => 'wp-block-library' ),
+					array( 'action' => 'register', 'handle' => 'global-styles' ),
+					array( 'action' => 'enqueue', 'handle' => 'global-styles' ),
+					// Simulate a third-party plugin/child theme dequeuing wp-block-library.
+					// サードパーティのプラグイン・子テーマによる dequeue を再現する.
+					array( 'action' => 'dequeue', 'handle' => 'wp-block-library' ),
+				),
+				'run_twice'               => false,
+				'expected_deps_contains'  => false,
+				'expected_queue_contains' => false,
+			),
+		);
 
-		$global_styles = wp_styles()->registered['global-styles'];
-		$this->assertContains( 'wp-block-library', $global_styles->deps, 'wp-block-library が global-styles の依存関係に追加されていない' );
-	}
+		foreach ( $test_cases as $case ) {
+			// Reset the styles registry before every case so cases don't leak into each other.
+			// ケース間で状態が引き継がれないよう、各ケースの前に styles レジストリをリセットする.
+			$wp_styles = new WP_Styles(); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
 
-	/**
-	 * Test that wp-block-library is also recognized as "going to be printed anyway"
-	 * when it is only pulled in indirectly via another enqueued handle's dependency
-	 * chain (WP_Dependencies::query( $handle, 'enqueued' ) resolves this recursively),
-	 * and the dependency is still added in that case.
-	 * wp-block-library が直接 enqueue されておらず、他の enqueue 済みハンドルの
-	 * 依存関係経由で間接的に読み込まれる場合でも
-	 * （ WP_Dependencies::query( $handle, 'enqueued' ) は再帰的に解決するため）
-	 * 「どのみち出力される」と判定され、依存関係が追加されることをテストします.
-	 */
-	public function test_adds_dependency_when_wp_block_library_is_only_indirectly_enqueued() {
-		wp_register_style( 'wp-block-library', false );
-		// Some other handle depends on wp-block-library and is the one actually enqueued.
-		// 他のハンドルが wp-block-library に依存し、そのハンドル自体が enqueue される.
-		wp_register_style( 'some-other-enqueued-style', false, array( 'wp-block-library' ) );
-		wp_enqueue_style( 'some-other-enqueued-style' );
-		wp_register_style( 'global-styles', false );
-
-		xt9_fix_global_styles_print_order();
-
-		$global_styles = wp_styles()->registered['global-styles'];
-		$this->assertContains( 'wp-block-library', $global_styles->deps, '間接的に読み込まれる wp-block-library が依存関係に追加されていない' );
-	}
-
-	/**
-	 * Test that running the function twice does not add the dependency twice (idempotency).
-	 * 2回実行しても依存関係が重複追加されないことをテストします（冪等性）.
-	 */
-	public function test_is_idempotent_when_run_twice() {
-		wp_register_style( 'wp-block-library', false );
-		wp_enqueue_style( 'wp-block-library' );
-		wp_register_style( 'global-styles', false );
-
-		xt9_fix_global_styles_print_order();
-		xt9_fix_global_styles_print_order();
-
-		$global_styles = wp_styles()->registered['global-styles'];
-		$count         = count(
-			array_filter(
-				$global_styles->deps,
-				static function ( $dep ) {
-					return 'wp-block-library' === $dep;
+			// Replay this case's setup actions (register / enqueue / dequeue) to build its starting state.
+			// このケースの開始状態を register / enqueue / dequeue の操作列で再現する.
+			foreach ( $case['setup'] as $step ) {
+				switch ( $step['action'] ) {
+					case 'register':
+						wp_register_style( $step['handle'], false, $step['deps'] ?? array() );
+						break;
+					case 'enqueue':
+						wp_enqueue_style( $step['handle'] );
+						break;
+					case 'dequeue':
+						wp_dequeue_style( $step['handle'] );
+						break;
 				}
-			)
-		);
-		$this->assertSame( 1, $count, 'wp-block-library が重複して追加されている' );
-	}
+			}
 
-	/**
-	 * Test that nothing happens (no error, no changes) when global-styles is not registered,
-	 * e.g. on a classic theme where this handle may not exist.
-	 * global-styles が未登録の場合（クラシックテーマ等でハンドルが存在しないケース）
-	 * に、エラーも変更も発生しないことをテストします.
-	 */
-	public function test_does_nothing_when_global_styles_is_not_registered() {
-		wp_register_style( 'wp-block-library', false );
-		wp_enqueue_style( 'wp-block-library' );
-		// global-styles is intentionally left unregistered.
-		// global-styles は意図的に未登録の状態にする.
+			// Execute the function under test, twice when this case tests idempotency.
+			// テスト対象の関数を実行する（冪等性を確認するケースでは2回実行する）.
+			xt9_fix_global_styles_print_order();
+			if ( ! empty( $case['run_twice'] ) ) {
+				xt9_fix_global_styles_print_order();
+			}
 
-		xt9_fix_global_styles_print_order();
+			// Only assert global-styles' registration state when this case cares about it.
+			// このケースが対象としている場合のみ global-styles の登録状態を確認する.
+			if ( array_key_exists( 'expected_global_styles_registered', $case ) ) {
+				$this->assertSame(
+					$case['expected_global_styles_registered'],
+					(bool) $wp_styles->query( 'global-styles', 'registered' ),
+					$case['test_condition_name']
+				);
+			}
 
-		$this->assertArrayNotHasKey( 'global-styles', wp_styles()->registered, '未登録のはずの global-styles が登録されてしまっている' );
-	}
+			// Only inspect global-styles->deps when the handle is expected to exist in this case.
+			// global-styles ハンドルが存在するケースに限り deps を確認する.
+			if ( array_key_exists( 'expected_deps_contains', $case ) || array_key_exists( 'expected_deps_count', $case ) ) {
+				$global_styles = $wp_styles->registered['global-styles'];
 
-	/**
-	 * Test that nothing happens when wp-block-library is not registered at all.
-	 * wp-block-library が未登録の場合に、global-styles の依存関係が
-	 * 変更されないことをテストします.
-	 */
-	public function test_does_nothing_when_wp_block_library_is_not_registered() {
-		wp_register_style( 'global-styles', false );
-		// wp-block-library is intentionally left unregistered.
-		// wp-block-library は意図的に未登録の状態にする.
+				if ( array_key_exists( 'expected_deps_contains', $case ) ) {
+					if ( $case['expected_deps_contains'] ) {
+						$this->assertContains( 'wp-block-library', $global_styles->deps, $case['test_condition_name'] );
+					} else {
+						$this->assertNotContains( 'wp-block-library', $global_styles->deps, $case['test_condition_name'] );
+					}
+				}
 
-		xt9_fix_global_styles_print_order();
+				if ( array_key_exists( 'expected_deps_count', $case ) ) {
+					$count = count(
+						array_filter(
+							$global_styles->deps,
+							static function ( $dep ) {
+								return 'wp-block-library' === $dep;
+							}
+						)
+					);
+					$this->assertSame( $case['expected_deps_count'], $count, $case['test_condition_name'] );
+				}
+			}
 
-		$global_styles = wp_styles()->registered['global-styles'];
-		$this->assertNotContains( 'wp-block-library', $global_styles->deps, '未登録のはずの wp-block-library が依存関係に追加されてしまっている' );
-	}
-
-	/**
-	 * Regression test for a side effect flagged in code review: if a plugin or child
-	 * theme intentionally calls wp_dequeue_style( 'wp-block-library' ) for performance
-	 * reasons, this function must not add it as a dependency of global-styles, because
-	 * WP_Dependencies::do_items() would then force wp-block-library to print anyway
-	 * (dependencies are pulled in as long as they are *registered*, regardless of
-	 * whether they were themselves enqueued). Doing so would silently defeat the
-	 * dequeue and reload wp-block-library on every page.
-	 * コードレビューで指摘された副作用の再現防止テストです。パフォーマンス目的で
-	 * プラグインや子テーマが wp_dequeue_style( 'wp-block-library' ) を呼んでいる場合、
-	 * この関数はそれを wp-block-library に依存関係を追加してはいけません。
-	 * WP_Dependencies::do_items() は「登録されているだけ」の依存を出力対象へ
-	 * 引き込んでしまうため、依存関係を追加すると dequeue が無効化され、
-	 * 全ページで wp-block-library が強制的に再ロードされてしまいます。
-	 */
-	public function test_does_not_force_load_wp_block_library_when_dequeued() {
-		wp_register_style( 'wp-block-library', false );
-		wp_enqueue_style( 'wp-block-library' );
-		wp_register_style( 'global-styles', false );
-		wp_enqueue_style( 'global-styles' );
-
-		// Simulate a third-party plugin/child theme dequeuing wp-block-library for
-		// performance reasons, at some priority after our own hook would normally run.
-		// パフォーマンス目的でサードパーティのプラグイン・子テーマが
-		// wp-block-library を dequeue するケースを再現する.
-		wp_dequeue_style( 'wp-block-library' );
-
-		xt9_fix_global_styles_print_order();
-
-		$global_styles = wp_styles()->registered['global-styles'];
-		$this->assertNotContains(
-			'wp-block-library',
-			$global_styles->deps,
-			'dequeue 済みの wp-block-library が global-styles の依存関係に追加され、強制ロードされてしまっている'
-		);
-		$this->assertNotContains(
-			'wp-block-library',
-			wp_styles()->queue,
-			'dequeue 済みの wp-block-library がキューに復活してしまっている'
-		);
+			// Only assert the final print queue when this case cares about it (the dequeue regression case).
+			// このケースが対象としている場合のみ（ dequeue の回帰ケース）最終的な print queue を確認する.
+			if ( array_key_exists( 'expected_queue_contains', $case ) ) {
+				if ( $case['expected_queue_contains'] ) {
+					$this->assertContains( 'wp-block-library', $wp_styles->queue, $case['test_condition_name'] );
+				} else {
+					$this->assertNotContains( 'wp-block-library', $wp_styles->queue, $case['test_condition_name'] );
+				}
+			}
+		}
 	}
 }
