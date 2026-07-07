@@ -14,7 +14,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 == Changelog ==
 
 [ Bug Fix ] Fixed PHP warning recorded when accessing an archive of an unregistered post type on PHP 8.0 or later
-[ Bug Fix ] Fixed an issue where using a block's Additional CSS (WordPress 7.0+) caused headings using fluid typography to render at WordPress core's static fallback font size instead of the theme's fluid clamp() value
+[ Bug Fix ] Worked around a WordPress core bug (7.0+) that caused headings using fluid typography to render at a fixed font size instead of the theme's fluid clamp() value when a block's Additional CSS was used
 
 = 1.41.6 =
 [ Other ] Change screenshot file
