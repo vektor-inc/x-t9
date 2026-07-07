@@ -9,7 +9,8 @@
  */
 
 /**
- * Force the `wp-block-library` style handle to always print before `global-styles`.
+ * Force the `wp-block-library` style handle to always print before `global-styles`,
+ * but only when `wp-block-library` is actually going to be printed anyway.
  *
  * WordPress 7.0 introduced the block-level "Additional CSS" feature
  * ( wp-includes/block-supports/custom-css.php ). When a block on the page uses it,
@@ -64,19 +65,59 @@
  * 順序が保たれる。「追加CSS」ブロックの有無や、将来 WordPress core 側で
  * この不具合が修正されたかどうかに関わらず安全に動作する（冪等）。
  *
+ * IMPORTANT — do not force-load a dequeued `wp-block-library`:
+ * WP_Dependencies::do_items() resolves dependencies via all_deps(), which pulls in
+ * any *registered* dependency of a queued handle regardless of whether that
+ * dependency was itself enqueued. That means merely checking
+ * `query( 'wp-block-library', 'registered' )` is not enough: if some plugin or child
+ * theme intentionally calls `wp_dequeue_style( 'wp-block-library' )` for performance
+ * reasons, simply registering it as a dependency of `global-styles` would defeat that
+ * dequeue and force `wp-block-library` to load again on every page — a regression this
+ * theme must not introduce. To avoid that, this function only adds the dependency when
+ * `wp-block-library` is actually going to be printed anyway, i.e. when
+ * `query( 'wp-block-library', 'enqueued' )` returns true (directly enqueued, or already
+ * pulled in via some other handle's dependency chain).
+ *
+ * 【重要】dequeue 済みの wp-block-library を強制ロードしないための対応:
+ * WP_Dependencies::do_items() は all_deps() で依存関係を解決する際、
+ * キューに入っているハンドルの依存先が「登録されているだけ」であれば、
+ * それが実際に enqueue されたかどうかに関わらず出力対象に引き込んでしまう。
+ * そのため `query( 'wp-block-library', 'registered' )` だけでは不十分で、
+ * パフォーマンス目的で `wp_dequeue_style( 'wp-block-library' )` を呼んでいる
+ * プラグイン・子テーマが存在した場合、その dequeue を無効化して
+ * wp-block-library を強制的に再ロードしてしまう副作用が起きる。
+ * これを避けるため、`wp-block-library` が「どのみち出力される」状態
+ * （ `query( 'wp-block-library', 'enqueued' )` が true。直接 enqueue 済み、
+ * または他のハンドルの依存関係経由で既に読み込まれる状態を含む）の場合のみ
+ * 依存関係を追加する。
+ *
  * @return void
  */
 function xt9_fix_global_styles_print_order() {
 	$wp_styles = wp_styles();
 
-	// Bail if either handle isn't registered yet.
+	// Bail if `global-styles` isn't registered.
 	// classic themes ( wp_is_block_theme() === false ) or certain edge cases may not
 	// register `global-styles` at all, so this must not assume the handle exists.
 	//
-	// いずれかのハンドルが未登録の場合は何もしない。
+	// global-styles が未登録の場合は何もしない。
 	// クラシックテーマ（ wp_is_block_theme() が false ）等では `global-styles`
 	// ハンドル自体が存在しない可能性があるため、存在確認を必須とする。
-	if ( ! $wp_styles->query( 'global-styles', 'registered' ) || ! $wp_styles->query( 'wp-block-library', 'registered' ) ) {
+	if ( ! $wp_styles->query( 'global-styles', 'registered' ) ) {
+		return;
+	}
+
+	// Bail unless wp-block-library is registered AND actually going to be printed
+	// (directly enqueued, or pulled in via another handle's dependency chain).
+	// If it has been explicitly dequeued (e.g. by a performance-focused plugin or
+	// child theme) and nothing else needs it, leave it dequeued — do not force it
+	// back in just to fix the print order of a style that would not be printed anyway.
+	//
+	// wp-block-library が登録済みかつ「どのみち出力される」状態
+	// （直接 enqueue 済み、または他ハンドル経由で読み込まれる）でない場合は何もしない。
+	// 明示的に dequeue されていて他に読み込む理由もない場合は、その dequeue を
+	// 尊重し、出力順序の都合だけで強制的に復活させない。
+	if ( ! $wp_styles->query( 'wp-block-library', 'registered' ) || ! $wp_styles->query( 'wp-block-library', 'enqueued' ) ) {
 		return;
 	}
 
@@ -93,14 +134,24 @@ function xt9_fix_global_styles_print_order() {
 	$global_styles->deps[] = 'wp-block-library';
 }
 /*
- * Hook into `wp_enqueue_scripts` at a priority late enough that both
- * `wp_common_block_scripts_and_styles()` (registers/enqueues `wp-block-library`) and
- * `wp_enqueue_global_styles()` (registers `global-styles`) — both hooked at the
- * default priority 10 — have already run.
+ * Hook as late as possible before styles are actually printed, so that the
+ * `enqueued` check above reflects the final queue state — including any
+ * `wp_dequeue_style( 'wp-block-library' )` call made by another plugin or child
+ * theme at any priority on `wp_enqueue_scripts`.
  *
- * `wp_common_block_scripts_and_styles()`（ `wp-block-library` を登録・enqueue する）
- * と `wp_enqueue_global_styles()`（ `global-styles` を登録する）は、いずれも
- * デフォルトの優先度10で `wp_enqueue_scripts` にフックされている。この2つの処理が
- * 両方完了した後に実行されるよう、それより遅い優先度でフックする。
+ * `wp_enqueue_scripts` itself fires on `wp_head` at priority 1, and core prints
+ * styles via `wp_print_styles()` on `wp_head` at priority 8. Hooking at `wp_head`
+ * priority 7 runs after the entire `wp_enqueue_scripts` action (and therefore after
+ * any dequeue calls within it) has completed, but still before printing.
+ *
+ * スタイルが実際に出力される直前まで判定を遅らせることで、上記の `enqueued`
+ * チェックが最終的なキュー状態（他のプラグイン・子テーマが `wp_enqueue_scripts`
+ * のどの優先度で `wp_dequeue_style( 'wp-block-library' )` を呼んでいても）を
+ * 正しく反映できるようにする。
+ *
+ * `wp_enqueue_scripts` 自体は `wp_head` の優先度1で発火し、コアはスタイルを
+ * `wp_head` の優先度8で `wp_print_styles()` により出力する。`wp_head` の優先度7で
+ * フックすることで、`wp_enqueue_scripts` アクション全体（その中で行われる
+ * dequeue 処理を含む）が完了した後、かつ出力される前に実行できる。
  */
-add_action( 'wp_enqueue_scripts', 'xt9_fix_global_styles_print_order', 20 );
+add_action( 'wp_head', 'xt9_fix_global_styles_print_order', 7 );
