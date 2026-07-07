@@ -85,6 +85,8 @@ require get_template_directory() . '/inc/block-styles.php';
 if ( version_compare( get_bloginfo( 'version' ), '6.6', '>=' ) ) {
 	require get_template_directory() . '/inc/typography-defaults.php';
 }
+// Workaround for a WordPress core style print-order bug affecting fluid typography (see file for details).
+require get_template_directory() . '/inc/global-styles-print-order-fix.php';
 // Load TGM.
 require get_template_directory() . '/inc/tgm-plugin-activation/tgm-config.php';
 
