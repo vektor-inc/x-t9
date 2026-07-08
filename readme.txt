@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei,yukinobu
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.41.6
+Stable tag: 1.41.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+= 1.41.7 =
 [ Bug Fix ] Fixed PHP warning recorded when accessing an archive of an unregistered post type on PHP 8.0 or later
 [ Bug Fix ] Worked around a WordPress core bug (7.0+) that caused headings using fluid typography to render at a fixed font size instead of the theme's fluid clamp() value when a block's Additional CSS was used
 
