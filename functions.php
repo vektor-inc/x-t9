@@ -207,9 +207,19 @@ function x_t9_enqueue_snow_monkey_forms_js() {
 	// same wp_enqueue_scripts hook, but since plugins are always loaded before
 	// a theme's functions.php, the handle is guaranteed to already be
 	// registered at this point.
+	$js = file_get_contents( get_template_directory() . '/plugin-support/snow-monkey-forms/js/smf-fixed-header-offset.js' ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+
+	// ファイル読み込みに失敗した場合は false が返るため、インラインスクリプトとして
+	// "false" 相当の値を出力してしまわないようにガードする.
+	// file_get_contents() returns false on failure; guard against passing that
+	// straight into wp_add_inline_script() as the script body.
+	if ( false === $js ) {
+		return;
+	}
+
 	wp_add_inline_script(
 		'snow-monkey-forms',
-		file_get_contents( get_template_directory() . '/plugin-support/snow-monkey-forms/js/smf-fixed-header-offset.js' ) // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		$js
 	);
 }
 add_action( 'wp_enqueue_scripts', 'x_t9_enqueue_snow_monkey_forms_js' );
