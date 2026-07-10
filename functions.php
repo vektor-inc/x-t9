@@ -175,6 +175,56 @@ function x_t9_enqueue_snow_monkey_forms_css() {
 add_action( 'wp_enqueue_scripts', 'x_t9_enqueue_snow_monkey_forms_css' );
 
 /**
+ * Fixed header 使用時、Snow Monkey Forms の画面遷移後のスクロール位置が
+ * ヘッダーの下に隠れてしまう問題への対応として、補正用 JS を Snow Monkey
+ * Forms 本体のスクリプト（ハンドル: snow-monkey-forms）にインラインで追加する。
+ *
+ * Adds an inline script to Snow Monkey Forms' own script (handle:
+ * snow-monkey-forms) that corrects the scroll position after a screen
+ * transition when using a fixed header, so the top of the form is not
+ * hidden behind the header.
+ *
+ * @return void
+ */
+function x_t9_enqueue_snow_monkey_forms_js() {
+	// Snow Monkey Forms が有効でない場合は何もしない.
+	// Do nothing when Snow Monkey Forms is not active.
+	if ( ! class_exists( 'Snow_Monkey\Plugin\Forms\Bootstrap' ) ) {
+		return;
+	}
+
+	// テーマ側でこのスクロール位置補正を無効化したい場合に利用できるフィルター.
+	// A filter hook for disabling this scroll position adjustment from a child theme or plugin.
+	if ( ! apply_filters( 'x_t9_smf_fixed_header_offset', true ) ) {
+		return;
+	}
+
+	// Snow Monkey Forms 本体（ハンドル: snow-monkey-forms）は本関数と同じ
+	// wp_enqueue_scripts フックで登録されるが、プラグインは常にテーマの
+	// functions.php より先に読み込まれるため、この時点で登録済みであることが
+	// 保証されている.
+	// Snow Monkey Forms itself registers the "snow-monkey-forms" handle on the
+	// same wp_enqueue_scripts hook, but since plugins are always loaded before
+	// a theme's functions.php, the handle is guaranteed to already be
+	// registered at this point.
+	$js = file_get_contents( get_template_directory() . '/plugin-support/snow-monkey-forms/js/smf-fixed-header-offset.js' ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+
+	// ファイル読み込みに失敗した場合は false が返るため、インラインスクリプトとして
+	// "false" 相当の値を出力してしまわないようにガードする.
+	// file_get_contents() returns false on failure; guard against passing that
+	// straight into wp_add_inline_script() as the script body.
+	if ( false === $js ) {
+		return;
+	}
+
+	wp_add_inline_script(
+		'snow-monkey-forms',
+		$js
+	);
+}
+add_action( 'wp_enqueue_scripts', 'x_t9_enqueue_snow_monkey_forms_js' );
+
+/**
  * Navigation Submenu block do render menu item description
  * 6.8がリリースされたら削除する
  */

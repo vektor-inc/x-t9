@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Bug Fix ][ Snow Monkey Forms ] Fixed an issue where, when using a fixed header pattern (is-position-fixed), the top of the form was hidden behind the header after a Snow Monkey Forms screen transition (confirm/complete/back)
+
 = 1.41.7 =
 [ Bug Fix ] Fixed PHP warning recorded when accessing an archive of an unregistered post type on PHP 8.0 or later
 [ Bug Fix ] Worked around a WordPress core bug (7.0+) that caused headings using fluid typography to render at a fixed font size instead of the theme's fluid clamp() value when a block's Additional CSS was used
