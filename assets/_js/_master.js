@@ -113,3 +113,55 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+/*----------------------------------------------------------*/
+/*  fixed header height => CSS custom property
+/*----------------------------------------------------------*/
+// header.is-position-fixed（常時固定ヘッダーパターン）の高さをリアルタイムに監視し、
+// --x-t9-fixed-header-height という CSS カスタムプロパティに反映する。
+// これにより、目次ブロックなどページ内リンクのジャンプ先や :focus 時に scroll-margin-block-start で
+// 実際のヘッダー高さ分だけ正確にスクロール位置を補正できるようになる
+// （PC/スマホでヘッダー高さが異なるレスポンシブ構成にも自動で追従する）。
+// 対象範囲: header.is-position-fixed（常時固定ヘッダー）のみ。
+// is-style-scrolled-header-fixed（スクロールで出現する高さ可変ヘッダー）は対象外。
+//
+// Watches the height of header.is-position-fixed (the always-fixed header pattern) in real
+// time and reflects it into the --x-t9-fixed-header-height CSS custom property, so
+// scroll-margin-block-start (used e.g. by in-page links from the Table of Contents block, and
+// by :focus for keyboard navigation) can offset the scroll position by the exact header height
+// (automatically tracking responsive layouts where the header height differs between PC and
+// mobile).
+// Scope: only header.is-position-fixed (the always-fixed header pattern) is supported;
+// is-style-scrolled-header-fixed (a variable-height header that appears on scroll) is out of
+// scope.
+(() => {
+    'use strict';
+
+    // ResizeObserver 未対応ブラウザでは何もしない（CSS 側の var() フォールバックで 0px のまま動作する）
+    // Do nothing in browsers without ResizeObserver support (the CSS var() fallback keeps it at 0px)
+    if (typeof ResizeObserver === 'undefined') {
+        return;
+    }
+
+    const fixedHeader = document.querySelector('header.is-position-fixed');
+
+    // 固定ヘッダーが存在しないページでは何もしない（変数未設定のままフォールバック値の0pxが使われる）
+    // Do nothing on pages without a fixed header (the variable stays unset and falls back to 0px)
+    if (!fixedHeader) {
+        return;
+    }
+
+    const resizeObserver = new ResizeObserver((entries) => {
+        entries.forEach((entry) => {
+            // offsetHeight は border / padding を含む実際の表示高さのため使用する
+            // Use offsetHeight since it includes border/padding and reflects the actual rendered height
+            document.documentElement.style.setProperty(
+                '--x-t9-fixed-header-height',
+                entry.target.offsetHeight + 'px'
+            );
+        });
+    });
+
+    resizeObserver.observe(fixedHeader);
+})();

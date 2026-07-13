@@ -1,8 +1,22 @@
 /* ページ内リンクのスムーススクロールでヘッダーの高さ分スクロール位置を調整するためのマージン */
 /* To adjust the scroll position by the height of the header for smooth scrolling of the page link */
-/* 本当は js でヘッダー高さを監視してCSS変数に入れた方が正確だが、汎用につき余計な不具合が発生しないようにCSSのみ */
+/* --x-t9-fixed-header-height は header.is-position-fixed（常時固定ヘッダーパターン）使用時のみ、
+   assets/_js/_master.js の ResizeObserver によって実際のヘッダー高さにリアルタイムで更新される。
+   固定ヘッダー未使用のサイトでは変数が設定されないため、フォールバックの 0px となり影響しない。 */
+/* --x-t9-fixed-header-height is updated in real time to the actual header height by the
+   ResizeObserver in assets/_js/_master.js, but only when header.is-position-fixed (the
+   always-fixed header pattern) is used. On sites without a fixed header the variable is
+   never set, so it falls back to 0px and has no effect. */
 :where([id], :focus) {
-	scroll-margin-block-start: 85px;
+	scroll-margin-block-start: var(--x-t9-fixed-header-height, 0px);
+}
+
+/* 印刷時は固定ヘッダーが存在しないため、スクロール位置補正を無効化する */
+/* Disable the scroll position adjustment when printing, since there is no fixed header on the printed page */
+@media print {
+	:where([id], :focus) {
+		scroll-margin-block-start: 0;
+	}
 }
 
 /**
