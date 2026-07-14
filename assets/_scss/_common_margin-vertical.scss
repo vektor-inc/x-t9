@@ -1,11 +1,17 @@
 /* ページ内リンクのスムーススクロールでヘッダーの高さ分スクロール位置を調整するためのマージン */
 /* To adjust the scroll position by the height of the header for smooth scrolling of the page link */
-/* --x-t9-fixed-header-height は header.is-position-fixed（常時固定ヘッダーパターン）使用時のみ、
-   assets/_js/_master.js の ResizeObserver によって実際のヘッダー高さにリアルタイムで更新される。
-   固定ヘッダー未使用のサイトでは変数が設定されないため、フォールバックの 0px となり影響しない。 */
+/* --x-t9-fixed-header-height は、画面上に重なって表示され得るヘッダーパターン
+   （header.is-position-fixed の常時固定ヘッダー / header:has([class*="is-position-sticky"]) の
+   sticky ヘッダー / *[class*="scrolled-header-fixed"] のスクロールで出現するヘッダー）使用時に、
+   assets/_js/_master.js の ResizeObserver（スクロールで出現するパターンは MutationObserver も併用）
+   によって実際のヘッダー高さにリアルタイムで更新される。
+   いずれのパターンも未使用のサイトでは変数が設定されないため、フォールバックの 0px となり影響しない。 */
 /* --x-t9-fixed-header-height is updated in real time to the actual header height by the
-   ResizeObserver in assets/_js/_master.js, but only when header.is-position-fixed (the
-   always-fixed header pattern) is used. On sites without a fixed header the variable is
+   ResizeObserver (plus a MutationObserver for the scroll-triggered pattern) in
+   assets/_js/_master.js, whenever one of the header patterns that can overlap page content is
+   used (the always-fixed header.is-position-fixed, the sticky
+   header:has([class*="is-position-sticky"]), or the scroll-triggered
+   *[class*="scrolled-header-fixed"]). On sites using none of these patterns the variable is
    never set, so it falls back to 0px and has no effect. */
 :where([id], :focus) {
 	scroll-margin-block-start: var(--x-t9-fixed-header-height, 0px);

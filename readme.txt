@@ -14,7 +14,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 == Changelog ==
 
 [ Design Bug Fix ][ Snow Monkey Forms ] Fixed an issue where, when using a fixed header pattern (is-position-fixed), the top of the form was hidden behind the header after a Snow Monkey Forms screen transition (confirm/complete/back)
-[ Design Bug Fix ] Fixed in-page link jumps (e.g. from the Table of Contents block) and keyboard focus landing behind a fixed header (is-position-fixed), by having scroll-margin-block-start track the real header height in real time instead of a hardcoded 85px value
+[ Design Bug Fix ] Fixed in-page link jumps (e.g. from the Table of Contents block) and keyboard focus landing behind a fixed, sticky, or scroll-triggered header, by having scroll-margin-block-start track the real header height in real time instead of a hardcoded 85px value
 
 = 1.41.7 =
 [ Bug Fix ] Fixed PHP warning recorded when accessing an archive of an unregistered post type on PHP 8.0 or later
