@@ -10,6 +10,17 @@ $lg-min: 992px;
 $xl-min: 1200px;
 $xxl-min: 1400px;
 
+:root {
+	// 画面上に重なって表示され得るヘッダー（常時固定 / sticky / スクロールで出現）の高さ。
+	// assets/_js/_master.js の ResizeObserver（＋MutationObserver）によってリアルタイムに更新される。
+	// JS 実行前やいずれのパターンも未使用時にガタつかないよう初期値を 0px にしておく。
+	// Height of the header patterns that can overlap page content (always-fixed / sticky /
+	// scroll-triggered), updated in real time by the ResizeObserver (plus a MutationObserver) in
+	// assets/_js/_master.js. Defaulted to 0px so there is no layout shift before the JS runs or on
+	// sites using none of these patterns.
+	--x-t9-fixed-header-height: 0px;
+}
+
 body {
 	--vk-size-radius: var(--wp--custom--radius--button);
 	--vk-color-border-light: var(--wp--preset--color--border-normal);
