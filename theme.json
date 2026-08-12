@@ -16,7 +16,8 @@
 		},
 		"background": {
 			"backgroundImage": true,
-			"backgroundSize": true
+			"backgroundSize": true,
+			"gradient": true
 		},
 		"color": {
 			"background": true,
