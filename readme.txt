@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Spec Change ] Changed the breakpoints of the block editor's responsive styles ( Mobile / Tablet ) to match the theme's own breakpoints ( 575px / 991px )
+
 [ Design Bug Fix ][ Snow Monkey Forms ] Fixed an issue where, when using a fixed header pattern (is-position-fixed), the top of the form was hidden behind the header after a Snow Monkey Forms screen transition (confirm/complete/back)
 
 = 1.41.7 =
