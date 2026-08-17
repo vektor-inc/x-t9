@@ -5,7 +5,7 @@
 @use 'variables' as var;
 
 .nav--open--lg-up {
-	@media (min-width: var.$lg-min) {
+	@media (width > var.$md-max) {
 
 		// 閉じるボタンを非表示にする
 		// Change to hidden close button
@@ -25,7 +25,7 @@
 		}
 	}
 
-	@media (max-width: var.$md-max) {
+	@media (width <= var.$md-max) {
 
 		// 閉じるボタンを表示にする
 		// Change to display close button
