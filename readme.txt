@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Spec Change ] Changed the Sass breakpoint variables to a max-value-only set ( $xs / $sm / $md / $lg / $xl ), aligning boundary handling with the WordPress standard
 [ Design Bug Fix ][ Snow Monkey Forms ] Fixed an issue where, when using a fixed header pattern (is-position-fixed), the top of the form was hidden behind the header after a Snow Monkey Forms screen transition (confirm/complete/back)
 
 = 1.41.7 =
