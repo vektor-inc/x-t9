@@ -38,55 +38,55 @@ Display Utilities
 }
 
 .d-sm-up {
-	@media(max-width: var.$xs-max ) {
+	@media (width <= var.$xs-max) {
 		display: none !important;
 	}
 }
 
 .d-md-up {
-	@media(max-width: var.$sm-max ) {
+	@media (width <= var.$sm-max) {
 		display: none !important;
 	}
 }
 
 .d-lg-up {
-	@media(max-width: var.$md-max ) {
+	@media (width <= var.$md-max) {
 		display: none !important;
 	}
 }
 
 .d-xl-up {
-	@media(max-width: var.$lg-max ) {
+	@media (width <= var.$lg-max) {
 		display: none !important;
 	}
 }
 
 .d-xs-down {
-	@media(min-width: var.$sm-max ) {
+	@media (width > var.$sm-max) {
 		display: none !important;
 	}
 }
 
 .d-xs-down {
-	@media(min-width: var.$sm-min ) {
+	@media (width > var.$xs-max) {
 		display: none !important;
 	}
 }
 
 .d-sm-down {
-	@media(min-width: var.$md-min ) {
+	@media (width > var.$sm-max) {
 		display: none !important;
 	}
 }
 
 .d-md-down {
-	@media(min-width: var.$lg-min ) {
+	@media (width > var.$md-max) {
 		display: none !important;
 	}
 }
 
 .d-lg-down {
-	@media(min-width: var.$xl-min ) {
+	@media (width > var.$lg-max) {
 		display: none !important;
 	}
 }
