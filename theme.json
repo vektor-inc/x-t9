@@ -7,8 +7,8 @@
 			"wideSize": "calc( var(--wp--style--global--content-size) + ( 100vw - var(--wp--style--global--content-size) ) / 2 )"
 		},
 		"viewport": {
-			"mobile": "575.98px",
-			"tablet": "991.98px"
+			"mobile": "576px",
+			"tablet": "992px"
 		},
 		"position": {
 			"sticky": true,
