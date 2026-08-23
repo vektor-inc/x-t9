@@ -52,10 +52,15 @@
 #
 # Usage:
 # 使い方:
-#   After running npm run dist (build → gulp dist → zip) to produce dist/x-t9 and
-#   dist/x-t9.zip, run either of the following.
-#   npm run dist（build → gulp dist → zip 化）を実行して dist/x-t9 と dist/x-t9.zip を
-#   作成した後、以下のいずれかを実行する。
+#   After running npm run dist (clean dist/ -> build -> gulp dist -> zip) to produce
+#   dist/x-t9 and dist/x-t9.zip, run either of the following. Since npm run dist always
+#   removes dist/ before rebuilding (npx rimraf dist), it never leaves stale files from a
+#   previous build behind for this check to mistake as present, even when dist/ is not
+#   deleted by hand between runs.
+#   npm run dist（dist/ を削除 → build → gulp dist → zip 化）を実行して dist/x-t9 と
+#   dist/x-t9.zip を作成した後、以下のいずれかを実行する。npm run dist は毎回ビルド前に
+#   dist/ を削除する（npx rimraf dist）ため、dist/ を手動で消さずに連続実行しても、
+#   前回ビルドの古いファイルが残っていて「ある」と誤判定することは無い。
 #     bin/check-dist.sh
 #     npm run check-dist
 #
