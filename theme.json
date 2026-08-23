@@ -6,6 +6,10 @@
 			"contentSize": "1100px",
 			"wideSize": "calc( var(--wp--style--global--content-size) + ( 100vw - var(--wp--style--global--content-size) ) / 2 )"
 		},
+		"viewport": {
+			"mobile": "576px",
+			"tablet": "992px"
+		},
 		"position": {
 			"sticky": true,
 			"fixed": true
@@ -16,7 +20,8 @@
 		},
 		"background": {
 			"backgroundImage": true,
-			"backgroundSize": true
+			"backgroundSize": true,
+			"gradient": true
 		},
 		"color": {
 			"background": true,

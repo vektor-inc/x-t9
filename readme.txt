@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei,yukinobu
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.41.7
+Stable tag: 1.42.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,12 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+= 1.42.1 =
+[ Bug Fix ][ Snow Monkey Forms ] Fixed an issue where the fixed-header scroll offset script was missing from the distributed theme package, causing a PHP warning and leaving the scroll position uncorrected
+
+= 1.42.0 =
+[ Spec Change ] Changed the Sass breakpoint variables to a max-value-only set ( $xs-max / $sm-max / $md-max / $lg-max / $xl-max ) and rewrote the related media queries using range syntax ( width <= / > ) instead of min-width / max-width, aligning boundary handling with the WordPress standard
+[ Spec Change ] Set the breakpoints of the block editor's responsive styles ( Mobile / Tablet ) to 576px / 992px
 [ Design Bug Fix ][ Snow Monkey Forms ] Fixed an issue where, when using a fixed header pattern (is-position-fixed), the top of the form was hidden behind the header after a Snow Monkey Forms screen transition (confirm/complete/back)
 [ Design Bug Fix ] Fixed in-page link jumps (e.g. from the Table of Contents block) and keyboard focus landing behind a fixed, sticky, or scroll-triggered header, by having scroll-margin-block-start track the real header height in real time instead of a hardcoded 85px value
 
