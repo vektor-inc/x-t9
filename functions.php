@@ -207,7 +207,17 @@ function x_t9_enqueue_snow_monkey_forms_js() {
 	// same wp_enqueue_scripts hook, but since plugins are always loaded before
 	// a theme's functions.php, the handle is guaranteed to already be
 	// registered at this point.
-	$js = file_get_contents( get_template_directory() . '/plugin-support/snow-monkey-forms/js/smf-fixed-header-offset.js' ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+	$js_file = get_template_directory() . '/plugin-support/snow-monkey-forms/js/smf-fixed-header-offset.js';
+
+	// ファイルが存在しない場合、file_get_contents() が PHP Warning を出力するため
+	// 読み込み前に存在を確認する.
+	// file_get_contents() emits a PHP warning when the file is missing, so check
+	// that it exists before reading it.
+	if ( ! is_readable( $js_file ) ) {
+		return;
+	}
+
+	$js = file_get_contents( $js_file ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 
 	// ファイル読み込みに失敗した場合は false が返るため、インラインスクリプトとして
 	// "false" 相当の値を出力してしまわないようにガードする.

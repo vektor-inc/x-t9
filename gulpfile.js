@@ -134,6 +134,7 @@ gulp.task('dist', function() {
 				'./**/*.png',
 				'./**/*.jpg',
 				'./assets/**',
+				'./plugin-support/**',
 				'./inc/**',
 				'./parts/**',
 				'./vendor/**',
