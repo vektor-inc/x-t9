@@ -114,6 +114,10 @@ gulp.task('remove-theme-name', function () {
         .pipe(gulp.dest('.'));
 });
 
+// 注意（#479）: このタスクの対象パターン（拡張子・ディレクトリの一覧）と除外パターン
+// （!./... の行）は bin/check-dist.sh の is_excluded() / REQUIRED_BUILD_ARTIFACTS と
+// 二重管理になっている。ここを変更したときは bin/check-dist.sh 側も必ず見直すこと
+// （どちらか一方だけを直すと、配布パッケージの網羅性チェックの判定基準がずれる）。
 gulp.task('dist', function() {
 	return gulp.src(
 			[
