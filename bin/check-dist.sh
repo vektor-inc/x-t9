@@ -189,12 +189,20 @@ fi
 
 if [ "${#missing_dir[@]}" -gt 0 ] || [ "${#missing_required_dir[@]}" -gt 0 ]; then
 	echo "FAIL: 以下のファイルはソースには存在しますが ${DIST_DIR}/ に含まれていません:" >&2
-	for f in "${missing_dir[@]}"; do
-		echo "  - $f" >&2
-	done
-	for f in "${missing_required_dir[@]}"; do
-		echo "  - $f (git 管理外の必須ビルド成果物)" >&2
-	done
+	# missing_dir / missing_required_dir はどちらか一方だけが非空のケースがあるため、
+	# それぞれ要素数を確認してから展開する（bash 3.2 の `set -u` 下で空配列の
+	# "${arr[@]}" が unbound variable になるのを防ぐ。LOW-D のガードは収集ループだけでなく
+	# この表示ループにも必要）。
+	if [ "${#missing_dir[@]}" -gt 0 ]; then
+		for f in "${missing_dir[@]}"; do
+			echo "  - $f" >&2
+		done
+	fi
+	if [ "${#missing_required_dir[@]}" -gt 0 ]; then
+		for f in "${missing_required_dir[@]}"; do
+			echo "  - $f (git 管理外の必須ビルド成果物)" >&2
+		done
+	fi
 	echo >&2
 	echo "対処: gulpfile.js の dist タスクの対象パターンに含める（配布に必要な場合）か、" >&2
 	echo "      bin/check-dist.sh の is_excluded() へ理由付きで追加する（配布に不要な場合）。" >&2
@@ -247,12 +255,17 @@ fi
 
 if [ "${#missing_zip[@]}" -gt 0 ] || [ "${#missing_required_zip[@]}" -gt 0 ]; then
 	echo "FAIL: 以下のファイルはソースには存在しますが ${DIST_ZIP} に含まれていません:" >&2
-	for f in "${missing_zip[@]}"; do
-		echo "  - $f" >&2
-	done
-	for f in "${missing_required_zip[@]}"; do
-		echo "  - $f (git 管理外の必須ビルド成果物)" >&2
-	done
+	# 上と同じ理由で、missing_zip / missing_required_zip も個別にガードしてから展開する。
+	if [ "${#missing_zip[@]}" -gt 0 ]; then
+		for f in "${missing_zip[@]}"; do
+			echo "  - $f" >&2
+		done
+	fi
+	if [ "${#missing_required_zip[@]}" -gt 0 ]; then
+		for f in "${missing_required_zip[@]}"; do
+			echo "  - $f (git 管理外の必須ビルド成果物)" >&2
+		done
+	fi
 	exit 1
 fi
 
