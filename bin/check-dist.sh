@@ -18,11 +18,13 @@
 #   (1) git で追跡されている実ファイルの一覧（git ls-files）を起点にし、配布対象外として
 #       明示的に除外したもの（is_excluded 関数）を引いた残りが、すべて dist/x-t9/ 配下と
 #       dist/x-t9.zip の中に存在することを確認する。
-#   (2) それに加えて、.gitignore 対象（assets/js・assets/css・vendor 配下のビルド成果物）
-#       のうち配布に必須なものは git ls-files に現れないため、(1) では検出できない。
-#       これらは REQUIRED_BUILD_ARTIFACTS に明示リストとして持ち、個別に検証する
-#       （安藤のレビュー指摘: #478 と同じ構図の穴が gulpfile.js の './assets/**' /
-#       './vendor/**' の 1 行依存という形で残っていたため追加）。
+#   (2) それに加えて、.gitignore 対象（assets/js・assets/css・vendor 配下のビルド成果物）は
+#       git ls-files に現れないため、(1) では検出できない。これらのうち配布に必須なものは
+#       REQUIRED_BUILD_ARTIFACTS に明示リストとして持ち、個別に検証する。
+#       ただし実機検証の結果、gulpfile.js の拡張子ベースの各パターン（'./**/*.php'・
+#       './**/*.css' 等）が広く効いているため、このリストの中で「ディレクトリ単位の
+#       1 行指定（'./assets/**' 等）が消えたときに実際に dist から落ちる」のは
+#       assets/js/*.js の 2 件だけ。詳細は REQUIRED_BUILD_ARTIFACTS 定義部のコメントを参照。
 #
 # 使い方:
 #   npm run dist（build → gulp dist → zip 化）を実行して dist/x-t9 と dist/x-t9.zip を
@@ -39,14 +41,6 @@ set -euo pipefail
 # どこから実行してもリポジトリルートで動くようにする。
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$REPO_ROOT"
-
-# zip の中身チェックに使う unzip が無いと (2) の検証節が黙って弱くなってしまうため、
-# 早期に確認して分かりやすく終了する。
-if ! command -v unzip >/dev/null 2>&1; then
-	echo "エラー: unzip コマンドが見つかりません。dist/x-t9.zip の中身を検証できないため終了します。" >&2
-	echo "        （macOS/Ubuntu には標準で入っています。CI 環境の構成を確認してください）" >&2
-	exit 1
-fi
 
 THEME_NAME="x-t9"
 DIST_DIR="dist/${THEME_NAME}"
@@ -115,24 +109,58 @@ is_excluded() {
 # ファイル名は推測ではなく実機（npm run build:script / npm run build:css /
 # composer install）で生成し直して確認したもの。webpack.js の entry/output や
 # ビルドコマンドの出力先を変更した場合は、ここも実機で確認のうえ更新すること。
+#
+# 【実測結果（安藤のレビューで gulp 本体を使い glob を実際に解決して検証）】
+# gulpfile.js の dist タスクは拡張子ベースのパターン（'./**/*.php'・'./**/*.css' 等）と
+# ディレクトリ単位のパターン（'./assets/**'・'./vendor/**' 等）を併用しており、
+# 同じファイルが複数のパターンに重複してマッチすることがある。そのため
+# 「ディレクトリ単位のパターンが 1 行消えたら実際に dist から落ちるか」は
+# ファイルの拡張子によって結果が異なる。以下の表のとおり、
+# 「'./assets/**' の 1 行依存を実際に守れている」のは assets/js/*.js の 2 件だけ。
+#
+#   ファイル                        | 全パターン | './assets/**'削除 | './vendor/**'削除
+#   assets/js/main.js               | 含まれる   | 含まれない(検出可)| 含まれる
+#   assets/js/editor-layout.js      | 含まれる   | 含まれない(検出可)| 含まれる
+#   assets/css/style.css            | 含まれる   | 含まれる(検出不可)| 含まれる
+#   assets/css/editor.css           | 含まれる   | 含まれる(検出不可)| 含まれる
+#   assets/css/editor-wp65.css      | 含まれる   | 含まれる(検出不可)| 含まれる
+#   vendor/autoload.php             | 含まれる   | 含まれる          | 含まれる(検出不可)
+#
+# それでも assets/css/*.css と vendor/autoload.php をこのリストから外さないのは、
+# 「'./assets/**' 1 行への依存」の検出とは別の目的があるため:
+#   - assets/css/*.css: ビルド（npm run build:css）自体が走っていない、または
+#     出力先が変わった場合を検出する。'./**/*.css' に拾われるので './assets/**' が
+#     消えても検出できないが、CSS ビルドの失敗・未実行そのものは検出できる。
+#   - vendor/autoload.php: composer install 自体が失敗・未実行の場合を検出する。
+#     './**/*.php' に拾われるので './vendor/**' が消えても検出できない（実際に
+#     './vendor/**' 削除で落ちるのは vendor 配下の LICENSE・README・.mo/.po 等の
+#     非 PHP/JSON ファイルのみで、オートロードに必要なファイルは落ちない）。
+#     なお CI（release.yml の smoke_test ジョブ）は `composer install --no-dev` を
+#     実行するため、dist/x-t9/vendor には実行時に必要な依存（vektor-inc/tgm-plugin-activation
+#     等）のみが入り、phpunit 等の開発用依存は含まれない前提。vendor/autoload.php は
+#     --no-dev でも生成されるファイルなのでこの検証は変わらず有効。
 # ------------------------------------------------------------------------
 REQUIRED_BUILD_ARTIFACTS=(
 	# webpack.js の entry（main / editor-layout）→ output（assets/js/[name].js）。
 	# npm run build:script（= npx webpack --config webpack.js）で生成される。
-	# gulpfile.js の './assets/**' 1 行だけでコピーされており、この行が消えると
-	# テーマの JS が dist からまるごと落ちる（#478 と同じ「1 行依存」の構図）。
+	# .js 拡張子は gulpfile.js のどの拡張子パターンにも含まれておらず、
+	# './assets/**' 1 行だけでコピーされる。この行が消えるとテーマの JS が
+	# dist からまるごと落ちる（#478 と同じ「1 行依存」の構図を実際に守っているのはこの 2 件のみ）。
 	"assets/js/main.js"
 	"assets/js/editor-layout.js"
 
-	# npm run build:css（sass → postcss:all）の出力。同じく './assets/**' に依存。
+	# npm run build:css（sass → postcss:all）の出力。
+	# 注: これらは gulpfile.js の './**/*.css' にも拾われるため './assets/**' の
+	# 削除では落ちない。ここに置く目的は「ビルドが走っていない／出力先が変わった」
+	# ことの検出であり、'./assets/**' の1行依存を守っているのは上の .js 2件のみ。
 	"assets/css/style.css"
 	"assets/css/editor.css"
 	"assets/css/editor-wp65.css"
 
-	# composer install の出力（vendor/autoload.php）。functions.php が
-	# `require_once __DIR__ . '/vendor/autoload.php';` で直接読み込んでおり、
-	# gulpfile.js の './vendor/**' 1 行だけに依存している。この行が消えると
-	# テーマ全体が Fatal error になる。
+	# composer install --no-dev の出力。'./**/*.php' にも拾われるため './vendor/**' の
+	# 削除では落ちない（削除で実際に落ちるのは vendor 配下の LICENSE・README 等、
+	# .php/.json 以外の非機能ファイルのみ）。ここに置く目的は composer install
+	# 自体の失敗・未実行の検出。
 	"vendor/autoload.php"
 )
 
@@ -140,6 +168,7 @@ REQUIRED_BUILD_ARTIFACTS=(
 # (1) dist ディレクトリの網羅性チェック
 # ------------------------------------------------------------------------
 missing_dir=()
+missing_required_dir=()
 
 # git ls-files はデフォルトで非 ASCII パスを "\346\227\245..." のようにエスケープして
 # 出力するため、-c core.quotePath=false でエスケープを無効化する。さらに改行を含む
@@ -149,14 +178,22 @@ while IFS= read -r -d '' path; do
 	[ -f "${DIST_DIR}/${path}" ] || missing_dir+=("$path")
 done < <(git -c core.quotePath=false ls-files -z)
 
-for path in "${REQUIRED_BUILD_ARTIFACTS[@]}"; do
-	[ -f "${DIST_DIR}/${path}" ] || missing_dir+=("${path} (git 管理外の必須ビルド成果物)")
-done
+# REQUIRED_BUILD_ARTIFACTS が空でも `set -u` 下で "${arr[@]}" が unbound variable に
+# ならないよう、要素数を確認してからループする（bash 3.2 でも安全）。
+# このリストを空にしないこと（空にする場合は上のコメントも見直すこと）。
+if [ "${#REQUIRED_BUILD_ARTIFACTS[@]}" -gt 0 ]; then
+	for path in "${REQUIRED_BUILD_ARTIFACTS[@]}"; do
+		[ -f "${DIST_DIR}/${path}" ] || missing_required_dir+=("$path")
+	done
+fi
 
-if [ "${#missing_dir[@]}" -gt 0 ]; then
+if [ "${#missing_dir[@]}" -gt 0 ] || [ "${#missing_required_dir[@]}" -gt 0 ]; then
 	echo "FAIL: 以下のファイルはソースには存在しますが ${DIST_DIR}/ に含まれていません:" >&2
 	for f in "${missing_dir[@]}"; do
 		echo "  - $f" >&2
+	done
+	for f in "${missing_required_dir[@]}"; do
+		echo "  - $f (git 管理外の必須ビルド成果物)" >&2
 	done
 	echo >&2
 	echo "対処: gulpfile.js の dist タスクの対象パターンに含める（配布に必要な場合）か、" >&2
@@ -175,6 +212,16 @@ if [ ! -f "$DIST_ZIP" ]; then
 	exit 0
 fi
 
+# zip の中身チェックに使う unzip が無いと以降の検証ができないため、ここで確認する。
+# DIST_ZIP の存在チェックより後ろに置くのは、npm run copy だけを実行して zip 化前に
+# check-dist を回すような場面（zip 自体が無い＝上で exit 0 スキップ済み）で、
+# 使わない unzip の有無のために不必要に FAIL させないため。
+if ! command -v unzip >/dev/null 2>&1; then
+	echo "エラー: unzip コマンドが見つかりません。${DIST_ZIP} の中身を検証できないため終了します。" >&2
+	echo "        （macOS/Ubuntu には標準で入っています。CI 環境の構成を確認してください）" >&2
+	exit 1
+fi
+
 zip_list_file="$(mktemp)"
 trap 'rm -f "$zip_list_file"' EXIT
 
@@ -186,19 +233,25 @@ unzip -Z1 "$DIST_ZIP" \
 	> "$zip_list_file"
 
 missing_zip=()
+missing_required_zip=()
 while IFS= read -r -d '' path; do
 	is_excluded "$path" && continue
 	grep -Fxq -- "$path" "$zip_list_file" || missing_zip+=("$path")
 done < <(git -c core.quotePath=false ls-files -z)
 
-for path in "${REQUIRED_BUILD_ARTIFACTS[@]}"; do
-	grep -Fxq -- "$path" "$zip_list_file" || missing_zip+=("${path} (git 管理外の必須ビルド成果物)")
-done
+if [ "${#REQUIRED_BUILD_ARTIFACTS[@]}" -gt 0 ]; then
+	for path in "${REQUIRED_BUILD_ARTIFACTS[@]}"; do
+		grep -Fxq -- "$path" "$zip_list_file" || missing_required_zip+=("$path")
+	done
+fi
 
-if [ "${#missing_zip[@]}" -gt 0 ]; then
+if [ "${#missing_zip[@]}" -gt 0 ] || [ "${#missing_required_zip[@]}" -gt 0 ]; then
 	echo "FAIL: 以下のファイルはソースには存在しますが ${DIST_ZIP} に含まれていません:" >&2
 	for f in "${missing_zip[@]}"; do
 		echo "  - $f" >&2
+	done
+	for f in "${missing_required_zip[@]}"; do
+		echo "  - $f (git 管理外の必須ビルド成果物)" >&2
 	done
 	exit 1
 fi

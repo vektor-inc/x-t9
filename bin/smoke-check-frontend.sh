@@ -80,7 +80,10 @@ reset_debug_log() {
 	local output
 	output="$(npx wp-env run cli bash -c "rm -f '${DEBUG_LOG_PATH}' && echo RESET_OK" 2>&1)" || true
 
-	if ! printf '%s\n' "$output" | grep -qx "RESET_OK"; then
+	# grep -qx ではなく行末の空白・CR を許容する正規表現にしているのは、wp-env の
+	# TTY 判定が将来変わって出力に \r 等が混入しても誤って FAIL 扱いにしないための保険
+	# （現状は非 TTY 実行のため \r は混入しないことを確認済みだが、恒久的に効く対策として）。
+	if ! printf '%s\n' "$output" | grep -Eq '^RESET_OK[[:space:]]*$'; then
 		echo "エラー: debug.log をリセットできませんでした（wp-env コンテナへのコマンド実行に失敗した可能性があります）。" >&2
 		echo "以下は wp-env run cli の出力です:" >&2
 		printf '%s\n' "$output" >&2
@@ -100,12 +103,14 @@ read_debug_log() {
 	local presence
 	presence="$(npx wp-env run cli bash -c "test -f '${DEBUG_LOG_PATH}' && echo EXISTS || echo ABSENT" 2>&1)" || true
 
-	if printf '%s\n' "$presence" | grep -qx "EXISTS"; then
+	# センチネル判定は grep -Eq '^...[[:space:]]*$' で行末の空白・CR を許容する
+	# （LOW-C: wp-env の TTY 判定が将来変わっても偽 FAIL にならないようにするため）。
+	if printf '%s\n' "$presence" | grep -Eq '^EXISTS[[:space:]]*$'; then
 		npx wp-env run cli bash -c "cat '${DEBUG_LOG_PATH}'" 2>&1
 		return 0
 	fi
 
-	if printf '%s\n' "$presence" | grep -qx "ABSENT"; then
+	if printf '%s\n' "$presence" | grep -Eq '^ABSENT[[:space:]]*$'; then
 		# debug.log 自体が生成されていない = エラー・警告が一件も無かったことを意味する。
 		return 0
 	fi
@@ -161,7 +166,13 @@ if [ -n "$theme_errors" ]; then
 fi
 
 if [ "$http_failed" -ne 0 ]; then
+	# テーマのパスを含まないエラー（コア/プラグイン由来の Fatal error、DB 接続エラー等）で
+	# 500 になっているケースでは theme_errors に何も残らない。原因調査の手がかりが
+	# CI ログに一切残らない事態を避けるため、debug.log の中身（フィルタ前・末尾 100 行）を
+	# ここで必ず出力してから FAIL する。
 	echo "情報: dist テーマ（${THEME_NAME}）由来の PHP エラー/警告は検出されませんでしたが、上記の HTTP エラーにより FAIL とします。" >&2
+	echo "参考: debug.log の内容（末尾 100 行）:" >&2
+	tail -n 100 "$log_file" >&2
 	exit 1
 fi
 

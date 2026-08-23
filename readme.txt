@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Spec Change ] Excluded development-only dependencies from the distributed theme package
+
 = 1.42.1 =
 [ Bug Fix ][ Snow Monkey Forms ] Fixed an issue where the fixed-header scroll offset script was missing from the distributed theme package, causing a PHP warning and leaving the scroll position uncorrected
 
