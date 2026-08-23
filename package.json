@@ -18,6 +18,8 @@
 		"copy": "npx gulp dist",
 		"zip": "cd dist && zip -r x-t9.zip x-t9",
 		"dist": "run-s build copy zip",
+		"check-dist": "bash bin/check-dist.sh",
+		"smoke-check-frontend": "bash bin/smoke-check-frontend.sh",
 		"composer:install:win": "wp-env run composer \"composer install\"",
 		"composer:install:mac": "wp-env run composer 'composer install'",
 		"phpunit:win": "npm run phpunit",
