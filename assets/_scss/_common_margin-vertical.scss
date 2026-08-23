@@ -1,20 +1,53 @@
 /* ページ内リンクのスムーススクロールでヘッダーの高さ分スクロール位置を調整するためのマージン */
 /* To adjust the scroll position by the height of the header for smooth scrolling of the page link */
-/* --x-t9-fixed-header-height は、画面上に重なって表示され得るヘッダーパターン
-   （header.is-position-fixed の常時固定ヘッダー / header:has([class*="is-position-sticky"]) の
-   sticky ヘッダー / *[class*="scrolled-header-fixed"] のスクロールで出現するヘッダー）使用時に、
-   assets/_js/_master.js の ResizeObserver（スクロールで出現するパターンは MutationObserver も併用）
-   によって実際のヘッダー高さにリアルタイムで更新される。
-   いずれのパターンも未使用のサイトでは変数が設定されないため、フォールバックの 0px となり影響しない。 */
-/* --x-t9-fixed-header-height is updated in real time to the actual header height by the
-   ResizeObserver (plus a MutationObserver for the scroll-triggered pattern) in
-   assets/_js/_master.js, whenever one of the header patterns that can overlap page content is
-   used (the always-fixed header.is-position-fixed, the sticky
-   header:has([class*="is-position-sticky"]), or the scroll-triggered
-   *[class*="scrolled-header-fixed"]). On sites using none of these patterns the variable is
-   never set, so it falls back to 0px and has no effect. */
+
+/* 補正を効かせる条件の判定は CSS だけで完結させ、JS は実際のヘッダー高さの測定のみを担う
+   （assets/_js/_master.js が --x-t9-fixed-header-height を更新する）。
+   対象は画面上でコンテンツに重なり得る次の3パターン。
+     1. header.is-position-fixed              … 常時固定ヘッダー
+     2. header 内の is-position-sticky        … sticky ヘッダー。張り付いていない間も
+                                                通常フロー内にあるが、張り付くと重なるため常時対象
+     3. scrolled-header-fixed                 … スクロールで出現するヘッダー。画面内にある間だけ
+                                                重なるため body.header-fixed-active が付いている間のみ対象
+   いずれも該当しないページでは補正しない（従来は無条件に 85px ずれていた）。
+   --x-t9-fixed-header-height が未設定でも 85px にフォールバックするため、
+   JS 無効・ResizeObserver 未対応の環境でも従来と同等に動作する。 */
+
+/* The condition for applying the offset is decided entirely in CSS; the JS only measures the real
+   header height (assets/_js/_master.js updates --x-t9-fixed-header-height).
+   Three header patterns can overlap page content:
+     1. header.is-position-fixed          … the always-fixed header
+     2. is-position-sticky inside header  … the sticky header. It sits in normal flow until it
+                                            sticks, but overlaps once stuck, so it always applies
+     3. scrolled-header-fixed             … the header that appears on scroll. It only overlaps
+                                            while on screen, so it applies only while
+                                            body.header-fixed-active is present
+   Pages matching none of them get no offset (previously every page was offset by 85px).
+   The value falls back to 85px when --x-t9-fixed-header-height is unset, so behavior matches the
+   previous implementation when JS is disabled or ResizeObserver is unsupported. */
+
 :where([id], :focus) {
-	scroll-margin-block-start: var(--x-t9-fixed-header-height, 0px);
+	scroll-margin-block-start: 0;
+}
+
+/* :where() で包んで詳細度を 0 に保ち、サイト側からの上書きを妨げない */
+/* Wrapped in :where() to keep specificity at 0 so sites can still override it */
+:where(
+	body:has(header.is-position-fixed),
+	body:has(header [class*="is-position-sticky"]),
+	body.header-fixed-active:has([class*="scrolled-header-fixed"])
+) :where([id], :focus) {
+	scroll-margin-block-start: var(--x-t9-fixed-header-height, 85px);
+}
+
+/* :has() 未対応ブラウザでは上記の条件分岐が丸ごと無効になり補正が効かなくなるため、
+   従来と同じ無条件の固定値で補正する */
+/* In browsers without :has() support the rule above is dropped entirely, so fall back to the
+   previous unconditional fixed value */
+@supports not selector(:has(*)) {
+	:where([id], :focus) {
+		scroll-margin-block-start: 85px;
+	}
 }
 
 /* 印刷時は固定ヘッダーが存在しないため、スクロール位置補正を無効化する */
