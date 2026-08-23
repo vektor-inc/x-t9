@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Bug Fix ][ Snow Monkey Forms ] Fixed an issue where the fixed-header scroll offset script was missing from the distributed theme package, causing a PHP warning and leaving the scroll position uncorrected
+
 = 1.42.0 =
 [ Spec Change ] Changed the Sass breakpoint variables to a max-value-only set ( $xs-max / $sm-max / $md-max / $lg-max / $xl-max ) and rewrote the related media queries using range syntax ( width <= / > ) instead of min-width / max-width, aligning boundary handling with the WordPress standard
 [ Spec Change ] Set the breakpoints of the block editor's responsive styles ( Mobile / Tablet ) to 576px / 992px
