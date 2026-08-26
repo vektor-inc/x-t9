@@ -114,6 +114,15 @@ gulp.task('remove-theme-name', function () {
         .pipe(gulp.dest('.'));
 });
 
+// Note (#479): this task's target patterns (the list of extensions/directories) and
+// exclusion patterns (the !./... lines) are duplicated with bin/check-dist.sh's
+// is_excluded() / REQUIRED_BUILD_ARTIFACTS. When changing this, always review the
+// bin/check-dist.sh side too (fixing only one side makes the distribution package
+// completeness check's criteria drift out of sync).
+// 注意（#479）: このタスクの対象パターン（拡張子・ディレクトリの一覧）と除外パターン
+// （!./... の行）は bin/check-dist.sh の is_excluded() / REQUIRED_BUILD_ARTIFACTS と
+// 二重管理になっている。ここを変更したときは bin/check-dist.sh 側も必ず見直すこと
+// （どちらか一方だけを直すと、配布パッケージの網羅性チェックの判定基準がずれる）。
 gulp.task('dist', function() {
 	return gulp.src(
 			[

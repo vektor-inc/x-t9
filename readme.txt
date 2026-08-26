@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Spec Change ] Excluded development-only dependencies from the distributed theme package
 [ Design Bug Fix ] Fixed in-page link jumps (e.g. from the Table of Contents block) and keyboard focus landing behind a fixed, sticky, or scroll-triggered header, by having scroll-margin-block-start track the real header height instead of a hardcoded 85px value
 [ Design Bug Fix ] Fixed the scroll position being offset by 85px even on pages with no overlapping header, and the offset remaining while a scroll-triggered header is off screen
 

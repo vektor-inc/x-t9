@@ -24,11 +24,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Composer install
-        run: composer install
+      - name: Composer install (no dev dependencies; see #479)
+        run: composer install --no-dev
 
       - name: Build zip
         run: npm run dist
+
+      - name: Check dist files (dist integrity, see #479)
+        run: npm run check-dist
 
       - name: Upload dist artifact
         uses: actions/upload-artifact@v4
@@ -36,14 +39,9 @@ jobs:
           name: dist
           path: dist/
 
-      - name: Check dist files
-        run: |
-          test -f dist/${{ env.theme_name }}/style.css
-          test -f dist/${{ env.theme_name }}/functions.php
-
       - name: Create wp-env override for dist
         run: |
-          printf '{"themes": ["./dist/%s"]}' "${{ env.theme_name }}" > .wp-env.override.json
+          printf '{"themes": ["./dist/%s"], "config": {"WP_DEBUG": true, "WP_DEBUG_LOG": true, "WP_DEBUG_DISPLAY": false}}' "${{ env.theme_name }}" > .wp-env.override.json
 
       - name: Start wp-env (dist)
         run: |
@@ -51,6 +49,9 @@ jobs:
 
       - name: Smoke test (activate theme)
         run: npx wp-env run cli wp theme activate ${{ env.theme_name }}
+
+      - name: Smoke test (render front-end pages, see #479)
+        run: npm run smoke-check-frontend
 
   php_unit:
     name: PHP Unit Test
