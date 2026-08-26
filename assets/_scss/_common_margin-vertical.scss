@@ -40,16 +40,6 @@
 	scroll-margin-block-start: var(--x-t9-fixed-header-height, 85px);
 }
 
-/* :has() 未対応ブラウザでは上記の条件分岐が丸ごと無効になり補正が効かなくなるため、
-   従来と同じ無条件の固定値で補正する */
-/* In browsers without :has() support the rule above is dropped entirely, so fall back to the
-   previous unconditional fixed value */
-@supports not selector(:has(*)) {
-	:where([id], :focus) {
-		scroll-margin-block-start: 85px;
-	}
-}
-
 /* 印刷時は固定ヘッダーが存在しないため、スクロール位置補正を無効化する */
 /* Disable the scroll position adjustment when printing, since there is no fixed header on the printed page */
 @media print {
