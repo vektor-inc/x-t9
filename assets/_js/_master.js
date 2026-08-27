@@ -113,3 +113,61 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+/*----------------------------------------------------------*/
+/*  fixed header height => CSS custom property
+/*----------------------------------------------------------*/
+// 画面上にコンテンツと重なって表示され得るヘッダー（常時固定 / sticky / スクロールで出現）の
+// 実際の高さを、CSS カスタムプロパティ --x-t9-fixed-header-height へ反映する。
+// これにより、目次ブロックなどページ内リンクのジャンプ先や :focus 時のスクロール位置を、
+// scroll-margin-block-start で実際のヘッダー高さ分だけ補正できる。
+//
+// どのヘッダーパターンのときに補正を効かせるか、スクロールで出現するヘッダーが
+// 画面内にあるかどうかの判定は、すべて CSS 側（_common_margin-vertical.scss の :has()）が担う。
+// この JS は高さの測定だけを行う。
+//
+// Reflects the real height of a header that can overlap page content (always-fixed, sticky, or
+// scroll-triggered) into the --x-t9-fixed-header-height CSS custom property, so that
+// scroll-margin-block-start can offset in-page link targets and :focus positions by the actual
+// header height.
+//
+// Deciding which header patterns get the offset, and whether a scroll-triggered header is
+// currently on screen, is handled entirely in CSS (the :has() rules in
+// _common_margin-vertical.scss). This script only measures the height.
+( () => {
+    // ResizeObserver 未対応ブラウザでは何もしない。
+    // CSS 側は var() のフォールバック値で従来どおり動作する。
+    // Do nothing in browsers without ResizeObserver support; the CSS var() fallback keeps the
+    // previous behavior.
+    if ( typeof ResizeObserver === 'undefined' ) {
+        return
+    }
+
+    // sticky ヘッダーは header そのものではなく内側の要素にクラスが付くため、
+    // 子孫セレクタで拾ってから closest() で header まで遡る（:has() を使わないので
+    // 未対応ブラウザでも例外にならない）。
+    // For the sticky pattern the class is on an element inside the header rather than on the
+    // header itself, so match a descendant and walk back up with closest(). This avoids :has()
+    // in querySelector, which throws in browsers without support for it.
+    const stickyInner = document.querySelector( 'header [class*="is-position-sticky"]' )
+
+    const header =
+        document.querySelector( 'header.is-position-fixed' ) ||
+        ( stickyInner && stickyInner.closest( 'header' ) ) ||
+        document.querySelector( '[class*="scrolled-header-fixed"]' )
+
+    if ( ! header ) {
+        return
+    }
+
+    // observe() は監視開始時にも一度発火するため、初期値の設定も兼ねる。
+    // レスポンシブでヘッダー高さが変わる場合もこれで追従する。
+    // observe() fires once when observation starts, so this also sets the initial value.
+    // It also keeps up with responsive changes in header height.
+    new ResizeObserver( () => {
+        document.documentElement.style.setProperty(
+            '--x-t9-fixed-header-height',
+            `${ header.offsetHeight }px`
+        )
+    } ).observe( header )
+} )();
