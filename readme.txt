@@ -16,6 +16,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 [ Spec Change ] Excluded development-only dependencies from the distributed theme package
 [ Design Bug Fix ] Fixed in-page link jumps (e.g. from the Table of Contents block) and keyboard focus landing behind a fixed, sticky, or scroll-triggered header, by having scroll-margin-block-start track the real header height instead of a hardcoded 85px value
 [ Design Bug Fix ] Fixed the scroll position being offset by 85px even on pages with no overlapping header, and the offset remaining while a scroll-triggered header is off screen
+[ Design Bug Fix ][ Snow Monkey Forms ] Fixed the top of the form being hidden behind the header after a screen transition when using a sticky or scroll-triggered header, by extending the scroll offset to those patterns in addition to the always-fixed header
 
 = 1.42.1 =
 [ Bug Fix ][ Snow Monkey Forms ] Fixed an issue where the fixed-header scroll offset script was missing from the distributed theme package, causing a PHP warning and leaving the scroll position uncorrected

@@ -37,43 +37,114 @@
  * 挙動を誤って上書きしてしまうため、実際にフォーカスポイントへ
  * スクロールする上記 3 イベントのみを対象にしている。
  *
- * Scope: only the fixed header pattern (`is-position-fixed`) is supported.
- * The `scrolled-header-fixed` pattern (header that appears on scroll) and
- * headers whose height changes dynamically (e.g. shrink on scroll) are out
- * of scope.
- * 対象範囲: `is-position-fixed` の固定ヘッダーパターンのみ対応する。
- * スクロールで出現する `scrolled-header-fixed` パターンや、スクロールに
- * 応じて高さが動的に変化するヘッダー（shrink on scroll 等）は対象外。
+ * Scope: the three header patterns that can overlap page content are
+ * supported (always-fixed, sticky, and the header that appears on scroll).
+ * Headers whose height changes dynamically while scrolling (e.g. shrink on
+ * scroll) are out of scope, because the height is measured once at the
+ * moment of the screen transition.
+ * 対象範囲: 画面上でコンテンツに重なり得る 3 つのヘッダーパターン
+ * （常時固定 / sticky / スクロールで出現）に対応する。スクロールに応じて
+ * 高さが動的に変化するヘッダー（shrink on scroll 等）は、画面遷移の時点で
+ * 高さを一度だけ実測する仕組みのため対象外。
  */
 ( function () {
 	'use strict';
 
 	/**
-	 * Re-scroll to the SMF focus point, offset by the fixed header height.
-	 * SMF のフォーカスポイントへ、固定ヘッダーの高さ分を差し引いて再スクロールする。
+	 * Return the height of the header that currently overlaps page content.
+	 * 現在ページコンテンツに重なっているヘッダーの高さを返す。
+	 *
+	 * Which patterns count as overlapping, and the condition for the
+	 * scroll-triggered one, are kept in sync with
+	 * assets/_scss/_common_margin-vertical.scss, which applies the same offset
+	 * to in-page links through scroll-margin-block-start. Keeping the two in
+	 * step means a page cannot end up correcting in-page links but not form
+	 * transitions.
+	 * どのパターンを「重なる」とみなすか、およびスクロールで出現するヘッダーの
+	 * 適用条件は、ページ内リンクに対して scroll-margin-block-start で同じ補正を
+	 * かけている assets/_scss/_common_margin-vertical.scss と揃えてある。両者を
+	 * 揃えることで、ページ内リンクは補正されるのにフォームの画面遷移は補正
+	 * されない、という食い違いが起きないようにしている。
+	 *
+	 * Measured on every call rather than cached, so responsive layouts where
+	 * the header height differs between PC and mobile stay correct.
+	 * PC とスマホでヘッダー高さが異なるレスポンシブ構成にも対応できるよう、
+	 * キャッシュせず呼び出しのたびに実測する。
+	 *
+	 * @return {number} The header height in px, or 0 when no header overlaps.
+	 *                  ヘッダーの高さ（px）。重なるヘッダーが無い場合は 0。
+	 */
+	function getOverlappingHeaderHeight() {
+		// 1. The always-fixed header. It overlaps for the whole page.
+		//    常時固定ヘッダー。ページ全体で重なる。
+		var fixedHeader = document.querySelector( 'header.is-position-fixed' );
+		if ( fixedHeader ) {
+			return fixedHeader.offsetHeight;
+		}
+
+		// 2. The sticky header. The class is on an element inside the header
+		//    rather than on the header itself, so walk back up to the header.
+		//    It sits in normal flow until it sticks, but by the time the form
+		//    has scrolled into place it is stuck, so it always applies.
+		//    sticky ヘッダー。クラスは header そのものではなく内側の要素に付くため
+		//    header まで遡る。張り付くまでは通常フロー内にあるが、フォーム位置まで
+		//    スクロールした時点では張り付いているため、常に対象とする。
+		var stickyInner = document.querySelector(
+			'header [class*="is-position-sticky"]'
+		);
+		if ( stickyInner ) {
+			var stickyHeader = stickyInner.closest( 'header' );
+			if ( stickyHeader ) {
+				return stickyHeader.offsetHeight;
+			}
+		}
+
+		// 3. The header that appears on scroll. It only overlaps while it is
+		//    on screen, which the theme marks by adding `header-fixed-active`
+		//    to the body. Without this check the form would be pushed down by
+		//    the height of a header that is not visible.
+		//    スクロールで出現するヘッダー。画面内にある間だけ重なり、その状態は
+		//    テーマが body に `header-fixed-active` を付けて示している。この判定が
+		//    無いと、表示されていないヘッダーの高さ分だけフォームが下がってしまう。
+		if ( document.body.classList.contains( 'header-fixed-active' ) ) {
+			var scrolledHeader = document.querySelector(
+				'[class*="scrolled-header-fixed"]'
+			);
+			if ( scrolledHeader ) {
+				return scrolledHeader.offsetHeight;
+			}
+		}
+
+		return 0;
+	}
+
+	/**
+	 * Re-scroll to the SMF focus point, offset by the overlapping header height.
+	 * SMF のフォーカスポイントへ、重なっているヘッダーの高さ分を差し引いて再スクロールする。
 	 *
 	 * @param {CustomEvent} event The `smf.confirm` / `smf.complete` / `smf.back` event
 	 *                            fired on the form element.
 	 *                            フォーム要素で発火する `smf.confirm` / `smf.complete` /
 	 *                            `smf.back` イベント。
 	 */
-	function adjustScrollForFixedHeader( event ) {
+	function adjustScrollForOverlappingHeader( event ) {
 		var form = event.target;
 		var focusPoint = form.querySelector( '.smf-focus-point' );
-		var fixedHeader = document.querySelector( 'header.is-position-fixed' );
 
-		// No focus point or no fixed header on this page: nothing to adjust.
-		// フォーカスポイントが無い、または固定ヘッダーが無いページでは補正不要。
-		if ( ! focusPoint || ! fixedHeader ) {
+		// No focus point on this page: nothing to adjust.
+		// フォーカスポイントが無いページでは補正不要。
+		if ( ! focusPoint ) {
 			return;
 		}
 
-		// Measure the header height every time instead of caching it, so
-		// this also works correctly when the header height differs between
-		// PC and mobile (responsive layouts).
-		// PC とスマホでヘッダー高さが異なるレスポンシブ構成にも対応できるよう、
-		// キャッシュせずイベント発火のたびに実測する。
-		var headerHeight = fixedHeader.offsetHeight;
+		var headerHeight = getOverlappingHeaderHeight();
+
+		// No header overlapping the content: SMF's own scroll position is
+		// already correct.
+		// コンテンツに重なるヘッダーが無い場合は、SMF 自身のスクロール位置で正しい。
+		if ( ! headerHeight ) {
+			return;
+		}
 
 		// WordPress core exposes the admin bar height (32px, or 46px on
 		// narrow viewports) as a CSS custom property for logged-in users.
@@ -99,6 +170,6 @@
 	}
 
 	[ 'smf.confirm', 'smf.complete', 'smf.back' ].forEach( function ( eventName ) {
-		document.addEventListener( eventName, adjustScrollForFixedHeader, false );
+		document.addEventListener( eventName, adjustScrollForOverlappingHeader, false );
 	} );
 } )();
