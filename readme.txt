@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei,yukinobu
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.42.1
+Stable tag: 1.42.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+= 1.42.2 =
 [ Spec Change ] Excluded development-only dependencies from the distributed theme package
 [ Design Bug Fix ] Fixed in-page link jumps (e.g. from the Table of Contents block) and keyboard focus landing behind a fixed, sticky, or scroll-triggered header, by having scroll-margin-block-start track the real header height instead of a hardcoded 85px value
 [ Design Bug Fix ] Fixed the scroll position being offset by 85px even on pages with no overlapping header, and the offset remaining while a scroll-triggered header is off screen
