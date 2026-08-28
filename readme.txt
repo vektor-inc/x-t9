@@ -14,7 +14,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 == Changelog ==
 
 [ Design Bug Fix ][ WooCommerce ] Fixed the product image zoom overlay (PhotoSwipe) appearing behind the fixed header, which made its close button unclickable
-[ Design Bug Fix ][ WooCommerce ] Fixed the My Account navigation menu staying at the desktop sidebar width on screens 768px and narrower, making it look cramped instead of following WooCommerce's full-width mobile layout
+[ Design Bug Fix ][ WooCommerce ] Fixed the My Account navigation menu staying at the desktop sidebar width and touching the content below it with no spacing on screens 768px and narrower, making it look cramped instead of following WooCommerce's full-width mobile layout
 
 = 1.42.2 =
 [ Spec Change ] Excluded development-only dependencies from the distributed theme package
