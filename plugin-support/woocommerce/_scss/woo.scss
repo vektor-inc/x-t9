@@ -69,21 +69,27 @@
 	/* スマホ等（$sm-max 以下）ではナビゲーションの上限幅を解除し、WooCommerce標準の幅いっぱい表示にする */
 	/* At $sm-max and below, remove the nav's max-width so it follows WooCommerce's default full-width layout */
 	--wc-myaccount-nav-max-width: var(--wp--custom--width--sidebar);
-	/* PC幅ではサイドバー列で本文と区切られるため0。$sm-max以下ではナビゲーションと本文が縦に並ぶため余白を確保する */
-	/* 0 on desktop, where the sidebar column already separates nav from content; add spacing at $sm-max and below where they stack vertically */
-	--wc-myaccount-nav-margin-bottom: 0;
 
 	font-size: var(--wp--preset--font-size--small);
 
 	@media (width <= $sm-max) {
 		--wc-myaccount-nav-max-width: none;
-		--wc-myaccount-nav-margin-bottom: var(--wp--custom--spacing--small);
 	}
 
 	/* .woocommerce-MyAccount-navigation ********************/
 	.woocommerce-MyAccount-navigation {
 		max-width: var(--wc-myaccount-nav-max-width);
-		margin-bottom: var(--wc-myaccount-nav-margin-bottom);
+	}
+	.woocommerce-MyAccount-navigation ul {
+		/* WooCommerce本体の ul{margin:0 0 2em} はPC幅ではそのまま使う（サイドバー列で本文と区切られるため）。 */
+		/* $sm-max以下ではナビゲーションと本文が縦に並ぶため、テーマ標準の余白トークンに置き換える。 */
+		/* nav要素側にmargin-bottomを付けると、子ulのmargin-bottomとマージン相殺して効かないため、ul自体を上書きする。 */
+		/* Keep WooCommerce's own ul{margin:0 0 2em} on desktop, where the sidebar column separates nav from content. */
+		/* At $sm-max and below, where they stack vertically, replace it with the theme's spacing token. */
+		/* Overriding margin-bottom on the nav itself would collapse with this ul's margin-bottom and have no effect, so override the ul directly. */
+		@media (width <= $sm-max) {
+			margin-bottom: var(--wp--custom--spacing--small);
+		}
 	}
 	.woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link {
 		padding: 1px 0;
