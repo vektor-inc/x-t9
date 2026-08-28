@@ -13,6 +13,8 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+[ Design Bug Fix ][ WooCommerce ] Fixed the product image zoom overlay (PhotoSwipe) appearing behind the fixed header, which made its close button unclickable
+
 = 1.42.2 =
 [ Spec Change ] Excluded development-only dependencies from the distributed theme package
 [ Design Bug Fix ] Fixed in-page link jumps (e.g. from the Table of Contents block) and keyboard focus landing behind a fixed, sticky, or scroll-triggered header, by having scroll-margin-block-start track the real header height instead of a hardcoded 85px value
