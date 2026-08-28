@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@import "../../../assets/_scss/variables";
+
 /*-------------------------------------------*/
 /*	Archive
 /*-------------------------------------------*/
@@ -64,11 +66,18 @@
 /* ------------------------------------------- */
 .woocommerce-account {
 	--wc-form-border-color: var(--wp--preset--color--border-normal);
+	/* スマホ等（$sm-max 以下）ではナビゲーションの上限幅を解除し、WooCommerce標準の幅いっぱい表示にする */
+	--wc-myaccount-nav-max-width: var(--wp--custom--width--sidebar);
 
 	font-size: var(--wp--preset--font-size--small);
+
+	@media (width <= $sm-max) {
+		--wc-myaccount-nav-max-width: none;
+	}
+
 	/* .woocommerce-MyAccount-navigation ********************/
 	.woocommerce-MyAccount-navigation {
-		max-width: var(--wp--custom--width--sidebar);
+		max-width: var(--wc-myaccount-nav-max-width);
 	}
 	.woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link {
 		padding: 1px 0;
