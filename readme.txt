@@ -2,7 +2,7 @@
 Contributors: kurudrive,vektor-inc,una9,sysbird,mtdkei,yukinobu
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.42.2
+Stable tag: 1.42.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,6 +13,7 @@ GitHub : https://github.com/vektor-inc/x-t9
 
 == Changelog ==
 
+= 1.42.3 =
 [ Design Bug Fix ][ WooCommerce ] Fixed the product image zoom overlay (PhotoSwipe) appearing behind the fixed header, which made its close button unclickable
 [ Design Bug Fix ][ WooCommerce ] Fixed the My Account navigation menu staying at the desktop sidebar width and touching the content below it with no spacing on screens 768px and narrower, making it look cramped instead of following WooCommerce's full-width mobile layout
 
