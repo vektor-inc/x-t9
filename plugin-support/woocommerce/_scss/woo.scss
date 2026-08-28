@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@import "../../../assets/_scss/breakpoints";
+
 /*-------------------------------------------*/
 /*	Archive
 /*-------------------------------------------*/
@@ -64,11 +66,34 @@
 /* ------------------------------------------- */
 .woocommerce-account {
 	--wc-form-border-color: var(--wp--preset--color--border-normal);
+	/* スマホ等（$sm-max 以下）ではナビゲーションの上限幅を解除し、WooCommerce標準の幅いっぱい表示にする */
+	/* At $sm-max and below, remove the nav's max-width so it follows WooCommerce's default full-width layout */
+	--wc-myaccount-nav-max-width: var(--wp--custom--width--sidebar);
 
 	font-size: var(--wp--preset--font-size--small);
+
+	@media (width <= $sm-max) {
+		--wc-myaccount-nav-max-width: none;
+	}
+
 	/* .woocommerce-MyAccount-navigation ********************/
 	.woocommerce-MyAccount-navigation {
-		max-width: var(--wp--custom--width--sidebar);
+		max-width: var(--wc-myaccount-nav-max-width);
+	}
+	/* WooCommerce本体の ul{margin:0 0 2em} はPC幅ではそのまま使う（サイドバー列で本文と区切られるため）。 */
+	/* $sm-max以下ではナビゲーションと本文が縦に並ぶため、テーマ標準の余白トークンに置き換える。 */
+	/* nav要素側にmargin-bottomを付けると、子ulのmargin-bottomとマージン相殺して効かないため、ul自体を上書きする。 */
+	/* セレクタに nav 要素を含めているのは、詳細度を .wp-block-group ul:last-child（他プラグインが */
+	/* margin-bottom:0 を適用するルール）と同点にせず確実に上書きするため。 */
+	/* Keep WooCommerce's own ul{margin:0 0 2em} on desktop, where the sidebar column separates nav from content. */
+	/* At $sm-max and below, where they stack vertically, replace it with the theme's spacing token. */
+	/* Overriding margin-bottom on the nav itself would collapse with this ul's margin-bottom and have no effect, so override the ul directly. */
+	/* The nav element is included in the selector to raise specificity above .wp-block-group ul:last-child */
+	/* (a same-specificity margin-bottom:0 rule from another plugin) so this override always wins. */
+	nav.woocommerce-MyAccount-navigation ul {
+		@media (width <= $sm-max) {
+			margin-bottom: var(--wp--custom--spacing--small);
+		}
 	}
 	.woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link {
 		padding: 1px 0;
