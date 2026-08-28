@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@import "../../../assets/_scss/variables";
+@import "../../../assets/_scss/breakpoints";
 
 /*-------------------------------------------*/
 /*	Archive
@@ -67,6 +67,7 @@
 .woocommerce-account {
 	--wc-form-border-color: var(--wp--preset--color--border-normal);
 	/* スマホ等（$sm-max 以下）ではナビゲーションの上限幅を解除し、WooCommerce標準の幅いっぱい表示にする */
+	/* At $sm-max and below, remove the nav's max-width so it follows WooCommerce's default full-width layout */
 	--wc-myaccount-nav-max-width: var(--wp--custom--width--sidebar);
 
 	font-size: var(--wp--preset--font-size--small);

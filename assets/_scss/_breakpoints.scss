@@ -1,0 +1,9 @@
+// Breakpoint variables only (no CSS rule output).
+// Split out from _variables.scss so other partials (e.g. plugin-support)
+// can @import just the breakpoints without pulling in _variables.scss's
+// CSS output (body{...} / .has-vk-color-primary-border-color).
+$xs-max: 576px;
+$sm-max: 768px;
+$md-max: 992px;
+$lg-max: 1200px;
+$xl-max: 1400px;
