@@ -20,6 +20,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24.x'
+          check-latest: true
 
       - name: Install dependencies
         run: npm install
@@ -69,6 +70,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24.x'
+          check-latest: true
 
       - name: Setup PHP ${{ matrix.php-versions }}
         uses: shivammathur/setup-php@v2
